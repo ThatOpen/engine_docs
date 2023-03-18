@@ -15,7 +15,7 @@ const docsJSON = [
 
 const libraryDirs = ["components"];
 
-init();
+// init();
 
 async function init() {
   cleanUp();
@@ -25,39 +25,33 @@ async function init() {
     const docsList = JSON.parse(docRes.body);
     for (let j = 0; j < docsList.length; j++) {
       const doc = docsList[j];
-      if (!doc.tutorial) {
+      if (!doc.api) {
         continue;
       }
+
       //This is a temporal replacement to get information from the big-restructure branch. Later on, this will come from the main branch.
-      const temporalReplacement = doc.tutorial.replace(
+      const tempTutorialPath = doc.tutorial.replace(
         "https://ifcjs.github.io/components",
         "https://raw.githubusercontent.com/IFCjs/components/big-restructure"
       );
-      const html = await got(temporalReplacement);
-      if (!html) {
-        continue;
-      }
+
+      const tempApiPath = doc.api.replace(
+        "https://raw.githubusercontent.com/IFCjs/components/main/",
+        "https://raw.githubusercontent.com/IFCjs/components/big-restructure"
+      );
+
+      const html = await got(tempTutorialPath);
       const path = generateMDX(`docs/components`, doc.name, html.body);
-      generateTutorial(path, doc.tutorial);
+      generateLiveDemo(path, doc.tutorial);
+      generateAPI(path, tempApiPath);
     }
   }
 
-  generateIndexJSON(
-    "docs/components",
-    "Components",
-    "Lightweight modular BIM tools."
-  );
+  generateIndexJSON("docs/components", "Components");
 }
 
-function generateIndexJSON(path, label, description) {
-  const json = {
-    label,
-    link: {
-      type: "generated-index",
-      description,
-    },
-  };
-
+function generateIndexJSON(path, label) {
+  const json = { label };
   const serialized = JSON.stringify(json);
   const name = `${path}/_category_.json`;
   fs.writeFileSync(name, serialized);
@@ -128,7 +122,65 @@ function cleanUp() {
   }
 }
 
-function generateTutorial(path, tutorialURL) {
+generateAPI();
+
+function generateAPI(path, apiURL) {
+
+  const example = `
+import * as THREE from "three";
+import { Components } from "../../types/components";
+import { Component } from "../../types/component";
+import { Disposable } from "../../types";
+/*
+  A basic 3D [scene](https://threejs.org/docs/#api/en/scenes/Scene) to add
+  objects hierarchically.
+*/
+export declare class SimpleScene extends Component<THREE.Scene> implements Disposable {
+    /* {@link Component.enabled} */
+    enabled: boolean;
+    /* {@link Component.name} */
+    name: string;
+    private readonly _scene;
+    private readonly _disposer;
+    constructor(components: Components);
+    /* {@link Component.get} */
+    get(): THREE.Scene;
+    /* {@link Disposable.dispose} */
+    dispose(): void;
+}
+  `
+
+  let apiDocs = ``;
+
+  const documentedItems = /\/\*[\S\s]*?\*\/\n.*/g;
+  const justDocumentation = /\/\*[\S\s]*?\*\//;
+  const isItem = /export.*(class|interface|type)/;
+  const results = example.match(documentedItems);
+
+  for(const result of results) {
+    // Get documentation
+    const doc = result.match(justDocumentation)[0];
+    const formattedDoc = doc.replaceAll("/*", "").replaceAll("*/", "").replaceAll("\n", "").replaceAll(/ +/g, " ");
+
+    // Get code
+
+    const code = result.slice(doc.length);
+    const formattedCode = code.replaceAll(/ +/g, " ");
+
+    // Save to docs
+
+    apiDocs += formattedCode + "\n\n";
+    apiDocs += formattedDoc + "\n";
+  }
+
+  try {
+    fs.writeFileSync("test.txt", apiDocs);
+  } catch(e) {
+    console.log(e);
+  }
+}
+
+function generateLiveDemo(path, tutorialURL) {
   const tutorial = `
   
   <iframe src="${tutorialURL}"></iframe>
