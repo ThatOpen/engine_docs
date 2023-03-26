@@ -10,6 +10,17 @@ const config = {
   tagline: "Where you learn to build BIM software",
   favicon: "img/favicon.ico",
 
+  plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+
+      // Plugin / TypeDoc options
+      {
+        tsconfig: './src/docs-generator/tsconfig.json',
+      },
+    ],
+  ],
+
   // Set the production url of your site here
   url: "https://your-docusaurus-test-site.com",
   // Set the /<baseUrl>/ pathname under which your site is served
