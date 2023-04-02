@@ -68,7 +68,7 @@
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   },
   "typedocOptions": {
-    "entryPoints": ["../../temp/components/src/index.ts"],
+    "entryPoints": ["../../temp/components/index.ts", "../../temp/fragment/index.ts"],
     "out": "./docs",
     "readme": "../README.md",
     "name": "Open BIM Components",

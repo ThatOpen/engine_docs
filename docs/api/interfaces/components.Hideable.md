@@ -1,10 +1,11 @@
 ---
-id: "Hideable"
+id: "components.Hideable"
 title: "Interface: Hideable"
 sidebar_label: "Hideable"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Hideable
 
 Whether the geometric representation of this component can be
 hidden or shown in the
@@ -12,7 +13,7 @@ hidden or shown in the
 
 ## Implemented by
 
-- [`SimpleGrid`](../classes/SimpleGrid.md)
+- [`SimpleGrid`](../classes/components.SimpleGrid.md)
 
 ## Properties
 
@@ -26,4 +27,4 @@ currently visible or not in the
 
 #### Defined in
 
-types/base-types.ts:74
+components/types/base-types.ts:74

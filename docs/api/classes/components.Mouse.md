@@ -1,10 +1,11 @@
 ---
-id: "Mouse"
+id: "components.Mouse"
 title: "Class: Mouse"
 sidebar_label: "Mouse"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Mouse
 
 A helper to easily get the real position of the mouse in the Three.js canvas
 to work with tools like the
@@ -13,7 +14,7 @@ been transformed through CSS or doesn't occupy the whole screen.
 
 ## Implements
 
-- [`Disposable`](../interfaces/Disposable.md)
+- [`Disposable`](../interfaces/components.Disposable.md)
 
 ## Accessors
 
@@ -29,7 +30,7 @@ The real position of the mouse of the Three.js canvas.
 
 #### Defined in
 
-types/mouse.ts:21
+components/types/mouse.ts:21
 
 ## Methods
 
@@ -37,7 +38,7 @@ types/mouse.ts:21
 
 ▸ **dispose**(): `void`
 
-[dispose](../interfaces/Disposable.md#dispose)
+[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -49,4 +50,4 @@ Disposable.dispose
 
 #### Defined in
 
-types/mouse.ts:31
+components/types/mouse.ts:31

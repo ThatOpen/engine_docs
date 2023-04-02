@@ -1,15 +1,16 @@
 ---
-id: "Components"
+id: "components.Components"
 title: "Class: Components"
 sidebar_label: "Components"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Components
 
 The entry point of Open BIM Components.
 It contains the basic items to create a BIM 3D scene based on Three.js, as
 well as all the tools provided by this library. It also manages the update
-loop of everything. Each instance has to be initialized with [init](Components.md#init).
+loop of everything. Each instance has to be initialized with [init](components.Components.md#init).
 
 ## Properties
 
@@ -22,37 +23,36 @@ This includes IFC models, fragments, 3D scans, etc.
 
 #### Defined in
 
-types/components.ts:31
+components/types/components.ts:31
 
 ___
 
 ### tools
 
-• `Readonly` **tools**: [`ToolComponents`](ToolComponents.md)
+• `Readonly` **tools**: [`ToolComponents`](components.ToolComponents.md)
 
-[ToolComponents](ToolComponents.md)
+[ToolComponents](components.ToolComponents.md)
 
 #### Defined in
 
-types/components.ts:25
+components/types/components.ts:25
 
 ## Accessors
 
 ### camera
 
-• `get` **camera**(): [`Component`](Component.md)<`Camera`\>
+• `get` **camera**(): [`Component`](components.Component.md)<`Camera`\>
 
 The [Three.js camera](https://threejs.org/docs/#api/en/cameras/Camera)
 that determines the point of view of the renderer.
-```
 
 #### Returns
 
-[`Component`](Component.md)<`Camera`\>
+[`Component`](components.Component.md)<`Camera`\>
 
 #### Defined in
 
-types/components.ts:82
+components/types/components.ts:81
 
 • `set` **camera**(`camera`): `void`
 
@@ -62,7 +62,7 @@ This needs to be initialized before calling init().
 
 | Name | Type |
 | :------ | :------ |
-| `camera` | [`Component`](Component.md)<`Camera`\> |
+| `camera` | [`Component`](components.Component.md)<`Camera`\> |
 
 #### Returns
 
@@ -70,24 +70,24 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-types/components.ts:92
+components/types/components.ts:91
 
 ___
 
 ### raycaster
 
-• `get` **raycaster**(): [`Raycaster`](../interfaces/Raycaster.md)
+• `get` **raycaster**(): [`Raycaster`](../interfaces/components.Raycaster.md)
 
 A component using the [Three.js raycaster](https://threejs.org/docs/#api/en/core/Raycaster)
 used primarily to pick 3D items with the mouse or a touch screen.
 
 #### Returns
 
-[`Raycaster`](../interfaces/Raycaster.md)
+[`Raycaster`](../interfaces/components.Raycaster.md)
 
 #### Defined in
 
-types/components.ts:100
+components/types/components.ts:99
 
 • `set` **raycaster**(`raycaster`): `void`
 
@@ -98,7 +98,7 @@ to initialize this if any component that needs a raycaster is used.
 
 | Name | Type |
 | :------ | :------ |
-| `raycaster` | [`Raycaster`](../interfaces/Raycaster.md) |
+| `raycaster` | [`Raycaster`](../interfaces/components.Raycaster.md) |
 
 #### Returns
 
@@ -106,13 +106,13 @@ to initialize this if any component that needs a raycaster is used.
 
 #### Defined in
 
-types/components.ts:111
+components/types/components.ts:110
 
 ___
 
 ### renderer
 
-• `get` **renderer**(): [`BaseRenderer`](BaseRenderer.md)
+• `get` **renderer**(): [`BaseRenderer`](components.BaseRenderer.md)
 
 The [Three.js renderer](https://threejs.org/docs/#api/en/renderers/WebGLRenderer)
 used to render the scene. This library provides multiple renderer
@@ -120,11 +120,11 @@ components with pre-made functionality (e.g. rendering of 2D CSS elements.
 
 #### Returns
 
-[`BaseRenderer`](BaseRenderer.md)
+[`BaseRenderer`](components.BaseRenderer.md)
 
 #### Defined in
 
-types/components.ts:45
+components/types/components.ts:45
 
 • `set` **renderer**(`renderer`): `void`
 
@@ -134,7 +134,7 @@ This needs to be initialized before calling init().
 
 | Name | Type |
 | :------ | :------ |
-| `renderer` | [`BaseRenderer`](BaseRenderer.md) |
+| `renderer` | [`BaseRenderer`](components.BaseRenderer.md) |
 
 #### Returns
 
@@ -142,24 +142,24 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-types/components.ts:55
+components/types/components.ts:55
 
 ___
 
 ### scene
 
-• `get` **scene**(): [`Component`](Component.md)<`Scene`\>
+• `get` **scene**(): [`Component`](components.Component.md)<`Scene`\>
 
 The [Three.js scene](https://threejs.org/docs/#api/en/scenes/Scene)
 where all the rendered items are placed.
 
 #### Returns
 
-[`Component`](Component.md)<`Scene`\>
+[`Component`](components.Component.md)<`Scene`\>
 
 #### Defined in
 
-types/components.ts:63
+components/types/components.ts:63
 
 • `set` **scene**(`scene`): `void`
 
@@ -169,7 +169,7 @@ This needs to be initialized before calling init().
 
 | Name | Type |
 | :------ | :------ |
-| `scene` | [`Component`](Component.md)<`Scene`\> |
+| `scene` | [`Component`](components.Component.md)<`Scene`\> |
 
 #### Returns
 
@@ -177,7 +177,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-types/components.ts:73
+components/types/components.ts:73
 
 ## Methods
 
@@ -204,7 +204,7 @@ You can learn more about how Three.js handles memory leaks
 
 #### Defined in
 
-types/components.ts:147
+components/types/components.ts:146
 
 ___
 
@@ -215,7 +215,7 @@ ___
 Initializes the library. It should be called at the start of the app after
 initializing the scene, the renderer and the
 camera. Additionally, if any component that need a raycaster is
-used, the [raycaster](Components.md#raycaster) will need to be initialized.
+used, the [raycaster](components.Components.md#raycaster) will need to be initialized.
 
 #### Returns
 
@@ -223,4 +223,4 @@ used, the [raycaster](Components.md#raycaster) will need to be initialized.
 
 #### Defined in
 
-types/components.ts:127
+components/types/components.ts:126

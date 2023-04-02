@@ -85,13 +85,17 @@ function getTutorial(html) {
 }
 
 function getLiveDemo(path) {
-    const tutorialUrl = path
+    let url = path
         .replaceAll("\\", "/")
-        .replace(/.*docs\/temp\//, "https://ifcjs.github.io/");
+        .replace(/.*docs\/temp\//, "https://ifcjs.github.io/")
+
+    const baseUrlPattern = /.*github.io\/.*?\//;
+    const size = baseUrlPattern.exec(url)[0].length;
+    url = url.slice(0, size) + "src/" + url.slice(size);
 
     return `
 
-  <iframe src="${tutorialUrl}"></iframe>
+  <iframe src="${url}"></iframe>
 
   `;
 }

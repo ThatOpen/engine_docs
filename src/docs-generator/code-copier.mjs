@@ -1,25 +1,28 @@
 import * as fs from "fs";
 import * as path from "path";
 
-function copyFileSync( source, target ) {
+makeDir("temp/components");
+makeDir("temp/fragment");
 
-    let targetFile = target;
+let isFirstExecution = true;
+copyFolderRecursiveSync("../components/src", "temp/components");
+isFirstExecution = true;
+copyFolderRecursiveSync("../fragment/library/src", "temp/fragment");
 
-    // If target is a directory, a new file with the same name will be created
-    if ( fs.existsSync( target ) ) {
-        if ( fs.lstatSync( target ).isDirectory() ) {
-            targetFile = path.join( target, path.basename( source ) );
-        }
+function makeDir(path) {
+    if(!fs.existsSync(path)) {
+        fs.mkdirSync(path);
     }
-
-    fs.writeFileSync(targetFile, fs.readFileSync(source));
 }
 
 function copyFolderRecursiveSync( source, target ) {
     let files = [];
 
+    const extension = isFirstExecution ? "" : path.basename( source );
+    isFirstExecution = false;
+
     // Check if folder needs to be created or integrated
-    let targetFolder = path.join( target, path.basename( source ) );
+    let targetFolder = path.join( target, extension );
     if ( !fs.existsSync( targetFolder ) ) {
         fs.mkdirSync( targetFolder );
     }
@@ -38,8 +41,18 @@ function copyFolderRecursiveSync( source, target ) {
     }
 }
 
-if(!fs.existsSync("temp/components")) {
-    fs.mkdirSync("temp/components");
+function copyFileSync( source, target ) {
+
+    let targetFile = target;
+
+    // If target is a directory, a new file with the same name will be created
+    if ( fs.existsSync( target ) ) {
+        if ( fs.lstatSync( target ).isDirectory() ) {
+            targetFile = path.join( target, path.basename( source ) );
+        }
+    }
+
+    fs.writeFileSync(targetFile, fs.readFileSync(source));
 }
 
-copyFolderRecursiveSync("../components/src", "temp/components");
+

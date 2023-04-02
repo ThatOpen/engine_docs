@@ -1,10 +1,11 @@
 ---
-id: "Resizeable"
+id: "components.Resizeable"
 title: "Interface: Resizeable"
 sidebar_label: "Resizeable"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Resizeable
 
 Whether this component can be resized. The meaning of this can vary depending
 on the component: resizing a
@@ -14,8 +15,8 @@ component could mean changing its resolution, whereas resizing a
 
 ## Implemented by
 
-- [`BaseRenderer`](../classes/BaseRenderer.md)
-- [`SimpleRenderer`](../classes/SimpleRenderer.md)
+- [`BaseRenderer`](../classes/components.BaseRenderer.md)
+- [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
 
 ## Properties
 
@@ -37,7 +38,7 @@ component.
 
 #### Defined in
 
-types/base-types.ts:93
+components/types/base-types.ts:93
 
 ___
 
@@ -65,4 +66,4 @@ component.
 
 #### Defined in
 
-types/base-types.ts:88
+components/types/base-types.ts:88

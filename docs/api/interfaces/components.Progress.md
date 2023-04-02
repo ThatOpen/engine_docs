@@ -1,10 +1,11 @@
 ---
-id: "Progress"
+id: "components.Progress"
 title: "Interface: Progress"
 sidebar_label: "Progress"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Progress
 
 Basic type to describe the progress of any kind of process.
 
@@ -18,7 +19,7 @@ The amount of things that have been done already.
 
 #### Defined in
 
-types/base-types.ts:119
+components/types/base-types.ts:119
 
 ___
 
@@ -30,4 +31,4 @@ The total amount of things to be done by the process.
 
 #### Defined in
 
-types/base-types.ts:122
+components/types/base-types.ts:122

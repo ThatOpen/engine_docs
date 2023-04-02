@@ -1,10 +1,11 @@
 ---
-id: "Disposer"
+id: "components.Disposer"
 title: "Class: Disposer"
 sidebar_label: "Disposer"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Disposer
 
 A class to safely remove meshes and geometries from memory to
 [prevent memory leaks](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects).
@@ -33,7 +34,7 @@ remove them from the mesh before disposing it.
 
 #### Defined in
 
-core/MemoryComponent/index.ts:20
+components/core/MemoryComponent/index.ts:20
 
 ___
 
@@ -55,4 +56,4 @@ Disposes a geometry from memory.
 
 #### Defined in
 
-core/MemoryComponent/index.ts:37
+components/core/MemoryComponent/index.ts:37

@@ -1,41 +1,42 @@
 ---
-id: "Updateable"
+id: "components.Updateable"
 title: "Interface: Updateable"
 sidebar_label: "Updateable"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Updateable
 
 Whether this component should be updated each frame.
 
 ## Implemented by
 
-- [`SimpleCamera`](../classes/SimpleCamera.md)
-- [`SimpleRenderer`](../classes/SimpleRenderer.md)
+- [`SimpleCamera`](../classes/components.SimpleCamera.md)
+- [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
 
 ## Properties
 
 ### afterUpdate
 
-• **afterUpdate**: [`Event`](../classes/Event.md)<`any`\>
+• **afterUpdate**: [`Event`](../classes/components.Event.md)<`any`\>
 
 Actions that should be executed after updating the component.
 
 #### Defined in
 
-types/base-types.ts:99
+components/types/base-types.ts:99
 
 ___
 
 ### beforeUpdate
 
-• **beforeUpdate**: [`Event`](../classes/Event.md)<`any`\>
+• **beforeUpdate**: [`Event`](../classes/components.Event.md)<`any`\>
 
 Actions that should be executed before updating the component.
 
 #### Defined in
 
-types/base-types.ts:102
+components/types/base-types.ts:102
 
 ## Methods
 
@@ -58,4 +59,4 @@ instance, a renderer component will make a render each frame.
 
 #### Defined in
 
-types/base-types.ts:108
+components/types/base-types.ts:108

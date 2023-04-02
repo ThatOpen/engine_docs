@@ -1,10 +1,11 @@
 ---
-id: "Event"
+id: "components.Event"
 title: "Class: Event<T>"
 sidebar_label: "Event"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Event
 
 Simple event handler by
 [Jason Kleban](https://gist.github.com/JasonKleban/50cee44960c225ac1993c922563aa540).
@@ -30,7 +31,7 @@ Triggers all the callbacks assigned to this event.
 
 #### Defined in
 
-types/base-types.ts:32
+components/types/base-types.ts:32
 
 ## Methods
 
@@ -52,7 +53,7 @@ Removes a callback from this event instance.
 
 #### Defined in
 
-types/base-types.ts:25
+components/types/base-types.ts:25
 
 ___
 
@@ -74,7 +75,7 @@ Add a callback to this event instance.
 
 #### Defined in
 
-types/base-types.ts:17
+components/types/base-types.ts:17
 
 ___
 
@@ -90,4 +91,4 @@ Gets rid of all the suscribed events.
 
 #### Defined in
 
-types/base-types.ts:42
+components/types/base-types.ts:42

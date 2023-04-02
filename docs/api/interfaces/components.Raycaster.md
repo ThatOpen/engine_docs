@@ -1,13 +1,14 @@
 ---
-id: "Raycaster"
+id: "components.Raycaster"
 title: "Interface: Raycaster"
 sidebar_label: "Raycaster"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Raycaster
 
 Whether this component is able to cast rays.
 
 ## Implemented by
 
-- [`SimpleRaycaster`](../classes/SimpleRaycaster.md)
+- [`SimpleRaycaster`](../classes/components.SimpleRaycaster.md)

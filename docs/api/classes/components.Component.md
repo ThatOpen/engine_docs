@@ -1,14 +1,16 @@
 ---
-id: "Component"
+id: "components.Component"
 title: "Class: Component<Type>"
 sidebar_label: "Component"
-sidebar_position: 0
 custom_edit_url: null
 ---
 
+[components](../modules/components.md).Component
+
 Components are the building blocks of this library. Everything is a
 component: tools, scenes, objects, cameras, etc.
-All components must inherit from this class.
+All components must inherit from this class. The `Type` parameter defines
+the type of the core of this component. For instance, a component containing a
 
 ## Type parameters
 
@@ -20,15 +22,15 @@ All components must inherit from this class.
 
 - **`Component`**
 
-  ↳ [`SimpleScene`](SimpleScene.md)
+  ↳ [`SimpleScene`](components.SimpleScene.md)
 
-  ↳ [`SimpleCamera`](SimpleCamera.md)
+  ↳ [`SimpleCamera`](components.SimpleCamera.md)
 
-  ↳ [`SimpleRaycaster`](SimpleRaycaster.md)
+  ↳ [`SimpleRaycaster`](components.SimpleRaycaster.md)
 
-  ↳ [`SimpleGrid`](SimpleGrid.md)
+  ↳ [`SimpleGrid`](components.SimpleGrid.md)
 
-  ↳ [`BaseRenderer`](BaseRenderer.md)
+  ↳ [`BaseRenderer`](components.BaseRenderer.md)
 
 ## Properties
 
@@ -37,13 +39,13 @@ All components must inherit from this class.
 • `Abstract` **enabled**: `boolean`
 
 Whether this component is active or not. The behaviour can vary depending
-on the type of component (e.g. a disabled dimension tool will stop creating
+on the type of component. E.g. a disabled dimension tool will stop creating
 dimensions, while a disabled camera will stop moving. A disabled component
 will not be updated automatically each frame.
 
 #### Defined in
 
-types/component.ts:18
+components/types/component.ts:19
 
 ___
 
@@ -51,11 +53,11 @@ ___
 
 • `Abstract` **name**: `string`
 
-The main identifier of this component.
+The main identifier of this component. It can be used to retrieve it and index it.
 
 #### Defined in
 
-types/component.ts:10
+components/types/component.ts:11
 
 ## Methods
 
@@ -72,7 +74,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Defined in
 
-types/component.ts:24
+components/types/component.ts:25
 
 ___
 
@@ -80,7 +82,7 @@ ___
 
 ▸ **isDisposeable**(): this is Disposable
 
-Whether is component is [Disposable](../interfaces/Disposable.md).
+Whether is component is [Disposable](../interfaces/components.Disposable.md).
 
 #### Returns
 
@@ -88,7 +90,7 @@ this is Disposable
 
 #### Defined in
 
-types/component.ts:27
+components/types/component.ts:28
 
 ___
 
@@ -96,7 +98,7 @@ ___
 
 ▸ **isHideable**(): this is Hideable
 
-Whether is component is [Hideable](../interfaces/Hideable.md).
+Whether is component is [Hideable](../interfaces/components.Hideable.md).
 
 #### Returns
 
@@ -104,7 +106,7 @@ this is Hideable
 
 #### Defined in
 
-types/component.ts:42
+components/types/component.ts:43
 
 ___
 
@@ -112,7 +114,7 @@ ___
 
 ▸ **isResizeable**(): this is Resizeable
 
-Whether is component is [Resizeable](../interfaces/Resizeable.md).
+Whether is component is [Resizeable](../interfaces/components.Resizeable.md).
 
 #### Returns
 
@@ -120,7 +122,7 @@ this is Resizeable
 
 #### Defined in
 
-types/component.ts:32
+components/types/component.ts:33
 
 ___
 
@@ -128,7 +130,7 @@ ___
 
 ▸ **isUpdateable**(): this is Updateable
 
-Whether is component is [Updateable](../interfaces/Updateable.md).
+Whether is component is [Updateable](../interfaces/components.Updateable.md).
 
 #### Returns
 
@@ -136,4 +138,4 @@ this is Updateable
 
 #### Defined in
 
-types/component.ts:37
+components/types/component.ts:38

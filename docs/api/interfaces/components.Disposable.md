@@ -1,10 +1,11 @@
 ---
-id: "Disposable"
+id: "components.Disposable"
 title: "Interface: Disposable"
 sidebar_label: "Disposable"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).Disposable
 
 Whether this component has to be manually destroyed once you are done with
 it to prevent
@@ -14,12 +15,12 @@ cleaned up.
 
 ## Implemented by
 
-- [`Mouse`](../classes/Mouse.md)
-- [`SimpleCamera`](../classes/SimpleCamera.md)
-- [`SimpleGrid`](../classes/SimpleGrid.md)
-- [`SimpleRenderer`](../classes/SimpleRenderer.md)
-- [`SimpleScene`](../classes/SimpleScene.md)
-- [`ToolComponents`](../classes/ToolComponents.md)
+- [`Mouse`](../classes/components.Mouse.md)
+- [`SimpleCamera`](../classes/components.SimpleCamera.md)
+- [`SimpleGrid`](../classes/components.SimpleGrid.md)
+- [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
+- [`SimpleScene`](../classes/components.SimpleScene.md)
+- [`ToolComponents`](../classes/components.ToolComponents.md)
 
 ## Properties
 
@@ -40,4 +41,4 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-types/base-types.ts:62
+components/types/base-types.ts:62

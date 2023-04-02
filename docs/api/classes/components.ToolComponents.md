@@ -1,10 +1,11 @@
 ---
-id: "ToolComponents"
+id: "components.ToolComponents"
 title: "Class: ToolComponents"
 sidebar_label: "ToolComponents"
-sidebar_position: 0
 custom_edit_url: null
 ---
+
+[components](../modules/components.md).ToolComponents
 
 An object to easily handle all the tools used (e.g. updating them, retrieving
 them, performing batch operations, etc). A tool is a feature that achieves
@@ -12,7 +13,7 @@ something through user interaction (e.g. clipping planes, dimensions, etc).
 
 ## Implements
 
-- [`Disposable`](../interfaces/Disposable.md)
+- [`Disposable`](../interfaces/components.Disposable.md)
 
 ## Methods
 
@@ -26,7 +27,7 @@ Registers a new tool component.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `tool` | [`Component`](Component.md)<`any`\> | The tool to register in the application. |
+| `tool` | [`Component`](components.Component.md)<`any`\> | The tool to register in the application. |
 
 #### Returns
 
@@ -34,7 +35,7 @@ Registers a new tool component.
 
 #### Defined in
 
-core/ToolsComponents/index.ts:16
+components/core/ToolsComponents/index.ts:16
 
 ___
 
@@ -54,13 +55,13 @@ Disposable.dispose
 
 #### Defined in
 
-core/ToolsComponents/index.ts:58
+components/core/ToolsComponents/index.ts:58
 
 ___
 
 ### get
 
-▸ **get**(`name`): `undefined` \| [`Component`](Component.md)<`any`\>
+▸ **get**(`name`): `undefined` \| [`Component`](components.Component.md)<`any`\>
 
 Retrieves a tool component by its name.
 
@@ -68,15 +69,15 @@ Retrieves a tool component by its name.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `name` | `string` | The [name](Component.md#name) of the component.. |
+| `name` | `string` | The [name](components.Component.md#name) of the component.. |
 
 #### Returns
 
-`undefined` \| [`Component`](Component.md)<`any`\>
+`undefined` \| [`Component`](components.Component.md)<`any`\>
 
 #### Defined in
 
-core/ToolsComponents/index.ts:37
+components/core/ToolsComponents/index.ts:37
 
 ___
 
@@ -90,7 +91,7 @@ Deletes a previously registered tool component.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `tool` | [`Component`](Component.md)<`any`\> | The tool to delete. |
+| `tool` | [`Component`](components.Component.md)<`any`\> | The tool to delete. |
 
 #### Returns
 
@@ -98,7 +99,7 @@ Deletes a previously registered tool component.
 
 #### Defined in
 
-core/ToolsComponents/index.ts:24
+components/core/ToolsComponents/index.ts:24
 
 ___
 
@@ -107,7 +108,7 @@ ___
 ▸ **update**(`delta`): `void`
 
 Updates all the registered tool components. Only the components where the
-property [enabled](Component.md#enabled) is true will be updated.
+property [enabled](components.Component.md#enabled) is true will be updated.
 
 #### Parameters
 
@@ -121,4 +122,4 @@ property [enabled](Component.md#enabled) is true will be updated.
 
 #### Defined in
 
-core/ToolsComponents/index.ts:47
+components/core/ToolsComponents/index.ts:47
