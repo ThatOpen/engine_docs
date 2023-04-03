@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import RocketLogo from '@site/static/img/rocket_launch.svg';
 
 import styles from "./index.module.css";
 
@@ -18,8 +19,10 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"
+            style={{marginTop: "1.2rem"}}
           >
-            Get started 🚀
+            <RocketLogo style={{marginRight: "0.2rem", width: "1.3rem", height: "2rem", fill: "var(--primary-black)"}}/>
+            GET STARTED
           </Link>
         </div>
       </div>

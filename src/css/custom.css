@@ -4,9 +4,11 @@
  * work well for content-centric websites.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #7200e1;
+  --ifm-color-primary: #6528D7;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -15,6 +17,15 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-heading-font-family: "Sora";
+  --ifm-font-family-base: "Plus Jakarta Sans";
+  --ifm-menu-color-background-active: #F8F5FE;
+  --ifm-menu-color-background-hover: #F8F5FE;
+  --light-gray: #D9D9D9;
+  --nice-border: 1px solid #eee;
+  --border-radius: 12px;
+  --primary-black: var(--ifm-color-primary);
+  --smooth-shadow: 0 0 30px 0 #eee;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,10 +38,109 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --primary-black: black;
+  --light-gray: #323232;
+  --ifm-menu-color-background-active: #242526;
+  --ifm-menu-color-background-hover: #242526;
+  --smooth-shadow: 0 0 30px 0 #0d0d0d;
+  --nice-border: 1px solid #444;
+}
+
+.footer--dark {
+  border-top: var(--nice-border);
+  --ifm-footer-background-color: var(--color-background);
+  --ifm-footer-color: gray;
+  --ifm-footer-link-color: gray;
+  --ifm-footer-title-color: gray;
 }
 
 iframe {
   margin-top: 2rem;
   width: 100%;
   height: 30rem;
+}
+
+.button {
+  border-radius: var(--border-radius);
+}
+
+.button.button--secondary {
+  color: var(--primary-black);
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  height: 6rem;
+  box-shadow: none;
+  border-bottom: var(--nice-border);
+}
+
+.navbar__logo img {
+  height: 3rem;
+  margin-left: 1.5rem;
+}
+
+[data-theme="dark"] .navbar__logo img {
+  filter: invert();
+}
+
+.col {
+  padding: 0;
+}
+
+.theme-doc-sidebar-container {
+  border: none !important;
+}
+
+.menu {
+  border-right: none;
+  margin: 1.5rem 1.3rem 0 0;
+  box-shadow: var(--smooth-shadow);
+  border-radius: var(--border-radius);
+  padding-left: 1rem !important;
+}
+
+.theme-doc-markdown {
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: var(--smooth-shadow);
+  border-radius: var(--border-radius);
+}
+
+[class="tableOfContents_node_modules-@docusaurus-theme-classic-lib-theme-TOC-styles-module thin-scrollbar theme-doc-toc-desktop"] {
+  box-shadow: var(--smooth-shadow);
+  border-radius: var(--border-radius);
+  padding-left: 1.3rem;
+  top: calc(var(--ifm-navbar-height) + 6rem) !important;
+}
+
+[class="iconExternalLink_node_modules-@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module"] {
+  display: none;
+}
+
+.table-of-contents__left-border {
+  border-left: none;
+}
+
+@media screen and (max-width: 997px) {
+  .menu {
+    margin: 0;
+    box-shadow: none;
+    border-radius: unset;
+  }
+
+  .footer--dark {
+    padding-left: 2rem;
+  }
+
+  .table-of-contents__left-border {
+    padding-left: 1rem !important;
+  }
+
+  .pagination-nav {
+    margin: 1rem;
+  }
 }

@@ -76,17 +76,21 @@ const config = {
         title: "",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/logo-with-letters.svg",
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "That Open Docs",
+            href: "https://github.com/ifcjs",
+            label: "Log in",
+            position: "right",
           },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/ifcjs",
+            label: "Marketplace",
+            position: "right",
+          },
+          {
+            href: "https://github.com/ifcjs",
             label: "GitHub",
             position: "right",
           },
@@ -107,10 +111,6 @@ const config = {
           {
             title: "Community",
             items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
               {
                 label: "Discord",
                 href: "https://discordapp.com/invite/docusaurus",

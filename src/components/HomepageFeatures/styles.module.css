@@ -9,3 +9,18 @@
   height: 200px;
   width: 200px;
 }
+
+.feature {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  width: 80%;
+  height: 11rem;
+  margin: 1rem;
+  background-color: var(--light-gray);
+  border-radius: 1rem;
+}
