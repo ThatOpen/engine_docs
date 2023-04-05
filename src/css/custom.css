@@ -13,8 +13,10 @@
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
   --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary-lighter: #F1E6F6;
+  --ifm-color-primary-lightest: #F8F5FE;
+  --ifm-color-success-contrast-background: var(--ifm-color-primary-lighter);
+  --ifm-color-success-dark: var(--ifm-color-primary);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-heading-font-family: "Sora";
@@ -40,8 +42,13 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --primary-black: black;
   --light-gray: #323232;
+  --dark-gray: #090a0a;
   --ifm-menu-color-background-active: #242526;
   --ifm-menu-color-background-hover: #242526;
+  --ifm-color-success-contrast-background:var(--dark-gray) !important;
+  --ifm-color-danger-contrast-background:var(--dark-gray) !important;
+  --ifm-color-warning-contrast-background:var(--dark-gray) !important;
+  --ifm-color-info-contrast-background:var(--dark-gray) !important;
   --smooth-shadow: 0 0 30px 0 #0d0d0d;
   --nice-border: 1px solid #444;
 }

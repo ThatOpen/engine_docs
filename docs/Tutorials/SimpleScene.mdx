@@ -1,4 +1,4 @@
-## Let's create a 3D world! 🌍
+### Let's create a 3D world! 🌍
 The `SimpleScene` component is the easiest way to create a 3D space to start working.
 Let's start by importing Components and Three.js:
 
@@ -8,11 +8,41 @@ import * as OBC from 'openbim-components';
 ```
 Now, the first step is getting a container for our viewer. 📦
 This is just a place where the 3D scene will be rendered.
+In this example we have just added an HTML `div` element with
+the ID `"container"`.
 
 ```js
 const container = document.getElementById('container');
 ```
-Next, we will instantiate the main object of the library: `Components`. 🔥
+Now, let's create an awesome 3D scene inside that HTML element! 🔥
+:::info Are you using a library/framework like React, Angular or vue?
+Then probably you have other mechanisms for getting a reference to the
+HTML div element. However you do it, as long as you get a reference
+in your code, you are good to go!
+:::
+### Setting up a components project 🧰
+Next, we will instantiate the main object of the library: [Components](../api/classes/components.Components). 🤖
+This object will keep track of all the components that you create, making them
+easily accessible in all your application and making sure to update them
+in each frame, so you don't have to worry about that. 💪
+
+```js
+const components = new OBC.Components();
+```
+Great! But this object needs 4 things to work:
+- 🌍 A **[scene component](../api/classes/components.SimpleScene)** where our objects will live in 3D.
+- ⌚ A **[renderer component](../api/classes/components.SimpleRenderer)** that will allow us to see things moving around.
+- 🎥 A **[camera component](../api/classes/components.SimpleCamera)** that defines where we are and what are in that 3D world.
+- ⚡ A **[raycaster component](../api/classes/components.SimpleRaycaster)** that makes it possible to interact with that 3D scene with our mouse / finger.
+
+```js
+components.scene = new OBC.SimpleScene(components);
+components.renderer = new OBC.SimpleRenderer(components, container);
+const camera = new OBC.SimpleCamera(components);
+components.camera = camera;
+components.raycaster = new OBC.SimpleRaycaster(components);
+```
+Now that everything is set up, let's start the app! You can do that with the `init` method: 🚗💨💨💨
 
 
   <iframe src="https://ifcjs.github.io/components/src/core/SimpleScene/index.html"></iframe>

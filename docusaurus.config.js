@@ -86,6 +86,11 @@ const config = {
           },
           {
             href: "https://github.com/ifcjs",
+            label: "Community",
+            position: "right",
+          },
+          {
+            href: "https://github.com/ifcjs",
             label: "Marketplace",
             position: "right",
           },
