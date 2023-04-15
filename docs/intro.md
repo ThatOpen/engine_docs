@@ -35,7 +35,7 @@ In terms of features, these libraries offer you a wide set of handy tools to cre
 
 :::info Do you need another features?
 
-Don't worry! You can check out the [marketplace](#) to see if someone has already done it. Many of the tools there are free, so don't forget to pass by! Additionally, all these libraries are made by a **Components** system that is extensible and allow you to  [make your own custom Components easily](components.md). 🚀
+Don't worry! You can check out the **marketplace** to see if someone has already done it. Many of the tools there are free, so don't forget to pass by! Additionally, all these libraries are made by a **Components** system that is extensible and allow you to  [make your own custom Components easily](components/creating-components.md). 🚀
 
 :::
 
@@ -52,7 +52,7 @@ BIM stands for **Building Information Model**. In a nutshell, instead of drawing
 
 :::tip Never heard of BIM before?
 
-Don't worry! **You don't be to be an architect/building engineer** to follow these docs and create BIM software, but keep in mind that this is the domain that we will constantly refer to. Feel free to [get to our open community](#) and ask around! We'll be happy to help. 🍻
+Don't worry! **You don't be to be an architect/building engineer** to follow these docs and create BIM software, but keep in mind that this is the domain that we will constantly refer to. Feel free to **get to our open community** and ask around! We'll be happy to help. 🍻
 
 :::
 
@@ -75,7 +75,7 @@ If you have never programmed before, this might sound overwhelming, but it's act
 
 :::danger How to become a BIM software developer?
 
-There are many free resources out there to learn to code for the web, although they are not specific to BIM or the construction industry. For that reason, [we have made some courses that cover all these topics](#), starting from scratch and oriented to BIM software developer.
+There are many free resources out there to learn to code for the web, although they are not specific to BIM or the construction industry. For that reason, **we have made some courses that cover all these topics**, starting from scratch and oriented to BIM software developer.
 
 :::
 
@@ -87,7 +87,7 @@ These docs are organized in 4 different sections. This is a lot of information a
 ___
 ### Components
 
-Everything in these libraries are components. Here, you will learn [the basics](components/gettings%20started.md) and how to [import, use](components/using-components.md) and even [create your own custom components](components/creating-components.md). You will also find some useful [tutorial paths](components/tutorial-paths.md) that will help you progress throughout these docs!
+Everything in these libraries are components. Here, you will learn [the basics](components/getting-started.md) and how to [import, use](components/getting-started.md) and even [create your own custom components](components/creating-components.md). You will also find some useful [tutorial paths](components/tutorial-paths.md) that will help you progress throughout these docs!
 ___
 ### That open platform
 

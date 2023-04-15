@@ -23,7 +23,7 @@ This includes IFC models, fragments, 3D scans, etc.
 
 #### Defined in
 
-components/types/components.ts:31
+components/types/components.ts:37
 
 ___
 
@@ -35,7 +35,19 @@ ___
 
 #### Defined in
 
-components/types/components.ts:25
+components/types/components.ts:26
+
+___
+
+### ui
+
+• `Readonly` **ui**: `UIManager`
+
+UIManager
+
+#### Defined in
+
+components/types/components.ts:31
 
 ## Accessors
 
@@ -52,7 +64,7 @@ that determines the point of view of the renderer.
 
 #### Defined in
 
-components/types/components.ts:81
+components/types/components.ts:87
 
 • `set` **camera**(`camera`): `void`
 
@@ -70,7 +82,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-components/types/components.ts:91
+components/types/components.ts:97
 
 ___
 
@@ -87,7 +99,7 @@ used primarily to pick 3D items with the mouse or a touch screen.
 
 #### Defined in
 
-components/types/components.ts:99
+components/types/components.ts:105
 
 • `set` **raycaster**(`raycaster`): `void`
 
@@ -106,7 +118,7 @@ to initialize this if any component that needs a raycaster is used.
 
 #### Defined in
 
-components/types/components.ts:110
+components/types/components.ts:116
 
 ___
 
@@ -124,7 +136,7 @@ components with pre-made functionality (e.g. rendering of 2D CSS elements.
 
 #### Defined in
 
-components/types/components.ts:45
+components/types/components.ts:51
 
 • `set` **renderer**(`renderer`): `void`
 
@@ -142,7 +154,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-components/types/components.ts:55
+components/types/components.ts:61
 
 ___
 
@@ -159,7 +171,7 @@ where all the rendered items are placed.
 
 #### Defined in
 
-components/types/components.ts:63
+components/types/components.ts:69
 
 • `set` **scene**(`scene`): `void`
 
@@ -177,7 +189,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-components/types/components.ts:73
+components/types/components.ts:79
 
 ## Methods
 
@@ -204,7 +216,7 @@ You can learn more about how Three.js handles memory leaks
 
 #### Defined in
 
-components/types/components.ts:146
+components/types/components.ts:154
 
 ___
 
@@ -223,4 +235,4 @@ used, the [raycaster](components.Components.md#raycaster) will need to be initia
 
 #### Defined in
 
-components/types/components.ts:126
+components/types/components.ts:133

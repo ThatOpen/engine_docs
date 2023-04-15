@@ -28,4 +28,6 @@ custom_edit_url: null
 - [Progress](../interfaces/components.Progress.md)
 - [Raycaster](../interfaces/components.Raycaster.md)
 - [Resizeable](../interfaces/components.Resizeable.md)
+- [UI](../interfaces/components.UI.md)
+- [UIComponent](../interfaces/components.UIComponent.md)
 - [Updateable](../interfaces/components.Updateable.md)

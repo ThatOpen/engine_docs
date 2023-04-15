@@ -103,6 +103,26 @@ components/core/SimpleRaycaster/index.ts:30
 
 ___
 
+### hasUI
+
+▸ **hasUI**(): this is UI
+
+Whether is component implements any kind of [UI](../interfaces/components.UI.md).
+
+#### Returns
+
+this is UI
+
+#### Inherited from
+
+[Component](components.Component.md).[hasUI](components.Component.md#hasui)
+
+#### Defined in
+
+components/types/component.ts:48
+
+___
+
 ### isDisposeable
 
 ▸ **isDisposeable**(): this is Disposable
