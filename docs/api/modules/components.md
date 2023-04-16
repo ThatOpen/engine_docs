@@ -19,7 +19,7 @@ custom_edit_url: null
 - [SimpleRaycaster](../classes/components.SimpleRaycaster.md)
 - [SimpleRenderer](../classes/components.SimpleRenderer.md)
 - [SimpleScene](../classes/components.SimpleScene.md)
-- [ToolComponents](../classes/components.ToolComponents.md)
+- [ToolComponent](../classes/components.ToolComponent.md)
 
 ## Interfaces
 

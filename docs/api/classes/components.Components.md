@@ -29,9 +29,9 @@ ___
 
 ### tools
 
-• `Readonly` **tools**: [`ToolComponents`](components.ToolComponents.md)
+• `Readonly` **tools**: [`ToolComponent`](components.ToolComponent.md)
 
-[ToolComponents](components.ToolComponents.md)
+[ToolComponent](components.ToolComponent.md)
 
 #### Defined in
 

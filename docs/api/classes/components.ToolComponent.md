@@ -1,11 +1,11 @@
 ---
-id: "components.ToolComponents"
-title: "Class: ToolComponents"
-sidebar_label: "ToolComponents"
+id: "components.ToolComponent"
+title: "Class: ToolComponent"
+sidebar_label: "ToolComponent"
 custom_edit_url: null
 ---
 
-[components](../modules/components.md).ToolComponents
+[components](../modules/components.md).ToolComponent
 
 An object to easily handle all the tools used (e.g. updating them, retrieving
 them, performing batch operations, etc). A tool is a feature that achieves
@@ -35,7 +35,7 @@ Registers a new tool component.
 
 #### Defined in
 
-components/core/ToolsComponents/index.ts:16
+components/core/ToolsComponent/index.ts:17
 
 ___
 
@@ -55,7 +55,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/ToolsComponents/index.ts:58
+components/core/ToolsComponent/index.ts:73
 
 ___
 
@@ -77,7 +77,7 @@ Retrieves a tool component by its name.
 
 #### Defined in
 
-components/core/ToolsComponents/index.ts:37
+components/core/ToolsComponent/index.ts:38
 
 ___
 
@@ -99,7 +99,7 @@ Deletes a previously registered tool component.
 
 #### Defined in
 
-components/core/ToolsComponents/index.ts:24
+components/core/ToolsComponent/index.ts:25
 
 ___
 
@@ -122,4 +122,35 @@ property [enabled](components.Component.md#enabled) is true will be updated.
 
 #### Defined in
 
-components/core/ToolsComponents/index.ts:47
+components/core/ToolsComponent/index.ts:62
+
+___
+
+### use
+
+▸ **use**<`T`\>(`token`, `id`): `Promise`<\>
+
+Gets one of your tools of That Open Platform. You can pass the type of
+component as the generic parameter T to get the types and intellisense
+for the component.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `token` | `string` | The authentication token to authorise this request. |
+| `id` | `string` | The ID of the tool you want to get |
+
+#### Returns
+
+`Promise`<\>
+
+#### Defined in
+
+components/core/ToolsComponent/index.ts:49

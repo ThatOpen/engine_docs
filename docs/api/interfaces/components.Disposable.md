@@ -20,7 +20,7 @@ cleaned up.
 - [`SimpleGrid`](../classes/components.SimpleGrid.md)
 - [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
 - [`SimpleScene`](../classes/components.SimpleScene.md)
-- [`ToolComponents`](../classes/components.ToolComponents.md)
+- [`ToolComponent`](../classes/components.ToolComponent.md)
 
 ## Properties
 
