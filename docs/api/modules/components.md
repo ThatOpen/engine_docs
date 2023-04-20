@@ -13,9 +13,13 @@ custom_edit_url: null
 - [Components](../classes/components.Components.md)
 - [Disposer](../classes/components.Disposer.md)
 - [Event](../classes/components.Event.md)
+- [FragmentIfcLoader](../classes/components.FragmentIfcLoader.md)
+- [FragmentManager](../classes/components.FragmentManager.md)
 - [Mouse](../classes/components.Mouse.md)
 - [SimpleCamera](../classes/components.SimpleCamera.md)
+- [SimpleClipper](../classes/components.SimpleClipper.md)
 - [SimpleGrid](../classes/components.SimpleGrid.md)
+- [SimplePlane](../classes/components.SimplePlane.md)
 - [SimpleRaycaster](../classes/components.SimpleRaycaster.md)
 - [SimpleRenderer](../classes/components.SimpleRenderer.md)
 - [SimpleScene](../classes/components.SimpleScene.md)
@@ -23,6 +27,7 @@ custom_edit_url: null
 
 ## Interfaces
 
+- [Createable](../interfaces/components.Createable.md)
 - [Disposable](../interfaces/components.Disposable.md)
 - [Hideable](../interfaces/components.Hideable.md)
 - [Progress](../interfaces/components.Progress.md)

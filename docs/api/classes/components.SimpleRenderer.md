@@ -71,7 +71,7 @@ instance of the renderer.
 
 #### Defined in
 
-components/types/base-renderer.ts:33
+components/base-types/base-renderer.ts:33
 
 ___
 
@@ -221,7 +221,7 @@ to the renderer.
 
 #### Defined in
 
-components/types/base-renderer.ts:40
+components/base-types/base-renderer.ts:40
 
 ___
 

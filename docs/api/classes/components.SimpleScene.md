@@ -34,7 +34,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-components/core/SimpleScene/index.ts:14
+components/core/SimpleScene/index.ts:13
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleScene/index.ts:17
+components/core/SimpleScene/index.ts:16
 
 ## Methods
 
@@ -70,7 +70,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/SimpleScene/index.ts:34
+components/core/SimpleScene/index.ts:33
 
 ___
 
@@ -90,4 +90,4 @@ ___
 
 #### Defined in
 
-components/core/SimpleScene/index.ts:29
+components/core/SimpleScene/index.ts:28

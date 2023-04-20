@@ -31,7 +31,7 @@ Triggers all the callbacks assigned to this event.
 
 #### Defined in
 
-components/types/base-types.ts:32
+components/base-types/base-types.ts:32
 
 ## Methods
 
@@ -53,7 +53,7 @@ Removes a callback from this event instance.
 
 #### Defined in
 
-components/types/base-types.ts:25
+components/base-types/base-types.ts:25
 
 ___
 
@@ -75,7 +75,7 @@ Add a callback to this event instance.
 
 #### Defined in
 
-components/types/base-types.ts:17
+components/base-types/base-types.ts:17
 
 ___
 
@@ -91,4 +91,4 @@ Gets rid of all the suscribed events.
 
 #### Defined in
 
-components/types/base-types.ts:42
+components/base-types/base-types.ts:42

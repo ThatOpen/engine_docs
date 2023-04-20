@@ -1,25 +1,24 @@
 ---
-id: "components.SimpleRaycaster"
-title: "Class: SimpleRaycaster"
-sidebar_label: "SimpleRaycaster"
+id: "components.FragmentManager"
+title: "Class: FragmentManager"
+sidebar_label: "FragmentManager"
 custom_edit_url: null
 ---
 
-[components](../modules/components.md).SimpleRaycaster
+[components](../modules/components.md).FragmentManager
 
-A simple [raycaster](https://threejs.org/docs/#api/en/core/Raycaster)
-that allows to easily get items from the scene using the mouse and touch
-events.
+Object that can efficiently load binary files that contain
+[fragment geometry](https://github.com/ifcjs/fragment).
 
 ## Hierarchy
 
-- [`Component`](components.Component.md)<`THREE.Raycaster`\>
+- [`Component`](components.Component.md)<`Fragment`[]\>
 
-  ↳ **`SimpleRaycaster`**
+  ↳ **`FragmentManager`**
 
 ## Implements
 
-- [`Raycaster`](../interfaces/components.Raycaster.md)
+- [`Disposable`](../interfaces/components.Disposable.md)
 
 ## Properties
 
@@ -35,13 +34,29 @@ events.
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:18
+components/fragments/FragmentManager/index.ts:18
+
+___
+
+### list
+
+• **list**: `Object` = `{}`
+
+All the created [fragments](https://github.com/ifcjs/fragment).
+
+#### Index signature
+
+▪ [guid: `string`]: `Fragment`
+
+#### Defined in
+
+components/fragments/FragmentManager/index.ts:21
 
 ___
 
 ### name
 
-• **name**: `string` = `"SimpleRaycaster"`
+• **name**: `string` = `"FragmentsComponent"`
 
 [name](components.Component.md#name)
 
@@ -51,47 +66,79 @@ ___
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:15
+components/fragments/FragmentManager/index.ts:15
 
-## Methods
+## Accessors
 
-### castRay
+### meshes
 
-▸ **castRay**(`items?`): ``null`` \| `Intersection`<`Object3D`<`Event`\>\>
+• `get` **meshes**(): `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
 
-Throws a ray from the camera to the mouse or touch event point and returns
-the first item found. This also takes into account the clipping planes
-used by the renderer.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `items` | `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [meshes](components.Components.md#meshes). |
+The list of meshes of the created fragments.
 
 #### Returns
 
-``null`` \| `Intersection`<`Object3D`<`Event`\>\>
-
-#### Implementation of
-
-Raycaster.castRay
+`Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:44
+components/fragments/FragmentManager/index.ts:27
 
-___
+## Methods
 
-### get
+### dispose
 
-▸ **get**(): `Raycaster`
+▸ **dispose**(): `void`
 
 [get](components.Component.md#get)
 
 #### Returns
 
-`Raycaster`
+`void`
+
+#### Implementation of
+
+Disposable.dispose
+
+#### Defined in
+
+components/fragments/FragmentManager/index.ts:46
+
+___
+
+### export
+
+▸ **export**(`ids?`): `Uint8Array`
+
+Export the specified fragments.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ids` | `string`[] | the IDs of the fragments to export. By default, it's all the IDs of the existing fragments of [list](components.FragmentManager.md#list). |
+
+#### Returns
+
+`Uint8Array`
+
+the exported data as binary buffer.
+
+#### Defined in
+
+components/fragments/FragmentManager/index.ts:79
+
+___
+
+### get
+
+▸ **get**(): `Fragment`[]
+
+[get](components.Component.md#get)
+
+#### Returns
+
+`Fragment`[]
 
 #### Overrides
 
@@ -99,7 +146,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:31
+components/fragments/FragmentManager/index.ts:41
 
 ___
 
@@ -200,3 +247,27 @@ this is Updateable
 #### Defined in
 
 components/base-types/component.ts:38
+
+___
+
+### load
+
+▸ **load**(`data`): `string`[]
+
+Loads one or many fragments into the scene.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Uint8Array` | the bytes containing the data for the fragments to load. |
+
+#### Returns
+
+`string`[]
+
+the list of IDs of the loaded fragments.
+
+#### Defined in
+
+components/fragments/FragmentManager/index.ts:60

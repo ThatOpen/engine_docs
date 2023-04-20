@@ -13,11 +13,21 @@ it to prevent
 This also ensures that the DOM events created by that component will be
 cleaned up.
 
+## Hierarchy
+
+- **`Disposable`**
+
+  ↳ [`UIComponent`](components.UIComponent.md)
+
 ## Implemented by
 
+- [`FragmentIfcLoader`](../classes/components.FragmentIfcLoader.md)
+- [`FragmentManager`](../classes/components.FragmentManager.md)
 - [`Mouse`](../classes/components.Mouse.md)
 - [`SimpleCamera`](../classes/components.SimpleCamera.md)
+- [`SimpleClipper`](../classes/components.SimpleClipper.md)
 - [`SimpleGrid`](../classes/components.SimpleGrid.md)
+- [`SimplePlane`](../classes/components.SimplePlane.md)
 - [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
 - [`SimpleScene`](../classes/components.SimpleScene.md)
 - [`ToolComponent`](../classes/components.ToolComponent.md)
@@ -41,4 +51,4 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-components/types/base-types.ts:62
+components/base-types/base-types.ts:62

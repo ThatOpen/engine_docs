@@ -33,7 +33,7 @@ instance of the renderer.
 
 #### Defined in
 
-components/types/base-renderer.ts:33
+components/base-types/base-renderer.ts:33
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-components/types/base-renderer.ts:18
+components/base-types/base-renderer.ts:18
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-components/types/base-renderer.ts:15
+components/base-types/base-renderer.ts:15
 
 ## Methods
 
@@ -85,7 +85,7 @@ components/types/base-renderer.ts:15
 
 #### Defined in
 
-components/types/base-renderer.ts:21
+components/base-types/base-renderer.ts:21
 
 ___
 
@@ -105,7 +105,7 @@ Resizeable.getSize
 
 #### Defined in
 
-components/types/base-renderer.ts:24
+components/base-types/base-renderer.ts:24
 
 ___
 
@@ -125,7 +125,7 @@ Resizeable.resize
 
 #### Defined in
 
-components/types/base-renderer.ts:27
+components/base-types/base-renderer.ts:27
 
 ___
 
@@ -151,4 +151,4 @@ to the renderer.
 
 #### Defined in
 
-components/types/base-renderer.ts:40
+components/base-types/base-renderer.ts:40

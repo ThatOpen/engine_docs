@@ -22,6 +22,8 @@ the type of the core of this component. For instance, a component containing a
 
 - **`Component`**
 
+  ↳ [`BaseRenderer`](components.BaseRenderer.md)
+
   ↳ [`SimpleScene`](components.SimpleScene.md)
 
   ↳ [`SimpleCamera`](components.SimpleCamera.md)
@@ -30,7 +32,11 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`SimpleGrid`](components.SimpleGrid.md)
 
-  ↳ [`BaseRenderer`](components.BaseRenderer.md)
+  ↳ [`SimpleClipper`](components.SimpleClipper.md)
+
+  ↳ [`SimplePlane`](components.SimplePlane.md)
+
+  ↳ [`FragmentManager`](components.FragmentManager.md)
 
 ## Properties
 
@@ -45,7 +51,7 @@ will not be updated automatically each frame.
 
 #### Defined in
 
-components/types/component.ts:19
+components/base-types/component.ts:19
 
 ___
 
@@ -57,7 +63,7 @@ The main identifier of this component. It can be used to retrieve it and index i
 
 #### Defined in
 
-components/types/component.ts:11
+components/base-types/component.ts:11
 
 ## Methods
 
@@ -74,7 +80,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Defined in
 
-components/types/component.ts:25
+components/base-types/component.ts:25
 
 ___
 
@@ -90,7 +96,7 @@ this is UI
 
 #### Defined in
 
-components/types/component.ts:48
+components/base-types/component.ts:48
 
 ___
 
@@ -106,7 +112,7 @@ this is Disposable
 
 #### Defined in
 
-components/types/component.ts:28
+components/base-types/component.ts:28
 
 ___
 
@@ -122,7 +128,7 @@ this is Hideable
 
 #### Defined in
 
-components/types/component.ts:43
+components/base-types/component.ts:43
 
 ___
 
@@ -138,7 +144,7 @@ this is Resizeable
 
 #### Defined in
 
-components/types/component.ts:33
+components/base-types/component.ts:33
 
 ___
 
@@ -154,4 +160,4 @@ this is Updateable
 
 #### Defined in
 
-components/types/component.ts:38
+components/base-types/component.ts:38

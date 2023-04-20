@@ -30,7 +30,7 @@ The real position of the mouse of the Three.js canvas.
 
 #### Defined in
 
-components/types/mouse.ts:21
+components/base-types/mouse.ts:21
 
 ## Methods
 
@@ -50,4 +50,4 @@ Disposable.dispose
 
 #### Defined in
 
-components/types/mouse.ts:31
+components/base-types/mouse.ts:31

@@ -1,45 +1,31 @@
 ---
-id: "components.SimpleCamera"
-title: "Class: SimpleCamera"
-sidebar_label: "SimpleCamera"
+id: "components.SimplePlane"
+title: "Class: SimplePlane"
+sidebar_label: "SimplePlane"
 custom_edit_url: null
 ---
 
-[components](../modules/components.md).SimpleCamera
+[components](../modules/components.md).SimplePlane
 
-A basic camera that uses
-[yomotsu's cameracontrols](https://github.com/yomotsu/camera-controls) to
-easily control the camera in 2D and 3D. Check out it's API to find out
-what features it offers.
+Each of the planes created by [SimpleClipper](components.SimpleClipper.md).
 
 ## Hierarchy
 
-- [`Component`](components.Component.md)<`THREE.PerspectiveCamera` \| `THREE.OrthographicCamera`\>
+- [`Component`](components.Component.md)<`THREE.Plane`\>
 
-  ↳ **`SimpleCamera`**
+  ↳ **`SimplePlane`**
 
 ## Implements
 
-- [`Updateable`](../interfaces/components.Updateable.md)
 - [`Disposable`](../interfaces/components.Disposable.md)
+- [`Updateable`](../interfaces/components.Updateable.md)
+- [`Hideable`](../interfaces/components.Hideable.md)
 
 ## Properties
 
-### activeCamera
-
-• **activeCamera**: `PerspectiveCamera` \| `OrthographicCamera`
-
-The camera that is being used now according to the current CameraProjection.
-
-#### Defined in
-
-components/core/SimpleCamera/index.ts:46
-
-___
-
 ### afterUpdate
 
-• `Readonly` **afterUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
+• **afterUpdate**: [`Event`](components.Event.md)<`Plane`\>
 
 [afterUpdate](../interfaces/components.Updateable.md#afterupdate)
 
@@ -49,13 +35,13 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:23
+components/core/SimpleClipper/simple-plane.ts:23
 
 ___
 
 ### beforeUpdate
 
-• `Readonly` **beforeUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
+• **beforeUpdate**: [`Event`](components.Event.md)<`Plane`\>
 
 [beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
 
@@ -65,28 +51,37 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:20
+components/core/SimpleClipper/simple-plane.ts:26
 
 ___
 
-### controls
+### draggingEnded
 
-• `Readonly` **controls**: `CameraControls`
+• **draggingEnded**: [`Event`](components.Event.md)<`void`\>
 
-The object that controls the camera. An instance of
-[yomotsu's cameracontrols](https://github.com/yomotsu/camera-controls).
-Transforming the camera directly will have no effect: you need to use this
-object to move, rotate, look at objects, etc.
+Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:31
+components/core/SimpleClipper/simple-plane.ts:32
+
+___
+
+### draggingStarted
+
+• **draggingStarted**: [`Event`](components.Event.md)<`void`\>
+
+Event that fires when the user starts dragging a clipping plane.
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:29
 
 ___
 
 ### name
 
-• **name**: `string` = `"SimpleCamera"`
+• **name**: `string` = `"SimplePlane"`
 
 [name](components.Component.md#name)
 
@@ -96,7 +91,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:17
+components/core/SimpleClipper/simple-plane.ts:20
 
 ## Accessors
 
@@ -116,9 +111,9 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:34
+components/core/SimpleClipper/simple-plane.ts:52
 
-• `set` **enabled**(`enabled`): `void`
+• `set` **enabled**(`state`): `void`
 
 [enabled](components.Component.md#enabled)
 
@@ -126,7 +121,7 @@ components/core/SimpleCamera/index.ts:34
 
 | Name | Type |
 | :------ | :------ |
-| `enabled` | `boolean` |
+| `state` | `boolean` |
 
 #### Returns
 
@@ -138,7 +133,133 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:39
+components/core/SimpleClipper/simple-plane.ts:57
+
+___
+
+### meshes
+
+• `get` **meshes**(): `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
+
+The meshes used for raycasting
+
+#### Returns
+
+`Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:76
+
+___
+
+### planeMaterial
+
+• `get` **planeMaterial**(): `Material` \| `Material`[]
+
+The material of the clipping plane representation.
+
+#### Returns
+
+`Material` \| `Material`[]
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:81
+
+• `set` **planeMaterial**(`material`): `void`
+
+The material of the clipping plane representation.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `material` | `Material` \| `Material`[] |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:86
+
+___
+
+### size
+
+• `get` **size**(): `number`
+
+The size of the clipping plane representation.
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:91
+
+• `set` **size**(`size`): `void`
+
+Sets the size of the clipping plane representation.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `size` | `number` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:96
+
+___
+
+### visible
+
+• `get` **visible**(): `boolean`
+
+[visible](../interfaces/components.Hideable.md#visible)
+
+#### Returns
+
+`boolean`
+
+#### Implementation of
+
+[Hideable](../interfaces/components.Hideable.md).[visible](../interfaces/components.Hideable.md#visible)
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:63
+
+• `set` **visible**(`state`): `void`
+
+[visible](../interfaces/components.Hideable.md#visible)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `state` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[Hideable](../interfaces/components.Hideable.md).[visible](../interfaces/components.Hideable.md#visible)
+
+#### Defined in
+
+components/core/SimpleClipper/simple-plane.ts:68
 
 ## Methods
 
@@ -158,19 +279,19 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:66
+components/core/SimpleClipper/simple-plane.ts:138
 
 ___
 
 ### get
 
-▸ **get**(): `PerspectiveCamera` \| `OrthographicCamera`
+▸ **get**(): `Plane`
 
 [get](components.Component.md#get)
 
 #### Returns
 
-`PerspectiveCamera` \| `OrthographicCamera`
+`Plane`
 
 #### Overrides
 
@@ -178,7 +299,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:61
+components/core/SimpleClipper/simple-plane.ts:133
 
 ___
 
@@ -284,15 +405,9 @@ ___
 
 ### update
 
-▸ **update**(`_delta`): `void`
+▸ **update**(): `void`
 
 [update](../interfaces/components.Updateable.md#update)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_delta` | `number` |
 
 #### Returns
 
@@ -304,21 +419,4 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:75
-
-___
-
-### updateAspect
-
-▸ **updateAspect**(): `void`
-
-Updates the aspect of the camera to match the size of the
-[renderer](components.Components.md#renderer).
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-components/core/SimpleCamera/index.ts:87
+components/core/SimpleClipper/simple-plane.ts:122

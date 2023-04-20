@@ -12,7 +12,7 @@
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-light: #f2cef0;
   --ifm-color-primary-lighter: #F1E6F6;
   --ifm-color-primary-lightest: #F8F5FE;
   --ifm-color-success-contrast-background: var(--ifm-color-primary-lighter);
@@ -36,7 +36,7 @@
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-light: #1f3a34;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
@@ -51,6 +51,10 @@
   --ifm-color-info-contrast-background:var(--dark-gray) !important;
   --smooth-shadow: 0 0 30px 0 #0d0d0d;
   --nice-border: 1px solid #444;
+}
+
+.alert--success {
+  --ifm-alert-background-color-highlight: var(--ifm-color-primary-light);
 }
 
 .footer--dark {
