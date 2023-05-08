@@ -34,7 +34,7 @@ remove them from the mesh before disposing it.
 
 #### Defined in
 
-components/core/MemoryComponent/index.ts:20
+temp/components/core/Disposer/index.ts:21
 
 ___
 
@@ -56,4 +56,4 @@ Disposes a geometry from memory.
 
 #### Defined in
 
-components/core/MemoryComponent/index.ts:37
+temp/components/core/Disposer/index.ts:38

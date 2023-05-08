@@ -14,6 +14,7 @@ dimensions.
 ## Implemented by
 
 - [`SimpleClipper`](../classes/components.SimpleClipper.md)
+- [`SimpleDimensions`](../classes/components.SimpleDimensions.md)
 
 ## Properties
 
@@ -25,7 +26,7 @@ Fired after successfully calling [()](components.Createable.md#create)
 
 #### Defined in
 
-components/base-types/base-types.ts:144
+temp/components/base-types/base-types.ts:144
 
 ___
 
@@ -37,7 +38,7 @@ Fired after successfully calling [()](components.Createable.md#delete)
 
 #### Defined in
 
-components/base-types/base-types.ts:150
+temp/components/base-types/base-types.ts:150
 
 ___
 
@@ -63,7 +64,7 @@ Creates a new instance of an element (e.g. a new Dimension).
 
 #### Defined in
 
-components/base-types/base-types.ts:141
+temp/components/base-types/base-types.ts:141
 
 ___
 
@@ -89,4 +90,4 @@ Deletes an existing instance of an element (e.g. a Dimension).
 
 #### Defined in
 
-components/base-types/base-types.ts:147
+temp/components/base-types/base-types.ts:147

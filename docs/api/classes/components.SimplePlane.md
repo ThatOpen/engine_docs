@@ -15,6 +15,8 @@ Each of the planes created by [SimpleClipper](components.SimpleClipper.md).
 
   ↳ **`SimplePlane`**
 
+  ↳↳ [`EdgesPlane`](components.EdgesPlane.md)
+
 ## Implements
 
 - [`Disposable`](../interfaces/components.Disposable.md)
@@ -35,7 +37,7 @@ Each of the planes created by [SimpleClipper](components.SimpleClipper.md).
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:23
+temp/components/core/SimpleClipper/simple-plane.ts:23
 
 ___
 
@@ -51,7 +53,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:26
+temp/components/core/SimpleClipper/simple-plane.ts:26
 
 ___
 
@@ -63,7 +65,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:32
+temp/components/core/SimpleClipper/simple-plane.ts:32
 
 ___
 
@@ -75,7 +77,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:29
+temp/components/core/SimpleClipper/simple-plane.ts:29
 
 ___
 
@@ -91,7 +93,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:20
+temp/components/core/SimpleClipper/simple-plane.ts:20
 
 ## Accessors
 
@@ -111,7 +113,7 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:52
+temp/components/core/SimpleClipper/simple-plane.ts:52
 
 • `set` **enabled**(`state`): `void`
 
@@ -133,7 +135,7 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:57
+temp/components/core/SimpleClipper/simple-plane.ts:57
 
 ___
 
@@ -149,7 +151,7 @@ The meshes used for raycasting
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:76
+temp/components/core/SimpleClipper/simple-plane.ts:76
 
 ___
 
@@ -165,7 +167,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:81
+temp/components/core/SimpleClipper/simple-plane.ts:81
 
 • `set` **planeMaterial**(`material`): `void`
 
@@ -183,7 +185,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:86
+temp/components/core/SimpleClipper/simple-plane.ts:86
 
 ___
 
@@ -199,7 +201,7 @@ The size of the clipping plane representation.
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:91
+temp/components/core/SimpleClipper/simple-plane.ts:91
 
 • `set` **size**(`size`): `void`
 
@@ -217,7 +219,7 @@ Sets the size of the clipping plane representation.
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:96
+temp/components/core/SimpleClipper/simple-plane.ts:96
 
 ___
 
@@ -237,7 +239,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:63
+temp/components/core/SimpleClipper/simple-plane.ts:63
 
 • `set` **visible**(`state`): `void`
 
@@ -259,7 +261,7 @@ components/core/SimpleClipper/simple-plane.ts:63
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:68
+temp/components/core/SimpleClipper/simple-plane.ts:68
 
 ## Methods
 
@@ -279,7 +281,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:138
+temp/components/core/SimpleClipper/simple-plane.ts:138
 
 ___
 
@@ -299,7 +301,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:133
+temp/components/core/SimpleClipper/simple-plane.ts:133
 
 ___
 
@@ -319,7 +321,7 @@ this is UI
 
 #### Defined in
 
-components/base-types/component.ts:48
+temp/components/base-types/component.ts:48
 
 ___
 
@@ -339,7 +341,7 @@ this is Disposable
 
 #### Defined in
 
-components/base-types/component.ts:28
+temp/components/base-types/component.ts:28
 
 ___
 
@@ -359,7 +361,7 @@ this is Hideable
 
 #### Defined in
 
-components/base-types/component.ts:43
+temp/components/base-types/component.ts:43
 
 ___
 
@@ -379,7 +381,7 @@ this is Resizeable
 
 #### Defined in
 
-components/base-types/component.ts:33
+temp/components/base-types/component.ts:33
 
 ___
 
@@ -399,7 +401,7 @@ this is Updateable
 
 #### Defined in
 
-components/base-types/component.ts:38
+temp/components/base-types/component.ts:38
 
 ___
 
@@ -419,4 +421,4 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/simple-plane.ts:122
+temp/components/core/SimpleClipper/simple-plane.ts:122

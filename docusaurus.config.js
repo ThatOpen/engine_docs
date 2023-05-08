@@ -74,10 +74,10 @@ const config = {
       image: "img/docusaurus-social-card.jpg",
       navbar: {
         title: "",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/logo-with-letters.svg",
-        },
+        // logo: {
+        //   alt: "My Site Logo",
+        //   src: "img/logo-with-letters.svg",
+        // },
         items: [
           {
             href: "https://github.com/ifcjs",

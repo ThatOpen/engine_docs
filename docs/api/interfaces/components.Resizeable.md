@@ -38,7 +38,7 @@ component.
 
 #### Defined in
 
-components/base-types/base-types.ts:93
+temp/components/base-types/base-types.ts:93
 
 ___
 
@@ -66,4 +66,4 @@ component.
 
 #### Defined in
 
-components/base-types/base-types.ts:88
+temp/components/base-types/base-types.ts:88

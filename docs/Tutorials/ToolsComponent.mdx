@@ -3,7 +3,7 @@ ___
 BIM applications are complex and can have a lot of different functionalities. Of course, this means that they can
 have a lot of components. Keeping your project tidy and clean can be a challenge if you need certain components
 in different places of your app.
-Luckily, there's an easier way of handling this: the [Tools Component](../api/classes/components.ToolsComponent)!
+Luckily, there's an easier way of handling this: the [Tools Component](../api/classes/components.ToolComponent)!
 This component has two purposes:
 - Making your components available anywhere in your application.
 - Getting your tools from [That Open Platform](../that-open-platform/getting-started.mdx).
@@ -49,8 +49,8 @@ First, you will need a token to communicate with That Open Platform and the ID o
 
 ```js
 const token =
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1IjoiYXV0aDB8NjNlNjU5MjY0OGM3M2ZlZjE2M2FkZDZhIiwiYSI6IjY0Mzk2ZDhkZTk4ZDcxY2NlZDFkYzQ3ZiJ9.RCAvy-YU8nRqd0pw-MYRA84GwxV3-4M62wf_37zpsbE";
-const id = "643981b1d88f1db593855c8a";
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1IjoiNjQzZmFiN2NkM2QwMmJhOWY1NjA5ZTVlIiwiYSI6IjY0M2ZhYzMwZDcyMDZiNTU2ZGU4YTA4OCJ9.TAyzrhqOfJ-UCy35T3w5-wInF4NQ9grOlSD1VKlg0tM";
+const id = "643fe71a18ab56057501e8be";
 ```
 Next, you can get the component with the `use` command. That will give you the class of the component, which you can
 easily instantiate like a normal class. That's all it takes!

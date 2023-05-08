@@ -2,9 +2,6 @@
 /node_modules
 /temp
 
-# Production
-/build
-
 # Generated files
 .docusaurus
 .cache-loader

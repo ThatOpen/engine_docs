@@ -9,3 +9,9 @@ custom_edit_url: null
 
 Whether this component has a representation in the user
 interface, like a button or a window.
+
+## Implemented by
+
+- [`FragmentIfcLoader`](../classes/components.FragmentIfcLoader.md)
+- [`SimpleClipper`](../classes/components.SimpleClipper.md)
+- [`SimpleDimensions`](../classes/components.SimpleDimensions.md)

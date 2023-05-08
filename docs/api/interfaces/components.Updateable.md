@@ -12,6 +12,7 @@ Whether this component should be updated each frame.
 ## Implemented by
 
 - [`SimpleCamera`](../classes/components.SimpleCamera.md)
+- [`SimpleDimensions`](../classes/components.SimpleDimensions.md)
 - [`SimplePlane`](../classes/components.SimplePlane.md)
 - [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
 
@@ -25,7 +26,7 @@ Actions that should be executed after updating the component.
 
 #### Defined in
 
-components/base-types/base-types.ts:99
+temp/components/base-types/base-types.ts:99
 
 ___
 
@@ -37,7 +38,7 @@ Actions that should be executed before updating the component.
 
 #### Defined in
 
-components/base-types/base-types.ts:102
+temp/components/base-types/base-types.ts:102
 
 ## Methods
 
@@ -60,4 +61,4 @@ instance, a renderer component will make a render each frame.
 
 #### Defined in
 
-components/base-types/base-types.ts:108
+temp/components/base-types/base-types.ts:108

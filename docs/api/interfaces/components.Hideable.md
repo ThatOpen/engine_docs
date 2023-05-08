@@ -20,6 +20,7 @@ hidden or shown in the
 ## Implemented by
 
 - [`SimpleClipper`](../classes/components.SimpleClipper.md)
+- [`SimpleDimensions`](../classes/components.SimpleDimensions.md)
 - [`SimpleGrid`](../classes/components.SimpleGrid.md)
 - [`SimplePlane`](../classes/components.SimplePlane.md)
 
@@ -35,4 +36,4 @@ currently visible or not in the
 
 #### Defined in
 
-components/base-types/base-types.ts:74
+temp/components/base-types/base-types.ts:74

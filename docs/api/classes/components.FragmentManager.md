@@ -34,7 +34,7 @@ Object that can efficiently load binary files that contain
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:18
+temp/components/fragments/FragmentManager/index.ts:18
 
 ___
 
@@ -50,7 +50,7 @@ All the created [fragments](https://github.com/ifcjs/fragment).
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:21
+temp/components/fragments/FragmentManager/index.ts:21
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:15
+temp/components/fragments/FragmentManager/index.ts:15
 
 ## Accessors
 
@@ -82,7 +82,7 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:27
+temp/components/fragments/FragmentManager/index.ts:29
 
 ## Methods
 
@@ -102,7 +102,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:46
+temp/components/fragments/FragmentManager/index.ts:48
 
 ___
 
@@ -126,7 +126,7 @@ the exported data as binary buffer.
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:79
+temp/components/fragments/FragmentManager/index.ts:91
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:41
+temp/components/fragments/FragmentManager/index.ts:43
 
 ___
 
@@ -166,7 +166,7 @@ this is UI
 
 #### Defined in
 
-components/base-types/component.ts:48
+temp/components/base-types/component.ts:48
 
 ___
 
@@ -186,7 +186,7 @@ this is Disposable
 
 #### Defined in
 
-components/base-types/component.ts:28
+temp/components/base-types/component.ts:28
 
 ___
 
@@ -206,7 +206,7 @@ this is Hideable
 
 #### Defined in
 
-components/base-types/component.ts:43
+temp/components/base-types/component.ts:43
 
 ___
 
@@ -226,7 +226,7 @@ this is Resizeable
 
 #### Defined in
 
-components/base-types/component.ts:33
+temp/components/base-types/component.ts:33
 
 ___
 
@@ -246,7 +246,7 @@ this is Updateable
 
 #### Defined in
 
-components/base-types/component.ts:38
+temp/components/base-types/component.ts:38
 
 ___
 
@@ -270,4 +270,20 @@ the list of IDs of the loaded fragments.
 
 #### Defined in
 
-components/fragments/FragmentManager/index.ts:60
+temp/components/fragments/FragmentManager/index.ts:71
+
+___
+
+### reset
+
+▸ **reset**(): `void`
+
+Disposes all existing fragments
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+temp/components/fragments/FragmentManager/index.ts:58

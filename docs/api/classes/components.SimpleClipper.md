@@ -31,11 +31,14 @@ E.g. [SimplePlane](components.SimplePlane.md).
 
   ↳ **`SimpleClipper`**
 
+  ↳↳ [`EdgesClipper`](components.EdgesClipper.md)
+
 ## Implements
 
 - [`Createable`](../interfaces/components.Createable.md)
 - [`Disposable`](../interfaces/components.Disposable.md)
 - [`Hideable`](../interfaces/components.Hideable.md)
+- [`UI`](../interfaces/components.UI.md)
 
 ## Properties
 
@@ -51,7 +54,7 @@ E.g. [SimplePlane](components.SimplePlane.md).
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:30
+temp/components/core/SimpleClipper/index.ts:34
 
 ___
 
@@ -67,7 +70,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:33
+temp/components/core/SimpleClipper/index.ts:37
 
 ___
 
@@ -79,7 +82,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:62
+temp/components/core/SimpleClipper/index.ts:66
 
 ___
 
@@ -91,7 +94,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:59
+temp/components/core/SimpleClipper/index.ts:63
 
 ___
 
@@ -107,7 +110,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:27
+temp/components/core/SimpleClipper/index.ts:31
 
 ___
 
@@ -122,7 +125,7 @@ slope for draining purposes.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:49
+temp/components/core/SimpleClipper/index.ts:53
 
 ___
 
@@ -136,7 +139,7 @@ has to be `true` for this to apply.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:56
+temp/components/core/SimpleClipper/index.ts:60
 
 ## Accessors
 
@@ -156,7 +159,7 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:71
+temp/components/core/SimpleClipper/index.ts:75
 
 • `set` **enabled**(`state`): `void`
 
@@ -178,7 +181,7 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:76
+temp/components/core/SimpleClipper/index.ts:80
 
 ___
 
@@ -194,7 +197,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:98
+temp/components/core/SimpleClipper/index.ts:103
 
 • `set` **material**(`material`): `void`
 
@@ -212,7 +215,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:103
+temp/components/core/SimpleClipper/index.ts:108
 
 ___
 
@@ -228,7 +231,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:111
+temp/components/core/SimpleClipper/index.ts:116
 
 • `set` **size**(`size`): `void`
 
@@ -246,7 +249,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:116
+temp/components/core/SimpleClipper/index.ts:121
 
 ___
 
@@ -266,7 +269,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:85
+temp/components/core/SimpleClipper/index.ts:90
 
 • `set` **visible**(`state`): `void`
 
@@ -288,7 +291,7 @@ components/core/SimpleClipper/index.ts:85
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:90
+temp/components/core/SimpleClipper/index.ts:95
 
 ## Methods
 
@@ -308,7 +311,7 @@ Createable.create
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:148
+temp/components/core/SimpleClipper/index.ts:163
 
 ___
 
@@ -332,7 +335,7 @@ without the need of the mouse.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:164
+temp/components/core/SimpleClipper/index.ts:179
 
 ___
 
@@ -358,7 +361,7 @@ Createable.delete
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:179
+temp/components/core/SimpleClipper/index.ts:194
 
 ___
 
@@ -374,7 +377,7 @@ Deletes all the existing clipping planes.
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:187
+temp/components/core/SimpleClipper/index.ts:202
 
 ___
 
@@ -394,7 +397,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:136
+temp/components/core/SimpleClipper/index.ts:151
 
 ___
 
@@ -414,7 +417,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleClipper/index.ts:131
+temp/components/core/SimpleClipper/index.ts:146
 
 ___
 
@@ -434,7 +437,7 @@ this is UI
 
 #### Defined in
 
-components/base-types/component.ts:48
+temp/components/base-types/component.ts:48
 
 ___
 
@@ -454,7 +457,7 @@ this is Disposable
 
 #### Defined in
 
-components/base-types/component.ts:28
+temp/components/base-types/component.ts:28
 
 ___
 
@@ -474,7 +477,7 @@ this is Hideable
 
 #### Defined in
 
-components/base-types/component.ts:43
+temp/components/base-types/component.ts:43
 
 ___
 
@@ -494,7 +497,7 @@ this is Resizeable
 
 #### Defined in
 
-components/base-types/component.ts:33
+temp/components/base-types/component.ts:33
 
 ___
 
@@ -514,4 +517,4 @@ this is Updateable
 
 #### Defined in
 
-components/base-types/component.ts:38
+temp/components/base-types/component.ts:38

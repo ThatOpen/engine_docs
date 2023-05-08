@@ -18,6 +18,8 @@ what features it offers.
 
   ↳ **`SimpleCamera`**
 
+  ↳↳ [`OrthoPerspectiveCamera`](components.OrthoPerspectiveCamera.md)
+
 ## Implements
 
 - [`Updateable`](../interfaces/components.Updateable.md)
@@ -33,7 +35,7 @@ The camera that is being used now according to the current CameraProjection.
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:46
+temp/components/core/SimpleCamera/index.ts:46
 
 ___
 
@@ -49,7 +51,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:23
+temp/components/core/SimpleCamera/index.ts:23
 
 ___
 
@@ -65,7 +67,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:20
+temp/components/core/SimpleCamera/index.ts:20
 
 ___
 
@@ -80,7 +82,7 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:31
+temp/components/core/SimpleCamera/index.ts:31
 
 ___
 
@@ -96,7 +98,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:17
+temp/components/core/SimpleCamera/index.ts:17
 
 ## Accessors
 
@@ -116,7 +118,7 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:34
+temp/components/core/SimpleCamera/index.ts:34
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -138,7 +140,7 @@ Component.enabled
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:39
+temp/components/core/SimpleCamera/index.ts:39
 
 ## Methods
 
@@ -158,7 +160,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:66
+temp/components/core/SimpleCamera/index.ts:66
 
 ___
 
@@ -178,7 +180,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:61
+temp/components/core/SimpleCamera/index.ts:61
 
 ___
 
@@ -198,7 +200,7 @@ this is UI
 
 #### Defined in
 
-components/base-types/component.ts:48
+temp/components/base-types/component.ts:48
 
 ___
 
@@ -218,7 +220,7 @@ this is Disposable
 
 #### Defined in
 
-components/base-types/component.ts:28
+temp/components/base-types/component.ts:28
 
 ___
 
@@ -238,7 +240,7 @@ this is Hideable
 
 #### Defined in
 
-components/base-types/component.ts:43
+temp/components/base-types/component.ts:43
 
 ___
 
@@ -258,7 +260,7 @@ this is Resizeable
 
 #### Defined in
 
-components/base-types/component.ts:33
+temp/components/base-types/component.ts:33
 
 ___
 
@@ -278,7 +280,7 @@ this is Updateable
 
 #### Defined in
 
-components/base-types/component.ts:38
+temp/components/base-types/component.ts:38
 
 ___
 
@@ -304,7 +306,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:75
+temp/components/core/SimpleCamera/index.ts:75
 
 ___
 
@@ -321,4 +323,4 @@ Updates the aspect of the camera to match the size of the
 
 #### Defined in
 
-components/core/SimpleCamera/index.ts:87
+temp/components/core/SimpleCamera/index.ts:87

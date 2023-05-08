@@ -41,4 +41,4 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-components/base-types/base-types.ts:62
+temp/components/base-types/base-types.ts:62

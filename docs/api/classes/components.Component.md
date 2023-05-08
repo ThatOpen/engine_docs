@@ -26,6 +26,8 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`SimpleScene`](components.SimpleScene.md)
 
+  ↳ [`ToolComponent`](components.ToolComponent.md)
+
   ↳ [`SimpleCamera`](components.SimpleCamera.md)
 
   ↳ [`SimpleRaycaster`](components.SimpleRaycaster.md)
@@ -36,7 +38,15 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`SimplePlane`](components.SimplePlane.md)
 
+  ↳ [`SimpleDimensions`](components.SimpleDimensions.md)
+
   ↳ [`FragmentManager`](components.FragmentManager.md)
+
+  ↳ [`FragmentIfcLoader`](components.FragmentIfcLoader.md)
+
+  ↳ [`UIManager`](components.UIManager.md)
+
+  ↳ [`CloudProcessor`](components.CloudProcessor.md)
 
 ## Properties
 
@@ -51,7 +61,7 @@ will not be updated automatically each frame.
 
 #### Defined in
 
-components/base-types/component.ts:19
+temp/components/base-types/component.ts:19
 
 ___
 
@@ -63,16 +73,22 @@ The main identifier of this component. It can be used to retrieve it and index i
 
 #### Defined in
 
-components/base-types/component.ts:11
+temp/components/base-types/component.ts:11
 
 ## Methods
 
 ### get
 
-▸ `Abstract` **get**(): `Type`
+▸ `Abstract` **get**(`...args`): `Type`
 
 The core of the component. For instance, if it's a camera component, it
 could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...args` | `any` |
 
 #### Returns
 
@@ -80,7 +96,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Defined in
 
-components/base-types/component.ts:25
+temp/components/base-types/component.ts:25
 
 ___
 
@@ -96,7 +112,7 @@ this is UI
 
 #### Defined in
 
-components/base-types/component.ts:48
+temp/components/base-types/component.ts:48
 
 ___
 
@@ -112,7 +128,7 @@ this is Disposable
 
 #### Defined in
 
-components/base-types/component.ts:28
+temp/components/base-types/component.ts:28
 
 ___
 
@@ -128,7 +144,7 @@ this is Hideable
 
 #### Defined in
 
-components/base-types/component.ts:43
+temp/components/base-types/component.ts:43
 
 ___
 
@@ -144,7 +160,7 @@ this is Resizeable
 
 #### Defined in
 
-components/base-types/component.ts:33
+temp/components/base-types/component.ts:33
 
 ___
 
@@ -160,4 +176,4 @@ this is Updateable
 
 #### Defined in
 
-components/base-types/component.ts:38
+temp/components/base-types/component.ts:38

@@ -19,7 +19,7 @@ The amount of things that have been done already.
 
 #### Defined in
 
-components/base-types/base-types.ts:119
+temp/components/base-types/base-types.ts:119
 
 ___
 
@@ -31,4 +31,4 @@ The total amount of things to be done by the process.
 
 #### Defined in
 
-components/base-types/base-types.ts:122
+temp/components/base-types/base-types.ts:122

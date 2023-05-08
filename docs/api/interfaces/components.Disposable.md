@@ -26,6 +26,7 @@ cleaned up.
 - [`Mouse`](../classes/components.Mouse.md)
 - [`SimpleCamera`](../classes/components.SimpleCamera.md)
 - [`SimpleClipper`](../classes/components.SimpleClipper.md)
+- [`SimpleDimensions`](../classes/components.SimpleDimensions.md)
 - [`SimpleGrid`](../classes/components.SimpleGrid.md)
 - [`SimplePlane`](../classes/components.SimplePlane.md)
 - [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
@@ -51,4 +52,4 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-components/base-types/base-types.ts:62
+temp/components/base-types/base-types.ts:62

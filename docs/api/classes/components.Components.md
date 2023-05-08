@@ -23,7 +23,7 @@ This includes IFC models, fragments, 3D scans, etc.
 
 #### Defined in
 
-components/core/Components/index.ts:34
+temp/components/core/Components/index.ts:34
 
 ___
 
@@ -35,19 +35,19 @@ ___
 
 #### Defined in
 
-components/core/Components/index.ts:23
+temp/components/core/Components/index.ts:23
 
 ___
 
 ### ui
 
-• `Readonly` **ui**: `UIManager`
+• `Readonly` **ui**: [`UIManager`](components.UIManager.md)
 
-UIManager
+[UIManager](components.UIManager.md)
 
 #### Defined in
 
-components/core/Components/index.ts:28
+temp/components/core/Components/index.ts:28
 
 ## Accessors
 
@@ -64,7 +64,7 @@ that determines the point of view of the renderer.
 
 #### Defined in
 
-components/core/Components/index.ts:84
+temp/components/core/Components/index.ts:84
 
 • `set` **camera**(`camera`): `void`
 
@@ -82,7 +82,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-components/core/Components/index.ts:94
+temp/components/core/Components/index.ts:94
 
 ___
 
@@ -99,7 +99,7 @@ used primarily to pick 3D items with the mouse or a touch screen.
 
 #### Defined in
 
-components/core/Components/index.ts:102
+temp/components/core/Components/index.ts:102
 
 • `set` **raycaster**(`raycaster`): `void`
 
@@ -118,7 +118,7 @@ to initialize this if any component that needs a raycaster is used.
 
 #### Defined in
 
-components/core/Components/index.ts:113
+temp/components/core/Components/index.ts:113
 
 ___
 
@@ -136,7 +136,7 @@ components with pre-made functionality (e.g. rendering of 2D CSS elements.
 
 #### Defined in
 
-components/core/Components/index.ts:48
+temp/components/core/Components/index.ts:48
 
 • `set` **renderer**(`renderer`): `void`
 
@@ -154,7 +154,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-components/core/Components/index.ts:58
+temp/components/core/Components/index.ts:58
 
 ___
 
@@ -171,7 +171,7 @@ where all the rendered items are placed.
 
 #### Defined in
 
-components/core/Components/index.ts:66
+temp/components/core/Components/index.ts:66
 
 • `set` **scene**(`scene`): `void`
 
@@ -189,7 +189,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-components/core/Components/index.ts:76
+temp/components/core/Components/index.ts:76
 
 ## Methods
 
@@ -216,7 +216,7 @@ You can learn more about how Three.js handles memory leaks
 
 #### Defined in
 
-components/core/Components/index.ts:151
+temp/components/core/Components/index.ts:151
 
 ___
 
@@ -235,4 +235,4 @@ used, the [raycaster](components.Components.md#raycaster) will need to be initia
 
 #### Defined in
 
-components/core/Components/index.ts:130
+temp/components/core/Components/index.ts:130

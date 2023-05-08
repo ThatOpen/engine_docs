@@ -35,7 +35,7 @@ events.
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:18
+temp/components/core/SimpleRaycaster/index.ts:18
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:15
+temp/components/core/SimpleRaycaster/index.ts:15
 
 ## Methods
 
@@ -79,7 +79,7 @@ Raycaster.castRay
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:44
+temp/components/core/SimpleRaycaster/index.ts:44
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleRaycaster/index.ts:31
+temp/components/core/SimpleRaycaster/index.ts:31
 
 ___
 
@@ -119,7 +119,7 @@ this is UI
 
 #### Defined in
 
-components/base-types/component.ts:48
+temp/components/base-types/component.ts:48
 
 ___
 
@@ -139,7 +139,7 @@ this is Disposable
 
 #### Defined in
 
-components/base-types/component.ts:28
+temp/components/base-types/component.ts:28
 
 ___
 
@@ -159,7 +159,7 @@ this is Hideable
 
 #### Defined in
 
-components/base-types/component.ts:43
+temp/components/base-types/component.ts:43
 
 ___
 
@@ -179,7 +179,7 @@ this is Resizeable
 
 #### Defined in
 
-components/base-types/component.ts:33
+temp/components/base-types/component.ts:33
 
 ___
 
@@ -199,4 +199,4 @@ this is Updateable
 
 #### Defined in
 
-components/base-types/component.ts:38
+temp/components/base-types/component.ts:38

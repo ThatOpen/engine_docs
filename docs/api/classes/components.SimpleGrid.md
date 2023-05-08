@@ -35,7 +35,7 @@ A basic
 
 #### Defined in
 
-components/core/SimpleGrid/index.ts:18
+temp/components/core/SimpleGrid/index.ts:18
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleGrid/index.ts:15
+temp/components/core/SimpleGrid/index.ts:15
 
 ## Accessors
 
@@ -71,7 +71,7 @@ components/core/SimpleGrid/index.ts:15
 
 #### Defined in
 
-components/core/SimpleGrid/index.ts:21
+temp/components/core/SimpleGrid/index.ts:21
 
 • `set` **visible**(`visible`): `void`
 
@@ -93,7 +93,7 @@ components/core/SimpleGrid/index.ts:21
 
 #### Defined in
 
-components/core/SimpleGrid/index.ts:26
+temp/components/core/SimpleGrid/index.ts:26
 
 ## Methods
 
@@ -113,7 +113,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/SimpleGrid/index.ts:46
+temp/components/core/SimpleGrid/index.ts:46
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleGrid/index.ts:41
+temp/components/core/SimpleGrid/index.ts:41
 
 ___
 
@@ -153,7 +153,7 @@ this is UI
 
 #### Defined in
 
-components/base-types/component.ts:48
+temp/components/base-types/component.ts:48
 
 ___
 
@@ -173,7 +173,7 @@ this is Disposable
 
 #### Defined in
 
-components/base-types/component.ts:28
+temp/components/base-types/component.ts:28
 
 ___
 
@@ -193,7 +193,7 @@ this is Hideable
 
 #### Defined in
 
-components/base-types/component.ts:43
+temp/components/base-types/component.ts:43
 
 ___
 
@@ -213,7 +213,7 @@ this is Resizeable
 
 #### Defined in
 
-components/base-types/component.ts:33
+temp/components/base-types/component.ts:33
 
 ___
 
@@ -233,4 +233,4 @@ this is Updateable
 
 #### Defined in
 
-components/base-types/component.ts:38
+temp/components/base-types/component.ts:38

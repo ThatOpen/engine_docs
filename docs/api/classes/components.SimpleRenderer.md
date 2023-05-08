@@ -18,6 +18,8 @@ respectively).
 
   ↳ **`SimpleRenderer`**
 
+  ↳↳ [`PostproductionRenderer`](components.PostproductionRenderer.md)
+
 ## Implements
 
 - [`Disposable`](../interfaces/components.Disposable.md)
@@ -38,7 +40,7 @@ respectively).
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:32
+temp/components/core/SimpleRenderer/index.ts:32
 
 ___
 
@@ -54,7 +56,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:29
+temp/components/core/SimpleRenderer/index.ts:29
 
 ___
 
@@ -71,7 +73,7 @@ instance of the renderer.
 
 #### Defined in
 
-components/base-types/base-renderer.ts:33
+temp/components/base-types/base-renderer.ts:33
 
 ___
 
@@ -87,7 +89,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:26
+temp/components/core/SimpleRenderer/index.ts:26
 
 ___
 
@@ -103,7 +105,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:23
+temp/components/core/SimpleRenderer/index.ts:23
 
 ## Methods
 
@@ -123,7 +125,7 @@ Disposable.dispose
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:67
+temp/components/core/SimpleRenderer/index.ts:67
 
 ___
 
@@ -143,7 +145,7 @@ ___
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:51
+temp/components/core/SimpleRenderer/index.ts:51
 
 ___
 
@@ -167,7 +169,7 @@ Resizeable.getSize
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:76
+temp/components/core/SimpleRenderer/index.ts:76
 
 ___
 
@@ -191,7 +193,7 @@ Resizeable.resize
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:84
+temp/components/core/SimpleRenderer/index.ts:84
 
 ___
 
@@ -221,7 +223,7 @@ to the renderer.
 
 #### Defined in
 
-components/base-types/base-renderer.ts:40
+temp/components/base-types/base-renderer.ts:40
 
 ___
 
@@ -247,4 +249,4 @@ ___
 
 #### Defined in
 
-components/core/SimpleRenderer/index.ts:56
+temp/components/core/SimpleRenderer/index.ts:56
