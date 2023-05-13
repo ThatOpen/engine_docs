@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "THAT OPEN DOCS",
+  title: "That Open Docs",
   tagline: "Where you learn to build BIM software",
   favicon: "img/favicon.ico",
 
@@ -70,6 +70,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
@@ -79,11 +84,6 @@ const config = {
         //   src: "img/logo-with-letters.svg",
         // },
         items: [
-          {
-            href: "https://github.com/ifcjs",
-            label: "Log in",
-            position: "right",
-          },
           {
             href: "https://github.com/ifcjs",
             label: "Community",

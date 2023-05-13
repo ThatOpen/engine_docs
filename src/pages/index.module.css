@@ -4,16 +4,18 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 8rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
   height: 25rem;
+  background-color: var(--dark-purple);
+  color: white;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    height: calc(100vh - var(--ifm-navbar-height));
+    height: 100vh;
   }
 }
 
