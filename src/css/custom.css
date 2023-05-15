@@ -99,13 +99,6 @@ article {
   background-color: var(--black);
 }
 
-[class="tableOfContents_node_modules-@docusaurus-theme-classic-lib-theme-TOC-styles-module thin-scrollbar theme-doc-toc-desktop"] {
-  border-radius: var(--border-radius);
-  padding-left: 1.3rem;
-  top: 2rem !important;
-  background-color: var(--black);
-}
-
 [class="sidebar_node_modules-@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-styles-module"] {
   padding-top: 2rem !important;
 }
@@ -116,6 +109,14 @@ article {
 
 .table-of-contents__left-border {
   border-left: none;
+}
+
+
+.table-of-contents {
+  border-radius: var(--border-radius);
+  padding-left: 1.3rem;
+  top: 2rem !important;
+  background-color: var(--black);
 }
 
 @media screen and (max-width: 997px) {
