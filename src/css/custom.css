@@ -30,9 +30,9 @@
   --ifm-color-warning-dark: var(--purple) !important;
 }
 
-html {
-  background-color: var(--dark-gray);
-}
+/*html {*/
+/*  background-color: var(--dark-gray);*/
+/*}*/
 
 p {
  color: var(--light-gray)

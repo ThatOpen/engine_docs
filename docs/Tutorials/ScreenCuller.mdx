@@ -1,0 +1,59 @@
+### 🚅 Managing Performance
+---
+There are occasions when your scene has too many components.
+Multiple components being rendered simultaneously **lengthens computation time**⌛️ and **degrades performance**.🌡️
+:::tip First, let's set up a simple scene!
+👀 If you haven't started there, check out [that tutorial first](SimpleScene.mdx)!
+:::
+In this tutorial, we will use **ScreenCuller** to improve performance by reducing unnecessary computations.🚀
+This tutorial will show you how to manage a complex scenario with a lot of elements in an effective way.🦾
+### 🧰 Creating Screen Culler
+---
+Although adding Screen Culler to your project can appear difficult, it is actually rather easy.
+Now, we will add **Screen Culler Component**.
+This will create a Screen Culler which is now ready to be used.
+
+```js
+const culler = new OBC.ScreenCuller(components);
+```
+Additionally, we will activate the `culler.renderDebugFrame`
+so that we can see the 2D screen of the elements that are not occluded.💻
+Also, we will get the **domElement** and attach it to the body so that we can see this frame in real-time.📊
+
+```js
+culler.renderDebugFrame = true;
+const debugFrame = culler.renderer.domElement;
+document.body.appendChild(debugFrame);
+debugFrame.style.position = 'absolute';
+```
+:::info Randomising the Cube Placement
+We'll write a quick **utility** function that returns a random number between 0 and the specified upper limit.
+You can use this for a variety of purposes, but for this tutorial
+it will be used to generate random positions for cube placement.📌
+:::
+
+```js
+function getRandomNumber(limit) {
+return Math.random() * limit;
+}
+```
+### 🧱 Adding a lot of 3D Objects
+We'll add the Simple 3D Cube and do it **300 times**!🤯
+Components are built using [Three.js](https://threejs.org/), making it simple to use any three.js code.
+For our cube, we'll generate box geometry and use basic material.
+
+```js
+const cubes = [];
+const geometry = new THREE.BoxGeometry(2, 2, 2);
+const material = new THREE.MeshLambertMaterial({ color: 'red' });
+```
+#### 🌌 Rendering Multiple Cubes
+Now, using the `getRandomNumber()` method we previously created, we will add the 300 **`cube`** meshes to our scene
+and randomly position them. We'll add the cube to the scene and adjust its position between 0 and 10.
+Additionally, we will add meshes to the `culler` object, which will help **SimpleCuller** to recognize and
+draw the elements that are visible to the camera. To do this, **`culler.add(cube)`** will be used.
+
+
+  <iframe src="https://ifcjs.github.io/components/src/core/ScreenCuller/index.html"></iframe>
+
+  
