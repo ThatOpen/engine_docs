@@ -106,7 +106,7 @@ Helper object to handle the postproduction effects applied.
 
 #### Defined in
 
-temp/components/navigation/PostproductionRenderer/index.ts:9
+temp/components/navigation/PostproductionRenderer/index.ts:10
 
 ## Methods
 
@@ -126,7 +126,7 @@ temp/components/navigation/PostproductionRenderer/index.ts:9
 
 #### Defined in
 
-temp/components/navigation/PostproductionRenderer/index.ts:18
+temp/components/navigation/PostproductionRenderer/index.ts:19
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-temp/components/navigation/PostproductionRenderer/index.ts:24
+temp/components/navigation/PostproductionRenderer/index.ts:25
 
 ___
 

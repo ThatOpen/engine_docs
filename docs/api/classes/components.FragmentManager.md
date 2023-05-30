@@ -72,13 +72,13 @@ temp/components/fragments/FragmentManager/index.ts:15
 
 ### meshes
 
-• `get` **meshes**(): `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
+• `get` **meshes**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[]
 
 The list of meshes of the created fragments.
 
 #### Returns
 
-`Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
+`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[]
 
 #### Defined in
 

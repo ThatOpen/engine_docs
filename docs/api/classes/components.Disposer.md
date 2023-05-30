@@ -48,7 +48,7 @@ Disposes a geometry from memory.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry` | the [geometry](https://threejs.org/docs/#api/en/core/BufferGeometry) to remove. |
+| `geometry` | `BufferGeometry`<`NormalBufferAttributes`\> | the [geometry](https://threejs.org/docs/#api/en/core/BufferGeometry) to remove. |
 
 #### Returns
 

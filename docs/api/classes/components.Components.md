@@ -16,7 +16,7 @@ loop of everything. Each instance has to be initialized with [init](components.C
 
 ### meshes
 
-• `Readonly` **meshes**: `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[] = `[]`
+• **meshes**: `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] = `[]`
 
 All the loaded [meshes](https://threejs.org/docs/#api/en/objects/Mesh).
 This includes IFC models, fragments, 3D scans, etc.

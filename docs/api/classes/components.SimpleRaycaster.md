@@ -39,6 +39,18 @@ temp/components/core/SimpleRaycaster/index.ts:18
 
 ___
 
+### mouse
+
+• `Readonly` **mouse**: [`Mouse`](components.Mouse.md)
+
+The position of the mouse in the screen.
+
+#### Defined in
+
+temp/components/core/SimpleRaycaster/index.ts:21
+
+___
+
 ### name
 
 • **name**: `string` = `"SimpleRaycaster"`
@@ -67,7 +79,7 @@ used by the renderer.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `items` | `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [meshes](components.Components.md#meshes). |
+| `items` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [meshes](components.Components.md#meshes). |
 
 #### Returns
 
@@ -79,7 +91,7 @@ Raycaster.castRay
 
 #### Defined in
 
-temp/components/core/SimpleRaycaster/index.ts:44
+temp/components/core/SimpleRaycaster/index.ts:46
 
 ___
 
@@ -99,7 +111,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleRaycaster/index.ts:31
+temp/components/core/SimpleRaycaster/index.ts:33
 
 ___
 

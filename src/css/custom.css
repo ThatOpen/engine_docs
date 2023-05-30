@@ -8,6 +8,7 @@
 
 :root {
   --light-gray: #D3CBE1;
+  --gray: #3A444E;
   --dark-gray: #202932;
   --black: #111718;
   --purple: #9D6BFF;
@@ -28,6 +29,11 @@
   --ifm-color-info-dark: var(--purple) !important;
   --ifm-color-danger-dark: var(--purple) !important;
   --ifm-color-warning-dark: var(--purple) !important;
+  --ifm-color-info-contrast-foreground: white !important;
+  --ifm-color-success-contrast-foreground: white !important;
+  --ifm-color-danger-contrast-foreground: white !important;
+  --ifm-menu-link-sublist-icon-filter: invert();
+  --ifm-code-background: #282A36;
 }
 
 /*html {*/
@@ -93,6 +99,7 @@ h1 {
 }
 
 article {
+  min-height: 90vh;
   margin: 1rem;
   padding: 2rem;
   border-radius: var(--border-radius);

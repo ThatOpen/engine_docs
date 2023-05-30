@@ -26,7 +26,7 @@ Fired after successfully calling [()](components.Createable.md#create)
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:144
+temp/components/base-types/base-types.ts:145
 
 ___
 
@@ -38,7 +38,7 @@ Fired after successfully calling [()](components.Createable.md#delete)
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:150
+temp/components/base-types/base-types.ts:151
 
 ___
 
@@ -64,7 +64,7 @@ Creates a new instance of an element (e.g. a new Dimension).
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:141
+temp/components/base-types/base-types.ts:142
 
 ___
 
@@ -90,4 +90,4 @@ Deletes an existing instance of an element (e.g. a Dimension).
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:147
+temp/components/base-types/base-types.ts:148

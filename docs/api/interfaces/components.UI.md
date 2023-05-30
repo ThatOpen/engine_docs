@@ -13,5 +13,6 @@ interface, like a button or a window.
 ## Implemented by
 
 - [`FragmentIfcLoader`](../classes/components.FragmentIfcLoader.md)
+- [`OrthoPerspectiveCamera`](../classes/components.OrthoPerspectiveCamera.md)
 - [`SimpleClipper`](../classes/components.SimpleClipper.md)
 - [`SimpleDimensions`](../classes/components.SimpleDimensions.md)

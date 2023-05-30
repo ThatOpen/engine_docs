@@ -14,7 +14,7 @@ the IFC file.
 
 ## Hierarchy
 
-- [`Component`](components.Component.md)<``null``\>
+- [`Component`](components.Component.md)<`WEBIFC.IfcAPI`\>
 
   ↳ **`FragmentIfcLoader`**
 

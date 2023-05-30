@@ -198,7 +198,7 @@ of the geometry of the dimensions.
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:122
+temp/components/core/SimpleDimensions/index.ts:125
 
 ___
 
@@ -246,17 +246,17 @@ ___
 
 ### geometry
 
-• `get` **geometry**(): `BufferGeometry`
+• `get` **geometry**(): `BufferGeometry`<`NormalBufferAttributes`\>
 
 The geometry used in both endpoints of all the dimensions.
 
 #### Returns
 
-`BufferGeometry`
+`BufferGeometry`<`NormalBufferAttributes`\>
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:128
+temp/components/core/SimpleDimensions/index.ts:131
 
 • `set` **geometry**(`geometry`): `void`
 
@@ -266,7 +266,7 @@ The geometry used in both endpoints of all the dimensions.
 
 | Name | Type |
 | :------ | :------ |
-| `geometry` | `BufferGeometry` |
+| `geometry` | `BufferGeometry`<`NormalBufferAttributes`\> |
 
 #### Returns
 
@@ -274,7 +274,7 @@ The geometry used in both endpoints of all the dimensions.
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:133
+temp/components/core/SimpleDimensions/index.ts:136
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:103
+temp/components/core/SimpleDimensions/index.ts:106
 
 • `set` **visible**(`state`): `void`
 
@@ -316,7 +316,7 @@ temp/components/core/SimpleDimensions/index.ts:103
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:108
+temp/components/core/SimpleDimensions/index.ts:111
 
 ## Methods
 
@@ -332,7 +332,7 @@ Cancels the drawing of the current dimension.
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:245
+temp/components/core/SimpleDimensions/index.ts:271
 
 ___
 
@@ -358,7 +358,7 @@ Createable.create
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:209
+temp/components/core/SimpleDimensions/index.ts:235
 
 ___
 
@@ -378,7 +378,7 @@ Createable.delete
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:219
+temp/components/core/SimpleDimensions/index.ts:245
 
 ___
 
@@ -394,7 +394,7 @@ Deletes all the dimensions that have been previously created.
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:236
+temp/components/core/SimpleDimensions/index.ts:262
 
 ___
 
@@ -414,7 +414,7 @@ Disposable.dispose
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:174
+temp/components/core/SimpleDimensions/index.ts:200
 
 ___
 
@@ -434,7 +434,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:169
+temp/components/core/SimpleDimensions/index.ts:195
 
 ___
 
@@ -560,4 +560,4 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleDimensions/index.ts:185
+temp/components/core/SimpleDimensions/index.ts:211

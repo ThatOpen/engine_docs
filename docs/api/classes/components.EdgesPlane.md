@@ -155,13 +155,13 @@ ___
 
 ### meshes
 
-• `get` **meshes**(): `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
+• `get` **meshes**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[]
 
 The meshes used for raycasting
 
 #### Returns
 
-`Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[]
+`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[]
 
 #### Inherited from
 

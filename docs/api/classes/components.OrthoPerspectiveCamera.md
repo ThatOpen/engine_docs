@@ -18,6 +18,10 @@ modes, such as 2D floor plan navigation, first person and 3D orbit.
 
   ↳ **`OrthoPerspectiveCamera`**
 
+## Implements
+
+- [`UI`](../interfaces/components.UI.md)
+
 ## Properties
 
 ### activeCamera
@@ -95,7 +99,7 @@ The current NavigationMode.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:20
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:21
 
 ___
 
@@ -123,7 +127,7 @@ Event that fires when the CameraProjection changes.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:25
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:26
 
 ## Accessors
 
@@ -185,7 +189,7 @@ temp/components/core/SimpleCamera/index.ts:39
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:51
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:87
 
 ___
 
@@ -199,7 +203,7 @@ Make the camera view fit all the specified meshes.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `meshes` | `Mesh`<`BufferGeometry`, `Material` \| `Material`[]\>[] | the meshes to fit. If it is not defined, it will evaluate [meshes](components.Components.md#meshes). |
+| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the meshes to fit. If it is not defined, it will evaluate [meshes](components.Components.md#meshes). |
 
 #### Returns
 
@@ -207,7 +211,7 @@ Make the camera view fit all the specified meshes.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:141
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:177
 
 ___
 
@@ -234,7 +238,7 @@ to specify which camera to get.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:65
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:101
 
 ___
 
@@ -250,7 +254,7 @@ Returns the current CameraProjection.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:75
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:111
 
 ___
 
@@ -372,7 +376,7 @@ Sets a new NavigationMode and disables the previous one.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:119
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:155
 
 ___
 
@@ -395,7 +399,7 @@ Sets the current CameraProjection. This triggers the event
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:96
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:132
 
 ___
 
@@ -412,7 +416,7 @@ and Viceversa.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:83
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:119
 
 ___
 
@@ -434,7 +438,7 @@ Allows or prevents all user input.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:106
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:142
 
 ___
 
@@ -480,4 +484,4 @@ Updates the aspect ratio of the camera to match the Renderer's aspect ratio.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:130
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:166
