@@ -7,7 +7,7 @@ makeDir("temp/fragment");
 let isFirstExecution = true;
 copyFolderRecursiveSync("../components/src", "temp/components");
 isFirstExecution = true;
-copyFolderRecursiveSync("../fragment/library/src", "temp/fragment");
+copyFolderRecursiveSync("../fragment/src", "temp/fragment");
 
 function makeDir(path) {
     if(!fs.existsSync(path)) {
