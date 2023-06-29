@@ -1,0 +1,30 @@
+name: Update projects documentation
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Launch this workflow everyday at midnight
+
+jobs:
+  compare-tags:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Get latest tag of workflow repo
+        id: get-latest-tag-workflow-repo
+        run: |
+          echo "::set-output name=tag::$(git describe --tags `git rev-list --tags --max-count=1`)"
+
+      - name: Read repositories.txt and compare tags
+        run: |
+          while read repo; do
+            echo "Checking latest release for $repo..."
+            tag=fromJson($(gh api repos/$repo/releases/latest))
+            if [ "$tag" != "${{ steps.get-latest-tag-workflow-repo.outputs.tag }}" ]; then
+              echo "Latest release of $repo ($tag) differs from workflow repo (${{ steps.get-latest-tag-workflow-repo.outputs.tag }})"
+            else
+              echo "Tags are the same"
+            fi
+          done < repositories.txt
