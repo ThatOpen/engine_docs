@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "yarn generate-docs && docusaurus start",
+    "start": "docusaurus start",
     "build": "docusaurus build",
+    "generate-start": "yarn generate-docs && yarn start",
+    "generate-build": "yarn generate-docs && yarn build",
     "generate-docs": "yarn clean && yarn copy-repos && yarn add-tutorials",
     "add-tutorials": "node src/docs-generator/tutorial-generator.mjs",
     "clean": "node src/docs-generator/cleaner.mjs",
