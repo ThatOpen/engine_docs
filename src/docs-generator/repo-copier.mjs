@@ -1,5 +1,5 @@
 import { exec, execSync } from "node:child_process";
-import { symlink } from "node:fs/promises";
+import { cp } from "node:fs/promises";
 import * as path from "node:path";
 
 import { promisify } from "node:util";
@@ -78,18 +78,18 @@ const cloneMinimalRepo = async(repo) => {
     return { repoDirName, tagName };
 };
 
-/* Create a symlink from the src/ directory inside the repo to the
+/* Copy the src/ directory inside the repo to the
  * tempDirName directory with the name of the repository */
-const symlinkRepoSrc = async(repoName) => {
+const copyRepoSrc = async(repoName) => {
     const repoDirName = repoName.split(/\//).pop();
     const originalRepoSrcPath = path.resolve(
         `./${fullRepoDirName}/${repoDirName}/src`);
-    const repoSrcLink = path.resolve(
+    const repoSrcCopyPath = path.resolve(
         `./${tempDirName}/${repoDirName}`);
 
-    await symlink(originalRepoSrcPath, repoSrcLink);
+    await cp(originalRepoSrcPath, repoSrcCopyPath, { recursive: true });
 
-    return { originalRepoSrcPath, repoSrcLink };
+    return { originalRepoSrcPath, repoSrcCopyPath };
 };
 
 // Fetch and fill the releases field for each repo
@@ -124,19 +124,19 @@ const clonedBranches = await Promise.all(
 console.log("Cloned repositories:");
 console.log(clonedBranches);
 
-// Generate symlinks to src/ directories inside each repository
-console.log("Generating symlinks to src/ directories...");
+// Copy src/ directories inside each repository
+console.log("Copying 'src/' directories...");
 
-const srcSymlinks = await Promise.all(
+const srcCopies = await Promise.all(
     repositories.map(async (repo) => {
-        const {originalRepoSrcPath, repoSrcLink} = await symlinkRepoSrc(
+        const {originalRepoSrcPath, repoSrcCopyPath} = await copyRepoSrc(
             repo.name);
 
-        return `'${originalRepoSrcPath}' -> '${repoSrcLink}'`;
+        return `'${originalRepoSrcPath}' -> '${repoSrcCopyPath}'`;
     })
 );
 
-console.log("Generated symlinks");
-console.log(srcSymlinks);
+console.log("Copied 'src/' directories");
+console.log(srcCopies);
 
 console.log("Finished copying and setting up repositories!");
