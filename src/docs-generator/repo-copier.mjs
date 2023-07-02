@@ -9,10 +9,10 @@ const execPromise = promisify(exec);
 
 // List of repositories to include in the docs
 let repositories = [
-    { name: "IFCjs/clay", release: "", srcDir: "src" },
-    { name: "IFCjs/components", release: "", srcDir: "library/src" },
-    { name: "IFCjs/fragment", release: "", srcDir: "src" },
-    { name: "IFCjs/web-ifc", release: "", srcDir: "src" },
+    { name: "IFCjs/clay", release: "", fallbackBranch: "" },
+    { name: "IFCjs/components", release: "", fallbackBranch: "big-restructure" },
+    { name: "IFCjs/fragment", release: "", fallbackBranch: "" },
+    { name: "IFCjs/web-ifc", release: "", fallbackBranch: "" },
 ];
 
 // Relative path to store the repos
@@ -57,17 +57,20 @@ const getLatestRelease = async (repoName) => {
 };
 
 /* Clone git repository with minimal depth for an specific tag.
-   If no tag is specified, it will use the default branch */
-const cloneMinimalRepo = async(repoName, tag) => {
-    let repoDirName = repoName.split(/\//).pop();
+   If no tag or fallback branch specified, it will use the default branch */
+const cloneMinimalRepo = async(repo) => {
+    let repoDirName = repo.name.split(/\//).pop();
     repoDirName = path.resolve(`${fullRepoDirName}/${repoDirName}`);
 
-    let command = `gh repo clone ${repoName} ${repoDirName} -- --depth 1`;
+    let command = `gh repo clone ${repo.name} ${repoDirName} -- --depth 1`;
     let tagName = "(default branch)";
 
-    if (tag !== "") {
-        command = `${command} -b ${tag}`;
-        tagName = tag;
+    if (repo.release && repo.release !== "") {
+        command = `${command} -b ${repo.release}`;
+        tagName = repo.release;
+    } else if (repo.fallbackBranch && repo.fallbackBranch !== "") {
+        command = `${command} -b ${repo.fallbackBranch}`;
+        tagName = repo.fallbackBranch;
     }
 
     await execPromise(`${command}`);
@@ -77,10 +80,10 @@ const cloneMinimalRepo = async(repoName, tag) => {
 
 /* Create a symlink from the src/ directory inside the repo to the
  * tempDirName directory with the name of the repository */
-const symlinkRepoSrc = async(repoName, sourceDir) => {
+const symlinkRepoSrc = async(repoName) => {
     const repoDirName = repoName.split(/\//).pop();
     const originalRepoSrcPath = path.resolve(
-        `./${fullRepoDirName}/${repoDirName}/${sourceDir}`);
+        `./${fullRepoDirName}/${repoDirName}/src`);
     const repoSrcLink = path.resolve(
         `./${tempDirName}/${repoDirName}`);
 
@@ -95,9 +98,8 @@ console.log("Fetching releases...");
 repositories = await Promise.all(
     repositories.map(async (repo) => {
         return {
-            name: repo.name,
+            ...repo,
             release: await getLatestRelease(repo.name),
-            srcDir: repo.srcDir,
         };
     })
 );
@@ -110,8 +112,7 @@ console.log("Cloning minified repositories...");
 
 const clonedBranches = await Promise.all(
     repositories.map(async (repo) => {
-        const { repoDirName, tagName } = await cloneMinimalRepo(
-                repo.name, repo.release);
+        const { repoDirName, tagName } = await cloneMinimalRepo(repo);
 
         return {
             directory: repoDirName,
@@ -129,7 +130,7 @@ console.log("Generating symlinks to src/ directories...");
 const srcSymlinks = await Promise.all(
     repositories.map(async (repo) => {
         const {originalRepoSrcPath, repoSrcLink} = await symlinkRepoSrc(
-            repo.name, repo.srcDir);
+            repo.name);
 
         return `'${originalRepoSrcPath}' -> '${repoSrcLink}'`;
     })

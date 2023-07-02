@@ -81,5 +81,8 @@
   "include": [
     "../../temp/**/*"
   ],
-  "exclude": ["../../temp/**/*.test.ts"]
+  "exclude": [
+    "../../temp/**/*.test.ts",
+    "../../temp/_repo/**/*"
+  ]
 }
