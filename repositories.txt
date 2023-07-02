@@ -1,3 +1,0 @@
-IFCjs/components
-IFCjs/fragment
-IFCjs/clay
