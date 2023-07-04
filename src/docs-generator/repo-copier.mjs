@@ -1,5 +1,6 @@
 import { exec, execSync } from "node:child_process";
 import { cp } from "node:fs/promises";
+import { rmSync } from "node:fs";
 import * as path from "node:path";
 
 import { promisify } from "node:util";
@@ -9,10 +10,10 @@ const execPromise = promisify(exec);
 
 // List of repositories to include in the docs
 let repositories = [
-    { name: "IFCjs/clay", release: "", fallbackBranch: "" },
+    // { name: "IFCjs/clay", release: "", fallbackBranch: "" },
     { name: "IFCjs/components", release: "", fallbackBranch: "big-restructure" },
-    { name: "IFCjs/fragment", release: "", fallbackBranch: "" },
-    { name: "IFCjs/web-ifc", release: "", fallbackBranch: "" },
+    // { name: "IFCjs/fragment", release: "", fallbackBranch: "" },
+    // { name: "IFCjs/web-ifc", release: "", fallbackBranch: "" },
 ];
 
 // Relative path to store the repos
@@ -138,5 +139,9 @@ const srcCopies = await Promise.all(
 
 console.log("Copied 'src/' directories");
 console.log(srcCopies);
+
+// Delete temp/_repo directory since it's not needed anymore
+console.log(`Removing ${fullRepoDirName} directory...`);
+rmSync(fullRepoDirName, { recursive: true });
 
 console.log("Finished copying and setting up repositories!");

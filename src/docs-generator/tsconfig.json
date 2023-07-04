@@ -70,7 +70,7 @@
   "typedocOptions": {
     "entryPoints": ["../../temp/components/index.ts", "../../temp/fragment/index.ts"],
     "out": "./docs",
-    "readme": "../README.md",
+    "readme": "../../README.md",
     "name": "Open BIM Components",
     "excludeExternals": true,
     "excludePrivate": true,
@@ -82,6 +82,8 @@
     "../../temp/**/*"
   ],
   "exclude": [
-    "../../temp/**/*.test.ts"
+    "../../temp/**/*.test.ts",
+    "../../temp/**/*.spec.ts",
+    "../../temp/**/test/**/*"
   ]
 }
