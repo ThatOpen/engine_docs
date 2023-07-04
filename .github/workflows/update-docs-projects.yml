@@ -26,6 +26,8 @@ jobs:
 
       - name: Build documentation
         run: yarn generate-build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check for changes
         id: changes
