@@ -47,7 +47,7 @@ jobs:
       - name: Create PR with updated documentation
         if: steps.changes.outputs.changed == 'true'
         run: |
-          PR_EXISTS=$(gh pr view https://github.com/${{ github.repository }}/tree/automated-changes --json state -q '.state' || echo "no")
+          PR_EXISTS=$(gh pr view actions-generate-docs --json state -q '.state' || echo "no")
           if [ "$PR_EXISTS" = "no" ]; then
             gh pr create --base main --title "chore(docs): generate documentation" \
               --body "This is an auto-generated PR for documentation updates made by GitHub Actions." \
