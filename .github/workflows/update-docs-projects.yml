@@ -1,0 +1,57 @@
+name: Generate documentation
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies with yarn
+        run: yarn install
+
+      - name: Build documentation
+        run: yarn generate-build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || echo "changed=true" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Commit and push if there were changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git commit -m "Add newly generated documentation"
+          git push -f origin HEAD:actions-generate-docs
+
+      - name: Create PR with updated documentation
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          PR_EXISTS=$(gh pr view https://github.com/${{ github.repository }}/tree/automated-changes --json state -q '.state' || echo "no")
+          if [ "$PR_EXISTS" = "no" ]; then
+            gh pr create --base main --title "chore(docs): generate documentation" \
+              --body "This is an auto-generated PR for documentation updates made by GitHub Actions." \
+              --head actions-generate-docs
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
