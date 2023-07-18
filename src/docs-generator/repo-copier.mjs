@@ -13,7 +13,7 @@ let repositories = [
     { name: "IFCjs/clay", release: "", fallbackBranch: "" },
     { name: "IFCjs/components", release: "", fallbackBranch: "big-restructure" },
     { name: "IFCjs/fragment", release: "", fallbackBranch: "" },
-    // { name: "IFCjs/web-ifc", release: "", fallbackBranch: "" },
+    { name: "IFCjs/web-ifc", release: "", fallbackBranch: "" },
 ];
 
 // Relative path to store the repos

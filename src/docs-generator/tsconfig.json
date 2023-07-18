@@ -71,7 +71,8 @@
     "entryPoints": [
       "../../temp/clay/index.ts",
       "../../temp/components/index.ts",
-      "../../temp/fragment/index.ts"
+      "../../temp/fragment/index.ts",
+      "../../temp/web-ifc/web-ifc-api.ts"
     ],
     "out": "./docs",
     "readme": "../../README.md",
