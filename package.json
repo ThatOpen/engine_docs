@@ -29,8 +29,10 @@
     "canvas": "^2.11.2",
     "clsx": "^1.2.1",
     "dexie": "^3.2.3",
+    "earcut": "^2.2.4",
     "flatbuffers": "^23.3.3",
     "mapbox-gl": "^2.15.0",
+    "openbim-components": "1.0.0-alpha.50",
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.3.1",
+    "@types/earcut": "^2.1.1",
     "@types/mapbox-gl": "^2.7.11",
     "@types/node-fetch": "^2.6.4",
     "@types/three": "0.152.1",

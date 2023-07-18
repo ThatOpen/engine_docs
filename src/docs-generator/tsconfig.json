@@ -69,6 +69,7 @@
   },
   "typedocOptions": {
     "entryPoints": [
+      "../../temp/clay/index.ts",
       "../../temp/components/index.ts",
       "../../temp/fragment/index.ts"
     ],
