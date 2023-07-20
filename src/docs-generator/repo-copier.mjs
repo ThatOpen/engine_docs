@@ -8,12 +8,15 @@ import { promisify } from "node:util";
 // Make exec return promises
 const execPromise = promisify(exec);
 
+// Organization name
+const orgName = "IFCjs"
+
 // List of repositories to include in the docs
 let repositories = [
-    { name: "IFCjs/clay", release: "", fallbackBranch: "" },
-    { name: "IFCjs/components", release: "", fallbackBranch: "big-restructure" },
-    { name: "IFCjs/fragment", release: "", fallbackBranch: "" },
-    { name: "IFCjs/web-ifc", release: "", fallbackBranch: "" },
+    { name: "clay", release: "", fallbackBranch: "" },
+    { name: "components", release: "", fallbackBranch: "big-restructure" },
+    { name: "fragment", release: "", fallbackBranch: "" },
+    { name: "web-ifc", release: "", fallbackBranch: "" },
 ];
 
 // Relative path to store the repos
@@ -35,7 +38,7 @@ console.info(`Using ${ghVersion}`);
    there are no releases yet, return an empty string */
 const getLatestRelease = async (repoName) => {
     let release = await execPromise(
-        `gh api repos/${repoName}/releases/latest || true`);
+        `gh api repos/${orgName}/${repoName}/releases/latest || true`);
     release = release.stdout;
 
     try {
@@ -48,7 +51,7 @@ const getLatestRelease = async (repoName) => {
             release = "";
         } else {
             console.error(`Unexpected error while fetching releases
-                           for ${repoName}. Aborting...`);
+                           for "${orgName}/${repoName}". Aborting...`);
 
             process.exit(2);
         }
@@ -60,10 +63,9 @@ const getLatestRelease = async (repoName) => {
 /* Clone git repository with minimal depth for an specific tag.
    If no tag or fallback branch specified, it will use the default branch */
 const cloneMinimalRepo = async(repo) => {
-    let repoDirName = repo.name.split(/\//).pop();
-    repoDirName = path.resolve(`${fullRepoDirName}/${repoDirName}`);
+    const repoDirName = path.resolve(`${fullRepoDirName}/${repo.name}`);
 
-    let command = `gh repo clone ${repo.name} ${repoDirName} -- --depth 1`;
+    let command = `gh repo clone ${orgName}/${repo.name} ${repoDirName} -- --depth 1`;
     let tagName = "(default branch)";
 
     if (repo.release && repo.release !== "") {
@@ -82,11 +84,10 @@ const cloneMinimalRepo = async(repo) => {
 /* Copy the src/ directory inside the repo to the
  * tempDirName directory with the name of the repository */
 const copyRepoSrc = async(repoName) => {
-    const repoDirName = repoName.split(/\//).pop();
     const originalRepoSrcPath = path.resolve(
-        `./${fullRepoDirName}/${repoDirName}/src`);
+        `./${fullRepoDirName}/${repoName}/src`);
     const repoSrcCopyPath = path.resolve(
-        `./${tempDirName}/${repoDirName}`);
+        `./${tempDirName}/${repoName}`);
 
     await cp(originalRepoSrcPath, repoSrcCopyPath, { recursive: true });
 
@@ -94,7 +95,7 @@ const copyRepoSrc = async(repoName) => {
 };
 
 // Fetch and fill the releases field for each repo
-console.log("Fetching releases...");
+console.info("Fetching releases...");
 
 repositories = await Promise.all(
     repositories.map(async (repo) => {
@@ -105,11 +106,11 @@ repositories = await Promise.all(
     })
 );
 
-console.log("Fetched releases:");
-console.log(repositories);
+console.info("Fetched releases:");
+console.info(repositories);
 
 // Clone minimal repositories and display the active branch
-console.log("Cloning minified repositories...");
+console.info("Cloning minified repositories...");
 
 const clonedBranches = await Promise.all(
     repositories.map(async (repo) => {
@@ -122,11 +123,11 @@ const clonedBranches = await Promise.all(
     })
 );
 
-console.log("Cloned repositories:");
-console.log(clonedBranches);
+console.info("Cloned repositories:");
+console.info(clonedBranches);
 
 // Copy src/ directories inside each repository
-console.log("Copying 'src/' directories...");
+console.info("Copying 'src/' directories...");
 
 const srcCopies = await Promise.all(
     repositories.map(async (repo) => {
@@ -137,11 +138,11 @@ const srcCopies = await Promise.all(
     })
 );
 
-console.log("Copied 'src/' directories");
-console.log(srcCopies);
+console.info("Copied 'src/' directories");
+console.info(srcCopies);
 
 // Delete temp/_repo directory since it's not needed anymore
-console.log(`Removing ${fullRepoDirName} directory...`);
+console.info(`Removing ${fullRepoDirName} directory...`);
 rmSync(fullRepoDirName, { recursive: true });
 
-console.log("Finished copying and setting up repositories!");
+console.info("Finished copying and setting up repositories!");
