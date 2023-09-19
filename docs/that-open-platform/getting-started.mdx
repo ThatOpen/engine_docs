@@ -4,5 +4,57 @@ sidebar_position: 1
 
 # Getting started
 
-Welcome to **That Open Docs**! Have you ever wanted to create your own **BIM software**, but don't know
-where to start? Here you will find everything you need to go from zero to hero! 🏢👩‍💻
+That Open Platform is a cloud app where we bring the features of our libraries to the next level! One of the things you will find in the platform is a free IFC viewer and editor that you can extend with your own custom tools. How cool is that? Let's see how to do that: 👇
+
+## Extending the editor
+
+A cool thing about Tools is that you can upload them to That Open Platform to extend the online editor or make money with them in the store. Don't worry: this is so easy that you can put your components in the cloud in less than 2 minutes!
+
+First, you'll need to install the library that will set up a cloud tool project for you:
+
+```bash
+npm i -g openbim-tools@latest
+```
+
+Now, you can create a new tool by running the command:
+
+```bash
+new-open-tool
+```
+
+This will start a CLI app that will help you create a tool project. You just have to select which template you want to use and give it a name.
+
+:::danger Watch out!
+
+The name must be a valid JS class name (e.g. it can't have spaces or start with a number). We recommend
+using PascalCase as naming convention.
+
+:::
+
+A folder with your tool name will be created. You can open it with your favourite IDE and install all the dependencies like a normal web dev project:
+
+```bash
+npm i
+```
+
+Now, you can build it with the build command:
+
+```bash
+npm run build
+```
+
+And test it locally with the start command:
+
+```bash
+npm run start
+```
+
+Now, to upload it to That Open Platform, check out the `Tools` tab in your dashboard. You just need to upload the .zip file generated in the dist folder of your app project. Then, you can check the
+
+:::tip Check the index.json actions
+
+You need to define the name of the `Buttons` defined in the `uiElement` of your tool to be able to add them to the platform editor. Check how the basic template is build and make sure to keep that consistent when you create your own tools.
+
+:::
+
+Once your tool has been uploaded, simply open the editor and load them in a custom Tab. Easy, right? In the future, you'll be able to share this tools with other end users and programmers in the store and even make money out of it. 🚀🚀🚀

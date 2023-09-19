@@ -79,6 +79,20 @@ There are many free resources out there to learn to code for the web, although t
 
 :::
 
+## Reporting bugs
+
+We work very hard to make this library better every day, and you can help us! If you find any error while using it, don't hesitate to let us know and we will take care of it as soon as possible.
+
+This is how you can report a bug:
+
+1. Go to the Github library that has the code you are using. If you are not sure, don't worry: just go to the [components repository](https://github.com/ifcjs/components).
+
+2. Go to the [issues](https://github.com/IFCjs/components/issues) tab.
+
+3. Create a new issue. Try to ellaborate as much as possible, explaining what you are trying to do, the behavior you expect and what the library is doing. Providing a minimal code example we can test is also super useful!
+
+That's it! If you have questions, you can also get into our community, meet everyone and ask anything! We'll be super happy to see you there. 😊
+
 
 ## Navigating the docs
 
@@ -87,13 +101,11 @@ These docs are organized in 4 different sections. This is a lot of information a
 ___
 ### Components
 
-Everything in these libraries are components. Here, you will learn [the basics](components/getting-started.md) and how to [import, use](components/getting-started.md) and even [create your own custom components](components/creating-components.md). You will also find some useful [tutorial paths](components/tutorial-paths.md) that will help you progress throughout these docs!
+Everything in these libraries are components. Here, you will learn [the basics](components/getting-started.md) and how to import, use and even [create your own custom components](components/creating-components.md). You will also find some useful [tutorial paths](components/tutorial-paths.md) that will help you progress throughout these docs!
 ___
 ### That open platform
 
 To create BIM apps you need more than just code: authentication, databases, cloud processing, cybersecurity, etc. You could do all of this yourself, but many companies have whole software teams only for this. Luckily, you can find all these services plug-and-play in **That Open Platform** and add them to your apps in minutes!
-
-You can also find our [marketplace](that-open-platform/marketplace.mdx), where you can get components made by the community (many of them are free) and even sell your own components!
 
 ___
 ### API

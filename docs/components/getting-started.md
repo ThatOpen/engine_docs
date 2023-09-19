@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Getting started
 
+## Component ABC
+
 **Components** are the building blocks of all our libraries. In short, a component is a bunch of tested code that has a 
 specific set of features and can be used through a documented API. Components can do anything: viewing a 3D scene,
 loading an IFC, exporting floor plans, and even 3D modelling.
@@ -39,6 +41,18 @@ That's it! Now you are ready to start using components. But where to start? Here
 <iframe src="https://ifcjs.github.io/components/src/core/SimpleScene/index.html"></iframe>
 
 Cool, right? But of course, as you can imagine, there's a long way between this simple app and a full-fledged BIM application. If you need some guidance in your journey to discover all the components that we offer, check out the [tutorial paths](tutorial-paths.md). If you want to know more about components, keep reading! 👇
+
+## Tools
+
+Components are great, and soon you will learn how to use the ones in this library and create your own components. However, BIM applications are complex, and the components have several limitations:
+
+- **Cloud-native behavior**: we want to democratize BIM software, and for that it is imperative that software can be easily shared between applications through the cloud.
+
+- **Globally availability**: BIM applications have many parts, and in many occasions we will need to access logic from several places in our app easily and in a decoupled manner.
+
+- **Lifecycle management**: 3D applications need to be able to update their parts at every frame. In addition, Three.js applications need to manage memory to ensure that we don't have memory leaks, especially when using technologies like React, Angular, etc.
+
+For this reason we have created a special type of component that is capable of all this and more: the **Tools**. Don't worry, in the tutorials of these docs you will learn how to use the [tools provided by the library](../Tutorials/ToolsComponent.mdx) and how to [create your own tools](creating-components.md) and share them through That Open Platform.
 
 ## Compatibility
 
