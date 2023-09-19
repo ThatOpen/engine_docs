@@ -34,6 +34,8 @@
   --ifm-color-danger-contrast-foreground: white !important;
   --ifm-menu-link-sublist-icon-filter: invert();
   --ifm-code-background: #282A36;
+ --ifm-scrollbar-thumb-background-color: var(--dark-purple) !important;
+ --ifm-scrollbar-track-background-color: var(--dark-gray) !important;
 }
 
 /*html {*/

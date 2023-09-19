@@ -21,45 +21,11 @@ the callback as an arrow function.
 | :------ |
 | `T` |
 
-## Properties
-
-### trigger
-
-• **trigger**: `T` extends `void` ? () => `void` : (`data?`: `T`) => `void`
-
-Triggers all the callbacks assigned to this event.
-
-#### Defined in
-
-temp/components/base-types/base-types.ts:32
-
 ## Methods
 
-### off
+### add
 
-▸ **off**(`handler`): `void`
-
-Removes a callback from this event instance.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `handler` | `T` extends `void` ? () => `void` : (`data`: `T`) => `void` | the callback to be removed from this event. |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-temp/components/base-types/base-types.ts:25
-
-___
-
-### on
-
-▸ **on**(`handler`): `void`
+▸ **add**(`handler`): `void`
 
 Add a callback to this event instance.
 
@@ -75,7 +41,29 @@ Add a callback to this event instance.
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:17
+temp/components/base-types/base-types.ts:18
+
+___
+
+### remove
+
+▸ **remove**(`handler`): `void`
+
+Removes a callback from this event instance.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `handler` | `T` extends `void` ? () => `void` : (`data`: `T`) => `void` | the callback to be removed from this event. |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+temp/components/base-types/base-types.ts:26
 
 ___
 
@@ -91,4 +79,26 @@ Gets rid of all the suscribed events.
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:42
+temp/components/base-types/base-types.ts:39
+
+___
+
+### trigger
+
+▸ **trigger**(`data?`): `Promise`<`void`\>
+
+Triggers all the callbacks assigned to this event.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `data?` | `T` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+temp/components/base-types/base-types.ts:31

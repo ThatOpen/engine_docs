@@ -15,20 +15,18 @@ With the help of this tutorial, you can quickly add **Clipping Planes** and **Co
 ### 🧩 Adding Objects to Scene
 ---
 Let's start by adding two Cubes, we will create a [Box Geometry](https://threejs.org/docs/index.html?q=box#api/en/geometries/BoxGeometry) and use it for both Meshes.
-We'll use `Red` and `Blue` colored material for the cubes🎨, and place them at a particular distance apart.📏
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const redMaterial = new THREE.MeshStandardMaterial({color: "red"});
-const redCube = new THREE.Mesh(cubeGeometry, redMaterial);
-redCube.position.set(-2, 1.5, 0);
-scene.add(redCube);
-components.meshes.push(redCube);
-const blueMaterial = new THREE.MeshStandardMaterial({color: "blue"});
-const blueCube = new THREE.Mesh(cubeGeometry, blueMaterial);
-blueCube.position.set(2, 1.5, 0);
-scene.add(blueCube);
-components.meshes.push(blueCube);
+const cubeMaterial = new THREE.MeshStandardMaterial({ color: '#6528D7' });
+const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+cube.position.set(-2, 1.5, 0);
+scene.add(cube);
+components.meshes.push(cube);
+const cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial);
+cube2.position.set(2, 1.5, 0);
+scene.add(cube2);
+components.meshes.push(cube2);
 ```
 :::info Storing Components
 🧰 After adding cubes to the scene, we must also add them to `components.meshes`,
@@ -41,16 +39,15 @@ We will create **[Edges Clipper](../api/classes/components.EdgesClipper)** and p
 **[Edges Plane](../api/classes/components.EdgesPlane)** to the constructor.
 
 ```js
-const clipper = new OBC.EdgesClipper(components, OBC.EdgesPlane);
+const clipper = new OBC.EdgesClipper(components);
 ```
 :::info PLANE WITH EDGES and TRANSFORMATION CONTROLS
 🟦 **[Edges Plane](../api/classes/components.EdgesPlane)** helps us in adding Clipping Planes to the Clipper Component.
 :::
 
 ```js
-components.tools.add(clipper);
+components.tools.add("clipper", clipper);
 clipper.enabled = true;
-clipper.visible = true;
 ```
 When we set `clipper.enabled = true`, we will make the clipper functional; otherwise, clipping planes won't be formed.
 :::tip Adding it to the tools component
@@ -66,10 +63,14 @@ After creating the Line Material we will add it to the **clipper**
 using `clipper.styles.create(styleName: string, mesh: Mesh[], material: LineMaterial)`
 
 ```js
-const redLineMaterial = new LineMaterial({color: 'blue', linewidth: 0.002});
-clipper.styles.create("Red lines", [redCube], redLineMaterial);
-const blueLineMaterial = new LineMaterial({color: 'red', linewidth: 0.003});
-clipper.styles.create("Blue lines", [blueCube], blueLineMaterial);
+const blueFill = new THREE.MeshBasicMaterial({color: 'lightblue', side: 2});
+const blueLine = new THREE.LineBasicMaterial({ color: 'blue' });
+const blueOutline = new THREE.MeshBasicMaterial({color: 'blue', opacity: 0.2, side: 2, transparent: true});
+clipper.styles.create('Red lines', new Set([cube]), blueLine, blueFill, blueOutline);
+const salmonFill = new THREE.MeshBasicMaterial({color: 'salmon', side: 2});
+const redLine = new THREE.LineBasicMaterial({ color: 'red' });
+const redOutline = new THREE.MeshBasicMaterial({color: 'red', opacity: 0.2, side: 2, transparent: true});
+clipper.styles.create('Blue lines', new Set([cube2]), redLine, salmonFill, redOutline);
 ```
 ### 🤝 Performing Clipping Events
 ---
@@ -97,7 +98,7 @@ window.onkeydown = (event) => {
 if (event.code === 'Delete' || event.code === 'Backspace') {
 clipper.delete();
 }
-}
+};
 ```
 :::tip Delete all Clipping Planes
 ❎ If you want to safely delete all the clipping edges that were created you can simply call

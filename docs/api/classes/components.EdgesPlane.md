@@ -18,70 +18,6 @@ ClippingEdges with customizable lines.
 
 ## Properties
 
-### afterUpdate
-
-• **afterUpdate**: [`Event`](components.Event.md)<`Plane`\>
-
-[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Inherited from
-
-[SimplePlane](components.SimplePlane.md).[afterUpdate](components.SimplePlane.md#afterupdate)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:23
-
-___
-
-### beforeUpdate
-
-• **beforeUpdate**: [`Event`](components.Event.md)<`Plane`\>
-
-[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Inherited from
-
-[SimplePlane](components.SimplePlane.md).[beforeUpdate](components.SimplePlane.md#beforeupdate)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:26
-
-___
-
-### draggingEnded
-
-• **draggingEnded**: [`Event`](components.Event.md)<`void`\>
-
-Event that fires when the user stops dragging a clipping plane.
-
-#### Inherited from
-
-[SimplePlane](components.SimplePlane.md).[draggingEnded](components.SimplePlane.md#draggingended)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:32
-
-___
-
-### draggingStarted
-
-• **draggingStarted**: [`Event`](components.Event.md)<`void`\>
-
-Event that fires when the user starts dragging a clipping plane.
-
-#### Inherited from
-
-[SimplePlane](components.SimplePlane.md).[draggingStarted](components.SimplePlane.md#draggingstarted)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:29
-
-___
-
 ### edgesMaxUpdateRate
 
 • **edgesMaxUpdateRate**: `number` = `50`
@@ -99,7 +35,7 @@ ___
 
 • **name**: `string` = `"SimplePlane"`
 
-[name](components.Component.md#name)
+Component.name
 
 #### Inherited from
 
@@ -107,7 +43,39 @@ ___
 
 #### Defined in
 
+temp/components/core/SimpleClipper/simple-plane.ts:14
+
+___
+
+### onDraggingEnded
+
+• `Readonly` **onDraggingEnded**: [`Event`](components.Event.md)<`void`\>
+
+Event that fires when the user stops dragging a clipping plane.
+
+#### Inherited from
+
+[SimplePlane](components.SimplePlane.md).[onDraggingEnded](components.SimplePlane.md#ondraggingended)
+
+#### Defined in
+
 temp/components/core/SimpleClipper/simple-plane.ts:20
+
+___
+
+### onDraggingStarted
+
+• `Readonly` **onDraggingStarted**: [`Event`](components.Event.md)<`void`\>
+
+Event that fires when the user starts dragging a clipping plane.
+
+#### Inherited from
+
+[SimplePlane](components.SimplePlane.md).[onDraggingStarted](components.SimplePlane.md#ondraggingstarted)
+
+#### Defined in
+
+temp/components/core/SimpleClipper/simple-plane.ts:17
 
 ## Accessors
 
@@ -121,35 +89,13 @@ temp/components/core/SimpleClipper/simple-plane.ts:20
 
 `boolean`
 
-#### Inherited from
+#### Overrides
 
 SimplePlane.enabled
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:52
-
-• `set` **enabled**(`state`): `void`
-
-[enabled](components.Component.md#enabled)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `state` | `boolean` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-SimplePlane.enabled
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:57
+temp/components/navigation/EdgesClipper/src/edges-plane.ts:37
 
 ___
 
@@ -169,7 +115,7 @@ SimplePlane.meshes
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:76
+temp/components/core/SimpleClipper/simple-plane.ts:66
 
 ___
 
@@ -189,7 +135,7 @@ SimplePlane.planeMaterial
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:81
+temp/components/core/SimpleClipper/simple-plane.ts:71
 
 • `set` **planeMaterial**(`material`): `void`
 
@@ -211,7 +157,7 @@ SimplePlane.planeMaterial
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:86
+temp/components/core/SimpleClipper/simple-plane.ts:76
 
 ___
 
@@ -231,7 +177,7 @@ SimplePlane.size
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:91
+temp/components/core/SimpleClipper/simple-plane.ts:81
 
 • `set` **size**(`size`): `void`
 
@@ -253,11 +199,27 @@ SimplePlane.size
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:96
+temp/components/core/SimpleClipper/simple-plane.ts:86
 
 ___
 
 ### visible
+
+• `get` **visible**(): `boolean`
+
+[visible](../interfaces/components.Hideable.md#visible)
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+SimplePlane.visible
+
+#### Defined in
+
+temp/components/core/SimpleClipper/simple-plane.ts:53
 
 • `set` **visible**(`state`): `void`
 
@@ -273,25 +235,25 @@ ___
 
 `void`
 
-#### Overrides
+#### Inherited from
 
 SimplePlane.visible
 
 #### Defined in
 
-temp/components/navigation/EdgesClipper/src/edges-plane.ts:34
+temp/components/core/SimpleClipper/simple-plane.ts:58
 
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Overrides
 
@@ -299,7 +261,7 @@ temp/components/navigation/EdgesClipper/src/edges-plane.ts:34
 
 #### Defined in
 
-temp/components/navigation/EdgesClipper/src/edges-plane.ts:40
+temp/components/navigation/EdgesClipper/src/edges-plane.ts:42
 
 ___
 
@@ -319,7 +281,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:133
+temp/components/core/SimpleClipper/simple-plane.ts:123
 
 ___
 
@@ -339,7 +301,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -379,7 +341,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -423,15 +385,37 @@ temp/components/base-types/component.ts:38
 
 ___
 
+### setEnabled
+
+▸ **setEnabled**(`state`): `Promise`<`void`\>
+
+[enabled](components.Component.md#enabled)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `state` | `boolean` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+temp/components/navigation/EdgesClipper/src/edges-plane.ts:48
+
+___
+
 ### update
 
-▸ **update**(): `void`
+▸ **update**(): `Promise`<`void`\>
 
 [update](../interfaces/components.Updateable.md#update)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Overrides
 
@@ -439,4 +423,4 @@ ___
 
 #### Defined in
 
-temp/components/navigation/EdgesClipper/src/edges-plane.ts:46
+temp/components/navigation/EdgesClipper/src/edges-plane.ts:70

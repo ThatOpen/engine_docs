@@ -16,14 +16,27 @@ loop of everything. Each instance has to be initialized with [init](components.C
 
 ### meshes
 
-• **meshes**: `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] = `[]`
+• `Readonly` **meshes**: `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] = `[]`
 
 All the loaded [meshes](https://threejs.org/docs/#api/en/objects/Mesh).
-This includes IFC models, fragments, 3D scans, etc.
+This includes fragments, 3D scans, etc.
 
 #### Defined in
 
-temp/components/core/Components/index.ts:34
+temp/components/core/Components/index.ts:32
+
+___
+
+### onInitialized
+
+• `Readonly` **onInitialized**: [`Event`](components.Event.md)<[`Components`](components.Components.md)\>
+
+Event that fires when this instance has been fully initialized and is
+ready to work (scene, camera and renderer are ready).
+
+#### Defined in
+
+temp/components/core/Components/index.ts:38
 
 ___
 
@@ -47,7 +60,7 @@ ___
 
 #### Defined in
 
-temp/components/core/Components/index.ts:28
+temp/components/core/Components/index.ts:26
 
 ## Accessors
 
@@ -64,7 +77,7 @@ that determines the point of view of the renderer.
 
 #### Defined in
 
-temp/components/core/Components/index.ts:84
+temp/components/core/Components/index.ts:88
 
 • `set` **camera**(`camera`): `void`
 
@@ -82,24 +95,24 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-temp/components/core/Components/index.ts:94
+temp/components/core/Components/index.ts:98
 
 ___
 
 ### raycaster
 
-• `get` **raycaster**(): [`Raycaster`](../interfaces/components.Raycaster.md)
+• `get` **raycaster**(): `BaseRaycaster`
 
 A component using the [Three.js raycaster](https://threejs.org/docs/#api/en/core/Raycaster)
 used primarily to pick 3D items with the mouse or a touch screen.
 
 #### Returns
 
-[`Raycaster`](../interfaces/components.Raycaster.md)
+`BaseRaycaster`
 
 #### Defined in
 
-temp/components/core/Components/index.ts:102
+temp/components/core/Components/index.ts:106
 
 • `set` **raycaster**(`raycaster`): `void`
 
@@ -110,7 +123,7 @@ to initialize this if any component that needs a raycaster is used.
 
 | Name | Type |
 | :------ | :------ |
-| `raycaster` | [`Raycaster`](../interfaces/components.Raycaster.md) |
+| `raycaster` | `BaseRaycaster` |
 
 #### Returns
 
@@ -118,7 +131,7 @@ to initialize this if any component that needs a raycaster is used.
 
 #### Defined in
 
-temp/components/core/Components/index.ts:113
+temp/components/core/Components/index.ts:117
 
 ___
 
@@ -136,7 +149,7 @@ components with pre-made functionality (e.g. rendering of 2D CSS elements.
 
 #### Defined in
 
-temp/components/core/Components/index.ts:48
+temp/components/core/Components/index.ts:52
 
 • `set` **renderer**(`renderer`): `void`
 
@@ -154,7 +167,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-temp/components/core/Components/index.ts:58
+temp/components/core/Components/index.ts:62
 
 ___
 
@@ -171,7 +184,7 @@ where all the rendered items are placed.
 
 #### Defined in
 
-temp/components/core/Components/index.ts:66
+temp/components/core/Components/index.ts:70
 
 • `set` **scene**(`scene`): `void`
 
@@ -189,13 +202,13 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-temp/components/core/Components/index.ts:76
+temp/components/core/Components/index.ts:80
 
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 Disposes the memory of all the components and tools of this instance of
 the library. A memory leak will be created if:
@@ -212,11 +225,11 @@ You can learn more about how Three.js handles memory leaks
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Defined in
 
-temp/components/core/Components/index.ts:151
+temp/components/core/Components/index.ts:157
 
 ___
 
@@ -235,4 +248,4 @@ used, the [raycaster](components.Components.md#raycaster) will need to be initia
 
 #### Defined in
 
-temp/components/core/Components/index.ts:130
+temp/components/core/Components/index.ts:134

@@ -56,7 +56,7 @@ We write all our code in TypeScript and document it with TSDoc. That means that 
 
 All our components are guaranteed to work while using their APIs directly or extending them, and our testing system guarantees that. All the code of all our libraries is unit-tested using AI, Jest, Typescript and human beings 🙂. You can check it for each repository in real time looking at the badge:
 
-[![Tests](https://github.com/IFCjs/components/actions/workflows/tests.yaml/badge.svg)](https://github.com/IFCjs/components/actions/workflows/tests)
+<img src='https://github.com/IFCjs/components/actions/workflows/tests.yml/badge.svg'></img>
 
 Regarding the coverage, each component in our repositories is contained in a folder that follows the following structure:
 

@@ -17,38 +17,6 @@ Renderer that uses efficient postproduction effects (e.g. Ambient Occlusion).
 
 ## Properties
 
-### afterUpdate
-
-• **afterUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
-
-[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Inherited from
-
-[SimpleRenderer](components.SimpleRenderer.md).[afterUpdate](components.SimpleRenderer.md#afterupdate)
-
-#### Defined in
-
-temp/components/core/SimpleRenderer/index.ts:32
-
-___
-
-### beforeUpdate
-
-• **beforeUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
-
-[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Inherited from
-
-[SimpleRenderer](components.SimpleRenderer.md).[beforeUpdate](components.SimpleRenderer.md#beforeupdate)
-
-#### Defined in
-
-temp/components/core/SimpleRenderer/index.ts:29
-
-___
-
 ### clippingPlanes
 
 • **clippingPlanes**: `Plane`[] = `[]`
@@ -66,19 +34,19 @@ temp/components/base-types/base-renderer.ts:33
 
 ___
 
-### enabled
+### container
 
-• **enabled**: `boolean` = `true`
+• **container**: `HTMLElement`
 
-[enabled](components.Component.md#enabled)
+The HTML container of the THREE.js canvas where the scene is rendered.
 
 #### Inherited from
 
-[SimpleRenderer](components.SimpleRenderer.md).[enabled](components.SimpleRenderer.md#enabled)
+[SimpleRenderer](components.SimpleRenderer.md).[container](components.SimpleRenderer.md#container)
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:26
+temp/components/core/SimpleRenderer/index.ts:29
 
 ___
 
@@ -86,7 +54,7 @@ ___
 
 • **name**: `string` = `"SimpleRenderer"`
 
-[name](components.Component.md#name)
+Component.name
 
 #### Inherited from
 
@@ -95,6 +63,71 @@ ___
 #### Defined in
 
 temp/components/core/SimpleRenderer/index.ts:23
+
+___
+
+### onAfterUpdate
+
+• `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
+
+[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[onAfterUpdate](components.SimpleRenderer.md#onafterupdate)
+
+#### Defined in
+
+temp/components/core/SimpleRenderer/index.ts:35
+
+___
+
+### onBeforeUpdate
+
+• `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
+
+[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[onBeforeUpdate](components.SimpleRenderer.md#onbeforeupdate)
+
+#### Defined in
+
+temp/components/core/SimpleRenderer/index.ts:32
+
+___
+
+### onClippingPlanesUpdated
+
+• `Readonly` **onClippingPlanesUpdated**: [`Event`](components.Event.md)<`unknown`\>
+
+Event that fires when there has been a change to the list of clipping
+planes used by the active renderer.
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[onClippingPlanesUpdated](components.SimpleRenderer.md#onclippingplanesupdated)
+
+#### Defined in
+
+temp/components/base-types/base-renderer.ts:27
+
+___
+
+### onResize
+
+• `Readonly` **onResize**: [`Event`](components.Event.md)<`unknown`\>
+
+[onResize](../interfaces/components.Resizeable.md#onresize)
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[onResize](components.SimpleRenderer.md#onresize)
+
+#### Defined in
+
+temp/components/base-types/base-renderer.ts:21
 
 ___
 
@@ -112,13 +145,13 @@ temp/components/navigation/PostproductionRenderer/index.ts:10
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose).
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Overrides
 
@@ -126,27 +159,7 @@ temp/components/navigation/PostproductionRenderer/index.ts:10
 
 #### Defined in
 
-temp/components/navigation/PostproductionRenderer/index.ts:19
-
-___
-
-### get
-
-▸ **get**(): `WebGLRenderer`
-
-[get](components.Component.md#get)
-
-#### Returns
-
-`WebGLRenderer`
-
-#### Inherited from
-
-[SimpleRenderer](components.SimpleRenderer.md).[get](components.SimpleRenderer.md#get)
-
-#### Defined in
-
-temp/components/core/SimpleRenderer/index.ts:51
+temp/components/navigation/PostproductionRenderer/index.ts:36
 
 ___
 
@@ -166,7 +179,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:76
+temp/components/core/SimpleRenderer/index.ts:98
 
 ___
 
@@ -180,13 +193,13 @@ ___
 
 `void`
 
-#### Overrides
+#### Inherited from
 
 [SimpleRenderer](components.SimpleRenderer.md).[resize](components.SimpleRenderer.md#resize)
 
 #### Defined in
 
-temp/components/navigation/PostproductionRenderer/index.ts:25
+temp/components/core/SimpleRenderer/index.ts:106
 
 ___
 
@@ -216,13 +229,13 @@ to the renderer.
 
 #### Defined in
 
-temp/components/base-types/base-renderer.ts:40
+temp/components/base-types/base-renderer.ts:48
 
 ___
 
 ### update
 
-▸ **update**(`_delta`): `void`
+▸ **update**(`_delta`): `Promise`<`void`\>
 
 [update](../interfaces/components.Updateable.md#update)
 
@@ -234,12 +247,33 @@ ___
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
-#### Inherited from
+#### Overrides
 
 [SimpleRenderer](components.SimpleRenderer.md).[update](components.SimpleRenderer.md#update)
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:56
+temp/components/navigation/PostproductionRenderer/index.ts:20
+
+___
+
+### updateClippingPlanes
+
+▸ **updateClippingPlanes**(): `Promise`<`void`\>
+
+Forces the update of the clipping planes and all components that depend
+on them that are subscribed to `onClippingPlanesUpdated`.
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[updateClippingPlanes](components.SimpleRenderer.md#updateclippingplanes)
+
+#### Defined in
+
+temp/components/base-types/base-renderer.ts:39

@@ -11,16 +11,10 @@ Whether the geometric representation of this component can be
 hidden or shown in the
 [Three.js scene](https://threejs.org/docs/#api/en/scenes/Scene).
 
-## Hierarchy
-
-- **`Hideable`**
-
-  ↳ [`UIComponent`](components.UIComponent.md)
-
 ## Implemented by
 
+- [`LengthMeasurement`](../classes/components.LengthMeasurement.md)
 - [`SimpleClipper`](../classes/components.SimpleClipper.md)
-- [`SimpleDimensions`](../classes/components.SimpleDimensions.md)
 - [`SimpleGrid`](../classes/components.SimpleGrid.md)
 - [`SimplePlane`](../classes/components.SimplePlane.md)
 
@@ -36,4 +30,4 @@ currently visible or not in the
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:74
+temp/components/base-types/base-types.ts:73

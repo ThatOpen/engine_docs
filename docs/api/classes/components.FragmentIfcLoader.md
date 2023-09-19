@@ -23,37 +23,25 @@ the IFC file.
 - [`Disposable`](../interfaces/components.Disposable.md)
 - [`UI`](../interfaces/components.UI.md)
 
-## Properties
-
-### settings
-
-• **settings**: [`IfcFragmentSettings`](components.IfcFragmentSettings.md)
-
-Configuration of the IFC-fragment conversion.
-
-#### Defined in
-
-temp/components/fragments/FragmentIfcLoader/index.ts:30
-
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/fragments/FragmentIfcLoader/index.ts:67
+temp/components/fragments/FragmentIfcLoader/index.ts:59
 
 ___
 
@@ -73,7 +61,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -113,7 +101,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -159,7 +147,7 @@ ___
 
 ### load
 
-▸ **load**(`data`): `Promise`<`FragmentGroup`\>
+▸ **load**(`data`, `name`): `Promise`<`FragmentsGroup`\>
 
 Loads the IFC file and converts it to a set of fragments.
 
@@ -168,11 +156,12 @@ Loads the IFC file and converts it to a set of fragments.
 | Name | Type |
 | :------ | :------ |
 | `data` | `Uint8Array` |
+| `name` | `string` |
 
 #### Returns
 
-`Promise`<`FragmentGroup`\>
+`Promise`<`FragmentsGroup`\>
 
 #### Defined in
 
-temp/components/fragments/FragmentIfcLoader/index.ts:78
+temp/components/fragments/FragmentIfcLoader/index.ts:71

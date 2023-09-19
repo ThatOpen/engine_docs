@@ -15,6 +15,10 @@ A component that handles all UI components.
 
   ↳ **`UIManager`**
 
+## Implements
+
+- [`Disposable`](../interfaces/components.Disposable.md)
+
 ## Methods
 
 ### hasUI
@@ -33,7 +37,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -73,7 +77,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 

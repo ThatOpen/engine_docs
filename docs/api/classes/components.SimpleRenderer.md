@@ -28,38 +28,6 @@ respectively).
 
 ## Properties
 
-### afterUpdate
-
-• **afterUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
-
-[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Implementation of
-
-[Updateable](../interfaces/components.Updateable.md).[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Defined in
-
-temp/components/core/SimpleRenderer/index.ts:32
-
-___
-
-### beforeUpdate
-
-• **beforeUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
-
-[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Implementation of
-
-[Updateable](../interfaces/components.Updateable.md).[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Defined in
-
-temp/components/core/SimpleRenderer/index.ts:29
-
-___
-
 ### clippingPlanes
 
 • **clippingPlanes**: `Plane`[] = `[]`
@@ -77,6 +45,18 @@ temp/components/base-types/base-renderer.ts:33
 
 ___
 
+### container
+
+• **container**: `HTMLElement`
+
+The HTML container of the THREE.js canvas where the scene is rendered.
+
+#### Defined in
+
+temp/components/core/SimpleRenderer/index.ts:29
+
+___
+
 ### enabled
 
 • **enabled**: `boolean` = `true`
@@ -85,7 +65,7 @@ ___
 
 #### Overrides
 
-[BaseRenderer](components.BaseRenderer.md).[enabled](components.BaseRenderer.md#enabled)
+BaseRenderer.enabled
 
 #### Defined in
 
@@ -97,35 +77,100 @@ ___
 
 • **name**: `string` = `"SimpleRenderer"`
 
-[name](components.Component.md#name)
-
-#### Overrides
-
-[BaseRenderer](components.BaseRenderer.md).[name](components.BaseRenderer.md#name)
+Component.name
 
 #### Defined in
 
 temp/components/core/SimpleRenderer/index.ts:23
 
+___
+
+### onAfterUpdate
+
+• `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
+
+[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+
+#### Implementation of
+
+[Updateable](../interfaces/components.Updateable.md).[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+
+#### Defined in
+
+temp/components/core/SimpleRenderer/index.ts:35
+
+___
+
+### onBeforeUpdate
+
+• `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
+
+[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+
+#### Implementation of
+
+[Updateable](../interfaces/components.Updateable.md).[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+
+#### Defined in
+
+temp/components/core/SimpleRenderer/index.ts:32
+
+___
+
+### onClippingPlanesUpdated
+
+• `Readonly` **onClippingPlanesUpdated**: [`Event`](components.Event.md)<`unknown`\>
+
+Event that fires when there has been a change to the list of clipping
+planes used by the active renderer.
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[onClippingPlanesUpdated](components.BaseRenderer.md#onclippingplanesupdated)
+
+#### Defined in
+
+temp/components/base-types/base-renderer.ts:27
+
+___
+
+### onResize
+
+• `Readonly` **onResize**: [`Event`](components.Event.md)<`unknown`\>
+
+[onResize](../interfaces/components.Resizeable.md#onresize)
+
+#### Implementation of
+
+[Resizeable](../interfaces/components.Resizeable.md).[onResize](../interfaces/components.Resizeable.md#onresize)
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[onResize](components.BaseRenderer.md#onresize)
+
+#### Defined in
+
+temp/components/base-types/base-renderer.ts:21
+
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:67
+temp/components/core/SimpleRenderer/index.ts:86
 
 ___
 
@@ -141,11 +186,11 @@ ___
 
 #### Overrides
 
-[BaseRenderer](components.BaseRenderer.md).[get](components.BaseRenderer.md#get)
+BaseRenderer.get
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:51
+temp/components/core/SimpleRenderer/index.ts:64
 
 ___
 
@@ -161,7 +206,7 @@ ___
 
 #### Implementation of
 
-Resizeable.getSize
+[Resizeable](../interfaces/components.Resizeable.md).[getSize](../interfaces/components.Resizeable.md#getsize)
 
 #### Overrides
 
@@ -169,7 +214,7 @@ Resizeable.getSize
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:76
+temp/components/core/SimpleRenderer/index.ts:98
 
 ___
 
@@ -185,7 +230,7 @@ ___
 
 #### Implementation of
 
-Resizeable.resize
+[Resizeable](../interfaces/components.Resizeable.md).[resize](../interfaces/components.Resizeable.md#resize)
 
 #### Overrides
 
@@ -193,7 +238,7 @@ Resizeable.resize
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:84
+temp/components/core/SimpleRenderer/index.ts:106
 
 ___
 
@@ -223,7 +268,7 @@ to the renderer.
 
 #### Defined in
 
-temp/components/base-types/base-renderer.ts:40
+temp/components/base-types/base-renderer.ts:48
 
 ___
 
@@ -249,4 +294,25 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleRenderer/index.ts:56
+temp/components/core/SimpleRenderer/index.ts:69
+
+___
+
+### updateClippingPlanes
+
+▸ **updateClippingPlanes**(): `Promise`<`void`\>
+
+Forces the update of the clipping planes and all components that depend
+on them that are subscribed to `onClippingPlanesUpdated`.
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[updateClippingPlanes](components.BaseRenderer.md#updateclippingplanes)
+
+#### Defined in
+
+temp/components/base-types/base-renderer.ts:39

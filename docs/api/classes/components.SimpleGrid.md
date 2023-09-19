@@ -7,12 +7,14 @@ custom_edit_url: null
 
 [components](../modules/components.md).SimpleGrid
 
-A basic
-[Three.js grid helper](https://threejs.org/docs/#api/en/helpers/GridHelper).
+An infinite grid. Created by
+[fyrestar](https://github.com/Fyrestar/THREE.InfiniteGridHelper)
+and translated to typescript by
+[dkaraush](https://github.com/dkaraush/THREE.InfiniteGridHelper/blob/master/InfiniteGridHelper.ts).
 
 ## Hierarchy
 
-- [`Component`](components.Component.md)<`THREE.GridHelper`\>
+- [`Component`](components.Component.md)<`THREE.Mesh`\>
 
   ↳ **`SimpleGrid`**
 
@@ -35,25 +37,61 @@ A basic
 
 #### Defined in
 
-temp/components/core/SimpleGrid/index.ts:18
+temp/components/core/SimpleGrid/index.ts:21
 
-___
+## Accessors
 
-### name
+### fade
 
-• **name**: `string` = `"SimpleGrid"`
+• `get` **fade**(): `boolean`
 
-[name](components.Component.md#name)
+Whether the grid should fade away with distance. Recommended to be true for
+perspective cameras and false for orthographic cameras.
 
-#### Overrides
+#### Returns
 
-[Component](components.Component.md).[name](components.Component.md#name)
+`boolean`
 
 #### Defined in
 
-temp/components/core/SimpleGrid/index.ts:15
+temp/components/core/SimpleGrid/index.ts:47
 
-## Accessors
+• `set` **fade**(`active`): `void`
+
+Whether the grid should fade away with distance. Recommended to be true for
+perspective cameras and false for orthographic cameras.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `active` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+temp/components/core/SimpleGrid/index.ts:55
+
+___
+
+### material
+
+• `get` **material**(): `ShaderMaterial`
+
+The material of the grid.
+
+#### Returns
+
+`ShaderMaterial`
+
+#### Defined in
+
+temp/components/core/SimpleGrid/index.ts:39
+
+___
 
 ### visible
 
@@ -71,7 +109,7 @@ temp/components/core/SimpleGrid/index.ts:15
 
 #### Defined in
 
-temp/components/core/SimpleGrid/index.ts:21
+temp/components/core/SimpleGrid/index.ts:24
 
 • `set` **visible**(`visible`): `void`
 
@@ -93,39 +131,39 @@ temp/components/core/SimpleGrid/index.ts:21
 
 #### Defined in
 
-temp/components/core/SimpleGrid/index.ts:26
+temp/components/core/SimpleGrid/index.ts:29
 
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/core/SimpleGrid/index.ts:46
+temp/components/core/SimpleGrid/index.ts:186
 
 ___
 
 ### get
 
-▸ **get**(): `GridHelper`
+▸ **get**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>
 
 [get](components.Component.md#get)
 
 #### Returns
 
-`GridHelper`
+`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>
 
 #### Overrides
 
@@ -133,7 +171,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleGrid/index.ts:41
+temp/components/core/SimpleGrid/index.ts:181
 
 ___
 
@@ -153,7 +191,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -193,7 +231,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 

@@ -11,10 +11,10 @@ const orgName = "IFCjs";
 
 // List of repositories to include in the docs
 let repositories = [
-    { name: "clay", release: "", fallbackBranch: "" },
+    // { name: "clay", release: "", fallbackBranch: "" },
     { name: "components", release: "", fallbackBranch: "big-restructure" },
     { name: "fragment", release: "", fallbackBranch: "" },
-    { name: "web-ifc", release: "", fallbackBranch: "" },
+    // { name: "web-ifc", release: "", fallbackBranch: "" },
 ];
 const tempDirName = "temp";
 

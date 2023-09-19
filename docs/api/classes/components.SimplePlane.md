@@ -20,80 +20,43 @@ Each of the planes created by [SimpleClipper](components.SimpleClipper.md).
 ## Implements
 
 - [`Disposable`](../interfaces/components.Disposable.md)
-- [`Updateable`](../interfaces/components.Updateable.md)
 - [`Hideable`](../interfaces/components.Hideable.md)
 
 ## Properties
-
-### afterUpdate
-
-• **afterUpdate**: [`Event`](components.Event.md)<`Plane`\>
-
-[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Implementation of
-
-[Updateable](../interfaces/components.Updateable.md).[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:23
-
-___
-
-### beforeUpdate
-
-• **beforeUpdate**: [`Event`](components.Event.md)<`Plane`\>
-
-[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Implementation of
-
-[Updateable](../interfaces/components.Updateable.md).[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:26
-
-___
-
-### draggingEnded
-
-• **draggingEnded**: [`Event`](components.Event.md)<`void`\>
-
-Event that fires when the user stops dragging a clipping plane.
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:32
-
-___
-
-### draggingStarted
-
-• **draggingStarted**: [`Event`](components.Event.md)<`void`\>
-
-Event that fires when the user starts dragging a clipping plane.
-
-#### Defined in
-
-temp/components/core/SimpleClipper/simple-plane.ts:29
-
-___
 
 ### name
 
 • **name**: `string` = `"SimplePlane"`
 
-[name](components.Component.md#name)
+Component.name
 
-#### Overrides
+#### Defined in
 
-[Component](components.Component.md).[name](components.Component.md#name)
+temp/components/core/SimpleClipper/simple-plane.ts:14
+
+___
+
+### onDraggingEnded
+
+• `Readonly` **onDraggingEnded**: [`Event`](components.Event.md)<`void`\>
+
+Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
 temp/components/core/SimpleClipper/simple-plane.ts:20
+
+___
+
+### onDraggingStarted
+
+• `Readonly` **onDraggingStarted**: [`Event`](components.Event.md)<`void`\>
+
+Event that fires when the user starts dragging a clipping plane.
+
+#### Defined in
+
+temp/components/core/SimpleClipper/simple-plane.ts:17
 
 ## Accessors
 
@@ -113,7 +76,7 @@ Component.enabled
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:52
+temp/components/core/SimpleClipper/simple-plane.ts:42
 
 • `set` **enabled**(`state`): `void`
 
@@ -135,7 +98,7 @@ Component.enabled
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:57
+temp/components/core/SimpleClipper/simple-plane.ts:47
 
 ___
 
@@ -151,7 +114,7 @@ The meshes used for raycasting
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:76
+temp/components/core/SimpleClipper/simple-plane.ts:66
 
 ___
 
@@ -167,7 +130,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:81
+temp/components/core/SimpleClipper/simple-plane.ts:71
 
 • `set` **planeMaterial**(`material`): `void`
 
@@ -185,7 +148,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:86
+temp/components/core/SimpleClipper/simple-plane.ts:76
 
 ___
 
@@ -201,7 +164,7 @@ The size of the clipping plane representation.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:91
+temp/components/core/SimpleClipper/simple-plane.ts:81
 
 • `set` **size**(`size`): `void`
 
@@ -219,7 +182,7 @@ Sets the size of the clipping plane representation.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:96
+temp/components/core/SimpleClipper/simple-plane.ts:86
 
 ___
 
@@ -239,7 +202,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:63
+temp/components/core/SimpleClipper/simple-plane.ts:53
 
 • `set` **visible**(`state`): `void`
 
@@ -261,27 +224,27 @@ temp/components/core/SimpleClipper/simple-plane.ts:63
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:68
+temp/components/core/SimpleClipper/simple-plane.ts:58
 
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:138
+temp/components/core/SimpleClipper/simple-plane.ts:128
 
 ___
 
@@ -301,7 +264,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:133
+temp/components/core/SimpleClipper/simple-plane.ts:123
 
 ___
 
@@ -321,7 +284,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -361,7 +324,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -415,10 +378,6 @@ ___
 
 `void`
 
-#### Implementation of
-
-[Updateable](../interfaces/components.Updateable.md).[update](../interfaces/components.Updateable.md#update)
-
 #### Defined in
 
-temp/components/core/SimpleClipper/simple-plane.ts:122
+temp/components/core/SimpleClipper/simple-plane.ts:114

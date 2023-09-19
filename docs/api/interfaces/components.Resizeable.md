@@ -16,6 +16,7 @@ component could mean changing its resolution, whereas resizing a
 ## Implemented by
 
 - [`BaseRenderer`](../classes/components.BaseRenderer.md)
+- [`Simple2DScene`](../classes/components.Simple2DScene.md)
 - [`SimpleRenderer`](../classes/components.SimpleRenderer.md)
 
 ## Properties
@@ -38,7 +39,19 @@ component.
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:93
+temp/components/base-types/base-types.ts:99
+
+___
+
+### onResize
+
+• **onResize**: [`Event`](../classes/components.Event.md)<`Vector2`\>
+
+Event that fires when the component has been resized.
+
+#### Defined in
+
+temp/components/base-types/base-types.ts:92
 
 ___
 
@@ -66,4 +79,4 @@ component.
 
 #### Defined in
 
-temp/components/base-types/base-types.ts:88
+temp/components/base-types/base-types.ts:89

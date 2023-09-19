@@ -13,13 +13,13 @@ events.
 
 ## Hierarchy
 
-- [`Component`](components.Component.md)<`THREE.Raycaster`\>
+- `BaseRaycaster`
 
   ↳ **`SimpleRaycaster`**
 
 ## Implements
 
-- [`Raycaster`](../interfaces/components.Raycaster.md)
+- [`Disposable`](../interfaces/components.Disposable.md)
 
 ## Properties
 
@@ -31,11 +31,11 @@ events.
 
 #### Overrides
 
-[Component](components.Component.md).[enabled](components.Component.md#enabled)
+BaseRaycaster.enabled
 
 #### Defined in
 
-temp/components/core/SimpleRaycaster/index.ts:18
+temp/components/core/SimpleRaycaster/index.ts:13
 
 ___
 
@@ -47,23 +47,7 @@ The position of the mouse in the screen.
 
 #### Defined in
 
-temp/components/core/SimpleRaycaster/index.ts:21
-
-___
-
-### name
-
-• **name**: `string` = `"SimpleRaycaster"`
-
-[name](components.Component.md#name)
-
-#### Overrides
-
-[Component](components.Component.md).[name](components.Component.md#name)
-
-#### Defined in
-
-temp/components/core/SimpleRaycaster/index.ts:15
+temp/components/core/SimpleRaycaster/index.ts:16
 
 ## Methods
 
@@ -85,13 +69,37 @@ used by the renderer.
 
 ``null`` \| `Intersection`<`Object3D`<`Event`\>\>
 
-#### Implementation of
+#### Overrides
 
-Raycaster.castRay
+BaseRaycaster.castRay
 
 #### Defined in
 
 temp/components/core/SimpleRaycaster/index.ts:46
+
+___
+
+### dispose
+
+▸ **dispose**(): `Promise`<`void`\>
+
+[dispose](../interfaces/components.Disposable.md#dispose)
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Implementation of
+
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
+
+#### Overrides
+
+BaseRaycaster.dispose
+
+#### Defined in
+
+temp/components/core/SimpleRaycaster/index.ts:33
 
 ___
 
@@ -107,11 +115,11 @@ ___
 
 #### Overrides
 
-[Component](components.Component.md).[get](components.Component.md#get)
+BaseRaycaster.get
 
 #### Defined in
 
-temp/components/core/SimpleRaycaster/index.ts:33
+temp/components/core/SimpleRaycaster/index.ts:28
 
 ___
 
@@ -127,11 +135,11 @@ this is UI
 
 #### Inherited from
 
-[Component](components.Component.md).[hasUI](components.Component.md#hasui)
+BaseRaycaster.hasUI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -147,7 +155,7 @@ this is Disposable
 
 #### Inherited from
 
-[Component](components.Component.md).[isDisposeable](components.Component.md#isdisposeable)
+BaseRaycaster.isDisposeable
 
 #### Defined in
 
@@ -167,11 +175,11 @@ this is Hideable
 
 #### Inherited from
 
-[Component](components.Component.md).[isHideable](components.Component.md#ishideable)
+BaseRaycaster.isHideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -187,7 +195,7 @@ this is Resizeable
 
 #### Inherited from
 
-[Component](components.Component.md).[isResizeable](components.Component.md#isresizeable)
+BaseRaycaster.isResizeable
 
 #### Defined in
 
@@ -207,7 +215,7 @@ this is Updateable
 
 #### Inherited from
 
-[Component](components.Component.md).[isUpdateable](components.Component.md#isupdateable)
+BaseRaycaster.isUpdateable
 
 #### Defined in
 

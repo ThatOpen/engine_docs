@@ -13,7 +13,7 @@ something through user interaction (e.g. clipping planes, dimensions, etc).
 
 ## Hierarchy
 
-- [`Component`](components.Component.md)<[`Component`](components.Component.md)<`any`\> \| `undefined`\>
+- [`Component`](components.Component.md)<`Promise`<[`Component`](components.Component.md)<`any`\>\>\>
 
   ↳ **`ToolComponent`**
 
@@ -35,37 +35,70 @@ something through user interaction (e.g. clipping planes, dimensions, etc).
 
 #### Defined in
 
+temp/components/core/ToolsComponent/index.ts:32
+
+___
+
+### list
+
+• **list**: `ToolsList`
+
+The list of components created in this app.
+
+#### Defined in
+
 temp/components/core/ToolsComponent/index.ts:20
 
 ___
 
-### name
+### token
 
-• **name**: `string` = `"ToolComponent"`
+• **token**: `string` = `""`
 
-[name](components.Component.md#name)
-
-#### Overrides
-
-[Component](components.Component.md).[name](components.Component.md#name)
+The auth token to get tools from That Open Platform.
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:17
+temp/components/core/ToolsComponent/index.ts:26
+
+___
+
+### uuid
+
+• **uuid**: `string` = `"ToolComponent"`
+
+Component.uuid
+
+#### Defined in
+
+temp/components/core/ToolsComponent/index.ts:29
+
+___
+
+### libraryUUIDs
+
+▪ `Static` `Readonly` **libraryUUIDs**: `Set`<`unknown`\>
+
+The list of UUIDs of all the components in this library.
+
+#### Defined in
+
+temp/components/core/ToolsComponent/index.ts:23
 
 ## Methods
 
 ### add
 
-▸ **add**(`...tool`): `void`
+▸ **add**(`uuid`, `instance`): `void`
 
-Registers a new tool component.
+Adds a new tool. Use this in the constructor of your tools.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...tool` | [`Component`](components.Component.md)<`any`\>[] | The tool to register in the application. |
+| `uuid` | `string` | The UUID of your tool. |
+| `instance` | [`Component`](components.Component.md)<`any`\> | The instance of your tool (`this` inside the constructor). |
 
 #### Returns
 
@@ -73,45 +106,53 @@ Registers a new tool component.
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:31
+temp/components/core/ToolsComponent/index.ts:47
 
 ___
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
-Disposes all the memory used by all the tools.
+Disposes all the MEMORY used by all the tools.
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:91
+temp/components/core/ToolsComponent/index.ts:93
 
 ___
 
 ### get
 
-▸ **get**(`name`): `undefined` \| [`Component`](components.Component.md)<`any`\>
+▸ **get**<`T`, `U`\>(`ToolClass`): `Promise`<`U`\>
 
-Retrieves a tool component by its name.
+Retrieves a tool component. If it already exists in this app, it returns the instance of the component. If it
+doesn't exist, it will instance it automatically.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `T` |
+| `U` | extends [`Component`](components.Component.md)<`T`\> |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `name` | `string` | The [name](components.Component.md#name) of the component.. |
+| `ToolClass` | `Object` | The component to get or create. |
 
 #### Returns
 
-`undefined` \| [`Component`](components.Component.md)<`any`\>
+`Promise`<`U`\>
 
 #### Overrides
 
@@ -119,7 +160,7 @@ Retrieves a tool component by its name.
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:56
+temp/components/core/ToolsComponent/index.ts:59
 
 ___
 
@@ -139,7 +180,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -179,7 +220,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -223,31 +264,9 @@ temp/components/base-types/component.ts:38
 
 ___
 
-### remove
-
-▸ **remove**(`tool`): `boolean`
-
-Deletes a previously registered tool component.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `tool` | [`Component`](components.Component.md)<`any`\> | The tool to delete. |
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-temp/components/core/ToolsComponent/index.ts:42
-
-___
-
 ### update
 
-▸ **update**(`delta`): `void`
+▸ **update**(`delta`): `Promise`<`void`\>
 
 Updates all the registered tool components. Only the components where the
 property [enabled](components.Component.md#enabled) is true will be updated.
@@ -260,39 +279,8 @@ property [enabled](components.Component.md#enabled) is true will be updated.
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:80
-
-___
-
-### use
-
-▸ **use**<`T`\>(`token`, `id`): `Promise`<\>
-
-Gets one of your tools of That Open Platform. You can pass the type of
-component as the generic parameter T to get the types and intellisense
-for the component.
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `token` | `string` | The authentication token to authorise this request. |
-| `id` | `string` | The ID of the tool you want to get |
-
-#### Returns
-
-`Promise`<\>
-
-#### Defined in
-
-temp/components/core/ToolsComponent/index.ts:67
+temp/components/core/ToolsComponent/index.ts:81

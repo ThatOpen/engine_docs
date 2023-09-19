@@ -24,7 +24,10 @@ Also, we will get the **domElement** and attach it to the body so that we can se
 culler.renderDebugFrame = true;
 const debugFrame = culler.renderer.domElement;
 document.body.appendChild(debugFrame);
-debugFrame.style.position = 'absolute';
+debugFrame.style.position = 'fixed';
+debugFrame.style.left = '0';
+debugFrame.style.bottom = '0';
+debugFrame.style.visibility = 'collapse';
 ```
 :::info Randomising the Cube Placement
 We'll write a quick **utility** function that returns a random number between 0 and the specified upper limit.
@@ -45,7 +48,7 @@ For our cube, we'll generate box geometry and use basic material.
 ```js
 const cubes = [];
 const geometry = new THREE.BoxGeometry(2, 2, 2);
-const material = new THREE.MeshLambertMaterial({ color: 'red' });
+const material = new THREE.MeshLambertMaterial({ color: '#6528D7' });
 ```
 #### 🧪 Generate Multiple Cubes
 Now, using the `getRandomNumber()` method we previously created, we will add the 300 **`cube`** meshes to our scene
@@ -90,10 +93,13 @@ Here comes the most crucial part! The core aim of **ScreenCuller** is to output 
 visible to the camera.
 `culler.needsUpdate = true` instructs the ScreenCuller to render the updated view.
 ** Remember to update culler every time the camera is updated ❕ **
-For this tutorial, we are updating the culler on the click of button. 🖱
+In this tutorial we are updating it each time the camera stops moving.
 
 ```js
 culler.needsUpdate = true;
+components.camera.controls.addEventListener("controlend", () => {
+culler.needsUpdate = true;
+});
 ```
 Great job! 🎉 Now you know how to optimise your 3D scene using a
 **Screen Culler** component! 💪

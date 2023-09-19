@@ -18,83 +18,67 @@ ClippingEdges with customizable lines.
 
 ## Properties
 
-### afterCreate
+### onAfterCreate
 
-• **afterCreate**: [`Event`](components.Event.md)<[`EdgesPlane`](components.EdgesPlane.md)\>
+• `Readonly` **onAfterCreate**: [`Event`](components.Event.md)<[`EdgesPlane`](components.EdgesPlane.md)\>
 
-[afterCreate](../interfaces/components.Createable.md#aftercreate)
-
-#### Inherited from
-
-[SimpleClipper](components.SimpleClipper.md).[afterCreate](components.SimpleClipper.md#aftercreate)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/index.ts:34
-
-___
-
-### afterDelete
-
-• **afterDelete**: [`Event`](components.Event.md)<[`EdgesPlane`](components.EdgesPlane.md)\>
-
-[afterDelete](../interfaces/components.Createable.md#afterdelete)
+[onAfterCreate](../interfaces/components.Createable.md#onaftercreate)
 
 #### Inherited from
 
-[SimpleClipper](components.SimpleClipper.md).[afterDelete](components.SimpleClipper.md#afterdelete)
+[SimpleClipper](components.SimpleClipper.md).[onAfterCreate](components.SimpleClipper.md#onaftercreate)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:37
+temp/components/core/SimpleClipper/index.ts:35
 
 ___
 
-### afterDrag
+### onAfterDelete
 
-• **afterDrag**: [`Event`](components.Event.md)<`void`\>
+• `Readonly` **onAfterDelete**: [`Event`](components.Event.md)<[`EdgesPlane`](components.EdgesPlane.md)\>
+
+[onAfterDelete](../interfaces/components.Createable.md#onafterdelete)
+
+#### Inherited from
+
+[SimpleClipper](components.SimpleClipper.md).[onAfterDelete](components.SimpleClipper.md#onafterdelete)
+
+#### Defined in
+
+temp/components/core/SimpleClipper/index.ts:38
+
+___
+
+### onAfterDrag
+
+• `Readonly` **onAfterDrag**: [`Event`](components.Event.md)<`void`\>
 
 Event that fires when the user stops dragging a clipping plane.
 
 #### Inherited from
 
-[SimpleClipper](components.SimpleClipper.md).[afterDrag](components.SimpleClipper.md#afterdrag)
+[SimpleClipper](components.SimpleClipper.md).[onAfterDrag](components.SimpleClipper.md#onafterdrag)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:66
+temp/components/core/SimpleClipper/index.ts:44
 
 ___
 
-### beforeDrag
+### onBeforeDrag
 
-• **beforeDrag**: [`Event`](components.Event.md)<`void`\>
+• `Readonly` **onBeforeDrag**: [`Event`](components.Event.md)<`void`\>
 
 Event that fires when the user starts dragging a clipping plane.
 
 #### Inherited from
 
-[SimpleClipper](components.SimpleClipper.md).[beforeDrag](components.SimpleClipper.md#beforedrag)
+[SimpleClipper](components.SimpleClipper.md).[onBeforeDrag](components.SimpleClipper.md#onbeforedrag)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:63
-
-___
-
-### name
-
-• **name**: `string` = `"EdgesClipper"`
-
-[name](components.Component.md#name)
-
-#### Overrides
-
-[SimpleClipper](components.SimpleClipper.md).[name](components.SimpleClipper.md#name)
-
-#### Defined in
-
-temp/components/navigation/EdgesClipper/index.ts:17
+temp/components/core/SimpleClipper/index.ts:41
 
 ___
 
@@ -113,7 +97,7 @@ slope for draining purposes.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:53
+temp/components/core/SimpleClipper/index.ts:60
 
 ___
 
@@ -134,7 +118,7 @@ ___
 • **toleranceOrthogonalY**: `number` = `0.7`
 
 The tolerance that determines whether a horizontallish clipping plane
-will be forced to be orthogonal to the Y direction. [orthogonalY](components.EdgesClipper.md#orthogonaly)
+will be forced to be orthogonal to the Y direction. [orthogonalY](components.SimpleClipper.md#orthogonaly)
 has to be `true` for this to apply.
 
 #### Inherited from
@@ -143,7 +127,23 @@ has to be `true` for this to apply.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:60
+temp/components/core/SimpleClipper/index.ts:67
+
+___
+
+### uiElement
+
+• **uiElement**: [`UIElement`](components.UIElement.md)<{ `main`: `Button`  }\>
+
+[uiElement](../interfaces/components.UI.md#uielement)
+
+#### Inherited from
+
+[SimpleClipper](components.SimpleClipper.md).[uiElement](components.SimpleClipper.md#uielement)
+
+#### Defined in
+
+temp/components/core/SimpleClipper/index.ts:52
 
 ## Accessors
 
@@ -163,7 +163,7 @@ SimpleClipper.enabled
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:75
+temp/components/core/SimpleClipper/index.ts:85
 
 • `set` **enabled**(`state`): `void`
 
@@ -185,7 +185,7 @@ SimpleClipper.enabled
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:80
+temp/components/core/SimpleClipper/index.ts:90
 
 ___
 
@@ -205,7 +205,7 @@ SimpleClipper.material
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:103
+temp/components/core/SimpleClipper/index.ts:115
 
 • `set` **material**(`material`): `void`
 
@@ -227,7 +227,7 @@ SimpleClipper.material
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:108
+temp/components/core/SimpleClipper/index.ts:120
 
 ___
 
@@ -247,7 +247,7 @@ SimpleClipper.size
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:116
+temp/components/core/SimpleClipper/index.ts:128
 
 • `set` **size**(`size`): `void`
 
@@ -269,7 +269,7 @@ SimpleClipper.size
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:121
+temp/components/core/SimpleClipper/index.ts:133
 
 ___
 
@@ -289,7 +289,7 @@ SimpleClipper.visible
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:90
+temp/components/core/SimpleClipper/index.ts:102
 
 • `set` **visible**(`state`): `void`
 
@@ -311,7 +311,7 @@ SimpleClipper.visible
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:95
+temp/components/core/SimpleClipper/index.ts:107
 
 ## Methods
 
@@ -331,7 +331,7 @@ temp/components/core/SimpleClipper/index.ts:95
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:163
+temp/components/core/SimpleClipper/index.ts:179
 
 ___
 
@@ -359,7 +359,7 @@ without the need of the mouse.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:179
+temp/components/core/SimpleClipper/index.ts:195
 
 ___
 
@@ -385,7 +385,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:194
+temp/components/core/SimpleClipper/index.ts:210
 
 ___
 
@@ -405,19 +405,19 @@ Deletes all the existing clipping planes.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:202
+temp/components/core/SimpleClipper/index.ts:222
 
 ___
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [get](components.Component.md#get)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Overrides
 
@@ -425,7 +425,7 @@ ___
 
 #### Defined in
 
-temp/components/navigation/EdgesClipper/index.ts:28
+temp/components/navigation/EdgesClipper/index.ts:26
 
 ___
 
@@ -445,7 +445,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:146
+temp/components/core/SimpleClipper/index.ts:155
 
 ___
 
@@ -465,7 +465,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -505,7 +505,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -551,14 +551,20 @@ ___
 
 ### updateEdges
 
-▸ **updateEdges**(): `void`
+▸ **updateEdges**(`updateFills?`): `Promise`<`void`\>
 
 Updates all the lines of the ClippingEdges.
 
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `updateFills` | `boolean` | `false` |
+
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Defined in
 
-temp/components/navigation/EdgesClipper/index.ts:36
+temp/components/navigation/EdgesClipper/index.ts:34

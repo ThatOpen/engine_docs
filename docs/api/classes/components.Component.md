@@ -24,13 +24,13 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`BaseRenderer`](components.BaseRenderer.md)
 
+  ↳ [`Disposer`](components.Disposer.md)
+
   ↳ [`SimpleScene`](components.SimpleScene.md)
 
   ↳ [`ToolComponent`](components.ToolComponent.md)
 
   ↳ [`SimpleCamera`](components.SimpleCamera.md)
-
-  ↳ [`SimpleRaycaster`](components.SimpleRaycaster.md)
 
   ↳ [`SimpleGrid`](components.SimpleGrid.md)
 
@@ -38,15 +38,27 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`SimplePlane`](components.SimplePlane.md)
 
-  ↳ [`SimpleDimensions`](components.SimpleDimensions.md)
+  ↳ [`ScreenCuller`](components.ScreenCuller.md)
+
+  ↳ [`LocalCacher`](components.LocalCacher.md)
+
+  ↳ [`MaterialManager`](components.MaterialManager.md)
+
+  ↳ [`Simple2DScene`](components.Simple2DScene.md)
 
   ↳ [`FragmentManager`](components.FragmentManager.md)
 
   ↳ [`FragmentIfcLoader`](components.FragmentIfcLoader.md)
 
+  ↳ [`FragmentPlans`](components.FragmentPlans.md)
+
+  ↳ [`FragmentBoundingBox`](components.FragmentBoundingBox.md)
+
   ↳ [`UIManager`](components.UIManager.md)
 
   ↳ [`CloudProcessor`](components.CloudProcessor.md)
+
+  ↳ [`LengthMeasurement`](components.LengthMeasurement.md)
 
 ## Properties
 
@@ -61,19 +73,7 @@ will not be updated automatically each frame.
 
 #### Defined in
 
-temp/components/base-types/component.ts:19
-
-___
-
-### name
-
-• `Abstract` **name**: `string`
-
-The main identifier of this component. It can be used to retrieve it and index it.
-
-#### Defined in
-
-temp/components/base-types/component.ts:11
+temp/components/base-types/component.ts:17
 
 ## Methods
 
@@ -96,7 +96,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Defined in
 
-temp/components/base-types/component.ts:25
+temp/components/base-types/component.ts:23
 
 ___
 
@@ -112,7 +112,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -144,7 +144,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 

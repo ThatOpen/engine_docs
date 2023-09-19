@@ -29,7 +29,7 @@ An object to easily use the services of That Open Platform.
 
 #### Defined in
 
-temp/components/services/CloudProcessor/index.ts:13
+temp/components/services/CloudProcessor/index.ts:14
 
 ___
 
@@ -37,15 +37,11 @@ ___
 
 • **name**: `string` = `"CloudProcessor"`
 
-[name](components.Component.md#name)
-
-#### Overrides
-
-[Component](components.Component.md).[name](components.Component.md#name)
+Component.name
 
 #### Defined in
 
-temp/components/services/CloudProcessor/index.ts:10
+temp/components/services/CloudProcessor/index.ts:11
 
 ## Methods
 
@@ -65,7 +61,7 @@ Retrieves a tool component by its name.
 
 #### Defined in
 
-temp/components/services/CloudProcessor/index.ts:34
+temp/components/services/CloudProcessor/index.ts:35
 
 ___
 
@@ -85,7 +81,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -125,7 +121,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 

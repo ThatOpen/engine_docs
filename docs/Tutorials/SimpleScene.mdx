@@ -60,13 +60,7 @@ const scene = components.scene.get();
 ```
 ### 🎥 Adjusting scene and camera
 ___
-Great! Now we will make the background of our scene transparent. You don't have to do it; we are doing it because
-that way this app will be more integrated with the documentation page when setting it to light/dark mode.
-
-```js
-scene.background = null;
-```
-Now we will locate the camera in a nice starting position. We can control the `SimpleCamera` component through its
+Great! Now we will locate the camera in a nice starting position. We can control the `SimpleCamera` component through its
 `controls` attribute. This object is an instance of the [camera-controls](https://github.com/yomotsu/camera-controls)
 library, which makes it super easy to control the camera in our 3D scene. We will set the position of the camera
 to `[10, 10, 10]` and make it look at the origin (`[0, 0, 0]`).
@@ -82,7 +76,7 @@ Awesome! We are now ready to start adding some objects. First, we will add a
 
 ```js
 const grid = new OBC.SimpleGrid(components);
-components.tools.add(grid);
+components.tools.add("grid", grid);
 ```
 :::tip Adding it to the tools component
 The Tools Component will help you keep your code tidy. For more information about the Tools component, check out
@@ -91,10 +85,10 @@ The Tools Component will help you keep your code tidy. For more information abou
 🚀 Also, let's add some real geometry to our small 3D app. All the components are built on top of
 [Three.js](https://threejs.org/), which means that Three.js code will work natively with them.
 This is great, because you can easily integrate components with any 3D app that you create.
-Let's try it by adding a simple red cube:
+Let's try it by adding a simple cube:
 
 ```js
-const boxMaterial = new THREE.MeshStandardMaterial({ color: 'red' });
+const boxMaterial = new THREE.MeshStandardMaterial({ color: '#6528D7' });
 const boxGeometry = new THREE.BoxGeometry(3, 3, 3);
 const cube = new THREE.Mesh(boxGeometry, boxMaterial);
 cube.position.set(0, 1.5, 0);
@@ -105,13 +99,7 @@ ___
 Of course, everything is black because we have no lights! Let's fix it by adding some basic illumination:
 
 ```js
-const directionalLight = new THREE.DirectionalLight();
-directionalLight.position.set(5, 10, 3);
-directionalLight.intensity = 0.5;
-scene.add(directionalLight);
-const ambientLight = new THREE.AmbientLight();
-ambientLight.intensity = 0.5;
-scene.add(ambientLight);
+components.scene.setup();
 ```
 ### 🧹 Cleaning up
 ___

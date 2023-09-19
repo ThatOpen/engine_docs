@@ -15,16 +15,16 @@ with `3x3x3` dimensions and use red color for the material.
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const redMaterial = new THREE.MeshStandardMaterial({color: "red"});
-const redCube = new THREE.Mesh(cubeGeometry, redMaterial);
-redCube.position.set(0, 1.5, 0);
+const cubeMaterial = new THREE.MeshStandardMaterial({color: '#6528D7'});
+const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+cube.position.set(0, 1.5, 0);
 ```
 Now, we will add the Cube to the `Scene`. We must also add the **cube** to `components.meshes`,
 which is simply an array of all the meshes in the Scene 🗄️.
 
 ```js
-scene.add(redCube);
-components.meshes.push(redCube);
+scene.add(cube);
+components.meshes.push(cube);
 ```
 ### ⚙️ Adding Simple Clipper
 ---
@@ -44,7 +44,7 @@ SimpleClipper also controls the SimplePlane internally,
 allowing you to execute clipping on any 3D object by just dragging the planes.
 
 ```js
-components.tools.add(clipper);
+components.tools.add("clipper", clipper);
 clipper.enabled = true;
 ```
 :::tip Adding it to the tools component
@@ -57,8 +57,9 @@ We'll make a **Toolbar Component** and set it at the bottom.
 In addition, we will add a clipper button to this toolbar that will be used to toggle the clipping state.
 
 ```js
+const mainButton = clipper.uiElement.get("main");
 const mainToolbar = new OBC.Toolbar(components, { name: 'Main Toolbar', position: 'bottom' });
-mainToolbar.addButton(clipper.uiElement);
+mainToolbar.addChild(mainButton);
 components.ui.addToolbar(mainToolbar);
 ```
 🎛️ Check **[Toolbar and UIManager](./UIManager.mdx)** tutorial if you have any doubts!

@@ -13,6 +13,22 @@ interface, like a button or a window.
 ## Implemented by
 
 - [`FragmentIfcLoader`](../classes/components.FragmentIfcLoader.md)
+- [`FragmentManager`](../classes/components.FragmentManager.md)
+- [`FragmentPlans`](../classes/components.FragmentPlans.md)
+- [`LengthMeasurement`](../classes/components.LengthMeasurement.md)
+- [`LocalCacher`](../classes/components.LocalCacher.md)
 - [`OrthoPerspectiveCamera`](../classes/components.OrthoPerspectiveCamera.md)
+- [`Simple2DScene`](../classes/components.Simple2DScene.md)
 - [`SimpleClipper`](../classes/components.SimpleClipper.md)
-- [`SimpleDimensions`](../classes/components.SimpleDimensions.md)
+
+## Properties
+
+### uiElement
+
+• `Readonly` **uiElement**: [`UIElement`](../classes/components.UIElement.md)<`any`\>
+
+The class containing all the menus of this component.
+
+#### Defined in
+
+temp/components/base-types/base-types.ts:174

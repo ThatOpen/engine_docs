@@ -15,17 +15,18 @@ with `3x3x3` dimensions and use red color for the material.
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const redMaterial = new THREE.MeshStandardMaterial({color: "red"});
-const redCube = new THREE.Mesh(cubeGeometry, redMaterial);
-redCube.position.set(0, 1.5, 0);
+const cubeMaterial = new THREE.MeshStandardMaterial({color: '#6528D7'});
+const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+cube.position.set(0, 1.5, 0);
 ```
 Now, we will add the Cube to the `Scene`. We must also add the **cube** to `components.meshes`,
 which is simply an array of all the meshes in the Scene 🗄️.
 **`components.meshes`** acts as a store to help you manage your elements centrally.
 
 ```js
-scene.add(redCube);
-components.meshes.push(redCube);
+scene.background = new THREE.Color("gray");
+scene.add(cube);
+components.meshes.push(cube);
 ```
 ### 🌚 Adding Beautiful Shadow
 ---
@@ -39,8 +40,9 @@ Shadow Dropper Component not only adds shadows to the scene, but it also helps y
 To obtain the required results, you can alter the `ShadowDropper` parameters.🔧
 
 ```js
-shadows.shadowExtraScaleFactor = 10;
+shadows.shadowExtraScaleFactor = 15;
 shadows.darkness = 2;
+shadows.shadowOffset = 0.1;
 ```
 - `shadowExtraScalarFactor` - With this, the shadow's area of impact can be adjusted.
 - `darkness` - This is used to increase or decrease the intensity of Shadow.
@@ -54,7 +56,7 @@ Now, we will use Shadow Dropper to create shadows for the element.
 We will use **`renderShadow()`** to generate shadow for the `cube` we created.
 
 ```js
-shadows.renderShadow([redCube], "example");
+shadows.renderShadow([cube], "example");
 ```
 **renderShadow** requires two parameter, the `element` and a `shadowID`.
 **shadowID** needs to be unique for the entire scene.

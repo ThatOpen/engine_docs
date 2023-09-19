@@ -19,6 +19,7 @@ Object that can efficiently load binary files that contain
 ## Implements
 
 - [`Disposable`](../interfaces/components.Disposable.md)
+- [`UI`](../interfaces/components.UI.md)
 
 ## Properties
 
@@ -34,7 +35,7 @@ Object that can efficiently load binary files that contain
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:18
+temp/components/fragments/FragmentManager/index.ts:23
 
 ___
 
@@ -50,23 +51,7 @@ All the created [fragments](https://github.com/ifcjs/fragment).
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:21
-
-___
-
-### name
-
-• **name**: `string` = `"FragmentsComponent"`
-
-[name](components.Component.md#name)
-
-#### Overrides
-
-[Component](components.Component.md).[name](components.Component.md#name)
-
-#### Defined in
-
-temp/components/fragments/FragmentManager/index.ts:15
+temp/components/fragments/FragmentManager/index.ts:26
 
 ## Accessors
 
@@ -82,33 +67,39 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:29
+temp/components/fragments/FragmentManager/index.ts:45
 
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(`disposeUI?`): `Promise`<`void`\>
 
 [get](components.Component.md#get)
 
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `disposeUI` | `boolean` | `false` |
+
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:48
+temp/components/fragments/FragmentManager/index.ts:69
 
 ___
 
 ### export
 
-▸ **export**(`ids?`): `Uint8Array`
+▸ **export**(`group`): `Uint8Array`
 
 Export the specified fragments.
 
@@ -116,7 +107,7 @@ Export the specified fragments.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `ids` | `string`[] | the IDs of the fragments to export. By default, it's all the IDs of the existing fragments of [list](components.FragmentManager.md#list). |
+| `group` | `FragmentsGroup` | the fragments group to be exported. |
 
 #### Returns
 
@@ -126,7 +117,7 @@ the exported data as binary buffer.
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:91
+temp/components/fragments/FragmentManager/index.ts:134
 
 ___
 
@@ -146,7 +137,7 @@ ___
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:43
+temp/components/fragments/FragmentManager/index.ts:64
 
 ___
 
@@ -166,7 +157,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -206,7 +197,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -252,7 +243,7 @@ ___
 
 ### load
 
-▸ **load**(`data`): `string`[]
+▸ **load**(`data`): `Promise`<`FragmentsGroup`\>
 
 Loads one or many fragments into the scene.
 
@@ -264,13 +255,13 @@ Loads one or many fragments into the scene.
 
 #### Returns
 
-`string`[]
+`Promise`<`FragmentsGroup`\>
 
 the list of IDs of the loaded fragments.
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:71
+temp/components/fragments/FragmentManager/index.ts:113
 
 ___
 
@@ -286,4 +277,4 @@ Disposes all existing fragments
 
 #### Defined in
 
-temp/components/fragments/FragmentManager/index.ts:58
+temp/components/fragments/FragmentManager/index.ts:100

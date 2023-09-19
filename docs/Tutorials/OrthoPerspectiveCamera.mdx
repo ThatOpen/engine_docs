@@ -15,17 +15,17 @@ with `3x3x3` dimensions and use red color for the material.🖍️
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const redMaterial = new THREE.MeshStandardMaterial({color: "red"});
-const redCube = new THREE.Mesh(cubeGeometry, redMaterial);
-redCube.position.set(0, 1.5, 0);
+const cubeMaterial = new THREE.MeshStandardMaterial({ color: '#6528D7' });
+const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+cube.position.set(0, 1.5, 0);
 ```
 Now, we will add the Cube to the `Scene`. We must also add the **cube** to `components.meshes`,
 which is simply an array of all the meshes in the Scene 🗄️.
 **`components.meshes`** acts as a store to help you manage your elements centrally.
 
 ```js
-scene.add(redCube);
-components.meshes.push(redCube);
+scene.add(cube);
+components.meshes.push(cube);
 ```
 ### 🎞️ Developing an OrthoPerspective Camera
 ---
@@ -55,6 +55,15 @@ function toggleProjection() {
 camera.toggleProjection();
 }
 ```
+You can also subscribe to an event for when the projection changes. For instance, let's change the grid fading mode
+when the projection changes. This will make the grid look good in orthographic mode:
+
+```js
+camera.projectionChanged.add(() => {
+const projection = camera.getProjection();
+grid.fade = projection === 'Perspective';
+});
+```
 #### Managing Navigation Modes
 Along with projection, we can also manage Navigation modes using **OrthoPerspective** camera.
 To update navigation modes, we will use `camera.setNavigationMode('Orbit' | 'FirstPerson' | 'Plan')`
@@ -64,7 +73,7 @@ First Person mode is only available for Perspective Projection.
 - **Plan** - This mode helps you to easily navigate in 2D Projections.
 
 ```js
-function setNavigationMode(navMode){
+function setNavigationMode(navMode) {
 camera.setNavigationMode(navMode);
 }
 ```

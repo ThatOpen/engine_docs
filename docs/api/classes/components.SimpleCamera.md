@@ -31,43 +31,11 @@ what features it offers.
 
 • **activeCamera**: `PerspectiveCamera` \| `OrthographicCamera`
 
-The camera that is being used now according to the current CameraProjection.
+The camera that is being used now according to the current [CameraProjection](../modules/components.md#cameraprojection).
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:46
-
-___
-
-### afterUpdate
-
-• `Readonly` **afterUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
-
-[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Implementation of
-
-[Updateable](../interfaces/components.Updateable.md).[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Defined in
-
-temp/components/core/SimpleCamera/index.ts:23
-
-___
-
-### beforeUpdate
-
-• `Readonly` **beforeUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
-
-[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Implementation of
-
-[Updateable](../interfaces/components.Updateable.md).[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Defined in
-
-temp/components/core/SimpleCamera/index.ts:20
+temp/components/core/SimpleCamera/index.ts:45
 
 ___
 
@@ -82,19 +50,35 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:31
+temp/components/core/SimpleCamera/index.ts:30
 
 ___
 
-### name
+### onAfterUpdate
 
-• **name**: `string` = `"SimpleCamera"`
+• `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
 
-[name](components.Component.md#name)
+[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
-#### Overrides
+#### Implementation of
 
-[Component](components.Component.md).[name](components.Component.md#name)
+[Updateable](../interfaces/components.Updateable.md).[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+
+#### Defined in
+
+temp/components/core/SimpleCamera/index.ts:20
+
+___
+
+### onBeforeUpdate
+
+• `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
+
+[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+
+#### Implementation of
+
+[Updateable](../interfaces/components.Updateable.md).[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
 
 #### Defined in
 
@@ -118,7 +102,7 @@ Component.enabled
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:34
+temp/components/core/SimpleCamera/index.ts:33
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -140,27 +124,27 @@ Component.enabled
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:39
+temp/components/core/SimpleCamera/index.ts:38
 
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:66
+temp/components/core/SimpleCamera/index.ts:65
 
 ___
 
@@ -180,7 +164,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:61
+temp/components/core/SimpleCamera/index.ts:60
 
 ___
 
@@ -200,7 +184,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -240,7 +224,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -306,7 +290,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:75
+temp/components/core/SimpleCamera/index.ts:76
 
 ___
 
@@ -323,4 +307,4 @@ Updates the aspect of the camera to match the size of the
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:87
+temp/components/core/SimpleCamera/index.ts:88

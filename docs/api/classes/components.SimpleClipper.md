@@ -1,6 +1,6 @@
 ---
 id: "components.SimpleClipper"
-title: "Class: SimpleClipper<Plane>"
+title: "Class: SimpleClipper<T>"
 sidebar_label: "SimpleClipper"
 custom_edit_url: null
 ---
@@ -23,11 +23,11 @@ E.g. [SimplePlane](components.SimplePlane.md).
 
 | Name | Type |
 | :------ | :------ |
-| `Plane` | extends [`SimplePlane`](components.SimplePlane.md) |
+| `T` | extends [`SimplePlane`](components.SimplePlane.md) |
 
 ## Hierarchy
 
-- [`Component`](components.Component.md)<`Plane`[]\>
+- [`Component`](components.Component.md)<`T`[]\>
 
   ↳ **`SimpleClipper`**
 
@@ -42,75 +42,59 @@ E.g. [SimplePlane](components.SimplePlane.md).
 
 ## Properties
 
-### afterCreate
+### onAfterCreate
 
-• **afterCreate**: [`Event`](components.Event.md)<`Plane`\>
+• `Readonly` **onAfterCreate**: [`Event`](components.Event.md)<`T`\>
 
-[afterCreate](../interfaces/components.Createable.md#aftercreate)
-
-#### Implementation of
-
-[Createable](../interfaces/components.Createable.md).[afterCreate](../interfaces/components.Createable.md#aftercreate)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/index.ts:34
-
-___
-
-### afterDelete
-
-• **afterDelete**: [`Event`](components.Event.md)<`Plane`\>
-
-[afterDelete](../interfaces/components.Createable.md#afterdelete)
+[onAfterCreate](../interfaces/components.Createable.md#onaftercreate)
 
 #### Implementation of
 
-[Createable](../interfaces/components.Createable.md).[afterDelete](../interfaces/components.Createable.md#afterdelete)
+[Createable](../interfaces/components.Createable.md).[onAfterCreate](../interfaces/components.Createable.md#onaftercreate)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:37
+temp/components/core/SimpleClipper/index.ts:35
 
 ___
 
-### afterDrag
+### onAfterDelete
 
-• **afterDrag**: [`Event`](components.Event.md)<`void`\>
+• `Readonly` **onAfterDelete**: [`Event`](components.Event.md)<`T`\>
+
+[onAfterDelete](../interfaces/components.Createable.md#onafterdelete)
+
+#### Implementation of
+
+[Createable](../interfaces/components.Createable.md).[onAfterDelete](../interfaces/components.Createable.md#onafterdelete)
+
+#### Defined in
+
+temp/components/core/SimpleClipper/index.ts:38
+
+___
+
+### onAfterDrag
+
+• `Readonly` **onAfterDrag**: [`Event`](components.Event.md)<`void`\>
 
 Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:66
+temp/components/core/SimpleClipper/index.ts:44
 
 ___
 
-### beforeDrag
+### onBeforeDrag
 
-• **beforeDrag**: [`Event`](components.Event.md)<`void`\>
+• `Readonly` **onBeforeDrag**: [`Event`](components.Event.md)<`void`\>
 
 Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:63
-
-___
-
-### name
-
-• **name**: `string` = `"SimpleClipper"`
-
-[name](components.Component.md#name)
-
-#### Overrides
-
-[Component](components.Component.md).[name](components.Component.md#name)
-
-#### Defined in
-
-temp/components/core/SimpleClipper/index.ts:31
+temp/components/core/SimpleClipper/index.ts:41
 
 ___
 
@@ -125,7 +109,7 @@ slope for draining purposes.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:53
+temp/components/core/SimpleClipper/index.ts:60
 
 ___
 
@@ -139,7 +123,23 @@ has to be `true` for this to apply.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:60
+temp/components/core/SimpleClipper/index.ts:67
+
+___
+
+### uiElement
+
+• **uiElement**: [`UIElement`](components.UIElement.md)<{ `main`: `Button`  }\>
+
+[uiElement](../interfaces/components.UI.md#uielement)
+
+#### Implementation of
+
+[UI](../interfaces/components.UI.md).[uiElement](../interfaces/components.UI.md#uielement)
+
+#### Defined in
+
+temp/components/core/SimpleClipper/index.ts:52
 
 ## Accessors
 
@@ -159,7 +159,7 @@ Component.enabled
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:75
+temp/components/core/SimpleClipper/index.ts:85
 
 • `set` **enabled**(`state`): `void`
 
@@ -181,7 +181,7 @@ Component.enabled
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:80
+temp/components/core/SimpleClipper/index.ts:90
 
 ___
 
@@ -197,7 +197,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:103
+temp/components/core/SimpleClipper/index.ts:115
 
 • `set` **material**(`material`): `void`
 
@@ -215,7 +215,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:108
+temp/components/core/SimpleClipper/index.ts:120
 
 ___
 
@@ -231,7 +231,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:116
+temp/components/core/SimpleClipper/index.ts:128
 
 • `set` **size**(`size`): `void`
 
@@ -249,7 +249,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:121
+temp/components/core/SimpleClipper/index.ts:133
 
 ___
 
@@ -269,7 +269,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:90
+temp/components/core/SimpleClipper/index.ts:102
 
 • `set` **visible**(`state`): `void`
 
@@ -291,7 +291,7 @@ temp/components/core/SimpleClipper/index.ts:90
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:95
+temp/components/core/SimpleClipper/index.ts:107
 
 ## Methods
 
@@ -307,17 +307,17 @@ temp/components/core/SimpleClipper/index.ts:95
 
 #### Implementation of
 
-Createable.create
+[Createable](../interfaces/components.Createable.md).[create](../interfaces/components.Createable.md#create)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:163
+temp/components/core/SimpleClipper/index.ts:179
 
 ___
 
 ### createFromNormalAndCoplanarPoint
 
-▸ **createFromNormalAndCoplanarPoint**(`normal`, `point`): `Plane`
+▸ **createFromNormalAndCoplanarPoint**(`normal`, `point`): `T`
 
 Creates a plane in a certain place and with a certain orientation,
 without the need of the mouse.
@@ -331,11 +331,11 @@ without the need of the mouse.
 
 #### Returns
 
-`Plane`
+`T`
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:179
+temp/components/core/SimpleClipper/index.ts:195
 
 ___
 
@@ -349,7 +349,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `plane?` | `Plane` | the plane to delete. If undefined, the the first plane found under the cursor will be deleted. |
+| `plane?` | `T` | the plane to delete. If undefined, the the first plane found under the cursor will be deleted. |
 
 #### Returns
 
@@ -357,11 +357,11 @@ ___
 
 #### Implementation of
 
-Createable.delete
+[Createable](../interfaces/components.Createable.md).[delete](../interfaces/components.Createable.md#delete)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:194
+temp/components/core/SimpleClipper/index.ts:210
 
 ___
 
@@ -377,39 +377,39 @@ Deletes all the existing clipping planes.
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:202
+temp/components/core/SimpleClipper/index.ts:222
 
 ___
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
-[get](components.Component.md#get)
+[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:151
+temp/components/core/SimpleClipper/index.ts:160
 
 ___
 
 ### get
 
-▸ **get**(): `Plane`[]
+▸ **get**(): `T`[]
 
 [get](components.Component.md#get)
 
 #### Returns
 
-`Plane`[]
+`T`[]
 
 #### Overrides
 
@@ -417,7 +417,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleClipper/index.ts:146
+temp/components/core/SimpleClipper/index.ts:155
 
 ___
 
@@ -437,7 +437,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -477,7 +477,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 

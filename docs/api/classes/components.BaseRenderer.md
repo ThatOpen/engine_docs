@@ -37,57 +37,34 @@ temp/components/base-types/base-renderer.ts:33
 
 ___
 
-### enabled
+### onClippingPlanesUpdated
 
-• `Abstract` **enabled**: `boolean`
+• `Readonly` **onClippingPlanesUpdated**: [`Event`](components.Event.md)<`unknown`\>
 
-[enabled](components.Component.md#enabled)
-
-#### Overrides
-
-[Component](components.Component.md).[enabled](components.Component.md#enabled)
+Event that fires when there has been a change to the list of clipping
+planes used by the active renderer.
 
 #### Defined in
 
-temp/components/base-types/base-renderer.ts:18
+temp/components/base-types/base-renderer.ts:27
 
 ___
 
-### name
+### onResize
 
-• `Abstract` **name**: `string`
+• `Readonly` **onResize**: [`Event`](components.Event.md)<`unknown`\>
 
-[name](components.Component.md#name)
+[onResize](../interfaces/components.Resizeable.md#onresize)
 
-#### Overrides
+#### Implementation of
 
-[Component](components.Component.md).[name](components.Component.md#name)
-
-#### Defined in
-
-temp/components/base-types/base-renderer.ts:15
-
-## Methods
-
-### get
-
-▸ `Abstract` **get**(): `WebGLRenderer`
-
-[get](components.Component.md#get)
-
-#### Returns
-
-`WebGLRenderer`
-
-#### Overrides
-
-[Component](components.Component.md).[get](components.Component.md#get)
+[Resizeable](../interfaces/components.Resizeable.md).[onResize](../interfaces/components.Resizeable.md#onresize)
 
 #### Defined in
 
 temp/components/base-types/base-renderer.ts:21
 
-___
+## Methods
 
 ### getSize
 
@@ -101,11 +78,11 @@ ___
 
 #### Implementation of
 
-Resizeable.getSize
+[Resizeable](../interfaces/components.Resizeable.md).[getSize](../interfaces/components.Resizeable.md#getsize)
 
 #### Defined in
 
-temp/components/base-types/base-renderer.ts:24
+temp/components/base-types/base-renderer.ts:15
 
 ___
 
@@ -121,11 +98,11 @@ ___
 
 #### Implementation of
 
-Resizeable.resize
+[Resizeable](../interfaces/components.Resizeable.md).[resize](../interfaces/components.Resizeable.md#resize)
 
 #### Defined in
 
-temp/components/base-types/base-renderer.ts:27
+temp/components/base-types/base-renderer.ts:18
 
 ___
 
@@ -151,4 +128,21 @@ to the renderer.
 
 #### Defined in
 
-temp/components/base-types/base-renderer.ts:40
+temp/components/base-types/base-renderer.ts:48
+
+___
+
+### updateClippingPlanes
+
+▸ **updateClippingPlanes**(): `Promise`<`void`\>
+
+Forces the update of the clipping planes and all components that depend
+on them that are subscribed to `onClippingPlanesUpdated`.
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+temp/components/base-types/base-renderer.ts:39

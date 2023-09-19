@@ -31,16 +31,18 @@
     "canvas": "^2.11.2",
     "clsx": "^1.2.1",
     "dexie": "^3.2.3",
+    "dxf-writer": "^1.18.4",
     "earcut": "^2.2.4",
     "flatbuffers": "^23.3.3",
     "mapbox-gl": "^2.15.0",
+    "openbim-clay": "^1.0.0-alpha.1",
     "openbim-components": "1.0.0-alpha.50",
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "three": "0.152.2",
     "three-mesh-bvh": "^0.5.23",
-    "web-ifc": "^0.0.42"
+    "web-ifc": "0.0.43"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.1",

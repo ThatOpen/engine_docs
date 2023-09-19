@@ -38,12 +38,15 @@ usually include ready-to-use menus so that you can add them to your app in secon
 ### 👨‍🎨 Creating your own UIs
 ___
 Of course, UI Components can also be used stand-alone, either to build your own components or to add menus to your
-app very fast! Let's start with a simple one: a Button Component that sends an alert message. 🍼  Button components
-can only be added inside a toolbar. To do so, we can simply add the following code:
+app very fast! Let's start with a simple one: a Button Component that sends an alert message. 🍼 To do so, we can simply add 
+the following code:
 
 ```js
-const alertButton = new OBC.Button(components, { materialIconName: 'info' });
-mainToolbar.addButton(alertButton);
+const alertButton = new OBC.Button(components, {
+materialIconName: 'info',
+tooltip: 'Information'
+});
+mainToolbar.addChild(alertButton);
 alertButton.onclick = () => {
 alert('I\'ve been clicked!');
 }
@@ -64,7 +67,7 @@ boxes. We will also create a super simple function to get a random number within
 ```js
 const boxes = [];
 const boxGeometry = new THREE.BoxGeometry();
-const boxMaterial = new THREE.MeshLambertMaterial({ color: 'red' });
+const boxMaterial = new THREE.MeshLambertMaterial({ color: '#6528D7' });
 ```
 🔢 Next, let's define some simple functions. To create a random number:
 
@@ -125,9 +128,10 @@ that will contain the rest:
 
 ```js
 const cubeTools = new OBC.Button(components, {
-materialIconName: 'widgets'
+materialIconName: 'widgets',
+tooltip: "Tools"
 });
-mainToolbar.addButton(cubeTools);
+mainToolbar.addChild(cubeTools);
 ```
 Let's start with the button to create boxes. This buttons needs a couple of extra things:
 - A `name` so that it displays the text.
@@ -141,7 +145,7 @@ name: 'Create box',
 closeOnClick: false
 });
 createCubeButton.onclick = () => createBox();
-cubeTools.addButton(createCubeButton);
+cubeTools.addChild(createCubeButton);
 ```
 Now, let's go with the "delete single" and "delete all buttons" buttons. Both are related, so we will group them
 together (yes, multiple-level nesting is allowed!). So first, let's create the parent button:
@@ -151,7 +155,7 @@ const deleteCubeButtons = new OBC.Button(components, {
 materialIconName: 'disabled_by_default',
 name: 'Delete box'
 });
-cubeTools.addButton(deleteCubeButtons);
+cubeTools.addChild(deleteCubeButtons);
 ```
 Next, the "delete single" button:
 
@@ -162,7 +166,7 @@ name: 'Single',
 closeOnClick: false
 });
 deleteSingleCubeButton.onclick = () => deleteBox();
-deleteCubeButtons.addButton(deleteSingleCubeButton);
+deleteCubeButtons.addChild(deleteSingleCubeButton);
 ```
 And finally the "delete all" button:
 
@@ -172,7 +176,7 @@ materialIconName: 'disabled_by_default',
 name: 'All'
 });
 deleteAllCubesButton.onclick = () => deleteAllBoxes();
-deleteCubeButtons.addButton(deleteAllCubesButton);
+deleteCubeButtons.addChild(deleteAllCubesButton);
 ```
 And this is it! Easy, right? You can now create add menus to your components and easily share them with other
 BIM software developers!
@@ -193,8 +197,8 @@ materialIconName: 'widgets',
 name: "All cubes"
 });
 deleteAllCubesContextButton.onclick = () => deleteAllBoxes();
-contextDeleteButtons.addButton(deleteAllCubesContextButton);
-components.ui.contextMenu.addButton(contextDeleteButtons);
+contextDeleteButtons.addChild(deleteAllCubesContextButton);
+components.ui.contextMenu.addChild(contextDeleteButtons);
 ```
 And this is it! 🥳 Cool, right? Now you can easily use the UI elements in the components of this library and the
 marketplace, as well as create your own custom menus in minutes. 💪🎨 You are now one step closer to create your

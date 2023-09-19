@@ -42,11 +42,7 @@ ___
 
 • **name**: `string` = `"SimpleScene"`
 
-[name](components.Component.md#name)
-
-#### Overrides
-
-[Component](components.Component.md).[name](components.Component.md#name)
+Component.name
 
 #### Defined in
 
@@ -56,21 +52,21 @@ temp/components/core/SimpleScene/index.ts:16
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Implementation of
 
-Disposable.dispose
+[Disposable](../interfaces/components.Disposable.md).[dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Defined in
 
-temp/components/core/SimpleScene/index.ts:33
+temp/components/core/SimpleScene/index.ts:32
 
 ___
 
@@ -90,4 +86,20 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleScene/index.ts:28
+temp/components/core/SimpleScene/index.ts:27
+
+___
+
+### setup
+
+▸ **setup**(): `void`
+
+Creates a simple and nice default set up for the scene (e.g. lighting).
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+temp/components/core/SimpleScene/index.ts:44

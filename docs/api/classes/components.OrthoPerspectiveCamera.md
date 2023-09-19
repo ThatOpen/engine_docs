@@ -28,7 +28,7 @@ modes, such as 2D floor plan navigation, first person and 3D orbit.
 
 • **activeCamera**: `PerspectiveCamera` \| `OrthographicCamera`
 
-The camera that is being used now according to the current CameraProjection.
+The camera that is being used now according to the current [CameraProjection](../modules/components.md#cameraprojection).
 
 #### Inherited from
 
@@ -36,39 +36,7 @@ The camera that is being used now according to the current CameraProjection.
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:46
-
-___
-
-### afterUpdate
-
-• `Readonly` **afterUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
-
-[afterUpdate](../interfaces/components.Updateable.md#afterupdate)
-
-#### Inherited from
-
-[SimpleCamera](components.SimpleCamera.md).[afterUpdate](components.SimpleCamera.md#afterupdate)
-
-#### Defined in
-
-temp/components/core/SimpleCamera/index.ts:23
-
-___
-
-### beforeUpdate
-
-• `Readonly` **beforeUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
-
-[beforeUpdate](../interfaces/components.Updateable.md#beforeupdate)
-
-#### Inherited from
-
-[SimpleCamera](components.SimpleCamera.md).[beforeUpdate](components.SimpleCamera.md#beforeupdate)
-
-#### Defined in
-
-temp/components/core/SimpleCamera/index.ts:20
+temp/components/core/SimpleCamera/index.ts:45
 
 ___
 
@@ -87,31 +55,47 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:31
+temp/components/core/SimpleCamera/index.ts:30
 
 ___
 
 ### currentMode
 
-• **currentMode**: `NavigationMode`
+• **currentMode**: [`NavigationMode`](../interfaces/components.NavigationMode.md)
 
-The current NavigationMode.
+The current [NavigationMode](../interfaces/components.NavigationMode.md).
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:21
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:23
 
 ___
 
-### name
+### onAfterUpdate
 
-• **name**: `string` = `"SimpleCamera"`
+• `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
 
-[name](components.Component.md#name)
+[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
 #### Inherited from
 
-[SimpleCamera](components.SimpleCamera.md).[name](components.SimpleCamera.md#name)
+[SimpleCamera](components.SimpleCamera.md).[onAfterUpdate](components.SimpleCamera.md#onafterupdate)
+
+#### Defined in
+
+temp/components/core/SimpleCamera/index.ts:20
+
+___
+
+### onBeforeUpdate
+
+• `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
+
+[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+
+#### Inherited from
+
+[SimpleCamera](components.SimpleCamera.md).[onBeforeUpdate](components.SimpleCamera.md#onbeforeupdate)
 
 #### Defined in
 
@@ -123,11 +107,11 @@ ___
 
 • `Readonly` **projectionChanged**: [`Event`](components.Event.md)<`Camera`\>
 
-Event that fires when the CameraProjection changes.
+Event that fires when the [CameraProjection](../modules/components.md#cameraprojection) changes.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:26
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:28
 
 ## Accessors
 
@@ -147,7 +131,7 @@ SimpleCamera.enabled
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:34
+temp/components/core/SimpleCamera/index.ts:33
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -169,19 +153,19 @@ SimpleCamera.enabled
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:39
+temp/components/core/SimpleCamera/index.ts:38
 
 ## Methods
 
 ### dispose
 
-▸ **dispose**(): `void`
+▸ **dispose**(): `Promise`<`void`\>
 
 [dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
-`void`
+`Promise`<`void`\>
 
 #### Overrides
 
@@ -189,21 +173,22 @@ temp/components/core/SimpleCamera/index.ts:39
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:87
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:106
 
 ___
 
-### fitModelToFrame
+### fit
 
-▸ **fitModelToFrame**(`meshes?`): `Promise`<`void`\>
+▸ **fit**(`meshes?`, `offset?`): `Promise`<`void`\>
 
 Make the camera view fit all the specified meshes.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the meshes to fit. If it is not defined, it will evaluate [meshes](components.Components.md#meshes). |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | `undefined` | the meshes to fit. If it is not defined, it will evaluate [meshes](components.Components.md#meshes). |
+| `offset` | `number` | `1.5` | the distance to the fit object |
 
 #### Returns
 
@@ -211,7 +196,7 @@ Make the camera view fit all the specified meshes.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:177
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:191
 
 ___
 
@@ -226,7 +211,7 @@ to specify which camera to get.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `projection?` | `CameraProjection` | The camera corresponding to the CameraProjection specified. If no projection is specified, the active camera will be returned. |
+| `projection?` | [`CameraProjection`](../modules/components.md#cameraprojection) | The camera corresponding to the [CameraProjection](../modules/components.md#cameraprojection) specified. If no projection is specified, the active camera will be returned. |
 
 #### Returns
 
@@ -238,23 +223,23 @@ to specify which camera to get.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:101
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:120
 
 ___
 
 ### getProjection
 
-▸ **getProjection**(): `CameraProjection`
+▸ **getProjection**(): [`CameraProjection`](../modules/components.md#cameraprojection)
 
-Returns the current CameraProjection.
+Returns the current [CameraProjection](../modules/components.md#cameraprojection).
 
 #### Returns
 
-`CameraProjection`
+[`CameraProjection`](../modules/components.md#cameraprojection)
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:111
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:130
 
 ___
 
@@ -274,7 +259,7 @@ this is UI
 
 #### Defined in
 
-temp/components/base-types/component.ts:48
+temp/components/base-types/component.ts:50
 
 ___
 
@@ -314,7 +299,7 @@ this is Hideable
 
 #### Defined in
 
-temp/components/base-types/component.ts:43
+temp/components/base-types/component.ts:45
 
 ___
 
@@ -362,13 +347,13 @@ ___
 
 ▸ **setNavigationMode**(`mode`): `void`
 
-Sets a new NavigationMode and disables the previous one.
+Sets a new [NavigationMode](../interfaces/components.NavigationMode.md) and disables the previous one.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `mode` | `NavModeID` | The NavigationMode to set. |
+| `mode` | [`NavModeID`](../modules/components.md#navmodeid) | The [NavigationMode](../interfaces/components.NavigationMode.md) to set. |
 
 #### Returns
 
@@ -376,7 +361,7 @@ Sets a new NavigationMode and disables the previous one.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:155
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:174
 
 ___
 
@@ -384,14 +369,14 @@ ___
 
 ▸ **setProjection**(`projection`): `Promise`<`void`\>
 
-Sets the current CameraProjection. This triggers the event
+Sets the current [CameraProjection](../modules/components.md#cameraprojection). This triggers the event
 [projectionChanged](components.OrthoPerspectiveCamera.md#projectionchanged).
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `projection` | `CameraProjection` | The new CameraProjection to set. |
+| `projection` | [`CameraProjection`](../modules/components.md#cameraprojection) | The new [CameraProjection](../modules/components.md#cameraprojection) to set. |
 
 #### Returns
 
@@ -399,7 +384,7 @@ Sets the current CameraProjection. This triggers the event
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:132
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:151
 
 ___
 
@@ -407,7 +392,7 @@ ___
 
 ▸ **toggleProjection**(): `Promise`<`void`\>
 
-Changes the current CameraProjection from Ortographic to Perspective
+Changes the current [CameraProjection](../modules/components.md#cameraprojection) from Ortographic to Perspective
 and Viceversa.
 
 #### Returns
@@ -416,7 +401,7 @@ and Viceversa.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:119
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:138
 
 ___
 
@@ -438,7 +423,7 @@ Allows or prevents all user input.
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:142
+temp/components/navigation/OrthoPerspectiveCamera/index.ts:161
 
 ___
 
@@ -464,7 +449,7 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleCamera/index.ts:75
+temp/components/core/SimpleCamera/index.ts:76
 
 ___
 
@@ -472,16 +457,17 @@ ___
 
 ▸ **updateAspect**(): `void`
 
-Updates the aspect ratio of the camera to match the Renderer's aspect ratio.
+Updates the aspect of the camera to match the size of the
+[renderer](components.Components.md#renderer).
 
 #### Returns
 
 `void`
 
-#### Overrides
+#### Inherited from
 
 [SimpleCamera](components.SimpleCamera.md).[updateAspect](components.SimpleCamera.md#updateaspect)
 
 #### Defined in
 
-temp/components/navigation/OrthoPerspectiveCamera/index.ts:166
+temp/components/core/SimpleCamera/index.ts:88
