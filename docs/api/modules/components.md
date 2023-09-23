@@ -12,6 +12,7 @@ custom_edit_url: null
 - [CloudProcessor](../classes/components.CloudProcessor.md)
 - [Component](../classes/components.Component.md)
 - [Components](../classes/components.Components.md)
+- [CubeMap](../classes/components.CubeMap.md)
 - [Disposer](../classes/components.Disposer.md)
 - [EdgesClipper](../classes/components.EdgesClipper.md)
 - [EdgesPlane](../classes/components.EdgesPlane.md)

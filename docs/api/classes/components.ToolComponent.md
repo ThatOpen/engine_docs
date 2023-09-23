@@ -27,7 +27,7 @@ something through user interaction (e.g. clipping planes, dimensions, etc).
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -106,7 +106,7 @@ Adds a new tool. Use this in the constructor of your tools.
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:47
+temp/components/core/ToolsComponent/index.ts:48
 
 ___
 
@@ -126,7 +126,7 @@ Disposes all the MEMORY used by all the tools.
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:93
+temp/components/core/ToolsComponent/index.ts:94
 
 ___
 
@@ -160,7 +160,7 @@ doesn't exist, it will instance it automatically.
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:59
+temp/components/core/ToolsComponent/index.ts:60
 
 ___
 
@@ -269,7 +269,7 @@ ___
 ▸ **update**(`delta`): `Promise`<`void`\>
 
 Updates all the registered tool components. Only the components where the
-property [enabled](components.Component.md#enabled) is true will be updated.
+property [Component.enabled](components.Component.md#enabled) is true will be updated.
 
 #### Parameters
 
@@ -283,4 +283,4 @@ property [enabled](components.Component.md#enabled) is true will be updated.
 
 #### Defined in
 
-temp/components/core/ToolsComponent/index.ts:81
+temp/components/core/ToolsComponent/index.ts:82

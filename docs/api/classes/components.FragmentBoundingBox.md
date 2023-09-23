@@ -26,7 +26,7 @@ it's fast, and should suffice for general use cases such as camera zooming or ge
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -42,7 +42,7 @@ temp/components/fragments/FragmentBoundingBox/index.ts:15
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 

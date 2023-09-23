@@ -128,7 +128,7 @@ ___
 
 • `Readonly` **onAfterCancel**: [`Event`](../classes/components.Event.md)<`any`\>
 
-Fired after calling [cancelCreation](components.Createable.md#cancelcreation).
+Fired after calling [Createable.cancelCreation](components.Createable.md#cancelcreation).
 
 #### Defined in
 
@@ -140,7 +140,7 @@ ___
 
 • `Readonly` **onAfterCreate**: [`Event`](../classes/components.Event.md)<`any`\>
 
-Fired after successfully calling [create](components.Createable.md#create)
+Fired after successfully calling [Createable.create](components.Createable.md#create)
 
 #### Defined in
 
@@ -164,7 +164,7 @@ ___
 
 • `Readonly` **onBeforeCancel**: [`Event`](../classes/components.Event.md)<`any`\>
 
-Fired before calling [cancelCreation](components.Createable.md#cancelcreation).
+Fired before calling [Createable.cancelCreation](components.Createable.md#cancelcreation).
 
 #### Defined in
 
@@ -176,7 +176,7 @@ ___
 
 • `Readonly` **onBeforeDelete**: [`Event`](../classes/components.Event.md)<`any`\>
 
-Fired before calling [delete](components.Createable.md#delete).
+Fired before calling [Createable.delete](components.Createable.md#delete).
 
 #### Defined in
 

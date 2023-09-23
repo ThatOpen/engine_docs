@@ -58,7 +58,7 @@ ___
 
 • `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
 
-[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+[Updateable.onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
 #### Implementation of
 
@@ -74,7 +74,7 @@ ___
 
 • `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
 
-[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+[Updateable.onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
 
 #### Implementation of
 
@@ -90,7 +90,7 @@ temp/components/core/SimpleCamera/index.ts:17
 
 • `get` **enabled**(): `boolean`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Returns
 
@@ -106,7 +106,7 @@ temp/components/core/SimpleCamera/index.ts:33
 
 • `set` **enabled**(`enabled`): `void`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Parameters
 
@@ -132,7 +132,7 @@ temp/components/core/SimpleCamera/index.ts:38
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **get**(): `PerspectiveCamera` \| `OrthographicCamera`
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 
@@ -272,7 +272,7 @@ ___
 
 ▸ **update**(`_delta`): `void`
 
-[update](../interfaces/components.Updateable.md#update)
+[Updateable.update](../interfaces/components.Updateable.md#update)
 
 #### Parameters
 
@@ -299,7 +299,7 @@ ___
 ▸ **updateAspect**(): `void`
 
 Updates the aspect of the camera to match the size of the
-[renderer](components.Components.md#renderer).
+[Components.renderer](components.Components.md#renderer).
 
 #### Returns
 

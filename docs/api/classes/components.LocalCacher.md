@@ -28,7 +28,7 @@ fetched from the cloud.
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -68,7 +68,7 @@ ___
 
 • **uiElement**: [`UIElement`](components.UIElement.md)<{ `floatingMenu`: `FloatingWindow` ; `loadButton`: `Button` ; `main`: `Button` ; `saveButton`: `Button`  }\>
 
-[uiElement](../interfaces/components.UI.md#uielement)
+[UI.uiElement](../interfaces/components.UI.md#uielement)
 
 #### Implementation of
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -180,7 +180,7 @@ ___
 
 ▸ **get**(`id`): `Promise`<``null`` \| `Blob`\>
 
-[get](components.Component.md#get).
+[Component.get](components.Component.md#get).
 
 #### Parameters
 

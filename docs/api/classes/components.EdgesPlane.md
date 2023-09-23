@@ -83,7 +83,7 @@ temp/components/core/SimpleClipper/simple-plane.ts:17
 
 • `get` **enabled**(): `boolean`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Returns
 
@@ -207,7 +207,7 @@ ___
 
 • `get` **visible**(): `boolean`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Returns
 
@@ -223,7 +223,7 @@ temp/components/core/SimpleClipper/simple-plane.ts:53
 
 • `set` **visible**(`state`): `void`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Parameters
 
@@ -249,7 +249,7 @@ temp/components/core/SimpleClipper/simple-plane.ts:58
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -269,7 +269,7 @@ ___
 
 ▸ **get**(): `Plane`
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 
@@ -389,7 +389,7 @@ ___
 
 ▸ **setEnabled**(`state`): `Promise`<`void`\>
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Parameters
 
@@ -411,7 +411,7 @@ ___
 
 ▸ **update**(): `Promise`<`void`\>
 
-[update](../interfaces/components.Updateable.md#update)
+[Updateable.update](../interfaces/components.Updateable.md#update)
 
 #### Returns
 

@@ -38,7 +38,7 @@ temp/components/base-types/mouse.ts:21
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 

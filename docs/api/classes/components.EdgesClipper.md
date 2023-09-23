@@ -22,7 +22,7 @@ ClippingEdges with customizable lines.
 
 • `Readonly` **onAfterCreate**: [`Event`](components.Event.md)<[`EdgesPlane`](components.EdgesPlane.md)\>
 
-[onAfterCreate](../interfaces/components.Createable.md#onaftercreate)
+[Createable.onAfterCreate](../interfaces/components.Createable.md#onaftercreate)
 
 #### Inherited from
 
@@ -38,7 +38,7 @@ ___
 
 • `Readonly` **onAfterDelete**: [`Event`](components.Event.md)<[`EdgesPlane`](components.EdgesPlane.md)\>
 
-[onAfterDelete](../interfaces/components.Createable.md#onafterdelete)
+[Createable.onAfterDelete](../interfaces/components.Createable.md#onafterdelete)
 
 #### Inherited from
 
@@ -135,7 +135,7 @@ ___
 
 • **uiElement**: [`UIElement`](components.UIElement.md)<{ `main`: `Button`  }\>
 
-[uiElement](../interfaces/components.UI.md#uielement)
+[UI.uiElement](../interfaces/components.UI.md#uielement)
 
 #### Inherited from
 
@@ -151,7 +151,7 @@ temp/components/core/SimpleClipper/index.ts:52
 
 • `get` **enabled**(): `boolean`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Returns
 
@@ -167,7 +167,7 @@ temp/components/core/SimpleClipper/index.ts:85
 
 • `set` **enabled**(`state`): `void`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Parameters
 
@@ -277,7 +277,7 @@ ___
 
 • `get` **visible**(): `boolean`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Returns
 
@@ -293,7 +293,7 @@ temp/components/core/SimpleClipper/index.ts:102
 
 • `set` **visible**(`state`): `void`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Parameters
 
@@ -319,7 +319,7 @@ temp/components/core/SimpleClipper/index.ts:107
 
 ▸ **create**(): `void`
 
-[create](../interfaces/components.Createable.md#create)
+[Createable.create](../interfaces/components.Createable.md#create)
 
 #### Returns
 
@@ -367,7 +367,7 @@ ___
 
 ▸ **delete**(`plane?`): `void`
 
-[delete](../interfaces/components.Createable.md#delete)
+[Createable.delete](../interfaces/components.Createable.md#delete)
 
 #### Parameters
 
@@ -413,7 +413,7 @@ ___
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 
@@ -433,7 +433,7 @@ ___
 
 ▸ **get**(): [`EdgesPlane`](components.EdgesPlane.md)[]
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 

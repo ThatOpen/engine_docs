@@ -27,7 +27,7 @@ events.
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -63,7 +63,7 @@ used by the renderer.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `items` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [meshes](components.Components.md#meshes). |
+| `items` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [Components.meshes](components.Components.md#meshes). |
 
 #### Returns
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **get**(): `Raycaster`
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 

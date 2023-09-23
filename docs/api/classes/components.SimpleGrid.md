@@ -29,7 +29,7 @@ and translated to typescript by
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -97,7 +97,7 @@ ___
 
 • `get` **visible**(): `boolean`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Returns
 
@@ -113,7 +113,7 @@ temp/components/core/SimpleGrid/index.ts:24
 
 • `set` **visible**(`visible`): `void`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Parameters
 
@@ -139,7 +139,7 @@ temp/components/core/SimpleGrid/index.ts:29
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -159,7 +159,7 @@ ___
 
 ▸ **get**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 

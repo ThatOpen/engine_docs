@@ -30,7 +30,7 @@ display a 3D symbol displaying the numeric value.
 
 • `Readonly` **onAfterCancel**: [`Event`](components.Event.md)<`SimpleDimensionLine`\>
 
-[onAfterCancel](../interfaces/components.Createable.md#onaftercancel)
+[Createable.onAfterCancel](../interfaces/components.Createable.md#onaftercancel)
 
 #### Implementation of
 
@@ -46,7 +46,7 @@ ___
 
 • `Readonly` **onAfterCreate**: [`Event`](components.Event.md)<`SimpleDimensionLine`\>
 
-[onAfterCreate](../interfaces/components.Createable.md#onaftercreate)
+[Createable.onAfterCreate](../interfaces/components.Createable.md#onaftercreate)
 
 #### Implementation of
 
@@ -62,7 +62,7 @@ ___
 
 • `Readonly` **onAfterDelete**: [`Event`](components.Event.md)<[`LengthMeasurement`](components.LengthMeasurement.md)\>
 
-[onAfterDelete](../interfaces/components.Createable.md#onafterdelete)
+[Createable.onAfterDelete](../interfaces/components.Createable.md#onafterdelete)
 
 #### Implementation of
 
@@ -78,7 +78,7 @@ ___
 
 • `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`LengthMeasurement`](components.LengthMeasurement.md)\>
 
-[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+[Updateable.onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
 #### Implementation of
 
@@ -94,7 +94,7 @@ ___
 
 • `Readonly` **onBeforeCancel**: [`Event`](components.Event.md)<[`LengthMeasurement`](components.LengthMeasurement.md)\>
 
-[onBeforeCancel](../interfaces/components.Createable.md#onbeforecancel)
+[Createable.onBeforeCancel](../interfaces/components.Createable.md#onbeforecancel)
 
 #### Implementation of
 
@@ -126,7 +126,7 @@ ___
 
 • `Readonly` **onBeforeDelete**: [`Event`](components.Event.md)<`SimpleDimensionLine`\>
 
-[onBeforeDelete](../interfaces/components.Createable.md#onbeforedelete)
+[Createable.onBeforeDelete](../interfaces/components.Createable.md#onbeforedelete)
 
 #### Implementation of
 
@@ -142,7 +142,7 @@ ___
 
 • `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`LengthMeasurement`](components.LengthMeasurement.md)\>
 
-[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+[Updateable.onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
 
 #### Implementation of
 
@@ -206,7 +206,7 @@ ___
 
 • `get` **enabled**(): `boolean`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Returns
 
@@ -222,7 +222,7 @@ temp/components/measurement/LengthMeasurement/index.ts:84
 
 • `set` **enabled**(`value`): `void`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Parameters
 
@@ -248,7 +248,7 @@ ___
 
 • `get` **visible**(): `boolean`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Returns
 
@@ -264,7 +264,7 @@ temp/components/measurement/LengthMeasurement/index.ts:100
 
 • `set` **visible**(`value`): `void`
 
-[visible](../interfaces/components.Hideable.md#visible)
+[Hideable.visible](../interfaces/components.Hideable.md#visible)
 
 #### Parameters
 
@@ -372,7 +372,7 @@ ___
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -392,7 +392,7 @@ ___
 
 ▸ **get**(): `SimpleDimensionLine`[]
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 
@@ -512,7 +512,7 @@ ___
 
 ▸ **update**(`_delta`): `Promise`<`void`\>
 
-[update](../interfaces/components.Updateable.md#update)
+[Updateable.update](../interfaces/components.Updateable.md#update)
 
 #### Parameters
 

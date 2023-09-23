@@ -58,6 +58,8 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`CloudProcessor`](components.CloudProcessor.md)
 
+  ↳ [`CubeMap`](components.CubeMap.md)
+
   ↳ [`LengthMeasurement`](components.LengthMeasurement.md)
 
 ## Properties

@@ -50,6 +50,22 @@ temp/components/core/SimpleRenderer/index.ts:29
 
 ___
 
+### enabled
+
+• **enabled**: `boolean` = `true`
+
+[Component.enabled](components.Component.md#enabled)
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[enabled](components.SimpleRenderer.md#enabled)
+
+#### Defined in
+
+temp/components/core/SimpleRenderer/index.ts:26
+
+___
+
 ### name
 
 • **name**: `string` = `"SimpleRenderer"`
@@ -70,7 +86,7 @@ ___
 
 • `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
 
-[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+[Updateable.onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
 #### Inherited from
 
@@ -86,7 +102,7 @@ ___
 
 • `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
 
-[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+[Updateable.onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
 
 #### Inherited from
 
@@ -119,7 +135,7 @@ ___
 
 • `Readonly` **onResize**: [`Event`](components.Event.md)<`unknown`\>
 
-[onResize](../interfaces/components.Resizeable.md#onresize)
+[Resizeable.onResize](../interfaces/components.Resizeable.md#onresize)
 
 #### Inherited from
 
@@ -147,7 +163,7 @@ temp/components/navigation/PostproductionRenderer/index.ts:10
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose).
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose).
 
 #### Returns
 
@@ -163,11 +179,31 @@ temp/components/navigation/PostproductionRenderer/index.ts:36
 
 ___
 
+### get
+
+▸ **get**(): `WebGLRenderer`
+
+[Component.get](components.Component.md#get)
+
+#### Returns
+
+`WebGLRenderer`
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[get](components.SimpleRenderer.md#get)
+
+#### Defined in
+
+temp/components/core/SimpleRenderer/index.ts:64
+
+___
+
 ### getSize
 
 ▸ **getSize**(): `Vector2`
 
-[getSize](../interfaces/components.Resizeable.md#getsize).
+[Resizeable.getSize](../interfaces/components.Resizeable.md#getsize).
 
 #### Returns
 
@@ -183,11 +219,111 @@ temp/components/core/SimpleRenderer/index.ts:98
 
 ___
 
+### hasUI
+
+▸ **hasUI**(): this is UI
+
+Whether is component implements any kind of [UI](../interfaces/components.UI.md).
+
+#### Returns
+
+this is UI
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[hasUI](components.SimpleRenderer.md#hasui)
+
+#### Defined in
+
+temp/components/base-types/component.ts:50
+
+___
+
+### isDisposeable
+
+▸ **isDisposeable**(): this is Disposable
+
+Whether is component is [Disposable](../interfaces/components.Disposable.md).
+
+#### Returns
+
+this is Disposable
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[isDisposeable](components.SimpleRenderer.md#isdisposeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:28
+
+___
+
+### isHideable
+
+▸ **isHideable**(): this is Hideable
+
+Whether is component is [Hideable](../interfaces/components.Hideable.md).
+
+#### Returns
+
+this is Hideable
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[isHideable](components.SimpleRenderer.md#ishideable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:45
+
+___
+
+### isResizeable
+
+▸ **isResizeable**(): this is Resizeable
+
+Whether is component is [Resizeable](../interfaces/components.Resizeable.md).
+
+#### Returns
+
+this is Resizeable
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[isResizeable](components.SimpleRenderer.md#isresizeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:33
+
+___
+
+### isUpdateable
+
+▸ **isUpdateable**(): this is Updateable
+
+Whether is component is [Updateable](../interfaces/components.Updateable.md).
+
+#### Returns
+
+this is Updateable
+
+#### Inherited from
+
+[SimpleRenderer](components.SimpleRenderer.md).[isUpdateable](components.SimpleRenderer.md#isupdateable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:38
+
+___
+
 ### resize
 
 ▸ **resize**(): `void`
 
-[resize](../interfaces/components.Resizeable.md#resize).
+[Resizeable.resize](../interfaces/components.Resizeable.md#resize).
 
 #### Returns
 
@@ -237,7 +373,7 @@ ___
 
 ▸ **update**(`_delta`): `Promise`<`void`\>
 
-[update](../interfaces/components.Updateable.md#update)
+[Updateable.update](../interfaces/components.Updateable.md#update)
 
 #### Parameters
 

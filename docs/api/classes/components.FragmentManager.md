@@ -27,7 +27,7 @@ Object that can efficiently load binary files that contain
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -75,7 +75,7 @@ temp/components/fragments/FragmentManager/index.ts:45
 
 ▸ **dispose**(`disposeUI?`): `Promise`<`void`\>
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Parameters
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **get**(): `Fragment`[]
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 

@@ -17,7 +17,8 @@ We need buttons to allow the user to interact with our viewer. But even before t
 place is called a `Toolbar`. Creating and adding a `Toolbar` to the viewer is as simple as this:
 
 ```js
-const mainToolbar = new OBC.Toolbar(components, { name: 'Main Toolbar', position: 'bottom' });
+const mainToolbar = new OBC.Toolbar(components);
+mainToolbar.name = "Main toolbar";
 components.ui.addToolbar(mainToolbar);
 ```
 By default, the toolbar is added to the bottom 👇 of the viewer container, so you technically don't need to type
@@ -42,14 +43,13 @@ app very fast! Let's start with a simple one: a Button Component that sends an a
 the following code:
 
 ```js
-const alertButton = new OBC.Button(components, {
-materialIconName: 'info',
-tooltip: 'Information'
-});
+const alertButton = new OBC.Button(components);
+alertButton.materialIcon = "info";
+alertButton.tooltip = "Information";
 mainToolbar.addChild(alertButton);
-alertButton.onclick = () => {
+alertButton.onClick.add(() => {
 alert('I\'ve been clicked!');
-}
+});
 ```
 :::warning Where do these cool icons come from?
 We are fetching the icons from
@@ -118,7 +118,7 @@ box.rotation.y += oneDegree;
 box.rotation.z += oneDegree;
 }
 }
-components.renderer.beforeUpdate.on(animateBoxes);
+components.renderer.onBeforeUpdate.add(animateBoxes);
 ```
 ### 🌲 Composing menus
 ---
@@ -127,34 +127,29 @@ box and delete all boxes respectively. We want to organize these menus together,
 that will contain the rest:
 
 ```js
-const cubeTools = new OBC.Button(components, {
-materialIconName: 'widgets',
-tooltip: "Tools"
-});
+const cubeTools = new OBC.Button(components);
+cubeTools.materialIcon = "widgets";
+cubeTools.tooltip = "Tools";
 mainToolbar.addChild(cubeTools);
 ```
 Let's start with the button to create boxes. This buttons needs a couple of extra things:
-- A `name` so that it displays the text.
-- A `closeOnClick: false` so that the menu doesn't close after being clicked
-- An `onclick` event so that the function `createBox` is triggered after pressing the button.
+- A `label` so that it displays the text.
+- An `onClick` event so that the function `createBox` is triggered after pressing the button.
 
 ```js
-const createCubeButton = new OBC.Button(components, {
-materialIconName: 'add_box',
-name: 'Create box',
-closeOnClick: false
-});
-createCubeButton.onclick = () => createBox();
+const createCubeButton = new OBC.Button(components);
+createCubeButton.materialIcon = "add_box";
+createCubeButton.label = "Create box";
+createCubeButton.onClick.add(() => createBox());
 cubeTools.addChild(createCubeButton);
 ```
 Now, let's go with the "delete single" and "delete all buttons" buttons. Both are related, so we will group them
 together (yes, multiple-level nesting is allowed!). So first, let's create the parent button:
 
 ```js
-const deleteCubeButtons = new OBC.Button(components, {
-materialIconName: 'disabled_by_default',
-name: 'Delete box'
-});
+const deleteCubeButtons = new OBC.Button(components);
+deleteCubeButtons.materialIcon = "disabled_by_default";
+deleteCubeButtons.label = "Delete box";
 cubeTools.addChild(deleteCubeButtons);
 ```
 Next, the "delete single" button:
@@ -171,11 +166,10 @@ deleteCubeButtons.addChild(deleteSingleCubeButton);
 And finally the "delete all" button:
 
 ```js
-const deleteAllCubesButton = new OBC.Button(components, {
-materialIconName: 'disabled_by_default',
-name: 'All'
-});
-deleteAllCubesButton.onclick = () => deleteAllBoxes();
+const deleteAllCubesButton = new OBC.Button(components);
+deleteAllCubesButton.materialIcon = "disabled_by_default";
+deleteAllCubesButton.label = "All";
+deleteAllCubesButton.onClick.add(() => deleteAllBoxes());
 deleteCubeButtons.addChild(deleteAllCubesButton);
 ```
 And this is it! Easy, right? You can now create add menus to your components and easily share them with other
@@ -188,15 +182,13 @@ when you right-click somewhere. Don't worry, this is also supported by `UI Compo
 All the nesting logic mentioned before works here as well:
 
 ```js
-const contextDeleteButtons = new OBC.Button(components, {
-materialIconName: 'widgets',
-name: "Delete"
-});
-const deleteAllCubesContextButton = new OBC.Button(components, {
-materialIconName: 'widgets',
-name: "All cubes"
-});
-deleteAllCubesContextButton.onclick = () => deleteAllBoxes();
+const contextDeleteButtons = new OBC.Button(components);
+contextDeleteButtons.materialIcon = 'widgets';
+contextDeleteButtons.label = "Delete";
+const deleteAllCubesContextButton = new OBC.Button(components);
+deleteAllCubesContextButton.materialIcon = "widgets";
+deleteAllCubesContextButton.label = "All cubes";
+deleteAllCubesContextButton.onClick.add(() => deleteAllBoxes());
 contextDeleteButtons.addChild(deleteAllCubesContextButton);
 components.ui.contextMenu.addChild(contextDeleteButtons);
 ```

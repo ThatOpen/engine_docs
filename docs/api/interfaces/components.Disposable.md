@@ -15,6 +15,7 @@ cleaned up.
 
 ## Implemented by
 
+- [`CubeMap`](../classes/components.CubeMap.md)
 - [`FragmentBoundingBox`](../classes/components.FragmentBoundingBox.md)
 - [`FragmentIfcLoader`](../classes/components.FragmentIfcLoader.md)
 - [`FragmentManager`](../classes/components.FragmentManager.md)

@@ -10,6 +10,8 @@ custom_edit_url: null
 A base component for other components whose main mission is to render a
 [scene](https://threejs.org/docs/#api/en/scenes/Scene).
 
+**`No Inherit Doc`**
+
 ## Hierarchy
 
 - [`Component`](components.Component.md)<`THREE.WebGLRenderer`\>
@@ -37,6 +39,25 @@ temp/components/base-types/base-renderer.ts:33
 
 ___
 
+### enabled
+
+• `Abstract` **enabled**: `boolean`
+
+Whether this component is active or not. The behaviour can vary depending
+on the type of component. E.g. a disabled dimension tool will stop creating
+dimensions, while a disabled camera will stop moving. A disabled component
+will not be updated automatically each frame.
+
+#### Inherited from
+
+[Component](components.Component.md).[enabled](components.Component.md#enabled)
+
+#### Defined in
+
+temp/components/base-types/component.ts:17
+
+___
+
 ### onClippingPlanesUpdated
 
 • `Readonly` **onClippingPlanesUpdated**: [`Event`](components.Event.md)<`unknown`\>
@@ -54,7 +75,7 @@ ___
 
 • `Readonly` **onResize**: [`Event`](components.Event.md)<`unknown`\>
 
-[onResize](../interfaces/components.Resizeable.md#onresize)
+[Resizeable.onResize](../interfaces/components.Resizeable.md#onresize)
 
 #### Implementation of
 
@@ -66,11 +87,38 @@ temp/components/base-types/base-renderer.ts:21
 
 ## Methods
 
+### get
+
+▸ `Abstract` **get**(`...args`): `WebGLRenderer`
+
+The core of the component. For instance, if it's a camera component, it
+could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...args` | `any` |
+
+#### Returns
+
+`WebGLRenderer`
+
+#### Inherited from
+
+[Component](components.Component.md).[get](components.Component.md#get)
+
+#### Defined in
+
+temp/components/base-types/component.ts:23
+
+___
+
 ### getSize
 
 ▸ `Abstract` **getSize**(): `Vector2`
 
-[getSize](../interfaces/components.Resizeable.md#getsize).
+[Resizeable.getSize](../interfaces/components.Resizeable.md#getsize).
 
 #### Returns
 
@@ -86,11 +134,111 @@ temp/components/base-types/base-renderer.ts:15
 
 ___
 
+### hasUI
+
+▸ **hasUI**(): this is UI
+
+Whether is component implements any kind of [UI](../interfaces/components.UI.md).
+
+#### Returns
+
+this is UI
+
+#### Inherited from
+
+[Component](components.Component.md).[hasUI](components.Component.md#hasui)
+
+#### Defined in
+
+temp/components/base-types/component.ts:50
+
+___
+
+### isDisposeable
+
+▸ **isDisposeable**(): this is Disposable
+
+Whether is component is [Disposable](../interfaces/components.Disposable.md).
+
+#### Returns
+
+this is Disposable
+
+#### Inherited from
+
+[Component](components.Component.md).[isDisposeable](components.Component.md#isdisposeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:28
+
+___
+
+### isHideable
+
+▸ **isHideable**(): this is Hideable
+
+Whether is component is [Hideable](../interfaces/components.Hideable.md).
+
+#### Returns
+
+this is Hideable
+
+#### Inherited from
+
+[Component](components.Component.md).[isHideable](components.Component.md#ishideable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:45
+
+___
+
+### isResizeable
+
+▸ **isResizeable**(): this is Resizeable
+
+Whether is component is [Resizeable](../interfaces/components.Resizeable.md).
+
+#### Returns
+
+this is Resizeable
+
+#### Inherited from
+
+[Component](components.Component.md).[isResizeable](components.Component.md#isresizeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:33
+
+___
+
+### isUpdateable
+
+▸ **isUpdateable**(): this is Updateable
+
+Whether is component is [Updateable](../interfaces/components.Updateable.md).
+
+#### Returns
+
+this is Updateable
+
+#### Inherited from
+
+[Component](components.Component.md).[isUpdateable](components.Component.md#isupdateable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:38
+
+___
+
 ### resize
 
 ▸ `Abstract` **resize**(): `void`
 
-[resize](../interfaces/components.Resizeable.md#resize).
+[Resizeable.resize](../interfaces/components.Resizeable.md#resize).
 
 #### Returns
 

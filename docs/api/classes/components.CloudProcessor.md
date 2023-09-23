@@ -21,7 +21,7 @@ An object to easily use the services of That Open Platform.
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 

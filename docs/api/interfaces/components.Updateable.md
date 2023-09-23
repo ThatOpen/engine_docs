@@ -11,6 +11,7 @@ Whether this component should be updated each frame.
 
 ## Implemented by
 
+- [`CubeMap`](../classes/components.CubeMap.md)
 - [`LengthMeasurement`](../classes/components.LengthMeasurement.md)
 - [`Simple2DScene`](../classes/components.Simple2DScene.md)
 - [`SimpleCamera`](../classes/components.SimpleCamera.md)

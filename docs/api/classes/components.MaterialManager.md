@@ -26,7 +26,7 @@ objects and scene background easily.
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -108,7 +108,7 @@ ___
 
 ▸ **get**(): `string`[]
 
-[get](components.Component.md#get).
+[Component.get](components.Component.md#get).
 
 #### Returns
 

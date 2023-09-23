@@ -75,7 +75,7 @@ ___
 
 • `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
 
-[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+[Updateable.onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
 #### Inherited from
 
@@ -91,7 +91,7 @@ ___
 
 • `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleCamera`](components.SimpleCamera.md)\>
 
-[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+[Updateable.onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
 
 #### Inherited from
 
@@ -119,7 +119,7 @@ temp/components/navigation/OrthoPerspectiveCamera/index.ts:28
 
 • `get` **enabled**(): `boolean`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Returns
 
@@ -135,7 +135,7 @@ temp/components/core/SimpleCamera/index.ts:33
 
 • `set` **enabled**(`enabled`): `void`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Parameters
 
@@ -161,7 +161,7 @@ temp/components/core/SimpleCamera/index.ts:38
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -187,7 +187,7 @@ Make the camera view fit all the specified meshes.
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | `undefined` | the meshes to fit. If it is not defined, it will evaluate [meshes](components.Components.md#meshes). |
+| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | `undefined` | the meshes to fit. If it is not defined, it will evaluate [Components.meshes](components.Components.md#meshes). |
 | `offset` | `number` | `1.5` | the distance to the fit object |
 
 #### Returns
@@ -204,7 +204,7 @@ ___
 
 ▸ **get**(`projection?`): `PerspectiveCamera` \| `OrthographicCamera`
 
-Similar to [get](components.Component.md#get), but with an optional argument
+Similar to [Component.get](components.Component.md#get), but with an optional argument
 to specify which camera to get.
 
 #### Parameters
@@ -431,7 +431,7 @@ ___
 
 ▸ **update**(`_delta`): `void`
 
-[update](../interfaces/components.Updateable.md#update)
+[Updateable.update](../interfaces/components.Updateable.md#update)
 
 #### Parameters
 
@@ -458,7 +458,7 @@ ___
 ▸ **updateAspect**(): `void`
 
 Updates the aspect of the camera to match the size of the
-[renderer](components.Components.md#renderer).
+[Components.renderer](components.Components.md#renderer).
 
 #### Returns
 

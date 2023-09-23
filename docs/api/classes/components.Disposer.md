@@ -22,7 +22,7 @@ A tool to safely remove meshes and geometries from memory to
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 

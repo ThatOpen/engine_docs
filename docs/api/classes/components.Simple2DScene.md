@@ -41,7 +41,7 @@ ___
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -57,7 +57,7 @@ ___
 
 • `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<`unknown`\>
 
-[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+[Updateable.onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
 #### Implementation of
 
@@ -73,7 +73,7 @@ ___
 
 • `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<`unknown`\>
 
-[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+[Updateable.onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
 
 #### Implementation of
 
@@ -89,7 +89,7 @@ ___
 
 • **onResize**: [`Event`](components.Event.md)<`Vector2`\>
 
-[onResize](../interfaces/components.Resizeable.md#onresize)
+[Resizeable.onResize](../interfaces/components.Resizeable.md#onresize)
 
 #### Implementation of
 
@@ -105,7 +105,7 @@ ___
 
 • **uiElement**: [`UIElement`](components.UIElement.md)<{ `canvas`: `Canvas` ; `main`: `Button` ; `mainWindow`: `FloatingWindow`  }\>
 
-[uiElement](../interfaces/components.UI.md#uielement)
+[UI.uiElement](../interfaces/components.UI.md#uielement)
 
 #### Implementation of
 
@@ -121,7 +121,7 @@ temp/components/core/Simple2DScene/index.ts:40
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -141,7 +141,7 @@ ___
 
 ▸ **get**(): `Scene`
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **getSize**(): `Vector2`
 
-[getSize](../interfaces/components.Resizeable.md#getsize)
+[Resizeable.getSize](../interfaces/components.Resizeable.md#getsize)
 
 #### Returns
 
@@ -283,7 +283,7 @@ ___
 
 ▸ **resize**(): `void`
 
-[resize](../interfaces/components.Resizeable.md#resize)
+[Resizeable.resize](../interfaces/components.Resizeable.md#resize)
 
 #### Returns
 
@@ -303,7 +303,7 @@ ___
 
 ▸ **update**(): `Promise`<`void`\>
 
-[update](../interfaces/components.Updateable.md#update)
+[Updateable.update](../interfaces/components.Updateable.md#update)
 
 #### Returns
 

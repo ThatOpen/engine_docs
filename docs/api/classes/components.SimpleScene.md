@@ -10,6 +10,8 @@ custom_edit_url: null
 A basic 3D [scene](https://threejs.org/docs/#api/en/scenes/Scene) to add
 objects hierarchically, and easily dispose them when you are finished with it.
 
+**`No Inherit Doc`**
+
 ## Hierarchy
 
 - [`Component`](components.Component.md)<`THREE.Scene`\>
@@ -26,7 +28,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -36,25 +38,13 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 temp/components/core/SimpleScene/index.ts:13
 
-___
-
-### name
-
-• **name**: `string` = `"SimpleScene"`
-
-Component.name
-
-#### Defined in
-
-temp/components/core/SimpleScene/index.ts:16
-
 ## Methods
 
 ### dispose
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -66,7 +56,7 @@ temp/components/core/SimpleScene/index.ts:16
 
 #### Defined in
 
-temp/components/core/SimpleScene/index.ts:32
+temp/components/core/SimpleScene/index.ts:29
 
 ___
 
@@ -74,7 +64,7 @@ ___
 
 ▸ **get**(): `Scene`
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 
@@ -86,7 +76,107 @@ ___
 
 #### Defined in
 
-temp/components/core/SimpleScene/index.ts:27
+temp/components/core/SimpleScene/index.ts:24
+
+___
+
+### hasUI
+
+▸ **hasUI**(): this is UI
+
+Whether is component implements any kind of [UI](../interfaces/components.UI.md).
+
+#### Returns
+
+this is UI
+
+#### Inherited from
+
+[Component](components.Component.md).[hasUI](components.Component.md#hasui)
+
+#### Defined in
+
+temp/components/base-types/component.ts:50
+
+___
+
+### isDisposeable
+
+▸ **isDisposeable**(): this is Disposable
+
+Whether is component is [Disposable](../interfaces/components.Disposable.md).
+
+#### Returns
+
+this is Disposable
+
+#### Inherited from
+
+[Component](components.Component.md).[isDisposeable](components.Component.md#isdisposeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:28
+
+___
+
+### isHideable
+
+▸ **isHideable**(): this is Hideable
+
+Whether is component is [Hideable](../interfaces/components.Hideable.md).
+
+#### Returns
+
+this is Hideable
+
+#### Inherited from
+
+[Component](components.Component.md).[isHideable](components.Component.md#ishideable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:45
+
+___
+
+### isResizeable
+
+▸ **isResizeable**(): this is Resizeable
+
+Whether is component is [Resizeable](../interfaces/components.Resizeable.md).
+
+#### Returns
+
+this is Resizeable
+
+#### Inherited from
+
+[Component](components.Component.md).[isResizeable](components.Component.md#isresizeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:33
+
+___
+
+### isUpdateable
+
+▸ **isUpdateable**(): this is Updateable
+
+Whether is component is [Updateable](../interfaces/components.Updateable.md).
+
+#### Returns
+
+this is Updateable
+
+#### Inherited from
+
+[Component](components.Component.md).[isUpdateable](components.Component.md#isupdateable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:38
 
 ___
 
@@ -102,4 +192,4 @@ Creates a simple and nice default set up for the scene (e.g. lighting).
 
 #### Defined in
 
-temp/components/core/SimpleScene/index.ts:44
+temp/components/core/SimpleScene/index.ts:41

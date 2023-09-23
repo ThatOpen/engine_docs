@@ -61,11 +61,11 @@ ___
 
 • **enabled**: `boolean` = `true`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
-BaseRenderer.enabled
+[BaseRenderer](components.BaseRenderer.md).[enabled](components.BaseRenderer.md#enabled)
 
 #### Defined in
 
@@ -89,7 +89,7 @@ ___
 
 • `Readonly` **onAfterUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
 
-[onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
+[Updateable.onAfterUpdate](../interfaces/components.Updateable.md#onafterupdate)
 
 #### Implementation of
 
@@ -105,7 +105,7 @@ ___
 
 • `Readonly` **onBeforeUpdate**: [`Event`](components.Event.md)<[`SimpleRenderer`](components.SimpleRenderer.md)\>
 
-[onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
+[Updateable.onBeforeUpdate](../interfaces/components.Updateable.md#onbeforeupdate)
 
 #### Implementation of
 
@@ -138,7 +138,7 @@ ___
 
 • `Readonly` **onResize**: [`Event`](components.Event.md)<`unknown`\>
 
-[onResize](../interfaces/components.Resizeable.md#onresize)
+[Resizeable.onResize](../interfaces/components.Resizeable.md#onresize)
 
 #### Implementation of
 
@@ -158,7 +158,7 @@ temp/components/base-types/base-renderer.ts:21
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -178,7 +178,7 @@ ___
 
 ▸ **get**(): `WebGLRenderer`
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 
@@ -186,7 +186,7 @@ ___
 
 #### Overrides
 
-BaseRenderer.get
+[BaseRenderer](components.BaseRenderer.md).[get](components.BaseRenderer.md#get)
 
 #### Defined in
 
@@ -198,7 +198,7 @@ ___
 
 ▸ **getSize**(): `Vector2`
 
-[getSize](../interfaces/components.Resizeable.md#getsize).
+[Resizeable.getSize](../interfaces/components.Resizeable.md#getsize).
 
 #### Returns
 
@@ -218,11 +218,111 @@ temp/components/core/SimpleRenderer/index.ts:98
 
 ___
 
+### hasUI
+
+▸ **hasUI**(): this is UI
+
+Whether is component implements any kind of [UI](../interfaces/components.UI.md).
+
+#### Returns
+
+this is UI
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[hasUI](components.BaseRenderer.md#hasui)
+
+#### Defined in
+
+temp/components/base-types/component.ts:50
+
+___
+
+### isDisposeable
+
+▸ **isDisposeable**(): this is Disposable
+
+Whether is component is [Disposable](../interfaces/components.Disposable.md).
+
+#### Returns
+
+this is Disposable
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[isDisposeable](components.BaseRenderer.md#isdisposeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:28
+
+___
+
+### isHideable
+
+▸ **isHideable**(): this is Hideable
+
+Whether is component is [Hideable](../interfaces/components.Hideable.md).
+
+#### Returns
+
+this is Hideable
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[isHideable](components.BaseRenderer.md#ishideable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:45
+
+___
+
+### isResizeable
+
+▸ **isResizeable**(): this is Resizeable
+
+Whether is component is [Resizeable](../interfaces/components.Resizeable.md).
+
+#### Returns
+
+this is Resizeable
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[isResizeable](components.BaseRenderer.md#isresizeable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:33
+
+___
+
+### isUpdateable
+
+▸ **isUpdateable**(): this is Updateable
+
+Whether is component is [Updateable](../interfaces/components.Updateable.md).
+
+#### Returns
+
+this is Updateable
+
+#### Inherited from
+
+[BaseRenderer](components.BaseRenderer.md).[isUpdateable](components.BaseRenderer.md#isupdateable)
+
+#### Defined in
+
+temp/components/base-types/component.ts:38
+
+___
+
 ### resize
 
 ▸ **resize**(): `void`
 
-[resize](../interfaces/components.Resizeable.md#resize).
+[Resizeable.resize](../interfaces/components.Resizeable.md#resize).
 
 #### Returns
 
@@ -276,7 +376,7 @@ ___
 
 ▸ **update**(`_delta`): `void`
 
-[update](../interfaces/components.Updateable.md#update)
+[Updateable.update](../interfaces/components.Updateable.md#update)
 
 #### Parameters
 

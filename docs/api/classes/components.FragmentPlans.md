@@ -62,7 +62,7 @@ ___
 
 • **enabled**: `boolean` = `false`
 
-[enabled](components.Component.md#enabled)
+[Component.enabled](components.Component.md#enabled)
 
 #### Overrides
 
@@ -94,7 +94,7 @@ ___
 
 • **uiElement**: [`UIElement`](components.UIElement.md)<{ `commandsMenu`: `CommandsMenu`<`PlanView`\> ; `defaultText`: `SimpleUIComponent`<`HTMLParagraphElement`\> ; `exitButton`: `Button` ; `floatingWindow`: `FloatingWindow` ; `main`: `Button` ; `planList`: `SimpleUIComponent`<`HTMLElement`\>  }\>
 
-[uiElement](../interfaces/components.UI.md#uielement)
+[UI.uiElement](../interfaces/components.UI.md#uielement)
 
 #### Implementation of
 
@@ -132,7 +132,7 @@ ___
 
 ▸ **dispose**(): `Promise`<`void`\>
 
-[dispose](../interfaces/components.Disposable.md#dispose)
+[Disposable.dispose](../interfaces/components.Disposable.md#dispose)
 
 #### Returns
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **get**(): `PlanView`[]
 
-[get](components.Component.md#get)
+[Component.get](components.Component.md#get)
 
 #### Returns
 

@@ -13,6 +13,7 @@ hidden or shown in the
 
 ## Implemented by
 
+- [`CubeMap`](../classes/components.CubeMap.md)
 - [`LengthMeasurement`](../classes/components.LengthMeasurement.md)
 - [`SimpleClipper`](../classes/components.SimpleClipper.md)
 - [`SimpleGrid`](../classes/components.SimpleGrid.md)

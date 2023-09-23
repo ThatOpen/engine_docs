@@ -78,8 +78,7 @@
     "excludeExternals": true,
     "excludePrivate": true,
     "excludeProtected": true,
-    "excludeNotDocumented": true,
-    "plugin": ["typedoc-plugin-no-inherit"]
+    "excludeNotDocumented": true
   },
   "include": [
     "../../temp/**/*"
