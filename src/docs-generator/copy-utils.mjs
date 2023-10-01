@@ -45,7 +45,7 @@ export const getLatestRelease = async (orgName, repoName) => {
 };
 
 /* Clone git repository with minimal depth for an specific tag.
-   If no tag or fallback branch specified, it will use the default branch */
+   If no tag is specified, it will use the default branch */
 export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
     const repoDirName = path.resolve(`${fullRepoDirName}/${repo.name}`);
 
@@ -55,9 +55,6 @@ export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
     if (repo.release && repo.release !== "") {
         command = `${command} -b ${repo.release}`;
         tagName = repo.release;
-    } else if (repo.fallbackBranch && repo.fallbackBranch !== "") {
-        command = `${command} -b ${repo.fallbackBranch}`;
-        tagName = repo.fallbackBranch;
     }
 
     await execPromise(`${command}`);
