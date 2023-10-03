@@ -46,14 +46,9 @@ const clipper = new OBC.EdgesClipper(components);
 :::
 
 ```js
-components.tools.add("clipper", clipper);
 clipper.enabled = true;
 ```
 When we set `clipper.enabled = true`, we will make the clipper functional; otherwise, clipping planes won't be formed.
-:::tip Adding it to the tools component
-The Tools Component will help you keep your code tidy. For more information about the Tools component, check out
-[its own tutorial](./ToolsComponent.mdx). 🔍
-:::
 ### 🖌️ Creating Fine Edges
 ---
 Let's now prepare the materials that will be visible on the cube edges.

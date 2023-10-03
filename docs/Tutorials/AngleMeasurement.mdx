@@ -16,9 +16,9 @@ with `3x3x3` dimensions and use red color for the material.
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const cubeMaterial = new THREE.MeshStandardMaterial({color: '#6528D7'});
+const cubeMaterial = new THREE.MeshStandardMaterial({ color: '#6528D7' });
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-cube.position.set(0, 1.5, 0)
+cube.position.set(0, 1.5, 0);
 ```
 Now, we will add the Cube to the `Scene`. We must also add the **cube** to `components.meshes`,
 which is simply an array of all the meshes in the Scene.🗄️
@@ -48,14 +48,6 @@ The Simple Dimensions API provides you with a compact UI as well to display the 
 :::
 🎨 **SimpleDimensions** has several properties that help you to customize the behaviour of the `Line Element`.
 One such property which you can use is **`dimensions.color`** which modifies the color of the Line Element.
-
-```js
-components.tools.add("dimensions", dimensions);
-```
-:::tip Adding it to the tools component
-The Tools Component will help you keep your code tidy. For more information about the Tools component, check out
-[its own tutorial](./ToolsComponent.mdx). 🔍
-:::
 Now, let's enable dimensions and tell them to be snapped at a distance of one unit.
 **snapDistance** helps in attaching the tooltip temporarily at regular intervals,
 making it easier to interact with items.📍
@@ -90,7 +82,7 @@ window.onkeydown = (event) => {
 if (event.code === 'Delete' || event.code === 'Backspace') {
 dimensions.delete();
 }
-}
+};
 ```
 ### ⏏️ Creating a Toolbar for the Dimensions
 ---
@@ -99,7 +91,7 @@ In addition, we will have a button that allows you to toggle the dimension tool.
 
 ```js
 const mainToolbar = new OBC.Toolbar(components, { name: 'Main Toolbar', position: 'bottom' });
-mainToolbar.addChild(dimensions.uiElement.get("main"));
+mainToolbar.addChild(dimensions.uiElement.get('main'));
 components.ui.addToolbar(mainToolbar);
 ```
 🎛️ Check **[Toolbar and UIManager](./UIManager.mdx)** tutorial if you have any doubts!

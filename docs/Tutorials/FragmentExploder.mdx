@@ -27,7 +27,7 @@ In this tutorial, we will deconstruct the model into floors. But before we explo
 For breaking down the model in the required way, we'll utilize [**FragmentClassifier**](../api/classes/components.FragmentClassifier).
 
 ```js
-const classifier = new OBC.FragmentClassifier(components, fragments);
+const classifier = new OBC.FragmentClassifier(components);
 ```
 #### Getting Properties
 Fragment Classifier requires model properties that will help the classifier in identifying the floors included inside the Fragment.🧮
@@ -47,7 +47,7 @@ Now that we've completed the setup, we'll use the `FragmentExploder` and send th
 Our Fragment Exploder is now complete, and we can simply explode the model by calling [`exploder.explode()`](../api/classes/components.FragmentExploder.explode).💪
 
 ```js
-const exploder = new OBC.FragmentExploder(components, fragments, classifier);
+const exploder = new OBC.FragmentExploder(components);
 ```
 ### 🌡️ Screen Culling for Better Performance
 We will also add [Screen Culler](../api/classes/components.ScreenCuller) which will enhance the performance of our
