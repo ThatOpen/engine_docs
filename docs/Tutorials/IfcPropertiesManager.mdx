@@ -52,7 +52,7 @@ so wander around the docs if you haven't already!
 const highlighter = new OBC.FragmentHighlighter(components, fragments);
 highlighter.setup();
 components.renderer.postproduction.customEffects.outlineEnabled = true;
-highlighter.outlinesEnabled = true;
+highlighter.outlineEnabled = true;
 const highlighterEvents = highlighter.events;
 highlighterEvents.select.onClear.add(() => {
 propsProcessor.cleanPropertiesList();

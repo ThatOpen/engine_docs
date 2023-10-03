@@ -50,7 +50,7 @@ finder `onFound` event:
 const highlighter = new OBC.FragmentHighlighter(components);
 highlighter.setup();
 components.renderer.postproduction.customEffects.outlineEnabled = true;
-highlighter.outlinesEnabled = true;
+highlighter.outlineEnabled = true;
 highlighter.zoomToSelection = true;
 propsFinder.onFound.add(result => {
 highlighter.highlightByID("select", result);
