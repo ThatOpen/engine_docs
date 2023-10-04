@@ -1,0 +1,55 @@
+### 🏂 Navigate through BIM like Pro!
+---
+BIM Models are large and contain a lot of attributes.
+It can become complicated to manage the elements and painfully difficult to navigate around.🌪
+Understanding spatial relationships is crucial during the design and evaluation processes.
+By having a MiniMap functionality for navigation it makes easier to collaborate and enhance the productivity,
+let's see how you can integrate MiniMap in your BIM App! 💥
+:::tip First, let's set up a simple scene!
+👀 If you haven't started there, check out [that tutorial first](SimpleScene.mdx)!
+:::
+For this tutorial, we'll use the [**MiniMap**](../api/classes/components.MiniMap) component to create
+a navigation functionality!
+### 🧩 Adding Fragments
+---
+We'll start by adding a **Fragment** to our scene using [**FragmentManager**](../api/classes/components.FragmentManager).
+We'll use a simple fragment for the purposes of this tutorial, but the code is capable of handling big files as well.🏗️
+
+```js
+const fragments = new OBC.FragmentManager(components);
+const file = await fetch("../../../resources/small.frag");
+const dataBlob = await file.arrayBuffer();
+const buffer = new Uint8Array(dataBlob);
+fragments.load(buffer);
+```
+:::info Showing Fragments in the Scene
+🏔️ There is a dedicated tutorial on how to use Fragment Manager to load **IFC files**, checkout [that tutorial here](FragmentManager.mdx)!
+:::
+### 🗺 Integrating Spatial Wonders
+---
+Now, that we have our setup ready. Let's start with the exciting stuff.
+We will use [**Mini Map**](../api/classes/components.MiniMap) component which does all the work for us.🔮
+When we create a **Mini Map**, a **Map** element is created at the `bottom-right` of your browser window.
+
+```js
+const map = new OBC.MiniMap(components);
+components.ui.add(map.uiElement.get("canvas"));
+```
+#### 🎩 Controlling Maps like a wizard!
+---
+MiniMap Component makes it easy to add **map** to your app, and it also provides much easier way to manage the **map**.
+You can set the scale for map using `map.zoom` or modify the size of **UI** element using `map.getSize()`,
+you can find out about more controls [**here**](../api/classes/components.MiniMap#implements) 🎛
+
+```js
+map.lockRotation = false;
+map.zoom = 0.2;
+```
+**Congratulations** 🎉 on completing this short yet important tutorial!
+Now you can easily add navigation **Map** to your BIM Apps 🎯
+Let's keep it up and check out another tutorial! 🎓
+
+
+  <iframe src="https://ifcjs.github.io/components/src/navigation/MiniMap/index.html"></iframe>
+
+  
