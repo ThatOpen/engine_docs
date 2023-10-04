@@ -12,11 +12,11 @@ const config = {
 
   plugins: [
     [
-      'docusaurus-plugin-typedoc',
+      "docusaurus-plugin-typedoc",
 
       // Plugin / TypeDoc options
       {
-        tsconfig: './src/docs-generator/tsconfig.json',
+        tsconfig: "./src/docs-generator/tsconfig.json",
       },
     ],
   ],
@@ -29,8 +29,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "thatopencompany", // Usually your GitHub org/user name.
+  projectName: "thatopendocumentation", // Usually your repo name.
 
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
@@ -71,7 +71,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: "light",
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
