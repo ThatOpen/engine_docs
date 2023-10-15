@@ -38,7 +38,8 @@ that 3D scene with our mouse / touch.
 
 ```js
 const components = new OBC.Components();
-components.scene = new OBC.SimpleScene(components);
+const scene = new OBC.SimpleScene(components);
+components.scene = scene;
 components.renderer = new OBC.SimpleRenderer(components, container);
 components.camera = new OBC.SimpleCamera(components);
 components.raycaster = new OBC.SimpleRaycaster(components);
@@ -56,8 +57,10 @@ to the scene, which you can get with the `get()` method. This method is present 
 get the core of the component. We can do it like this:
 
 ```js
-const scene = components.scene.get();
+scene.get();
 ```
+#### Warning: components.scene.get() return an object from Three.js not a SimpleScene
+
 ### 🎥 Adjusting scene and camera
 ___
 Great! Now we will locate the camera in a nice starting position. We can control the `SimpleCamera` component through its
@@ -94,7 +97,7 @@ ___
 Of course, everything is black because we have no lights! Let's fix it by adding some basic illumination:
 
 ```js
-components.scene.setup();
+scene.setup();
 ```
 ### 🧹 Cleaning up
 ___
