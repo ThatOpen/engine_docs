@@ -33,13 +33,8 @@ When we create a **Mini Map**, a **Map** element is created at the `bottom-right
 
 ```js
 const map = new OBC.MiniMap(components);
-components.tools.add("minimap", map);
 components.ui.add(map.uiElement.get("canvas"));
 ```
-:::tip Adding it to the Tools Component and UI
-🎨 The Tools Component will help you keep your code tidy. For more information about the Tools component, check out
-[its own tutorial](./ToolsComponent.mdx). 🔍
-:::
 #### 🎩 Controlling Maps like a wizard!
 ---
 MiniMap Component makes it easy to add **map** to your app, and it also provides much easier way to manage the **map**.
