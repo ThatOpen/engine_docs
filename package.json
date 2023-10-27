@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "0.0.0",
-  "packageManager": "yarn@4.0.0-rc.53",
+  "packageManager": "yarn@4.0.0",
   "private": true,
   "workspaces": [
     "temp/*"
