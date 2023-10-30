@@ -3,6 +3,8 @@ name: Generate documentation
 on:
   schedule:
     - cron: '0 0 * * *'  # Launch this workflow everyday at midnight
+  push:
+    branches: ['main']
 
 jobs:
   generate-docs:

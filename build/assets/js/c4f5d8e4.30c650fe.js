@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4195],{2841:(e,s,c)=>{c.r(s),c.d(s,{default:()=>a});var t=c(7294),o=c(6550);const a=()=>t.createElement(o.l_,{to:"/docs/intro"})}}]);
