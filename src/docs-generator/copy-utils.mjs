@@ -21,9 +21,12 @@ export const ghVersion = () => {
 /* Fetch latest release version. If it errors or if
    there are no releases yet, return an empty string */
 export const getLatestRelease = async (orgName, repoName) => {
-    let release = await execPromise(
-        `gh api repos/${orgName}/${repoName}/releases/latest || true`);
-    release = release.stdout;
+    let release = undefined;
+    try {
+        release = await execPromise(
+            `gh api repos/${orgName}/${repoName}/releases/latest`);
+        release = release.stdout;
+    } catch {}
 
     try {
         release = JSON.parse(release).tag_name;
@@ -45,7 +48,7 @@ export const getLatestRelease = async (orgName, repoName) => {
 };
 
 /* Clone git repository with minimal depth for an specific tag.
-   If no tag or fallback branch specified, it will use the default branch */
+   If no tag is specified, it will use the default branch */
 export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
     const repoDirName = path.resolve(`${fullRepoDirName}/${repo.name}`);
 
@@ -55,9 +58,6 @@ export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
     if (repo.release && repo.release !== "") {
         command = `${command} -b ${repo.release}`;
         tagName = repo.release;
-    } else if (repo.fallbackBranch && repo.fallbackBranch !== "") {
-        command = `${command} -b ${repo.fallbackBranch}`;
-        tagName = repo.fallbackBranch;
     }
 
     await execPromise(`${command}`);

@@ -25,7 +25,7 @@ jobs:
         run: yarn install
 
       - name: Build documentation
-        run: yarn generate-build-remote
+        run: yarn generate-build-remote 2>&1 | tee >(grep -qi "error") && true || false
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
