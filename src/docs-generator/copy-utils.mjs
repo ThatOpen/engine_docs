@@ -21,9 +21,12 @@ export const ghVersion = () => {
 /* Fetch latest release version. If it errors or if
    there are no releases yet, return an empty string */
 export const getLatestRelease = async (orgName, repoName) => {
-    let release = await execPromise(
-        `gh api repos/${orgName}/${repoName}/releases/latest || true`);
-    release = release.stdout;
+    let release = undefined;
+    try {
+        release = await execPromise(
+            `gh api repos/${orgName}/${repoName}/releases/latest`);
+        release = release.stdout;
+    } catch {}
 
     try {
         release = JSON.parse(release).tag_name;

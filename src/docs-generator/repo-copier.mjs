@@ -56,7 +56,7 @@ if (process.argv.includes(localMode)) {
 // Run "remote" mode, copying repositories remotely from GitHub
 else if (process.argv.includes(remoteMode)) {
     // Relative path to store the repos
-    const fullRepoDirName = `${tempDirName}/_repos`;
+    const fullRepoDirName = `${tempDirName}/`;
     console.info(`Using remote mode. ${ghVersion()}`);
 
     // Fetch and fill the releases field for each repo
@@ -93,6 +93,7 @@ else if (process.argv.includes(remoteMode)) {
     console.info(clonedBranches);
 
     // Copy src/ directories inside each repository
+    /*
     console.info("Copying 'src/' directories...");
 
     const srcCopies = await Promise.all(
@@ -110,6 +111,7 @@ else if (process.argv.includes(remoteMode)) {
     // Delete temp/_repo directory since it's not needed anymore
     console.info(`Removing ${fullRepoDirName} directory...`);
     rmSync(fullRepoDirName, { recursive: true });
+    */
 }
 
 
