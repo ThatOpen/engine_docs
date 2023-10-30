@@ -91,7 +91,7 @@ function getLiveDemo(path) {
 
     const baseUrlPattern = /.*github.io\/.*?\//;
     const size = baseUrlPattern.exec(url)[0].length;
-    url = url.slice(0, size) + "src/" + url.slice(size);
+    url = url.slice(0, size) + url.slice(size);
 
     return `
 
