@@ -27,9 +27,12 @@ scene2d.add(directionalLight2);
 const ambientLight2 = new THREE.AmbientLight();
 ambientLight2.intensity = 0.5;
 scene2d.add(ambientLight2);
-const grid2d = new THREE.GridHelper(1000, 1000);
-grid2d.rotation.x = Math.PI / 2;
-scene2d.add(grid2d);
+const frustum = new THREE.Frustum();
+const canvasUI = simple2dScene.uiElement.get('container');
+const canvas = canvasUI.domElement;
+window.ondblclick = () => {
+simple2dScene.scaleY += 0.1;
+}
 ```
 ### 💅 Creating the UI
 ___
@@ -37,7 +40,36 @@ The `Simple2DScene` comes with a button to easily turn it on and off.
 Let's create a simple toolbar and add it to the scene:
 
 ```js
-const mainButton = simple2dScene.uiElement.get("main");
+const mainWindow = new OBC.FloatingWindow(components);
+components.ui.add(mainWindow);
+mainWindow.visible = false;
+mainWindow.domElement.style.height = '20rem';
+mainWindow.addChild(simple2dScene.uiElement.get('container'));
+mainWindow.onResized.add(() => simple2dScene.grid.regenerate());
+components.renderer.onAfterUpdate.add(() => {
+if (mainWindow.visible) {
+simple2dScene.update();
+}
+});
+mainWindow.slots.content.domElement.style.padding = '0';
+mainWindow.slots.content.domElement.style.overflow = 'hidden';
+mainWindow.onResized.add(() => {
+const { width, height } = mainWindow.containerSize;
+simple2dScene.setSize(height, width);
+});
+mainWindow.domElement.style.width = '20rem';
+mainWindow.domElement.style.height = '20rem';
+mainWindow.onVisible.add(() => {
+if(mainWindow.visible) {
+simple2dScene.grid.regenerate()
+}
+})
+const mainButton = new OBC.Button(components);
+mainButton.materialIcon = 'fact_check';
+mainButton.tooltip = '2D scene';
+mainButton.onClick.add(() => {
+mainWindow.visible = !mainWindow.visible;
+});
 const mainToolbar = new OBC.Toolbar(components);
 components.ui.addToolbar(mainToolbar);
 mainToolbar.addChild(mainButton);
@@ -46,6 +78,6 @@ That's it! Great work. Now you can easily draw 2D graphics with the same
 API and expose them to your end users. 🥳
 
 
-  <iframe src="https://ifcjs.github.io/components/src/core/Simple2DScene/index.html"></iframe>
+  <iframe src="https://ifcjs.github.io/components/core/Simple2DScene/index.html"></iframe>
 
   

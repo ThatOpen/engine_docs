@@ -30,10 +30,17 @@ We have many libraries of components. The reason is that some of those component
 npm i openbim-components
 ```
 
-Most of our libraries are based on [Three.js](https://threejs.org/), so you'll also need to import it:
+Most of our libraries are based on [Three.js](https://threejs.org/), so you'll also need to import it. Make sure it's the [same version](https://github.com/IFCjs/components/blob/main/package.json) as the one used by openbim-components!
 
 ```bash
 npm i three
+```
+
+Finally, you also need to install some peer dependencies. These are other libraries we made and didn't include as regular dependencies to enable more flexible bundling scenarios. Again, make sure it's the [same version](https://github.com/IFCjs/components/blob/main/package.json) as the one used by openbim-components:
+
+```bash
+npm i bim-fragment
+npm i web-ifc
 ```
 
 That's it! Now you are ready to start using components. But where to start? Here you have a nice tutorial to make your first steps and build a 3D app that looks like this in less than 5 minutes:

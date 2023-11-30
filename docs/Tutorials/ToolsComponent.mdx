@@ -53,6 +53,7 @@ For example, let's fetch an example tool from the platform and add it to a simpl
 simple tool that just logs a message to the console:
 
 ```js
+components.tools.init(OBC);
 components.tools.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1IjoiNjUwNmYyZjk0NWM4YmM2YTk0Mzg0NjM4IiwiYSI6IjY1MDhhN2VjZGZjYTQ5Mjc2MmE0YjFlZiJ9.Rr7bq9qJdm4pRUnXF0pUt9QhrtJLOS6koVyZMcf5XoU";
 const toolID = "50301542-4c0b-42ca-b2b4-066d45ca6735";
 const tool = await components.tools.getPlatformComponent(toolID);
@@ -67,6 +68,6 @@ step forward in your journey to build your own BIM software. 🥳 Don't forget t
 you haven't already!
 
 
-  <iframe src="https://ifcjs.github.io/components/src/core/ToolsComponent/index.html"></iframe>
+  <iframe src="https://ifcjs.github.io/components/core/ToolsComponent/index.html"></iframe>
 
   

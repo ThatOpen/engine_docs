@@ -35,6 +35,8 @@ const file = await fetch("../../../resources/small.frag");
 const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
 fragments.load(buffer);
+// const scene = components.scene.get();
+// scene.add(model);
 }
 const loadButton = new OBC.Button(components);
 loadButton.materialIcon = "download";
@@ -133,6 +135,6 @@ Now you can render or export Fragment files in your BIM Apps using **[Fragment M
 Let's keep it up and check out another tutorial! 🎓
 
 
-  <iframe src="https://ifcjs.github.io/components/src/fragments/FragmentManager/index.html"></iframe>
+  <iframe src="https://ifcjs.github.io/components/fragments/FragmentManager/index.html"></iframe>
 
   
