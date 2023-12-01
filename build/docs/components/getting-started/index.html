@@ -3,10 +3,11 @@
   lang="en"
   dir="ltr"
   class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-default docs-doc-id-components/getting-started"
+  data-has-hydrated="false"
 >
   <head>
     <meta charset="UTF-8" />
-    <meta name="generator" content="Docusaurus v2.4.1" />
+    <meta name="generator" content="Docusaurus v2.4.3" />
     <title data-rh="true">Getting started | That Open Docs</title>
     <meta
       data-rh="true"
@@ -64,13 +65,13 @@
       href="https://your-docusaurus-test-site.com/docs/components/getting-started"
       hreflang="x-default"
     />
-    <link rel="stylesheet" href="/assets/css/styles.5c4184d9.css" />
+    <link rel="stylesheet" href="/assets/css/styles.180d5399.css" />
     <link
       rel="preload"
-      href="/assets/js/runtime~main.24a955d0.js"
+      href="/assets/js/runtime~main.2f2d55e8.js"
       as="script"
     />
-    <link rel="preload" href="/assets/js/main.c11fcb80.js" as="script" />
+    <link rel="preload" href="/assets/js/main.ba59e417.js" as="script" />
   </head>
   <body class="navigation-with-keyboard">
     <script>
@@ -99,7 +100,6 @@
       })();
     </script>
     <div id="__docusaurus">
-      <div>HELLO</div>
       <div role="region" aria-label="Skip to main content">
         <a
           class="skipToContent_fXgn"
@@ -289,6 +289,18 @@
                           aria-expanded="false"
                           href="/docs/that-open-platform/getting-started"
                           >That open platform</a
+                        >
+                      </div>
+                    </li>
+                    <li
+                      class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"
+                    >
+                      <div class="menu__list-item-collapsible">
+                        <a
+                          class="menu__link menu__link--sublist menu__link--sublist-caret"
+                          aria-expanded="false"
+                          href="/docs/Tutorials/AngleMeasurement"
+                          >Tutorials</a
                         >
                       </div>
                     </li>
@@ -497,7 +509,15 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             >Three.js</a
-                          >, so you&#x27;ll also need to import it:
+                          >, so you&#x27;ll also need to import it. Make sure
+                          it&#x27;s the
+                          <a
+                            href="https://github.com/IFCjs/components/blob/main/package.json"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >same version</a
+                          >
+                          as the one used by openbim-components!
                         </p>
                         <div
                           class="language-bash codeBlockContainer_Ckt0 theme-code-block"
@@ -511,6 +531,63 @@
                               tabindex="0"
                               class="prism-code language-bash codeBlock_bY9V thin-scrollbar"
                             ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token function" style="color:rgb(80, 250, 123)">npm</span><span class="token plain"> i three</span><br></span></code></pre>
+                            <div class="buttonGroup__atx">
+                              <button
+                                type="button"
+                                aria-label="Copy code to clipboard"
+                                title="Copy"
+                                class="clean-btn"
+                              >
+                                <span
+                                  class="copyButtonIcons_eSgA"
+                                  aria-hidden="true"
+                                  ><svg
+                                    viewBox="0 0 24 24"
+                                    class="copyButtonIcon_y97N"
+                                  >
+                                    <path
+                                      fill="currentColor"
+                                      d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                                    ></path></svg
+                                  ><svg
+                                    viewBox="0 0 24 24"
+                                    class="copyButtonSuccessIcon_LjdS"
+                                  >
+                                    <path
+                                      fill="currentColor"
+                                      d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+                                    ></path></svg
+                                ></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          Finally, you also need to install some peer
+                          dependencies. These are other libraries we made and
+                          didn&#x27;t include as regular dependencies to enable
+                          more flexible bundling scenarios. Again, make sure
+                          it&#x27;s the
+                          <a
+                            href="https://github.com/IFCjs/components/blob/main/package.json"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >same version</a
+                          >
+                          as the one used by openbim-components:
+                        </p>
+                        <div
+                          class="language-bash codeBlockContainer_Ckt0 theme-code-block"
+                          style="
+                            --prism-color: #f8f8f2;
+                            --prism-background-color: #282a36;
+                          "
+                        >
+                          <div class="codeBlockContent_biex">
+                            <pre
+                              tabindex="0"
+                              class="prism-code language-bash codeBlock_bY9V thin-scrollbar"
+                            ><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token function" style="color:rgb(80, 250, 123)">npm</span><span class="token plain"> i bim-fragment</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">npm</span><span class="token plain"> i web-ifc</span><br></span></code></pre>
                             <div class="buttonGroup__atx">
                               <button
                                 type="button"
@@ -662,7 +739,8 @@
                               it with TSDoc. That means that our code is
                               natively type-safe and that you&#x27;ll get the
                               same documentation that you&#x27;ll find in the
-                              <a href="/docs/api/">API section of these docs</a
+                              <a href="/docs/api/index.md"
+                                >API section of these docs</a
                               >.
                             </p>
                           </div>
@@ -911,7 +989,7 @@
         </div>
       </footer>
     </div>
-    <script src="/assets/js/runtime~main.24a955d0.js"></script>
-    <script src="/assets/js/main.c11fcb80.js"></script>
+    <script src="/assets/js/runtime~main.2f2d55e8.js"></script>
+    <script src="/assets/js/main.ba59e417.js"></script>
   </body>
 </html>

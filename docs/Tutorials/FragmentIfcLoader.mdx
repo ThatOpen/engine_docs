@@ -43,7 +43,7 @@ The easiest way is getting them from unpkg, so let's do that!
 
 ```js
 fragmentIfcLoader.settings.wasm = {
-path: "https://unpkg.com/web-ifc@0.0.43/",
+path: "https://unpkg.com/web-ifc@0.0.46/",
 absolute: true
 }
 ```
@@ -86,7 +86,7 @@ async function loadIfcAsFragments() {
 const file = await fetch('../../../resources/small.ifc');
 const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
-const model = await fragmentIfcLoader.load(buffer);
+const model = await fragmentIfcLoader.load(buffer, "example");
 scene.add(model);
 }
 ```
@@ -104,10 +104,10 @@ if (!fragments.groups.length) return;
 const group = fragments.groups[0];
 const data = fragments.export(group);
 const blob = new Blob([data]);
-const fragmentFile = new File([blob], 'model.frag');
+const fragmentFile = new File([blob], 'small.frag');
 const files = [];
 files.push(fragmentFile);
-files.push(new File([JSON.stringify(group.properties)], 'model.json'));
+files.push(new File([JSON.stringify(group.properties)], 'small.json'));
 const result = await downloadZip(files).blob();
 result.name = 'example';
 download(result);
@@ -144,6 +144,6 @@ them in 3D. In other tutorials, you'll find tons of tools to
 work with them and create amazing BIM apps! See you there 💪
 
 
-  <iframe src="https://ifcjs.github.io/components/src/fragments/FragmentIfcLoader/index.html"></iframe>
+  <iframe src="https://ifcjs.github.io/components/fragments/FragmentIfcLoader/index.html"></iframe>
 
   

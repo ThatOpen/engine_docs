@@ -24,13 +24,22 @@ jobs:
       - name: Install dependencies with yarn
         run: yarn install
 
-      - name: Build documentation
-        run: yarn generate-build-remote
+      - name: Build documentation and check for errors
+        id: build
+        run: |
+          yarn generate-build-remote | tee build.log
+
+          if grep -qi "error" build.log; then
+            echo "error=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "error=false" >> "$GITHUB_OUTPUT"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check for changes
         id: changes
+        if: steps.build.outputs.error == 'false'
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -43,6 +52,8 @@ jobs:
         run: |
           git commit -m "Add newly generated documentation"
           git push -f origin HEAD:actions-generate-docs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create PR with updated documentation
         if: steps.changes.outputs.changed == 'true'
