@@ -4,15 +4,15 @@
  * work well for content-centric websites.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sora:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sora:wght@400;600&display=swap");
 
 :root {
-  --light-gray: #D3CBE1;
-  --gray: #3A444E;
+  --light-gray: #d3cbe1;
+  --gray: #3a444e;
   --dark-gray: #202932;
   --black: #111718;
-  --purple: #9D6BFF;
-  --dark-purple: #6528D7;
+  --purple: #9d6bff;
+  --dark-purple: #6528d7;
   --transparent-purple: rgba(157, 107, 255, 0.075);
   --ifm-color-primary: var(--purple);
   --ifm-color-content: white;
@@ -33,9 +33,10 @@
   --ifm-color-success-contrast-foreground: white !important;
   --ifm-color-danger-contrast-foreground: white !important;
   --ifm-menu-link-sublist-icon-filter: invert();
-  --ifm-code-background: #282A36;
- --ifm-scrollbar-thumb-background-color: var(--dark-purple) !important;
- --ifm-scrollbar-track-background-color: var(--dark-gray) !important;
+  --ifm-code-background: #282a36;
+  --ifm-scrollbar-thumb-background-color: var(--dark-purple) !important;
+  --ifm-scrollbar-track-background-color: var(--dark-gray) !important;
+  --ifm-background-color: rgb(32, 41, 50);
 }
 
 /*html {*/
@@ -43,7 +44,7 @@
 /*}*/
 
 p {
- color: var(--light-gray)
+  color: var(--light-gray);
 }
 
 strong {
@@ -119,7 +120,6 @@ article {
 .table-of-contents__left-border {
   border-left: none;
 }
-
 
 .table-of-contents {
   border-radius: var(--border-radius);
