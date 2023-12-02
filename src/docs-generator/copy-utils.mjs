@@ -65,15 +65,15 @@ export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
     return { repoDirName, tagName };
 };
 
-/* Copy the src/ directory inside the repo to the
+/* Copy the repository root directory inside the repo to the
  * tempDirName directory with the name of the repository */
-export const copyRepoSrc = async(repoName, repoPath, destPath) => {
-    const originalRepoSrcPath = path.resolve(
-        `./${repoPath}/${repoName}/src`);
-    const repoSrcCopyPath = path.resolve(
+export const copyRepo = async(repoName, repoPath, destPath) => {
+    const originalRepoPath = path.resolve(
+        `./${repoPath}/${repoName}`);
+    const repoCopyPath = path.resolve(
         `./${destPath}/${repoName}`);
 
-    await cp(originalRepoSrcPath, repoSrcCopyPath, { recursive: true });
+    await cp(originalRepoPath, repoCopyPath, { recursive: true });
 
-    return { originalRepoSrcPath, repoSrcCopyPath };
+    return { originalRepoPath, repoCopyPath };
 };
