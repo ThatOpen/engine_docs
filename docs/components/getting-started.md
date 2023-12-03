@@ -67,7 +67,7 @@ You might be wondering where you can use these components. In short, anywhere th
 
 :::danger What about types?
 
-We write all our code in TypeScript and document it with TSDoc. That means that our code is natively type-safe and that you'll get the same documentation that you'll find in the [API section of these docs](../api/index.md).
+We write all our code in TypeScript and document it with TSDoc. That means that our code is natively type-safe and that you'll get the same documentation that you'll find in the API section of these docs.
 
 :::
 

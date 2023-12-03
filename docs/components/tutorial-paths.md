@@ -34,8 +34,6 @@ Basics are great, but that's not enough to build professional 3D apps. Let's dis
 
 - 📙 [Creating a minimap](../Tutorials/MiniMap.mdx)
 
-- 📙 [Setting up a nav cube](../Tutorials/CubeMap.mdx)
-
 - 📙 [Casting shadows](../Tutorials/ShadowDropper.mdx)
 
 - 📙 [Clipping edges](../Tutorials/EdgesClipper.mdx)
