@@ -10,7 +10,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "generate-build-local": "yarn generate-docs-local && yarn workspaces focus -A && yarn build",
+    "generate-build-local": "yarn generate-docs-local && yarn build",
     "generate-build-remote": "yarn generate-docs-remote && yarn workspaces focus -A && yarn build",
     "generate-docs-local": "yarn clean && yarn copy-repos-local && yarn add-tutorials",
     "generate-docs-remote": "yarn clean && yarn copy-repos-remote && yarn add-tutorials",

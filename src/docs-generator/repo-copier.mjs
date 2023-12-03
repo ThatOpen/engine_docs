@@ -1,9 +1,8 @@
-import { rmSync } from "node:fs";
 import {
     ghVersion,
     getLatestRelease,
     cloneMinimalRepo,
-    copyRepoSrc
+    copyRepo
 } from "./copy-utils.mjs";
 
 // Organization name
@@ -31,26 +30,26 @@ if (process.argv.length !== 3 ||
 
 // Run "local" mode, using repositories from parent directory
 if (process.argv.includes(localMode)) {
-    const localReposPath = '../';
+    const localRepoPath = '../';
     console.info("Using local mode.");
-    // Copy src/ directories inside each repository
-    console.info(`Copying directories from "${localReposPath}"...`);
+    // Copy repo directories inside each repository
+    console.info(`Copying directories from "${localRepoPath}"...`);
 
-    const srcCopies = await Promise.all(
+    const repoCopies = await Promise.all(
         repositories.map(async (repo) => {
             try {
-                const {originalRepoSrcPath, repoSrcCopyPath} = await copyRepoSrc(
-                    repo.name, localReposPath, tempDirName);
+                const {originalRepoPath, repoCopyPath} = await copyRepo(
+                    repo.name, localRepoPath, tempDirName);
 
-                return `'${originalRepoSrcPath}' -> '${repoSrcCopyPath}'`;
+                return `'${originalRepoPath}' -> '${repoCopyPath}'`;
             } catch {
                 return '';
             }
         })
     );
 
-    console.info("Copied 'src/' directories");
-    console.info(srcCopies);
+    console.info("Copied repository directories");
+    console.info(repoCopies);
     
 }
 // Run "remote" mode, copying repositories remotely from GitHub
@@ -91,27 +90,6 @@ else if (process.argv.includes(remoteMode)) {
 
     console.info("Cloned repositories:");
     console.info(clonedBranches);
-
-    // Copy src/ directories inside each repository
-    /*
-    console.info("Copying 'src/' directories...");
-
-    const srcCopies = await Promise.all(
-        repositories.map(async (repo) => {
-            const {originalRepoSrcPath, repoSrcCopyPath} = await copyRepoSrc(
-                repo.name, fullRepoDirName, tempDirName);
-
-            return `'${originalRepoSrcPath}' -> '${repoSrcCopyPath}'`;
-        })
-    );
-
-    console.info("Copied 'src/' directories");
-    console.info(srcCopies);
-
-    // Delete temp/_repo directory since it's not needed anymore
-    console.info(`Removing ${fullRepoDirName} directory...`);
-    rmSync(fullRepoDirName, { recursive: true });
-    */
 }
 
 
