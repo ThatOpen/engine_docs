@@ -17,7 +17,7 @@ export const Header = () => {
             People
           </a>
         </nav>
-        <div style={{ visibility: "hidden" }}>
+        <div className={styles.nav_end}>
           <Logo />
         </div>
       </div>
