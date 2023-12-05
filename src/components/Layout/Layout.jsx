@@ -2,6 +2,7 @@ import React from "react";
 import AccentGradient from "./AccentGradient";
 import MainGradient from "./MainGradient";
 import styles from "./layout.module.css";
+import { Header } from "./Header/Header";
 
 // Default implementation, that you can customize
 export default function Layout({ children }) {
@@ -12,7 +13,10 @@ export default function Layout({ children }) {
         <AccentGradient />
         <MainGradient />
       </div>
-      {children}
+      <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+        <Header />
+        {children}
+      </div>
     </div>
   );
 }

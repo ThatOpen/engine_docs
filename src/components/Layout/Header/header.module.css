@@ -1,0 +1,26 @@
+.container {
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(132, 139, 147);
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  gap: 48px;
+}
+
+.nav a {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.57;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: rgb(188, 241, 36);
+}
