@@ -35,7 +35,7 @@ Object that can efficiently load binary files that contain
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:23](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L23)
+[temp/components/src/fragments/FragmentManager/index.ts:29](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L29)
 
 ___
 
@@ -51,7 +51,23 @@ All the created [fragments](https://github.com/ifcjs/fragment).
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:26](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L26)
+[temp/components/src/fragments/FragmentManager/index.ts:32](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L32)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/fragments/FragmentManager/index.ts:26](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L26)
 
 ## Accessors
 
@@ -67,7 +83,7 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L45)
+[temp/components/src/fragments/FragmentManager/index.ts:55](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L55)
 
 ## Methods
 
@@ -93,7 +109,7 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:69](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L69)
+[temp/components/src/fragments/FragmentManager/index.ts:79](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L79)
 
 ___
 
@@ -117,7 +133,7 @@ the exported data as binary buffer.
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:134](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L134)
+[temp/components/src/fragments/FragmentManager/index.ts:153](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L153)
 
 ___
 
@@ -137,7 +153,7 @@ ___
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:64](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L64)
+[temp/components/src/fragments/FragmentManager/index.ts:74](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L74)
 
 ___
 
@@ -157,7 +173,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -177,7 +193,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -197,7 +213,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -217,7 +233,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -237,7 +253,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -257,7 +273,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -281,7 +297,7 @@ the list of IDs of the loaded fragments.
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:113](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L113)
+[temp/components/src/fragments/FragmentManager/index.ts:132](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L132)
 
 ___
 
@@ -297,4 +313,4 @@ Disposes all existing fragments
 
 #### Defined in
 
-[src/fragments/FragmentManager/index.ts:100](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentManager/index.ts#L100)
+[temp/components/src/fragments/FragmentManager/index.ts:119](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentManager/index.ts#L119)

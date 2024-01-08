@@ -65,7 +65,7 @@ The projection system of the camera.
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/src/types.ts:7](https://github.com/ifcjs/components/blob/e46138a/src/navigation/OrthoPerspectiveCamera/src/types.ts#L7)
+[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:7](https://github.com/IFCjs/components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L7)
 
 ___
 
@@ -77,7 +77,7 @@ The extensible list of supported navigation modes.
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/src/types.ts:12](https://github.com/ifcjs/components/blob/e46138a/src/navigation/OrthoPerspectiveCamera/src/types.ts#L12)
+[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:12](https://github.com/IFCjs/components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L12)
 
 ## Variables
 
@@ -89,7 +89,7 @@ The name of the CSS class that styles the dimension label.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/src/types.ts:4](https://github.com/ifcjs/components/blob/e46138a/src/measurement/LengthMeasurement/src/types.ts#L4)
+[temp/components/src/measurement/LengthMeasurement/src/types.ts:4](https://github.com/IFCjs/components/blob/0c38d20/src/measurement/LengthMeasurement/src/types.ts#L4)
 
 ___
 
@@ -101,4 +101,4 @@ The name of the CSS class that styles the dimension label.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/src/types.ts:8](https://github.com/ifcjs/components/blob/e46138a/src/measurement/LengthMeasurement/src/types.ts#L8)
+[temp/components/src/measurement/LengthMeasurement/src/types.ts:8](https://github.com/IFCjs/components/blob/0c38d20/src/measurement/LengthMeasurement/src/types.ts#L8)

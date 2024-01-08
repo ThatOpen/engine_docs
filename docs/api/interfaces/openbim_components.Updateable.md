@@ -27,7 +27,7 @@ Actions that should be executed after updating the component.
 
 #### Defined in
 
-[src/base-types/base-types.ts:105](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L105)
+[temp/components/src/base-types/base-types.ts:109](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L109)
 
 ___
 
@@ -39,7 +39,7 @@ Actions that should be executed before updating the component.
 
 #### Defined in
 
-[src/base-types/base-types.ts:108](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L108)
+[temp/components/src/base-types/base-types.ts:112](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L112)
 
 ## Methods
 
@@ -62,4 +62,4 @@ instance, a renderer component will make a render each frame.
 
 #### Defined in
 
-[src/base-types/base-types.ts:114](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L114)
+[temp/components/src/base-types/base-types.ts:118](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L118)

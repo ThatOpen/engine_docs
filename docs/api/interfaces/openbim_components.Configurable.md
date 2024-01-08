@@ -17,6 +17,7 @@ Whether this component supports to be configured.
 
 ## Implemented by
 
+- [`ScreenCuller`](../classes/openbim_components.ScreenCuller.md)
 - [`SimpleScene`](../classes/openbim_components.SimpleScene.md)
 
 ## Properties
@@ -30,7 +31,7 @@ to make changes to this object, use [()](openbim_components.Configurable.md#setu
 
 #### Defined in
 
-[src/base-types/base-types.ts:181](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L181)
+[temp/components/src/base-types/base-types.ts:185](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L185)
 
 ___
 
@@ -42,7 +43,7 @@ Fired after successfully calling [()](openbim_components.Configurable.md#setup)
 
 #### Defined in
 
-[src/base-types/base-types.ts:176](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L176)
+[temp/components/src/base-types/base-types.ts:180](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L180)
 
 ___
 
@@ -68,4 +69,4 @@ Use the provided configuration to setup the tool.
 
 #### Defined in
 
-[src/base-types/base-types.ts:173](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L173)
+[temp/components/src/base-types/base-types.ts:177](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L177)

@@ -41,7 +41,7 @@ before starting to create.
 
 #### Defined in
 
-[src/base-types/base-types.ts:153](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L153)
+[temp/components/src/base-types/base-types.ts:157](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L157)
 
 ___
 
@@ -67,7 +67,7 @@ Creates a new instance of an element (e.g. a new Dimension).
 
 #### Defined in
 
-[src/base-types/base-types.ts:135](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L135)
+[temp/components/src/base-types/base-types.ts:139](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L139)
 
 ___
 
@@ -93,7 +93,7 @@ Deletes an existing instance of an element (e.g. a Dimension).
 
 #### Defined in
 
-[src/base-types/base-types.ts:162](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L162)
+[temp/components/src/base-types/base-types.ts:166](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L166)
 
 ___
 
@@ -120,7 +120,7 @@ instance of whatever the component creates.
 
 #### Defined in
 
-[src/base-types/base-types.ts:144](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L144)
+[temp/components/src/base-types/base-types.ts:148](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L148)
 
 ___
 
@@ -132,7 +132,7 @@ Fired after calling [Createable.cancelCreation](openbim_components.Createable.md
 
 #### Defined in
 
-[src/base-types/base-types.ts:156](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L156)
+[temp/components/src/base-types/base-types.ts:160](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L160)
 
 ___
 
@@ -144,7 +144,7 @@ Fired after successfully calling [Createable.create](openbim_components.Createab
 
 #### Defined in
 
-[src/base-types/base-types.ts:138](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L138)
+[temp/components/src/base-types/base-types.ts:142](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L142)
 
 ___
 
@@ -156,7 +156,7 @@ Fired after successfully calling [()](openbim_components.Createable.md#delete)
 
 #### Defined in
 
-[src/base-types/base-types.ts:165](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L165)
+[temp/components/src/base-types/base-types.ts:169](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L169)
 
 ___
 
@@ -168,7 +168,7 @@ Fired before calling [Createable.cancelCreation](openbim_components.Createable.m
 
 #### Defined in
 
-[src/base-types/base-types.ts:147](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L147)
+[temp/components/src/base-types/base-types.ts:151](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L151)
 
 ___
 
@@ -180,4 +180,4 @@ Fired before calling [Createable.delete](openbim_components.Createable.md#delete
 
 #### Defined in
 
-[src/base-types/base-types.ts:159](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L159)
+[temp/components/src/base-types/base-types.ts:163](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L163)

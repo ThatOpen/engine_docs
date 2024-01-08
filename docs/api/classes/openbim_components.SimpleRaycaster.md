@@ -35,7 +35,7 @@ BaseRaycaster.enabled
 
 #### Defined in
 
-[src/core/SimpleRaycaster/index.ts:13](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRaycaster/index.ts#L13)
+[temp/components/src/core/SimpleRaycaster/index.ts:13](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L13)
 
 ___
 
@@ -47,7 +47,27 @@ The position of the mouse in the screen.
 
 #### Defined in
 
-[src/core/SimpleRaycaster/index.ts:16](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRaycaster/index.ts#L16)
+[temp/components/src/core/SimpleRaycaster/index.ts:19](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L19)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`undefined`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Overrides
+
+BaseRaycaster.onDisposed
+
+#### Defined in
+
+[temp/components/src/core/SimpleRaycaster/index.ts:16](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L16)
 
 ## Methods
 
@@ -75,7 +95,7 @@ BaseRaycaster.castRay
 
 #### Defined in
 
-[src/core/SimpleRaycaster/index.ts:46](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRaycaster/index.ts#L46)
+[temp/components/src/core/SimpleRaycaster/index.ts:51](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L51)
 
 ___
 
@@ -99,7 +119,7 @@ BaseRaycaster.dispose
 
 #### Defined in
 
-[src/core/SimpleRaycaster/index.ts:33](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRaycaster/index.ts#L33)
+[temp/components/src/core/SimpleRaycaster/index.ts:36](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L36)
 
 ___
 
@@ -119,7 +139,7 @@ BaseRaycaster.get
 
 #### Defined in
 
-[src/core/SimpleRaycaster/index.ts:28](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRaycaster/index.ts#L28)
+[temp/components/src/core/SimpleRaycaster/index.ts:31](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L31)
 
 ___
 
@@ -139,7 +159,7 @@ BaseRaycaster.hasUI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -159,7 +179,7 @@ BaseRaycaster.isConfigurable
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -179,7 +199,7 @@ BaseRaycaster.isDisposeable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -199,7 +219,7 @@ BaseRaycaster.isHideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -219,7 +239,7 @@ BaseRaycaster.isResizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -239,4 +259,4 @@ BaseRaycaster.isUpdateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)

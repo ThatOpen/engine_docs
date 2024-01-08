@@ -34,7 +34,23 @@ it's fast, and should suffice for general use cases such as camera zooming or ge
 
 #### Defined in
 
-[src/fragments/FragmentBoundingBox/index.ts:15](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentBoundingBox/index.ts#L15)
+[temp/components/src/fragments/FragmentBoundingBox/index.ts:17](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentBoundingBox/index.ts#L17)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/fragments/FragmentBoundingBox/index.ts:20](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentBoundingBox/index.ts#L20)
 
 ## Methods
 
@@ -54,7 +70,7 @@ it's fast, and should suffice for general use cases such as camera zooming or ge
 
 #### Defined in
 
-[src/fragments/FragmentBoundingBox/index.ts:68](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentBoundingBox/index.ts#L68)
+[temp/components/src/fragments/FragmentBoundingBox/index.ts:73](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentBoundingBox/index.ts#L73)
 
 ___
 
@@ -74,7 +90,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -94,7 +110,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -114,7 +130,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -134,7 +150,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -154,7 +170,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -174,4 +190,4 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)

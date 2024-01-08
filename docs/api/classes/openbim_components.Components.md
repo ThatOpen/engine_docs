@@ -12,6 +12,10 @@ It contains the basic items to create a BIM 3D scene based on Three.js, as
 well as all the tools provided by this library. It also manages the update
 loop of everything. Each instance has to be initialized with [init](openbim_components.Components.md#init).
 
+## Implements
+
+- [`Disposable`](../interfaces/openbim_components.Disposable.md)
+
 ## Properties
 
 ### meshes
@@ -23,7 +27,23 @@ This includes fragments, 3D scans, etc.
 
 #### Defined in
 
-[src/core/Components/index.ts:29](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L29)
+[temp/components/src/core/Components/index.ts:29](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L29)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/Components/index.ts:38](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L38)
 
 ___
 
@@ -36,7 +56,7 @@ ready to work (scene, camera and renderer are ready).
 
 #### Defined in
 
-[src/core/Components/index.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L35)
+[temp/components/src/core/Components/index.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L35)
 
 ___
 
@@ -48,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/core/Components/index.ts:23](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L23)
+[temp/components/src/core/Components/index.ts:23](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L23)
 
 ___
 
@@ -60,7 +80,7 @@ Whether UI components should be created.
 
 #### Defined in
 
-[src/core/Components/index.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L40)
+[temp/components/src/core/Components/index.ts:43](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L43)
 
 ## Accessors
 
@@ -77,7 +97,7 @@ that determines the point of view of the renderer.
 
 #### Defined in
 
-[src/core/Components/index.ts:98](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L98)
+[temp/components/src/core/Components/index.ts:101](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L101)
 
 • `set` **camera**(`camera`): `void`
 
@@ -95,7 +115,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-[src/core/Components/index.ts:108](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L108)
+[temp/components/src/core/Components/index.ts:111](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L111)
 
 ___
 
@@ -112,7 +132,7 @@ used primarily to pick 3D items with the mouse or a touch screen.
 
 #### Defined in
 
-[src/core/Components/index.ts:116](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L116)
+[temp/components/src/core/Components/index.ts:119](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L119)
 
 • `set` **raycaster**(`raycaster`): `void`
 
@@ -131,7 +151,7 @@ to initialize this if any component that needs a raycaster is used.
 
 #### Defined in
 
-[src/core/Components/index.ts:127](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L127)
+[temp/components/src/core/Components/index.ts:130](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L130)
 
 ___
 
@@ -149,7 +169,7 @@ components with pre-made functionality (e.g. rendering of 2D CSS elements.
 
 #### Defined in
 
-[src/core/Components/index.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L62)
+[temp/components/src/core/Components/index.ts:65](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L65)
 
 • `set` **renderer**(`renderer`): `void`
 
@@ -167,7 +187,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-[src/core/Components/index.ts:72](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L72)
+[temp/components/src/core/Components/index.ts:75](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L75)
 
 ___
 
@@ -184,7 +204,7 @@ where all the rendered items are placed.
 
 #### Defined in
 
-[src/core/Components/index.ts:80](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L80)
+[temp/components/src/core/Components/index.ts:83](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L83)
 
 • `set` **scene**(`scene`): `void`
 
@@ -202,7 +222,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-[src/core/Components/index.ts:90](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L90)
+[temp/components/src/core/Components/index.ts:93](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L93)
 
 ___
 
@@ -218,7 +238,7 @@ ___
 
 #### Defined in
 
-[src/core/Components/index.ts:50](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L50)
+[temp/components/src/core/Components/index.ts:53](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L53)
 
 ## Methods
 
@@ -243,9 +263,13 @@ You can learn more about how Three.js handles memory leaks
 
 `Promise`<`void`\>
 
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[dispose](../interfaces/openbim_components.Disposable.md#dispose)
+
 #### Defined in
 
-[src/core/Components/index.ts:169](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L169)
+[temp/components/src/core/Components/index.ts:172](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L172)
 
 ___
 
@@ -264,4 +288,4 @@ used, the [raycaster](openbim_components.Components.md#raycaster) will need to b
 
 #### Defined in
 
-[src/core/Components/index.ts:143](https://github.com/ifcjs/components/blob/e46138a/src/core/Components/index.ts#L143)
+[temp/components/src/core/Components/index.ts:146](https://github.com/IFCjs/components/blob/0c38d20/src/core/Components/index.ts#L146)

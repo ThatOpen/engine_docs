@@ -41,7 +41,7 @@ Add a callback to this event instance.
 
 #### Defined in
 
-[src/base-types/base-types.ts:18](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L18)
+[temp/components/src/base-types/base-types.ts:19](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L19)
 
 ___
 
@@ -63,7 +63,7 @@ Removes a callback from this event instance.
 
 #### Defined in
 
-[src/base-types/base-types.ts:26](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L26)
+[temp/components/src/base-types/base-types.ts:27](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L27)
 
 ___
 
@@ -79,7 +79,7 @@ Gets rid of all the suscribed events.
 
 #### Defined in
 
-[src/base-types/base-types.ts:39](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L39)
+[temp/components/src/base-types/base-types.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L40)
 
 ___
 
@@ -101,4 +101,4 @@ Triggers all the callbacks assigned to this event.
 
 #### Defined in
 
-[src/base-types/base-types.ts:31](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L31)
+[temp/components/src/base-types/base-types.ts:32](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L32)

@@ -19,6 +19,7 @@ that are not visible to the camera.
 ## Implements
 
 - [`Disposable`](../interfaces/openbim_components.Disposable.md)
+- [`Configurable`](../interfaces/openbim_components.Configurable.md)<`ScreenCullerConfig`\>
 
 ## Properties
 
@@ -34,7 +35,7 @@ that are not visible to the camera.
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:25](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L25)
+[temp/components/src/core/ScreenCuller/index.ts:38](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L38)
 
 ___
 
@@ -47,7 +48,23 @@ You can bind this to the camera movement, to a certain interval, etc.
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:31](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L31)
+[temp/components/src/core/ScreenCuller/index.ts:44](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L44)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/ScreenCuller/index.ts:32](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L32)
 
 ___
 
@@ -59,7 +76,7 @@ Fires after hiding the objects that were not visible to the camera.
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:22](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L22)
+[temp/components/src/core/ScreenCuller/index.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L35)
 
 ___
 
@@ -72,7 +89,7 @@ for debugging purposes.
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:37](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L37)
+[temp/components/src/core/ScreenCuller/index.ts:50](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L50)
 
 ## Methods
 
@@ -98,7 +115,7 @@ the mesh or instanced mesh to add.
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:146](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L146)
+[temp/components/src/core/ScreenCuller/index.ts:169](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L169)
 
 ___
 
@@ -118,7 +135,7 @@ ___
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:112](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L112)
+[temp/components/src/core/ScreenCuller/index.ts:132](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L132)
 
 ___
 
@@ -140,7 +157,7 @@ the map of internal meshes used to determine visibility.
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:107](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L107)
+[temp/components/src/core/ScreenCuller/index.ts:127](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L127)
 
 ___
 
@@ -160,7 +177,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -180,7 +197,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -200,7 +217,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -220,7 +237,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -240,7 +257,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -260,7 +277,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -283,4 +300,4 @@ better to call needsUpdate, but you can also call this to force it.
 
 #### Defined in
 
-[src/core/ScreenCuller/index.ts:213](https://github.com/ifcjs/components/blob/e46138a/src/core/ScreenCuller/index.ts#L213)
+[temp/components/src/core/ScreenCuller/index.ts:251](https://github.com/IFCjs/components/blob/0c38d20/src/core/ScreenCuller/index.ts#L251)

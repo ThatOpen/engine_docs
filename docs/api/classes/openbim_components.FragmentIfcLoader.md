@@ -23,6 +23,22 @@ the IFC file.
 - [`Disposable`](../interfaces/openbim_components.Disposable.md)
 - [`UI`](../interfaces/openbim_components.UI.md)
 
+## Properties
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/fragments/FragmentIfcLoader/index.ts:25](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentIfcLoader/index.ts#L25)
+
 ## Methods
 
 ### dispose
@@ -41,7 +57,7 @@ the IFC file.
 
 #### Defined in
 
-[src/fragments/FragmentIfcLoader/index.ts:59](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentIfcLoader/index.ts#L59)
+[temp/components/src/fragments/FragmentIfcLoader/index.ts:63](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentIfcLoader/index.ts#L63)
 
 ___
 
@@ -61,7 +77,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -81,7 +97,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -101,7 +117,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -121,7 +137,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -141,7 +157,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -161,7 +177,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -184,4 +200,4 @@ Loads the IFC file and converts it to a set of fragments.
 
 #### Defined in
 
-[src/fragments/FragmentIfcLoader/index.ts:71](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentIfcLoader/index.ts#L71)
+[temp/components/src/fragments/FragmentIfcLoader/index.ts:77](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentIfcLoader/index.ts#L77)

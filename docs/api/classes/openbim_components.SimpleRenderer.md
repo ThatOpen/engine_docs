@@ -41,7 +41,7 @@ instance of the renderer.
 
 #### Defined in
 
-[src/base-types/base-renderer.ts:33](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-renderer.ts#L33)
+[temp/components/src/base-types/base-renderer.ts:33](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-renderer.ts#L33)
 
 ___
 
@@ -53,7 +53,7 @@ The HTML container of the THREE.js canvas where the scene is rendered.
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:26](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L26)
+[temp/components/src/core/SimpleRenderer/index.ts:26](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L26)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:23](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L23)
+[temp/components/src/core/SimpleRenderer/index.ts:23](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L23)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:32](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L32)
+[temp/components/src/core/SimpleRenderer/index.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L35)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:29](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L29)
+[temp/components/src/core/SimpleRenderer/index.ts:32](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L32)
 
 ___
 
@@ -118,7 +118,23 @@ planes used by the active renderer.
 
 #### Defined in
 
-[src/base-types/base-renderer.ts:27](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-renderer.ts#L27)
+[temp/components/src/base-types/base-renderer.ts:27](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-renderer.ts#L27)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`undefined`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/SimpleRenderer/index.ts:29](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L29)
 
 ___
 
@@ -138,7 +154,7 @@ ___
 
 #### Defined in
 
-[src/base-types/base-renderer.ts:21](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-renderer.ts#L21)
+[temp/components/src/base-types/base-renderer.ts:21](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-renderer.ts#L21)
 
 ## Methods
 
@@ -158,7 +174,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:89](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L89)
+[temp/components/src/core/SimpleRenderer/index.ts:92](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L92)
 
 ___
 
@@ -178,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:72](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L72)
+[temp/components/src/core/SimpleRenderer/index.ts:75](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L75)
 
 ___
 
@@ -202,7 +218,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:101](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L101)
+[temp/components/src/core/SimpleRenderer/index.ts:106](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L106)
 
 ___
 
@@ -222,7 +238,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -242,7 +258,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -262,7 +278,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -282,7 +298,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -302,7 +318,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -322,7 +338,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -352,7 +368,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:109](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L109)
+[temp/components/src/core/SimpleRenderer/index.ts:114](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L114)
 
 ___
 
@@ -382,7 +398,7 @@ to the renderer.
 
 #### Defined in
 
-[src/base-types/base-renderer.ts:48](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-renderer.ts#L48)
+[temp/components/src/base-types/base-renderer.ts:48](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-renderer.ts#L48)
 
 ___
 
@@ -402,7 +418,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleRenderer/index.ts:77](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleRenderer/index.ts#L77)
+[temp/components/src/core/SimpleRenderer/index.ts:80](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleRenderer/index.ts#L80)
 
 ___
 
@@ -423,4 +439,4 @@ on them that are subscribed to `onClippingPlanesUpdated`.
 
 #### Defined in
 
-[src/base-types/base-renderer.ts:39](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-renderer.ts#L39)
+[temp/components/src/base-types/base-renderer.ts:39](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-renderer.ts#L39)

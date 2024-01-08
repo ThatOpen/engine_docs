@@ -36,7 +36,23 @@ fetched from the cloud.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:24](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L24)
+[temp/components/src/core/LocalCacher/index.ts:31](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L31)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/LocalCacher/index.ts:28](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L28)
 
 ___
 
@@ -48,7 +64,7 @@ Fires when a file has been loaded from cache.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:18](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L18)
+[temp/components/src/core/LocalCacher/index.ts:22](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L22)
 
 ___
 
@@ -60,7 +76,7 @@ Fires when a file has been saved into cache.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:21](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L21)
+[temp/components/src/core/LocalCacher/index.ts:25](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L25)
 
 ___
 
@@ -76,7 +92,7 @@ ___
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:27](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L27)
+[temp/components/src/core/LocalCacher/index.ts:34](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L34)
 
 ## Accessors
 
@@ -92,7 +108,7 @@ The IDs of all the stored files.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L40)
+[temp/components/src/core/LocalCacher/index.ts:47](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L47)
 
 ## Methods
 
@@ -114,7 +130,7 @@ Deletes the files stored in the given ids.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:99](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L99)
+[temp/components/src/core/LocalCacher/index.ts:106](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L106)
 
 ___
 
@@ -130,7 +146,7 @@ Deletes all the stored files.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:111](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L111)
+[temp/components/src/core/LocalCacher/index.ts:118](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L118)
 
 ___
 
@@ -150,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:120](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L120)
+[temp/components/src/core/LocalCacher/index.ts:127](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L127)
 
 ___
 
@@ -172,7 +188,7 @@ Checks if there's a file stored with the given ID.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:90](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L90)
+[temp/components/src/core/LocalCacher/index.ts:97](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L97)
 
 ___
 
@@ -198,7 +214,7 @@ ___
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:58](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L58)
+[temp/components/src/core/LocalCacher/index.ts:65](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L65)
 
 ___
 
@@ -218,7 +234,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -238,7 +254,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -258,7 +274,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -278,7 +294,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -298,7 +314,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -318,7 +334,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -341,4 +357,4 @@ Saves the file with the given ID.
 
 #### Defined in
 
-[src/core/LocalCacher/index.ts:74](https://github.com/ifcjs/components/blob/e46138a/src/core/LocalCacher/index.ts#L74)
+[temp/components/src/core/LocalCacher/index.ts:81](https://github.com/IFCjs/components/blob/0c38d20/src/core/LocalCacher/index.ts#L81)

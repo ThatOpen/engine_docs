@@ -34,7 +34,23 @@ objects and scene background easily.
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:17](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L17)
+[temp/components/src/core/MaterialManager/index.ts:17](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L17)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/MaterialManager/index.ts:22](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L22)
 
 ## Methods
 
@@ -57,7 +73,7 @@ Creates a new material style.
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:120](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L120)
+[temp/components/src/core/MaterialManager/index.ts:125](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L125)
 
 ___
 
@@ -80,7 +96,7 @@ Assign meshes to a certain style.
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:132](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L132)
+[temp/components/src/core/MaterialManager/index.ts:137](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L137)
 
 ___
 
@@ -100,7 +116,7 @@ ___
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:80](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L80)
+[temp/components/src/core/MaterialManager/index.ts:83](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L83)
 
 ___
 
@@ -122,7 +138,7 @@ list of created materials.
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:44](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L44)
+[temp/components/src/core/MaterialManager/index.ts:47](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L47)
 
 ___
 
@@ -142,7 +158,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -162,7 +178,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -182,7 +198,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -202,7 +218,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -222,7 +238,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -242,7 +258,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -259,7 +275,7 @@ before applying the material manager.
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:108](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L108)
+[temp/components/src/core/MaterialManager/index.ts:113](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L113)
 
 ___
 
@@ -282,7 +298,7 @@ Turns the specified material styles on or off.
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:54](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L54)
+[temp/components/src/core/MaterialManager/index.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L57)
 
 ___
 
@@ -304,4 +320,4 @@ Sets the color of the background of the scene.
 
 #### Defined in
 
-[src/core/MaterialManager/index.ts:94](https://github.com/ifcjs/components/blob/e46138a/src/core/MaterialManager/index.ts#L94)
+[temp/components/src/core/MaterialManager/index.ts:99](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L99)

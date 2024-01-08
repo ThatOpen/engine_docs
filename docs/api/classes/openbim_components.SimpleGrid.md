@@ -37,7 +37,23 @@ and translated to typescript by
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:21](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L21)
+[temp/components/src/core/SimpleGrid/index.ts:24](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L24)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/SimpleGrid/index.ts:21](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L21)
 
 ## Accessors
 
@@ -54,7 +70,7 @@ perspective cameras and false for orthographic cameras.
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:47](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L47)
+[temp/components/src/core/SimpleGrid/index.ts:50](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L50)
 
 • `set` **fade**(`active`): `void`
 
@@ -73,7 +89,7 @@ perspective cameras and false for orthographic cameras.
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:55](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L55)
+[temp/components/src/core/SimpleGrid/index.ts:58](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L58)
 
 ___
 
@@ -89,7 +105,7 @@ The material of the grid.
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:39](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L39)
+[temp/components/src/core/SimpleGrid/index.ts:42](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L42)
 
 ___
 
@@ -109,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:24](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L24)
+[temp/components/src/core/SimpleGrid/index.ts:27](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L27)
 
 • `set` **visible**(`visible`): `void`
 
@@ -131,7 +147,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:29](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L29)
+[temp/components/src/core/SimpleGrid/index.ts:32](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L32)
 
 ## Methods
 
@@ -151,7 +167,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:186](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L186)
+[temp/components/src/core/SimpleGrid/index.ts:189](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L189)
 
 ___
 
@@ -171,7 +187,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleGrid/index.ts:181](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleGrid/index.ts#L181)
+[temp/components/src/core/SimpleGrid/index.ts:184](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleGrid/index.ts#L184)
 
 ___
 
@@ -191,7 +207,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -211,7 +227,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -231,7 +247,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -251,7 +267,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -271,7 +287,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -291,4 +307,4 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
