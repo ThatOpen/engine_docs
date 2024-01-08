@@ -19,7 +19,7 @@ The amount of things that have been done already.
 
 #### Defined in
 
-[src/base-types/base-types.ts:120](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L120)
+[temp/components/src/base-types/base-types.ts:124](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L124)
 
 ___
 
@@ -31,4 +31,4 @@ The total amount of things to be done by the process.
 
 #### Defined in
 
-[src/base-types/base-types.ts:123](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L123)
+[temp/components/src/base-types/base-types.ts:127](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L127)

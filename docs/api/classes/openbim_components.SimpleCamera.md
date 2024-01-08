@@ -35,7 +35,7 @@ The camera that is being used now according to the current [CameraProjection](..
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L45)
+[temp/components/src/core/SimpleCamera/index.ts:48](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L48)
 
 ___
 
@@ -50,7 +50,7 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:30](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L30)
+[temp/components/src/core/SimpleCamera/index.ts:33](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L33)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:20](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L20)
+[temp/components/src/core/SimpleCamera/index.ts:20](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L20)
 
 ___
 
@@ -82,7 +82,23 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:17](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L17)
+[temp/components/src/core/SimpleCamera/index.ts:17](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L17)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/SimpleCamera/index.ts:25](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L25)
 
 ## Accessors
 
@@ -102,7 +118,7 @@ Component.enabled
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:33](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L33)
+[temp/components/src/core/SimpleCamera/index.ts:36](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L36)
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -124,7 +140,7 @@ Component.enabled
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:38](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L38)
+[temp/components/src/core/SimpleCamera/index.ts:41](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L41)
 
 ## Methods
 
@@ -144,7 +160,7 @@ Component.enabled
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:65](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L65)
+[temp/components/src/core/SimpleCamera/index.ts:68](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L68)
 
 ___
 
@@ -164,7 +180,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:60](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L60)
+[temp/components/src/core/SimpleCamera/index.ts:63](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L63)
 
 ___
 
@@ -184,7 +200,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -204,7 +220,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -224,7 +240,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -244,7 +260,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -264,7 +280,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -284,7 +300,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -310,7 +326,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:76](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L76)
+[temp/components/src/core/SimpleCamera/index.ts:81](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L81)
 
 ___
 
@@ -327,4 +343,4 @@ Updates the aspect of the camera to match the size of the
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:88](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleCamera/index.ts#L88)
+[temp/components/src/core/SimpleCamera/index.ts:93](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleCamera/index.ts#L93)

@@ -31,4 +31,4 @@ currently visible or not in the
 
 #### Defined in
 
-[src/base-types/base-types.ts:73](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L73)
+[temp/components/src/base-types/base-types.ts:77](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L77)

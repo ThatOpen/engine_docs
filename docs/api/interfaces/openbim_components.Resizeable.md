@@ -39,7 +39,7 @@ component.
 
 #### Defined in
 
-[src/base-types/base-types.ts:99](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L99)
+[temp/components/src/base-types/base-types.ts:103](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L103)
 
 ___
 
@@ -51,7 +51,7 @@ Event that fires when the component has been resized.
 
 #### Defined in
 
-[src/base-types/base-types.ts:92](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L92)
+[temp/components/src/base-types/base-types.ts:96](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L96)
 
 ___
 
@@ -79,4 +79,4 @@ component.
 
 #### Defined in
 
-[src/base-types/base-types.ts:89](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L89)
+[temp/components/src/base-types/base-types.ts:93](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L93)

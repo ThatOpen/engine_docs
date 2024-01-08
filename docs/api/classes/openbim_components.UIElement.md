@@ -31,7 +31,7 @@ inside.
 
 #### Defined in
 
-[src/base-types/ui-element.ts:37](https://github.com/ifcjs/components/blob/e46138a/src/base-types/ui-element.ts#L37)
+[temp/components/src/base-types/ui-element.ts:37](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/ui-element.ts#L37)
 
 ___
 
@@ -60,7 +60,7 @@ throw an error.
 
 #### Defined in
 
-[src/base-types/ui-element.ts:17](https://github.com/ifcjs/components/blob/e46138a/src/base-types/ui-element.ts#L17)
+[temp/components/src/base-types/ui-element.ts:17](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/ui-element.ts#L17)
 
 ___
 
@@ -82,4 +82,4 @@ Sets all the UI components of this instance.
 
 #### Defined in
 
-[src/base-types/ui-element.ts:29](https://github.com/ifcjs/components/blob/e46138a/src/base-types/ui-element.ts#L29)
+[temp/components/src/base-types/ui-element.ts:29](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/ui-element.ts#L29)

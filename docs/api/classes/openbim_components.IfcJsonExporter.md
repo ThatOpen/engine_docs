@@ -38,4 +38,4 @@ ID of the IFC model whose properties to extract.
 
 #### Defined in
 
-[src/ifc/IfcJsonExporter/index.ts:21](https://github.com/ifcjs/components/blob/e46138a/src/ifc/IfcJsonExporter/index.ts#L21)
+[temp/components/src/ifc/IfcJsonExporter/index.ts:21](https://github.com/IFCjs/components/blob/0c38d20/src/ifc/IfcJsonExporter/index.ts#L21)

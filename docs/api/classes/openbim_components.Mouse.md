@@ -16,6 +16,22 @@ been transformed through CSS or doesn't occupy the whole screen.
 
 - [`Disposable`](../interfaces/openbim_components.Disposable.md)
 
+## Properties
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`undefined`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/base-types/mouse.ts:15](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/mouse.ts#L15)
+
 ## Accessors
 
 ### position
@@ -30,7 +46,7 @@ The real position of the mouse of the Three.js canvas.
 
 #### Defined in
 
-[src/base-types/mouse.ts:21](https://github.com/ifcjs/components/blob/e46138a/src/base-types/mouse.ts#L21)
+[temp/components/src/base-types/mouse.ts:24](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/mouse.ts#L24)
 
 ## Methods
 
@@ -50,4 +66,4 @@ The real position of the mouse of the Three.js canvas.
 
 #### Defined in
 
-[src/base-types/mouse.ts:31](https://github.com/ifcjs/components/blob/e46138a/src/base-types/mouse.ts#L31)
+[temp/components/src/base-types/mouse.ts:34](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/mouse.ts#L34)

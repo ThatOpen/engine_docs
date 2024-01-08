@@ -15,6 +15,7 @@ cleaned up.
 
 ## Implemented by
 
+- [`Components`](../classes/openbim_components.Components.md)
 - [`CubeMap`](../classes/openbim_components.CubeMap.md)
 - [`FragmentBoundingBox`](../classes/openbim_components.FragmentBoundingBox.md)
 - [`FragmentIfcLoader`](../classes/openbim_components.FragmentIfcLoader.md)
@@ -55,4 +56,16 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-[src/base-types/base-types.ts:59](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L59)
+[temp/components/src/base-types/base-types.ts:60](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L60)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](../classes/openbim_components.Event.md)<`any`\>
+
+Fired after the tool has been [()](openbim_components.Disposable.md#dispose)
+
+#### Defined in
+
+[temp/components/src/base-types/base-types.ts:63](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L63)

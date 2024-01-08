@@ -54,7 +54,7 @@ E.g. [SimplePlane](openbim_components.SimplePlane.md).
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L35)
+[temp/components/src/core/SimpleClipper/index.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L35)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:38](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L38)
+[temp/components/src/core/SimpleClipper/index.ts:38](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L38)
 
 ___
 
@@ -82,7 +82,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:44](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L44)
+[temp/components/src/core/SimpleClipper/index.ts:44](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L44)
 
 ___
 
@@ -94,7 +94,23 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:41](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L41)
+[temp/components/src/core/SimpleClipper/index.ts:41](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L41)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/SimpleClipper/index.ts:73](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L73)
 
 ___
 
@@ -109,7 +125,7 @@ slope for draining purposes.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:60](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L60)
+[temp/components/src/core/SimpleClipper/index.ts:60](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L60)
 
 ___
 
@@ -123,7 +139,7 @@ has to be `true` for this to apply.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:67](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L67)
+[temp/components/src/core/SimpleClipper/index.ts:67](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L67)
 
 ___
 
@@ -139,7 +155,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L52)
+[temp/components/src/core/SimpleClipper/index.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L52)
 
 ## Accessors
 
@@ -159,7 +175,7 @@ Component.enabled
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:85](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L85)
+[temp/components/src/core/SimpleClipper/index.ts:88](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L88)
 
 • `set` **enabled**(`state`): `void`
 
@@ -181,7 +197,7 @@ Component.enabled
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:90](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L90)
+[temp/components/src/core/SimpleClipper/index.ts:93](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L93)
 
 ___
 
@@ -197,7 +213,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:115](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L115)
+[temp/components/src/core/SimpleClipper/index.ts:118](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L118)
 
 • `set` **material**(`material`): `void`
 
@@ -215,7 +231,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:120](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L120)
+[temp/components/src/core/SimpleClipper/index.ts:123](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L123)
 
 ___
 
@@ -231,7 +247,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:128](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L128)
+[temp/components/src/core/SimpleClipper/index.ts:131](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L131)
 
 • `set` **size**(`size`): `void`
 
@@ -249,7 +265,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:133](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L133)
+[temp/components/src/core/SimpleClipper/index.ts:136](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L136)
 
 ___
 
@@ -269,7 +285,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:102](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L102)
+[temp/components/src/core/SimpleClipper/index.ts:105](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L105)
 
 • `set` **visible**(`state`): `void`
 
@@ -291,7 +307,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:107](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L107)
+[temp/components/src/core/SimpleClipper/index.ts:110](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L110)
 
 ## Methods
 
@@ -311,7 +327,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:179](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L179)
+[temp/components/src/core/SimpleClipper/index.ts:184](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L184)
 
 ___
 
@@ -335,7 +351,7 @@ without the need of the mouse.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:195](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L195)
+[temp/components/src/core/SimpleClipper/index.ts:200](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L200)
 
 ___
 
@@ -361,7 +377,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:210](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L210)
+[temp/components/src/core/SimpleClipper/index.ts:215](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L215)
 
 ___
 
@@ -377,7 +393,7 @@ Deletes all the existing clipping planes.
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:222](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L222)
+[temp/components/src/core/SimpleClipper/index.ts:227](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L227)
 
 ___
 
@@ -397,7 +413,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:160](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L160)
+[temp/components/src/core/SimpleClipper/index.ts:163](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L163)
 
 ___
 
@@ -417,7 +433,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/index.ts:155](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleClipper/index.ts#L155)
+[temp/components/src/core/SimpleClipper/index.ts:158](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleClipper/index.ts#L158)
 
 ___
 
@@ -437,7 +453,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -457,7 +473,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -477,7 +493,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -497,7 +513,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -517,7 +533,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -537,4 +553,4 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)

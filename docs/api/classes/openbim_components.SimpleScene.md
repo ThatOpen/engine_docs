@@ -37,7 +37,23 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[src/core/SimpleScene/index.ts:28](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleScene/index.ts#L28)
+[temp/components/src/core/SimpleScene/index.ts:28](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L28)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`undefined`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/SimpleScene/index.ts:31](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L31)
 
 ## Methods
 
@@ -57,7 +73,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[src/core/SimpleScene/index.ts:44](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleScene/index.ts#L44)
+[temp/components/src/core/SimpleScene/index.ts:47](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L47)
 
 ___
 
@@ -77,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleScene/index.ts:39](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleScene/index.ts#L39)
+[temp/components/src/core/SimpleScene/index.ts:42](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L42)
 
 ___
 
@@ -97,7 +113,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -117,7 +133,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -137,7 +153,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -157,7 +173,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -177,7 +193,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -197,7 +213,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -223,4 +239,4 @@ Creates a simple and nice default set up for the scene (e.g. lighting).
 
 #### Defined in
 
-[src/core/SimpleScene/index.ts:69](https://github.com/ifcjs/components/blob/e46138a/src/core/SimpleScene/index.ts#L69)
+[temp/components/src/core/SimpleScene/index.ts:74](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L74)

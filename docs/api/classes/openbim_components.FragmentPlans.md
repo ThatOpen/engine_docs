@@ -30,7 +30,7 @@ The floorplan that is currently selected.
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:41](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L41)
+[temp/components/src/fragments/FragmentPlans/index.ts:44](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L44)
 
 ___
 
@@ -42,7 +42,7 @@ The offset of the 2D camera to the floor plan elevation.
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:47](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L47)
+[temp/components/src/fragments/FragmentPlans/index.ts:50](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L50)
 
 ___
 
@@ -54,7 +54,7 @@ The offset from the clipping planes to their respective floor plan elevation.
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:44](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L44)
+[temp/components/src/fragments/FragmentPlans/index.ts:47](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L47)
 
 ___
 
@@ -70,7 +70,23 @@ ___
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:38](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L38)
+[temp/components/src/fragments/FragmentPlans/index.ts:41](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L41)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`string`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/fragments/FragmentPlans/index.ts:34](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L34)
 
 ___
 
@@ -86,7 +102,7 @@ The created floor plans.
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:50](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L50)
+[temp/components/src/fragments/FragmentPlans/index.ts:53](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L53)
 
 ___
 
@@ -102,7 +118,7 @@ ___
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:55](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L55)
+[temp/components/src/fragments/FragmentPlans/index.ts:58](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L58)
 
 ## Methods
 
@@ -124,7 +140,7 @@ Creates a new floor plan in the navigator.
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:150](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L150)
+[temp/components/src/fragments/FragmentPlans/index.ts:155](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L155)
 
 ___
 
@@ -144,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:96](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L96)
+[temp/components/src/fragments/FragmentPlans/index.ts:99](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L99)
 
 ___
 
@@ -166,7 +182,7 @@ Deactivate navigator and go back to the previous view.
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:194](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L194)
+[temp/components/src/fragments/FragmentPlans/index.ts:199](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L199)
 
 ___
 
@@ -186,7 +202,7 @@ ___
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:91](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L91)
+[temp/components/src/fragments/FragmentPlans/index.ts:94](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L94)
 
 ___
 
@@ -209,7 +225,7 @@ Make the navigator go to the specified floor plan.
 
 #### Defined in
 
-[src/fragments/FragmentPlans/index.ts:169](https://github.com/ifcjs/components/blob/e46138a/src/fragments/FragmentPlans/index.ts#L169)
+[temp/components/src/fragments/FragmentPlans/index.ts:174](https://github.com/IFCjs/components/blob/0c38d20/src/fragments/FragmentPlans/index.ts#L174)
 
 ___
 
@@ -229,7 +245,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -249,7 +265,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -269,7 +285,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -289,7 +305,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -309,7 +325,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -329,4 +345,4 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)

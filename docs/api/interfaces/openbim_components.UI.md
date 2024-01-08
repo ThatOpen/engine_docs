@@ -25,10 +25,10 @@ interface, like a button or a window.
 
 ### uiElement
 
-• `Readonly` **uiElement**: [`UIElement`](../classes/openbim_components.UIElement.md)<`any`\>
+• `Readonly` **uiElement**: [`UIElement`](../classes/openbim_components.UIElement.md)<{ `[name: string]`: `SimpleUIComponent`;  }\>
 
-The class containing all the menus of this component.
+The class containing all the buttons, windows, tables, etc., of this component.
 
 #### Defined in
 
-[src/base-types/base-types.ts:190](https://github.com/ifcjs/components/blob/e46138a/src/base-types/base-types.ts#L190)
+[temp/components/src/base-types/base-types.ts:194](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L194)

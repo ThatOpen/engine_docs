@@ -35,7 +35,7 @@ something through user interaction (e.g. clipping planes, dimensions, etc).
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:28](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L28)
+[temp/components/src/core/ToolsComponent/index.ts:31](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L31)
 
 ___
 
@@ -47,7 +47,23 @@ The list of components created in this app.
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:16](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L16)
+[temp/components/src/core/ToolsComponent/index.ts:16](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L16)
+
+___
+
+### onDisposed
+
+• `Readonly` **onDisposed**: [`Event`](openbim_components.Event.md)<`undefined`\>
+
+[Disposable.onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Implementation of
+
+[Disposable](../interfaces/openbim_components.Disposable.md).[onDisposed](../interfaces/openbim_components.Disposable.md#ondisposed)
+
+#### Defined in
+
+[temp/components/src/core/ToolsComponent/index.ts:19](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L19)
 
 ___
 
@@ -59,7 +75,7 @@ The auth token to get tools from That Open Platform.
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:22](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L22)
+[temp/components/src/core/ToolsComponent/index.ts:25](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L25)
 
 ___
 
@@ -71,7 +87,7 @@ Component.uuid
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:25](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L25)
+[temp/components/src/core/ToolsComponent/index.ts:28](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L28)
 
 ___
 
@@ -83,7 +99,7 @@ The list of UUIDs of all the components in this library.
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:19](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L19)
+[temp/components/src/core/ToolsComponent/index.ts:22](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L22)
 
 ## Methods
 
@@ -106,7 +122,7 @@ Adds a new tool. Use this in the constructor of your tools.
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:55](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L55)
+[temp/components/src/core/ToolsComponent/index.ts:58](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L58)
 
 ___
 
@@ -126,7 +142,7 @@ Disposes all the MEMORY used by all the tools.
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:104](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L104)
+[temp/components/src/core/ToolsComponent/index.ts:107](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L107)
 
 ___
 
@@ -160,7 +176,7 @@ doesn't exist, it will instance it automatically.
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:71](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L71)
+[temp/components/src/core/ToolsComponent/index.ts:74](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L74)
 
 ___
 
@@ -180,7 +196,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -202,7 +218,7 @@ Pass the whole library object as argument.
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:43](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L43)
+[temp/components/src/core/ToolsComponent/index.ts:46](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L46)
 
 ___
 
@@ -222,7 +238,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -242,7 +258,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -262,7 +278,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -282,7 +298,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -302,7 +318,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ifcjs/components/blob/e46138a/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -325,4 +341,4 @@ property [Component.enabled](openbim_components.Component.md#enabled) is true wi
 
 #### Defined in
 
-[src/core/ToolsComponent/index.ts:92](https://github.com/ifcjs/components/blob/e46138a/src/core/ToolsComponent/index.ts#L92)
+[temp/components/src/core/ToolsComponent/index.ts:95](https://github.com/IFCjs/components/blob/0c38d20/src/core/ToolsComponent/index.ts#L95)
