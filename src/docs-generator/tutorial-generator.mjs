@@ -7,7 +7,7 @@ const mdCommentRegex = /\/\*MD([\s\S]*?)\*\//g;
 const codeBlockRegex = /\*\/([\s\S]*?)\/\*MD/g;
 // #endregion
 
-traverseDir("temp/components/src", (_, libFiles) => {
+traverseDir("temp/engine_components/src", (_, libFiles) => {
     const tutorialFiles = libFiles.filter(path => path.match(/index\.html$/));
     generateTutorials(tutorialFiles);
 });
@@ -87,7 +87,7 @@ function getTutorial(html) {
 function getLiveDemo(path) {
     let url = path
         .replaceAll("\\", "/")
-        .replace(/.*docs\/temp\//, "https://ifcjs.github.io/")
+        .replace(/.*docs\/temp\//, "https://thatopen.github.io/")
 
     const baseUrlPattern = /.*github.io\/.*?\//;
     const size = baseUrlPattern.exec(url)[0].length;
