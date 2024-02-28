@@ -27,7 +27,7 @@ The main element to create a mapbox-IFC.js application.
 
 #### Defined in
 
-[temp/components/src/integrations/mapbox/index.ts:27](https://github.com/IFCjs/components/blob/0c38d20/src/integrations/mapbox/index.ts#L27)
+[temp/components/src/integrations/mapbox/index.ts:27](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/integrations/mapbox/index.ts#L27)
 
 ## Methods
 
@@ -50,7 +50,7 @@ Add a new set of buildings to the GIS scene.
 
 #### Defined in
 
-[temp/components/src/integrations/mapbox/index.ts:44](https://github.com/IFCjs/components/blob/0c38d20/src/integrations/mapbox/index.ts#L44)
+[temp/components/src/integrations/mapbox/index.ts:44](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/integrations/mapbox/index.ts#L44)
 
 ___
 
@@ -68,7 +68,7 @@ will be created.
 
 #### Defined in
 
-[temp/components/src/integrations/mapbox/index.ts:107](https://github.com/IFCjs/components/blob/0c38d20/src/integrations/mapbox/index.ts#L107)
+[temp/components/src/integrations/mapbox/index.ts:107](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/integrations/mapbox/index.ts#L107)
 
 ___
 
@@ -90,7 +90,7 @@ Removes a building from the map.
 
 #### Defined in
 
-[temp/components/src/integrations/mapbox/index.ts:81](https://github.com/IFCjs/components/blob/0c38d20/src/integrations/mapbox/index.ts#L81)
+[temp/components/src/integrations/mapbox/index.ts:81](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/integrations/mapbox/index.ts#L81)
 
 ___
 
@@ -106,4 +106,4 @@ Removes all buildings from the map.
 
 #### Defined in
 
-[temp/components/src/integrations/mapbox/index.ts:96](https://github.com/IFCjs/components/blob/0c38d20/src/integrations/mapbox/index.ts#L96)
+[temp/components/src/integrations/mapbox/index.ts:96](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/integrations/mapbox/index.ts#L96)

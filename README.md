@@ -1,41 +1,26 @@
-# Website
+<p align="center">
+  <a href="https://thatopen.com/">TOC</a>
+  |
+  <a href="https://docs.thatopen.com/intro">documentation</a>
+  |
+  <a href="https://platform.thatopen.com/app">demo</a>
+  |
+  <a href="https://people.thatopen.com/">community</a>
+  |
+  <a href="https://www.npmjs.com/package/bim-fragment">npm package</a>
+</p>
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+![cover](resources/cover.png)
 
-### Installation
+<h1>That Open Docs <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"></h1>
 
-```
-$ yarn
-```
 
-### Local Development
+This library contains the official docs for all the libraries of That Open Company.
 
-```
-$ yarn start
-```
+- It uses [docusaurus](https://docusaurus.io/) to build them.
+- It gathers code from our repos and build the API docs using [TypeDoc](https://typedoc.org/).
+- It gathers the HTML examples from our repos and build the tutorials.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+If you see anything outdated in the [docs page](https://docs.thatopen.com/intro), feel free to open an issue. If the issue is specific to a specific repository, please open the issue in that repository!
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+If you have any questions, you can also ask around in our [community](https://people.thatopen.com/).

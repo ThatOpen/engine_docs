@@ -24,19 +24,19 @@ But first, let's get our feet wet with the basics: start using components in one
 
 ## Try them!
 
-We have many libraries of components. The reason is that some of those components are big, and having everything in a single repository would be a mess! However, the main one is [this one](https://github.com/IFCjs/components). You can import it in your project using `npm`, `yarn` or any other package manager of your choice:
+We have many libraries of components. The reason is that some of those components are big, and having everything in a single repository would be a mess! However, the main one is [this one](https://github.com/ThatOpen/engine_components). You can import it in your project using `npm`, `yarn` or any other package manager of your choice:
 
 ```bash
 npm i openbim-components
 ```
 
-Most of our libraries are based on [Three.js](https://threejs.org/), so you'll also need to import it. Make sure it's the [same version](https://github.com/IFCjs/components/blob/main/package.json) as the one used by openbim-components!
+Most of our libraries are based on [Three.js](https://threejs.org/), so you'll also need to import it. Make sure it's the [same version](https://github.com/ThatOpen/engine_components/blob/main/package.json) as the one used by openbim-components!
 
 ```bash
 npm i three
 ```
 
-Finally, you also need to install some peer dependencies. These are other libraries we made and didn't include as regular dependencies to enable more flexible bundling scenarios. Again, make sure it's the [same version](https://github.com/IFCjs/components/blob/main/package.json) as the one used by openbim-components:
+Finally, you also need to install some peer dependencies. These are other libraries we made and didn't include as regular dependencies to enable more flexible bundling scenarios. Again, make sure it's the [same version](https://github.com/ThatOpen/engine_components/blob/main/package.json) as the one used by openbim-components:
 
 ```bash
 npm i bim-fragment
@@ -45,7 +45,7 @@ npm i web-ifc
 
 That's it! Now you are ready to start using components. But where to start? Here you have a nice tutorial to make your first steps and build a 3D app that looks like this in less than 5 minutes:
 
-<iframe src="https://ifcjs.github.io/components/src/core/SimpleScene/index.html"></iframe>
+<iframe src="https://thatopen.github.io/engine_components/src/core/SimpleScene/index.html"></iframe>
 
 Cool, right? But of course, as you can imagine, there's a long way between this simple app and a full-fledged BIM application. If you need some guidance in your journey to discover all the components that we offer, check out the [tutorial paths](tutorial-paths.md). If you want to know more about components, keep reading! 👇
 
@@ -77,7 +77,7 @@ We write all our code in TypeScript and document it with TSDoc. That means that 
 
 All our components are guaranteed to work while using their APIs directly or extending them, and our testing system guarantees that. All the code of all our libraries is unit-tested using AI, Jest, Typescript and human beings 🙂. You can check it for each repository in real time looking at the badge:
 
-<img src='https://github.com/IFCjs/components/actions/workflows/tests.yml/badge.svg'></img>
+<img src='https://github.com/ThatOpen/engine_components/actions/workflows/tests.yml/badge.svg'></img>
 
 Regarding the coverage, each component in our repositories is contained in a folder that follows the following structure:
 

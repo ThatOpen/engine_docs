@@ -75,7 +75,7 @@ will not be updated automatically each frame.
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:24](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L24)
+[temp/components/src/base-types/component.ts:24](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L24)
 
 ## Methods
 
@@ -98,7 +98,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:30](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L30)
+[temp/components/src/base-types/component.ts:30](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L30)
 
 ___
 
@@ -114,7 +114,7 @@ this is UI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -130,7 +130,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -146,7 +146,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -162,7 +162,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -178,7 +178,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -194,4 +194,4 @@ this is Updateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)

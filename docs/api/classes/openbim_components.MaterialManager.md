@@ -34,7 +34,7 @@ objects and scene background easily.
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:17](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L17)
+[temp/components/src/core/MaterialManager/index.ts:17](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L17)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:22](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L22)
+[temp/components/src/core/MaterialManager/index.ts:22](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L22)
 
 ## Methods
 
@@ -73,7 +73,7 @@ Creates a new material style.
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:125](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L125)
+[temp/components/src/core/MaterialManager/index.ts:125](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L125)
 
 ___
 
@@ -96,7 +96,7 @@ Assign meshes to a certain style.
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:137](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L137)
+[temp/components/src/core/MaterialManager/index.ts:137](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L137)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:83](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L83)
+[temp/components/src/core/MaterialManager/index.ts:83](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L83)
 
 ___
 
@@ -138,7 +138,7 @@ list of created materials.
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:47](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L47)
+[temp/components/src/core/MaterialManager/index.ts:47](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L47)
 
 ___
 
@@ -158,7 +158,7 @@ this is UI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -178,7 +178,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -198,7 +198,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -218,7 +218,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -238,7 +238,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -258,7 +258,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -275,7 +275,7 @@ before applying the material manager.
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:113](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L113)
+[temp/components/src/core/MaterialManager/index.ts:113](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L113)
 
 ___
 
@@ -298,7 +298,7 @@ Turns the specified material styles on or off.
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L57)
+[temp/components/src/core/MaterialManager/index.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L57)
 
 ___
 
@@ -320,4 +320,4 @@ Sets the color of the background of the scene.
 
 #### Defined in
 
-[temp/components/src/core/MaterialManager/index.ts:99](https://github.com/IFCjs/components/blob/0c38d20/src/core/MaterialManager/index.ts#L99)
+[temp/components/src/core/MaterialManager/index.ts:99](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/MaterialManager/index.ts#L99)

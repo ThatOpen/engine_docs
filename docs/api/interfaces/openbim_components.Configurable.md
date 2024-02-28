@@ -31,7 +31,7 @@ to make changes to this object, use [()](openbim_components.Configurable.md#setu
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:185](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L185)
+[temp/components/src/base-types/base-types.ts:185](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L185)
 
 ___
 
@@ -43,7 +43,7 @@ Fired after successfully calling [()](openbim_components.Configurable.md#setup)
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:180](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L180)
+[temp/components/src/base-types/base-types.ts:180](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L180)
 
 ___
 
@@ -69,4 +69,4 @@ Use the provided configuration to setup the tool.
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:177](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L177)
+[temp/components/src/base-types/base-types.ts:177](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L177)

@@ -39,11 +39,11 @@ This includes adding features that you miss, enhancing existing features, fixing
 
 ### Pick a repository
 
-We have [multiple libraries](https://github.com/ifcjs/), and you might be interested in contributing in a specific one. Some of them are:
+We have [multiple libraries](https://github.com/ThatOpen/), and you might be interested in contributing in a specific one. Some of them are:
 
-- [components](https://github.com/ifcjs/components/): our main library. It contains a bunch of tools to create 3D BIM software in no time, like 3D measurements, clipping planes, DXF exporters, etc. If you like fun 3D features and Three.js, start here!
+- [components](https://github.com/ThatOpen/engine_components/): our main library. It contains a bunch of tools to create 3D BIM software in no time, like 3D measurements, clipping planes, DXF exporters, etc. If you like fun 3D features and Three.js, start here!
 
-- [web-ifc](https://github.com/ifcjs/web-ifc/): our IFC engine. It's written in C++ and compiled with WebAssembly. It's pretty low level, but not hard at all once you get started. If you are interested in the details of reading and writing IFC, C++ or WebAssembly, start here!
+- [web-ifc](https://github.com/ThatOpen/engine_web-ifc/): our IFC engine. It's written in C++ and compiled with WebAssembly. It's pretty low level, but not hard at all once you get started. If you are interested in the details of reading and writing IFC, C++ or WebAssembly, start here!
 
 ### Pick or create an issue
 

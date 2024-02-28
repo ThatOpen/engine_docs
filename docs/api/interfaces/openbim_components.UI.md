@@ -31,4 +31,4 @@ The class containing all the buttons, windows, tables, etc., of this component.
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:194](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L194)
+[temp/components/src/base-types/base-types.ts:194](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L194)

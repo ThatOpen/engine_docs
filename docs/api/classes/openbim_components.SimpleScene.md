@@ -37,7 +37,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[temp/components/src/core/SimpleScene/index.ts:28](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L28)
+[temp/components/src/core/SimpleScene/index.ts:28](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleScene/index.ts#L28)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleScene/index.ts:31](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L31)
+[temp/components/src/core/SimpleScene/index.ts:31](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleScene/index.ts#L31)
 
 ## Methods
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleScene/index.ts:47](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L47)
+[temp/components/src/core/SimpleScene/index.ts:47](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleScene/index.ts#L47)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleScene/index.ts:42](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L42)
+[temp/components/src/core/SimpleScene/index.ts:42](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleScene/index.ts#L42)
 
 ___
 
@@ -113,7 +113,7 @@ this is UI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -133,7 +133,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -153,7 +153,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -173,7 +173,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -193,7 +193,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -213,7 +213,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)
 
 ___
 
@@ -239,4 +239,4 @@ Creates a simple and nice default set up for the scene (e.g. lighting).
 
 #### Defined in
 
-[temp/components/src/core/SimpleScene/index.ts:74](https://github.com/IFCjs/components/blob/0c38d20/src/core/SimpleScene/index.ts#L74)
+[temp/components/src/core/SimpleScene/index.ts:74](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleScene/index.ts#L74)

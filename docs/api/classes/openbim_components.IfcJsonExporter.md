@@ -30,7 +30,7 @@ Exports all the properties of an IFC into an array of JS objects.
 
 **`Web Ifc`**
 
-The instance of [web-ifc][https://github.com/ifcjs/web-ifc](https://github.com/ifcjs/web-ifc) to use.
+The instance of [web-ifc][https://github.com/ThatOpen/engine_web-ifc](https://github.com/ThatOpen/engine_web-ifc) to use.
 
 **`Model ID`**
 
@@ -38,4 +38,4 @@ ID of the IFC model whose properties to extract.
 
 #### Defined in
 
-[temp/components/src/ifc/IfcJsonExporter/index.ts:21](https://github.com/IFCjs/components/blob/0c38d20/src/ifc/IfcJsonExporter/index.ts#L21)
+[temp/components/src/ifc/IfcJsonExporter/index.ts:21](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/ifc/IfcJsonExporter/index.ts#L21)
