@@ -19,38 +19,9 @@ that are not visible to the camera.
 ## Implements
 
 - [`Disposable`](../interfaces/openbim_components.Disposable.md)
-- [`Configurable`](../interfaces/openbim_components.Configurable.md)<`ScreenCullerConfig`\>
+- [`Configurable`](../interfaces/openbim_components.Configurable.md)<`CullerRendererSettings`\>
 
 ## Properties
-
-### enabled
-
-• **enabled**: `boolean` = `true`
-
-[Component.enabled](openbim_components.Component.md#enabled)
-
-#### Overrides
-
-[Component](openbim_components.Component.md).[enabled](openbim_components.Component.md#enabled)
-
-#### Defined in
-
-[temp/components/src/core/ScreenCuller/index.ts:38](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L38)
-
-___
-
-### needsUpdate
-
-• **needsUpdate**: `boolean` = `false`
-
-Needs to check whether there are objects that need to be hidden or shown.
-You can bind this to the camera movement, to a certain interval, etc.
-
-#### Defined in
-
-[temp/components/src/core/ScreenCuller/index.ts:44](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L44)
-
-___
 
 ### onDisposed
 
@@ -64,32 +35,139 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/ScreenCuller/index.ts:32](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L32)
+[temp/engine_components/src/core/ScreenCuller/index.ts:27](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L27)
+
+## Accessors
+
+### enabled
+
+• `get` **enabled**(): `boolean`
+
+[Component.enabled](openbim_components.Component.md#enabled)
+
+#### Returns
+
+`boolean`
+
+#### Overrides
+
+Component.enabled
+
+#### Defined in
+
+[temp/engine_components/src/core/ScreenCuller/index.ts:30](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L30)
+
+___
+
+### needsUpdate
+
+• `get` **needsUpdate**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+**`Deprecated`**
+
+use ScreenCuller.elements.needsUpdate instead.
+
+#### Defined in
+
+[temp/engine_components/src/core/ScreenCuller/index.ts:50](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L50)
+
+• `set` **needsUpdate**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `boolean` |
+
+#### Returns
+
+`void`
+
+**`Deprecated`**
+
+use ScreenCuller.elements.needsUpdate instead.
+
+#### Defined in
+
+[temp/engine_components/src/core/ScreenCuller/index.ts:55](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L55)
 
 ___
 
 ### onViewUpdated
 
-• `Readonly` **onViewUpdated**: [`Event`](openbim_components.Event.md)<`unknown`\>
+• `get` **onViewUpdated**(): [`Event`](openbim_components.Event.md)<{ `seen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> ; `unseen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>  }\>
 
-Fires after hiding the objects that were not visible to the camera.
+#### Returns
+
+[`Event`](openbim_components.Event.md)<{ `seen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> ; `unseen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>  }\>
+
+**`Deprecated`**
+
+use ScreenCuller.elements.onViewUpdated instead.
 
 #### Defined in
 
-[temp/components/src/core/ScreenCuller/index.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L35)
+[temp/engine_components/src/core/ScreenCuller/index.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L45)
 
 ___
 
 ### renderDebugFrame
 
-• **renderDebugFrame**: `boolean` = `false`
+• `get` **renderDebugFrame**(): `boolean`
 
-Render the internal scene used to determine the object visibility. Used
-for debugging purposes.
+#### Returns
+
+`boolean`
+
+**`Deprecated`**
+
+use ScreenCuller.elements.renderDebugFrame instead.
 
 #### Defined in
 
-[temp/components/src/core/ScreenCuller/index.ts:50](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L50)
+[temp/engine_components/src/core/ScreenCuller/index.ts:60](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L60)
+
+• `set` **renderDebugFrame**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `boolean` |
+
+#### Returns
+
+`void`
+
+**`Deprecated`**
+
+use ScreenCuller.elements.renderDebugFrame instead.
+
+#### Defined in
+
+[temp/engine_components/src/core/ScreenCuller/index.ts:65](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L65)
+
+___
+
+### renderer
+
+• `get` **renderer**(): `WebGLRenderer`
+
+#### Returns
+
+`WebGLRenderer`
+
+**`Deprecated`**
+
+use ScreenCuller.elements.get instead.
+
+#### Defined in
+
+[temp/engine_components/src/core/ScreenCuller/index.ts:81](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L81)
 
 ## Methods
 
@@ -97,25 +175,23 @@ for debugging purposes.
 
 ▸ **add**(`mesh`): `void`
 
-Adds a new mesh to be processed and managed by the culler.
-
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `mesh` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> \| `InstancedMesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> |
+| `mesh` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> \| `InstancedMesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> |
 
 #### Returns
 
 `void`
 
-**`Mesh`**
+**`Deprecated`**
 
-the mesh or instanced mesh to add.
+use ScreenCuller.elements.add instead.
 
 #### Defined in
 
-[temp/components/src/core/ScreenCuller/index.ts:169](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L169)
+[temp/engine_components/src/core/ScreenCuller/index.ts:125](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L125)
 
 ___
 
@@ -135,7 +211,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/ScreenCuller/index.ts:132](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L132)
+[temp/engine_components/src/core/ScreenCuller/index.ts:115](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L115)
 
 ___
 
@@ -157,7 +233,7 @@ the map of internal meshes used to determine visibility.
 
 #### Defined in
 
-[temp/components/src/core/ScreenCuller/index.ts:127](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L127)
+[temp/engine_components/src/core/ScreenCuller/index.ts:110](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L110)
 
 ___
 
@@ -177,7 +253,7 @@ this is UI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L62)
 
 ___
 
@@ -197,7 +273,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L57)
 
 ___
 
@@ -217,7 +293,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L35)
 
 ___
 
@@ -237,7 +313,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L52)
 
 ___
 
@@ -257,7 +333,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L40)
 
 ___
 
@@ -277,7 +353,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L45)
 
 ___
 
@@ -285,19 +361,20 @@ ___
 
 ▸ **updateVisibility**(`force?`): `Promise`<`void`\>
 
-The function that the culler uses to reprocess the scene. Generally it's
-better to call needsUpdate, but you can also call this to force it.
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `force?` | `boolean` | if true, it will refresh the scene even if needsUpdate is not true. |
+| Name | Type |
+| :------ | :------ |
+| `force?` | `boolean` |
 
 #### Returns
 
 `Promise`<`void`\>
 
+**`Deprecated`**
+
+use ScreenCuller.elements.updateVisibility instead.
+
 #### Defined in
 
-[temp/components/src/core/ScreenCuller/index.ts:251](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/ScreenCuller/index.ts#L251)
+[temp/engine_components/src/core/ScreenCuller/index.ts:132](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L132)

@@ -9,8 +9,9 @@ already):
 
 ```js
 const culler = new OBC.ScreenCuller(components);
-container.addEventListener('mouseup', () => culler.needsUpdate = true);
-container.addEventListener('wheel', () => culler.needsUpdate = true);
+culler.setup();
+container.addEventListener('mouseup', () => culler.elements.needsUpdate = true);
+container.addEventListener('wheel', () => culler.elements.needsUpdate = true);
 ```
 Next, let's load our classic fragment model and add it to the
 scene and to the culler:
@@ -22,11 +23,12 @@ const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
 const model = await fragments.load(buffer);
 const properties = await fetch('../../../resources/small.json');
-model.properties = await properties.json();
+const props = await properties.json();
+model.setLocalProperties(props);
 for(const fragment of model.items) {
-culler.add(fragment.mesh);
+culler.elements.add(fragment.mesh);
 }
-culler.needsUpdate = true;
+culler.elements.needsUpdate = true;
 ```
 ### ✨ Styling our floorplans
 ___
@@ -123,7 +125,7 @@ opacity: 0.3
 highlighter.add("default", highlightMat);
 const canvas = renderer.get().domElement;
 canvas.addEventListener("click", () => highlighter.clear("default"))
-highlighter.update();
+highlighter.updateHighlight();
 ```
 And let's add these features to the floorplans as extra commands
 and update the plan list to update the UI plan list that we

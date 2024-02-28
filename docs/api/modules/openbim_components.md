@@ -18,17 +18,16 @@ custom_edit_url: null
 - [EdgesPlane](../classes/openbim_components.EdgesPlane.md)
 - [Event](../classes/openbim_components.Event.md)
 - [FragmentBoundingBox](../classes/openbim_components.FragmentBoundingBox.md)
-- [FragmentIfcLoader](../classes/openbim_components.FragmentIfcLoader.md)
 - [FragmentManager](../classes/openbim_components.FragmentManager.md)
 - [FragmentPlans](../classes/openbim_components.FragmentPlans.md)
 - [IfcJsonExporter](../classes/openbim_components.IfcJsonExporter.md)
+- [IfcStreamingSettings](../classes/openbim_components.IfcStreamingSettings.md)
 - [LengthMeasurement](../classes/openbim_components.LengthMeasurement.md)
-- [LocalCacher](../classes/openbim_components.LocalCacher.md)
-- [MapboxWindow](../classes/openbim_components.MapboxWindow.md)
 - [MaterialManager](../classes/openbim_components.MaterialManager.md)
 - [Mouse](../classes/openbim_components.Mouse.md)
 - [OrthoPerspectiveCamera](../classes/openbim_components.OrthoPerspectiveCamera.md)
 - [PostproductionRenderer](../classes/openbim_components.PostproductionRenderer.md)
+- [PropertiesStreamingSettings](../classes/openbim_components.PropertiesStreamingSettings.md)
 - [ScreenCuller](../classes/openbim_components.ScreenCuller.md)
 - [Simple2DScene](../classes/openbim_components.Simple2DScene.md)
 - [SimpleCamera](../classes/openbim_components.SimpleCamera.md)
@@ -65,7 +64,7 @@ The projection system of the camera.
 
 #### Defined in
 
-[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:7](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L7)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:7](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/navigation/OrthoPerspectiveCamera/src/types.ts#L7)
 
 ___
 
@@ -77,7 +76,7 @@ The extensible list of supported navigation modes.
 
 #### Defined in
 
-[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:12](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L12)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:12](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/navigation/OrthoPerspectiveCamera/src/types.ts#L12)
 
 ## Variables
 
@@ -89,7 +88,7 @@ The name of the CSS class that styles the dimension label.
 
 #### Defined in
 
-[temp/components/src/measurement/LengthMeasurement/src/types.ts:4](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/measurement/LengthMeasurement/src/types.ts#L4)
+[temp/engine_components/src/measurement/SimpleDimensionLine/types.ts:4](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/measurement/SimpleDimensionLine/types.ts#L4)
 
 ___
 
@@ -101,4 +100,4 @@ The name of the CSS class that styles the dimension label.
 
 #### Defined in
 
-[temp/components/src/measurement/LengthMeasurement/src/types.ts:8](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/measurement/LengthMeasurement/src/types.ts#L8)
+[temp/engine_components/src/measurement/SimpleDimensionLine/types.ts:8](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/measurement/SimpleDimensionLine/types.ts#L8)

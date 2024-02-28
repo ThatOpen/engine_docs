@@ -25,7 +25,7 @@ button will give you all the features you need to load IFC files!
 Don't worry, we'll also do this programmatically in a moment.
 
 ```js
-const mainToolbar = new OBC.Toolbar(components, { name: 'Main Toolbar', position: 'bottom' });
+const mainToolbar = new OBC.Toolbar(components, {name: 'Main Toolbar', position: 'bottom'});
 components.ui.addToolbar(mainToolbar);
 const ifcButton = fragmentIfcLoader.uiElement.get("main");
 mainToolbar.addChild(ifcButton);
@@ -39,13 +39,18 @@ our `web-ifc` library. You can find them in the github repo and in NPM.
 These files need to be available to our app, so you have 2 options:
 - Download them and serve them statically.
 - Get them from a remote server.
-The easiest way is getting them from unpkg, so let's do that!
+The easiest way is getting them from unpkg, and the cool thing is that 
+you don't need to do it manually! It can be done directly by the tool 
+just by writing the following:
 
 ```js
+await fragmentIfcLoader.setup()
+/* If you want to the path to unpkg manually, then you can skip the line 
+above and set them manually as below:
 fragmentIfcLoader.settings.wasm = {
-path: "https://unpkg.com/web-ifc@0.0.46/",
+path: "https://unpkg.com/web-ifc@0.0.50/",
 absolute: true
-}
+} */
 ```
 Awesome! Optionally, we can exclude categories that we don't want
 to convert to fragments like very easily:
@@ -56,7 +61,7 @@ WEBIFC.IFCTENDONANCHOR,
 WEBIFC.IFCREINFORCINGBAR,
 WEBIFC.IFCREINFORCINGELEMENT,
 ];
-for(const cat of excludedCats) {
+for (const cat of excludedCats) {
 fragmentIfcLoader.settings.excludedCategories.add(cat);
 }
 ```
@@ -107,7 +112,10 @@ const blob = new Blob([data]);
 const fragmentFile = new File([blob], 'small.frag');
 const files = [];
 files.push(fragmentFile);
-files.push(new File([JSON.stringify(group.properties)], 'small.json'));
+const properties = group.getLocalProperties();
+if (properties) {
+files.push(new File([JSON.stringify(properties)], 'small.json'));
+}
 const result = await downloadZip(files).blob();
 result.name = 'example';
 download(result);

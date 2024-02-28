@@ -10,9 +10,9 @@
   <a href="https://www.npmjs.com/package/bim-fragment">npm package</a>
 </p>
 
-![cover](resources/cover.png)
+![cover](https://thatopen.github.io/engine_components/resources/cover.png)
 
-<h1>That Open Docs <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"></h1>
+<h1>That Open Docs <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"/></h1>
 
 
 This library contains the official docs for all the libraries of That Open Company.

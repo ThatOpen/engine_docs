@@ -37,7 +37,7 @@ and translated to typescript by
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:24](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L24)
+[temp/engine_components/src/core/SimpleGrid/index.ts:24](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L24)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:21](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L21)
+[temp/engine_components/src/core/SimpleGrid/index.ts:21](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L21)
 
 ## Accessors
 
@@ -70,7 +70,7 @@ perspective cameras and false for orthographic cameras.
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:50](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L50)
+[temp/engine_components/src/core/SimpleGrid/index.ts:50](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L50)
 
 • `set` **fade**(`active`): `void`
 
@@ -89,7 +89,7 @@ perspective cameras and false for orthographic cameras.
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:58](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L58)
+[temp/engine_components/src/core/SimpleGrid/index.ts:58](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L58)
 
 ___
 
@@ -105,7 +105,7 @@ The material of the grid.
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:42](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L42)
+[temp/engine_components/src/core/SimpleGrid/index.ts:42](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L42)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:27](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L27)
+[temp/engine_components/src/core/SimpleGrid/index.ts:27](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L27)
 
 • `set` **visible**(`visible`): `void`
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:32](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L32)
+[temp/engine_components/src/core/SimpleGrid/index.ts:32](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L32)
 
 ## Methods
 
@@ -167,19 +167,19 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:189](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L189)
+[temp/engine_components/src/core/SimpleGrid/index.ts:189](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L189)
 
 ___
 
 ### get
 
-▸ **get**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>
+▸ **get**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>
 
 [Component.get](openbim_components.Component.md#get)
 
 #### Returns
 
-`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>
+`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>
 
 #### Overrides
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/SimpleGrid/index.ts:184](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleGrid/index.ts#L184)
+[temp/engine_components/src/core/SimpleGrid/index.ts:184](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleGrid/index.ts#L184)
 
 ___
 
@@ -207,7 +207,7 @@ this is UI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L62)
 
 ___
 
@@ -227,7 +227,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L57)
 
 ___
 
@@ -247,7 +247,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L35)
 
 ___
 
@@ -267,7 +267,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L52)
 
 ___
 
@@ -287,7 +287,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L40)
 
 ___
 
@@ -307,4 +307,4 @@ this is Updateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L45)

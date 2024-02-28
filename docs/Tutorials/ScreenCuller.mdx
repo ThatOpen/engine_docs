@@ -17,13 +17,19 @@ This will create a Screen Culler which is now ready to be used.
 const culler = new OBC.ScreenCuller(components);
 await culler.setup()
 ```
-Additionally, we will activate the `culler.renderDebugFrame`
+You can also use the `threshold` property to control the minimum size of an element in screen in order
+for it to be revealed by the culler. Higher numbers result in less objects visible, but more performance:
+
+```js
+culler.elements.threshold = 200;
+```
+Additionally, we will activate the `culler.elements.renderDebugFrame`
 so that we can see the 2D screen of the elements that are not occluded.💻
 Also, we will get the **domElement** and attach it to the body so that we can see this frame in real-time.📊
 
 ```js
-culler.renderDebugFrame = true;
-const debugFrame = culler.renderer.domElement;
+culler.elements.renderDebugFrame = true;
+const debugFrame = culler.elements.get().domElement;
 document.body.appendChild(debugFrame);
 debugFrame.style.position = 'fixed';
 debugFrame.style.left = '0';
@@ -55,7 +61,7 @@ const material = new THREE.MeshLambertMaterial({ color: '#6528D7' });
 Now, using the `getRandomNumber()` method we previously created, we will add the 300 **`cube`** meshes to our scene
 and randomly position them. We'll add the cube to the scene and adjust its position between 0 and 10.
 Additionally, we will add meshes to the `culler` object, which will help **SimpleCuller** to recognize and
-draw the elements that are visible to the camera. To do this, **`culler.add(cube)`** will be used.
+draw the elements that are visible to the camera. To do this, **`culler.elements.add(cube)`** will be used.
 
 ```js
 function regenerateCubes() {
@@ -67,7 +73,7 @@ cube.position.y = getRandomNumber(10);
 cube.position.z = getRandomNumber(10);
 cube.updateMatrix();
 scene.add(cube);
-culler.add(cube);
+culler.elements.add(cube);
 cubes.push(cube);
 }
 }
@@ -92,14 +98,14 @@ regenerateCubes();
 ```
 Here comes the most crucial part! The core aim of **ScreenCuller** is to output just those components that are
 visible to the camera.
-`culler.needsUpdate = true` instructs the ScreenCuller to render the updated view.
+`culler.elements.needsUpdate = true` instructs the ScreenCuller to render the updated view.
 ** Remember to update culler every time the camera is updated ❕ **
 In this tutorial we are updating it each time the camera stops moving.
 
 ```js
-culler.needsUpdate = true;
+culler.elements.needsUpdate = true;
 components.camera.controls.addEventListener("controlend", () => {
-culler.needsUpdate = true;
+culler.elements.needsUpdate = true;
 });
 ```
 Great job! 🎉 Now you know how to optimise your 3D scene using a

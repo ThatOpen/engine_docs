@@ -40,15 +40,11 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`ScreenCuller`](openbim_components.ScreenCuller.md)
 
-  ↳ [`LocalCacher`](openbim_components.LocalCacher.md)
-
   ↳ [`MaterialManager`](openbim_components.MaterialManager.md)
 
   ↳ [`Simple2DScene`](openbim_components.Simple2DScene.md)
 
   ↳ [`FragmentManager`](openbim_components.FragmentManager.md)
-
-  ↳ [`FragmentIfcLoader`](openbim_components.FragmentIfcLoader.md)
 
   ↳ [`FragmentPlans`](openbim_components.FragmentPlans.md)
 
@@ -75,7 +71,7 @@ will not be updated automatically each frame.
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:24](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L24)
+[temp/engine_components/src/base-types/component.ts:24](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L24)
 
 ## Methods
 
@@ -98,7 +94,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:30](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L30)
+[temp/engine_components/src/base-types/component.ts:30](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L30)
 
 ___
 
@@ -114,7 +110,7 @@ this is UI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L62)
 
 ___
 
@@ -130,7 +126,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L57)
 
 ___
 
@@ -146,7 +142,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L35)
 
 ___
 
@@ -162,7 +158,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L52)
 
 ___
 
@@ -178,7 +174,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L40)
 
 ___
 
@@ -194,4 +190,4 @@ this is Updateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L45)

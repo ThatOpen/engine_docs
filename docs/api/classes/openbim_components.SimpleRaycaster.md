@@ -35,7 +35,7 @@ BaseRaycaster.enabled
 
 #### Defined in
 
-[temp/components/src/core/SimpleRaycaster/index.ts:13](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L13)
+[temp/engine_components/src/core/SimpleRaycaster/index.ts:13](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleRaycaster/index.ts#L13)
 
 ___
 
@@ -47,7 +47,7 @@ The position of the mouse in the screen.
 
 #### Defined in
 
-[temp/components/src/core/SimpleRaycaster/index.ts:19](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L19)
+[temp/engine_components/src/core/SimpleRaycaster/index.ts:19](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleRaycaster/index.ts#L19)
 
 ___
 
@@ -67,13 +67,13 @@ BaseRaycaster.onDisposed
 
 #### Defined in
 
-[temp/components/src/core/SimpleRaycaster/index.ts:16](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L16)
+[temp/engine_components/src/core/SimpleRaycaster/index.ts:16](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleRaycaster/index.ts#L16)
 
 ## Methods
 
 ### castRay
 
-▸ **castRay**(`items?`): ``null`` \| `Intersection`<`Object3D`<`Event`\>\>
+▸ **castRay**(`items?`): ``null`` \| `Intersection`<`Object3D`<`Object3DEventMap`\>\>
 
 Throws a ray from the camera to the mouse or touch event point and returns
 the first item found. This also takes into account the clipping planes
@@ -83,11 +83,11 @@ used by the renderer.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `items` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [Components.meshes](openbim_components.Components.md#meshes). |
+| `items` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [Components.meshes](openbim_components.Components.md#meshes). |
 
 #### Returns
 
-``null`` \| `Intersection`<`Object3D`<`Event`\>\>
+``null`` \| `Intersection`<`Object3D`<`Object3DEventMap`\>\>
 
 #### Overrides
 
@@ -95,7 +95,7 @@ BaseRaycaster.castRay
 
 #### Defined in
 
-[temp/components/src/core/SimpleRaycaster/index.ts:51](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L51)
+[temp/engine_components/src/core/SimpleRaycaster/index.ts:51](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleRaycaster/index.ts#L51)
 
 ___
 
@@ -119,7 +119,7 @@ BaseRaycaster.dispose
 
 #### Defined in
 
-[temp/components/src/core/SimpleRaycaster/index.ts:36](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L36)
+[temp/engine_components/src/core/SimpleRaycaster/index.ts:36](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleRaycaster/index.ts#L36)
 
 ___
 
@@ -139,7 +139,7 @@ BaseRaycaster.get
 
 #### Defined in
 
-[temp/components/src/core/SimpleRaycaster/index.ts:31](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/SimpleRaycaster/index.ts#L31)
+[temp/engine_components/src/core/SimpleRaycaster/index.ts:31](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/SimpleRaycaster/index.ts#L31)
 
 ___
 
@@ -159,7 +159,7 @@ BaseRaycaster.hasUI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L62)
 
 ___
 
@@ -179,7 +179,7 @@ BaseRaycaster.isConfigurable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L57)
 
 ___
 
@@ -199,7 +199,7 @@ BaseRaycaster.isDisposeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L35)
 
 ___
 
@@ -219,7 +219,7 @@ BaseRaycaster.isHideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L52)
 
 ___
 
@@ -239,7 +239,7 @@ BaseRaycaster.isResizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L40)
 
 ___
 
@@ -259,4 +259,4 @@ BaseRaycaster.isUpdateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L45)

@@ -21,7 +21,6 @@ Let's also create a toolbar to create a simple GUI for the functions we'll creat
 ```js
 const toolbar = new OBC.Toolbar(components);
 components.ui.addToolbar(toolbar);
-toolbar.addChild(fragments.uiElement.get("main"));
 ```
 ### 🧩 Add Fragment To Scene
 ---
@@ -34,7 +33,8 @@ if(fragments.groups.length) return;
 const file = await fetch("../../../resources/small.frag");
 const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
-fragments.load(buffer);
+const group = await fragments.load(buffer);
+console.log(group)
 // const scene = components.scene.get();
 // scene.add(model);
 }

@@ -18,11 +18,9 @@ cleaned up.
 - [`Components`](../classes/openbim_components.Components.md)
 - [`CubeMap`](../classes/openbim_components.CubeMap.md)
 - [`FragmentBoundingBox`](../classes/openbim_components.FragmentBoundingBox.md)
-- [`FragmentIfcLoader`](../classes/openbim_components.FragmentIfcLoader.md)
 - [`FragmentManager`](../classes/openbim_components.FragmentManager.md)
 - [`FragmentPlans`](../classes/openbim_components.FragmentPlans.md)
 - [`LengthMeasurement`](../classes/openbim_components.LengthMeasurement.md)
-- [`LocalCacher`](../classes/openbim_components.LocalCacher.md)
 - [`MaterialManager`](../classes/openbim_components.MaterialManager.md)
 - [`Mouse`](../classes/openbim_components.Mouse.md)
 - [`ScreenCuller`](../classes/openbim_components.ScreenCuller.md)
@@ -56,7 +54,7 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:60](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L60)
+[temp/engine_components/src/base-types/base-types.ts:60](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L60)
 
 ___
 
@@ -68,4 +66,4 @@ Fired after the tool has been [()](openbim_components.Disposable.md#dispose)
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:63](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L63)
+[temp/engine_components/src/base-types/base-types.ts:63](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L63)

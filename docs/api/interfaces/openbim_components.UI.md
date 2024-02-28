@@ -12,11 +12,9 @@ interface, like a button or a window.
 
 ## Implemented by
 
-- [`FragmentIfcLoader`](../classes/openbim_components.FragmentIfcLoader.md)
 - [`FragmentManager`](../classes/openbim_components.FragmentManager.md)
 - [`FragmentPlans`](../classes/openbim_components.FragmentPlans.md)
 - [`LengthMeasurement`](../classes/openbim_components.LengthMeasurement.md)
-- [`LocalCacher`](../classes/openbim_components.LocalCacher.md)
 - [`OrthoPerspectiveCamera`](../classes/openbim_components.OrthoPerspectiveCamera.md)
 - [`Simple2DScene`](../classes/openbim_components.Simple2DScene.md)
 - [`SimpleClipper`](../classes/openbim_components.SimpleClipper.md)
@@ -31,4 +29,4 @@ The class containing all the buttons, windows, tables, etc., of this component.
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:194](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L194)
+[temp/engine_components/src/base-types/base-types.ts:197](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L197)

@@ -30,9 +30,9 @@ scene2d.add(ambientLight2);
 const frustum = new THREE.Frustum();
 const canvasUI = simple2dScene.uiElement.get('container');
 const canvas = canvasUI.domElement;
-window.ondblclick = () => {
-simple2dScene.scaleY += 0.1;
-}
+// window.ondblclick = () => {
+// 	simple2dScene.scaleY += 0.1;
+// }
 ```
 ### 💅 Creating the UI
 ___
@@ -61,6 +61,8 @@ mainWindow.domElement.style.width = '20rem';
 mainWindow.domElement.style.height = '20rem';
 mainWindow.onVisible.add(() => {
 if(mainWindow.visible) {
+const { width, height } = mainWindow.containerSize;
+simple2dScene.setSize(height, width);
 simple2dScene.grid.regenerate()
 }
 })
