@@ -33,7 +33,7 @@ A component that handles all UI components.
 
 #### Defined in
 
-[temp/components/src/ui/UIManager/index.ts:30](https://github.com/IFCjs/components/blob/0c38d20/src/ui/UIManager/index.ts#L30)
+[temp/components/src/ui/UIManager/index.ts:30](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/ui/UIManager/index.ts#L30)
 
 ## Methods
 
@@ -53,7 +53,7 @@ this is UI
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:62](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L62)
+[temp/components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L62)
 
 ___
 
@@ -73,7 +73,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:57](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L57)
+[temp/components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L57)
 
 ___
 
@@ -93,7 +93,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:35](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L35)
+[temp/components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L35)
 
 ___
 
@@ -113,7 +113,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:52](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L52)
+[temp/components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L52)
 
 ___
 
@@ -133,7 +133,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:40](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L40)
+[temp/components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L40)
 
 ___
 
@@ -153,4 +153,4 @@ this is Updateable
 
 #### Defined in
 
-[temp/components/src/base-types/component.ts:45](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/component.ts#L45)
+[temp/components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/component.ts#L45)

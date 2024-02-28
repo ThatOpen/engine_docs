@@ -56,7 +56,7 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:60](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L60)
+[temp/components/src/base-types/base-types.ts:60](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L60)
 
 ___
 
@@ -68,4 +68,4 @@ Fired after the tool has been [()](openbim_components.Disposable.md#dispose)
 
 #### Defined in
 
-[temp/components/src/base-types/base-types.ts:63](https://github.com/IFCjs/components/blob/0c38d20/src/base-types/base-types.ts#L63)
+[temp/components/src/base-types/base-types.ts:63](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/base-types/base-types.ts#L63)

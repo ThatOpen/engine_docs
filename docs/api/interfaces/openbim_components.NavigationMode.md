@@ -20,7 +20,7 @@ Whether this navigation mode is active or not.
 
 #### Defined in
 
-[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:33](https://github.com/IFCjs/components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L33)
+[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:33](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L33)
 
 ___
 
@@ -32,7 +32,7 @@ The unique ID of this navigation mode.
 
 #### Defined in
 
-[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:20](https://github.com/IFCjs/components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L20)
+[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:20](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L20)
 
 ___
 
@@ -44,7 +44,7 @@ Event that should fire when the camera [CameraProjection](../modules/openbim_com
 
 #### Defined in
 
-[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:38](https://github.com/IFCjs/components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L38)
+[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:38](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L38)
 
 ___
 
@@ -73,4 +73,4 @@ must be disabled.
 
 #### Defined in
 
-[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:30](https://github.com/IFCjs/components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L30)
+[temp/components/src/navigation/OrthoPerspectiveCamera/src/types.ts:30](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/navigation/OrthoPerspectiveCamera/src/types.ts#L30)
