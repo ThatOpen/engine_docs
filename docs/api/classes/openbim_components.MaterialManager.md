@@ -34,7 +34,7 @@ objects and scene background easily.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:17](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L17)
+[temp/engine_components/src/core/MaterialManager/index.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L17)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:22](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L22)
+[temp/engine_components/src/core/MaterialManager/index.ts:22](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L22)
 
 ## Methods
 
@@ -73,7 +73,7 @@ Creates a new material style.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:125](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L125)
+[temp/engine_components/src/core/MaterialManager/index.ts:125](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L125)
 
 ___
 
@@ -96,7 +96,7 @@ Assign meshes to a certain style.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:137](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L137)
+[temp/engine_components/src/core/MaterialManager/index.ts:137](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L137)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:83](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L83)
+[temp/engine_components/src/core/MaterialManager/index.ts:83](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L83)
 
 ___
 
@@ -138,7 +138,7 @@ list of created materials.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:47](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L47)
+[temp/engine_components/src/core/MaterialManager/index.ts:47](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L47)
 
 ___
 
@@ -158,7 +158,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
 ___
 
@@ -178,7 +178,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
 ___
 
@@ -198,7 +198,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
 ___
 
@@ -218,7 +218,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
 ___
 
@@ -238,7 +238,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
 ___
 
@@ -258,7 +258,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
 ___
 
@@ -281,7 +281,7 @@ Remove meshes from a certain style.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:151](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L151)
+[temp/engine_components/src/core/MaterialManager/index.ts:151](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L151)
 
 ___
 
@@ -298,7 +298,7 @@ before applying the material manager.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:113](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L113)
+[temp/engine_components/src/core/MaterialManager/index.ts:113](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L113)
 
 ___
 
@@ -321,7 +321,7 @@ Turns the specified material styles on or off.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L57)
+[temp/engine_components/src/core/MaterialManager/index.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L57)
 
 ___
 
@@ -343,4 +343,4 @@ Sets the color of the background of the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/MaterialManager/index.ts:99](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/MaterialManager/index.ts#L99)
+[temp/engine_components/src/core/MaterialManager/index.ts:99](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L99)

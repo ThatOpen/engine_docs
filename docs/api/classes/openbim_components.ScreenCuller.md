@@ -35,7 +35,7 @@ that are not visible to the camera.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:27](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L27)
+[temp/engine_components/src/core/ScreenCuller/index.ts:27](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L27)
 
 ## Accessors
 
@@ -55,7 +55,7 @@ Component.enabled
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:30](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L30)
+[temp/engine_components/src/core/ScreenCuller/index.ts:30](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L30)
 
 ___
 
@@ -73,7 +73,7 @@ use ScreenCuller.elements.needsUpdate instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:50](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L50)
+[temp/engine_components/src/core/ScreenCuller/index.ts:50](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L50)
 
 • `set` **needsUpdate**(`value`): `void`
 
@@ -93,7 +93,7 @@ use ScreenCuller.elements.needsUpdate instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:55](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L55)
+[temp/engine_components/src/core/ScreenCuller/index.ts:55](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L55)
 
 ___
 
@@ -111,7 +111,7 @@ use ScreenCuller.elements.onViewUpdated instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L45)
+[temp/engine_components/src/core/ScreenCuller/index.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L45)
 
 ___
 
@@ -129,7 +129,7 @@ use ScreenCuller.elements.renderDebugFrame instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:60](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L60)
+[temp/engine_components/src/core/ScreenCuller/index.ts:60](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L60)
 
 • `set` **renderDebugFrame**(`value`): `void`
 
@@ -149,7 +149,7 @@ use ScreenCuller.elements.renderDebugFrame instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:65](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L65)
+[temp/engine_components/src/core/ScreenCuller/index.ts:65](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L65)
 
 ___
 
@@ -167,7 +167,7 @@ use ScreenCuller.elements.get instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:81](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L81)
+[temp/engine_components/src/core/ScreenCuller/index.ts:81](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L81)
 
 ## Methods
 
@@ -191,7 +191,7 @@ use ScreenCuller.elements.add instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:125](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L125)
+[temp/engine_components/src/core/ScreenCuller/index.ts:125](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L125)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:115](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L115)
+[temp/engine_components/src/core/ScreenCuller/index.ts:115](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L115)
 
 ___
 
@@ -233,7 +233,7 @@ the map of internal meshes used to determine visibility.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:110](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L110)
+[temp/engine_components/src/core/ScreenCuller/index.ts:110](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L110)
 
 ___
 
@@ -253,7 +253,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
 ___
 
@@ -273,7 +273,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
 ___
 
@@ -293,7 +293,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
 ___
 
@@ -313,7 +313,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
 ___
 
@@ -333,7 +333,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
 ___
 
@@ -353,7 +353,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
 ___
 
@@ -377,4 +377,4 @@ use ScreenCuller.elements.updateVisibility instead.
 
 #### Defined in
 
-[temp/engine_components/src/core/ScreenCuller/index.ts:132](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/core/ScreenCuller/index.ts#L132)
+[temp/engine_components/src/core/ScreenCuller/index.ts:132](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L132)

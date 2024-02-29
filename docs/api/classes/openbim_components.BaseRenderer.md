@@ -35,7 +35,7 @@ instance of the renderer.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:33](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-renderer.ts#L33)
+[temp/engine_components/src/base-types/base-renderer.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L33)
 
 ___
 
@@ -54,7 +54,7 @@ will not be updated automatically each frame.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:24](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L24)
+[temp/engine_components/src/base-types/component.ts:24](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L24)
 
 ___
 
@@ -67,7 +67,7 @@ planes used by the active renderer.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:27](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-renderer.ts#L27)
+[temp/engine_components/src/base-types/base-renderer.ts:27](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L27)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:21](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-renderer.ts#L21)
+[temp/engine_components/src/base-types/base-renderer.ts:21](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L21)
 
 ## Methods
 
@@ -110,7 +110,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:30](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L30)
+[temp/engine_components/src/base-types/component.ts:30](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L30)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:15](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-renderer.ts#L15)
+[temp/engine_components/src/base-types/base-renderer.ts:15](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L15)
 
 ___
 
@@ -150,7 +150,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
 ___
 
@@ -170,7 +170,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
 ___
 
@@ -190,7 +190,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
 ___
 
@@ -210,7 +210,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
 ___
 
@@ -230,7 +230,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
 ___
 
@@ -250,7 +250,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:18](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-renderer.ts#L18)
+[temp/engine_components/src/base-types/base-renderer.ts:18](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L18)
 
 ___
 
@@ -296,7 +296,7 @@ to the renderer.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-renderer.ts#L48)
+[temp/engine_components/src/base-types/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L48)
 
 ___
 
@@ -313,4 +313,4 @@ on them that are subscribed to `onClippingPlanesUpdated`.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:39](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-renderer.ts#L39)
+[temp/engine_components/src/base-types/base-renderer.ts:39](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L39)

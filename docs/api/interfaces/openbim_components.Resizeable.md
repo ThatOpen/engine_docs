@@ -39,7 +39,7 @@ component.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:103](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L103)
+[temp/engine_components/src/base-types/base-types.ts:103](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L103)
 
 ___
 
@@ -51,7 +51,7 @@ Event that fires when the component has been resized.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:96](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L96)
+[temp/engine_components/src/base-types/base-types.ts:96](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L96)
 
 ___
 
@@ -79,4 +79,4 @@ component.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:93](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L93)
+[temp/engine_components/src/base-types/base-types.ts:93](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L93)

@@ -31,7 +31,7 @@ to make changes to this object, use [()](openbim_components.Configurable.md#setu
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:188](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L188)
+[temp/engine_components/src/base-types/base-types.ts:188](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L188)
 
 ___
 
@@ -43,7 +43,7 @@ Wether this components has been already configured.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:177](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L177)
+[temp/engine_components/src/base-types/base-types.ts:177](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L177)
 
 ___
 
@@ -55,7 +55,7 @@ Fired after successfully calling [()](openbim_components.Configurable.md#setup)
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:183](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L183)
+[temp/engine_components/src/base-types/base-types.ts:183](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L183)
 
 ___
 
@@ -81,4 +81,4 @@ Use the provided configuration to setup the tool.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:180](https://github.com/ThatOpen/engine_components/blob/f5f209c/src/base-types/base-types.ts#L180)
+[temp/engine_components/src/base-types/base-types.ts:180](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L180)
