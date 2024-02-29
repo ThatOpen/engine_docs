@@ -32,4 +32,4 @@ Exports all the properties of an IFC into an array of JS objects.
 
 #### Defined in
 
-[temp/components/src/ifc/IfcJsonExporter/index.ts:21](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/ifc/IfcJsonExporter/index.ts#L21)
+[temp/engine_components/src/ifc/IfcJsonExporter/index.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/ifc/IfcJsonExporter/index.ts#L17)

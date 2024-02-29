@@ -27,7 +27,7 @@ This includes fragments, 3D scans, etc.
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:29](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L29)
+[temp/engine_components/src/core/Components/index.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L29)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:38](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L38)
+[temp/engine_components/src/core/Components/index.ts:38](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L38)
 
 ___
 
@@ -56,7 +56,7 @@ ready to work (scene, camera and renderer are ready).
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:35](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L35)
+[temp/engine_components/src/core/Components/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L35)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:23](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L23)
+[temp/engine_components/src/core/Components/index.ts:23](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L23)
 
 ___
 
@@ -80,7 +80,7 @@ Whether UI components should be created.
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:43](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L43)
+[temp/engine_components/src/core/Components/index.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L45)
 
 ## Accessors
 
@@ -97,7 +97,7 @@ that determines the point of view of the renderer.
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:101](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L101)
+[temp/engine_components/src/core/Components/index.ts:103](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L103)
 
 • `set` **camera**(`camera`): `void`
 
@@ -115,7 +115,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:111](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L111)
+[temp/engine_components/src/core/Components/index.ts:113](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L113)
 
 ___
 
@@ -132,7 +132,7 @@ used primarily to pick 3D items with the mouse or a touch screen.
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:119](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L119)
+[temp/engine_components/src/core/Components/index.ts:121](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L121)
 
 • `set` **raycaster**(`raycaster`): `void`
 
@@ -151,7 +151,7 @@ to initialize this if any component that needs a raycaster is used.
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:130](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L130)
+[temp/engine_components/src/core/Components/index.ts:132](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L132)
 
 ___
 
@@ -169,7 +169,7 @@ components with pre-made functionality (e.g. rendering of 2D CSS elements.
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:65](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L65)
+[temp/engine_components/src/core/Components/index.ts:67](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L67)
 
 • `set` **renderer**(`renderer`): `void`
 
@@ -187,7 +187,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:75](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L75)
+[temp/engine_components/src/core/Components/index.ts:77](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L77)
 
 ___
 
@@ -204,7 +204,7 @@ where all the rendered items are placed.
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:83](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L83)
+[temp/engine_components/src/core/Components/index.ts:85](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L85)
 
 • `set` **scene**(`scene`): `void`
 
@@ -222,7 +222,7 @@ This needs to be initialized before calling init().
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:93](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L93)
+[temp/engine_components/src/core/Components/index.ts:95](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L95)
 
 ___
 
@@ -238,7 +238,7 @@ ___
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:53](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L53)
+[temp/engine_components/src/core/Components/index.ts:55](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L55)
 
 ## Methods
 
@@ -269,7 +269,7 @@ You can learn more about how Three.js handles memory leaks
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:172](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L172)
+[temp/engine_components/src/core/Components/index.ts:174](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L174)
 
 ___
 
@@ -288,4 +288,4 @@ used, the [raycaster](openbim_components.Components.md#raycaster) will need to b
 
 #### Defined in
 
-[temp/components/src/core/Components/index.ts:146](https://github.com/ThatOpen/engine_components/blob/0c38d20/src/core/Components/index.ts#L146)
+[temp/engine_components/src/core/Components/index.ts:148](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L148)
