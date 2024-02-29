@@ -44,7 +44,7 @@ Basics are great, but that's not enough to build professional 3D apps. Let's dis
 
 :::info Loading and editing BIM data
 
-We are here to make BIM apps, and the library has tons of tools to make it super easy! Our library is based on [fragments](https://github.com/IFCjs/fragment), an open source geometric format that can load display big amounts of BIM data super efficiently. Let's learn how to build BIM apps with it!
+We are here to make BIM apps, and the library has tons of tools to make it super easy! Our library is based on [fragments](https://github.com/ThatOpen/engine_fragment), an open source geometric format that can load display big amounts of BIM data super efficiently. Let's learn how to build BIM apps with it!
 
 - 📕 [Discovering fragments](../Tutorials/FragmentManager.mdx)
 

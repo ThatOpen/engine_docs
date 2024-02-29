@@ -46,7 +46,7 @@ remove them from the mesh before disposing it.
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `object` | `Object3D`<`Event`\> | `undefined` | the [object](https://threejs.org/docs/#api/en/core/Object3D) to remove. |
+| `object` | `Object3D`<`Object3DEventMap`\> | `undefined` | the [object](https://threejs.org/docs/#api/en/core/Object3D) to remove. |
 | `materials` | `boolean` | `true` | whether to dispose the materials of the mesh. |
 | `recursive` | `boolean` | `true` | whether to recursively dispose the children of the mesh. |
 

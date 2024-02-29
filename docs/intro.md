@@ -24,7 +24,7 @@ In terms of features, these libraries offer you a wide set of handy tools to cre
 
 - 🏢 **IFC** import, display, navigate, edit and export.
 - 🌳 Import, display and navigate **other 3D formats**.
-- 🚀 3D+2D **modelling and editing** ([work in progress!](https://github.com/ifcjs/clay)).
+- 🚀 3D+2D **modelling and editing** ([work in progress!](https://github.com/ThatOpen/engine_clay)).
 - 📦 **Store**, **process** and **distribute** BIM models and files.
 - 🔎 3D+2D **navigation** tools
 - ✍ 3D+2D **annotations**.
@@ -85,9 +85,9 @@ We work very hard to make this library better every day, and you can help us! If
 
 This is how you can report a bug:
 
-1. Go to the Github library that has the code you are using. If you are not sure, don't worry: just go to the [components repository](https://github.com/ifcjs/components).
+1. Go to the Github library that has the code you are using. If you are not sure, don't worry: just go to the [components repository](https://github.com/ThatOpen/engine_components).
 
-2. Go to the [issues](https://github.com/IFCjs/components/issues) tab.
+2. Go to the [issues](https://github.com/ThatOpen/engine_components/issues) tab.
 
 3. Create a new issue. Try to ellaborate as much as possible, explaining what you are trying to do, the behavior you expect and what the library is doing. Providing a minimal code example we can test is also super useful!
 

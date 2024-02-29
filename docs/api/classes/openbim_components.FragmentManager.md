@@ -8,7 +8,7 @@ custom_edit_url: null
 [openbim-components](../modules/openbim_components.md).FragmentManager
 
 Object that can efficiently load binary files that contain
-[fragment geometry](https://github.com/ifcjs/fragment).
+[fragment geometry](https://github.com/ThatOpen/engine_fragment).
 
 ## Hierarchy
 
@@ -43,7 +43,7 @@ ___
 
 • **list**: `Object` = `{}`
 
-All the created [fragments](https://github.com/ifcjs/fragment).
+All the created [fragments](https://github.com/ThatOpen/engine_fragment).
 
 #### Index signature
 
@@ -73,13 +73,13 @@ ___
 
 ### meshes
 
-• `get` **meshes**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[]
+• `get` **meshes**(): `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
 
 The list of meshes of the created fragments.
 
 #### Returns
 
-`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[]
+`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
 
 #### Defined in
 
@@ -279,15 +279,16 @@ ___
 
 ### load
 
-▸ **load**(`data`): `Promise`<`FragmentsGroup`\>
+▸ **load**(`data`, `coordinate?`): `Promise`<`FragmentsGroup`\>
 
 Loads one or many fragments into the scene.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `data` | `Uint8Array` | the bytes containing the data for the fragments to load. |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `data` | `Uint8Array` | `undefined` | the bytes containing the data for the fragments to load. |
+| `coordinate` | `boolean` | `true` | whether this fragmentsgroup should be federated with the others. |
 
 #### Returns
 

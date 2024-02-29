@@ -13,7 +13,8 @@ const dataBlob = await file.arrayBuffer();
 const buffer = new Uint8Array(dataBlob);
 const model = await fragments.load(buffer);
 const properties = await fetch("../../../resources/small.json");
-model.properties = await properties.json();
+const props = await properties.json();
+model.setLocalProperties(props);
 const highlighter = new OBC.FragmentHighlighter(components, fragments);
 highlighter.setup();
 components.renderer.postproduction.customEffects.outlineEnabled = true;
@@ -44,15 +45,38 @@ propsProcessor.cleanPropertiesList();
 highlighterEvents.select.onHighlight.add(
 (selection) => {
 const fragmentID = Object.keys(selection)[0];
-const expressID = Number([...selection[fragmentID]][0]);
+const expressID = [...selection[fragmentID]][0];
 let model
 for (const group of fragments.groups) {
-const fragmentFound = Object.values(group.keyFragments).find(id => id === fragmentID)
-if (fragmentFound) model = group;
+for(const [_key, value] of group.keyFragments) {
+if(value === fragmentID) {
+model = group;
+break;
 }
+}
+}
+if(model) {
 propsProcessor.renderProperties(model, expressID);
 }
+}
 );
+// console.log(propsProcessor._indexMap);
+//
+// setTimeout(
+//     () => {
+//         const toExport = {};
+//         for(const fragID in propsProcessor._indexMap) {
+//             const ids = propsProcessor._indexMap[fragID];
+//             for(const expressID in ids) {
+//                 const associatedIDs = ids[expressID];
+//                 toExport[expressID] = [...associatedIDs];
+//             }
+//         }
+//
+//         console.log(JSON.stringify(toExport));
+//     },
+//     1000
+// )
 ```
 Finally, we will add the main built-in button of the properties
 processor to a simple toolbar at the bottom of our app:
@@ -67,6 +91,6 @@ the properties of any IFC model you load in your apps. Now,
 let's continue navigating these docs for more cool open BIM tools!
 
 
-  <iframe src="https://ifcjs.github.io/components/src/ifc/IfcPropertiesProcessor/index.html"></iframe>
+  <iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesProcessor/index.html"></iframe>
 
   

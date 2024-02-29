@@ -21,7 +21,7 @@ const dataBlob = await file.arrayBuffer();
 const buffer = new Uint8Array(dataBlob);
 const model = await fragments.load(buffer);
 const properties = await fetch("../../../resources/small.json");
-model.properties = await properties.json();
+model.setLocalProperties(await properties.json());
 ```
 Now that we have our model, let's start the `FragmentHider`. You
 can use the `loadCached` method if you had used it before: it will
@@ -112,6 +112,6 @@ Try them out in the example below, and check out more tutorials
 to bring your BIM apps to the next level!
 
 
-  <iframe src="https://ifcjs.github.io/components/src/fragments/FragmentHider/index.html"></iframe>
+  <iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentHider/index.html"></iframe>
 
   

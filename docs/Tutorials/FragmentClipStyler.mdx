@@ -50,7 +50,7 @@ const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
 const model = await fragments.load(buffer);
 const properties = await fetch('../../../resources/small.json');
-model.properties = await properties.json();
+model.setLocalProperties(await properties.json());
 ```
 Great, now we have something in our scene. Now, let's see the
 styler in action.
@@ -81,6 +81,6 @@ create styles and apply them per category. See you in another
 tutorial. 🚀
 
 
-  <iframe src="https://ifcjs.github.io/components/src/fragments/FragmentClipStyler/index.html"></iframe>
+  <iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentClipStyler/index.html"></iframe>
 
   

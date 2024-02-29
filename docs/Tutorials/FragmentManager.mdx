@@ -1,7 +1,7 @@
 ### 🧶 Managing Fragment Efficiently
 ---
 Until recently, we had been adding 3D objects to the **Scene** with the traditional `scene.add` API.
-We will now use **[Fragment](https://github.com/IFCjs/fragment)** to work with large BIM models.🏗️
+We will now use **[Fragment](https://github.com/ThatOpen/engine_fragment)** to work with large BIM models.🏗️
 Fragment are faster and easier to use Geometric API, which reduces draw calls and speeds up the processing of 3D objects.
 In this tutorial, we will load and render `.frag` files using **Fragment Manager**.
 :::tip First, let's set up a simple scene!
@@ -21,7 +21,6 @@ Let's also create a toolbar to create a simple GUI for the functions we'll creat
 ```js
 const toolbar = new OBC.Toolbar(components);
 components.ui.addToolbar(toolbar);
-toolbar.addChild(fragments.uiElement.get("main"));
 ```
 ### 🧩 Add Fragment To Scene
 ---
@@ -34,7 +33,8 @@ if(fragments.groups.length) return;
 const file = await fetch("../../../resources/small.frag");
 const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
-fragments.load(buffer);
+const group = await fragments.load(buffer);
+console.log(group)
 // const scene = components.scene.get();
 // scene.add(model);
 }
@@ -135,6 +135,6 @@ Now you can render or export Fragment files in your BIM Apps using **[Fragment M
 Let's keep it up and check out another tutorial! 🎓
 
 
-  <iframe src="https://ifcjs.github.io/components/src/fragments/FragmentManager/index.html"></iframe>
+  <iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentManager/index.html"></iframe>
 
   

@@ -225,7 +225,7 @@ Make the camera view fit all the specified meshes.
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | `undefined` | the meshes to fit. If it is not defined, it will evaluate [Components.meshes](openbim_components.Components.md#meshes). |
+| `meshes` | `Iterable`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> | `undefined` | the meshes to fit. If it is not defined, it will evaluate [Components.meshes](openbim_components.Components.md#meshes). |
 | `offset` | `number` | `1.5` | the distance to the fit object |
 
 #### Returns

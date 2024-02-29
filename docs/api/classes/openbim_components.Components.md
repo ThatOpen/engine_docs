@@ -20,7 +20,7 @@ loop of everything. Each instance has to be initialized with [init](openbim_comp
 
 ### meshes
 
-• `Readonly` **meshes**: `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] = `[]`
+• `Readonly` **meshes**: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>
 
 All the loaded [meshes](https://threejs.org/docs/#api/en/objects/Mesh).
 This includes fragments, 3D scans, etc.

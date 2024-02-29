@@ -40,15 +40,11 @@ the type of the core of this component. For instance, a component containing a
 
   ↳ [`ScreenCuller`](openbim_components.ScreenCuller.md)
 
-  ↳ [`LocalCacher`](openbim_components.LocalCacher.md)
-
   ↳ [`MaterialManager`](openbim_components.MaterialManager.md)
 
   ↳ [`Simple2DScene`](openbim_components.Simple2DScene.md)
 
   ↳ [`FragmentManager`](openbim_components.FragmentManager.md)
-
-  ↳ [`FragmentIfcLoader`](openbim_components.FragmentIfcLoader.md)
 
   ↳ [`FragmentPlans`](openbim_components.FragmentPlans.md)
 

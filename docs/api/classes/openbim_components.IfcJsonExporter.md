@@ -13,28 +13,22 @@ Object to export all the properties from an IFC to a JS object.
 
 ### export
 
-▸ **export**(`webIfc`, `modelID`): `Promise`<`void`\>
+▸ **export**(`webIfc`, `modelID`, `indirect?`, `recursiveSpatial?`): `Promise`<`IfcProperties`\>
 
 Exports all the properties of an IFC into an array of JS objects.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `webIfc` | `IfcAPI` |
-| `modelID` | `number` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `webIfc` | `IfcAPI` | `undefined` | The instance of [web-ifc][https://github.com/ThatOpen/engine_web-ifc](https://github.com/ThatOpen/engine_web-ifc) to use. |
+| `modelID` | `number` | `undefined` | ID of the IFC model whose properties to extract. |
+| `indirect` | `boolean` | `false` | whether to get the indirect relationships as well. |
+| `recursiveSpatial` | `boolean` | `true` | whether to get the properties of spatial items recursively to make the location data available (e.g. absolute position of building). |
 
 #### Returns
 
-`Promise`<`void`\>
-
-**`Web Ifc`**
-
-The instance of [web-ifc][https://github.com/ifcjs/web-ifc](https://github.com/ifcjs/web-ifc) to use.
-
-**`Model ID`**
-
-ID of the IFC model whose properties to extract.
+`Promise`<`IfcProperties`\>
 
 #### Defined in
 

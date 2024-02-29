@@ -23,14 +23,15 @@ const buffer = new Uint8Array(data);
 const model = await fragments.load(buffer);
 const meshes = [];
 const culler = new OBC.ScreenCuller(components);
+culler.setup();
 for (const fragment of model.items) {
 meshes.push(fragment.mesh);
-culler.add(fragment.mesh);
+culler.elements.add(fragment.mesh);
 }
-culler.needsUpdate = true;
+culler.elements.needsUpdate = true;
 const controls = components.camera.controls;
 controls.addEventListener('controlend', () => {
-culler.needsUpdate = true;
+culler.elements.needsUpdate = true;
 });
 ```
 ### 🎬 Activating the Post-Production
@@ -81,6 +82,6 @@ Post Production 🖼️
 Let's keep it up and check out another tutorial! 🎓
 
 
-  <iframe src="https://ifcjs.github.io/components/src/navigation/PostproductionRenderer/index.html"></iframe>
+  <iframe src="https://thatopen.github.io/engine_components/src/navigation/PostproductionRenderer/index.html"></iframe>
 
   

@@ -73,7 +73,7 @@ BaseRaycaster.onDisposed
 
 ### castRay
 
-▸ **castRay**(`items?`): ``null`` \| `Intersection`<`Object3D`<`Event`\>\>
+▸ **castRay**(`items?`): ``null`` \| `Intersection`<`Object3D`<`Object3DEventMap`\>\>
 
 Throws a ray from the camera to the mouse or touch event point and returns
 the first item found. This also takes into account the clipping planes
@@ -83,11 +83,11 @@ used by the renderer.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `items` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [Components.meshes](openbim_components.Components.md#meshes). |
+| `items` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in [Components.meshes](openbim_components.Components.md#meshes). |
 
 #### Returns
 
-``null`` \| `Intersection`<`Object3D`<`Event`\>\>
+``null`` \| `Intersection`<`Object3D`<`Object3DEventMap`\>\>
 
 #### Overrides
 

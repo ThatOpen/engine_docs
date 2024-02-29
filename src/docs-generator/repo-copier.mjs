@@ -6,13 +6,13 @@ import {
 } from "./copy-utils.mjs";
 
 // Organization name
-const orgName = "IFCjs";
+const orgName = "ThatOpen";
 
 // List of repositories to include in the docs
 let repositories = [
     // { name: "clay", release: "" },
-    { name: "components", release: "" },
-    { name: "fragment", release: "" },
+    { name: "engine_components", release: "" },
+    { name: "engine_fragment", release: "" },
     // { name: "web-ifc", release: "" },
 ];
 const tempDirName = "temp";

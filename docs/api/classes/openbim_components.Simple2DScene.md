@@ -167,13 +167,13 @@ ___
 
 ### get
 
-▸ **get**(): `Group`
+▸ **get**(): `Group`<`Object3DEventMap`\>
 
 [Component.get](openbim_components.Component.md#get)
 
 #### Returns
 
-`Group`
+`Group`<`Object3DEventMap`\>
 
 the 2D scene.
 

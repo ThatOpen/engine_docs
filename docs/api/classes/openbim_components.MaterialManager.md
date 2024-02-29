@@ -88,7 +88,7 @@ Assign meshes to a certain style.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | the identifier of the style. |
-| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | the meshes to assign to the style. |
+| `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | the meshes to assign to the style. |
 
 #### Returns
 

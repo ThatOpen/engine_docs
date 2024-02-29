@@ -19,7 +19,8 @@ const dataBlob = await file.arrayBuffer();
 const buffer = new Uint8Array(dataBlob);
 const model = await fragments.load(buffer);
 const properties = await fetch("../../../resources/small.json");
-model.properties = await properties.json();
+const props = await properties.json();
+model.setLocalProperties(props);
 ```
 Now, we can start the finder by just instancing the class and
 calling the `init` method. It's asynchronous, so don't forget
@@ -63,6 +64,6 @@ make the data heavy lifting for you and just focus on the results!
 We'll see you in another tutorial of these docs.
 
 
-  <iframe src="https://ifcjs.github.io/components/src/ifc/IfcPropertiesFinder/index.html"></iframe>
+  <iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesFinder/index.html"></iframe>
 
   

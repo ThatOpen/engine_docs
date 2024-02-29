@@ -80,17 +80,17 @@ const config = {
         // },
         items: [
           {
-            href: "https://github.com/ifcjs",
+            href: "https://github.com/ThatOpen",
             label: "Community",
             position: "right",
           },
           {
-            href: "https://github.com/ifcjs",
+            href: "https://github.com/ThatOpen",
             label: "Marketplace",
             position: "right",
           },
           {
-            href: "https://github.com/ifcjs",
+            href: "https://github.com/ThatOpen",
             label: "GitHub",
             position: "right",
           },

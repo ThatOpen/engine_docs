@@ -12,11 +12,9 @@ interface, like a button or a window.
 
 ## Implemented by
 
-- [`FragmentIfcLoader`](../classes/openbim_components.FragmentIfcLoader.md)
 - [`FragmentManager`](../classes/openbim_components.FragmentManager.md)
 - [`FragmentPlans`](../classes/openbim_components.FragmentPlans.md)
 - [`LengthMeasurement`](../classes/openbim_components.LengthMeasurement.md)
-- [`LocalCacher`](../classes/openbim_components.LocalCacher.md)
 - [`OrthoPerspectiveCamera`](../classes/openbim_components.OrthoPerspectiveCamera.md)
 - [`Simple2DScene`](../classes/openbim_components.Simple2DScene.md)
 - [`SimpleClipper`](../classes/openbim_components.SimpleClipper.md)

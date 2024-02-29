@@ -22,11 +22,11 @@ const cubeMaterial = new THREE.MeshStandardMaterial({ color: '#6528D7' });
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cube.position.set(-2, 1.5, 0);
 scene.add(cube);
-components.meshes.push(cube);
+components.meshes.add(cube);
 const cube2 = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cube2.position.set(2, 1.5, 0);
 scene.add(cube2);
-components.meshes.push(cube2);
+components.meshes.add(cube2);
 ```
 :::info Storing Components
 🧰 After adding cubes to the scene, we must also add them to `components.meshes`,
@@ -93,6 +93,9 @@ window.onkeydown = (event) => {
 if (event.code === 'Delete' || event.code === 'Backspace') {
 clipper.delete();
 }
+if (event.code === 'KeyP') {
+console.log(clipper);
+}
 };
 ```
 :::tip Delete all Clipping Planes
@@ -104,6 +107,6 @@ you can now effortlessly check BIM models or any other 3D objects with stunning 
 Let's keep it up and check out another tutorial! 🎓
 
 
-  <iframe src="https://ifcjs.github.io/components/src/navigation/EdgesClipper/index.html"></iframe>
+  <iframe src="https://thatopen.github.io/engine_components/src/navigation/EdgesClipper/index.html"></iframe>
 
   
