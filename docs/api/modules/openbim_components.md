@@ -64,7 +64,7 @@ The projection system of the camera.
 
 #### Defined in
 
-[temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:7](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/src/types.ts#L7)
+[src/navigation/OrthoPerspectiveCamera/src/types.ts:7](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/src/types.ts#L7)
 
 ___
 
@@ -76,7 +76,7 @@ The extensible list of supported navigation modes.
 
 #### Defined in
 
-[temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:12](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/src/types.ts#L12)
+[src/navigation/OrthoPerspectiveCamera/src/types.ts:12](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/src/types.ts#L12)
 
 ## Variables
 
@@ -88,7 +88,7 @@ The name of the CSS class that styles the dimension label.
 
 #### Defined in
 
-[temp/engine_components/src/measurement/SimpleDimensionLine/types.ts:4](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/SimpleDimensionLine/types.ts#L4)
+[src/measurement/SimpleDimensionLine/types.ts:4](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/SimpleDimensionLine/types.ts#L4)
 
 ___
 
@@ -100,4 +100,4 @@ The name of the CSS class that styles the dimension label.
 
 #### Defined in
 
-[temp/engine_components/src/measurement/SimpleDimensionLine/types.ts:8](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/SimpleDimensionLine/types.ts#L8)
+[src/measurement/SimpleDimensionLine/types.ts:8](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/SimpleDimensionLine/types.ts#L8)

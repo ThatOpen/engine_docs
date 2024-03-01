@@ -29,4 +29,4 @@ The class containing all the buttons, windows, tables, etc., of this component.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:197](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L197)
+[src/base-types/base-types.ts:197](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/base-types.ts#L197)
