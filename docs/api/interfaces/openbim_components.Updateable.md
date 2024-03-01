@@ -27,7 +27,7 @@ Actions that should be executed after updating the component.
 
 #### Defined in
 
-[src/base-types/base-types.ts:109](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/base-types.ts#L109)
+[temp/engine_components/src/base-types/base-types.ts:109](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L109)
 
 ___
 
@@ -39,7 +39,7 @@ Actions that should be executed before updating the component.
 
 #### Defined in
 
-[src/base-types/base-types.ts:112](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/base-types.ts#L112)
+[temp/engine_components/src/base-types/base-types.ts:112](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L112)
 
 ## Methods
 
@@ -62,4 +62,4 @@ instance, a renderer component will make a render each frame.
 
 #### Defined in
 
-[src/base-types/base-types.ts:118](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/base-types.ts#L118)
+[temp/engine_components/src/base-types/base-types.ts:118](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L118)

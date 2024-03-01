@@ -36,7 +36,7 @@ The camera that is being used now according to the current [CameraProjection](..
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:48](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L48)
+[temp/engine_components/src/core/SimpleCamera/index.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L48)
 
 ___
 
@@ -55,7 +55,7 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:33](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L33)
+[temp/engine_components/src/core/SimpleCamera/index.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L33)
 
 ___
 
@@ -67,7 +67,7 @@ The current [NavigationMode](../interfaces/openbim_components.NavigationMode.md)
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:24](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L24)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:24](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L24)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:20](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L20)
+[temp/engine_components/src/core/SimpleCamera/index.ts:20](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L20)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:17](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L17)
+[temp/engine_components/src/core/SimpleCamera/index.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L17)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:25](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L25)
+[temp/engine_components/src/core/SimpleCamera/index.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L25)
 
 ___
 
@@ -127,7 +127,7 @@ Event that fires when the [CameraProjection](../modules/openbim_components.md#ca
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:29](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L29)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L29)
 
 ## Accessors
 
@@ -147,7 +147,7 @@ SimpleCamera.enabled
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:36](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L36)
+[temp/engine_components/src/core/SimpleCamera/index.ts:36](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L36)
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -169,7 +169,7 @@ SimpleCamera.enabled
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:41](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L41)
+[temp/engine_components/src/core/SimpleCamera/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L41)
 
 ___
 
@@ -191,7 +191,7 @@ Match Ortho zoom with Perspective distance when changing projection mode
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:136](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L136)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:136](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L136)
 
 ## Methods
 
@@ -211,7 +211,7 @@ Match Ortho zoom with Perspective distance when changing projection mode
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:107](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L107)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:107](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L107)
 
 ___
 
@@ -234,7 +234,7 @@ Make the camera view fit all the specified meshes.
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:197](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L197)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:197](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L197)
 
 ___
 
@@ -261,7 +261,7 @@ to specify which camera to get.
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:121](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L121)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:121](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L121)
 
 ___
 
@@ -277,7 +277,7 @@ Returns the current [CameraProjection](../modules/openbim_components.md#camerapr
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:131](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L131)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:131](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L131)
 
 ___
 
@@ -297,7 +297,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
 ___
 
@@ -317,7 +317,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
 ___
 
@@ -337,7 +337,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
 ___
 
@@ -357,7 +357,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
 ___
 
@@ -377,7 +377,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
 ___
 
@@ -397,7 +397,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
 ___
 
@@ -419,7 +419,7 @@ Sets a new [NavigationMode](../interfaces/openbim_components.NavigationMode.md) 
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:180](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L180)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:180](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L180)
 
 ___
 
@@ -442,7 +442,7 @@ Sets the current [CameraProjection](../modules/openbim_components.md#cameraproje
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:157](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L157)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:157](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L157)
 
 ___
 
@@ -459,7 +459,7 @@ and Viceversa.
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:144](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L144)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:144](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L144)
 
 ___
 
@@ -481,7 +481,7 @@ Allows or prevents all user input.
 
 #### Defined in
 
-[src/navigation/OrthoPerspectiveCamera/index.ts:167](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/OrthoPerspectiveCamera/index.ts#L167)
+[temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:167](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L167)
 
 ___
 
@@ -507,7 +507,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:81](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L81)
+[temp/engine_components/src/core/SimpleCamera/index.ts:81](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L81)
 
 ___
 
@@ -528,4 +528,4 @@ Updates the aspect of the camera to match the size of the
 
 #### Defined in
 
-[src/core/SimpleCamera/index.ts:93](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleCamera/index.ts#L93)
+[temp/engine_components/src/core/SimpleCamera/index.ts:93](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L93)

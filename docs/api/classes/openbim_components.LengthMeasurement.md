@@ -38,7 +38,7 @@ display a 3D symbol displaying the numeric value.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:52](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L52)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L52)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:37](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L37)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:37](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L37)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:43](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L43)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:43](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L43)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:34](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L34)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:34](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L34)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:49](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L49)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:49](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L49)
 
 ___
 
@@ -118,7 +118,7 @@ Createable.onBeforeCreate
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:40](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L40)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L40)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:46](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L46)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:46](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L46)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:31](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L31)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:31](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L31)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:28](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L28)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L28)
 
 ___
 
@@ -179,7 +179,7 @@ that is displayed where the dimension will be drawn.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:61](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L61)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:61](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L61)
 
 ___
 
@@ -191,7 +191,7 @@ The minimum distance to force the dimension cursor to a vertex.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:57](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L57)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L57)
 
 ## Accessors
 
@@ -214,7 +214,7 @@ of the geometry of the dimensions.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:117](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L117)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:117](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L117)
 
 ___
 
@@ -234,7 +234,7 @@ Component.enabled
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:85](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L85)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:85](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L85)
 
 • `set` **enabled**(`value`): `void`
 
@@ -256,7 +256,7 @@ Component.enabled
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:90](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L90)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:90](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L90)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:101](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L101)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:101](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L101)
 
 • `set` **visible**(`value`): `void`
 
@@ -298,7 +298,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:106](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L106)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:106](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L106)
 
 ## Methods
 
@@ -318,7 +318,7 @@ Cancels the drawing of the current dimension.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:258](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L258)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:258](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L258)
 
 ___
 
@@ -344,7 +344,7 @@ Starts or finishes drawing a new dimension line.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:203](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L203)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:203](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L203)
 
 ___
 
@@ -364,7 +364,7 @@ Deletes the dimension that the user is hovering over with the mouse or touch eve
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:223](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L223)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:223](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L223)
 
 ___
 
@@ -380,7 +380,7 @@ Deletes all the dimensions that have been previously created.
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:249](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L249)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:249](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L249)
 
 ___
 
@@ -400,7 +400,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:160](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L160)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:160](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L160)
 
 ___
 
@@ -420,7 +420,7 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:155](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L155)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:155](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L155)
 
 ___
 
@@ -440,7 +440,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
 ___
 
@@ -460,7 +460,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
 ___
 
@@ -480,7 +480,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
 ___
 
@@ -500,7 +500,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
 ___
 
@@ -520,7 +520,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
 ___
 
@@ -540,7 +540,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
 ___
 
@@ -566,4 +566,4 @@ ___
 
 #### Defined in
 
-[src/measurement/LengthMeasurement/index.ts:186](https://github.com/ThatOpen/engine_components/blob/178497c/src/measurement/LengthMeasurement/index.ts#L186)
+[temp/engine_components/src/measurement/LengthMeasurement/index.ts:186](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L186)

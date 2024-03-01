@@ -27,7 +27,7 @@ To disable this behaviour set this to 0.
 
 #### Defined in
 
-[src/navigation/EdgesClipper/src/edges-plane.ts:17](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/EdgesClipper/src/edges-plane.ts#L17)
+[temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L17)
 
 ___
 
@@ -43,7 +43,7 @@ Component.name
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:14](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L14)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:14](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L14)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:23](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L23)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:23](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L23)
 
 ___
 
@@ -75,7 +75,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:20](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L20)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:20](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L20)
 
 ___
 
@@ -91,7 +91,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:17](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L17)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L17)
 
 ## Accessors
 
@@ -111,7 +111,7 @@ SimplePlane.enabled
 
 #### Defined in
 
-[src/navigation/EdgesClipper/src/edges-plane.ts:43](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/EdgesClipper/src/edges-plane.ts#L43)
+[temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:43](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L43)
 
 • `set` **enabled**(`state`): `void`
 
@@ -133,7 +133,7 @@ SimplePlane.enabled
 
 #### Defined in
 
-[src/navigation/EdgesClipper/src/edges-plane.ts:37](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/EdgesClipper/src/edges-plane.ts#L37)
+[temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:37](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L37)
 
 ___
 
@@ -153,7 +153,7 @@ SimplePlane.meshes
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:71](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L71)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:71](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L71)
 
 ___
 
@@ -173,7 +173,7 @@ SimplePlane.planeMaterial
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:76](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L76)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:76](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L76)
 
 • `set` **planeMaterial**(`material`): `void`
 
@@ -195,7 +195,7 @@ SimplePlane.planeMaterial
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:81](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L81)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:81](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L81)
 
 ___
 
@@ -215,7 +215,7 @@ SimplePlane.size
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:86](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L86)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:86](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L86)
 
 • `set` **size**(`size`): `void`
 
@@ -237,7 +237,7 @@ SimplePlane.size
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:91](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L91)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:91](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L91)
 
 ___
 
@@ -257,7 +257,7 @@ SimplePlane.visible
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:58](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L58)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:58](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L58)
 
 • `set` **visible**(`state`): `void`
 
@@ -279,7 +279,7 @@ SimplePlane.visible
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:63](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L63)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:63](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L63)
 
 ## Methods
 
@@ -299,7 +299,7 @@ SimplePlane.visible
 
 #### Defined in
 
-[src/navigation/EdgesClipper/src/edges-plane.ts:48](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/EdgesClipper/src/edges-plane.ts#L48)
+[temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L48)
 
 ___
 
@@ -319,7 +319,7 @@ ___
 
 #### Defined in
 
-[src/core/SimpleClipper/simple-plane.ts:137](https://github.com/ThatOpen/engine_components/blob/178497c/src/core/SimpleClipper/simple-plane.ts#L137)
+[temp/engine_components/src/core/SimpleClipper/simple-plane.ts:137](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L137)
 
 ___
 
@@ -339,7 +339,7 @@ this is UI
 
 #### Defined in
 
-[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L62)
+[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
 ___
 
@@ -359,7 +359,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L57)
+[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
 ___
 
@@ -379,7 +379,7 @@ this is Disposable
 
 #### Defined in
 
-[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L35)
+[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
 ___
 
@@ -399,7 +399,7 @@ this is Hideable
 
 #### Defined in
 
-[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L52)
+[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
 ___
 
@@ -419,7 +419,7 @@ this is Resizeable
 
 #### Defined in
 
-[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L40)
+[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
 ___
 
@@ -439,7 +439,7 @@ this is Updateable
 
 #### Defined in
 
-[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/178497c/src/base-types/component.ts#L45)
+[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
 ___
 
@@ -461,7 +461,7 @@ ___
 
 #### Defined in
 
-[src/navigation/EdgesClipper/src/edges-plane.ts:54](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/EdgesClipper/src/edges-plane.ts#L54)
+[temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:54](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L54)
 
 ___
 
@@ -481,4 +481,4 @@ ___
 
 #### Defined in
 
-[src/navigation/EdgesClipper/src/edges-plane.ts:76](https://github.com/ThatOpen/engine_components/blob/178497c/src/navigation/EdgesClipper/src/edges-plane.ts#L76)
+[temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:76](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L76)

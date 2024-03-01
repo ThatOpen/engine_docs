@@ -75,7 +75,7 @@
     "readme": "../../README.md"
   },
   "references": [
-    { "path": "../../temp/components" },
-    { "path": "../../temp/fragment" }
+    { "path": "../../temp/engine_components" },
+    { "path": "../../temp/engine_fragment" }
   ]
 }
