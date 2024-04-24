@@ -4867,6 +4867,7 @@ __metadata:
     "@docusaurus/module-type-aliases": "npm:^2.4.3"
     "@docusaurus/preset-classic": "npm:^2.4.3"
     docusaurus-plugin-typedoc: "npm:0.20.2"
+    prettier: "npm:^3.2.5"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
     typedoc: "npm:^0.25.1"
@@ -8572,6 +8573,15 @@ __metadata:
   version: 2.0.0
   resolution: "prepend-http@npm:2.0.0"
   checksum: 10c0/b023721ffd967728e3a25e3a80dd73827e9444e586800ab90a21b3a8e67f362d28023085406ad53a36db1e4d98cb10e43eb37d45c6b733140a9165ead18a0987
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "prettier@npm:3.2.5"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10c0/ea327f37a7d46f2324a34ad35292af2ad4c4c3c3355da07313339d7e554320f66f65f91e856add8530157a733c6c4a897dc41b577056be5c24c40f739f5ee8c6
   languageName: node
   linkType: hard
 

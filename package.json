@@ -23,7 +23,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "format": "prettier src/ --write"
   },
   "dependencies": {
     "@docusaurus/core": "^2.4.3",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.4.3",
     "docusaurus-plugin-typedoc": "0.20.2",
+    "prettier": "^3.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "typedoc": "^0.25.1",

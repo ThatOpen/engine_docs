@@ -1,0 +1,8 @@
+# extends .gitignore
+build
+.github
+.idea
+.yarn
+static
+*.log
+*.lock
