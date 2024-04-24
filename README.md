@@ -12,8 +12,7 @@
 
 ![cover](https://thatopen.github.io/engine_components/resources/cover.png)
 
-<h1>That Open Docs <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"/></h1>
-
+# That Open Docs <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"/>
 
 This library contains the official docs for all the libraries of That Open Company.
 
@@ -24,3 +23,29 @@ This library contains the official docs for all the libraries of That Open Compa
 If you see anything outdated in the [docs page](https://docs.thatopen.com/intro), feel free to open an issue. If the issue is specific to a specific repository, please open the issue in that repository!
 
 If you have any questions, you can also ask around in our [community](https://people.thatopen.com/).
+
+## Local development
+
+This repository uses `yarn@4`.
+
+> You can use nodejs' [corepack](https://nodejs.org/api/corepack.html) if you don't want to install yarn.
+> ```bash
+> corepack enable
+> ```
+
+
+Install all dependencies
+
+```bash
+yarn install
+```
+
+Run docusaurus local devserver
+
+```bash
+yarn start
+```
+
+**TODO**
+
+Add documentation on `docs-generator`
