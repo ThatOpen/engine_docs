@@ -44,11 +44,11 @@ remove them from the mesh before disposing it.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `object` | `Object3D`<`Object3DEventMap`\> | `undefined` | the [object](https://threejs.org/docs/#api/en/core/Object3D) to remove. |
-| `materials` | `boolean` | `true` | whether to dispose the materials of the mesh. |
-| `recursive` | `boolean` | `true` | whether to recursively dispose the children of the mesh. |
+| Name        | Type                            | Default value | Description                                                             |
+| :---------- | :------------------------------ | :------------ | :---------------------------------------------------------------------- |
+| `object`    | `Object3D`<`Object3DEventMap`\> | `undefined`   | the [object](https://threejs.org/docs/#api/en/core/Object3D) to remove. |
+| `materials` | `boolean`                       | `true`        | whether to dispose the materials of the mesh.                           |
+| `recursive` | `boolean`                       | `true`        | whether to recursively dispose the children of the mesh.                |
 
 #### Returns
 
@@ -58,7 +58,7 @@ remove them from the mesh before disposing it.
 
 [temp/engine_components/src/core/Disposer/index.ts:43](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Disposer/index.ts#L43)
 
-___
+---
 
 ### disposeGeometry
 
@@ -68,8 +68,8 @@ Disposes a geometry from memory.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name       | Type                                        | Description                                                                     |
+| :--------- | :------------------------------------------ | :------------------------------------------------------------------------------ |
 | `geometry` | `BufferGeometry`<`NormalBufferAttributes`\> | the [geometry](https://threejs.org/docs/#api/en/core/BufferGeometry) to remove. |
 
 #### Returns
@@ -80,7 +80,7 @@ Disposes a geometry from memory.
 
 [temp/engine_components/src/core/Disposer/index.ts:64](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Disposer/index.ts#L64)
 
-___
+---
 
 ### get
 
@@ -102,7 +102,7 @@ the list of UUIDs of deleted components.
 
 [temp/engine_components/src/core/Disposer/index.ts:27](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Disposer/index.ts#L27)
 
-___
+---
 
 ### hasUI
 
@@ -122,7 +122,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -142,7 +142,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -162,7 +162,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -182,7 +182,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -202,7 +202,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 

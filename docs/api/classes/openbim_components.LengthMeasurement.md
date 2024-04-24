@@ -40,7 +40,7 @@ display a 3D symbol displaying the numeric value.
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L52)
 
-___
+---
 
 ### onAfterCreate
 
@@ -56,7 +56,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:37](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L37)
 
-___
+---
 
 ### onAfterDelete
 
@@ -72,7 +72,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:43](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L43)
 
-___
+---
 
 ### onAfterUpdate
 
@@ -88,7 +88,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:34](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L34)
 
-___
+---
 
 ### onBeforeCancel
 
@@ -104,7 +104,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:49](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L49)
 
-___
+---
 
 ### onBeforeCreate
 
@@ -120,7 +120,7 @@ Createable.onBeforeCreate
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L40)
 
-___
+---
 
 ### onBeforeDelete
 
@@ -136,7 +136,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:46](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L46)
 
-___
+---
 
 ### onBeforeUpdate
 
@@ -152,7 +152,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:31](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L31)
 
-___
+---
 
 ### onDisposed
 
@@ -168,7 +168,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L28)
 
-___
+---
 
 ### previewElement
 
@@ -181,7 +181,7 @@ that is displayed where the dimension will be drawn.
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:61](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L61)
 
-___
+---
 
 ### snapDistance
 
@@ -204,7 +204,7 @@ of the geometry of the dimensions.
 
 #### Parameters
 
-| Name | Type |
+| Name    | Type    |
 | :------ | :------ |
 | `color` | `Color` |
 
@@ -216,7 +216,7 @@ of the geometry of the dimensions.
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:117](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L117)
 
-___
+---
 
 ### enabled
 
@@ -242,8 +242,8 @@ Component.enabled
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `value` | `boolean` |
 
 #### Returns
@@ -258,7 +258,7 @@ Component.enabled
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:90](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L90)
 
-___
+---
 
 ### visible
 
@@ -284,8 +284,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `value` | `boolean` |
 
 #### Returns
@@ -320,7 +320,7 @@ Cancels the drawing of the current dimension.
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:258](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L258)
 
-___
+---
 
 ### create
 
@@ -330,8 +330,8 @@ Starts or finishes drawing a new dimension line.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type  | Description                                                                                                   |
+| :------ | :---- | :------------------------------------------------------------------------------------------------------------ |
 | `data?` | `any` | forces the dimension to be drawn on a plane. Use this if you are drawing dimensions in floor plan navigation. |
 
 #### Returns
@@ -346,7 +346,7 @@ Starts or finishes drawing a new dimension line.
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:203](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L203)
 
-___
+---
 
 ### delete
 
@@ -366,7 +366,7 @@ Deletes the dimension that the user is hovering over with the mouse or touch eve
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:223](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L223)
 
-___
+---
 
 ### deleteAll
 
@@ -382,7 +382,7 @@ Deletes all the dimensions that have been previously created.
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:249](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L249)
 
-___
+---
 
 ### dispose
 
@@ -402,7 +402,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:160](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L160)
 
-___
+---
 
 ### get
 
@@ -422,7 +422,7 @@ ___
 
 [temp/engine_components/src/measurement/LengthMeasurement/index.ts:155](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/LengthMeasurement/index.ts#L155)
 
-___
+---
 
 ### hasUI
 
@@ -442,7 +442,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -462,7 +462,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -482,7 +482,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -502,7 +502,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -522,7 +522,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -542,7 +542,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### update
 
@@ -552,8 +552,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `_delta` | `number` |
 
 #### Returns

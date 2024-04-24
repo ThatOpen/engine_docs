@@ -37,7 +37,7 @@ something through user interaction (e.g. clipping planes, dimensions, etc).
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:31](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L31)
 
-___
+---
 
 ### list
 
@@ -49,7 +49,7 @@ The list of components created in this app.
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:16](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L16)
 
-___
+---
 
 ### onDisposed
 
@@ -65,7 +65,7 @@ ___
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:19](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L19)
 
-___
+---
 
 ### token
 
@@ -77,7 +77,7 @@ The auth token to get tools from That Open Platform.
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L25)
 
-___
+---
 
 ### uuid
 
@@ -89,7 +89,7 @@ Component.uuid
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L28)
 
-___
+---
 
 ### libraryUUIDs
 
@@ -111,9 +111,9 @@ Adds a new tool. Use this in the constructor of your tools.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `uuid` | `string` | The UUID of your tool. |
+| Name       | Type                                                   | Description                                                |
+| :--------- | :----------------------------------------------------- | :--------------------------------------------------------- |
+| `uuid`     | `string`                                               | The UUID of your tool.                                     |
 | `instance` | [`Component`](openbim_components.Component.md)<`any`\> | The instance of your tool (`this` inside the constructor). |
 
 #### Returns
@@ -124,7 +124,7 @@ Adds a new tool. Use this in the constructor of your tools.
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:58](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L58)
 
-___
+---
 
 ### dispose
 
@@ -144,7 +144,7 @@ Disposes all the MEMORY used by all the tools.
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:107](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L107)
 
-___
+---
 
 ### get
 
@@ -155,15 +155,15 @@ doesn't exist, it will instance it automatically.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `T` |
-| `U` | extends [`Component`](openbim_components.Component.md)<`T`\> |
+| Name | Type                                                         |
+| :--- | :----------------------------------------------------------- |
+| `T`  | `T`                                                          |
+| `U`  | extends [`Component`](openbim_components.Component.md)<`T`\> |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type     | Description                     |
+| :---------- | :------- | :------------------------------ |
 | `ToolClass` | `Object` | The component to get or create. |
 
 #### Returns
@@ -178,7 +178,7 @@ doesn't exist, it will instance it automatically.
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:74](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L74)
 
-___
+---
 
 ### hasUI
 
@@ -198,7 +198,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### init
 
@@ -208,8 +208,8 @@ Pass the whole library object as argument.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type  |
+| :---- | :---- |
 | `OBC` | `any` |
 
 #### Returns
@@ -220,7 +220,7 @@ Pass the whole library object as argument.
 
 [temp/engine_components/src/core/ToolsComponent/index.ts:46](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L46)
 
-___
+---
 
 ### isConfigurable
 
@@ -240,7 +240,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -260,7 +260,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -280,7 +280,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -300,7 +300,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -320,7 +320,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### update
 
@@ -331,8 +331,8 @@ property [Component.enabled](openbim_components.Component.md#enabled) is true wi
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description                                                                |
+| :------ | :------- | :------------------------------------------------------------------------- |
 | `delta` | `number` | The [delta time](https://threejs.org/docs/#api/en/core/Clock) of the loop. |
 
 #### Returns

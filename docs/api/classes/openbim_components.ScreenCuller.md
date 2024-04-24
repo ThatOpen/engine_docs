@@ -57,7 +57,7 @@ Component.enabled
 
 [temp/engine_components/src/core/ScreenCuller/index.ts:30](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L30)
 
-___
+---
 
 ### needsUpdate
 
@@ -79,8 +79,8 @@ use ScreenCuller.elements.needsUpdate instead.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `value` | `boolean` |
 
 #### Returns
@@ -95,15 +95,15 @@ use ScreenCuller.elements.needsUpdate instead.
 
 [temp/engine_components/src/core/ScreenCuller/index.ts:55](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L55)
 
-___
+---
 
 ### onViewUpdated
 
-• `get` **onViewUpdated**(): [`Event`](openbim_components.Event.md)<{ `seen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> ; `unseen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>  }\>
+• `get` **onViewUpdated**(): [`Event`](openbim_components.Event.md)<{ `seen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> ; `unseen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> }\>
 
 #### Returns
 
-[`Event`](openbim_components.Event.md)<{ `seen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> ; `unseen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>  }\>
+[`Event`](openbim_components.Event.md)<{ `seen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> ; `unseen`: `Set`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> }\>
 
 **`Deprecated`**
 
@@ -113,7 +113,7 @@ use ScreenCuller.elements.onViewUpdated instead.
 
 [temp/engine_components/src/core/ScreenCuller/index.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L45)
 
-___
+---
 
 ### renderDebugFrame
 
@@ -135,8 +135,8 @@ use ScreenCuller.elements.renderDebugFrame instead.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `value` | `boolean` |
 
 #### Returns
@@ -151,7 +151,7 @@ use ScreenCuller.elements.renderDebugFrame instead.
 
 [temp/engine_components/src/core/ScreenCuller/index.ts:65](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L65)
 
-___
+---
 
 ### renderer
 
@@ -177,8 +177,8 @@ use ScreenCuller.elements.get instead.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                                                                                                                                                                                              |
+| :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `mesh` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> \| `InstancedMesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> |
 
 #### Returns
@@ -193,7 +193,7 @@ use ScreenCuller.elements.add instead.
 
 [temp/engine_components/src/core/ScreenCuller/index.ts:125](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L125)
 
-___
+---
 
 ### dispose
 
@@ -213,7 +213,7 @@ ___
 
 [temp/engine_components/src/core/ScreenCuller/index.ts:115](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L115)
 
-___
+---
 
 ### get
 
@@ -235,7 +235,7 @@ the map of internal meshes used to determine visibility.
 
 [temp/engine_components/src/core/ScreenCuller/index.ts:110](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ScreenCuller/index.ts#L110)
 
-___
+---
 
 ### hasUI
 
@@ -255,7 +255,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -275,7 +275,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -295,7 +295,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -315,7 +315,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -335,7 +335,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -355,7 +355,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### updateVisibility
 
@@ -363,8 +363,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type      |
+| :------- | :-------- |
 | `force?` | `boolean` |
 
 #### Returns

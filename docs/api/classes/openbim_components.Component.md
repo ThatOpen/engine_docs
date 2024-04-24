@@ -14,8 +14,8 @@ the type of the core of this component. For instance, a component containing a
 
 ## Type parameters
 
-| Name |
-| :------ |
+| Name   |
+| :----- |
 | `Type` |
 
 ## Hierarchy
@@ -84,8 +84,8 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type  |
+| :-------- | :---- |
 | `...args` | `any` |
 
 #### Returns
@@ -96,7 +96,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 [temp/engine_components/src/base-types/component.ts:30](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L30)
 
-___
+---
 
 ### hasUI
 
@@ -112,7 +112,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -128,7 +128,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -144,7 +144,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -160,7 +160,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -176,7 +176,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 

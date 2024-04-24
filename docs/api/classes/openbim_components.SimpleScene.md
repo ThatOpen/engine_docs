@@ -39,7 +39,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 [temp/engine_components/src/core/SimpleScene/index.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L28)
 
-___
+---
 
 ### isSetup
 
@@ -55,7 +55,7 @@ ___
 
 [temp/engine_components/src/core/SimpleScene/index.ts:31](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L31)
 
-___
+---
 
 ### onDisposed
 
@@ -91,7 +91,7 @@ ___
 
 [temp/engine_components/src/core/SimpleScene/index.ts:50](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L50)
 
-___
+---
 
 ### get
 
@@ -111,7 +111,7 @@ ___
 
 [temp/engine_components/src/core/SimpleScene/index.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L45)
 
-___
+---
 
 ### hasUI
 
@@ -131,7 +131,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -151,7 +151,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -171,7 +171,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -191,7 +191,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -211,7 +211,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -231,7 +231,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### setup
 
@@ -241,8 +241,8 @@ Creates a simple and nice default set up for the scene (e.g. lighting).
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type                            |
+| :-------- | :------------------------------ |
 | `config?` | `Partial`<`SimpleSceneConfig`\> |
 
 #### Returns

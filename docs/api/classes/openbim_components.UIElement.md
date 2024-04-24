@@ -12,9 +12,9 @@ to specify the types of your UI components.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
+| Name | Type             |
+| :--- | :--------------- |
+| `T`  | extends `Object` |
 
 ## Methods
 
@@ -33,7 +33,7 @@ inside.
 
 [temp/engine_components/src/base-types/ui-element.ts:37](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/ui-element.ts#L37)
 
-___
+---
 
 ### get
 
@@ -44,14 +44,14 @@ throw an error.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `U` | `SimpleUIComponent`<`HTMLElement`\> |
+| Name | Type                                |
+| :--- | :---------------------------------- |
+| `U`  | `SimpleUIComponent`<`HTMLElement`\> |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type      | Description                         |
+| :----- | :-------- | :---------------------------------- |
 | `name` | keyof `T` | the identifier of the UI component. |
 
 #### Returns
@@ -62,7 +62,7 @@ throw an error.
 
 [temp/engine_components/src/base-types/ui-element.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/ui-element.ts#L17)
 
-___
+---
 
 ### set
 
@@ -72,9 +72,9 @@ Sets all the UI components of this instance.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `data` | `T` | all the UI components sorted by name in an object. |
+| Name   | Type | Description                                        |
+| :----- | :--- | :------------------------------------------------- |
+| `data` | `T`  | all the UI components sorted by name in an object. |
 
 #### Returns
 

@@ -29,7 +29,7 @@ Actions that should be executed after updating the component.
 
 [temp/engine_components/src/base-types/base-types.ts:109](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L109)
 
-___
+---
 
 ### onBeforeUpdate
 
@@ -52,8 +52,8 @@ instance, a renderer component will make a render each frame.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `delta?` | `number` |
 
 #### Returns

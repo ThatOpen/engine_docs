@@ -36,7 +36,7 @@ objects and scene background easily.
 
 [temp/engine_components/src/core/MaterialManager/index.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L17)
 
-___
+---
 
 ### onDisposed
 
@@ -62,10 +62,10 @@ Creates a new material style.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | the identifier of the style to create. |
-| `material` | `Material` | the material of the style. |
+| Name       | Type       | Description                            |
+| :--------- | :--------- | :------------------------------------- |
+| `id`       | `string`   | the identifier of the style to create. |
+| `material` | `Material` | the material of the style.             |
 
 #### Returns
 
@@ -75,7 +75,7 @@ Creates a new material style.
 
 [temp/engine_components/src/core/MaterialManager/index.ts:125](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L125)
 
-___
+---
 
 ### addMeshes
 
@@ -85,9 +85,9 @@ Assign meshes to a certain style.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | the identifier of the style. |
+| Name     | Type                                                                                                   | Description                        |
+| :------- | :----------------------------------------------------------------------------------------------------- | :--------------------------------- |
+| `id`     | `string`                                                                                               | the identifier of the style.       |
 | `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | the meshes to assign to the style. |
 
 #### Returns
@@ -98,7 +98,7 @@ Assign meshes to a certain style.
 
 [temp/engine_components/src/core/MaterialManager/index.ts:137](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L137)
 
-___
+---
 
 ### dispose
 
@@ -118,7 +118,7 @@ ___
 
 [temp/engine_components/src/core/MaterialManager/index.ts:83](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L83)
 
-___
+---
 
 ### get
 
@@ -140,7 +140,7 @@ list of created materials.
 
 [temp/engine_components/src/core/MaterialManager/index.ts:47](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L47)
 
-___
+---
 
 ### hasUI
 
@@ -160,7 +160,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -180,7 +180,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -200,7 +200,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -220,7 +220,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -240,7 +240,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -260,7 +260,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### removeMeshes
 
@@ -270,9 +270,9 @@ Remove meshes from a certain style.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `id` | `string` | the identifier of the style. |
+| Name     | Type                                                                                                   | Description                        |
+| :------- | :----------------------------------------------------------------------------------------------------- | :--------------------------------- |
+| `id`     | `string`                                                                                               | the identifier of the style.       |
 | `meshes` | `Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | the meshes to assign to the style. |
 
 #### Returns
@@ -283,7 +283,7 @@ Remove meshes from a certain style.
 
 [temp/engine_components/src/core/MaterialManager/index.ts:151](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L151)
 
-___
+---
 
 ### resetBackgroundColor
 
@@ -300,7 +300,7 @@ before applying the material manager.
 
 [temp/engine_components/src/core/MaterialManager/index.ts:113](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L113)
 
-___
+---
 
 ### set
 
@@ -310,10 +310,10 @@ Turns the specified material styles on or off.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `active` | `boolean` | whether to turn it on or off. |
-| `ids` | `string`[] | the ids of the style to turn on or off. |
+| Name     | Type       | Description                             |
+| :------- | :--------- | :-------------------------------------- |
+| `active` | `boolean`  | whether to turn it on or off.           |
+| `ids`    | `string`[] | the ids of the style to turn on or off. |
 
 #### Returns
 
@@ -323,7 +323,7 @@ Turns the specified material styles on or off.
 
 [temp/engine_components/src/core/MaterialManager/index.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/MaterialManager/index.ts#L57)
 
-___
+---
 
 ### setBackgroundColor
 
@@ -333,7 +333,7 @@ Sets the color of the background of the scene.
 
 #### Parameters
 
-| Name | Type |
+| Name    | Type    |
 | :------ | :------ |
 | `color` | `Color` |
 

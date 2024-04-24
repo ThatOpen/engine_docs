@@ -37,7 +37,7 @@ Object that can efficiently load binary files that contain
 
 [temp/engine_components/src/fragments/FragmentManager/index.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L29)
 
-___
+---
 
 ### list
 
@@ -53,7 +53,7 @@ All the created [fragments](https://github.com/ThatOpen/engine_fragment).
 
 [temp/engine_components/src/fragments/FragmentManager/index.ts:32](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L32)
 
-___
+---
 
 ### onDisposed
 
@@ -95,9 +95,9 @@ The list of meshes of the created fragments.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `disposeUI` | `boolean` | `false` |
+| Name        | Type      | Default value |
+| :---------- | :-------- | :------------ |
+| `disposeUI` | `boolean` | `false`       |
 
 #### Returns
 
@@ -111,7 +111,7 @@ The list of meshes of the created fragments.
 
 [temp/engine_components/src/fragments/FragmentManager/index.ts:79](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L79)
 
-___
+---
 
 ### export
 
@@ -121,8 +121,8 @@ Export the specified fragments.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type             | Description                         |
+| :------ | :--------------- | :---------------------------------- |
 | `group` | `FragmentsGroup` | the fragments group to be exported. |
 
 #### Returns
@@ -135,7 +135,7 @@ the exported data as binary buffer.
 
 [temp/engine_components/src/fragments/FragmentManager/index.ts:166](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L166)
 
-___
+---
 
 ### get
 
@@ -155,7 +155,7 @@ ___
 
 [temp/engine_components/src/fragments/FragmentManager/index.ts:74](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L74)
 
-___
+---
 
 ### hasUI
 
@@ -175,7 +175,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -195,7 +195,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -215,7 +215,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -235,7 +235,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -255,7 +255,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -275,7 +275,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### load
 
@@ -285,10 +285,10 @@ Loads one or many fragments into the scene.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `data` | `Uint8Array` | `undefined` | the bytes containing the data for the fragments to load. |
-| `coordinate` | `boolean` | `true` | whether this fragmentsgroup should be federated with the others. |
+| Name         | Type         | Default value | Description                                                      |
+| :----------- | :----------- | :------------ | :--------------------------------------------------------------- |
+| `data`       | `Uint8Array` | `undefined`   | the bytes containing the data for the fragments to load.         |
+| `coordinate` | `boolean`    | `true`        | whether this fragmentsgroup should be federated with the others. |
 
 #### Returns
 
@@ -300,7 +300,7 @@ the list of IDs of the loaded fragments.
 
 [temp/engine_components/src/fragments/FragmentManager/index.ts:137](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L137)
 
-___
+---
 
 ### reset
 

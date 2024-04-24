@@ -31,7 +31,7 @@ An object to easily use the services of That Open Platform.
 
 [temp/engine_components/src/services/CloudStorage/index.ts:18](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/services/CloudStorage/index.ts#L18)
 
-___
+---
 
 ### name
 
@@ -67,8 +67,8 @@ The authentication token generated in
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type     |
+| :------ | :------- |
 | `value` | `string` |
 
 #### Returns
@@ -99,7 +99,7 @@ Retrieves a tool component by its name.
 
 [temp/engine_components/src/services/CloudStorage/index.ts:42](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/services/CloudStorage/index.ts#L42)
 
-___
+---
 
 ### hasUI
 
@@ -119,7 +119,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -139,7 +139,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -159,7 +159,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -179,7 +179,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -199,7 +199,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 

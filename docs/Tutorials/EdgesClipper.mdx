@@ -1,5 +1,7 @@
 ### ⭕️ Aesthetic Clipping Edges
+
 ---
+
 You can build whole BIM application using Components.💪
 One such essential component is **Edges Clipper** which helps you to add Clipping Planes along
 with beautiful yet functional edges.🖍️
@@ -12,13 +14,16 @@ With the help of this tutorial, you can quickly add **Clipping Planes** and **Co
 :::tip First, let's set up a simple scene!
 👀 If you haven't started there, check out [that tutorial first](SimpleScene.mdx)!
 :::
+
 ### 🧩 Adding Objects to Scene
+
 ---
+
 Let's start by adding two Cubes, we will create a [Box Geometry](https://threejs.org/docs/index.html?q=box#api/en/geometries/BoxGeometry) and use it for both Meshes.
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const cubeMaterial = new THREE.MeshStandardMaterial({ color: '#6528D7' });
+const cubeMaterial = new THREE.MeshStandardMaterial({ color: "#6528D7" });
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cube.position.set(-2, 1.5, 0);
 scene.add(cube);
@@ -28,12 +33,16 @@ cube2.position.set(2, 1.5, 0);
 scene.add(cube2);
 components.meshes.add(cube2);
 ```
+
 :::info Storing Components
 🧰 After adding cubes to the scene, we must also add them to `components.meshes`,
 which is just an array of all the meshes in the scene.🗄️
 :::
+
 ### ⚔️ Slicing Some Cubes
+
 ---
+
 Now that the setup is complete. Let's get started with the interesting part!
 We will create **[Edges Clipper](../api/classes/components.EdgesClipper)** and pass the **components** and
 **[Edges Plane](../api/classes/components.EdgesPlane)** to the constructor.
@@ -41,6 +50,7 @@ We will create **[Edges Clipper](../api/classes/components.EdgesClipper)** and p
 ```js
 const clipper = new OBC.EdgesClipper(components);
 ```
+
 :::info PLANE WITH EDGES and TRANSFORMATION CONTROLS
 🟦 **[Edges Plane](../api/classes/components.EdgesPlane)** helps us in adding Clipping Planes to the Clipper Component.
 :::
@@ -48,27 +58,58 @@ const clipper = new OBC.EdgesClipper(components);
 ```js
 clipper.enabled = true;
 ```
+
 When we set `clipper.enabled = true`, we will make the clipper functional; otherwise, clipping planes won't be formed.
+
 ### 🖌️ Creating Fine Edges
+
 ---
+
 Let's now prepare the materials that will be visible on the cube edges.
 We will use **[LineMaterial](https://threejs.org/examples/?q=line#webgl_lines_fat)** for creating edges.
+
 #### 💫 Using Line Material
+
 After creating the Line Material we will add it to the **clipper**
 using `clipper.styles.create(styleName: string, mesh: Mesh[], material: LineMaterial)`
 
 ```js
-const blueFill = new THREE.MeshBasicMaterial({color: 'lightblue', side: 2});
-const blueLine = new THREE.LineBasicMaterial({ color: 'blue' });
-const blueOutline = new THREE.MeshBasicMaterial({color: 'blue', opacity: 0.2, side: 2, transparent: true});
-clipper.styles.create('Red lines', new Set([cube]), blueLine, blueFill, blueOutline);
-const salmonFill = new THREE.MeshBasicMaterial({color: 'salmon', side: 2});
-const redLine = new THREE.LineBasicMaterial({ color: 'red' });
-const redOutline = new THREE.MeshBasicMaterial({color: 'red', opacity: 0.2, side: 2, transparent: true});
-clipper.styles.create('Blue lines', new Set([cube2]), redLine, salmonFill, redOutline);
+const blueFill = new THREE.MeshBasicMaterial({ color: "lightblue", side: 2 });
+const blueLine = new THREE.LineBasicMaterial({ color: "blue" });
+const blueOutline = new THREE.MeshBasicMaterial({
+  color: "blue",
+  opacity: 0.2,
+  side: 2,
+  transparent: true,
+});
+clipper.styles.create(
+  "Red lines",
+  new Set([cube]),
+  blueLine,
+  blueFill,
+  blueOutline,
+);
+const salmonFill = new THREE.MeshBasicMaterial({ color: "salmon", side: 2 });
+const redLine = new THREE.LineBasicMaterial({ color: "red" });
+const redOutline = new THREE.MeshBasicMaterial({
+  color: "red",
+  opacity: 0.2,
+  side: 2,
+  transparent: true,
+});
+clipper.styles.create(
+  "Blue lines",
+  new Set([cube2]),
+  redLine,
+  salmonFill,
+  redOutline,
+);
 ```
+
 ### 🤝 Performing Clipping Events
+
 ---
+
 We need a method for instantly producing a clipping plane;
 this can be accomplished with either a `single click` or a `double click` of the mouse.
 For this tutorial, we will use **Double Click**, to create a Clipper that will generate a
@@ -77,27 +118,32 @@ plane on the 3D object's face.
 ```js
 container.ondblclick = () => clipper.create();
 ```
+
 :::info Raycaster below the hood 🎩
 We use the **[Simple Raycaster](SimpleRaycaster.mdx)** to determine if the intersection has occurred.
 The clipper places a plane after detecting the face on which the mouse was clicked.
 Here, the **EdgesClipper** handles everything for you 😎
 :::
+
 ### 🧹 Deleting the Clipping Planes
+
 ---
+
 Now that we know how to make multiple clippers, we must also know how to delete them when necessary.
 Clipping Edges can be removed using `clipper.delete()` or `clipper.delete(plane)`, which deletes a single plane.
 **clipper.delete()** deletes the plane on which your mouse pointer is now located.
 
 ```js
 window.onkeydown = (event) => {
-if (event.code === 'Delete' || event.code === 'Backspace') {
-clipper.delete();
-}
-if (event.code === 'KeyP') {
-console.log(clipper);
-}
+  if (event.code === "Delete" || event.code === "Backspace") {
+    clipper.delete();
+  }
+  if (event.code === "KeyP") {
+    console.log(clipper);
+  }
 };
 ```
+
 :::tip Delete all Clipping Planes
 ❎ If you want to safely delete all the clipping edges that were created you can simply call
 **`clipper.deleteAll()`**
@@ -106,7 +152,4 @@ Great job! 🎉 Using the **[Clipper Component](../api/classes/components.Simple
 you can now effortlessly check BIM models or any other 3D objects with stunning edges.🧐
 Let's keep it up and check out another tutorial! 🎓
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/navigation/EdgesClipper/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/navigation/EdgesClipper/index.html"></iframe>

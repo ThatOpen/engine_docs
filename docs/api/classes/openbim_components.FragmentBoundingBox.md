@@ -36,7 +36,7 @@ it's fast, and should suffice for general use cases such as camera zooming or ge
 
 [temp/engine_components/src/fragments/FragmentBoundingBox/index.ts:16](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentBoundingBox/index.ts#L16)
 
-___
+---
 
 ### onDisposed
 
@@ -72,7 +72,7 @@ ___
 
 [temp/engine_components/src/fragments/FragmentBoundingBox/index.ts:72](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentBoundingBox/index.ts#L72)
 
-___
+---
 
 ### hasUI
 
@@ -92,7 +92,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -112,7 +112,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -132,7 +132,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -152,7 +152,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -172,7 +172,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 

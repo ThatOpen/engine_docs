@@ -1,5 +1,7 @@
 ### 🔎 Find just what you need
-___
+
+---
+
 Sometimes data is buried inside our BIM models, and the
 heterogeneity of BIM models doesn't make it easier. Luckily,
 we have created a component that can go past this barrier:
@@ -22,6 +24,7 @@ const properties = await fetch("../../../resources/small.json");
 const props = await properties.json();
 model.setLocalProperties(props);
 ```
+
 Now, we can start the finder by just instancing the class and
 calling the `init` method. It's asynchronous, so don't forget
 to add an `await` before it! Then, you can make it `queryWindow`
@@ -32,16 +35,20 @@ const propsFinder = new OBC.IfcPropertiesFinder(components);
 await propsFinder.init();
 propsFinder.uiElement.get("queryWindow").visible = true;
 ```
+
 We will also add a `Toolbar` so that you can see how to hide and
 show it using the main built-in `Button` that it has:
 
 ```js
-const mainToolbar = new OBC.Toolbar(components)
-components.ui.addToolbar(mainToolbar)
-mainToolbar.addChild(propsFinder.uiElement.get("main"))
+const mainToolbar = new OBC.Toolbar(components);
+components.ui.addToolbar(mainToolbar);
+mainToolbar.addChild(propsFinder.uiElement.get("main"));
 ```
+
 ### ✨ Highlighting the results
-___
+
+---
+
 Right now our app is super boring, so let's make this a bit more
 interesting. We will highlight the items found by the finder.
 Doing this is super easy with the `FragmentHighlighter` and the
@@ -53,17 +60,15 @@ highlighter.setup();
 components.renderer.postproduction.customEffects.outlineEnabled = true;
 highlighter.outlinesEnabled = true;
 highlighter.zoomToSelection = true;
-propsFinder.onFound.add(result => {
-highlighter.highlightByID("select", result);
-})
+propsFinder.onFound.add((result) => {
+  highlighter.highlightByID("select", result);
+});
 ```
+
 This is it! Now you know how to find data using complex queries
 in your BIM models. You can use the finder in combination
 with your own tools, like we did with the `FragmentHider`. Let us
 make the data heavy lifting for you and just focus on the results!
 We'll see you in another tutorial of these docs.
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesFinder/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesFinder/index.html"></iframe>

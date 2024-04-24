@@ -11,9 +11,9 @@ Whether this component supports to be configured.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Record`<`string`, `any`\> |
+| Name | Type                               |
+| :--- | :--------------------------------- |
+| `T`  | extends `Record`<`string`, `any`\> |
 
 ## Implemented by
 
@@ -33,7 +33,7 @@ to make changes to this object, use [()](openbim_components.Configurable.md#setu
 
 [temp/engine_components/src/base-types/base-types.ts:188](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L188)
 
-___
+---
 
 ### isSetup
 
@@ -45,7 +45,7 @@ Wether this components has been already configured.
 
 [temp/engine_components/src/base-types/base-types.ts:177](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L177)
 
-___
+---
 
 ### onSetup
 
@@ -57,7 +57,7 @@ Fired after successfully calling [()](openbim_components.Configurable.md#setup)
 
 [temp/engine_components/src/base-types/base-types.ts:183](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L183)
 
-___
+---
 
 ### setup
 
@@ -71,8 +71,8 @@ Use the provided configuration to setup the tool.
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type            |
+| :-------- | :-------------- |
 | `config?` | `Partial`<`T`\> |
 
 ##### Returns

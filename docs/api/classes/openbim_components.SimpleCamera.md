@@ -37,7 +37,7 @@ The camera that is being used now according to the current [CameraProjection](..
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L48)
 
-___
+---
 
 ### controls
 
@@ -52,7 +52,7 @@ object to move, rotate, look at objects, etc.
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L33)
 
-___
+---
 
 ### onAfterUpdate
 
@@ -68,7 +68,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:20](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L20)
 
-___
+---
 
 ### onBeforeUpdate
 
@@ -84,7 +84,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L17)
 
-___
+---
 
 ### onDisposed
 
@@ -126,8 +126,8 @@ Component.enabled
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type      |
+| :-------- | :-------- |
 | `enabled` | `boolean` |
 
 #### Returns
@@ -162,7 +162,7 @@ Component.enabled
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:68](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L68)
 
-___
+---
 
 ### get
 
@@ -182,7 +182,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:63](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L63)
 
-___
+---
 
 ### hasUI
 
@@ -202,7 +202,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -222,7 +222,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -242,7 +242,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -262,7 +262,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -282,7 +282,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -302,7 +302,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### update
 
@@ -312,8 +312,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `_delta` | `number` |
 
 #### Returns
@@ -328,7 +328,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:81](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L81)
 
-___
+---
 
 ### updateAspect
 

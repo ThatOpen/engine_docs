@@ -6,13 +6,13 @@ sidebar_position: 1
 
 ## Component ABC
 
-**Components** are the building blocks of all our libraries. In short, a component is a bunch of tested code that has a 
+**Components** are the building blocks of all our libraries. In short, a component is a bunch of tested code that has a
 specific set of features and can be used through a documented API. Components can do anything: viewing a 3D scene,
 loading an IFC, exporting floor plans, and even 3D modelling.
 
 :::tip Why components?
 
-Our goal is to allow everyone to create BIM software. But that's not enough; creating a BIM software is no easy task, especially when doing it alone (as a company or individual). 
+Our goal is to allow everyone to create BIM software. But that's not enough; creating a BIM software is no easy task, especially when doing it alone (as a company or individual).
 
 Wouldn't it be nice if all the software that we develop spoke the same language? That way, we could all share, buy and sell it to solve each other's problem, creating a decentralised ecosystem. That's exactly what **Components** are: a very basic set of rules that allows everyone to build their own tools on top of the same foundations, so that everything is compatible.
 

@@ -32,11 +32,11 @@ instance of the renderer.
 
 [temp/engine_components/src/base-types/base-renderer.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L33)
 
-___
+---
 
 ### container
 
-• **container**: ``null`` \| `HTMLElement`
+• **container**: `null` \| `HTMLElement`
 
 The HTML container of the THREE.js canvas where the scene is rendered.
 
@@ -48,7 +48,7 @@ The HTML container of the THREE.js canvas where the scene is rendered.
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:26](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L26)
 
-___
+---
 
 ### enabled
 
@@ -64,7 +64,7 @@ ___
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:23](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L23)
 
-___
+---
 
 ### onAfterUpdate
 
@@ -80,7 +80,7 @@ ___
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L35)
 
-___
+---
 
 ### onBeforeUpdate
 
@@ -96,7 +96,7 @@ ___
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:32](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L32)
 
-___
+---
 
 ### onClippingPlanesUpdated
 
@@ -113,7 +113,7 @@ planes used by the active renderer.
 
 [temp/engine_components/src/base-types/base-renderer.ts:27](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L27)
 
-___
+---
 
 ### onDisposed
 
@@ -129,7 +129,7 @@ ___
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L29)
 
-___
+---
 
 ### onResize
 
@@ -145,7 +145,7 @@ ___
 
 [temp/engine_components/src/base-types/base-renderer.ts:21](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L21)
 
-___
+---
 
 ### postproduction
 
@@ -177,7 +177,7 @@ Helper object to handle the postproduction effects applied.
 
 [temp/engine_components/src/navigation/PostproductionRenderer/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/PostproductionRenderer/index.ts#L41)
 
-___
+---
 
 ### get
 
@@ -197,7 +197,7 @@ ___
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:75](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L75)
 
-___
+---
 
 ### getSize
 
@@ -217,7 +217,7 @@ ___
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:106](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L106)
 
-___
+---
 
 ### hasUI
 
@@ -237,7 +237,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -257,7 +257,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -277,7 +277,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -297,7 +297,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -317,7 +317,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -337,7 +337,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### resize
 
@@ -347,8 +347,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `size?` | `Vector2` |
 
 #### Returns
@@ -363,7 +363,7 @@ ___
 
 [temp/engine_components/src/core/SimpleRenderer/index.ts:114](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L114)
 
-___
+---
 
 ### togglePlane
 
@@ -375,10 +375,10 @@ to the renderer.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `active` | `boolean` |
-| `plane` | `Plane` |
+| Name       | Type      |
+| :--------- | :-------- |
+| `active`   | `boolean` |
+| `plane`    | `Plane`   |
 | `isLocal?` | `boolean` |
 
 #### Returns
@@ -393,7 +393,7 @@ to the renderer.
 
 [temp/engine_components/src/base-types/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L48)
 
-___
+---
 
 ### update
 
@@ -413,7 +413,7 @@ ___
 
 [temp/engine_components/src/navigation/PostproductionRenderer/index.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/PostproductionRenderer/index.ts#L25)
 
-___
+---
 
 ### updateClippingPlanes
 

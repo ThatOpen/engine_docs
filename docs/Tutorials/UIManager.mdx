@@ -1,5 +1,7 @@
 ### 🎛️ Making your user interactive
+
 ---
+
 One of the most important things about making a BIM app is to give the user the ability to interact with the
 functionalities you are creating 🚀. The catch is you need to create a decent user interface so your end-user
 is able to interact in an easy and intuitive way. While creating a simple set of buttons is not particularly
@@ -9,10 +11,15 @@ The [UI Components](../api/interfaces/components.UIComponent) are similar to the
 The only difference is that their mission is to display an UI in HTML structures, including buttons, toolbars, menus,
 windows, etc.
 :::
+
 ### 🎨 Adding styles
+
 The first step is to get the CSS file with the default styles. You can get it from ..................
+
 ### 🧰 Creating a toolbar
+
 ---
+
 We need buttons to allow the user to interact with our viewer. But even before that, we need a place to put them: this
 place is called a `Toolbar`. Creating and adding a `Toolbar` to the viewer is as simple as this:
 
@@ -21,6 +28,7 @@ const mainToolbar = new OBC.Toolbar(components);
 mainToolbar.name = "Main toolbar";
 components.ui.addToolbar(mainToolbar);
 ```
+
 By default, the toolbar is added to the bottom 👇 of the viewer container, so you technically don't need to type
 `position: "bootom"` in the options argument of your toolbar, but we just did it so that you know you can change
 the toolbar position to either top, right, bottom or left.
@@ -28,18 +36,25 @@ the toolbar position to either top, right, bottom or left.
 You can create multiple toolbars in the same position, and the component just takes care about
 stacking all toolbars nice and neat 🤯.
 :::
+
 ### 🎢 Using existing UIs
-___
+
+---
+
 If you are using components from this library or from the marketplace, you won't need to create any UI: components
 usually include ready-to-use menus so that you can add them to your app in seconds. These components implement the
 [UI Interface](../api/interfaces/components.UI). Let's see them in action! 👇
 
 ```js
+
 ```
+
 ### 👨‍🎨 Creating your own UIs
-___
+
+---
+
 Of course, UI Components can also be used stand-alone, either to build your own components or to add menus to your
-app very fast! Let's start with a simple one: a Button Component that sends an alert message. 🍼 To do so, we can simply add 
+app very fast! Let's start with a simple one: a Button Component that sends an alert message. 🍼 To do so, we can simply add
 the following code:
 
 ```js
@@ -48,17 +63,21 @@ alertButton.materialIcon = "info";
 alertButton.tooltip = "Information";
 mainToolbar.addChild(alertButton);
 alertButton.onClick.add(() => {
-alert('I\'ve been clicked!');
+  alert("I've been clicked!");
 });
 ```
+
 :::warning Where do these cool icons come from?
 We are fetching the icons from
 [material icons](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:home:FILL@0;wght@400;GRAD@0;opsz@48),
 a very popular icon repository. You can simply pass the name of the icon in `materialIconName` and the button will
 display it! 🧨
 :::
+
 ### 🌍 Preparing the scene
+
 ---
+
 Of course, this UI is not very exciting, because it only adds a single button that throws an alert. But we can
 do much more with UI components. Let's build a menu that creates and deletes geometry in our scene! We will make
 a simple tool that creates and delete boxes from the scene. First, we'll need to define basic information of the
@@ -67,61 +86,69 @@ boxes. We will also create a super simple function to get a random number within
 ```js
 const boxes = [];
 const boxGeometry = new THREE.BoxGeometry();
-const boxMaterial = new THREE.MeshLambertMaterial({ color: '#6528D7' });
+const boxMaterial = new THREE.MeshLambertMaterial({ color: "#6528D7" });
 ```
+
 🔢 Next, let's define some simple functions. To create a random number:
 
 ```js
 function getRandomNumber(limit) {
-return Math.random() * limit;
+  return Math.random() * limit;
 }
 ```
+
 ✅📦 To delete a box from the scene:
 
 ```js
 function createBox() {
-const mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-scene.add(mesh);
-mesh.position.x = getRandomNumber(10);
-mesh.position.y = getRandomNumber(10);
-mesh.position.z = getRandomNumber(10);
-boxes.push(mesh);
+  const mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+  scene.add(mesh);
+  mesh.position.x = getRandomNumber(10);
+  mesh.position.y = getRandomNumber(10);
+  mesh.position.z = getRandomNumber(10);
+  boxes.push(mesh);
 }
 ```
+
 ❎📦 To delete a box from the scene:
 
 ```js
 function deleteBox() {
-if(!boxes.length) return;
-const box = boxes.pop();
-box.removeFromParent();
+  if (!boxes.length) return;
+  const box = boxes.pop();
+  box.removeFromParent();
 }
 ```
+
 ❎📦📦📦 To delete all existing boxes:
 
 ```js
 function deleteAllBoxes() {
-const count = boxes.length;
-for(let i = 0; i < count; i++) {
-deleteBox();
-}
+  const count = boxes.length;
+  for (let i = 0; i < count; i++) {
+    deleteBox();
+  }
 }
 ```
+
 🔄📦📦📦 And to animate all the boxes, so that our scene is more interesting:
 
 ```js
 function animateBoxes() {
-const oneDegree = Math.PI / 180;
-for(const box of boxes) {
-box.rotation.x += oneDegree;
-box.rotation.y += oneDegree;
-box.rotation.z += oneDegree;
-}
+  const oneDegree = Math.PI / 180;
+  for (const box of boxes) {
+    box.rotation.x += oneDegree;
+    box.rotation.y += oneDegree;
+    box.rotation.z += oneDegree;
+  }
 }
 components.renderer.onBeforeUpdate.add(animateBoxes);
 ```
+
 ### 🌲 Composing menus
+
 ---
+
 Buttons can be nested to build complex menus! For example, let's say that we want 3 buttons that add a box, delete a
 box and delete all boxes respectively. We want to organize these menus together, so let's start by creating a button
 that will contain the rest:
@@ -132,7 +159,9 @@ cubeTools.materialIcon = "widgets";
 cubeTools.tooltip = "Tools";
 mainToolbar.addChild(cubeTools);
 ```
+
 Let's start with the button to create boxes. This buttons needs a couple of extra things:
+
 - A `label` so that it displays the text.
 - An `onClick` event so that the function `createBox` is triggered after pressing the button.
 
@@ -143,6 +172,7 @@ createCubeButton.label = "Create box";
 createCubeButton.onClick.add(() => createBox());
 cubeTools.addChild(createCubeButton);
 ```
+
 Now, let's go with the "delete single" and "delete all buttons" buttons. Both are related, so we will group them
 together (yes, multiple-level nesting is allowed!). So first, let's create the parent button:
 
@@ -152,17 +182,19 @@ deleteCubeButtons.materialIcon = "disabled_by_default";
 deleteCubeButtons.label = "Delete box";
 cubeTools.addChild(deleteCubeButtons);
 ```
+
 Next, the "delete single" button:
 
 ```js
 const deleteSingleCubeButton = new OBC.Button(components, {
-materialIconName: 'disabled_by_default',
-name: 'Single',
-closeOnClick: false
+  materialIconName: "disabled_by_default",
+  name: "Single",
+  closeOnClick: false,
 });
 deleteSingleCubeButton.onClick.add(() => deleteBox());
 deleteCubeButtons.addChild(deleteSingleCubeButton);
 ```
+
 And finally the "delete all" button:
 
 ```js
@@ -172,10 +204,14 @@ deleteAllCubesButton.label = "All";
 deleteAllCubesButton.onClick.add(() => deleteAllBoxes());
 deleteCubeButtons.addChild(deleteAllCubesButton);
 ```
+
 And this is it! Easy, right? You can now create add menus to your components and easily share them with other
 BIM software developers!
+
 ### 🐁 Context menu
+
 ---
+
 There's a special menu that is used in menu BIM applications: the context menu! You know, that menu that shows up
 when you right-click somewhere. Don't worry, this is also supported by `UI Components`! The
 [UI Manager](../api/classes/components.UIManager) has a default Toolbar that is already set up as a context menu.
@@ -183,7 +219,7 @@ All the nesting logic mentioned before works here as well:
 
 ```js
 const contextDeleteButtons = new OBC.Button(components);
-contextDeleteButtons.materialIcon = 'widgets';
+contextDeleteButtons.materialIcon = "widgets";
 contextDeleteButtons.label = "Delete";
 const deleteAllCubesContextButton = new OBC.Button(components);
 deleteAllCubesContextButton.materialIcon = "widgets";
@@ -192,11 +228,9 @@ deleteAllCubesContextButton.onClick.add(() => deleteAllBoxes());
 contextDeleteButtons.addChild(deleteAllCubesContextButton);
 components.ui.contextMenu.addChild(contextDeleteButtons);
 ```
+
 And this is it! 🥳 Cool, right? Now you can easily use the UI elements in the components of this library and the
 marketplace, as well as create your own custom menus in minutes. 💪🎨 You are now one step closer to create your
 BIM applications from scratch. 🔥
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/ui/UIManager/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/ui/UIManager/index.html"></iframe>

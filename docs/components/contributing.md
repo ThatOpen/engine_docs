@@ -26,7 +26,6 @@ You can be part of it by:
 
 - Starting interesting debates and conversations
 
-
 ## Coding
 
 :::tip What you'll need
@@ -62,5 +61,3 @@ To add / edit code of the library, you will need to:
 3. Create a pull request. The name should follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) convention. If you are not sure, check out the title past pull requests!
 
 Then, someone from our team will reviewed it and, if everything is ok, merge it. That's it! Easy, right? 😋 We'll help you get started and give you anything you needs, so don't hesitate to reach out!
-
-

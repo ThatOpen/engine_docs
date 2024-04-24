@@ -32,7 +32,7 @@ ClippingEdges with customizable lines.
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L35)
 
-___
+---
 
 ### onAfterDelete
 
@@ -48,7 +48,7 @@ ___
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:38](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L38)
 
-___
+---
 
 ### onAfterDrag
 
@@ -64,7 +64,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:44](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L44)
 
-___
+---
 
 ### onBeforeDrag
 
@@ -80,7 +80,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L41)
 
-___
+---
 
 ### onDisposed
 
@@ -96,7 +96,7 @@ ___
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:73](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L73)
 
-___
+---
 
 ### orthogonalY
 
@@ -115,7 +115,7 @@ slope for draining purposes.
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:60](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L60)
 
-___
+---
 
 ### styles
 
@@ -127,7 +127,7 @@ The list of defined LineStyle instances.
 
 [temp/engine_components/src/navigation/EdgesClipper/index.ts:14](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/index.ts#L14)
 
-___
+---
 
 ### toleranceOrthogonalY
 
@@ -145,11 +145,11 @@ has to be `true` for this to apply.
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:67](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L67)
 
-___
+---
 
 ### uiElement
 
-• **uiElement**: [`UIElement`](openbim_components.UIElement.md)<{ `main`: `Button`  }\>
+• **uiElement**: [`UIElement`](openbim_components.UIElement.md)<{ `main`: `Button` }\>
 
 [UI.uiElement](../interfaces/openbim_components.UI.md#uielement)
 
@@ -187,8 +187,8 @@ SimpleClipper.enabled
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `state` | `boolean` |
 
 #### Returns
@@ -203,7 +203,7 @@ SimpleClipper.enabled
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:93](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L93)
 
-___
+---
 
 ### material
 
@@ -229,8 +229,8 @@ The material of the clipping plane representation.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type       |
+| :--------- | :--------- |
 | `material` | `Material` |
 
 #### Returns
@@ -245,7 +245,7 @@ SimpleClipper.material
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:123](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L123)
 
-___
+---
 
 ### size
 
@@ -271,8 +271,8 @@ The size of the geometric representation of the clippings planes.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `size` | `number` |
 
 #### Returns
@@ -287,7 +287,7 @@ SimpleClipper.size
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:136](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L136)
 
-___
+---
 
 ### visible
 
@@ -313,8 +313,8 @@ SimpleClipper.visible
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `state` | `boolean` |
 
 #### Returns
@@ -349,7 +349,7 @@ SimpleClipper.visible
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:184](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L184)
 
-___
+---
 
 ### createFromNormalAndCoplanarPoint
 
@@ -360,10 +360,10 @@ without the need of the mouse.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type      | Description                            |
+| :------- | :-------- | :------------------------------------- |
 | `normal` | `Vector3` | the orientation of the clipping plane. |
-| `point` | `Vector3` | the position of the clipping plane. |
+| `point`  | `Vector3` | the position of the clipping plane.    |
 
 #### Returns
 
@@ -377,7 +377,7 @@ without the need of the mouse.
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:200](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L200)
 
-___
+---
 
 ### delete
 
@@ -387,8 +387,8 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type                                             | Description                                                                                    |
+| :------- | :----------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | `plane?` | [`EdgesPlane`](openbim_components.EdgesPlane.md) | the plane to delete. If undefined, the the first plane found under the cursor will be deleted. |
 
 #### Returns
@@ -403,7 +403,7 @@ ___
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:215](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L215)
 
-___
+---
 
 ### deleteAll
 
@@ -423,7 +423,7 @@ Deletes all the existing clipping planes.
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:227](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L227)
 
-___
+---
 
 ### dispose
 
@@ -443,7 +443,7 @@ ___
 
 [temp/engine_components/src/navigation/EdgesClipper/index.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/index.ts#L28)
 
-___
+---
 
 ### get
 
@@ -463,7 +463,7 @@ ___
 
 [temp/engine_components/src/core/SimpleClipper/index.ts:158](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L158)
 
-___
+---
 
 ### hasUI
 
@@ -483,7 +483,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -503,7 +503,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -523,7 +523,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -543,7 +543,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -563,7 +563,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -583,7 +583,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### updateEdges
 
@@ -593,9 +593,9 @@ Updates all the lines of the ClippingEdges.
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `updateFills` | `boolean` | `false` |
+| Name          | Type      | Default value |
+| :------------ | :-------- | :------------ |
+| `updateFills` | `boolean` | `false`       |
 
 #### Returns
 

@@ -38,7 +38,7 @@ The camera that is being used now according to the current [CameraProjection](..
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L48)
 
-___
+---
 
 ### controls
 
@@ -57,7 +57,7 @@ object to move, rotate, look at objects, etc.
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L33)
 
-___
+---
 
 ### currentMode
 
@@ -69,7 +69,7 @@ The current [NavigationMode](../interfaces/openbim_components.NavigationMode.md)
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:24](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L24)
 
-___
+---
 
 ### onAfterUpdate
 
@@ -85,7 +85,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:20](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L20)
 
-___
+---
 
 ### onBeforeUpdate
 
@@ -101,7 +101,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L17)
 
-___
+---
 
 ### onDisposed
 
@@ -117,7 +117,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L25)
 
-___
+---
 
 ### projectionChanged
 
@@ -155,8 +155,8 @@ SimpleCamera.enabled
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type      |
+| :-------- | :-------- |
 | `enabled` | `boolean` |
 
 #### Returns
@@ -171,7 +171,7 @@ SimpleCamera.enabled
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L41)
 
-___
+---
 
 ### matchOrthoDistanceEnabled
 
@@ -181,8 +181,8 @@ Match Ortho zoom with Perspective distance when changing projection mode
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `value` | `boolean` |
 
 #### Returns
@@ -213,7 +213,7 @@ Match Ortho zoom with Perspective distance when changing projection mode
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:107](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L107)
 
-___
+---
 
 ### fit
 
@@ -223,10 +223,10 @@ Make the camera view fit all the specified meshes.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `meshes` | `Iterable`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> | `undefined` | the meshes to fit. If it is not defined, it will evaluate [Components.meshes](openbim_components.Components.md#meshes). |
-| `offset` | `number` | `1.5` | the distance to the fit object |
+| Name     | Type                                                                                                              | Default value | Description                                                                                                             |
+| :------- | :---------------------------------------------------------------------------------------------------------------- | :------------ | :---------------------------------------------------------------------------------------------------------------------- |
+| `meshes` | `Iterable`<`Mesh`<`BufferGeometry`<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> | `undefined`   | the meshes to fit. If it is not defined, it will evaluate [Components.meshes](openbim_components.Components.md#meshes). |
+| `offset` | `number`                                                                                                          | `1.5`         | the distance to the fit object                                                                                          |
 
 #### Returns
 
@@ -236,7 +236,7 @@ Make the camera view fit all the specified meshes.
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:197](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L197)
 
-___
+---
 
 ### get
 
@@ -247,8 +247,8 @@ to specify which camera to get.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name          | Type                                                                    | Description                                                                                                                                                                         |
+| :------------ | :---------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `projection?` | [`CameraProjection`](../modules/openbim_components.md#cameraprojection) | The camera corresponding to the [CameraProjection](../modules/openbim_components.md#cameraprojection) specified. If no projection is specified, the active camera will be returned. |
 
 #### Returns
@@ -263,7 +263,7 @@ to specify which camera to get.
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:121](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L121)
 
-___
+---
 
 ### getProjection
 
@@ -279,7 +279,7 @@ Returns the current [CameraProjection](../modules/openbim_components.md#camerapr
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:131](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L131)
 
-___
+---
 
 ### hasUI
 
@@ -299,7 +299,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -319,7 +319,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -339,7 +339,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -359,7 +359,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -379,7 +379,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -399,7 +399,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### setNavigationMode
 
@@ -409,8 +409,8 @@ Sets a new [NavigationMode](../interfaces/openbim_components.NavigationMode.md) 
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type                                                      | Description                                                                      |
+| :----- | :-------------------------------------------------------- | :------------------------------------------------------------------------------- |
 | `mode` | [`NavModeID`](../modules/openbim_components.md#navmodeid) | The [NavigationMode](../interfaces/openbim_components.NavigationMode.md) to set. |
 
 #### Returns
@@ -421,7 +421,7 @@ Sets a new [NavigationMode](../interfaces/openbim_components.NavigationMode.md) 
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:180](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L180)
 
-___
+---
 
 ### setProjection
 
@@ -432,8 +432,8 @@ Sets the current [CameraProjection](../modules/openbim_components.md#cameraproje
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type                                                                    | Description                                                                           |
+| :----------- | :---------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
 | `projection` | [`CameraProjection`](../modules/openbim_components.md#cameraprojection) | The new [CameraProjection](../modules/openbim_components.md#cameraprojection) to set. |
 
 #### Returns
@@ -444,7 +444,7 @@ Sets the current [CameraProjection](../modules/openbim_components.md#cameraproje
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:157](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L157)
 
-___
+---
 
 ### toggleProjection
 
@@ -461,7 +461,7 @@ and Viceversa.
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:144](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L144)
 
-___
+---
 
 ### toggleUserInput
 
@@ -471,8 +471,8 @@ Allows or prevents all user input.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type      | Description                               |
+| :------- | :-------- | :---------------------------------------- |
 | `active` | `boolean` | whether to enable or disable user inputs. |
 
 #### Returns
@@ -483,7 +483,7 @@ Allows or prevents all user input.
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/index.ts:167](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/index.ts#L167)
 
-___
+---
 
 ### update
 
@@ -493,8 +493,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `_delta` | `number` |
 
 #### Returns
@@ -509,7 +509,7 @@ ___
 
 [temp/engine_components/src/core/SimpleCamera/index.ts:81](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L81)
 
-___
+---
 
 ### updateAspect
 

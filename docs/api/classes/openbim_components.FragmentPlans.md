@@ -24,7 +24,7 @@ Helper to control the camera and easily define and navigate 2D floor plans.
 
 ### currentPlan
 
-• **currentPlan**: ``null`` \| `PlanView` = `null`
+• **currentPlan**: `null` \| `PlanView` = `null`
 
 The floorplan that is currently selected.
 
@@ -32,7 +32,7 @@ The floorplan that is currently selected.
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:44](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L44)
 
-___
+---
 
 ### defaultCameraOffset
 
@@ -44,7 +44,7 @@ The offset of the 2D camera to the floor plan elevation.
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:50](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L50)
 
-___
+---
 
 ### defaultSectionOffset
 
@@ -56,7 +56,7 @@ The offset from the clipping planes to their respective floor plan elevation.
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:47](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L47)
 
-___
+---
 
 ### enabled
 
@@ -72,7 +72,7 @@ ___
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L41)
 
-___
+---
 
 ### onDisposed
 
@@ -88,7 +88,7 @@ ___
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:34](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L34)
 
-___
+---
 
 ### storeys
 
@@ -104,11 +104,11 @@ The created floor plans.
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:53](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L53)
 
-___
+---
 
 ### uiElement
 
-• **uiElement**: [`UIElement`](openbim_components.UIElement.md)<{ `commandsMenu`: `CommandsMenu`<`PlanView`\> ; `defaultText`: `SimpleUIComponent`<`HTMLParagraphElement`\> ; `exitButton`: `Button` ; `floatingWindow`: `FloatingWindow` ; `main`: `Button` ; `planList`: `SimpleUIComponent`<`HTMLElement`\>  }\>
+• **uiElement**: [`UIElement`](openbim_components.UIElement.md)<{ `commandsMenu`: `CommandsMenu`<`PlanView`\> ; `defaultText`: `SimpleUIComponent`<`HTMLParagraphElement`\> ; `exitButton`: `Button` ; `floatingWindow`: `FloatingWindow` ; `main`: `Button` ; `planList`: `SimpleUIComponent`<`HTMLElement`\> }\>
 
 [UI.uiElement](../interfaces/openbim_components.UI.md#uielement)
 
@@ -130,8 +130,8 @@ Creates a new floor plan in the navigator.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type       | Description                                  |
+| :------- | :--------- | :------------------------------------------- |
 | `config` | `PlanView` | Necessary data to initialize the floor plan. |
 
 #### Returns
@@ -142,7 +142,7 @@ Creates a new floor plan in the navigator.
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:154](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L154)
 
-___
+---
 
 ### dispose
 
@@ -162,7 +162,7 @@ ___
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:99](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L99)
 
-___
+---
 
 ### exitPlanView
 
@@ -172,9 +172,9 @@ Deactivate navigator and go back to the previous view.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `animate` | `boolean` | `false` | Whether to animate the camera transition. |
+| Name      | Type      | Default value | Description                               |
+| :-------- | :-------- | :------------ | :---------------------------------------- |
+| `animate` | `boolean` | `false`       | Whether to animate the camera transition. |
 
 #### Returns
 
@@ -184,7 +184,7 @@ Deactivate navigator and go back to the previous view.
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:198](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L198)
 
-___
+---
 
 ### get
 
@@ -204,7 +204,7 @@ ___
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:94](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L94)
 
-___
+---
 
 ### goTo
 
@@ -214,10 +214,10 @@ Make the navigator go to the specified floor plan.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `id` | `string` | `undefined` | Floor plan to go to. |
-| `animate` | `boolean` | `false` | Whether to animate the camera transition. |
+| Name      | Type      | Default value | Description                               |
+| :-------- | :-------- | :------------ | :---------------------------------------- |
+| `id`      | `string`  | `undefined`   | Floor plan to go to.                      |
+| `animate` | `boolean` | `false`       | Whether to animate the camera transition. |
 
 #### Returns
 
@@ -227,7 +227,7 @@ Make the navigator go to the specified floor plan.
 
 [temp/engine_components/src/fragments/FragmentPlans/index.ts:173](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentPlans/index.ts#L173)
 
-___
+---
 
 ### hasUI
 
@@ -247,7 +247,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -267,7 +267,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -287,7 +287,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -307,7 +307,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -327,7 +327,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 

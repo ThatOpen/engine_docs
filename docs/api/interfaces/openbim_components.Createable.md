@@ -31,8 +31,8 @@ before starting to create.
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type  |
+| :----- | :---- |
 | `data` | `any` |
 
 ##### Returns
@@ -43,7 +43,7 @@ before starting to create.
 
 [temp/engine_components/src/base-types/base-types.ts:157](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L157)
 
-___
+---
 
 ### create
 
@@ -57,8 +57,8 @@ Creates a new instance of an element (e.g. a new Dimension).
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type  |
+| :----- | :---- |
 | `data` | `any` |
 
 ##### Returns
@@ -69,7 +69,7 @@ Creates a new instance of an element (e.g. a new Dimension).
 
 [temp/engine_components/src/base-types/base-types.ts:139](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L139)
 
-___
+---
 
 ### delete
 
@@ -83,8 +83,8 @@ Deletes an existing instance of an element (e.g. a Dimension).
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type  |
+| :----- | :---- |
 | `data` | `any` |
 
 ##### Returns
@@ -95,7 +95,7 @@ Deletes an existing instance of an element (e.g. a Dimension).
 
 [temp/engine_components/src/base-types/base-types.ts:166](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L166)
 
-___
+---
 
 ### endCreation
 
@@ -110,8 +110,8 @@ instance of whatever the component creates.
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type  |
+| :----- | :---- |
 | `data` | `any` |
 
 ##### Returns
@@ -122,7 +122,7 @@ instance of whatever the component creates.
 
 [temp/engine_components/src/base-types/base-types.ts:148](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L148)
 
-___
+---
 
 ### onAfterCancel
 
@@ -134,7 +134,7 @@ Fired after calling [Createable.cancelCreation](openbim_components.Createable.md
 
 [temp/engine_components/src/base-types/base-types.ts:160](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L160)
 
-___
+---
 
 ### onAfterCreate
 
@@ -146,7 +146,7 @@ Fired after successfully calling [Createable.create](openbim_components.Createab
 
 [temp/engine_components/src/base-types/base-types.ts:142](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L142)
 
-___
+---
 
 ### onAfterDelete
 
@@ -158,7 +158,7 @@ Fired after successfully calling [()](openbim_components.Createable.md#delete)
 
 [temp/engine_components/src/base-types/base-types.ts:169](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L169)
 
-___
+---
 
 ### onBeforeCancel
 
@@ -170,7 +170,7 @@ Fired before calling [Createable.cancelCreation](openbim_components.Createable.m
 
 [temp/engine_components/src/base-types/base-types.ts:151](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L151)
 
-___
+---
 
 ### onBeforeDelete
 

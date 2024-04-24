@@ -35,7 +35,7 @@ The camera that renders the scene.
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:55](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L55)
 
-___
+---
 
 ### controls
 
@@ -47,7 +47,7 @@ The camera controls that move around in the scene.
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L52)
 
-___
+---
 
 ### enabled
 
@@ -63,7 +63,7 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L41)
 
-___
+---
 
 ### onAfterUpdate
 
@@ -79,7 +79,7 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:32](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L32)
 
-___
+---
 
 ### onBeforeUpdate
 
@@ -95,7 +95,7 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L35)
 
-___
+---
 
 ### onDisposed
 
@@ -111,7 +111,7 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:44](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L44)
 
-___
+---
 
 ### onResize
 
@@ -127,11 +127,11 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:38](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L38)
 
-___
+---
 
 ### uiElement
 
-• **uiElement**: [`UIElement`](openbim_components.UIElement.md)<{ `container`: `SimpleUIComponent`<`HTMLElement`\>  }\>
+• **uiElement**: [`UIElement`](openbim_components.UIElement.md)<{ `container`: `SimpleUIComponent`<`HTMLElement`\> }\>
 
 [UI.uiElement](../interfaces/openbim_components.UI.md#uielement)
 
@@ -163,7 +163,7 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:150](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L150)
 
-___
+---
 
 ### get
 
@@ -185,7 +185,7 @@ the 2D scene.
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:145](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L145)
 
-___
+---
 
 ### getSize
 
@@ -205,7 +205,7 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:173](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L173)
 
-___
+---
 
 ### hasUI
 
@@ -225,7 +225,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -245,7 +245,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -265,7 +265,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -285,7 +285,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -305,7 +305,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -325,7 +325,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### resize
 
@@ -345,7 +345,7 @@ ___
 
 [temp/engine_components/src/core/Simple2DScene/index.ts:184](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L184)
 
-___
+---
 
 ### update
 

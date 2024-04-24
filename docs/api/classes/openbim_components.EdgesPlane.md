@@ -29,7 +29,7 @@ To disable this behaviour set this to 0.
 
 [temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L17)
 
-___
+---
 
 ### name
 
@@ -45,7 +45,7 @@ Component.name
 
 [temp/engine_components/src/core/SimpleClipper/simple-plane.ts:14](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L14)
 
-___
+---
 
 ### onDisposed
 
@@ -61,7 +61,7 @@ ___
 
 [temp/engine_components/src/core/SimpleClipper/simple-plane.ts:23](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L23)
 
-___
+---
 
 ### onDraggingEnded
 
@@ -77,7 +77,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 [temp/engine_components/src/core/SimpleClipper/simple-plane.ts:20](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L20)
 
-___
+---
 
 ### onDraggingStarted
 
@@ -119,8 +119,8 @@ SimplePlane.enabled
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `state` | `boolean` |
 
 #### Returns
@@ -135,7 +135,7 @@ SimplePlane.enabled
 
 [temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:37](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L37)
 
-___
+---
 
 ### meshes
 
@@ -155,7 +155,7 @@ SimplePlane.meshes
 
 [temp/engine_components/src/core/SimpleClipper/simple-plane.ts:71](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L71)
 
-___
+---
 
 ### planeMaterial
 
@@ -181,8 +181,8 @@ The material of the clipping plane representation.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                       |
+| :--------- | :------------------------- |
 | `material` | `Material` \| `Material`[] |
 
 #### Returns
@@ -197,7 +197,7 @@ SimplePlane.planeMaterial
 
 [temp/engine_components/src/core/SimpleClipper/simple-plane.ts:81](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L81)
 
-___
+---
 
 ### size
 
@@ -223,8 +223,8 @@ Sets the size of the clipping plane representation.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `size` | `number` |
 
 #### Returns
@@ -239,7 +239,7 @@ SimplePlane.size
 
 [temp/engine_components/src/core/SimpleClipper/simple-plane.ts:91](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L91)
 
-___
+---
 
 ### visible
 
@@ -265,8 +265,8 @@ SimplePlane.visible
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `state` | `boolean` |
 
 #### Returns
@@ -301,7 +301,7 @@ SimplePlane.visible
 
 [temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L48)
 
-___
+---
 
 ### get
 
@@ -321,7 +321,7 @@ ___
 
 [temp/engine_components/src/core/SimpleClipper/simple-plane.ts:137](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/simple-plane.ts#L137)
 
-___
+---
 
 ### hasUI
 
@@ -341,7 +341,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -361,7 +361,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -381,7 +381,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -401,7 +401,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -421,7 +421,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -441,7 +441,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### setEnabled
 
@@ -451,8 +451,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `state` | `boolean` |
 
 #### Returns
@@ -463,7 +463,7 @@ ___
 
 [temp/engine_components/src/navigation/EdgesClipper/src/edges-plane.ts:54](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/EdgesClipper/src/edges-plane.ts#L54)
 
-___
+---
 
 ### update
 

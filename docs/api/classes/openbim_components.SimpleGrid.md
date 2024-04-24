@@ -39,7 +39,7 @@ and translated to typescript by
 
 [temp/engine_components/src/core/SimpleGrid/index.ts:24](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleGrid/index.ts#L24)
 
-___
+---
 
 ### onDisposed
 
@@ -79,8 +79,8 @@ perspective cameras and false for orthographic cameras.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type      |
+| :------- | :-------- |
 | `active` | `boolean` |
 
 #### Returns
@@ -91,7 +91,7 @@ perspective cameras and false for orthographic cameras.
 
 [temp/engine_components/src/core/SimpleGrid/index.ts:58](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleGrid/index.ts#L58)
 
-___
+---
 
 ### material
 
@@ -107,7 +107,7 @@ The material of the grid.
 
 [temp/engine_components/src/core/SimpleGrid/index.ts:42](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleGrid/index.ts#L42)
 
-___
+---
 
 ### visible
 
@@ -133,8 +133,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type      |
+| :-------- | :-------- |
 | `visible` | `boolean` |
 
 #### Returns
@@ -169,7 +169,7 @@ ___
 
 [temp/engine_components/src/core/SimpleGrid/index.ts:189](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleGrid/index.ts#L189)
 
-___
+---
 
 ### get
 
@@ -189,7 +189,7 @@ ___
 
 [temp/engine_components/src/core/SimpleGrid/index.ts:184](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleGrid/index.ts#L184)
 
-___
+---
 
 ### hasUI
 
@@ -209,7 +209,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -229,7 +229,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -249,7 +249,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -269,7 +269,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -289,7 +289,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 

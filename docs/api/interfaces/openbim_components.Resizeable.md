@@ -41,7 +41,7 @@ component.
 
 [temp/engine_components/src/base-types/base-types.ts:103](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L103)
 
-___
+---
 
 ### onResize
 
@@ -53,7 +53,7 @@ Event that fires when the component has been resized.
 
 [temp/engine_components/src/base-types/base-types.ts:96](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L96)
 
-___
+---
 
 ### resize
 
@@ -69,8 +69,8 @@ component.
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type      |
+| :------ | :-------- |
 | `size?` | `Vector2` |
 
 ##### Returns

@@ -23,7 +23,7 @@ interface, like a button or a window.
 
 ### uiElement
 
-• `Readonly` **uiElement**: [`UIElement`](../classes/openbim_components.UIElement.md)<{ `[name: string]`: `SimpleUIComponent`;  }\>
+• `Readonly` **uiElement**: [`UIElement`](../classes/openbim_components.UIElement.md)<{ `[name: string]`: `SimpleUIComponent`; }\>
 
 The class containing all the buttons, windows, tables, etc., of this component.
 

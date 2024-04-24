@@ -6,25 +6,23 @@ sidebar_position: 4
 
 As you can see, we have tons of tutorials in this documentations, and we will keep adding more as new features come out. If you're not looking for anything specific, it can be a little difficult to know where to start. For that reason, here are some interesting itineraries to take your first steps in the library!
 
-
-
 :::tip First steps in the library
 
 The best place to start is playing the core components of our library. These are the basic building blocks you will need in all the apps you build on top of this!
 
-- 📘 [Create your first 3D app](../Tutorials/SimpleScene.mdx) 
+- 📘 [Create your first 3D app](../Tutorials/SimpleScene.mdx)
 
-- 📘 [Interact with your scene](../Tutorials/SimpleRaycaster.mdx) 
-- 📘 [Create some clipping planes](../Tutorials/SimpleRaycaster.mdx) 
+- 📘 [Interact with your scene](../Tutorials/SimpleRaycaster.mdx)
+- 📘 [Create some clipping planes](../Tutorials/SimpleRaycaster.mdx)
 
 - 📘 [Use some tools](../Tutorials/ToolsComponent.mdx)
-:::
+  :::
 
 :::danger Making great 3D apps
 
 Basics are great, but that's not enough to build professional 3D apps. Let's discover some tools that will bring our BIM software to the next level:
 
-- 📙 [Using a fancy camera](../Tutorials/OrthoPerspectiveCamera.mdx) 
+- 📙 [Using a fancy camera](../Tutorials/OrthoPerspectiveCamera.mdx)
 
 - 📙 [Building scalable 3D scenes](../Tutorials/ScreenCuller.mdx)
 
@@ -67,7 +65,5 @@ We are here to make BIM apps, and the library has tons of tools to make it super
 - 📕 [Writing properties](../Tutorials/IfcPropertiesManager.mdx)
 
 :::
-
-
 
 Keep in mind that this documentation assumes some basic level of web development and Three.js. If you are just starting or have never coded before in the web, don't worry! Get around our community, say hi, meet other aspiring BIM software developers and start your coding journey with us. 🚀

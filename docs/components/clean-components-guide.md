@@ -17,14 +17,14 @@ export MyComponent extends OBC.Component<any> {}
 If your component has more than one file, name the base file `index.ts`. If you need to include other supporting files for your component, create a `src` folder in the component folder. You can call those supporting file whatever you want. This is a basic folder structure, making sure you name the component folder as the class name:
 
 - MyComponent
-    - src
 
-      - supporting-file-1.ts
+  - src
 
-      - supporting-file-2.ts
+    - supporting-file-1.ts
 
-      - index.ts
+    - supporting-file-2.ts
 
+    - index.ts
 
 ## TypeScript
 
@@ -73,14 +73,14 @@ In tutorials, try to not reference functions inside paragraphs. That allows to e
 To add a cube to the scene, you need to call scene.add()
 */
 
-scene.add(cube)
+scene.add(cube);
 
 /*Correct*/
 /*MD
 To add a cube to the scene, just add the following code line!
 */
 
-scene.add(cube)
+scene.add(cube);
 ```
 
 ## Memory management
@@ -136,7 +136,6 @@ If your components has any kind of menu, it’s probably made of UI Components o
 - Calling the `remove` method of any HTML element that you create.
 
 > The only exception to this rule is if your component takes external UI components or HTML elements. In this case, it’s possible that it is used by other components that are not being disposed yet. In that case, you can just de-reference it (e.g. assigning them an empty value).
->
 
 ### Events
 

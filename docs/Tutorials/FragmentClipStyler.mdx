@@ -1,5 +1,7 @@
 ### 💄 Styling those fills and edges
-___
+
+---
+
 You might have noticed that the `EdgesClipper` has support for fills
 and edges of various colors and thicknesses. That's great, but how can
 we set it up for our BIM app? Luckily, the `FragmentClipStyler` comes
@@ -16,6 +18,7 @@ forward!
 ```js
 postproduction.customEffects.outlineEnabled = true;
 ```
+
 Next, we will intialize the `EdgesClipper`, the `FragmentClassifier` and the
 `FragmentClipStyler`.
 
@@ -26,6 +29,7 @@ const classifier = new OBC.FragmentClassifier(components);
 const styler = new OBC.FragmentClipStyler(components);
 await styler.setup();
 ```
+
 Great! Now, adding it to the scene is as easy as creating a
 `Toolbar` and adding the built-in `Button` included in the styler:
 
@@ -36,26 +40,34 @@ components.ui.addToolbar(toolbar);
 const stylerButton = styler.uiElement.get("mainButton");
 toolbar.addChild(stylerButton);
 ```
+
 Fantastic! Now your styler is ready to be used.
+
 ### 🏠 Loading a model
-___
+
+---
+
 Of course, we won't be able to see anything until we load a model.
 We will load a simple fragment that you can find in the `resources`
 folder of the Components repository. Alternatively, you can use
 the `FragmentIfcLoader` to load an IFC file directly.
 
 ```js
-const file = await fetch('../../../resources/small.frag');
+const file = await fetch("../../../resources/small.frag");
 const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
 const model = await fragments.load(buffer);
-const properties = await fetch('../../../resources/small.json');
+const properties = await fetch("../../../resources/small.json");
 model.setLocalProperties(await properties.json());
 ```
+
 Great, now we have something in our scene. Now, let's see the
 styler in action.
+
 ### 🔥 Spinning up the styler
-___
+
+---
+
 To use the styler, we need to classify the model by entity using
 the `FragmentClassifier`. That will index all the geometry by
 IFC category for the styler. Then, we can simply call the `update`
@@ -65,6 +77,7 @@ method to make it affect the model we just loaded:
 classifier.byEntity(model);
 await styler.update();
 ```
+
 And one last thing: we need a way to create clipping planes! In
 this example, we will just use the global double click event. In
 other words: each time you double click, a new clipping plane
@@ -72,15 +85,13 @@ will be created:
 
 ```js
 window.ondblclick = () => {
-clipper.create();
-}
+  clipper.create();
+};
 ```
+
 And voilà! Now you can create a clipping plane, open the styler menu
 and see the section fill and edges update in real time. You can
 create styles and apply them per category. See you in another
 tutorial. 🚀
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentClipStyler/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentClipStyler/index.html"></iframe>

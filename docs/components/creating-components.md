@@ -9,17 +9,15 @@ sidebar_position: 3
 Our libraries have many components, but the BIM world is vast and it's impossible to cover all use cases.
 But that's the biggest power of components: they are flexible and can be extended to cover all use cases.
 
-
 :::danger We like types, but you don't have to
 
 We are going to do the examples in TypeScript, but don't worry if you only know JavaScript! Translating these examples to JavaScript would be exactly the same but removing all the type definitions.
 
 :::
 
+Creating a component is as simple as creating a class that extends the basic Component class. It is a generic class, which means that you can specify a type when defining it. This type is what we call the `core` of the component: the type of data it stores inside that best represents what the component does.
 
-Creating a component is as simple as creating a class that extends the basic Component class. It is a generic class, which means that you can specify a type when defining it. This type is what we call the `core` of the component: the type of data it stores inside that best represents what the component does. 
-
-For example, let's create a "Hello world" component, whose only mission is to log a greeting message in the console. 
+For example, let's create a "Hello world" component, whose only mission is to log a greeting message in the console.
 
 ```ts
 import * as OBC from "openbim-components";
@@ -55,7 +53,7 @@ As you can see, the structure of the component is very simple. The Component bas
 
 - A `get()` method that returns the main data of the component.
 
-Now, you can use this component just as any of the components you will get to know in the [tutorials](../Tutorials/SimpleScene.mdx)! 
+Now, you can use this component just as any of the components you will get to know in the [tutorials](../Tutorials/SimpleScene.mdx)!
 
 ### User Interface
 
@@ -67,9 +65,9 @@ You don't need to use them if you don't want to, but it will allow you to build 
 
 :::
 
-You can check out the UIComponents tutorial for a more in-depth look of what you can do with them, or simply check out the code of some of our components. 
+You can check out the UIComponents tutorial for a more in-depth look of what you can do with them, or simply check out the code of some of our components.
 
-To add them to your component, you just need to use the `UI` interface and use the `UIElement` object: 
+To add them to your component, you just need to use the `UI` interface and use the `UIElement` object:
 
 ```ts
 import * as OBC from "openbim-components";
@@ -77,22 +75,24 @@ import * as OBC from "openbim-components";
 /**
  * A basic component to say hello in the console.
  */
-export class HelloWorldComponent extends OBC.Component<string> 
-  implements OBC.UI {
+export class HelloWorldComponent
+  extends OBC.Component<string>
+  implements OBC.UI
+{
   enabled = true;
-	
-  uiElement = new OBC.UIElement<{greet: OBC.Button}>();	
+
+  uiElement = new OBC.UIElement<{ greet: OBC.Button }>();
 
   private readonly _message = "Hello";
 
   constructor(components: OBC.Components) {
     super(components);
-		
-	const greet = new OBC.Button(components);
-	greet.materialIcon = "handshake";
-	greet.tooltip = "Greet";
-	greet.onClick.add(() => this.greet("stranger"));
-	this.uiElement.set({ greet });
+
+    const greet = new OBC.Button(components);
+    greet.materialIcon = "handshake";
+    greet.tooltip = "Greet";
+    greet.onClick.add(() => this.greet("stranger"));
+    this.uiElement.set({ greet });
   }
 
   get() {
@@ -131,14 +131,14 @@ import * as OBC from "openbim-components";
  */
 export class HelloWorldTool extends OBC.Component<string> {
   static readonly uuid = "0f89b34b-fc6b-4b97-b56d-1edeb0a308a2";
-  
+
   enabled = true;
 
   private readonly _message = "Hello";
 
   constructor(components: OBC.Components) {
     super(components);
-	components.tools.add(HelloWorldTool.uuid, this);	
+    components.tools.add(HelloWorldTool.uuid, this);
   }
 
   get() {
@@ -175,7 +175,7 @@ The library will take care of updating your tools (if needed) and releasing thei
 
 - With `updateable`, the library will automatically update your component every frame.
 
-- With `disposable`, the library will release the memory of your component when the application is disposed, preventing memory leaks. 
+- With `disposable`, the library will release the memory of your component when the application is disposed, preventing memory leaks.
 
 Let's see them in action!
 
@@ -186,48 +186,50 @@ import * as OBC from "openbim-components";
 /**
  * A basic component to say hello in the console.
  */
-export class HelloWorldTool extends OBC.Component<string> 
-  implements OBC.Disposable, OBC.Updateable  {
-	static readonly uuid = "0f89b34b-fc6b-4b97-b56d-1edeb0a308a2";
+export class HelloWorldTool
+  extends OBC.Component<string>
+  implements OBC.Disposable, OBC.Updateable
+{
+  static readonly uuid = "0f89b34b-fc6b-4b97-b56d-1edeb0a308a2";
 
-	readonly onAfterUpdate = new OBC.Event();
+  readonly onAfterUpdate = new OBC.Event();
 
-	readonly onBeforeUpdate = new OBC.Event();
+  readonly onBeforeUpdate = new OBC.Event();
 
-	enabled = true;
-	someMesh = new THREE.Mesh(); 
+  enabled = true;
+  someMesh = new THREE.Mesh();
 
-	private readonly _message = "Hello";
+  private readonly _message = "Hello";
 
-	constructor(components: OBC.Components) {
-		super(components);
-		components.tools.add(HelloWorldTool.uuid, this);
-	}
-	
-	get() {
-		return this._message;
-	}
+  constructor(components: OBC.Components) {
+    super(components);
+    components.tools.add(HelloWorldTool.uuid, this);
+  }
 
-	greet(name: string) {
-		const message = `${this._message} ${name}!`;
-		console.log(message);
-	}
+  get() {
+    return this._message;
+  }
 
-	async dispose() {
-		this.enabled = false;
-		// Make sure to clean up the events
-		this.onBeforeUpdate.reset();
-		this.onAfterUpdate.reset();
-		// Use the disposer tool to easily dispose THREE.js objects
-		const disposer = await this.components.tool.get(OBC.Disposer);
-		disposer.destroy(this.someMesh);
-    }
+  greet(name: string) {
+    const message = `${this._message} ${name}!`;
+    console.log(message);
+  }
 
-    async update() {
-		this.onBeforeUpdate.trigger();
-		console.log("Updated!");
-		this.onAfterUpdate.trigger();
-	}
+  async dispose() {
+    this.enabled = false;
+    // Make sure to clean up the events
+    this.onBeforeUpdate.reset();
+    this.onAfterUpdate.reset();
+    // Use the disposer tool to easily dispose THREE.js objects
+    const disposer = await this.components.tool.get(OBC.Disposer);
+    disposer.destroy(this.someMesh);
+  }
+
+  async update() {
+    this.onBeforeUpdate.trigger();
+    console.log("Updated!");
+    this.onAfterUpdate.trigger();
+  }
 }
 ```
 

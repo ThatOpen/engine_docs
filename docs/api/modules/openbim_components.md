@@ -58,7 +58,7 @@ custom_edit_url: null
 
 ### CameraProjection
 
-Ƭ **CameraProjection**: ``"Perspective"`` \| ``"Orthographic"``
+Ƭ **CameraProjection**: `"Perspective"` \| `"Orthographic"`
 
 The projection system of the camera.
 
@@ -66,11 +66,11 @@ The projection system of the camera.
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:7](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/src/types.ts#L7)
 
-___
+---
 
 ### NavModeID
 
-Ƭ **NavModeID**: ``"Orbit"`` \| ``"FirstPerson"`` \| ``"Plan"``
+Ƭ **NavModeID**: `"Orbit"` \| `"FirstPerson"` \| `"Plan"`
 
 The extensible list of supported navigation modes.
 
@@ -82,7 +82,7 @@ The extensible list of supported navigation modes.
 
 ### DimensionLabelClassName
 
-• `Const` **DimensionLabelClassName**: ``"text-white text-sm bg-ifcjs-100 rounded-md px-3 py-1"``
+• `Const` **DimensionLabelClassName**: `"text-white text-sm bg-ifcjs-100 rounded-md px-3 py-1"`
 
 The name of the CSS class that styles the dimension label.
 
@@ -90,11 +90,11 @@ The name of the CSS class that styles the dimension label.
 
 [temp/engine_components/src/measurement/SimpleDimensionLine/types.ts:4](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/measurement/SimpleDimensionLine/types.ts#L4)
 
-___
+---
 
 ### DimensionPreviewClassName
 
-• `Const` **DimensionPreviewClassName**: ``"bg-ifcjs-100 rounded-full w-[8px] h-[8px]"``
+• `Const` **DimensionPreviewClassName**: `"bg-ifcjs-100 rounded-full w-[8px] h-[8px]"`
 
 The name of the CSS class that styles the dimension label.
 

@@ -1,5 +1,7 @@
 ### 🧶 View all IFC properties FAST
-___
+
+---
+
 IFC elements have tons of data, and it's often indirectly
 bound to the elements. Luckily, getting all the data for any
 IFC element is trivial with these libraries. Let´s see how! First,
@@ -20,19 +22,22 @@ highlighter.setup();
 components.renderer.postproduction.customEffects.outlineEnabled = true;
 highlighter.outlinesEnabled = true;
 ```
+
 Next, we will create a new instance of the component to navigate
 IFC properties: the `IfcPropertiesProcessor`. We will also
 make its built-in floating window visible by default.
 
 ```js
-const propsProcessor = new OBC.IfcPropertiesProcessor(components)
-propsProcessor.uiElement.get("propertiesWindow").visible = true
+const propsProcessor = new OBC.IfcPropertiesProcessor(components);
+propsProcessor.uiElement.get("propertiesWindow").visible = true;
 ```
+
 Now, to view the properties of a model we need to process it:
 
 ```js
 propsProcessor.process(model);
 ```
+
 And now, we will bind the highlihgter logic to the properties
 processor, so that each time that we click on an element, its
 properties will be shown:
@@ -40,26 +45,24 @@ properties will be shown:
 ```js
 const highlighterEvents = highlighter.events;
 highlighterEvents.select.onClear.add(() => {
-propsProcessor.cleanPropertiesList();
+  propsProcessor.cleanPropertiesList();
 });
-highlighterEvents.select.onHighlight.add(
-(selection) => {
-const fragmentID = Object.keys(selection)[0];
-const expressID = [...selection[fragmentID]][0];
-let model
-for (const group of fragments.groups) {
-for(const [_key, value] of group.keyFragments) {
-if(value === fragmentID) {
-model = group;
-break;
-}
-}
-}
-if(model) {
-propsProcessor.renderProperties(model, expressID);
-}
-}
-);
+highlighterEvents.select.onHighlight.add((selection) => {
+  const fragmentID = Object.keys(selection)[0];
+  const expressID = [...selection[fragmentID]][0];
+  let model;
+  for (const group of fragments.groups) {
+    for (const [_key, value] of group.keyFragments) {
+      if (value === fragmentID) {
+        model = group;
+        break;
+      }
+    }
+  }
+  if (model) {
+    propsProcessor.renderProperties(model, expressID);
+  }
+});
 // console.log(propsProcessor._indexMap);
 //
 // setTimeout(
@@ -78,6 +81,7 @@ propsProcessor.renderProperties(model, expressID);
 //     1000
 // )
 ```
+
 Finally, we will add the main built-in button of the properties
 processor to a simple toolbar at the bottom of our app:
 
@@ -86,11 +90,9 @@ const mainToolbar = new OBC.Toolbar(components);
 components.ui.addToolbar(mainToolbar);
 mainToolbar.addChild(propsProcessor.uiElement.get("main"));
 ```
+
 This is it! Congratulations, now you can see and navigate
 the properties of any IFC model you load in your apps. Now,
 let's continue navigating these docs for more cool open BIM tools!
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesProcessor/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesProcessor/index.html"></iframe>

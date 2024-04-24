@@ -1,5 +1,7 @@
 ### 📏 Dimensions Tool
+
 ---
+
 At times, you may need to compute the dimensions of an object or measure the distance between two elements.
 Elements must be precisely aligned when working on complex models.
 Dimension Tool allows you to perform measurements effortlessly.
@@ -8,18 +10,22 @@ Dimension Tool allows you to perform measurements effortlessly.
 :::
 This tutorial will show you how to add Dimension Tool to your projects,
 which can be used to acquire accurate dimensions for any 3D Object.🔭
+
 ### 🎲 Creating a Cube Mesh
+
 ---
+
 For this tutorial we will use a Cube, you can add any geometry as per your preference.
 We will create a [Cube](https://threejs.org/docs/index.html?q=box#api/en/geometries/BoxGeometry)
 with `3x3x3` dimensions and use red color for the material.
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
-const cubeMaterial = new THREE.MeshStandardMaterial({color: '#6528D7'});
+const cubeMaterial = new THREE.MeshStandardMaterial({ color: "#6528D7" });
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-cube.position.set(0, 1.5, 0)
+cube.position.set(0, 1.5, 0);
 ```
+
 Now, we will add the Cube to the `Scene`. We must also add the **cube** to `components.meshes`,
 which is simply an array of all the meshes in the Scene.🗄️
 
@@ -27,12 +33,16 @@ which is simply an array of all the meshes in the Scene.🗄️
 scene.add(cube);
 components.meshes.add(cube);
 ```
+
 :::info Collection of Meshes
 📦 **Components.meshes** keeps all your meshes including IFC Models, Fragments in
 one place.
 :::
+
 ### 🛠️ Creating Dimension Tool
+
 ---
+
 A lot of logic is usually needed to compute dimensions for any item, beginning with ray casting,
 finding the vertices to snap to, and rendering the UI for every line element.🙄
 This may appear to be a lot of effort, but we are handling all the heavy lifting for you,
@@ -41,6 +51,7 @@ and you only need to write a few lines for creating the Dimension Tool.💪
 ```js
 const dimensions = new OBC.LengthMeasurement(components);
 ```
+
 We will build dimensions by supplying the `components` to **OBC.SimpleDimensions**.
 :::info DIMENSIONS AND UI
 Read the **[Simple Dimensions](../api/classes/components.SimpleDimensions)** API for more on this.
@@ -56,10 +67,15 @@ making it easier to interact with items.📍
 dimensions.enabled = true;
 dimensions.snapDistance = 1;
 ```
+
 ### 🖱️ Managing Events
+
 ---
+
 You can use the Dimension Tool to construct several dimension lines. Let's see how you handle them.
+
 #### ✍️ Creating the Dimensions
+
 Now that we've generated the dimensions object, we need to attach the line tooltip to a vertex of the 3D object.
 We'll use the double click event to invoke **`dimensions.create()`**.
 When this event occurs, a line element is generated,
@@ -68,7 +84,9 @@ and the distance is calculated in real-time inside the label associated with tha
 ```js
 container.ondblclick = () => dimensions.create();
 ```
+
 #### 🧹 Deleting the Dimensions
+
 Now that we know how to make multiple dimension lines, we must also know how to delete them when necessary.
 Dimensions can be removed using `dimensions.delete()`.
 **dimensions.delete()** deletes the dimension on which your mouse pointer is now located.
@@ -79,55 +97,65 @@ Dimensions can be removed using `dimensions.delete()`.
 
 ```js
 window.onkeydown = (event) => {
-if (event.code === 'Delete' || event.code === 'Backspace') {
-dimensions.delete();
-}
-}
+  if (event.code === "Delete" || event.code === "Backspace") {
+    dimensions.delete();
+  }
+};
 ```
+
 ### ⏏️ Creating a Toolbar for the Dimensions
+
 ---
+
 We'll make a **Toolbar Component** and set it at the bottom.
 In addition, we will have a button that allows you to toggle the dimension tool.
 
 ```js
-const mainToolbar = new OBC.Toolbar(components, { name: 'Main Toolbar', position: 'bottom' });
+const mainToolbar = new OBC.Toolbar(components, {
+  name: "Main Toolbar",
+  position: "bottom",
+});
 mainToolbar.addChild(dimensions.uiElement.get("main"));
 components.ui.addToolbar(mainToolbar);
 ```
+
 🎛️ Check **[Toolbar and UIManager](./UIManager.mdx)** tutorial if you have any doubts!
+
 ### 🖌️ Adding Styles
+
 ---
+
 Few final things, we need to add styles for the `labels` which display the measurement information.
+
 - **`ifcjs-dimension-label`** - The label which is used to show the metric value after both the tooltips are attached.
 - **`ifcjs-dimension-label:hover`** - Changing the styling when someone hovers on the dimension label.
 - **`ifcjs-dimension-preview`** - The label which shows the measurement when the tooltip is not yet attached.
+
 ```css title="style"
 .ifcjs-dimension-label {
-background-color: black;
-font-family: sans-serif;
-color: white;
-padding: 8px;
-border-radius: 8px;
-pointer-events: all;
-transition: background-color 200ms ease-in-out;
+  background-color: black;
+  font-family: sans-serif;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  pointer-events: all;
+  transition: background-color 200ms ease-in-out;
 }
 .ifcjs-dimension-label:hover {
-background-color: grey;
+  background-color: grey;
 }
 .ifcjs-dimension-preview {
-background-color: #ffffff;
-width: 2rem;
-height: 2rem;
-opacity: 0.3;
-padding: 8px;
-border-radius: 100%;
+  background-color: #ffffff;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.3;
+  padding: 8px;
+  border-radius: 100%;
 }
 ```
+
 **Congratulations** 🎉 on completing this tutorial! Now you can measure any BIM Model or any 3D Object easily using
 **[Simple Dimension Component](../api/classes/components.SimpleDimensions)** 📐
 Let's keep it up and check out another tutorial! 🎓
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/measurement/LengthMeasurement/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/measurement/LengthMeasurement/index.html"></iframe>

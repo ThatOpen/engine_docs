@@ -1,5 +1,7 @@
 ### 🔎 Custom filters for your BIM models
-___
+
+---
+
 BIM models are complex, and finding what we are looking for is not
 always easy. Luckily, the components library has tools to make
 it easier, and one of them is the 'FragmentHider'. Let's
@@ -23,6 +25,7 @@ const model = await fragments.load(buffer);
 const properties = await fetch("../../../resources/small.json");
 model.setLocalProperties(await properties.json());
 ```
+
 Now that we have our model, let's start the `FragmentHider`. You
 can use the `loadCached` method if you had used it before: it will
 automatically load all the filters you created in previous sessions,
@@ -32,8 +35,11 @@ even after closing the browser and opening it again:
 const hider = new OBC.FragmentHider(components);
 await hider.loadCached();
 ```
+
 ### 📕📗📘 Setting up simple filters
-___
+
+---
+
 Next, we will classify data by category and by level using the
 `FragmentClassifier`. This will allow us to create a simple
 filter for both classifications. Don't worry: we'll get to
@@ -45,6 +51,7 @@ classifier.byStorey(model);
 classifier.byEntity(model);
 const classifications = classifier.get();
 ```
+
 Next, we will create a simple object that we will use as the
 base for the floors filter. It will just be a JS object with
 the name of each storey as key and a boolean (true/false) as
@@ -54,18 +61,20 @@ value:
 const storeys = {};
 const storeyNames = Object.keys(classifications.storeys);
 for (const name of storeyNames) {
-storeys[name] = true;
+  storeys[name] = true;
 }
 ```
+
 Now, let's do the same for categories:
 
 ```js
 const classes = {};
 const classNames = Object.keys(classifications.entities);
 for (const name of classNames) {
-classes[name] = true;
+  classes[name] = true;
 }
 ```
+
 Finally, we will set up a simple menu in dat.gui to control
 the visibility of storeys:
 
@@ -73,28 +82,33 @@ the visibility of storeys:
 const gui = new dat.GUI();
 const storeysGui = gui.addFolder("Storeys");
 for (const name in storeys) {
-storeysGui.add(storeys, name).onChange(async (visible) => {
-const found = await classifier.find({storeys: [name]});
-hider.set(visible, found);
-});
+  storeysGui.add(storeys, name).onChange(async (visible) => {
+    const found = await classifier.find({ storeys: [name] });
+    hider.set(visible, found);
+  });
 }
 ```
+
 Again, for categories it's very similar:
 
 ```js
 const entitiesGui = gui.addFolder("Classes");
 for (const name in classes) {
-entitiesGui.add(classes, name).onChange(async (visible) => {
-const found = await classifier.find({entities: [name]});
-hider.set(visible, found);
-});
+  entitiesGui.add(classes, name).onChange(async (visible) => {
+    const found = await classifier.find({ entities: [name] });
+    hider.set(visible, found);
+  });
 }
 ```
+
 Congratulations! Now you know how to create filters for categories
 and levels. Easy, right? Well, believe it or not, creating
 complex filters is even easier.
+
 ### 📚📚 Complex filter queries
-___
+
+---
+
 To create complex filters you can just use the built-in `Button`
 that comes with the hider. Let's create a `Toolbar` and add it
 to it.
@@ -105,13 +119,11 @@ components.ui.addToolbar(toolbar);
 const hiderButton = hider.uiElement.get("main");
 toolbar.addChild(hiderButton);
 ```
+
 That's it! That button will open a floating menu that will allow
 you to create custom multi-filters that work even for custom
 property sets and quantity sets, including logical operators.
 Try them out in the example below, and check out more tutorials
 to bring your BIM apps to the next level!
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentHider/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentHider/index.html"></iframe>

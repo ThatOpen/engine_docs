@@ -29,7 +29,7 @@ This includes fragments, 3D scans, etc.
 
 [temp/engine_components/src/core/Components/index.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L29)
 
-___
+---
 
 ### onDisposed
 
@@ -45,7 +45,7 @@ ___
 
 [temp/engine_components/src/core/Components/index.ts:38](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L38)
 
-___
+---
 
 ### onInitialized
 
@@ -58,7 +58,7 @@ ready to work (scene, camera and renderer are ready).
 
 [temp/engine_components/src/core/Components/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L35)
 
-___
+---
 
 ### tools
 
@@ -70,7 +70,7 @@ ___
 
 [temp/engine_components/src/core/Components/index.ts:23](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L23)
 
-___
+---
 
 ### uiEnabled
 
@@ -105,8 +105,8 @@ This needs to be initialized before calling init().
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type                                                      |
+| :------- | :-------------------------------------------------------- |
 | `camera` | [`Component`](openbim_components.Component.md)<`Camera`\> |
 
 #### Returns
@@ -117,7 +117,7 @@ This needs to be initialized before calling init().
 
 [temp/engine_components/src/core/Components/index.ts:113](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L113)
 
-___
+---
 
 ### raycaster
 
@@ -141,8 +141,8 @@ to initialize this if any component that needs a raycaster is used.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type            |
+| :---------- | :-------------- |
 | `raycaster` | `BaseRaycaster` |
 
 #### Returns
@@ -153,7 +153,7 @@ to initialize this if any component that needs a raycaster is used.
 
 [temp/engine_components/src/core/Components/index.ts:132](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L132)
 
-___
+---
 
 ### renderer
 
@@ -177,8 +177,8 @@ This needs to be initialized before calling init().
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                 |
+| :--------- | :--------------------------------------------------- |
 | `renderer` | [`BaseRenderer`](openbim_components.BaseRenderer.md) |
 
 #### Returns
@@ -189,7 +189,7 @@ This needs to be initialized before calling init().
 
 [temp/engine_components/src/core/Components/index.ts:77](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L77)
 
-___
+---
 
 ### scene
 
@@ -212,8 +212,8 @@ This needs to be initialized before calling init().
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                     |
+| :------ | :------------------------------------------------------- |
 | `scene` | [`Component`](openbim_components.Component.md)<`Scene`\> |
 
 #### Returns
@@ -224,7 +224,7 @@ This needs to be initialized before calling init().
 
 [temp/engine_components/src/core/Components/index.ts:95](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L95)
 
-___
+---
 
 ### ui
 
@@ -250,11 +250,11 @@ Disposes the memory of all the components and tools of this instance of
 the library. A memory leak will be created if:
 
 - An instance of the library ends up out of scope and this function isn't
-called. This is especially relevant in Single Page Applications (React,
-Angular, Vue, etc).
+  called. This is especially relevant in Single Page Applications (React,
+  Angular, Vue, etc).
 
 - Any of the objects of this instance (meshes, geometries, etc) is
-referenced by a reference type (object or array).
+  referenced by a reference type (object or array).
 
 You can learn more about how Three.js handles memory leaks
 [here](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects).
@@ -271,7 +271,7 @@ You can learn more about how Three.js handles memory leaks
 
 [temp/engine_components/src/core/Components/index.ts:174](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Components/index.ts#L174)
 
-___
+---
 
 ### init
 

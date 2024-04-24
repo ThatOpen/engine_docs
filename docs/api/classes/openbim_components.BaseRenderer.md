@@ -37,7 +37,7 @@ instance of the renderer.
 
 [temp/engine_components/src/base-types/base-renderer.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L33)
 
-___
+---
 
 ### enabled
 
@@ -56,7 +56,7 @@ will not be updated automatically each frame.
 
 [temp/engine_components/src/base-types/component.ts:24](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L24)
 
-___
+---
 
 ### onClippingPlanesUpdated
 
@@ -69,7 +69,7 @@ planes used by the active renderer.
 
 [temp/engine_components/src/base-types/base-renderer.ts:27](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L27)
 
-___
+---
 
 ### onResize
 
@@ -96,8 +96,8 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type  |
+| :-------- | :---- |
 | `...args` | `any` |
 
 #### Returns
@@ -112,7 +112,7 @@ could be a [THREE.Camera](https://threejs.org/docs/#api/en/cameras/Camera).
 
 [temp/engine_components/src/base-types/component.ts:30](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L30)
 
-___
+---
 
 ### getSize
 
@@ -132,7 +132,7 @@ ___
 
 [temp/engine_components/src/base-types/base-renderer.ts:15](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L15)
 
-___
+---
 
 ### hasUI
 
@@ -152,7 +152,7 @@ this is UI
 
 [temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
 
-___
+---
 
 ### isConfigurable
 
@@ -172,7 +172,7 @@ this is Configurable<any\>
 
 [temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
 
-___
+---
 
 ### isDisposeable
 
@@ -192,7 +192,7 @@ this is Disposable
 
 [temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
 
-___
+---
 
 ### isHideable
 
@@ -212,7 +212,7 @@ this is Hideable
 
 [temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
 
-___
+---
 
 ### isResizeable
 
@@ -232,7 +232,7 @@ this is Resizeable
 
 [temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
 
-___
+---
 
 ### isUpdateable
 
@@ -252,7 +252,7 @@ this is Updateable
 
 [temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
 
-___
+---
 
 ### resize
 
@@ -272,7 +272,7 @@ ___
 
 [temp/engine_components/src/base-types/base-renderer.ts:18](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L18)
 
-___
+---
 
 ### togglePlane
 
@@ -284,10 +284,10 @@ to the renderer.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `active` | `boolean` |
-| `plane` | `Plane` |
+| Name       | Type      |
+| :--------- | :-------- |
+| `active`   | `boolean` |
+| `plane`    | `Plane`   |
 | `isLocal?` | `boolean` |
 
 #### Returns
@@ -298,7 +298,7 @@ to the renderer.
 
 [temp/engine_components/src/base-types/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L48)
 
-___
+---
 
 ### updateClippingPlanes
 

@@ -22,7 +22,7 @@ Whether this navigation mode is active or not.
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/src/types.ts#L33)
 
-___
+---
 
 ### id
 
@@ -34,7 +34,7 @@ The unique ID of this navigation mode.
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:20](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/src/types.ts#L20)
 
-___
+---
 
 ### projectionChanged
 
@@ -46,7 +46,7 @@ Event that should fire when the camera [CameraProjection](../modules/openbim_com
 
 [temp/engine_components/src/navigation/OrthoPerspectiveCamera/src/types.ts:38](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/OrthoPerspectiveCamera/src/types.ts#L38)
 
-___
+---
 
 ### toggle
 
@@ -62,10 +62,10 @@ must be disabled.
 
 ##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `active` | `boolean` | whether to enable or disable this mode. |
-| `options?` | `any` | any additional data required to enable or disable it. |
+| Name       | Type      | Description                                           |
+| :--------- | :-------- | :---------------------------------------------------- |
+| `active`   | `boolean` | whether to enable or disable this mode.               |
+| `options?` | `any`     | any additional data required to enable or disable it. |
 
 ##### Returns
 

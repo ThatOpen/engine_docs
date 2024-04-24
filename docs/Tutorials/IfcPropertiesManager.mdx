@@ -1,5 +1,7 @@
 ### ✍ Edit properties at will!
-___
+
+---
+
 Viewing IFC files fast is great, but often the data inside
 them is not correct or complete. Luckily, we can now directly
 edit and add data super easily! First, let's start by adding
@@ -15,6 +17,7 @@ const properties = await fetch("../../../resources/small.json");
 const props = await properties.json();
 model.setLocalProperties(props);
 ```
+
 Then, we'll instance the tool that we need for editing properties:
 the `IfcPropertiesManager`! It's designed as an extension of the
 `IfcPropertiesProcessor`, so if you haven't seen that tutorial
@@ -25,28 +28,32 @@ const propsProcessor = new OBC.IfcPropertiesProcessor(components);
 const propsManager = new OBC.IfcPropertiesManager(components);
 propsProcessor.propertiesManager = propsManager;
 ```
+
 The `IfcPropertiesManager` can edit IFCs and export new IFC models.
-Despite you can do it using the methods in the tool instance, 
-let's process the model using the `IfcPropertiesProcessor` to use 
+Despite you can do it using the methods in the tool instance,
+let's process the model using the `IfcPropertiesProcessor` to use
 the built-in UI, because is easier!
 :
 
 ```js
 propsProcessor.process(model);
 propsManager.onRequestFile.add(async () => {
-const fetched = await fetch("../../../resources/small.ifc");
-const buffer = await fetched.arrayBuffer()
-const ifc = await propsManager.saveToIfc(model, new Uint8Array(buffer));
-const a = document.createElement("a");
-const url = URL.createObjectURL(new Blob([ifc]));
-a.href = url;
-a.download = model.name;
-a.click();
-URL.revokeObjectURL(url);
-})
+  const fetched = await fetch("../../../resources/small.ifc");
+  const buffer = await fetched.arrayBuffer();
+  const ifc = await propsManager.saveToIfc(model, new Uint8Array(buffer));
+  const a = document.createElement("a");
+  const url = URL.createObjectURL(new Blob([ifc]));
+  a.href = url;
+  a.download = model.name;
+  a.click();
+  URL.revokeObjectURL(url);
+});
 ```
+
 ### ✨ Setting up highlighting and selecting
-___
+
+---
+
 Now, we will set up highlighting logic to make our app more
 interesting. It's done in a similar way to other tutorials,
 so wander around the docs if you haven't already!
@@ -58,34 +65,34 @@ components.renderer.postproduction.customEffects.outlineEnabled = true;
 highlighter.outlinesEnabled = true;
 const highlighterEvents = highlighter.events;
 highlighterEvents.select.onClear.add(() => {
-propsProcessor.cleanPropertiesList();
+  propsProcessor.cleanPropertiesList();
 });
 ```
+
 Now, we will configure the highlighter so that each time that
 we cick on the model, the properties menu is updated to display
 its properties, just like we did in the `IfcPropertiesProcessor`
 tutorial:
 
 ```js
-highlighterEvents.select.onHighlight.add(
-(selection) => {
-const fragmentID = Object.keys(selection)[0];
-const expressID = [...selection[fragmentID]][0];
-let model
-for (const group of fragments.groups) {
-for(const [_key, value] of group.keyFragments) {
-if(value === fragmentID) {
-model = group;
-break;
-}
-}
-}
-if(model) {
-propsProcessor.renderProperties(model, expressID);
-}
-}
-);
+highlighterEvents.select.onHighlight.add((selection) => {
+  const fragmentID = Object.keys(selection)[0];
+  const expressID = [...selection[fragmentID]][0];
+  let model;
+  for (const group of fragments.groups) {
+    for (const [_key, value] of group.keyFragments) {
+      if (value === fragmentID) {
+        model = group;
+        break;
+      }
+    }
+  }
+  if (model) {
+    propsProcessor.renderProperties(model, expressID);
+  }
+});
 ```
+
 Finally, we will add the UI to the app by creating a simple
 toolbar:
 
@@ -94,11 +101,9 @@ const mainToolbar = new OBC.Toolbar(components);
 components.ui.addToolbar(mainToolbar);
 mainToolbar.addChild(propsProcessor.uiElement.get("main"));
 ```
+
 Great job! Now you know how to support IFC property editing and
 export in your apps. Check out the rest of the tutorials of
 these docs for other cool BIM features.
 
-
-  <iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesManager/index.html"></iframe>
-
-  
+<iframe src="https://thatopen.github.io/engine_components/src/ifc/IfcPropertiesManager/index.html"></iframe>
