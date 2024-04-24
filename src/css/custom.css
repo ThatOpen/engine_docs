@@ -4,150 +4,36 @@
  * work well for content-centric websites.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sora:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=auto");
 
 :root {
   --light-gray: #d3cbe1;
-  --gray: #3a444e;
   --dark-gray: #202932;
-  --black: #111718;
-  --purple: #9d6bff;
-  --dark-purple: #6528d7;
-  --transparent-purple: rgba(157, 107, 255, 0.075);
-  --ifm-color-primary: var(--purple);
+  --ifm-color-primary: #bcf124;
   --ifm-color-content: white;
-  --border-radius: 1rem;
   --ifm-heading-font-family: "Sora";
-  --ifm-font-family-base: "Plus Jakarta Sans";
-  --ifm-color-content-secondary: var(--light-gray) !important;
-  --ifm-hover-overlay: var(--transparent-purple) !important;
-  --ifm-color-info-contrast-background: var(--transparent-purple) !important;
-  --ifm-color-success-contrast-background: var(--transparent-purple) !important;
-  --ifm-color-danger-contrast-background: var(--transparent-purple) !important;
-  --ifm-color-warning-contrast-background: var(--transparent-purple) !important;
-  --ifm-color-success-dark: var(--purple) !important;
-  --ifm-color-info-dark: var(--purple) !important;
-  --ifm-color-danger-dark: var(--purple) !important;
-  --ifm-color-warning-dark: var(--purple) !important;
-  --ifm-color-info-contrast-foreground: white !important;
-  --ifm-color-success-contrast-foreground: white !important;
-  --ifm-color-danger-contrast-foreground: white !important;
-  --ifm-menu-link-sublist-icon-filter: invert();
-  --ifm-code-background: #282a36;
-  --ifm-scrollbar-thumb-background-color: var(--dark-purple) !important;
-  --ifm-scrollbar-track-background-color: var(--dark-gray) !important;
-  --ifm-background-color: rgb(32, 41, 50);
 }
 
-/*html {*/
-/*  background-color: var(--dark-gray);*/
-/*}*/
-
-p {
-  color: var(--light-gray);
-}
-
-strong {
-  color: white;
-}
-
-iframe {
-  margin: 1rem;
-  width: calc(100% - 2rem);
-  height: 25rem;
-}
-
-h1 {
-  font-weight: 300;
-}
-
-.footer,
-.navbar {
-  background-color: var(--black);
-  display: none;
-}
-
-.navbar-sidebar__brand {
-  background-color: var(--black);
-}
-
-.button {
-  border-radius: var(--border-radius);
-}
-
-.button.button--secondary {
-  color: var(--ifm-color-primary);
-  fill: var(--ifm-color-primary);
-  font-weight: 600;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.col {
-  padding: 0;
-}
-
-.theme-doc-sidebar-container {
-  border: none !important;
-}
-
-.menu {
-  border-right: none;
-  margin: 0 1.3rem 0 0;
-  border-radius: var(--border-radius);
-  padding-left: 1rem !important;
-  background-color: var(--black);
-}
-
-article {
-  min-height: 90vh;
-  margin: 1rem;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  background-color: var(--black);
-}
-
-[class="sidebar_node_modules-@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-styles-module"] {
-  padding-top: 2rem !important;
-}
-
-[class="iconExternalLink_node_modules-@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module"] {
-  display: none;
-}
-
-.table-of-contents__left-border {
-  border-left: none;
-}
-
-.table-of-contents {
-  border-radius: var(--border-radius);
-  padding-left: 1.3rem;
-  top: 2rem !important;
-  background-color: var(--black);
-}
-
-@media screen and (max-width: 997px) {
-  .menu {
-    margin: 0;
-    box-shadow: none;
-    border-radius: unset;
+.markdown {
+  p {
+    color: var(--light-gray);
   }
-
-  .footer--dark {
-    padding-left: 2rem;
+  
+  strong {
+    color: white;
   }
-
-  .table-of-contents__left-border {
-    padding-left: 1rem !important;
-  }
-
-  .pagination-nav {
+  
+  iframe {
     margin: 1rem;
+    width: calc(100% - 2rem);
+    height: 25rem;
   }
+  
+  h1 {
+    font-weight: 300;
+  }
+}
 
-  .navbar {
-    display: unset;
-  }
+.prism-code {
+  border: solid 1px hsla(0, 0%, 100%, 0.1);
 }
