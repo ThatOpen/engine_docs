@@ -9,71 +9,70 @@ const execPromise = promisify(exec);
 
 // Test that the `gh` command-line utility is installed
 export const ghVersion = () => {
-   return execSync("gh --version", err => {
-        if (err) {
-            console.error("`gh` command is not accessible. Aborting...");
+  return execSync("gh --version", (err) => {
+    if (err) {
+      console.error("`gh` command is not accessible. Aborting...");
 
-            process.exit(1);
-        }
-    });
-}
+      process.exit(1);
+    }
+  });
+};
 
 /* Fetch latest release version. If it errors or if
    there are no releases yet, return an empty string */
 export const getLatestRelease = async (orgName, repoName) => {
-    let release = undefined;
-    try {
-        release = await execPromise(
-            `gh api repos/${orgName}/${repoName}/releases/latest`);
-        release = release.stdout;
-    } catch {}
+  let release = undefined;
+  try {
+    release = await execPromise(
+      `gh api repos/${orgName}/${repoName}/releases/latest`,
+    );
+    release = release.stdout;
+  } catch {}
 
-    try {
-        release = JSON.parse(release).tag_name;
-        if (release === undefined) {
-            release = "";
-        }
-    } catch (e) {
-        if (e instanceof SyntaxError) {
-            release = "";
-        } else {
-            console.error(`Unexpected error while fetching releases
+  try {
+    release = JSON.parse(release).tag_name;
+    if (release === undefined) {
+      release = "";
+    }
+  } catch (e) {
+    if (e instanceof SyntaxError) {
+      release = "";
+    } else {
+      console.error(`Unexpected error while fetching releases
                            for "${orgName}/${repoName}". Aborting...`);
 
-            process.exit(2);
-        }
+      process.exit(2);
     }
+  }
 
-    return release;
+  return release;
 };
 
 /* Clone git repository with minimal depth for an specific tag.
    If no tag is specified, it will use the default branch */
-export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
-    const repoDirName = path.resolve(`${fullRepoDirName}/${repo.name}`);
+export const cloneMinimalRepo = async (orgName, repo, fullRepoDirName) => {
+  const repoDirName = path.resolve(`${fullRepoDirName}/${repo.name}`);
 
-    let command = `gh repo clone ${orgName}/${repo.name} ${repoDirName} -- --depth 1`;
-    let tagName = "(default branch)";
+  let command = `gh repo clone ${orgName}/${repo.name} ${repoDirName} -- --depth 1`;
+  let tagName = "(default branch)";
 
-    if (repo.release && repo.release !== "") {
-        command = `${command} -b ${repo.release}`;
-        tagName = repo.release;
-    }
+  if (repo.release && repo.release !== "") {
+    command = `${command} -b ${repo.release}`;
+    tagName = repo.release;
+  }
 
-    await execPromise(`${command}`);
+  await execPromise(`${command}`);
 
-    return { repoDirName, tagName };
+  return { repoDirName, tagName };
 };
 
 /* Copy the repository root directory inside the repo to the
  * tempDirName directory with the name of the repository */
-export const copyRepo = async(repoName, repoPath, destPath) => {
-    const originalRepoPath = path.resolve(
-        `./${repoPath}/${repoName}`);
-    const repoCopyPath = path.resolve(
-        `./${destPath}/${repoName}`);
+export const copyRepo = async (repoName, repoPath, destPath) => {
+  const originalRepoPath = path.resolve(`./${repoPath}/${repoName}`);
+  const repoCopyPath = path.resolve(`./${destPath}/${repoName}`);
 
-    await cp(originalRepoPath, repoCopyPath, { recursive: true });
+  await cp(originalRepoPath, repoCopyPath, { recursive: true });
 
-    return { originalRepoPath, repoCopyPath };
+  return { originalRepoPath, repoCopyPath };
 };
