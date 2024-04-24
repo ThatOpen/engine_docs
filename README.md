@@ -26,13 +26,9 @@ If you have any questions, you can also ask around in our [community](https://pe
 
 ## Local development
 
-This repository uses `yarn@4`.
-
-> You can use nodejs' [corepack](https://nodejs.org/api/corepack.html) if you don't want to install yarn.
-> ```bash
-> corepack enable
-> ```
-
+Requirements
+- `yarn@4`
+- [`gh` - github cli](https://github.com/cli/cli#installation) (make sure you've logged in with `gh auth login` once)
 
 Install all dependencies
 
@@ -46,6 +42,10 @@ Run docusaurus local devserver
 yarn start
 ```
 
-**TODO**
+**Generating tutorials and api docs**
 
-Add documentation on `docs-generator`
+This script clonse both `openbim-components` and `bim-fragments` repos into a `temp/` folder and generates the api docs.
+
+```bash
+yarn build:remote
+```
