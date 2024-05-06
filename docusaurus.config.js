@@ -1,7 +1,5 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
@@ -13,31 +11,19 @@ const config = {
   plugins: [
     [
       "docusaurus-plugin-typedoc",
-
-      // Plugin / TypeDoc options
       {
         tsconfig: "./src/docs-generator/tsconfig.json",
       },
     ],
   ],
 
-  // Set the production url of your site here
   url: "https://your-docusaurus-test-site.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "thatopencompany", // Usually your GitHub org/user name.
-  projectName: "thatopendocumentation", // Usually your repo name.
+  baseUrl: "/",
 
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -51,8 +37,6 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
         },
         blog: false,
         theme: {
@@ -66,27 +50,26 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "light",
+        defaultMode: "dark",
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/thatopen-logo.svg",
       navbar: {
-        title: "",
-        // logo: {
-        //   alt: "My Site Logo",
-        //   src: "img/logo-with-letters.svg",
-        // },
+        hideOnScroll: true,
+        logo: {
+          alt: "ThatOpenCompany",
+          src: "img/thatopen-logo-green.svg",
+        },
         items: [
           {
-            href: "https://github.com/ThatOpen",
-            label: "Community",
+            href: "https://platform.thatopen.com/",
+            label: "Platform",
             position: "right",
           },
           {
-            href: "https://github.com/ThatOpen",
-            label: "Marketplace",
+            href: "https://people.thatopen.com/",
+            label: "People",
             position: "right",
           },
           {
@@ -97,27 +80,17 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
         links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/intro",
-              },
-            ],
-          },
           {
             title: "Community",
             items: [
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "People",
+                href: "https://people.thatopen.com/",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "ThatOpenCompany",
+                href: "https://thatopen.com/",
               },
             ],
           },
@@ -131,7 +104,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()}, That Open Company`,
       },
       prism: {
         theme: darkCodeTheme,
