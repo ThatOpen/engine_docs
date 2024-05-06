@@ -33,19 +33,19 @@ The camera that renders the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:55](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L55)
+[src/core/Simple2DScene/index.ts:55](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L55)
 
 ---
 
 ### controls
 
-• **controls**: `OrbitControls`
+• `Readonly` **controls**: `CameraControls`
 
 The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L52)
+[src/core/Simple2DScene/index.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L52)
 
 ---
 
@@ -61,7 +61,7 @@ The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L41)
+[src/core/Simple2DScene/index.ts:41](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L41)
 
 ---
 
@@ -77,7 +77,7 @@ The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:32](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L32)
+[src/core/Simple2DScene/index.ts:32](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L32)
 
 ---
 
@@ -93,7 +93,7 @@ The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L35)
+[src/core/Simple2DScene/index.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L35)
 
 ---
 
@@ -109,7 +109,7 @@ The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:44](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L44)
+[src/core/Simple2DScene/index.ts:44](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L44)
 
 ---
 
@@ -125,7 +125,7 @@ The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:38](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L38)
+[src/core/Simple2DScene/index.ts:38](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L38)
 
 ---
 
@@ -141,7 +141,7 @@ The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:47](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L47)
+[src/core/Simple2DScene/index.ts:47](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L47)
 
 ## Methods
 
@@ -161,7 +161,7 @@ The camera controls that move around in the scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:150](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L150)
+[src/core/Simple2DScene/index.ts:168](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L168)
 
 ---
 
@@ -183,7 +183,7 @@ the 2D scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:145](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L145)
+[src/core/Simple2DScene/index.ts:163](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L163)
 
 ---
 
@@ -203,7 +203,7 @@ the 2D scene.
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:173](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L173)
+[src/core/Simple2DScene/index.ts:191](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L191)
 
 ---
 
@@ -223,7 +223,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
+[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L62)
 
 ---
 
@@ -243,7 +243,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
+[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L57)
 
 ---
 
@@ -263,7 +263,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
+[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L35)
 
 ---
 
@@ -283,7 +283,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
+[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L52)
 
 ---
 
@@ -303,7 +303,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
+[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L40)
 
 ---
 
@@ -323,7 +323,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
+[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L45)
 
 ---
 
@@ -343,7 +343,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:184](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L184)
+[src/core/Simple2DScene/index.ts:202](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L202)
 
 ---
 
@@ -363,4 +363,4 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/core/Simple2DScene/index.ts:165](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/Simple2DScene/index.ts#L165)
+[src/core/Simple2DScene/index.ts:183](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/Simple2DScene/index.ts#L183)

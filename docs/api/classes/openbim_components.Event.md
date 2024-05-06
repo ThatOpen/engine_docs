@@ -42,7 +42,7 @@ Add a callback to this event instance.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:19](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L19)
+[src/base-types/base-types.ts:19](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-types.ts#L19)
 
 ---
 
@@ -64,7 +64,7 @@ Removes a callback from this event instance.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:27](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L27)
+[src/base-types/base-types.ts:27](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-types.ts#L27)
 
 ---
 
@@ -80,7 +80,7 @@ Gets rid of all the suscribed events.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L40)
+[src/base-types/base-types.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-types.ts#L40)
 
 ---
 
@@ -102,4 +102,4 @@ Triggers all the callbacks assigned to this event.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:32](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L32)
+[src/base-types/base-types.ts:32](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-types.ts#L32)

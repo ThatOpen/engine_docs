@@ -30,7 +30,7 @@ been transformed through CSS or doesn't occupy the whole screen.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/mouse.ts:15](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/mouse.ts#L15)
+[src/base-types/mouse.ts:15](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/mouse.ts#L15)
 
 ## Accessors
 
@@ -46,7 +46,7 @@ The real position of the mouse of the Three.js canvas.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/mouse.ts:24](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/mouse.ts#L24)
+[src/base-types/mouse.ts:24](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/mouse.ts#L24)
 
 ## Methods
 
@@ -66,4 +66,4 @@ The real position of the mouse of the Three.js canvas.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/mouse.ts:34](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/mouse.ts#L34)
+[src/base-types/mouse.ts:34](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/mouse.ts#L34)

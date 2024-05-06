@@ -12,8 +12,7 @@
 
 ![cover](https://thatopen.github.io/engine_components/resources/cover.png)
 
-<h1>That Open Docs <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"/></h1>
-
+# That Open Docs <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"/>
 
 This library contains the official docs for all the libraries of That Open Company.
 
@@ -24,3 +23,29 @@ This library contains the official docs for all the libraries of That Open Compa
 If you see anything outdated in the [docs page](https://docs.thatopen.com/intro), feel free to open an issue. If the issue is specific to a specific repository, please open the issue in that repository!
 
 If you have any questions, you can also ask around in our [community](https://people.thatopen.com/).
+
+## Local development
+
+Requirements
+- `yarn@4`
+- [`gh` - github cli](https://github.com/cli/cli#installation) (make sure you've logged in with `gh auth login` once)
+
+Install all dependencies
+
+```bash
+yarn install
+```
+
+Run docusaurus local devserver
+
+```bash
+yarn start
+```
+
+**Generating tutorials and api docs**
+
+This script clonse both `openbim-components` and `bim-fragments` repos into a `temp/` folder and generates the api docs.
+
+```bash
+yarn build:remote
+```

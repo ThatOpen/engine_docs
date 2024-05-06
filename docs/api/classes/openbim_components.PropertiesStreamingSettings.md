@@ -29,7 +29,7 @@ IfcFragmentSettings.coordinate
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:15](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L15)
+[src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:15](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L15)
 
 ---
 
@@ -45,7 +45,7 @@ IfcFragmentSettings.excludedCategories
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L25)
+[src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:29](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L29)
 
 ---
 
@@ -61,7 +61,7 @@ IfcFragmentSettings.includeProperties
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:6](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L6)
+[src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:6](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L6)
 
 ---
 
@@ -78,7 +78,7 @@ IfcFragmentSettings.optionalCategories
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:12](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L12)
+[src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:12](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L12)
 
 ---
 
@@ -94,7 +94,7 @@ IfcFragmentSettings.saveLocations
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L28)
+[src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:32](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L32)
 
 ---
 
@@ -106,11 +106,11 @@ Path of the WASM for [web-ifc](https://github.com/ThatOpen/engine_web-ifc).
 
 #### Type declaration
 
-| Name       | Type                      |
-| :--------- | :------------------------ |
-| `absolute` | `boolean`                 |
-| `logLevel` | `undefined` \| `LogLevel` |
-| `path`     | `string`                  |
+| Name        | Type       |
+| :---------- | :--------- |
+| `absolute`  | `boolean`  |
+| `logLevel?` | `LogLevel` |
+| `path`      | `string`   |
 
 #### Inherited from
 
@@ -118,7 +118,7 @@ IfcFragmentSettings.wasm
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:18](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L18)
+[src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:18](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L18)
 
 ---
 
@@ -134,4 +134,4 @@ IfcFragmentSettings.webIfc
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:31](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L31)
+[src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentIfcLoader/src/ifc-fragment-settings.ts#L35)

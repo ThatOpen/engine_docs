@@ -63,6 +63,14 @@ highlighterEvents.select.onHighlight.add((selection) => {
     propsProcessor.renderProperties(model, expressID);
   }
 });
+highlighterEvents.select.onHighlight.add((selection) => {
+  const fragmentID = Object.keys(selection)[0];
+  const expressID = [...selection[fragmentID]][0];
+  const fragment = fragments.list[fragmentID];
+  if (fragment.group) {
+    propsProcessor.renderProperties(fragment.group, expressID);
+  }
+});
 // console.log(propsProcessor._indexMap);
 //
 // setTimeout(

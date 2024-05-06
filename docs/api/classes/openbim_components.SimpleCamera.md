@@ -35,7 +35,7 @@ The camera that is being used now according to the current [CameraProjection](..
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L48)
+[src/core/SimpleCamera/index.ts:48](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L48)
 
 ---
 
@@ -50,7 +50,7 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L33)
+[src/core/SimpleCamera/index.ts:33](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L33)
 
 ---
 
@@ -66,7 +66,7 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:20](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L20)
+[src/core/SimpleCamera/index.ts:20](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L20)
 
 ---
 
@@ -82,7 +82,7 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L17)
+[src/core/SimpleCamera/index.ts:17](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L17)
 
 ---
 
@@ -98,7 +98,7 @@ object to move, rotate, look at objects, etc.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L25)
+[src/core/SimpleCamera/index.ts:25](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L25)
 
 ## Accessors
 
@@ -118,7 +118,7 @@ Component.enabled
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:36](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L36)
+[src/core/SimpleCamera/index.ts:36](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L36)
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -140,7 +140,7 @@ Component.enabled
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L41)
+[src/core/SimpleCamera/index.ts:41](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L41)
 
 ## Methods
 
@@ -160,7 +160,7 @@ Component.enabled
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:68](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L68)
+[src/core/SimpleCamera/index.ts:68](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L68)
 
 ---
 
@@ -180,7 +180,7 @@ Component.enabled
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:63](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L63)
+[src/core/SimpleCamera/index.ts:63](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L63)
 
 ---
 
@@ -200,7 +200,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
+[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L62)
 
 ---
 
@@ -220,7 +220,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
+[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L57)
 
 ---
 
@@ -240,7 +240,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
+[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L35)
 
 ---
 
@@ -260,7 +260,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
+[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L52)
 
 ---
 
@@ -280,7 +280,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
+[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L40)
 
 ---
 
@@ -300,7 +300,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
+[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L45)
 
 ---
 
@@ -326,7 +326,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:81](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L81)
+[src/core/SimpleCamera/index.ts:81](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L81)
 
 ---
 
@@ -343,4 +343,4 @@ Updates the aspect of the camera to match the size of the
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleCamera/index.ts:93](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleCamera/index.ts#L93)
+[src/core/SimpleCamera/index.ts:93](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleCamera/index.ts#L93)

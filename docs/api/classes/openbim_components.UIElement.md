@@ -31,7 +31,7 @@ inside.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/ui-element.ts:37](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/ui-element.ts#L37)
+[src/base-types/ui-element.ts:37](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/ui-element.ts#L37)
 
 ---
 
@@ -60,7 +60,7 @@ throw an error.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/ui-element.ts:17](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/ui-element.ts#L17)
+[src/base-types/ui-element.ts:17](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/ui-element.ts#L17)
 
 ---
 
@@ -82,4 +82,4 @@ Sets all the UI components of this instance.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/ui-element.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/ui-element.ts#L29)
+[src/base-types/ui-element.ts:29](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/ui-element.ts#L29)

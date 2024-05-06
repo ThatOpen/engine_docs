@@ -37,7 +37,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleScene/index.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L28)
+[src/core/SimpleScene/index.ts:28](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleScene/index.ts#L28)
 
 ---
 
@@ -53,7 +53,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleScene/index.ts:31](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L31)
+[src/core/SimpleScene/index.ts:31](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleScene/index.ts#L31)
 
 ---
 
@@ -69,7 +69,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleScene/index.ts:34](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L34)
+[src/core/SimpleScene/index.ts:34](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleScene/index.ts#L34)
 
 ## Methods
 
@@ -89,7 +89,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleScene/index.ts:50](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L50)
+[src/core/SimpleScene/index.ts:50](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleScene/index.ts#L50)
 
 ---
 
@@ -109,7 +109,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleScene/index.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L45)
+[src/core/SimpleScene/index.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleScene/index.ts#L45)
 
 ---
 
@@ -129,7 +129,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
+[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L62)
 
 ---
 
@@ -149,7 +149,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
+[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L57)
 
 ---
 
@@ -169,7 +169,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
+[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L35)
 
 ---
 
@@ -189,7 +189,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
+[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L52)
 
 ---
 
@@ -209,7 +209,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
+[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L40)
 
 ---
 
@@ -229,7 +229,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
+[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L45)
 
 ---
 
@@ -255,4 +255,4 @@ Creates a simple and nice default set up for the scene (e.g. lighting).
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleScene/index.ts:77](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleScene/index.ts#L77)
+[src/core/SimpleScene/index.ts:77](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleScene/index.ts#L77)

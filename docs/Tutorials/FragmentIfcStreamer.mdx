@@ -27,7 +27,7 @@ converting the IFC geometry:
 ```js
 const streamer = new OBC.FragmentIfcStreamConverter(components);
 streamer.settings.wasm = {
-  path: "https://unpkg.com/web-ifc@0.0.51/",
+  path: "https://unpkg.com/web-ifc@0.0.53/",
   absolute: true,
 };
 ```
@@ -98,7 +98,7 @@ using the `FragmentPropsStreamConverter`:
 ```js
 const propsStreamer = new OBC.FragmentPropsStreamConverter(components);
 propsStreamer.settings.wasm = {
-  path: "https://unpkg.com/web-ifc@0.0.51/",
+  path: "https://unpkg.com/web-ifc@0.0.53/",
   absolute: true,
 };
 ```
@@ -197,7 +197,7 @@ backend and just load the models like this:
 ```js
 let loader = new OBC.FragmentStreamLoader(components);
 loader.url = "http://YOUR_BACKEND_URL";
-let fragments = new OBC.FragmentManager(components);
+let fragments = components.tools.get(OBC.FragmentManager);
 async function loadModel(geometryURL, propertiesURL) {
   const rawGeometryData = await fetch(geometryURL);
   const geometryData = await rawGeometryData.json();
@@ -251,3 +251,5 @@ loader.culler.maxLostTime = 40000;
 This is it! Now you should be able to stream your own IFC models and open them anywhere,
 no matter how big they are! 💪 We will keep improving and making this API more powerful
 to handle any model on any device smoothly.
+
+<iframe src="https://thatopen.github.io/engine_components/src/fragments/FragmentIfcStreamer/index.html"></iframe>

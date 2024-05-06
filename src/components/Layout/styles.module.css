@@ -1,0 +1,68 @@
+.gradientBackground {
+  background-color: var(--dark-gray);
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.35;
+}
+
+@keyframes accent-movement {
+  0% {
+    bottom: -100%;
+    right: -100%;
+  }
+  40% {
+    right: 0;
+  }
+  55% {
+    bottom: 0;
+  }
+  85% {
+    right: -100%;
+  }
+  100% {
+    bottom: -100%;
+  }
+}
+
+.accentGradient {
+  position: absolute;
+  bottom: -100%;
+  right: -100%;
+  height: 200%;
+  width: 200%;
+  background-color: var(--dark-gray);
+  background: radial-gradient(circle, #6528d750 0%, transparent 70%);
+  animation: accent-movement 60s infinite;
+}
+
+@keyframes main-movement {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  40% {
+    left: 0;
+  }
+  55% {
+    top: 0;
+  }
+  85% {
+    left: -100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+.mainGradient {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  height: 200%;
+  width: 200%;
+  background-color: var(--dark-gray);
+  background: radial-gradient(circle, #bcf12450 0%, transparent 70%);
+  animation: main-movement 60s infinite;
+}

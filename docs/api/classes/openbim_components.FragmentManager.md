@@ -35,7 +35,7 @@ Object that can efficiently load binary files that contain
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L29)
+[src/fragments/FragmentManager/index.ts:29](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L29)
 
 ---
 
@@ -51,7 +51,7 @@ All the created [fragments](https://github.com/ThatOpen/engine_fragment).
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:32](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L32)
+[src/fragments/FragmentManager/index.ts:32](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L32)
 
 ---
 
@@ -67,7 +67,7 @@ All the created [fragments](https://github.com/ThatOpen/engine_fragment).
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:26](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L26)
+[src/fragments/FragmentManager/index.ts:26](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L26)
 
 ## Accessors
 
@@ -83,7 +83,7 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:55](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L55)
+[src/fragments/FragmentManager/index.ts:55](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L55)
 
 ## Methods
 
@@ -109,7 +109,7 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:79](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L79)
+[src/fragments/FragmentManager/index.ts:79](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L79)
 
 ---
 
@@ -133,7 +133,7 @@ the exported data as binary buffer.
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:166](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L166)
+[src/fragments/FragmentManager/index.ts:161](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L161)
 
 ---
 
@@ -153,7 +153,7 @@ the exported data as binary buffer.
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:74](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L74)
+[src/fragments/FragmentManager/index.ts:74](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L74)
 
 ---
 
@@ -173,7 +173,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
+[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L62)
 
 ---
 
@@ -193,7 +193,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
+[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L57)
 
 ---
 
@@ -213,7 +213,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
+[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L35)
 
 ---
 
@@ -233,7 +233,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
+[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L52)
 
 ---
 
@@ -253,7 +253,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
+[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L40)
 
 ---
 
@@ -273,7 +273,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
+[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L45)
 
 ---
 
@@ -298,7 +298,7 @@ the list of IDs of the loaded fragments.
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:137](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L137)
+[src/fragments/FragmentManager/index.ts:137](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L137)
 
 ---
 
@@ -314,4 +314,4 @@ Disposes all existing fragments
 
 #### Defined in
 
-[temp/engine_components/src/fragments/FragmentManager/index.ts:123](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/fragments/FragmentManager/index.ts#L123)
+[src/fragments/FragmentManager/index.ts:123](https://github.com/ThatOpen/engine_components/blob/444e81a/src/fragments/FragmentManager/index.ts#L123)
