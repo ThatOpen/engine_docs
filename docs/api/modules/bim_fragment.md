@@ -6,6 +6,3 @@ sidebar_position: 0
 custom_edit_url: null
 ---
 
-## Classes
-
-- [Serializer](../classes/bim_fragment.Serializer.md)

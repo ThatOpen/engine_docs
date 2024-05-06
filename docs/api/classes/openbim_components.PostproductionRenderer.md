@@ -30,7 +30,7 @@ instance of the renderer.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:33](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L33)
+[src/base-types/base-renderer.ts:33](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-renderer.ts#L33)
 
 ___
 
@@ -46,7 +46,7 @@ The HTML container of the THREE.js canvas where the scene is rendered.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:26](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L26)
+[src/core/SimpleRenderer/index.ts:26](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L26)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:23](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L23)
+[src/core/SimpleRenderer/index.ts:23](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L23)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L35)
+[src/core/SimpleRenderer/index.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L35)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:32](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L32)
+[src/core/SimpleRenderer/index.ts:32](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L32)
 
 ___
 
@@ -111,7 +111,7 @@ planes used by the active renderer.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:27](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L27)
+[src/base-types/base-renderer.ts:27](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-renderer.ts#L27)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:29](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L29)
+[src/core/SimpleRenderer/index.ts:29](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L29)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:21](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L21)
+[src/base-types/base-renderer.ts:21](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-renderer.ts#L21)
 
 ___
 
@@ -155,7 +155,7 @@ Helper object to handle the postproduction effects applied.
 
 #### Defined in
 
-[temp/engine_components/src/navigation/PostproductionRenderer/index.ts:11](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/PostproductionRenderer/index.ts#L11)
+[src/navigation/PostproductionRenderer/index.ts:11](https://github.com/ThatOpen/engine_components/blob/444e81a/src/navigation/PostproductionRenderer/index.ts#L11)
 
 ## Methods
 
@@ -175,7 +175,7 @@ Helper object to handle the postproduction effects applied.
 
 #### Defined in
 
-[temp/engine_components/src/navigation/PostproductionRenderer/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/PostproductionRenderer/index.ts#L41)
+[src/navigation/PostproductionRenderer/index.ts:41](https://github.com/ThatOpen/engine_components/blob/444e81a/src/navigation/PostproductionRenderer/index.ts#L41)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:75](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L75)
+[src/core/SimpleRenderer/index.ts:75](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L75)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:106](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L106)
+[src/core/SimpleRenderer/index.ts:106](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L106)
 
 ___
 
@@ -235,7 +235,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
+[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L62)
 
 ___
 
@@ -255,7 +255,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
+[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L57)
 
 ___
 
@@ -275,7 +275,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
+[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L35)
 
 ___
 
@@ -295,7 +295,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
+[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L52)
 
 ___
 
@@ -315,7 +315,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
+[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L40)
 
 ___
 
@@ -335,7 +335,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
+[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L45)
 
 ___
 
@@ -361,7 +361,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleRenderer/index.ts:114](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleRenderer/index.ts#L114)
+[src/core/SimpleRenderer/index.ts:114](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleRenderer/index.ts#L114)
 
 ___
 
@@ -391,7 +391,7 @@ to the renderer.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L48)
+[src/base-types/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-renderer.ts#L48)
 
 ___
 
@@ -411,7 +411,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/navigation/PostproductionRenderer/index.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/navigation/PostproductionRenderer/index.ts#L25)
+[src/navigation/PostproductionRenderer/index.ts:25](https://github.com/ThatOpen/engine_components/blob/444e81a/src/navigation/PostproductionRenderer/index.ts#L25)
 
 ___
 
@@ -432,4 +432,4 @@ on them that are subscribed to `onClippingPlanesUpdated`.
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-renderer.ts:39](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-renderer.ts#L39)
+[src/base-types/base-renderer.ts:39](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-renderer.ts#L39)

@@ -35,7 +35,7 @@ something through user interaction (e.g. clipping planes, dimensions, etc).
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:31](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L31)
+[src/core/ToolsComponent/index.ts:31](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L31)
 
 ___
 
@@ -47,7 +47,7 @@ The list of components created in this app.
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:16](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L16)
+[src/core/ToolsComponent/index.ts:16](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L16)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:19](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L19)
+[src/core/ToolsComponent/index.ts:19](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L19)
 
 ___
 
@@ -75,7 +75,7 @@ The auth token to get tools from That Open Platform.
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:25](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L25)
+[src/core/ToolsComponent/index.ts:25](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L25)
 
 ___
 
@@ -87,7 +87,7 @@ Component.uuid
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:28](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L28)
+[src/core/ToolsComponent/index.ts:28](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L28)
 
 ___
 
@@ -99,7 +99,7 @@ The list of UUIDs of all the components in this library.
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:22](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L22)
+[src/core/ToolsComponent/index.ts:22](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L22)
 
 ## Methods
 
@@ -122,7 +122,7 @@ Adds a new tool. Use this in the constructor of your tools.
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:58](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L58)
+[src/core/ToolsComponent/index.ts:58](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L58)
 
 ___
 
@@ -142,7 +142,7 @@ Disposes all the MEMORY used by all the tools.
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:107](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L107)
+[src/core/ToolsComponent/index.ts:107](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L107)
 
 ___
 
@@ -176,7 +176,7 @@ doesn't exist, it will instance it automatically.
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:74](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L74)
+[src/core/ToolsComponent/index.ts:74](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L74)
 
 ___
 
@@ -196,7 +196,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
+[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L62)
 
 ___
 
@@ -218,7 +218,7 @@ Pass the whole library object as argument.
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:46](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L46)
+[src/core/ToolsComponent/index.ts:46](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L46)
 
 ___
 
@@ -238,7 +238,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
+[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L57)
 
 ___
 
@@ -258,7 +258,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
+[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L35)
 
 ___
 
@@ -278,7 +278,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
+[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L52)
 
 ___
 
@@ -298,7 +298,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
+[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L40)
 
 ___
 
@@ -318,7 +318,7 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
+[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L45)
 
 ___
 
@@ -341,4 +341,4 @@ property [Component.enabled](openbim_components.Component.md#enabled) is true wi
 
 #### Defined in
 
-[temp/engine_components/src/core/ToolsComponent/index.ts:95](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/ToolsComponent/index.ts#L95)
+[src/core/ToolsComponent/index.ts:95](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/ToolsComponent/index.ts#L95)

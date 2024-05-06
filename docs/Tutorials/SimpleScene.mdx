@@ -95,6 +95,12 @@ Of course, everything is black because we have no lights! Let's fix it by adding
 
 ```js
 components.scene.setup();
+const label = new OBC.Simple2DMarker(components);
+label.get().position.set(0, 4, 0);
+label.get().element.textContent = 'Hello, Components!';
+label.get().element.addEventListener('pointerdown', () => {
+console.log('Hello, Components!');
+});
 ```
 ### 🧹 Cleaning up
 ___

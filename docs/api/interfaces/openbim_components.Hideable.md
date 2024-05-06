@@ -31,4 +31,4 @@ currently visible or not in the
 
 #### Defined in
 
-[temp/engine_components/src/base-types/base-types.ts:77](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/base-types.ts#L77)
+[src/base-types/base-types.ts:77](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/base-types.ts#L77)

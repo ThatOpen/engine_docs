@@ -54,7 +54,7 @@ E.g. [SimplePlane](openbim_components.SimplePlane.md).
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L35)
+[src/core/SimpleClipper/index.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L35)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:38](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L38)
+[src/core/SimpleClipper/index.ts:38](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L38)
 
 ___
 
@@ -82,7 +82,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:44](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L44)
+[src/core/SimpleClipper/index.ts:44](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L44)
 
 ___
 
@@ -94,7 +94,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:41](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L41)
+[src/core/SimpleClipper/index.ts:41](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L41)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:73](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L73)
+[src/core/SimpleClipper/index.ts:73](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L73)
 
 ___
 
@@ -125,7 +125,7 @@ slope for draining purposes.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:60](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L60)
+[src/core/SimpleClipper/index.ts:60](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L60)
 
 ___
 
@@ -139,7 +139,7 @@ has to be `true` for this to apply.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:67](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L67)
+[src/core/SimpleClipper/index.ts:67](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L67)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L52)
+[src/core/SimpleClipper/index.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L52)
 
 ## Accessors
 
@@ -175,7 +175,7 @@ Component.enabled
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:88](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L88)
+[src/core/SimpleClipper/index.ts:88](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L88)
 
 • `set` **enabled**(`state`): `void`
 
@@ -197,7 +197,7 @@ Component.enabled
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:93](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L93)
+[src/core/SimpleClipper/index.ts:93](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L93)
 
 ___
 
@@ -213,7 +213,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:118](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L118)
+[src/core/SimpleClipper/index.ts:118](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L118)
 
 • `set` **material**(`material`): `void`
 
@@ -231,7 +231,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:123](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L123)
+[src/core/SimpleClipper/index.ts:123](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L123)
 
 ___
 
@@ -247,7 +247,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:131](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L131)
+[src/core/SimpleClipper/index.ts:131](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L131)
 
 • `set` **size**(`size`): `void`
 
@@ -265,7 +265,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:136](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L136)
+[src/core/SimpleClipper/index.ts:136](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L136)
 
 ___
 
@@ -285,7 +285,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:105](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L105)
+[src/core/SimpleClipper/index.ts:105](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L105)
 
 • `set` **visible**(`state`): `void`
 
@@ -307,7 +307,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:110](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L110)
+[src/core/SimpleClipper/index.ts:110](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L110)
 
 ## Methods
 
@@ -327,7 +327,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:184](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L184)
+[src/core/SimpleClipper/index.ts:184](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L184)
 
 ___
 
@@ -351,7 +351,7 @@ without the need of the mouse.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:200](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L200)
+[src/core/SimpleClipper/index.ts:200](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L200)
 
 ___
 
@@ -377,7 +377,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:215](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L215)
+[src/core/SimpleClipper/index.ts:215](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L215)
 
 ___
 
@@ -393,7 +393,7 @@ Deletes all the existing clipping planes.
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:227](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L227)
+[src/core/SimpleClipper/index.ts:227](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L227)
 
 ___
 
@@ -413,7 +413,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:163](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L163)
+[src/core/SimpleClipper/index.ts:163](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L163)
 
 ___
 
@@ -433,7 +433,7 @@ ___
 
 #### Defined in
 
-[temp/engine_components/src/core/SimpleClipper/index.ts:158](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/core/SimpleClipper/index.ts#L158)
+[src/core/SimpleClipper/index.ts:158](https://github.com/ThatOpen/engine_components/blob/444e81a/src/core/SimpleClipper/index.ts#L158)
 
 ___
 
@@ -453,7 +453,7 @@ this is UI
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L62)
+[src/base-types/component.ts:62](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L62)
 
 ___
 
@@ -473,7 +473,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L57)
+[src/base-types/component.ts:57](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L57)
 
 ___
 
@@ -493,7 +493,7 @@ this is Disposable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L35)
+[src/base-types/component.ts:35](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L35)
 
 ___
 
@@ -513,7 +513,7 @@ this is Hideable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L52)
+[src/base-types/component.ts:52](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L52)
 
 ___
 
@@ -533,7 +533,7 @@ this is Resizeable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L40)
+[src/base-types/component.ts:40](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L40)
 
 ___
 
@@ -553,4 +553,4 @@ this is Updateable
 
 #### Defined in
 
-[temp/engine_components/src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/31b6f97/src/base-types/component.ts#L45)
+[src/base-types/component.ts:45](https://github.com/ThatOpen/engine_components/blob/444e81a/src/base-types/component.ts#L45)
