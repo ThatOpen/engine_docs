@@ -13,7 +13,7 @@ const repos = [
   {
     name: "engine_components",
     label: "Components",
-    branch: "big-refactor",
+    branch: "main",
     packagesAlias: {
       core: "Core",
       front: "Front"

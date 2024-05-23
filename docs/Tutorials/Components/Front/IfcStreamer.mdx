@@ -1,0 +1,112 @@
+:::info Source
+Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/fragments/IfcStreamer/example.ts).
+:::
+
+Now, streaming works by updating the scene depending on the user's perspective
+and getting the necessary geometries from the backend. A simple way to achieve
+this is by updating the scene each time the user stops the camera:
+
+```js
+import Stats from "stats.js";
+// @ts-ignore
+import * as dat from "three/examples/jsm/libs/lil-gui.module.min";
+import * as OBC from "openbim-components";
+import * as OBCF from "../..";
+
+// customEffects.excludedMeshes.push(grid.get());
+
+// rendererComponent.postproduction.enabled = true;
+
+// Set up scene (see SimpleScene tutorial)
+
+const container = document.getElementById("container")!;
+
+const components = new OBC.Components();
+
+const worlds = components.get(OBC.Worlds);
+
+const world = worlds.create<
+  OBC.SimpleScene,
+  OBC.SimpleCamera,
+  OBC.SimpleRenderer
+>();
+
+world.scene = new OBC.SimpleScene(components);
+world.renderer = new OBC.SimpleRenderer(components, container);
+world.camera = new OBC.SimpleCamera(components);
+
+components.init();
+
+world.scene.setup();
+
+// rendererComponent.postproduction.enabled = true;
+
+world.camera.controls.setLookAt(12, 6, 8, 0, 0, -10);
+
+const grids = components.get(OBC.Grids);
+grids.create(world);
+
+const loader = new OBCF.IfcStreamer(components);
+loader.world = world;
+loader.url = "../../../../../resources/streaming/";
+// const fragments = components.get(OBC.FragmentsManager);
+
+async function loadModel(geometryURL: string, propertiesURL?: string) {
+  const rawGeometryData = await fetch(geometryURL);
+  const geometryData = await rawGeometryData.json();
+  let propertiesData;
+  if (propertiesURL) {
+    const rawPropertiesData = await fetch(propertiesURL);
+    propertiesData = await rawPropertiesData.json();
+  }
+
+  const model = await loader.load(geometryData, true, propertiesData);
+
+  console.log(model);
+  const props = await model.getProperties(186);
+  console.log(props);
+}
+
+await loadModel(
+  "../../../../../resources/streaming/small.ifc-processed.json",
+  "../../../../../resources/streaming/small.ifc-processed-properties.json",
+);
+```
+As you can imagine, downloading the geometries from the server each time can
+take time, especially for heavier geometries. This is why the stream loader
+automatically caches the files locally to get them much faster. This means that
+the loading experience the first time might be a bit slower, but then later
+it will be much better. You can control this using the `useCache` property
+and clear the cache using the `clearCache()` method:
+
+```js
+world.camera.controls.addEventListener("sleep", () => {
+  loader.culler.needsUpdate = true;
+});
+```
+You can also customize the loader through the `culler` property:
+- Threshold determines how bit an object must be in the screen to stream it.
+- maxHiddenTime determines how long an object must be lost to remove it from the scene.
+- maxLostTime determines how long an object must be lost to remove it from memory.
+
+```js
+loader.useCache = true;
+
+async function clearCache() {
+  await loader.clearCache();
+  window.location.reload();
+}
+```
+This is it! Now you should be able to stream your own IFC models and open them anywhere,
+no matter how big they are! 💪 We will keep improving and making this API more powerful
+to handle any model on any device smoothly.
+
+```js
+loader.culler.threshold = 10;
+loader.culler.maxHiddenTime = 1000;
+loader.culler.maxLostTime = 40000;
+```
+
+
+
+<iframe src="https://thatopen.github.io/engine_components/examples/IfcStreamer"></iframe>

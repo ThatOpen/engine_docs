@@ -1,0 +1,121 @@
+:::info Source
+Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/measurement/LengthMeasurement/example.ts).
+:::
+
+### 📏 Dimensions Tool
+---
+At times, you may need to compute the dimensions of an object or measure the distance between two elements.
+Elements must be precisely aligned when working on complex models.
+Dimension Tool allows you to perform measurements effortlessly.
+:::tip First, let's set up a simple scene!
+👀 If you haven't started there, check out [that tutorial first](SimpleScene.mdx)!
+:::
+This tutorial will show you how to add Dimension Tool to your projects,
+which can be used to acquire accurate dimensions for any 3D Object.🔭
+### 🎲 Creating a Cube Mesh
+---
+For this tutorial we will use a Cube, you can add any geometry as per your preference.
+We will create a [Cube](https://threejs.org/docs/index.html?q=box#api/en/geometries/BoxGeometry)
+with `3x3x3` dimensions and use red color for the material.
+
+```js
+import Stats from "stats.js";
+
+import * as OBC from "openbim-components";
+import * as THREE from "three";
+import * as BUI from "@thatopen/ui";
+import * as OBCF from "../..";
+
+const container = document.getElementById("container")!;
+
+const components = new OBC.Components();
+
+const worlds = components.get(OBC.Worlds);
+
+const world = worlds.create<
+  OBC.SimpleScene,
+  OBC.SimpleCamera,
+  OBCF.PostproductionRenderer
+>();
+
+world.scene = new OBC.SimpleScene(components);
+world.renderer = new OBCF.PostproductionRenderer(components, container);
+world.camera = new OBC.SimpleCamera(components);
+
+components.init();
+
+world.camera.controls.setLookAt(5, 5, 5, 0, 0, 0);
+
+world.scene.setup();
+
+const grids = components.get(OBC.Grids);
+grids.create(world);
+```
+Now, we will add the Cube to the `Scene`. We must also add the **cube** to `components.meshes`,
+which is simply an array of all the meshes in the Scene.🗄️
+
+```js
+const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
+const cubeMaterial = new THREE.MeshStandardMaterial({ color: "#6528D7" });
+const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+cube.position.set(0, 1.5, 0);
+```
+:::info Collection of Meshes
+📦 **Components.meshes** keeps all your meshes including IFC Models, Fragments in
+one place.
+:::
+### 🛠️ Creating Dimension Tool
+---
+A lot of logic is usually needed to compute dimensions for any item, beginning with ray casting,
+finding the vertices to snap to, and rendering the UI for every line element.🙄
+This may appear to be a lot of effort, but we are handling all the heavy lifting for you,
+and you only need to write a few lines for creating the Dimension Tool.💪
+
+```js
+world.scene.three.add(cube);
+world.meshes.add(cube);
+```
+We will build dimensions by supplying the `components` to **OBC.SimpleDimensions**.
+:::info DIMENSIONS AND UI
+Read the **[Simple Dimensions](../api/classes/components.SimpleDimensions)** API for more on this.
+The Simple Dimensions API provides you with a compact UI as well to display the measurements.
+:::
+🎨 **SimpleDimensions** has several properties that help you to customize the behaviour of the `Line Element`.
+One such property which you can use is **`dimensions.color`** which modifies the color of the Line Element.
+Now, let's enable dimensions and tell them to be snapped at a distance of one unit.
+**snapDistance** helps in attaching the tooltip temporarily at regular intervals,
+making it easier to interact with items.📍
+
+```js
+const dimensions = new OBCF.LengthMeasurement(components);
+dimensions.world = world;
+```
+### 🖱️ Managing Events
+---
+You can use the Dimension Tool to construct several dimension lines. Let's see how you handle them.
+#### ✍️ Creating the Dimensions
+Now that we've generated the dimensions object, we need to attach the line tooltip to a vertex of the 3D object.
+We'll use the double click event to invoke **`dimensions.create()`**.
+When this event occurs, a line element is generated,
+and the distance is calculated in real-time inside the label associated with that line.🏷️
+
+```js
+dimensions.enabled = true;
+dimensions.snapDistance = 1;
+```
+#### 🧹 Deleting the Dimensions
+Now that we know how to make multiple dimension lines, we must also know how to delete them when necessary.
+Dimensions can be removed using `dimensions.delete()`.
+**dimensions.delete()** deletes the dimension on which your mouse pointer is now located.
+:::tip Deleting all the Dimensions
+❎ If you want to safely delete all the **dimensions** that were created you can simply call
+**`dimensions.deleteAll()`**
+:::
+
+```js
+container.ondblclick = () => dimensions.create();
+```
+
+
+
+<iframe src="https://thatopen.github.io/engine_components/examples/LengthMeasurement"></iframe>

@@ -1,0 +1,68 @@
+:::info Source
+Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_ui-components/blob/main/packages/obc/src/components/tables/ModelsList/example.ts).
+:::
+
+## Managing your loaded models 🏢
+---
+What else can we say? The task is really simple: we need to see a list of the loaded models in the app. Let's get into it!
+### Setting up the components
+First of all, we're going to get the `FragmentIfcLoader` from an existing components instance:
+
+```js
+const ifcLoader = components.get(OBC.IfcLoader);
+await ifcLoader.setup();
+```
+The step above is super important as none of the existing functional components setup any tool, they just get it as they are! So, if we don't setup the `FragmentIfcLoader` then the wasm path is not going to be defined and an error will arise 🤓. Just after we have setup the loader, let's then configure the `FragmentManager` so any time a model is loaded it gets added to some world scene created before: 
+
+```js
+const fragmentsManager = components.get(OBC.FragmentsManager);
+fragmentsManager.onFragmentsLoaded.add((model) => {
+  if (world.scene) world.scene.three.add(model);
+});
+```
+### Creating the models list component
+Allright! Now that some basic events are setup, it's time to create a new fresh models list component:
+
+```js
+const [modelsList] = CUI.tables.modelsList({ components });
+```
+Now that we have a brand new models list created, we need to add it to the HTML page. For it, let's create simple BIM panel component where we include the models list and also a pre-made IFC load button 👇
+
+```js
+const panel = BUI.Component.create(() => {
+  const [loadIfcBtn] = CUI.buttons.loadIfc({ components });
+
+  return BUI.html`
+   <bim-panel label="IFC Models">
+    <bim-panel-section label="Importing">
+      ${loadIfcBtn}
+    </bim-panel-section>
+    <bim-panel-section icon="mage:box-3d-fill" label="Loaded Models">
+      ${modelsList}
+    </bim-panel-section>
+   </bim-panel> 
+  `;
+});
+```
+Finally, let's append the BIM Panel to the page to see the models list working 😉
+
+```js
+const app = document.createElement("bim-grid");
+app.layouts = {
+  main: {
+    template: `
+      "panel viewport"
+      / 23rem 1fr
+    `,
+    elements: { panel, viewport },
+  },
+};
+
+app.layout = "main";
+document.body.append(app);
+```
+Congratulations! You've now a ready to go user interface that let's you show and dispose IFC models loaded into your app 🥳
+
+
+
+<iframe src="https://thatopen.github.io/engine_ui-components/examples/ModelsList"></iframe>
