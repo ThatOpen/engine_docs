@@ -2,7 +2,7 @@ import {
     ghVersion,
     getLatestRelease,
     cloneMinimalRepo,
-    copyRepo
+    copyRecursiveSync
 } from "./copy-utils.mjs";
 
 // Organization name
@@ -11,14 +11,15 @@ const orgName = "ThatOpen";
 // List of repositories to include in the docs
 let repositories = [
     // { name: "clay", release: "" },
-    { name: "engine_components", release: "" },
-    { name: "engine_fragment", release: "" },
+    {name: "engine_components", release: ""},
+    {name: "engine_fragment", release: ""},
+    // {name: "engine_ui-components", release: ""},
     // { name: "web-ifc", release: "" },
 ];
 const tempDirName = "temp";
 
 // Handle command-line arguments
-const validArgs = [ '--local', '--remote' ];
+const validArgs = ['--local', '--remote'];
 const [localMode, remoteMode] = validArgs;
 
 if (process.argv.length !== 3 ||
@@ -30,27 +31,24 @@ if (process.argv.length !== 3 ||
 
 // Run "local" mode, using repositories from parent directory
 if (process.argv.includes(localMode)) {
-    const localRepoPath = '../';
+    const sourcePath = '../';
+    const targetPath = './temp/';
+
     console.info("Using local mode.");
     // Copy repo directories inside each repository
-    console.info(`Copying directories from "${localRepoPath}"...`);
+    console.info(`Copying directories from "${sourcePath}"...`);
 
-    const repoCopies = await Promise.all(
-        repositories.map(async (repo) => {
-            try {
-                const {originalRepoPath, repoCopyPath} = await copyRepo(
-                    repo.name, localRepoPath, tempDirName);
+    const ignored = /^(vite\.config\.ts|example\.ts)$/;
 
-                return `'${originalRepoPath}' -> '${repoCopyPath}'`;
-            } catch {
-                return '';
-            }
-        })
-    );
+    for(const {name} of repositories) {
+        const source = sourcePath + name;
+        const target = targetPath + name;
+        copyRecursiveSync(source, target, ignored);
+        console.info(`Copied: ${name}`);
+    }
 
     console.info("Copied repository directories");
-    console.info(repoCopies);
-    
+
 }
 // Run "remote" mode, copying repositories remotely from GitHub
 else if (process.argv.includes(remoteMode)) {
@@ -78,7 +76,7 @@ else if (process.argv.includes(remoteMode)) {
 
     const clonedBranches = await Promise.all(
         repositories.map(async (repo) => {
-            const { repoDirName, tagName } = await cloneMinimalRepo(
+            const {repoDirName, tagName} = await cloneMinimalRepo(
                 orgName, repo, fullRepoDirName);
 
             return {

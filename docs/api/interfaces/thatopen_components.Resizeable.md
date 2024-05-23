@@ -1,0 +1,76 @@
+---
+id: "thatopen_components.Resizeable"
+title: "Interface: Resizeable"
+sidebar_label: "Resizeable"
+custom_edit_url: null
+---
+
+[@thatopen/components](../modules/thatopen_components.md).Resizeable
+
+Whether this component can be resized. The meaning of this can vary depending
+on the component: resizing a
+[Renderer](https://threejs.org/docs/#api/en/renderers/WebGLRenderer)
+component could mean changing its resolution, whereas resizing a
+[Mesh](https://threejs.org/docs/#api/en/objects/Mesh) would change its scale.
+
+## Properties
+
+### getSize
+
+• **getSize**: () => `Vector2`
+
+#### Type declaration
+
+▸ (): `Vector2`
+
+Gets the current size of this component (e.g. the resolution of a
+[Renderer](https://threejs.org/docs/#api/en/renderers/WebGLRenderer)
+component.
+
+##### Returns
+
+`Vector2`
+
+#### Defined in
+
+[packages/core/src/core/Types/src/interfaces.ts:60](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L60)
+
+___
+
+### onResize
+
+• **onResize**: [`Event`](../classes/thatopen_components.Event.md)<`Vector2`\>
+
+Event that fires when the component has been resized.
+
+#### Defined in
+
+[packages/core/src/core/Types/src/interfaces.ts:53](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L53)
+
+___
+
+### resize
+
+• **resize**: (`size?`: `Vector2`) => `void`
+
+#### Type declaration
+
+▸ (`size?`): `void`
+
+Sets size of this component (e.g. the resolution of a
+[Renderer](https://threejs.org/docs/#api/en/renderers/WebGLRenderer)
+component.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `size?` | `Vector2` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[packages/core/src/core/Types/src/interfaces.ts:50](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L50)

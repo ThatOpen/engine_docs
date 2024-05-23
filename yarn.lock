@@ -5099,16 +5099,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bim-fragment@npm:1.4.0":
-  version: 1.4.0
-  resolution: "bim-fragment@npm:1.4.0"
+"bim-fragment@npm:1.5.0":
+  version: 1.5.0
+  resolution: "bim-fragment@npm:1.5.0"
   dependencies:
     flatbuffers: "npm:^23.3.3"
     three-mesh-bvh: "npm:0.7.0"
     unzipit: "npm:1.4.3"
   peerDependencies:
     three: ^0.160.1
-  checksum: 10c0/00028d0ba9c9df99943dddf96df501af051935c1cfcededdb3a064995bd679b189bb8c71cd9e81cb4d2c017b44cda8868ed264881cd60ce353d14399a654c15a
+  checksum: 10c0/cf5be37d9fec870a39cc9d5e7916b6144c846996af2442253a5d86b7f7a95e61e7aebbadff101e922b4cdbeeb7faec1ad982bfabc91a76bc3d5199a62df95cda
   languageName: node
   linkType: hard
 
@@ -12038,7 +12038,7 @@ __metadata:
     "@types/three": "npm:0.160.0"
     "@typescript-eslint/eslint-plugin": "npm:^4.27.0"
     "@typescript-eslint/parser": "npm:^4.27.0"
-    bim-fragment: "npm:1.4.0"
+    bim-fragment: "npm:1.5.0"
     camera-controls: "npm:2.7.3"
     cpy-cli: "npm:^3.1.1"
     dexie: "npm:^3.2.3"
@@ -12065,11 +12065,11 @@ __metadata:
     ts-node: "npm:^10.0.0"
     typescript: "npm:^4.3.2"
     unzipit: "npm:^1.4.3"
-    web-ifc: "npm:0.0.51"
+    web-ifc: "npm:0.0.53"
   peerDependencies:
-    bim-fragment: 1.4.0
+    bim-fragment: 1.5.0
     three: ^0.160.1
-    web-ifc: 0.0.51
+    web-ifc: 0.0.53
   languageName: unknown
   linkType: soft
 
@@ -16389,10 +16389,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-ifc@npm:0.0.51":
-  version: 0.0.51
-  resolution: "web-ifc@npm:0.0.51"
-  checksum: 10c0/c596ec81c749070b2f19dd9f7736181653fc51a645d1fd8c7f61a84ff9a77e2e770c6c33a59bd9ac80024244e78840a897c2b6c47683cbfa5ad6585774779447
+"web-ifc@npm:0.0.53":
+  version: 0.0.53
+  resolution: "web-ifc@npm:0.0.53"
+  checksum: 10c0/e9ea64403a5cf47e0a661f38d0d9425832497392298c252745cbde5d43c24736516ded0fd8ad6e063f5b3c7a61c97839532f37f1b7d736f42dcdcacaa27c8af2
   languageName: node
   linkType: hard
 

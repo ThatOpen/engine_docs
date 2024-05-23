@@ -76,6 +76,7 @@
   },
   "references": [
     { "path": "../../temp/engine_components" },
-    { "path": "../../temp/engine_fragment" }
+    { "path": "../../temp/engine_fragment" },
+    { "path": "../../temp/engine_ui-components" }
   ]
 }

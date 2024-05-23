@@ -1,15 +1,16 @@
-import { exec, execSync } from "node:child_process";
-import { cp } from "node:fs/promises";
+import {exec, execSync} from "node:child_process";
+import {cp} from "node:fs/promises";
 import * as path from "node:path";
+import * as fs from "fs";
 
-import { promisify } from "node:util";
+import {promisify} from "node:util";
 
 // Make exec return promises
 const execPromise = promisify(exec);
 
 // Test that the `gh` command-line utility is installed
 export const ghVersion = () => {
-   return execSync("gh --version", err => {
+    return execSync("gh --version", err => {
         if (err) {
             console.error("`gh` command is not accessible. Aborting...");
 
@@ -26,7 +27,8 @@ export const getLatestRelease = async (orgName, repoName) => {
         release = await execPromise(
             `gh api repos/${orgName}/${repoName}/releases/latest`);
         release = release.stdout;
-    } catch {}
+    } catch {
+    }
 
     try {
         release = JSON.parse(release).tag_name;
@@ -49,7 +51,7 @@ export const getLatestRelease = async (orgName, repoName) => {
 
 /* Clone git repository with minimal depth for an specific tag.
    If no tag is specified, it will use the default branch */
-export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
+export const cloneMinimalRepo = async (orgName, repo, fullRepoDirName) => {
     const repoDirName = path.resolve(`${fullRepoDirName}/${repo.name}`);
 
     let command = `gh repo clone ${orgName}/${repo.name} ${repoDirName} -- --depth 1`;
@@ -62,18 +64,41 @@ export const cloneMinimalRepo = async(orgName, repo, fullRepoDirName) => {
 
     await execPromise(`${command}`);
 
-    return { repoDirName, tagName };
+    return {repoDirName, tagName};
 };
 
-/* Copy the repository root directory inside the repo to the
- * tempDirName directory with the name of the repository */
-export const copyRepo = async(repoName, repoPath, destPath) => {
-    const originalRepoPath = path.resolve(
-        `./${repoPath}/${repoName}`);
-    const repoCopyPath = path.resolve(
-        `./${destPath}/${repoName}`);
 
-    await cp(originalRepoPath, repoCopyPath, { recursive: true });
+/**
+ * Recursively copy files and directories from source to destination, with an option to ignore files based on a regex pattern.
+ * @param {string} src - The source directory
+ * @param {string} dest - The destination directory
+ * @param {RegExp} ignorePattern - The regex pattern to ignore files
+ */
+export function copyRecursiveSync(src, dest, ignorePattern = null) {
+    if (!fs.existsSync(src)) {
+        console.error(`Source path "${src}" does not exist.`);
+        return;
+    }
 
-    return { originalRepoPath, repoCopyPath };
-};
+    const stats = fs.statSync(src);
+    const isDirectory = stats.isDirectory();
+
+    if (isDirectory) {
+        if (!fs.existsSync(dest)) {
+            fs.mkdirSync(dest);
+        }
+
+        fs.readdirSync(src).forEach((childItemName) => {
+            const childSrcPath = path.join(src, childItemName);
+            const childDestPath = path.join(dest, childItemName);
+
+            if (ignorePattern && ignorePattern.test(childItemName)) {
+                // console.log(`Ignoring file/folder: ${childItemName}`);
+            } else {
+                copyRecursiveSync(childSrcPath, childDestPath, ignorePattern);
+            }
+        });
+    } else {
+        fs.copyFileSync(src, dest);
+    }
+}

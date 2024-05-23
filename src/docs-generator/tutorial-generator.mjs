@@ -1,101 +1,128 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { traverseDir } from "./dir-traverser.mjs";
 
-// #region Regex
-const mdCommentRegex = /\/\*MD([\s\S]*?)\*\//g;
-const codeBlockRegex = /\*\/([\s\S]*?)\/\*MD/g;
-// #endregion
+const tutorialsPath = "docs/Tutorials"
 
-traverseDir("temp/engine_components/src", (_, libFiles) => {
-    const tutorialFiles = libFiles.filter(path => path.match(/index\.html$/));
-    generateTutorials(tutorialFiles);
-});
-
-
-function generateTutorials(tutorialPaths) {
-    const basePath = `docs/Tutorials`;
-    if (!fs.existsSync(basePath)) {
-        fs.mkdirSync(basePath, { recursive: true });
-    }
-
-    for (const tutorialPath of tutorialPaths) {
-        const splitted = tutorialPath.split(path.sep);
-        const componentName = splitted[splitted.length - 2];
-        const resultPath = `${basePath}/${componentName}.mdx`;
-        const html = fs.readFileSync(tutorialPath, "utf-8");
-
-        let tutorial = getTutorial(html);
-        if (!tutorial) continue;
-        tutorial += getLiveDemo(tutorialPath);
-
-        try {
-            fs.writeFileSync(resultPath, tutorial);
-        } catch (e) {
-            console.error(e);
-        }
-    }
+if (fs.existsSync(tutorialsPath)) {
+  fs.rmSync(tutorialsPath, { recursive: true, force: true })
 }
 
-function getTutorial(html) {
-    const scriptModule = html.match(
-        /<script\b[^>]*type="module"[^>]*>[\s\S]*?<\/script>/g
-    );
+fs.mkdirSync(tutorialsPath)
 
-    if (!scriptModule) return null;
+const repos = [
+  {
+    name: "engine_components",
+    label: "Components",
+    branch: "main",
+    packagesAlias: {
+      core: "Core",
+      front: "Front"
+    }
+  },
+  {
+    name: "engine_ui-components",
+    label: "UserInterface",
+    branch: "main",
+    packagesAlias: {
+      core: "Core",
+      obc: "OBC",
+    }
+  }
+]
 
-    const script = scriptModule[0]
-        .replace(/<script\b[^>]*type="module"[^>]*>/g, "")
-        .replace(/<\/script>/g, "");
+for (const repo of repos) {
+  const { name, branch, label } = repo
+  const baseURL = `https://raw.githubusercontent.com/ThatOpen/${name}/${branch}`
+  const response = await fetch(`${baseURL}/examples/paths.json`)
+  if (!response.ok) continue;
+  const repoExamples = await response.json()
+  const libTutorialsPath = path.join("docs", "Tutorials", label)
+  if (!fs.existsSync(libTutorialsPath)) fs.mkdirSync(libTutorialsPath)
+  setReadmeAsIndex(name, baseURL)
+  for (const exampleRoute of repoExamples) {
+    const examplePath = `${baseURL}/${exampleRoute}`
+    const exampleResponse = await fetch(examplePath)
+    if (!exampleResponse.ok) continue
+    const example = await exampleResponse.text()
+    const splittedRoute = exampleRoute.split("/")
+    const isMonorepo = splittedRoute[0] === "packages"
+    let tutorial = getTutorial(example)
+    if (!tutorial) continue
+    tutorial = `:::info Source
+Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/${name}/blob/${branch}/${exampleRoute}).
+:::
 
-    //#region Get comments
-    const comments = script.match(mdCommentRegex);
-    if(!comments) return null;
-    const parsedComments = comments?.map((comment) => {
-        const slicedComment = comment
-            .slice(4, -2)
-            .replace(/\r/g, "")
-            .replace(/^\s+/gm, "");
-        return slicedComment;
-    });
-    //#endregion
-
-    //#region Get code blocks
-    const codes = script.match(codeBlockRegex);
-    const codeBlocks = codes?.map((code) => {
-        const slicedCode = code
-            .slice(2, -4)
-            .replace(/\r/g, "")
-            .replace(/^\s+/gm, "");
-        return "\n```js\n" + slicedCode + "```\n";
-    });
-    //#endregion
-
-    //#region Append markdown comment and code
-    let tutorialMD = "";
-    parsedComments?.forEach((comment, i) => {
-        tutorialMD += comment;
-        if (codeBlocks && codeBlocks[i]) {
-            tutorialMD += codeBlocks[i];
-        }
-    });
-    //#endregion
-
-    return tutorialMD;
+${tutorial}
+`
+    const tutorialName = splittedRoute[splittedRoute.length - 2]
+    const demo = `\n\n<iframe src="https://thatopen.github.io/${name}/examples/${tutorialName}"></iframe>`
+    tutorial += demo
+    if (isMonorepo) {
+      let repoAlias
+      const repoName = splittedRoute[1]
+      if ("packagesAlias" in repo) {
+        repoAlias = repo.packagesAlias[repoName] ?? repoName
+      } else {
+        repoAlias = repoName
+      }
+      const repoTutorialsPath = path.join("docs", "Tutorials", label, repoAlias)
+      if (!fs.existsSync(repoTutorialsPath)) fs.mkdirSync(repoTutorialsPath)
+      fs.writeFileSync(path.join("docs", "Tutorials", label, repoAlias, tutorialName + ".mdx"), tutorial)
+    } else {
+      fs.writeFileSync(path.join("docs", "Tutorials", label, tutorialName + ".mdx"), tutorial)
+    }
+    console.log(`Wrote ${name}/${tutorialName}`)
+  }
 }
 
-function getLiveDemo(path) {
-    let url = path
-        .replaceAll("\\", "/")
-        .replace(/.*docs\/temp\//, "https://thatopen.github.io/")
+async function setReadmeAsIndex(repoName, url) {
+  const response = await fetch(`${url}/README.md`)
+  if (!response.ok) return;
+  const readme = await response.text()
+  const { label } = repos.find(repo => repo.name === repoName)
+  fs.writeFileSync(path.join("docs", "Tutorials", label, "index.md"),
+    `---
+title: ${label}
+---
+${readme}
+`)
+}
 
-    const baseUrlPattern = /.*github.io\/.*?\//;
-    const size = baseUrlPattern.exec(url)[0].length;
-    url = url.slice(0, size) + url.slice(size);
+function getTutorial(ts) {
+  // Get markdown comments
+  const comments = ts.match(/\/\*\s*MD\s*([\s\S]*?)\s*\*\//g);
+  if (!comments) return null;
 
-    return `
+  const cleanedComments = comments.map(match => {
+    const comment = match
+      .replace(/\/\*\s*.*?MD/g, '') // get rid of /*MD
+      .replace(/\*\/\s*/g, '') // get rid of */
+      .replace(/\r\n\s+/g, "\r\n")
+      .replace(/^\s+/gm, ''); // remove any space at the start of the lines
+    return comment;
+  });
 
-  <iframe src="${url}"></iframe>
+  // Get code blocks
+  const codes = ts.match(/\*\/\s*([\s\S]*?)\s*MD/g);
+  if (!codes) return null;
 
-  `;
+  const cleanedCodes = codes.map(match => {
+    const code = match
+      .replace(/\/\*\s*.*?MD/g, '') // get rid of /*MD
+      .replace(/\*\/\s*/g, '') // get rid of */
+      .replace(/import\s*\*\s*as\s*OBC\s*from\s*"(.*?)";/g, 'import * as OBC from "openbim-components";') // fix the import text
+      .replace(/^(\r\n)*|(\r\n)*$/g, '') // remove the new lines at the start and end of the code block
+      .trim();
+    return "\n```js\n" + code + "\n```\n";
+  });
+
+  // Append markdown comments and code
+  let tutorial = "";
+  for (const [i, comment] of cleanedComments.entries()) {
+    tutorial += comment;
+    const code = cleanedCodes[i];
+    if (code) tutorial += cleanedCodes[i];
+  }
+
+  return tutorial;
 }
