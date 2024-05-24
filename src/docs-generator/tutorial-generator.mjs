@@ -110,7 +110,6 @@ function getTutorial(ts) {
     const code = match
       .replace(/\/\*\s*.*?MD/g, '') // get rid of /*MD
       .replace(/\*\/\s*/g, '') // get rid of */
-      .replace(/import\s*\*\s*as\s*OBC\s*from\s*"(.*?)";/g, 'import * as OBC from "openbim-components";') // fix the import text
       .replace(/^(\r\n)*|(\r\n)*$/g, '') // remove the new lines at the start and end of the code block
       .trim();
     return "\n```js\n" + code + "\n```\n";
