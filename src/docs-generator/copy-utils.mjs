@@ -72,9 +72,10 @@ export const cloneMinimalRepo = async (orgName, repo, fullRepoDirName) => {
  * Recursively copy files and directories from source to destination, with an option to ignore files based on a regex pattern.
  * @param {string} src - The source directory
  * @param {string} dest - The destination directory
- * @param {RegExp} ignorePattern - The regex pattern to ignore files
+ * @param {RegExp} ignoreFiles - The regex pattern to ignore files
+ * @param {RegExp} ignorePaths - The regex pattern to ignore paths
  */
-export function copyRecursiveSync(src, dest, ignorePattern = null) {
+export function copyRecursiveSync(src, dest, ignoreFiles = null, ignorePaths = null) {
     if (!fs.existsSync(src)) {
         console.error(`Source path "${src}" does not exist.`);
         return;
@@ -92,10 +93,15 @@ export function copyRecursiveSync(src, dest, ignorePattern = null) {
             const childSrcPath = path.join(src, childItemName);
             const childDestPath = path.join(dest, childItemName);
 
-            if (ignorePattern && ignorePattern.test(childItemName)) {
+            if(ignorePaths && ignorePaths.test(childSrcPath)) {
+                console.log(`Ignored: ${childSrcPath}`);
+                return;
+            }
+
+            if (ignoreFiles && ignoreFiles.test(childItemName)) {
                 // console.log(`Ignoring file/folder: ${childItemName}`);
             } else {
-                copyRecursiveSync(childSrcPath, childDestPath, ignorePattern);
+                copyRecursiveSync(childSrcPath, childDestPath, ignoreFiles, ignorePaths);
             }
         });
     } else {

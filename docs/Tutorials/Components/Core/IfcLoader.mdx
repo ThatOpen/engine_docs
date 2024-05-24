@@ -1,5 +1,5 @@
 :::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/IfcLoader/example.ts).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/IfcLoader/example.ts).
 :::
 
 ### 🏠👉🤖 From IFC to fragment in 1 minute
@@ -126,7 +126,7 @@ is as easy as this:
 // culler.enabled = true;
 
 async function loadIfc() {
-  const file = await fetch("../../../../../resources/small.ifc");
+  const file = await fetch("https://thatopen.github.io/engine_components/resources/small.ifc");
   const data = await file.arrayBuffer();
   const buffer = new Uint8Array(data);
   const model = await fragmentIfcLoader.load(buffer);

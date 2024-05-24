@@ -49,7 +49,7 @@ for (const repo of repos) {
     let tutorial = getTutorial(example)
     if (!tutorial) continue
     tutorial = `:::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/${name}/blob/${branch}/${exampleRoute}).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/${name}/blob/${branch}/${exampleRoute}).
 :::
 
 ${tutorial}

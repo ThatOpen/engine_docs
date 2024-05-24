@@ -1,5 +1,5 @@
 :::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/core/OrthoPerspectiveCamera/example.ts).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/core/OrthoPerspectiveCamera/example.ts).
 :::
 
 ### 📹 How to handle a fancy camera
@@ -41,17 +41,14 @@ world.camera = new OBC.OrthoPerspectiveCamera(components);
 
 world.scene.setup();
 
-async function test() {
-  await world.camera.controls.setLookAt(3, 3, 3, 0, 0, 0);
-  await world.camera.projection.set("Orthographic");
-}
-
-test();
-
-// await world.camera.projection.set("Perspective");
-// await world.camera.projection.set("Orthographic");
+await world.camera.controls.setLookAt(3, 3, 3, 0, 0, 0);
 
 components.init();
+```
+We'll make the background of the scene transparent so that it looks good in our docs page, but you don't have to do that in your app!
+
+```js
+world.scene.three.background = null;
 ```
 Easy, right? Believe it or not, this is all you need to use the OrthoPerspectiveCamera. Now, let's see it in action!
 ### 🧊 Creating a cube
@@ -80,6 +77,19 @@ world.camera.projection.onChanged.add(() => {
   grid.fade = projection === "Perspective";
 });
 ```
+### ⏱️ Measuring the performance (optional)
+---
+We'll use the [Stats.js](https://github.com/mrdoob/stats.js) to measure the performance of our app. We will add it to the top left corner of the viewport. This way, we'll make sure that the memory consumption and the FPS of our app are under control.
+
+```js
+const stats = new Stats();
+stats.showPanel(2);
+document.body.append(stats.dom);
+stats.dom.style.left = "0px";
+stats.dom.style.zIndex = "unset";
+world.renderer.onBeforeUpdate.add(() => stats.begin());
+world.renderer.onAfterUpdate.add(() => stats.end());
+```
 ### 🧩 Building a camera UI
 ---
 Now we will use @thatopen/ui to create a simple UI for the OrthoPerspectiveCamera. It will have 4 elements: 
@@ -100,9 +110,8 @@ BUI.Manager.init();
 
 const panel = BUI.Component.create<BUI.PanelSection>(() => {
   return BUI.html`
-    <bim-panel active label="Orthoperspective Camera Tutorial" 
-      style="position: fixed; top: 5px; right: 5px">
-      <bim-panel-section style="padding-top: 10px;">
+    <bim-panel active label="Orthoperspective Camera Tutorial" class="options-menu">
+      <bim-panel-section collapsed label="Controls">
          
           <bim-dropdown required label="Navigation mode" 
             @change="${({ target }: { target: BUI.Dropdown }) => {
@@ -162,17 +171,24 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
 
 document.body.append(panel);
 ```
-### ⏱️ Measuring the performance (optional)
----
-We'll use the [Stats.js](https://github.com/mrdoob/stats.js) to measure the performance of our app. We will add it to the top left corner of the viewport. This way, we'll make sure that the memory consumption and the FPS of our app are under control.
+And we will make some logic that adds a button to the screen when the user is visiting our app from their phone, allowing to show or hide the menu. Otherwise, the menu would make the app unusable.
 
 ```js
-const stats = new Stats();
-stats.showPanel(2);
-document.body.append(stats.dom);
-stats.dom.style.left = "0px";
-world.renderer.onBeforeUpdate.add(() => stats.begin());
-world.renderer.onAfterUpdate.add(() => stats.end());
+const button = BUI.Component.create<BUI.PanelSection>(() => {
+  return BUI.html`
+      <bim-button class="phone-menu-toggler" icon="solar:settings-bold"
+        @click="${() => {
+          if (panel.classList.contains("options-menu-visible")) {
+            panel.classList.remove("options-menu-visible");
+          } else {
+            panel.classList.add("options-menu-visible");
+          }
+        }}">
+      </bim-button>
+    `;
+});
+
+document.body.append(button);
 ```
 ### 🎉 Wrap up
 ---

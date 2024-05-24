@@ -1,5 +1,5 @@
 :::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/IfcPropertiesTiler/example.ts).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/IfcPropertiesTiler/example.ts).
 :::
 
 ### 📋 Streaming the properties
@@ -150,7 +150,7 @@ If everything went as expected, you should now be seeing some files being downlo
 
 ```js
 async function processFile() {
-  const fetchedIfc = await fetch("../../../../../resources/small.ifc");
+  const fetchedIfc = await fetch("https://thatopen.github.io/engine_components/resources/small.ifc");
   const ifcBuffer = await fetchedIfc.arrayBuffer();
   // We will need this information later to also convert the properties
   const ifcArrayBuffer = new Uint8Array(ifcBuffer);

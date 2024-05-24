@@ -1,5 +1,5 @@
 :::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/fragments/IfcStreamer/example.ts).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/fragments/IfcStreamer/example.ts).
 :::
 
 Now, streaming works by updating the scene depending on the user's perspective
@@ -48,7 +48,7 @@ grids.create(world);
 
 const loader = new OBCF.IfcStreamer(components);
 loader.world = world;
-loader.url = "../../../../../resources/streaming/";
+loader.url = "https://thatopen.github.io/engine_components/resources/streaming/";
 // const fragments = components.get(OBC.FragmentsManager);
 
 async function loadModel(geometryURL: string, propertiesURL?: string) {
@@ -68,8 +68,8 @@ async function loadModel(geometryURL: string, propertiesURL?: string) {
 }
 
 await loadModel(
-  "../../../../../resources/streaming/small.ifc-processed.json",
-  "../../../../../resources/streaming/small.ifc-processed-properties.json",
+  "https://thatopen.github.io/engine_components/resources/streaming/small.ifc-processed.json",
+  "https://thatopen.github.io/engine_components/resources/streaming/small.ifc-processed-properties.json",
 );
 ```
 As you can imagine, downloading the geometries from the server each time can

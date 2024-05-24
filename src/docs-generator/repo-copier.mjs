@@ -13,7 +13,7 @@ let repositories = [
     // { name: "clay", release: "" },
     {name: "engine_components", release: ""},
     {name: "engine_fragment", release: ""},
-    // {name: "engine_ui-components", release: ""},
+    {name: "engine_ui-components", release: ""},
     // { name: "web-ifc", release: "" },
 ];
 const tempDirName = "temp";
@@ -38,12 +38,13 @@ if (process.argv.includes(localMode)) {
     // Copy repo directories inside each repository
     console.info(`Copying directories from "${sourcePath}"...`);
 
-    const ignored = /^(vite\.config\.ts|example\.ts)$/;
+    const ignoredFiles = /^(vite\.config\.ts|example\.ts)$/;
+    const ignoredPaths = /^(\.\.\\.+?packages.+?dist)$/;
 
     for(const {name} of repositories) {
         const source = sourcePath + name;
         const target = targetPath + name;
-        copyRecursiveSync(source, target, ignored);
+        copyRecursiveSync(source, target, ignoredFiles, ignoredPaths);
         console.info(`Copied: ${name}`);
     }
 

@@ -1,5 +1,5 @@
 :::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/core/Grids/example.ts).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/core/Grids/example.ts).
 :::
 
 ### 🕸️ Adding a fancy grid to our scene 
@@ -41,6 +41,11 @@ components.init();
 const cube = new THREE.Mesh(new THREE.BoxGeometry());
 world.scene.three.add(cube);
 ```
+We'll make the background of the scene transparent so that it looks good in our docs page, but you don't have to do that in your app!
+
+```js
+world.scene.three.background = null;
+```
 ### 🕷️ Adding the grid to the world
 ---
 To add the grid to the world, we will use the `Grids` component. Instead of instantiating it, we will get it directly from the `components` object. Remember that all components are meant to be singletons. Then, we will call the `create` method to add a grid to the scene.
@@ -59,6 +64,7 @@ const stats = new Stats();
 stats.showPanel(2);
 document.body.append(stats.dom);
 stats.dom.style.left = "0px";
+stats.dom.style.zIndex = "unset";
 world.renderer.onBeforeUpdate.add(() => stats.begin());
 world.renderer.onAfterUpdate.add(() => stats.end());
 ```

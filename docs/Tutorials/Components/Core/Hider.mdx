@@ -1,5 +1,5 @@
 :::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/Hider/example.ts).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/Hider/example.ts).
 :::
 
 ### 🔎 Custom filters for your BIM models
@@ -55,7 +55,7 @@ even after closing the browser and opening it again:
 
 ```js
 const fragments = new OBC.FragmentsManager(components);
-const file = await fetch("../../../../../resources/small.frag");
+const file = await fetch("https://thatopen.github.io/engine_components/resources/small.frag");
 const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
 const model = fragments.load(buffer);

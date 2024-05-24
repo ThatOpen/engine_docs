@@ -1,5 +1,5 @@
 :::info Source
-Copying and pasting? We got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/core/MiniMap/example.ts).
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/core/MiniMap/example.ts).
 :::
 
 ### 🗺️ Orientating your user in the scene
@@ -49,6 +49,11 @@ grids.create(world);
 
 world.camera.controls.setLookAt(1, 2, -2, -2, 0, -5);
 ```
+We'll make the background of the scene transparent so that it looks good in our docs page, but you don't have to do that in your app!
+
+```js
+world.scene.three.background = null;
+```
 ### 🏠 Loading a model
 ---
 Now that we have a scene, let's load a model. We will use the Fragment Manager for it. 
@@ -59,7 +64,9 @@ Now that we have a scene, let's load a model. We will use the Fragment Manager f
 ```js
 const fragments = new OBC.FragmentsManager(components);
 
-const file = await fetch("../../../../../resources/small.frag");
+const file = await fetch(
+  "https://thatopen.github.io/engine_components/resources/small.frag",
+);
 const dataBlob = await file.arrayBuffer();
 const buffer = new Uint8Array(dataBlob);
 const model = fragments.load(buffer);
@@ -81,6 +88,20 @@ const mapContainer = document.getElementById("minimap") as HTMLDivElement;
 const canvas = map.renderer.domElement;
 canvas.style.borderRadius = "12px";
 mapContainer.append(canvas);
+map.resize();
+```
+### ⏱️ Measuring the performance (optional)
+---
+We'll use the [Stats.js](https://github.com/mrdoob/stats.js) to measure the performance of our app. We will add it to the top left corner of the viewport. This way, we'll make sure that the memory consumption and the FPS of our app are under control.
+
+```js
+const stats = new Stats();
+stats.showPanel(2);
+document.body.append(stats.dom);
+stats.dom.style.left = "0px";
+stats.dom.style.zIndex = "unset";
+world.renderer.onBeforeUpdate.add(() => stats.begin());
+world.renderer.onAfterUpdate.add(() => stats.end());
 ```
 ### 🧩 Adding some UI
 ---
@@ -99,8 +120,8 @@ Now we will create a new panel with some inputs to control the different paramet
 ```js
 const panel = BUI.Component.create<BUI.PanelSection>(() => {
   return BUI.html`
-    <bim-panel label="Minimap Tutorial" style="position: fixed; top: 5px; right: 5px" active>
-      <bim-panel-section style="padding-top: 10px">
+    <bim-panel label="Minimap Tutorial" class="options-menu">
+      <bim-panel-section collapsed label="Controls">
       
         <bim-checkbox checked="true" label="Enabled" 
           @change="${({ target }: { target: BUI.Checkbox }) => {
@@ -108,7 +129,7 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
           }}">  
         </bim-checkbox>
         
-        <bim-checkbox label="Lock rotation" 
+        <bim-checkbox checked label="Lock rotation" 
           @change="${({ target }: { target: BUI.Checkbox }) => {
             map.lockRotation = target.value;
           }}">  
@@ -124,6 +145,13 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
         
         <bim-number-input 
           slider label="Zoom" value="${map.zoom}" min="0.01" max="0.5" step="0.01" 
+          @change="${({ target }: { target: BUI.NumberInput }) => {
+            map.zoom = target.value;
+          }}">
+        </bim-number-input>
+        
+        <bim-number-input 
+          slider label="Front offset" value="${map.frontOffset}" min="0" max="5" step="1" 
           @change="${({ target }: { target: BUI.NumberInput }) => {
             map.frontOffset = target.value;
           }}">
@@ -156,17 +184,24 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
 
 document.body.append(panel);
 ```
-### ⏱️ Measuring the performance (optional)
----
-We'll use the [Stats.js](https://github.com/mrdoob/stats.js) to measure the performance of our app. We will add it to the top left corner of the viewport. This way, we'll make sure that the memory consumption and the FPS of our app are under control.
+And we will make some logic that adds a button to the screen when the user is visiting our app from their phone, allowing to show or hide the menu. Otherwise, the menu would make the app unusable.
 
 ```js
-const stats = new Stats();
-stats.showPanel(2);
-document.body.append(stats.dom);
-stats.dom.style.left = "0px";
-world.renderer.onBeforeUpdate.add(() => stats.begin());
-world.renderer.onAfterUpdate.add(() => stats.end());
+const button = BUI.Component.create<BUI.PanelSection>(() => {
+  return BUI.html`
+      <bim-button class="phone-menu-toggler" icon="solar:settings-bold"
+        @click="${() => {
+          if (panel.classList.contains("options-menu-visible")) {
+            panel.classList.remove("options-menu-visible");
+          } else {
+            panel.classList.add("options-menu-visible");
+          }
+        }}">
+      </bim-button>
+    `;
+});
+
+document.body.append(button);
 ```
 ### 🎉 Wrap up
 ---
