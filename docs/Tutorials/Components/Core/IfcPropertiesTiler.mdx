@@ -11,64 +11,6 @@ data of models of any size without big cloud costs. We can do this conversion
 using the `FragmentPropsStreamConverter`:
 
 ```js
-import Stats from "stats.js";
-// @ts-ignore
-import * as dat from "three/examples/jsm/libs/lil-gui.module.min";
-import * as BUI from "@thatopen/ui";
-import * as OBC from "../..";
-
-const container = document.getElementById("container")!;
-
-const components = new OBC.Components();
-
-const worlds = components.get(OBC.Worlds);
-
-const world = worlds.create<
-  OBC.SimpleScene,
-  OBC.SimpleCamera,
-  OBC.SimpleRenderer
->();
-
-world.scene = new OBC.SimpleScene(components);
-world.renderer = new OBC.SimpleRenderer(components, container);
-world.camera = new OBC.SimpleCamera(components);
-
-components.init();
-
-// rendererComponent.postproduction.enabled = true;
-
-world.camera.controls.setLookAt(12, 6, 8, 0, 0, -10);
-
-const grids = components.get(OBC.Grids);
-grids.create(world);
-// customEffects.excludedMeshes.push(grid.get());
-
-function downloadFile(name: string, bits: Blob) {
-  const file = new File([bits], name);
-  const anchor = document.createElement("a");
-  const url = URL.createObjectURL(file);
-  anchor.href = url;
-  anchor.download = file.name;
-  anchor.click();
-  URL.revokeObjectURL(url);
-}
-
-async function downloadFilesSequentially(
-  fileList: { name: string; bits: Blob }[],
-) {
-  for (const { name, bits } of fileList) {
-    downloadFile(name, bits);
-    await new Promise((resolve) => {
-      setTimeout(resolve, 100);
-    });
-  }
-}
-
-// rendererComponent.postproduction.enabled = true;
-```
-We need to generate properties JSON with the following structure
-
-```js
 const propsStreamer = new OBC.IfcPropertiesTiler(components);
 
 propsStreamer.settings.wasm = {
@@ -76,10 +18,7 @@ propsStreamer.settings.wasm = {
   absolute: true,
 };
 ```
-Similarly to geometries, here you will also get data and progress notification
-using events. In addition to properties, you will get `indices`, which is an
-indexation data of the properties to be able to use them effectively when
-streamed.
+We need to generate properties JSON with the following structure
 
 ```js
 // @ts-ignore
@@ -101,7 +40,10 @@ const jsonFile: StreamedProperties = {
   indexesFile: "small.ifc-processed-properties-indexes",
 };
 ```
-Great! Now that we have everything setup, is time to finally convert the IFC file. In order to trigger the conversion, we can just do the following:
+Similarly to geometries, here you will also get data and progress notification
+using events. In addition to properties, you will get `indices`, which is an
+indexation data of the properties to be able to use them effectively when
+streamed.
 
 ```js
 let counter = 0;
@@ -146,7 +88,7 @@ propsStreamer.onIndicesStreamed.add(async (props) => {
   await downloadFilesSequentially(files);
 });
 ```
-If everything went as expected, you should now be seeing some files being downloaded from your app 🤯 Do not get scary if they're a lot, as big models tend to have many files! All of that is the information the streaming uses in order to display the geometry in the most efficient way possible 💪
+Great! Now that we have everything setup, is time to finally convert the IFC file. In order to trigger the conversion, we can just do the following:
 
 ```js
 async function processFile() {
@@ -158,6 +100,7 @@ async function processFile() {
   await propsStreamer.streamFromBuffer(ifcArrayBuffer);
 }
 ```
+If everything went as expected, you should now be seeing some files being downloaded from your app 🤯 Do not get scary if they're a lot, as big models tend to have many files! All of that is the information the streaming uses in order to display the geometry in the most efficient way possible 💪
 
 
 

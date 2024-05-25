@@ -13,41 +13,6 @@ If you're unsure on the details to load a model, just tool at the [IfcLoader](/T
 :::
 
 ```js
-// @ts-ignore
-import * as dat from "three/examples/jsm/libs/lil-gui.module.min";
-// import Stats from "stats.js";
-// import * as BUI from "@thatopen/ui";
-import * as BUI from "@thatopen/ui";
-import * as OBC from "../..";
-
-const container = document.getElementById("container")!;
-
-const components = new OBC.Components();
-
-const worlds = components.get(OBC.Worlds);
-
-const world = worlds.create<
-  OBC.SimpleScene,
-  OBC.SimpleCamera,
-  OBC.SimpleRenderer
->();
-
-world.scene = new OBC.SimpleScene(components);
-world.renderer = new OBC.SimpleRenderer(components, container);
-world.camera = new OBC.SimpleCamera(components);
-
-components.init();
-
-world.camera.controls.setLookAt(12, 6, 8, 0, 0, -10);
-
-world.scene.setup();
-
-const grids = components.get(OBC.Grids);
-grids.create(world);
-```
-Once the model is loaded in memory, you just need to get an instance of the IfcRelationsIndexer and process the model... it's as easy as that! 😎
-
-```js
 const ifcLoader = components.get(OBC.IfcLoader);
 await ifcLoader.setup();
 const file = await fetch("/resources/small.ifc");
@@ -56,20 +21,15 @@ const typedArray = new Uint8Array(buffer);
 const model = await ifcLoader.load(typedArray);
 world.scene.three.add(model);
 ```
-The result of that is basically a map where the keys are the expressIDs and the values are other expressIDs related to the first one and grouped by the type of relation. You don't need to worry too much about the details of that, as the usage is pretty straighforward 🔝. The only thing that matters is you've now an easy way to access the entities related to your element 🙂
-### Getting element psets 📄
-One of the most important relations between different entities is the `IfcRelDefinesByProperties`. That relation links together an arbitrary entity with a set of `IfcPropertySet` entities that applies properties. Getting them with the `IfcRelationsIndexer` once the model is indexed is pretty easy:
+Once the model is loaded in memory, you just need to get an instance of the IfcRelationsIndexer and process the model... it's as easy as that! 😎
 
 ```js
 const indexer = components.get(OBC.IfcRelationsIndexer);
 await indexer.process(model);
 ```
-:::tip
-IsDefinedBy is the inverse attribute name in the IFC Schema that holds the relations with property sets 😉
-:::
-Awesome! really easy right?
-### Exporting the indexation
-In bigger models, the process to calculate the relations index may take some time. The important thing is that there is no reason to calculate over and over the relations index every time you load a model. If the model hasn't change, their properties shouldn't neither! So, let's download the relations index to load it later.
+The result of that is basically a map where the keys are the expressIDs and the values are other expressIDs related to the first one and grouped by the type of relation. You don't need to worry too much about the details of that, as the usage is pretty straighforward 🔝. The only thing that matters is you've now an easy way to access the entities related to your element 🙂
+### Getting element psets 📄
+One of the most important relations between different entities is the `IfcRelDefinesByProperties`. That relation links together an arbitrary entity with a set of `IfcPropertySet` entities that applies properties. Getting them with the `IfcRelationsIndexer` once the model is indexed is pretty easy:
 
 ```js
 const psets = indexer.getEntityRelations(model, 6518, "IsDefinedBy");
@@ -91,9 +51,11 @@ if (psets) {
 }
 ```
 :::tip
-As `@thatopen/components` can be used in either NodeJS and Browser environments, the logic to generate a JSON file may vary!
+IsDefinedBy is the inverse attribute name in the IFC Schema that holds the relations with property sets 😉
 :::
-Now, in case you've loaded several models and want to get all the computed relations, there is also a handy method to do it.
+Awesome! really easy right?
+### Exporting the indexation
+In bigger models, the process to calculate the relations index may take some time. The important thing is that there is no reason to calculate over and over the relations index every time you load a model. If the model hasn't change, their properties shouldn't neither! So, let's download the relations index to load it later.
 
 ```js
 const downloadJSON = (json: string, name: string) => {
@@ -108,13 +70,16 @@ const downloadJSON = (json: string, name: string) => {
 const json = indexer.serializeModelRelations(model);
 console.log(json);
 ```
-### Loading back the relations index
-What do we gain with having a pre-processed relations index if we can't use it again, right? Well, let's use the downloaded relations index 😎
+:::tip
+As `@thatopen/components` can be used in either NodeJS and Browser environments, the logic to generate a JSON file may vary!
+:::
+Now, in case you've loaded several models and want to get all the computed relations, there is also a handy method to do it.
 
 ```js
 const allRelationsJSON = indexer.serializeAllRelations();
 ```
-Great! Now try to get again the property sets and you will see everything working nice and neat. In fact, lets try to get the building storey of one element in the IFC 👇
+### Loading back the relations index
+What do we gain with having a pre-processed relations index if we can't use it again, right? Well, let's use the downloaded relations index 😎
 
 ```js
 // Lets first delete the existing model relations
@@ -125,10 +90,7 @@ const relationsIndex = indexer.getRelationsMapFromJSON(
 );
 indexer.setRelationMap(model, relationsIndex);
 ```
-:::tip
-Despite there are some relations that corresponds to only one element (e.g., an element can only have one associated building storey) the `getEntityRelations` will always return an array. That's the reason we take the first buildingStorey relation despite it will always be the only one.
-:::
-Congratulations! Now you know how to get an easy way to get the relations of your model. Keep going with more tutorials! 💪
+Great! Now try to get again the property sets and you will see everything working nice and neat. In fact, lets try to get the building storey of one element in the IFC 👇
 
 ```js
 const buildingStorey = indexer.getEntityRelations(
@@ -142,6 +104,10 @@ if (buildingStorey && buildingStorey[0]) {
   console.log(storey);
 }
 ```
+:::tip
+Despite there are some relations that corresponds to only one element (e.g., an element can only have one associated building storey) the `getEntityRelations` will always return an array. That's the reason we take the first buildingStorey relation despite it will always be the only one.
+:::
+Congratulations! Now you know how to get an easy way to get the relations of your model. Keep going with more tutorials! 💪
 
 
 

@@ -19,34 +19,12 @@ loading a simple fragment. If you haven't checked out the tutorial
 for that component yet, do it before going forward!
 
 ```js
-import Stats from "stats.js";
-import * as BUI from "@thatopen/ui";
-import * as OBC from "../..";
-
-const container = document.getElementById("container")!;
-
-const components = new OBC.Components();
-
-const worlds = components.get(OBC.Worlds);
-
-const world = worlds.create<
-  OBC.SimpleScene,
-  OBC.SimpleCamera,
-  OBC.SimpleRenderer
->();
-
-world.scene = new OBC.SimpleScene(components);
-world.renderer = new OBC.SimpleRenderer(components, container);
-world.camera = new OBC.SimpleCamera(components);
-
-components.init();
-
-world.camera.controls.setLookAt(12, 6, 8, 0, 0, -10);
-
-world.scene.setup();
-
-const grids = components.get(OBC.Grids);
-grids.create(world);
+const fragments = new OBC.FragmentsManager(components);
+const file = await fetch("https://thatopen.github.io/engine_components/resources/small.frag");
+const data = await file.arrayBuffer();
+const buffer = new Uint8Array(data);
+const model = fragments.load(buffer);
+world.scene.three.add(model);
 ```
 Now that we have our model, let's start the `FragmentHider`. You
 can use the `loadCached` method if you had used it before: it will
@@ -54,12 +32,7 @@ automatically load all the filters you created in previous sessions,
 even after closing the browser and opening it again:
 
 ```js
-const fragments = new OBC.FragmentsManager(components);
-const file = await fetch("https://thatopen.github.io/engine_components/resources/small.frag");
-const data = await file.arrayBuffer();
-const buffer = new Uint8Array(data);
-const model = fragments.load(buffer);
-world.scene.three.add(model);
+const hider = new OBC.FragmentHider(components);
 ```
 ### 📕📗📘 Setting up simple filters
 ___
@@ -69,19 +42,14 @@ filter for both classifications. Don't worry: we'll get to
 the more complex filters later!
 
 ```js
-const hider = new OBC.FragmentHider(components);
+const classifier = new OBC.Classifier(components);
+classifier.byStorey(model);
+classifier.byEntity(model);
 ```
 Next, we will create a simple object that we will use as the
 base for the floors filter. It will just be a JS object with
 the name of each storey as key and a boolean (true/false) as
 value:
-
-```js
-const classifier = new OBC.Classifier(components);
-classifier.byStorey(model);
-classifier.byEntity(model);
-```
-Now, let's do the same for categories:
 
 ```js
 const storeys: Record<string, any> = {};
@@ -90,8 +58,7 @@ for (const name of storeyNames) {
   storeys[name] = true;
 }
 ```
-Finally, we will set up a simple menu to control
-the visibility of storeys:
+Now, let's do the same for categories:
 
 ```js
 const classes: Record<string, any> = {};
@@ -100,11 +67,8 @@ for (const name of classNames) {
   classes[name] = true;
 }
 ```
-That's it! That button will open a floating menu that will allow
-you to create custom multi-filters that work even for custom
-property sets and quantity sets, including logical operators.
-Try them out in the example below, and check out more tutorials
-to bring your BIM apps to the next level!
+Finally, we will set up a simple menu to control
+the visibility of storeys:
 
 ```js
 BUI.Manager.init();
@@ -162,6 +126,11 @@ for (const name in classes) {
   categorySection.append(checkbox);
 }
 ```
+That's it! That button will open a floating menu that will allow
+you to create custom multi-filters that work even for custom
+property sets and quantity sets, including logical operators.
+Try them out in the example below, and check out more tutorials
+to bring your BIM apps to the next level!
 
 
 
