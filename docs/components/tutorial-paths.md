@@ -12,33 +12,34 @@ As you can see, we have tons of tutorials in this documentations, and we will ke
 
 The best place to start is playing the core components of our library. These are the basic building blocks you will need in all the apps you build on top of this!
 
-- 📘 [Create your first 3D app](../Tutorials/SimpleScene.mdx) 
+- 📘 [Create your first 3D app](../Tutorials/Components/Core/Worlds.mdx) 
 
-- 📘 [Interact with your scene](../Tutorials/SimpleRaycaster.mdx) 
-- 📘 [Create some clipping planes](../Tutorials/SimpleRaycaster.mdx) 
+- 📘 [Set up a grid](../Tutorials/Components/Core/Grids.mdx) 
 
-- 📘 [Use some tools](../Tutorials/ToolsComponent.mdx)
+- 📘 [Interact with your scene](../Tutorials/Components/Core/Raycasters.mdx) 
+
+- 📘 [Create some clipping planes](../Tutorials/Components/Core/Clipper.mdx) 
 :::
 
 :::danger Making great 3D apps
 
 Basics are great, but that's not enough to build professional 3D apps. Let's discover some tools that will bring our BIM software to the next level:
 
-- 📙 [Using a fancy camera](../Tutorials/OrthoPerspectiveCamera.mdx) 
+- 📙 [Use a fancy camera](../Tutorials/Components/Core/OrthoPerspectiveCamera.mdx) 
 
-- 📙 [Building scalable 3D scenes](../Tutorials/ScreenCuller.mdx)
+- 📙 [Build scalable 3D scenes](../Tutorials/Components/Core/Cullers.mdx)
 
-- 📙 [Setting up beatiful graphics](../Tutorials/PostproductionRenderer.mdx)
+- 📙 [Set up beatiful graphics](../Tutorials/Components/Front/PostproductionRenderer.mdx)
 
-- 📙 [Creating UI fast](../Tutorials/UIManager.mdx)
+- 📙 [Create a minimap](../Tutorials/Components/Core/MiniMap.mdx)
 
-- 📙 [Creating a minimap](../Tutorials/MiniMap.mdx)
+- 📙 [Cast shadows](../Tutorials/Components/Front/ShadowDropper.mdx)
 
-- 📙 [Casting shadows](../Tutorials/ShadowDropper.mdx)
+- 📙 [Create clipping edges](../Tutorials/Components/Front/EdgesClipper.mdx)
 
-- 📙 [Clipping edges](../Tutorials/EdgesClipper.mdx)
+- 📙 [Measure distances](../Tutorials/Components/Front/LengthMeasurement.mdx)
 
-- 📙 [Measuring distances](../Tutorials/LengthMeasurement.mdx)
+- 📙 [Create UIs fast](../Tutorials/UserInterface/)
 
 :::
 
@@ -46,25 +47,25 @@ Basics are great, but that's not enough to build professional 3D apps. Let's dis
 
 We are here to make BIM apps, and the library has tons of tools to make it super easy! Our library is based on [fragments](https://github.com/ThatOpen/engine_fragment), an open source geometric format that can load display big amounts of BIM data super efficiently. Let's learn how to build BIM apps with it!
 
-- 📕 [Discovering fragments](../Tutorials/FragmentManager.mdx)
+- 📕 [Load IFC files](../Tutorials/Components/Core/IfcLoader.mdx)
 
-- 📕 [Loading IFC files](../Tutorials/FragmentIfcLoader.mdx)
+- 📕 [Discover fragments](../Tutorials/Components/Core/FragmentsManager.mdx)
 
-- 📕 [Touching BIM models](../Tutorials/FragmentHighlighter.mdx)
+- 📕 [See your loaded models](../Tutorials/UserInterface/OBC/ModelsList.mdx)
 
-- 📕 [Exploding models](../Tutorials/FragmentExploder.mdx)
+- 📕 [Meet your model properties](../Tutorials/UserInterface/OBC/ElementProperties.mdx)
 
-- 📕 [Caching BIM data](../Tutorials/FragmentCacher.mdx)
+<!-- - 📕 [Touching BIM models](../Tutorials/FragmentHighlighter.mdx) -->
 
-- 📕 [Navigating floorplans](../Tutorials/FragmentPlans.mdx)
+<!-- - 📕 [Navigating floorplans](../Tutorials/FragmentPlans.mdx) -->
 
-- 📕 [Reading properties](../Tutorials/IfcPropertiesProcessor.mdx)
+- 📕 [Know your model relations](../Tutorials/Components/Core/IfcRelationsIndexer.mdx)
 
-- 📕 [Building trees](../Tutorials/FragmentTree.mdx)
+<!-- - 📕 [Building trees](../Tutorials/UserInterface/OBC/RelationsTree.mdx) -->
 
-- 📕 [Filtering geometry](../Tutorials/FragmentHider.mdx)
+- 📕 [Filter geometry](../Tutorials/Components/Core/Hider.mdx)
 
-- 📕 [Writing properties](../Tutorials/IfcPropertiesManager.mdx)
+<!-- - 📕 [Writing properties](../Tutorials/IfcPropertiesManager.mdx) -->
 
 :::
 
