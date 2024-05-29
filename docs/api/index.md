@@ -11,8 +11,6 @@ custom_edit_url: null
   |
   <a href="https://docs.thatopen.com/intro">documentation</a>
   |
-  <a href="https://platform.thatopen.com/app">demo</a>
-  |
   <a href="https://people.thatopen.com/">community</a>
   |
   <a href="https://www.npmjs.com/package/bim-fragment">npm package</a>
@@ -52,7 +50,7 @@ yarn start
 
 **Generating tutorials and api docs**
 
-This script clonse both `openbim-components` and `bim-fragments` repos into a `temp/` folder and generates the api docs.
+This script clones both `components` and `fragments` repos into a `temp/` folder and generates the api docs.
 
 ```bash
 yarn build:remote

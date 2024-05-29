@@ -63,11 +63,6 @@ const config = {
         },
         items: [
           {
-            href: "https://platform.thatopen.com/",
-            label: "Platform",
-            position: "right",
-          },
-          {
             href: "https://people.thatopen.com/",
             label: "People",
             position: "right",
