@@ -16,9 +16,10 @@ export MyComponent extends OBC.Component {
 }
 ```
 
-Always name the **base file** of your component `index.ts` and store it in **a folder with the component name**. If you need to include other supporting files, create a `src` folder in the component folder. You can call those supporting file whatever you want. This is a basic folder structure: 🗃️
+Always name the **base file** of your component `index.ts` and store it in **a folder with the component name**. If you need to include other supporting files, create a `src` folder in the component folder. You can call those supporting file whatever you want. The folder should have another `index.ts` file exporting all the elements that have to be exported from the folder. This is a basic folder structure: 🗃️
 
 - MyComponent
+    - index.ts
     - src
 
       - supporting-file-1.ts

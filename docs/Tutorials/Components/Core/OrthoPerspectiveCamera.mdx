@@ -26,10 +26,10 @@ We will start by creating a simple scene with a camera and a renderer. If you do
 
 ```js
 const container = document.getElementById("container")!;
-const components = new OBC.Components();
-const worlds = components.get(OBC.Worlds);
+let components = new OBC.Components();
+let worlds = components.get(OBC.Worlds);
 
-const world = worlds.create<
+let world = worlds.create<
   OBC.SimpleScene,
   OBC.OrthoPerspectiveCamera,
   OBC.SimpleRenderer
@@ -56,16 +56,16 @@ Easy, right? Believe it or not, this is all you need to use the OrthoPerspective
 We will start by creating a simple cube and a grid that will serve as a reference point for our camera.
 
 ```js
-const cubeGeometry = new THREE.BoxGeometry();
-const cubeMaterial = new THREE.MeshStandardMaterial({ color: "#6528D7" });
-const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+let cubeGeometry = new THREE.BoxGeometry();
+let cubeMaterial = new THREE.MeshStandardMaterial({ color: "#6528D7" });
+let cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cube.position.set(0, 0.5, 0);
 
 world.scene.three.add(cube);
 world.meshes.add(cube);
 
-const grids = components.get(OBC.Grids);
-const grid = grids.create(world);
+let grids = components.get(OBC.Grids);
+let grid = grids.create(world);
 ```
 ### 🎟️ Using camera events
 ---
@@ -161,6 +161,50 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
           label="Fit cube" 
           @click="${() => {
             world.camera.fit([cube]);
+          }}">  
+        </bim-button>
+        
+        <bim-button 
+          label="Reset scene" 
+          @click="${async () => {
+            components.dispose();
+
+            components = new OBC.Components();
+            worlds = components.get(OBC.Worlds);
+
+            world = worlds.create<
+              OBC.SimpleScene,
+              OBC.OrthoPerspectiveCamera,
+              OBC.SimpleRenderer
+            >();
+
+            world.scene = new OBC.SimpleScene(components);
+            world.renderer = new OBC.SimpleRenderer(components, container);
+            world.camera = new OBC.OrthoPerspectiveCamera(components);
+
+            world.scene.setup();
+
+            await world.camera.controls.setLookAt(3, 3, 3, 0, 0, 0);
+
+            components.init();
+
+            world.scene.three.background = null;
+
+            cubeGeometry = new THREE.BoxGeometry();
+            cubeMaterial = new THREE.MeshStandardMaterial({ color: "#6528D7" });
+            cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+            cube.position.set(0, 0.5, 0);
+
+            world.scene.three.add(cube);
+            world.meshes.add(cube);
+
+            grids = components.get(OBC.Grids);
+            grid = grids.create(world);
+
+            world.camera.projection.onChanged.add(() => {
+              const projection = world.camera.projection.current;
+              grid.fade = projection === "Perspective";
+            });
           }}">  
         </bim-button>  
 
