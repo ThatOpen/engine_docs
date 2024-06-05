@@ -30,7 +30,7 @@ The list of defined LineStyle instances.
 
 #### Defined in
 
-[packages/front/src/core/EdgesClipper/index.ts:19](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/core/EdgesClipper/index.ts#L19)
+[packages/front/src/core/EdgesClipper/index.ts:19](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/core/EdgesClipper/index.ts#L19)
 
 ## Methods
 
@@ -52,4 +52,4 @@ Updates all the lines of the ClippingEdges.
 
 #### Defined in
 
-[packages/front/src/core/EdgesClipper/index.ts:54](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/core/EdgesClipper/index.ts#L54)
+[packages/front/src/core/EdgesClipper/index.ts:54](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/core/EdgesClipper/index.ts#L54)

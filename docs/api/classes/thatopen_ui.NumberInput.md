@@ -52,7 +52,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:131](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L131)
+[packages/core/src/components/NumberInput/index.ts:131](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L131)
 
 ___
 
@@ -90,7 +90,7 @@ HasName.label
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:147](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L147)
+[packages/core/src/components/NumberInput/index.ts:147](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L147)
 
 ___
 
@@ -124,7 +124,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:253](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L253)
+[packages/core/src/components/NumberInput/index.ts:253](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L253)
 
 ___
 
@@ -158,7 +158,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:179](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L179)
+[packages/core/src/components/NumberInput/index.ts:179](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L179)
 
 ___
 
@@ -196,7 +196,7 @@ HasName.name
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:115](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L115)
+[packages/core/src/components/NumberInput/index.ts:115](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L115)
 
 ___
 
@@ -230,7 +230,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:163](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L163)
+[packages/core/src/components/NumberInput/index.ts:163](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L163)
 
 ___
 
@@ -265,7 +265,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:237](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L237)
+[packages/core/src/components/NumberInput/index.ts:237](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L237)
 
 ___
 
@@ -299,7 +299,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:299](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L299)
+[packages/core/src/components/NumberInput/index.ts:299](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L299)
 
 ___
 
@@ -333,7 +333,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:220](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L220)
+[packages/core/src/components/NumberInput/index.ts:220](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L220)
 
 ___
 
@@ -367,7 +367,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:269](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L269)
+[packages/core/src/components/NumberInput/index.ts:269](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L269)
 
 ___
 
@@ -401,7 +401,7 @@ document.body.appendChild(numberInput);
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:284](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L284)
+[packages/core/src/components/NumberInput/index.ts:284](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L284)
 
 ## Accessors
 
@@ -450,7 +450,7 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:198](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L198)
+[packages/core/src/components/NumberInput/index.ts:198](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L198)
 
 ## Methods
 
@@ -475,4 +475,4 @@ LitElement.focus
 
 #### Defined in
 
-[packages/core/src/components/NumberInput/index.ts:408](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/NumberInput/index.ts#L408)
+[packages/core/src/components/NumberInput/index.ts:408](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/NumberInput/index.ts#L408)

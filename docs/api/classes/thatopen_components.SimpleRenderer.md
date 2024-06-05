@@ -31,7 +31,7 @@ BaseRenderer.clippingPlanes
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-renderer.ts:42](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-renderer.ts#L42)
+[packages/core/src/core/Types/src/base-renderer.ts:42](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-renderer.ts#L42)
 
 ___
 
@@ -43,7 +43,7 @@ The HTML container of the THREE.js canvas where the scene is rendered.
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-renderer.ts:19](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-renderer.ts#L19)
+[packages/core/src/core/Worlds/src/simple-renderer.ts:19](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-renderer.ts#L19)
 
 ___
 
@@ -59,7 +59,7 @@ BaseRenderer.onAfterUpdate
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-renderer.ts:14](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-renderer.ts#L14)
+[packages/core/src/core/Types/src/base-renderer.ts:14](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-renderer.ts#L14)
 
 ___
 
@@ -75,7 +75,7 @@ BaseRenderer.onBeforeUpdate
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-renderer.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-renderer.ts#L17)
+[packages/core/src/core/Types/src/base-renderer.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-renderer.ts#L17)
 
 ___
 
@@ -92,7 +92,7 @@ BaseRenderer.onClippingPlanesUpdated
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-renderer.ts:28](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-renderer.ts#L28)
+[packages/core/src/core/Types/src/base-renderer.ts:28](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-renderer.ts#L28)
 
 ___
 
@@ -108,7 +108,7 @@ BaseRenderer.onDisposed
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-renderer.ts:20](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-renderer.ts#L20)
+[packages/core/src/core/Types/src/base-renderer.ts:20](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-renderer.ts#L20)
 
 ## Methods
 
@@ -128,7 +128,7 @@ BaseRenderer.dispose
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-renderer.ts:74](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-renderer.ts#L74)
+[packages/core/src/core/Worlds/src/simple-renderer.ts:74](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-renderer.ts#L74)
 
 ___
 
@@ -148,7 +148,7 @@ BaseRenderer.getSize
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-renderer.ts:88](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-renderer.ts#L88)
+[packages/core/src/core/Worlds/src/simple-renderer.ts:88](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-renderer.ts#L88)
 
 ___
 
@@ -168,7 +168,7 @@ BaseRenderer.isConfigurable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -188,7 +188,7 @@ BaseRenderer.isDisposeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -208,7 +208,7 @@ BaseRenderer.isHideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -228,7 +228,7 @@ BaseRenderer.isResizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -248,7 +248,7 @@ BaseRenderer.isUpdateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)
 
 ___
 
@@ -274,7 +274,7 @@ BaseRenderer.resize
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-renderer.ts:96](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-renderer.ts#L96)
+[packages/core/src/core/Worlds/src/simple-renderer.ts:96](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-renderer.ts#L96)
 
 ___
 
@@ -304,7 +304,7 @@ BaseRenderer.setPlane
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-renderer.ts:57](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-renderer.ts#L57)
+[packages/core/src/core/Types/src/base-renderer.ts:57](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-renderer.ts#L57)
 
 ___
 
@@ -324,7 +324,7 @@ BaseRenderer.update
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-renderer.ts:61](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-renderer.ts#L61)
+[packages/core/src/core/Worlds/src/simple-renderer.ts:61](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-renderer.ts#L61)
 
 ___
 
@@ -345,4 +345,4 @@ BaseRenderer.updateClippingPlanes
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-renderer.ts#L48)
+[packages/core/src/core/Types/src/base-renderer.ts:48](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-renderer.ts#L48)

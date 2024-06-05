@@ -33,7 +33,7 @@ The minimum distance to force the dimension cursor to a vertex.
 
 #### Defined in
 
-[packages/front/src/measurement/LengthMeasurement/index.ts:24](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/measurement/LengthMeasurement/index.ts#L24)
+[packages/front/src/measurement/LengthMeasurement/index.ts:24](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/measurement/LengthMeasurement/index.ts#L24)
 
 ## Methods
 
@@ -53,7 +53,7 @@ OBC.Createable.cancelCreation
 
 #### Defined in
 
-[packages/front/src/measurement/LengthMeasurement/index.ts:178](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/measurement/LengthMeasurement/index.ts#L178)
+[packages/front/src/measurement/LengthMeasurement/index.ts:178](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/measurement/LengthMeasurement/index.ts#L178)
 
 ___
 
@@ -79,7 +79,7 @@ OBC.Createable.create
 
 #### Defined in
 
-[packages/front/src/measurement/LengthMeasurement/index.ts:119](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/measurement/LengthMeasurement/index.ts#L119)
+[packages/front/src/measurement/LengthMeasurement/index.ts:119](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/measurement/LengthMeasurement/index.ts#L119)
 
 ___
 
@@ -99,7 +99,7 @@ OBC.Createable.delete
 
 #### Defined in
 
-[packages/front/src/measurement/LengthMeasurement/index.ts:138](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/measurement/LengthMeasurement/index.ts#L138)
+[packages/front/src/measurement/LengthMeasurement/index.ts:138](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/measurement/LengthMeasurement/index.ts#L138)
 
 ___
 
@@ -115,7 +115,7 @@ Deletes all the dimensions that have been previously created.
 
 #### Defined in
 
-[packages/front/src/measurement/LengthMeasurement/index.ts:170](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/measurement/LengthMeasurement/index.ts#L170)
+[packages/front/src/measurement/LengthMeasurement/index.ts:170](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/measurement/LengthMeasurement/index.ts#L170)
 
 ___
 
@@ -135,4 +135,4 @@ OBC.Disposable.dispose
 
 #### Defined in
 
-[packages/front/src/measurement/LengthMeasurement/index.ts:93](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/measurement/LengthMeasurement/index.ts#L93)
+[packages/front/src/measurement/LengthMeasurement/index.ts:93](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/measurement/LengthMeasurement/index.ts#L93)

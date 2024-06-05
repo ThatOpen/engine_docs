@@ -40,7 +40,7 @@ before starting to create.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:106](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L106)
+[packages/core/src/core/Types/src/interfaces.ts:106](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L106)
 
 ___
 
@@ -66,7 +66,7 @@ Creates a new instance of an element (e.g. a new Dimension).
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:94](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L94)
+[packages/core/src/core/Types/src/interfaces.ts:94](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L94)
 
 ___
 
@@ -92,7 +92,7 @@ Deletes an existing instance of an element (e.g. a Dimension).
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:109](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L109)
+[packages/core/src/core/Types/src/interfaces.ts:109](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L109)
 
 ___
 
@@ -119,4 +119,4 @@ instance of whatever the component creates.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:100](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L100)
+[packages/core/src/core/Types/src/interfaces.ts:100](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L100)

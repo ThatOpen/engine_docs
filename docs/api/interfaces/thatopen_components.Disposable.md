@@ -43,7 +43,7 @@ Destroys the object from memory to prevent a
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L17)
+[packages/core/src/core/Types/src/interfaces.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L17)
 
 ___
 
@@ -55,4 +55,4 @@ Fired after the tool has been [()](thatopen_components.Disposable.md#dispose)
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:20](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L20)
+[packages/core/src/core/Types/src/interfaces.ts:20](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L20)

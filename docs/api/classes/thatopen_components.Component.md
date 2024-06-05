@@ -47,7 +47,7 @@ will not be updated automatically each frame.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/component.ts:19](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/component.ts#L19)
+[packages/core/src/core/Types/src/component.ts:19](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/component.ts#L19)
 
 ## Methods
 
@@ -67,7 +67,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -87,7 +87,7 @@ this is Disposable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -107,7 +107,7 @@ this is Hideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -127,7 +127,7 @@ this is Resizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -147,4 +147,4 @@ this is Updateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)

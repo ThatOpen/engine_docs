@@ -49,7 +49,7 @@ dropdown.icon = 'exampleIcon';
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:82](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L82)
+[packages/core/src/components/Dropdown/index.ts:82](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L82)
 
 ___
 
@@ -84,7 +84,7 @@ HasName.label
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:95](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L95)
+[packages/core/src/components/Dropdown/index.ts:95](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L95)
 
 ___
 
@@ -115,7 +115,7 @@ dropdown.multiple = true;
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:107](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L107)
+[packages/core/src/components/Dropdown/index.ts:107](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L107)
 
 ___
 
@@ -150,7 +150,7 @@ HasName.name
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:69](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L69)
+[packages/core/src/components/Dropdown/index.ts:69](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L69)
 
 ___
 
@@ -181,7 +181,7 @@ dropdown.required = true;
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:119](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L119)
+[packages/core/src/components/Dropdown/index.ts:119](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L119)
 
 ___
 
@@ -212,7 +212,7 @@ dropdown.vertical = true;
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:131](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L131)
+[packages/core/src/components/Dropdown/index.ts:131](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L131)
 
 ## Accessors
 
@@ -245,7 +245,7 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:170](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L170)
+[packages/core/src/components/Dropdown/index.ts:170](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L170)
 
 ___
 
@@ -286,7 +286,7 @@ dropdown.visible = true;
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:150](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L150)
+[packages/core/src/components/Dropdown/index.ts:150](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L150)
 
 ## Methods
 
@@ -322,7 +322,7 @@ An array containing the created UI component element and a function to update it
 
 #### Defined in
 
-[packages/core/src/core/Component/index.ts:92](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/core/Component/index.ts#L92)
+[packages/core/src/core/Component/index.ts:92](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/core/Component/index.ts#L92)
 
 ▸ **create**<`T`\>(`template`): `T`
 
@@ -352,7 +352,7 @@ The created UI component element.
 
 #### Defined in
 
-[packages/core/src/core/Component/index.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/core/Component/index.ts#L106)
+[packages/core/src/core/Component/index.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/core/Component/index.ts#L106)
 
 ## Events
 
@@ -379,4 +379,4 @@ HasValue.onValueChange
 
 #### Defined in
 
-[packages/core/src/components/Dropdown/index.ts:209](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Dropdown/index.ts#L209)
+[packages/core/src/components/Dropdown/index.ts:209](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Dropdown/index.ts#L209)

@@ -29,7 +29,7 @@ IfcFragmentSettings.coordinate
 
 #### Defined in
 
-[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:15](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L15)
+[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:15](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L15)
 
 ___
 
@@ -45,7 +45,7 @@ IfcFragmentSettings.excludedCategories
 
 #### Defined in
 
-[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:29](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L29)
+[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:29](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L29)
 
 ___
 
@@ -61,7 +61,7 @@ IfcFragmentSettings.includeProperties
 
 #### Defined in
 
-[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:6](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L6)
+[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:6](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L6)
 
 ___
 
@@ -78,7 +78,7 @@ IfcFragmentSettings.optionalCategories
 
 #### Defined in
 
-[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:12](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L12)
+[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:12](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L12)
 
 ___
 
@@ -94,7 +94,7 @@ IfcFragmentSettings.saveLocations
 
 #### Defined in
 
-[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:32](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L32)
+[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:32](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L32)
 
 ___
 
@@ -118,7 +118,7 @@ IfcFragmentSettings.wasm
 
 #### Defined in
 
-[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:18](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L18)
+[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:18](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L18)
 
 ___
 
@@ -134,4 +134,4 @@ IfcFragmentSettings.webIfc
 
 #### Defined in
 
-[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:35](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L35)
+[packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts:35](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/IfcLoader/src/ifc-fragment-settings.ts#L35)

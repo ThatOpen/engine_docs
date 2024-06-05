@@ -28,7 +28,7 @@ like in many 3D and CAD softwares.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts:11](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts#L11)
+[packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts:11](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts#L11)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts:14](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts#L14)
+[packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts:14](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts#L14)
 
 ## Methods
 
@@ -70,4 +70,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts:21](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts#L21)
+[packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts:21](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/orbit-mode.ts#L21)

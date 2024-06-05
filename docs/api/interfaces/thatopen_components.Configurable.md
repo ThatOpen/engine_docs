@@ -30,7 +30,7 @@ to make changes to this object, use [()](thatopen_components.Configurable.md#set
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:128](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L128)
+[packages/core/src/core/Types/src/interfaces.ts:128](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L128)
 
 ___
 
@@ -42,7 +42,7 @@ Wether this components has been already configured.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:117](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L117)
+[packages/core/src/core/Types/src/interfaces.ts:117](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L117)
 
 ___
 
@@ -54,7 +54,7 @@ Fired after successfully calling [()](thatopen_components.Configurable.md#setup)
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:123](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L123)
+[packages/core/src/core/Types/src/interfaces.ts:123](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L123)
 
 ___
 
@@ -80,4 +80,4 @@ Use the provided configuration to setup the tool.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:120](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L120)
+[packages/core/src/core/Types/src/interfaces.ts:120](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L120)

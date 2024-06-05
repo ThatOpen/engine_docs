@@ -37,7 +37,7 @@ Createable.onAfterCreate
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:31](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L31)
+[packages/core/src/core/Clipper/index.ts:31](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L31)
 
 ___
 
@@ -49,7 +49,7 @@ Createable.onAfterDelete
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L34)
+[packages/core/src/core/Clipper/index.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L34)
 
 ___
 
@@ -61,7 +61,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:40](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L40)
+[packages/core/src/core/Clipper/index.ts:40](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L40)
 
 ___
 
@@ -73,7 +73,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:37](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L37)
+[packages/core/src/core/Clipper/index.ts:37](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L37)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:51](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L51)
+[packages/core/src/core/Clipper/index.ts:51](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L51)
 
 ___
 
@@ -104,7 +104,7 @@ slope for draining purposes.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:59](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L59)
+[packages/core/src/core/Clipper/index.ts:59](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L59)
 
 ___
 
@@ -118,7 +118,7 @@ has to be `true` for this to apply.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:66](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L66)
+[packages/core/src/core/Clipper/index.ts:66](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L66)
 
 ## Accessors
 
@@ -138,7 +138,7 @@ Component.enabled
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:85](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L85)
+[packages/core/src/core/Clipper/index.ts:85](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L85)
 
 • `set` **enabled**(`state`): `void`
 
@@ -160,7 +160,7 @@ Component.enabled
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:90](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L90)
+[packages/core/src/core/Clipper/index.ts:90](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L90)
 
 ___
 
@@ -176,7 +176,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:112](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L112)
+[packages/core/src/core/Clipper/index.ts:112](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L112)
 
 • `set` **material**(`material`): `void`
 
@@ -194,7 +194,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:117](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L117)
+[packages/core/src/core/Clipper/index.ts:117](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L117)
 
 ___
 
@@ -210,7 +210,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:125](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L125)
+[packages/core/src/core/Clipper/index.ts:125](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L125)
 
 • `set` **size**(`size`): `void`
 
@@ -228,7 +228,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:130](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L130)
+[packages/core/src/core/Clipper/index.ts:130](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L130)
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:99](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L99)
+[packages/core/src/core/Clipper/index.ts:99](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L99)
 
 • `set` **visible**(`state`): `void`
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:104](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L104)
+[packages/core/src/core/Clipper/index.ts:104](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L104)
 
 ## Methods
 
@@ -296,7 +296,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:163](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L163)
+[packages/core/src/core/Clipper/index.ts:163](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L163)
 
 ___
 
@@ -321,7 +321,7 @@ without the need of the mouse.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:184](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L184)
+[packages/core/src/core/Clipper/index.ts:184](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L184)
 
 ___
 
@@ -348,7 +348,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:201](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L201)
+[packages/core/src/core/Clipper/index.ts:201](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L201)
 
 ___
 
@@ -364,7 +364,7 @@ Deletes all the existing clipping planes.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:213](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L213)
+[packages/core/src/core/Clipper/index.ts:213](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L213)
 
 ___
 
@@ -384,7 +384,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/index.ts:143](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/index.ts#L143)
+[packages/core/src/core/Clipper/index.ts:143](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/index.ts#L143)
 
 ___
 
@@ -404,7 +404,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -424,7 +424,7 @@ this is Disposable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -444,7 +444,7 @@ this is Hideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -464,7 +464,7 @@ this is Resizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -484,4 +484,4 @@ this is Updateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)

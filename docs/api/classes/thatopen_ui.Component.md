@@ -47,7 +47,7 @@ An array containing the created UI component element and a function to update it
 
 #### Defined in
 
-[packages/core/src/core/Component/index.ts:92](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/core/Component/index.ts#L92)
+[packages/core/src/core/Component/index.ts:92](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/core/Component/index.ts#L92)
 
 ▸ **create**<`T`\>(`template`): `T`
 
@@ -73,4 +73,4 @@ The created UI component element.
 
 #### Defined in
 
-[packages/core/src/core/Component/index.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/core/Component/index.ts#L106)
+[packages/core/src/core/Component/index.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/core/Component/index.ts#L106)

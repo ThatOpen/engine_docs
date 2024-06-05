@@ -51,4 +51,4 @@ toolbarSection.labelHidden = true;
 
 #### Defined in
 
-[packages/core/src/components/Toolbar/src/Section.ts:82](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Toolbar/src/Section.ts#L82)
+[packages/core/src/components/Toolbar/src/Section.ts:82](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Toolbar/src/Section.ts#L82)

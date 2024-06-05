@@ -34,7 +34,7 @@ It is designed to process models properties by indexing their IFC entities' rela
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:24](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L24)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:24](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L24)
 
 ___
 
@@ -51,7 +51,7 @@ of entity relationships within a model.
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:70](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L70)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:70](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L70)
 
 ## Methods
 
@@ -73,7 +73,7 @@ references that could prevent garbage collection.
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:348](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L348)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:348](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L348)
 
 ___
 
@@ -102,7 +102,7 @@ or the specified relation name is not indexed.
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:235](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L235)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:235](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L235)
 
 ___
 
@@ -132,7 +132,7 @@ is an array of express IDs (as numbers) of entities related through that relatio
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:329](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L329)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:329](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L329)
 
 ___
 
@@ -152,7 +152,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -172,7 +172,7 @@ this is Disposable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -192,7 +192,7 @@ this is Hideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -212,7 +212,7 @@ this is Resizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -232,7 +232,7 @@ this is Updateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)
 
 ___
 
@@ -269,7 +269,7 @@ An error if the model does not have properties loaded.
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:119](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L119)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:119](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L119)
 
 ___
 
@@ -295,7 +295,7 @@ A promise that resolves to the relations map for the processed model.
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:172](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L172)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:172](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L172)
 
 ___
 
@@ -318,7 +318,7 @@ A JSON string representing the serialized relations of all models processed by t
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:298](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L298)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:298](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L298)
 
 ___
 
@@ -347,7 +347,7 @@ If the model has no indexed relations, `null` is returned.
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:281](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L281)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:281](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L281)
 
 ___
 
@@ -374,7 +374,7 @@ A JSON string representing the serialized relations of the given relation map.
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:259](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L259)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:259](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L259)
 
 ___
 
@@ -401,4 +401,4 @@ onRelationsIndexed - Triggers an event with the model's UUID and the added relat
 
 #### Defined in
 
-[packages/core/src/ifc/IfcRelationsIndexer/index.ts:95](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L95)
+[packages/core/src/ifc/IfcRelationsIndexer/index.ts:95](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/ifc/IfcRelationsIndexer/index.ts#L95)

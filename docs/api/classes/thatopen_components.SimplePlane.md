@@ -28,7 +28,7 @@ Each of the planes created by SimpleClipper.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L17)
+[packages/core/src/core/Clipper/src/simple-plane.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L17)
 
 ___
 
@@ -40,7 +40,7 @@ Event that fires when the user stops dragging a clipping plane.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:14](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L14)
+[packages/core/src/core/Clipper/src/simple-plane.ts:14](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L14)
 
 ___
 
@@ -52,7 +52,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:11](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L11)
+[packages/core/src/core/Clipper/src/simple-plane.ts:11](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L11)
 
 ## Accessors
 
@@ -74,7 +74,7 @@ Event that fires when the user starts dragging a clipping plane.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:52](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L52)
+[packages/core/src/core/Clipper/src/simple-plane.ts:52](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L52)
 
 ___
 
@@ -90,7 +90,7 @@ The meshes used for raycasting
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:74](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L74)
+[packages/core/src/core/Clipper/src/simple-plane.ts:74](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L74)
 
 ___
 
@@ -106,7 +106,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:79](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L79)
+[packages/core/src/core/Clipper/src/simple-plane.ts:79](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L79)
 
 • `set` **planeMaterial**(`material`): `void`
 
@@ -124,7 +124,7 @@ The material of the clipping plane representation.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:84](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L84)
+[packages/core/src/core/Clipper/src/simple-plane.ts:84](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L84)
 
 ___
 
@@ -140,7 +140,7 @@ The size of the clipping plane representation.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:89](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L89)
+[packages/core/src/core/Clipper/src/simple-plane.ts:89](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L89)
 
 • `set` **size**(`size`): `void`
 
@@ -158,7 +158,7 @@ Sets the size of the clipping plane representation.
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:94](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L94)
+[packages/core/src/core/Clipper/src/simple-plane.ts:94](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L94)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:61](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L61)
+[packages/core/src/core/Clipper/src/simple-plane.ts:61](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L61)
 
 • `set` **visible**(`state`): `void`
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:66](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L66)
+[packages/core/src/core/Clipper/src/simple-plane.ts:66](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L66)
 
 ## Methods
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:155](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L155)
+[packages/core/src/core/Clipper/src/simple-plane.ts:155](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L155)
 
 ___
 
@@ -236,4 +236,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Clipper/src/simple-plane.ts:146](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Clipper/src/simple-plane.ts#L146)
+[packages/core/src/core/Clipper/src/simple-plane.ts:146](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Clipper/src/simple-plane.ts#L146)

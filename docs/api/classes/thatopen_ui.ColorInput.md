@@ -49,7 +49,7 @@ colorInput.color = '#ff0000';
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:148](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L148)
+[packages/core/src/components/ColorInput/index.ts:148](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L148)
 
 ___
 
@@ -80,7 +80,7 @@ colorInput.icon = 'palette';
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:111](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L111)
+[packages/core/src/components/ColorInput/index.ts:111](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L111)
 
 ___
 
@@ -115,7 +115,7 @@ HasName.label
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:98](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L98)
+[packages/core/src/components/ColorInput/index.ts:98](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L98)
 
 ___
 
@@ -150,7 +150,7 @@ HasName.name
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:85](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L85)
+[packages/core/src/components/ColorInput/index.ts:85](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L85)
 
 ___
 
@@ -181,7 +181,7 @@ colorInput.opacity = 0.5;
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:136](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L136)
+[packages/core/src/components/ColorInput/index.ts:136](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L136)
 
 ___
 
@@ -212,7 +212,7 @@ colorInput.vertical = true;
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:123](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L123)
+[packages/core/src/components/ColorInput/index.ts:123](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L123)
 
 ## Accessors
 
@@ -247,7 +247,7 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:162](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L162)
+[packages/core/src/components/ColorInput/index.ts:162](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L162)
 
 ## Methods
 
@@ -268,4 +268,4 @@ LitElement.focus
 
 #### Defined in
 
-[packages/core/src/components/ColorInput/index.ts:208](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/ColorInput/index.ts#L208)
+[packages/core/src/components/ColorInput/index.ts:208](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/ColorInput/index.ts#L208)

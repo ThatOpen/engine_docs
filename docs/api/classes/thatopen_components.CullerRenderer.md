@@ -25,7 +25,7 @@ A base renderer to determine visibility on screen
 
 #### Defined in
 
-[packages/core/src/core/Cullers/src/culler-renderer.ts:28](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Cullers/src/culler-renderer.ts#L28)
+[packages/core/src/core/Cullers/src/culler-renderer.ts:28](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Cullers/src/culler-renderer.ts#L28)
 
 ___
 
@@ -38,7 +38,7 @@ You can bind this to the camera movement, to a certain interval, etc.
 
 #### Defined in
 
-[packages/core/src/core/Cullers/src/culler-renderer.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Cullers/src/culler-renderer.ts#L34)
+[packages/core/src/core/Cullers/src/culler-renderer.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Cullers/src/culler-renderer.ts#L34)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Cullers/src/culler-renderer.ts:18](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Cullers/src/culler-renderer.ts#L18)
+[packages/core/src/core/Cullers/src/culler-renderer.ts:18](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Cullers/src/culler-renderer.ts#L18)
 
 ___
 
@@ -64,7 +64,7 @@ just before but not anymore.
 
 #### Defined in
 
-[packages/core/src/core/Cullers/src/culler-renderer.ts:25](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Cullers/src/culler-renderer.ts#L25)
+[packages/core/src/core/Cullers/src/culler-renderer.ts:25](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Cullers/src/culler-renderer.ts#L25)
 
 ___
 
@@ -77,7 +77,7 @@ for debugging purposes.
 
 #### Defined in
 
-[packages/core/src/core/Cullers/src/culler-renderer.ts:40](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Cullers/src/culler-renderer.ts#L40)
+[packages/core/src/core/Cullers/src/culler-renderer.ts:40](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Cullers/src/culler-renderer.ts#L40)
 
 ## Methods
 
@@ -93,7 +93,7 @@ for debugging purposes.
 
 #### Defined in
 
-[packages/core/src/core/Cullers/src/culler-renderer.ts:116](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Cullers/src/culler-renderer.ts#L116)
+[packages/core/src/core/Cullers/src/culler-renderer.ts:116](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Cullers/src/culler-renderer.ts#L116)
 
 ___
 
@@ -116,4 +116,4 @@ better to call needsUpdate, but you can also call this to force it.
 
 #### Defined in
 
-[packages/core/src/core/Cullers/src/culler-renderer.ts:135](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Cullers/src/culler-renderer.ts#L135)
+[packages/core/src/core/Cullers/src/culler-renderer.ts:135](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Cullers/src/culler-renderer.ts#L135)

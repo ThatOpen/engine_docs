@@ -39,7 +39,7 @@ what features it offers.
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:23](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L23)
+[packages/core/src/core/Worlds/src/simple-camera.ts:23](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L23)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:20](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L20)
+[packages/core/src/core/Worlds/src/simple-camera.ts:20](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L20)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:28](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L28)
+[packages/core/src/core/Worlds/src/simple-camera.ts:28](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L28)
 
 ## Accessors
 
@@ -94,7 +94,7 @@ BaseCamera.controls
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:40](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L40)
+[packages/core/src/core/Worlds/src/simple-camera.ts:40](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L40)
 
 ___
 
@@ -114,7 +114,7 @@ BaseCamera.enabled
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:52](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L52)
+[packages/core/src/core/Worlds/src/simple-camera.ts:52](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L52)
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -136,7 +136,7 @@ BaseCamera.enabled
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:60](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L60)
+[packages/core/src/core/Worlds/src/simple-camera.ts:60](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L60)
 
 ## Methods
 
@@ -156,7 +156,7 @@ BaseCamera.enabled
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:90](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L90)
+[packages/core/src/core/Worlds/src/simple-camera.ts:90](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L90)
 
 ___
 
@@ -176,7 +176,7 @@ BaseCamera.hasCameraControls
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-camera.ts:13](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-camera.ts#L13)
+[packages/core/src/core/Types/src/base-camera.ts:13](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-camera.ts#L13)
 
 ___
 
@@ -196,7 +196,7 @@ BaseCamera.isConfigurable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -216,7 +216,7 @@ BaseCamera.isDisposeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -236,7 +236,7 @@ BaseCamera.isHideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -256,7 +256,7 @@ BaseCamera.isResizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -276,7 +276,7 @@ BaseCamera.isUpdateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:105](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L105)
+[packages/core/src/core/Worlds/src/simple-camera.ts:104](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L104)
 
 ___
 
@@ -319,4 +319,4 @@ Components.renderer.
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:117](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L117)
+[packages/core/src/core/Worlds/src/simple-camera.ts:116](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L116)

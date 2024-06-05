@@ -44,7 +44,7 @@ undefined
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:133](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L133)
+[packages/core/src/components/TextInput/index.ts:133](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L133)
 
 ___
 
@@ -63,7 +63,7 @@ This property is used to display an icon next to the input field.
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:62](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L62)
+[packages/core/src/components/TextInput/index.ts:62](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L62)
 
 ___
 
@@ -86,7 +86,7 @@ HasName.label
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:72](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L72)
+[packages/core/src/components/TextInput/index.ts:72](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L72)
 
 ___
 
@@ -109,7 +109,7 @@ HasName.name
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:82](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L82)
+[packages/core/src/components/TextInput/index.ts:82](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L82)
 
 ___
 
@@ -129,7 +129,7 @@ The placeholder text is displayed when the input field is empty and loses focus.
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:93](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L93)
+[packages/core/src/components/TextInput/index.ts:93](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L93)
 
 ___
 
@@ -156,7 +156,7 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:107](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L107)
+[packages/core/src/components/TextInput/index.ts:107](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L107)
 
 ___
 
@@ -182,7 +182,7 @@ false
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:120](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L120)
+[packages/core/src/components/TextInput/index.ts:120](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L120)
 
 ## Accessors
 
@@ -210,7 +210,7 @@ console.log(textInput.query);
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:172](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L172)
+[packages/core/src/components/TextInput/index.ts:172](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L172)
 
 ___
 
@@ -242,4 +242,4 @@ textInput.type = "email";
 
 #### Defined in
 
-[packages/core/src/components/TextInput/index.ts:148](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/TextInput/index.ts#L148)
+[packages/core/src/components/TextInput/index.ts:148](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/TextInput/index.ts#L148)

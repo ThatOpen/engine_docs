@@ -19,7 +19,7 @@ Match Ortho zoom with Perspective distance when changing projection mode
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L27)
+[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L27)
 
 ___
 
@@ -31,7 +31,7 @@ Event that fires when the [CameraProjection](../modules/thatopen_components.md#c
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:14](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L14)
+[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:14](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L14)
 
 ## Methods
 
@@ -53,7 +53,7 @@ Sets the [CameraProjection](../modules/thatopen_components.md#cameraprojection) 
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:40](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L40)
+[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:40](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L40)
 
 ___
 
@@ -70,4 +70,4 @@ and vice versa.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:54](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L54)
+[packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts:54](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/projections.ts#L54)

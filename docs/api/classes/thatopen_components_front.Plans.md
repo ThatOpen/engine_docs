@@ -29,7 +29,7 @@ The floorplan that is currently selected.
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:25](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L25)
+[packages/front/src/fragments/Plans/index.ts:25](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L25)
 
 ___
 
@@ -41,7 +41,7 @@ The offset of the 2D camera to the floor plan elevation.
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:31](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L31)
+[packages/front/src/fragments/Plans/index.ts:31](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L31)
 
 ___
 
@@ -53,7 +53,7 @@ The offset from the clipping planes to their respective floor plan elevation.
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:28](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L28)
+[packages/front/src/fragments/Plans/index.ts:28](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L28)
 
 ___
 
@@ -69,7 +69,7 @@ OBC.Disposable.onDisposed
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:16](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L16)
+[packages/front/src/fragments/Plans/index.ts:16](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L16)
 
 ## Methods
 
@@ -91,7 +91,7 @@ Creates a new floor plan in the navigator.
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:97](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L97)
+[packages/front/src/fragments/Plans/index.ts:97](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L97)
 
 ___
 
@@ -111,7 +111,7 @@ OBC.Disposable.dispose
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:48](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L48)
+[packages/front/src/fragments/Plans/index.ts:48](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L48)
 
 ___
 
@@ -133,7 +133,7 @@ Deactivate navigator and go back to the previous view.
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:141](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L141)
+[packages/front/src/fragments/Plans/index.ts:141](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L141)
 
 ___
 
@@ -156,4 +156,4 @@ Make the navigator go to the specified floor plan.
 
 #### Defined in
 
-[packages/front/src/fragments/Plans/index.ts:119](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/fragments/Plans/index.ts#L119)
+[packages/front/src/fragments/Plans/index.ts:119](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/fragments/Plans/index.ts#L119)

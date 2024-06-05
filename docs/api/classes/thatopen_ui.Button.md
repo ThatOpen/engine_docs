@@ -45,7 +45,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:162](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L162)
+[packages/core/src/components/Button/index.ts:162](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L162)
 
 ___
 
@@ -77,7 +77,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:173](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L173)
+[packages/core/src/components/Button/index.ts:173](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L173)
 
 ___
 
@@ -108,7 +108,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:184](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L184)
+[packages/core/src/components/Button/index.ts:184](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L184)
 
 ___
 
@@ -139,7 +139,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:140](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L140)
+[packages/core/src/components/Button/index.ts:140](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L140)
 
 ___
 
@@ -171,7 +171,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:151](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L151)
+[packages/core/src/components/Button/index.ts:151](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L151)
 
 ___
 
@@ -203,7 +203,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:242](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L242)
+[packages/core/src/components/Button/index.ts:242](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L242)
 
 ___
 
@@ -235,7 +235,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:207](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L207)
+[packages/core/src/components/Button/index.ts:207](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L207)
 
 ___
 
@@ -267,7 +267,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:230](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L230)
+[packages/core/src/components/Button/index.ts:230](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L230)
 
 ___
 
@@ -299,7 +299,7 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:218](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L218)
+[packages/core/src/components/Button/index.ts:218](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L218)
 
 ___
 
@@ -331,4 +331,4 @@ const button = document.createElement('bim-button');
 
 #### Defined in
 
-[packages/core/src/components/Button/index.ts:195](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Button/index.ts#L195)
+[packages/core/src/components/Button/index.ts:195](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Button/index.ts#L195)

@@ -31,7 +31,7 @@ The number of rows to display in the toolbar group.
 
 #### Defined in
 
-[packages/core/src/components/Toolbar/src/Group.ts:25](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Toolbar/src/Group.ts#L25)
+[packages/core/src/components/Toolbar/src/Group.ts:25](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Toolbar/src/Group.ts#L25)
 
 ## Accessors
 
@@ -55,4 +55,4 @@ When vertical is false, the toolbar group will display its children horizontally
 
 #### Defined in
 
-[packages/core/src/components/Toolbar/src/Group.ts:35](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Toolbar/src/Group.ts#L35)
+[packages/core/src/components/Toolbar/src/Group.ts:35](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Toolbar/src/Group.ts#L35)

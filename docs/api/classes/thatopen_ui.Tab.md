@@ -25,7 +25,7 @@ The icon of the tab. This property is optional and can be used to display an ico
 
 #### Defined in
 
-[packages/core/src/components/Tabs/src/Tab.ts:38](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Tabs/src/Tab.ts#L38)
+[packages/core/src/components/Tabs/src/Tab.ts:38](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Tabs/src/Tab.ts#L38)
 
 ___
 
@@ -37,7 +37,7 @@ The label of the tab. This property is optional and can be used to display a cus
 
 #### Defined in
 
-[packages/core/src/components/Tabs/src/Tab.ts:32](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Tabs/src/Tab.ts#L32)
+[packages/core/src/components/Tabs/src/Tab.ts:32](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Tabs/src/Tab.ts#L32)
 
 ___
 
@@ -49,7 +49,7 @@ The name of the tab. If not provided, a default name will be assigned based on i
 
 #### Defined in
 
-[packages/core/src/components/Tabs/src/Tab.ts:26](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Tabs/src/Tab.ts#L26)
+[packages/core/src/components/Tabs/src/Tab.ts:26](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Tabs/src/Tab.ts#L26)
 
 ## Accessors
 
@@ -86,4 +86,4 @@ LitElement.hidden
 
 #### Defined in
 
-[packages/core/src/components/Tabs/src/Tab.ts:55](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Tabs/src/Tab.ts#L55)
+[packages/core/src/components/Tabs/src/Tab.ts:55](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Tabs/src/Tab.ts#L55)

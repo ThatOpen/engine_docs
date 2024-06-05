@@ -2,23 +2,67 @@
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/core/EdgesClipper/example.ts).
 :::
 
-### ⭕️ Aesthetic Clipping Edges
+### ✂️ Fancy clippings
 ---
-You can build whole BIM application using Components.💪
-One such essential component is **Edges Clipper** which helps you to add Clipping Planes along
-with beautiful yet functional edges.🖍️
-:::info Advanced but Simple to use
-⚡️ **Simple Clipper** and **Edges Clipper** are similar, but `Edges Clipper` offers more advanced options.
-If you want to learn more about **[Simple Clipper](SimpleClipper.mdx)**, visit the tutorial.
+Clipping planes are very common in BIM applications. They are used for floor plans, sections, looking inside a 3D model, etc. But simple clipping planes are not enough: they don't have fills or outlines, which are common in BIM software. The Edges Clipper can do them, and in this tutorial you'll learn how to do it.
+:::tip Fills and outlines?
+Traditionally, architects created plans with a certain style. For instance, thick lines with solid fill for cutted walls and structure, thin lines for cutted doors and windows, etc. These same conventions are still common in BIM software.
 :::
-In this tutorial, we'll use the `EdgesClipper` to slice two distinct Cubes that each have a unique set of edge effects.
-With the help of this tutorial, you can quickly add **Clipping Planes** and **Configurable Edges** to your project.🚀
-:::tip First, let's set up a simple scene!
-👀 If you haven't started there, check out [that tutorial first](SimpleScene.mdx)!
-:::
+In this tutorial, we will import:
+- `three` to create some 3D items.
+- `@thatopen/components` to set up the barebone of our app.
+- `@thatopen/ui` to add some simple and cool UI menus.
+- `@thatopen/components-front` to use some frontend-oriented components.
+- `Stats.js` (optional) to measure the performance of our app.
+
+```js
+import Stats from "stats.js";
+import * as BUI from "@thatopen/ui";
+import * as THREE from "three";
+import * as OBC from "@thatopen/components";
+import * as OBCF from "@thatopen/components-front";
+```
+### 🌎 Setting up a simple scene
+---
+We will start by creating a simple scene with a camera and a renderer. If you don't know how to set up a scene, you can check the Worlds tutorial.
+
+```js
+const container = document.getElementById("container")!;
+const components = new OBC.Components();
+const worlds = components.get(OBC.Worlds);
+
+const world = worlds.create<
+  OBC.SimpleScene,
+  OBC.SimpleCamera,
+  OBCF.PostproductionRenderer
+>();
+
+world.scene = new OBC.SimpleScene(components);
+world.renderer = new OBCF.PostproductionRenderer(components, container);
+world.camera = new OBC.SimpleCamera(components);
+
+world.renderer.postproduction.enabled = true;
+world.renderer.postproduction.customEffects.outlineEnabled = true;
+
+components.init();
+
+world.camera.controls.setLookAt(12, 6, 8, 0, 0, -10);
+
+world.scene.setup();
+
+const grids = components.get(OBC.Grids);
+grids.config.color.setHex(0x666666);
+const grid = grids.create(world);
+world.renderer.postproduction.customEffects.excludedMeshes.push(grid.three);
+```
+We'll make the background of the scene transparent so that it looks good in our docs page, but you don't have to do that in your app!
+
+```js
+world.scene.three.background = null;
+```
 ### 🧩 Adding Objects to Scene
 ---
-Let's start by adding two Cubes, we will create a [Box Geometry](https://threejs.org/docs/index.html?q=box#api/en/geometries/BoxGeometry) and use it for both Meshes.
+Now, let's start by adding two Cubes, we will create a [Box Geometry](https://threejs.org/docs/index.html?q=box#api/en/geometries/BoxGeometry) and use it for both Meshes.
 
 ```js
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3);
@@ -34,15 +78,12 @@ cube2.position.set(2, 1.5, 0);
 world.scene.three.add(cube2);
 world.meshes.add(cube2);
 ```
-:::info Storing Components
-🧰 After adding cubes to the scene, we must also add them to `components.meshes`,
-which is just an array of all the meshes in the scene.🗄️
-:::
-### ⚔️ Slicing Some Cubes
+### ⚔️ Getting the components
 ---
-Now that the setup is complete. Let's get started with the interesting part!
-We will create **[Edges Clipper](../api/classes/components.EdgesClipper)** and pass the **components** and
-**[Edges Plane](../api/classes/components.EdgesPlane)** to the constructor.
+Now we will get all the components we will use for this small app. These are:
+1. The Raycasters, to create a clipping plane when clicking a cube.
+2. The Clipper to create the clipping planes.
+3. The Clip Edges to create the fills and outlines.
 
 ```js
 const casters = components.get(OBC.Raycasters);
@@ -54,16 +95,9 @@ clipper.enabled = true;
 const edges = components.get(OBCF.ClipEdges);
 clipper.Type = OBCF.EdgesPlane;
 ```
-:::info PLANE WITH EDGES and TRANSFORMATION CONTROLS
-🟦 **[Edges Plane](../api/classes/components.EdgesPlane)** helps us in adding Clipping Planes to the Clipper Component.
-:::
-### 🖌️ Creating Fine Edges
+### 🖌️ Creating the styles
 ---
-Let's now prepare the materials that will be visible on the cube edges.
-We will use **[LineMaterial](https://threejs.org/examples/?q=line#webgl_lines_fat)** for creating edges.
-#### 💫 Using Line Material
-After creating the Line Material we will add it to the **clipper**
-using `clipper.styles.create(styleName: string, mesh: Mesh[], material: LineMaterial)`
+Now it's time to create the styles for the clipping planes. We will create two styles, one for each cube. One will be red, and the other will be blue.
 
 ```js
 const blueFill = new THREE.MeshBasicMaterial({ color: "lightblue", side: 2 });
@@ -104,24 +138,14 @@ edges.styles.create(
 ```
 ### 🤝 Performing Clipping Events
 ---
-We need a method for instantly producing a clipping plane;
-this can be accomplished with either a `single click` or a `double click` of the mouse.
-For this tutorial, we will use **Double Click**, to create a Clipper that will generate a
-plane on the 3D object's face.
+Now we need a method for creating clipping planes. For this tutorial, we will use **Double Click**, to create a Clipper that will generate a plane on the 3D object's face.
 
 ```js
 container.ondblclick = () => clipper.create(world);
 ```
-:::info Raycaster below the hood 🎩
-We use the **[Simple Raycaster](SimpleRaycaster.mdx)** to determine if the intersection has occurred.
-The clipper places a plane after detecting the face on which the mouse was clicked.
-Here, the **EdgesClipper** handles everything for you 😎
-:::
 ### 🧹 Deleting the Clipping Planes
 ---
-Now that we know how to make multiple clippers, we must also know how to delete them when necessary.
-Clipping Edges can be removed using `clipper.delete()` or `clipper.delete(plane)`, which deletes a single plane.
-**clipper.delete()** deletes the plane on which your mouse pointer is now located.
+Now that we know how to make multiple clippers, we must also know how to delete them when necessary. Clipping Edges can be removed using `clipper.delete()` or `clipper.delete(plane)`, which deletes a single plane.
 
 ```js
 window.onkeydown = (event) => {
@@ -132,11 +156,134 @@ window.onkeydown = (event) => {
 ```
 :::tip Delete all Clipping Planes
 ❎ If you want to safely delete all the clipping edges that were created you can simply call
-**`clipper.deleteAll()`**
+`clipper.deleteAll()`.
 :::
 Great job! 🎉 Using the **[Clipper Component](../api/classes/components.SimpleClipper)**,
 you can now effortlessly check BIM models or any other 3D objects with stunning edges.🧐
 Let's keep it up and check out another tutorial! 🎓
+### ⏱️ Measuring the performance (optional)
+---
+We'll use the [Stats.js](https://github.com/mrdoob/stats.js) to measure the performance of our app. We will add it to the top left corner of the viewport. This way, we'll make sure that the memory consumption and the FPS of our app are under control.
+
+```js
+const stats = new Stats();
+stats.showPanel(2);
+document.body.append(stats.dom);
+stats.dom.style.left = "0px";
+stats.dom.style.zIndex = "unset";
+world.renderer.onBeforeUpdate.add(() => stats.begin());
+world.renderer.onAfterUpdate.add(() => stats.end());
+```
+### 🧩 Adding some UI
+---
+We will use the `@thatopen/ui` library to add some simple and cool UI elements to our app. First, we need to call the `init` method of the `BUI.Manager` class to initialize the library:
+
+```js
+BUI.Manager.init();
+```
+Now we will add some UI to play around with the clipping plane properties. For more information about the UI library, you can check the specific documentation for it!
+
+```js
+const panel = BUI.Component.create<BUI.PanelSection>(() => {
+  return BUI.html`
+  <bim-panel active label="Edges Clipper Tutorial" class="options-menu">
+      <bim-panel-section collapsed label="Controls">
+      
+        <bim-label>Double click: Create clipping plane</bim-label>
+        <bim-label>Delete key: Delete clipping plane</bim-label>
+       
+        
+      </bim-panel-section>
+      <bim-panel-section collapsed label="Others">
+          
+        <bim-checkbox label="Clipper enabled" checked 
+          @change="${({ target }: { target: BUI.Checkbox }) => {
+            clipper.enabled = target.value;
+            edges.visible = target.value;
+          }}">
+        </bim-checkbox>
+        
+        <bim-checkbox label="Clipper visible" checked 
+          @change="${({ target }: { target: BUI.Checkbox }) => {
+            clipper.visible = target.value;
+          }}">
+        </bim-checkbox>   
+      
+        <bim-color-input 
+          label="Planes Color" color="#202932" 
+          @input="${({ target }: { target: BUI.ColorInput }) => {
+            clipper.material.color.set(target.color);
+          }}">
+        </bim-color-input>
+        
+        <bim-number-input 
+          slider step="0.01" label="Planes opacity" value="0.2" min="0.1" max="1"
+          @change="${({ target }: { target: BUI.NumberInput }) => {
+            clipper.material.opacity = target.value;
+          }}">
+        </bim-number-input>
+        
+        <bim-number-input 
+          slider step="0.1" label="Planes size" value="5" min="2" max="10"
+          @change="${({ target }: { target: BUI.NumberInput }) => {
+            clipper.size = target.value;
+          }}">
+        </bim-number-input>
+        
+        <bim-button 
+          label="Delete all" 
+          @click="${() => {
+            clipper.deleteAll();
+          }}">  
+        </bim-button>        
+        
+        <bim-button 
+          label="Rotate cubes" 
+          @click="${() => {
+            cube.rotation.x = 2 * Math.PI * Math.random();
+            cube.rotation.y = 2 * Math.PI * Math.random();
+            cube.rotation.z = 2 * Math.PI * Math.random();
+            cube.updateMatrixWorld();
+
+            cube2.rotation.x = 2 * Math.PI * Math.random();
+            cube2.rotation.y = 2 * Math.PI * Math.random();
+            cube2.rotation.z = 2 * Math.PI * Math.random();
+            cube2.updateMatrixWorld();
+
+            edges.update(true);
+          }}">  
+        </bim-button>
+       
+        
+      </bim-panel-section>
+    </bim-panel>
+    `;
+});
+
+document.body.append(panel);
+```
+And we will make some logic that adds a button to the screen when the user is visiting our app from their phone, allowing to show or hide the menu. Otherwise, the menu would make the app unusable.
+
+```js
+const button = BUI.Component.create<BUI.PanelSection>(() => {
+  return BUI.html`
+      <bim-button class="phone-menu-toggler" icon="solar:settings-bold"
+        @click="${() => {
+          if (panel.classList.contains("options-menu-visible")) {
+            panel.classList.remove("options-menu-visible");
+          } else {
+            panel.classList.add("options-menu-visible");
+          }
+        }}">
+      </bim-button>
+    `;
+});
+
+document.body.append(button);
+```
+### 🎉 Wrap up
+---
+That's it! You have created an app that can create, manipulate, edit and delete clipping planes on any 3D object. Congratulations!
 
 
 

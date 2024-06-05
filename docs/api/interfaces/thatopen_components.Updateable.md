@@ -23,7 +23,7 @@ Actions that should be executed after updating the component.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:66](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L66)
+[packages/core/src/core/Types/src/interfaces.ts:66](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L66)
 
 ___
 
@@ -35,7 +35,7 @@ Actions that should be executed before updating the component.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:69](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L69)
+[packages/core/src/core/Types/src/interfaces.ts:69](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L69)
 
 ## Methods
 
@@ -58,4 +58,4 @@ instance, a renderer component will make a render each frame.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:75](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L75)
+[packages/core/src/core/Types/src/interfaces.ts:75](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L75)

@@ -32,7 +32,7 @@ An empty object.
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:307](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L307)
+[packages/core/src/components/Table/index.ts:307](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L307)
 
 ___
 
@@ -64,7 +64,7 @@ table.expanded = true;
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:273](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L273)
+[packages/core/src/components/Table/index.ts:273](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L273)
 
 ___
 
@@ -96,7 +96,7 @@ If the function returns `false`, the data row will be excluded from the filtered
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:509](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L509)
+[packages/core/src/components/Table/index.ts:509](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L509)
 
 ___
 
@@ -130,7 +130,7 @@ table.headersHidden = true;
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:89](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L89)
+[packages/core/src/components/Table/index.ts:89](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L89)
 
 ___
 
@@ -154,7 +154,7 @@ table.indentationInText = true;
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:299](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L299)
+[packages/core/src/components/Table/index.ts:299](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L299)
 
 ___
 
@@ -180,7 +180,7 @@ table.preserveStructureOnFilter = true;
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:287](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L287)
+[packages/core/src/components/Table/index.ts:287](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L287)
 
 ## Accessors
 
@@ -217,7 +217,7 @@ table.columns = columns;
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:116](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L116)
+[packages/core/src/components/Table/index.ts:116](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L116)
 
 ___
 
@@ -242,7 +242,7 @@ console.log(csvData); // Output: "Column 1,Column 2\nValue 1,Value 2\nValue 3,Va
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:382](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L382)
+[packages/core/src/components/Table/index.ts:382](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L382)
 
 ___
 
@@ -277,7 +277,7 @@ table.data = data;
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:245](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L245)
+[packages/core/src/components/Table/index.ts:245](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L245)
 
 ___
 
@@ -316,7 +316,7 @@ table.queryString = "column1="Jhon Doe" & column2=20";
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:191](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L191)
+[packages/core/src/components/Table/index.ts:191](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L191)
 
 ___
 
@@ -341,7 +341,7 @@ console.log(tsvData); // Output: "Column 1\tColumn 2\nValue 1\tValue 2\nValue 3\
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:397](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L397)
+[packages/core/src/components/Table/index.ts:397](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L397)
 
 ___
 
@@ -365,7 +365,7 @@ console.log(tableValue); // Output: The filtered or original data.
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:162](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L162)
+[packages/core/src/components/Table/index.ts:162](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L162)
 
 ## Methods
 
@@ -396,4 +396,4 @@ table.downloadData("MyTableData", "tsv");
 
 #### Defined in
 
-[packages/core/src/components/Table/index.ts:427](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Table/index.ts#L427)
+[packages/core/src/components/Table/index.ts:427](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Table/index.ts#L427)

@@ -31,7 +31,7 @@ false
 
 #### Defined in
 
-[packages/core/src/components/Tabs/src/Tabs.ts:131](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Tabs/src/Tabs.ts#L131)
+[packages/core/src/components/Tabs/src/Tabs.ts:131](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Tabs/src/Tabs.ts#L131)
 
 ___
 
@@ -49,7 +49,7 @@ false
 
 #### Defined in
 
-[packages/core/src/components/Tabs/src/Tabs.ts:139](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Tabs/src/Tabs.ts#L139)
+[packages/core/src/components/Tabs/src/Tabs.ts:139](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Tabs/src/Tabs.ts#L139)
 
 ## Accessors
 
@@ -92,4 +92,4 @@ tabs.tab = undefined;
 
 #### Defined in
 
-[packages/core/src/components/Tabs/src/Tabs.ts:169](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Tabs/src/Tabs.ts#L169)
+[packages/core/src/components/Tabs/src/Tabs.ts:169](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Tabs/src/Tabs.ts#L169)

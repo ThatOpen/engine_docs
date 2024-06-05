@@ -33,7 +33,7 @@ component.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:60](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L60)
+[packages/core/src/core/Types/src/interfaces.ts:60](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L60)
 
 ___
 
@@ -45,7 +45,7 @@ Event that fires when the component has been resized.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:53](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L53)
+[packages/core/src/core/Types/src/interfaces.ts:53](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L53)
 
 ___
 
@@ -73,4 +73,4 @@ component.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:50](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L50)
+[packages/core/src/core/Types/src/interfaces.ts:50](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L50)

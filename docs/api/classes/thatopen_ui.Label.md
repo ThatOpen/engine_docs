@@ -47,7 +47,7 @@ document.body.appendChild(labelComponent);
 
 #### Defined in
 
-[packages/core/src/components/Label/index.ts:113](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Label/index.ts#L113)
+[packages/core/src/components/Label/index.ts:113](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Label/index.ts#L113)
 
 ___
 
@@ -81,7 +81,7 @@ document.body.appendChild(labelComponent);
 
 #### Defined in
 
-[packages/core/src/components/Label/index.ts:127](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Label/index.ts#L127)
+[packages/core/src/components/Label/index.ts:127](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Label/index.ts#L127)
 
 ___
 
@@ -114,7 +114,7 @@ document.body.appendChild(labelComponent);
 
 #### Defined in
 
-[packages/core/src/components/Label/index.ts:85](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Label/index.ts#L85)
+[packages/core/src/components/Label/index.ts:85](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Label/index.ts#L85)
 
 ___
 
@@ -147,7 +147,7 @@ document.body.appendChild(labelComponent);
 
 #### Defined in
 
-[packages/core/src/components/Label/index.ts:71](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Label/index.ts#L71)
+[packages/core/src/components/Label/index.ts:71](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Label/index.ts#L71)
 
 ___
 
@@ -180,7 +180,7 @@ document.body.appendChild(labelComponent);
 
 #### Defined in
 
-[packages/core/src/components/Label/index.ts:98](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Label/index.ts#L98)
+[packages/core/src/components/Label/index.ts:98](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Label/index.ts#L98)
 
 ___
 
@@ -213,4 +213,4 @@ document.body.appendChild(labelComponent);
 
 #### Defined in
 
-[packages/core/src/components/Label/index.ts:140](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Label/index.ts#L140)
+[packages/core/src/components/Label/index.ts:140](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Label/index.ts#L140)

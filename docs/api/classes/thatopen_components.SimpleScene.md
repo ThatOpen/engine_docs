@@ -36,7 +36,7 @@ objects hierarchically, and easily dispose them when you are finished with it.
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-scene.ts:24](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-scene.ts#L24)
+[packages/core/src/core/Worlds/src/simple-scene.ts:24](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-scene.ts#L24)
 
 ___
 
@@ -52,7 +52,7 @@ BaseScene.onDisposed
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-scene.ts:10](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-scene.ts#L10)
+[packages/core/src/core/Types/src/base-scene.ts:10](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-scene.ts#L10)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-scene.ts:29](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-scene.ts#L29)
+[packages/core/src/core/Worlds/src/simple-scene.ts:29](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-scene.ts#L29)
 
 ## Methods
 
@@ -88,7 +88,7 @@ BaseScene.dispose
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-scene.ts:19](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-scene.ts#L19)
+[packages/core/src/core/Types/src/base-scene.ts:19](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-scene.ts#L19)
 
 ___
 
@@ -108,7 +108,7 @@ BaseScene.isConfigurable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -128,7 +128,7 @@ BaseScene.isDisposeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -148,7 +148,7 @@ BaseScene.isHideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -168,7 +168,7 @@ BaseScene.isResizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -188,7 +188,7 @@ BaseScene.isUpdateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)
 
 ___
 
@@ -214,4 +214,4 @@ Creates a simple and nice default set up for the scene (e.g. lighting).
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-scene.ts:50](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-scene.ts#L50)
+[packages/core/src/core/Worlds/src/simple-scene.ts:50](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-scene.ts#L50)

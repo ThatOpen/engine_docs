@@ -33,7 +33,7 @@ false
 
 #### Defined in
 
-[packages/core/src/components/Toolbar/src/Toolbar.ts:59](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Toolbar/src/Toolbar.ts#L59)
+[packages/core/src/components/Toolbar/src/Toolbar.ts:59](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Toolbar/src/Toolbar.ts#L59)
 
 ## Accessors
 
@@ -57,4 +57,4 @@ When vertical is false, the toolbar will be displayed in a horizontal layout.
 
 #### Defined in
 
-[packages/core/src/components/Toolbar/src/Toolbar.ts:69](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Toolbar/src/Toolbar.ts#L69)
+[packages/core/src/components/Toolbar/src/Toolbar.ts:69](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Toolbar/src/Toolbar.ts#L69)

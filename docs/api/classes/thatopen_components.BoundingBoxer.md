@@ -34,7 +34,7 @@ it's fast, and should suffice for general use cases such as camera zooming or ge
 
 #### Defined in
 
-[packages/core/src/fragments/BoundingBoxer/index.ts:14](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/BoundingBoxer/index.ts#L14)
+[packages/core/src/fragments/BoundingBoxer/index.ts:14](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/BoundingBoxer/index.ts#L14)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/fragments/BoundingBoxer/index.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/BoundingBoxer/index.ts#L17)
+[packages/core/src/fragments/BoundingBoxer/index.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/BoundingBoxer/index.ts#L17)
 
 ## Methods
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/fragments/BoundingBoxer/index.ts:68](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/BoundingBoxer/index.ts#L68)
+[packages/core/src/fragments/BoundingBoxer/index.ts:68](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/BoundingBoxer/index.ts#L68)
 
 ___
 
@@ -90,7 +90,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -110,7 +110,7 @@ this is Disposable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -130,7 +130,7 @@ this is Hideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -150,7 +150,7 @@ this is Resizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -170,4 +170,4 @@ this is Updateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)

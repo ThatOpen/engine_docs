@@ -53,7 +53,7 @@ document.body.appendChild(panel);
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:71](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L71)
+[packages/core/src/components/Panel/src/Panel.ts:71](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L71)
 
 ___
 
@@ -93,7 +93,7 @@ HasName.label
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L106)
+[packages/core/src/components/Panel/src/Panel.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L106)
 
 ___
 
@@ -132,7 +132,7 @@ HasName.name
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:88](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L88)
+[packages/core/src/components/Panel/src/Panel.ts:88](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L88)
 
 ## Accessors
 
@@ -162,7 +162,7 @@ LitElement.hidden
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:119](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L119)
+[packages/core/src/components/Panel/src/Panel.ts:119](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L119)
 
 ___
 
@@ -202,7 +202,7 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:140](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L140)
+[packages/core/src/components/Panel/src/Panel.ts:140](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L140)
 
 • `set` **value**(`data`): `void`
 
@@ -238,7 +238,7 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:155](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L155)
+[packages/core/src/components/Panel/src/Panel.ts:155](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L155)
 
 ## Methods
 
@@ -257,7 +257,7 @@ within the panel, making the panel more compact or to hide details that are not 
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:187](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L187)
+[packages/core/src/components/Panel/src/Panel.ts:187](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L187)
 
 ___
 
@@ -276,4 +276,4 @@ making the panel more informative or to display details that are necessary for t
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Panel.ts:198](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Panel.ts#L198)
+[packages/core/src/components/Panel/src/Panel.ts:198](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Panel.ts#L198)

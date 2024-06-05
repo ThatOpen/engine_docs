@@ -28,7 +28,7 @@ The current [NavigationMode](../interfaces/thatopen_components.NavigationMode.md
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/index.ts:26](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L26)
+[packages/core/src/core/OrthoPerspectiveCamera/index.ts:26](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L26)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:23](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L23)
+[packages/core/src/core/Worlds/src/simple-camera.ts:23](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L23)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:20](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L20)
+[packages/core/src/core/Worlds/src/simple-camera.ts:20](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L20)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:28](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L28)
+[packages/core/src/core/Worlds/src/simple-camera.ts:28](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L28)
 
 ## Accessors
 
@@ -99,7 +99,7 @@ SimpleCamera.controls
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:40](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L40)
+[packages/core/src/core/Worlds/src/simple-camera.ts:40](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L40)
 
 ___
 
@@ -119,7 +119,7 @@ SimpleCamera.enabled
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:52](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L52)
+[packages/core/src/core/Worlds/src/simple-camera.ts:52](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L52)
 
 • `set` **enabled**(`enabled`): `void`
 
@@ -141,7 +141,7 @@ SimpleCamera.enabled
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:60](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L60)
+[packages/core/src/core/Worlds/src/simple-camera.ts:60](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L60)
 
 ## Methods
 
@@ -161,7 +161,7 @@ SimpleCamera.enabled
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/index.ts:80](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L80)
+[packages/core/src/core/OrthoPerspectiveCamera/index.ts:82](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L82)
 
 ___
 
@@ -184,7 +184,7 @@ Make the camera view fit all the specified meshes.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/index.ts:108](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L108)
+[packages/core/src/core/OrthoPerspectiveCamera/index.ts:110](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L110)
 
 ___
 
@@ -204,7 +204,7 @@ this is CameraControllable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base-camera.ts:13](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base-camera.ts#L13)
+[packages/core/src/core/Types/src/base-camera.ts:13](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base-camera.ts#L13)
 
 ___
 
@@ -224,7 +224,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -244,7 +244,7 @@ this is Disposable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -264,7 +264,7 @@ this is Hideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -284,7 +284,7 @@ this is Resizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -304,7 +304,7 @@ this is Updateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)
 
 ___
 
@@ -326,7 +326,7 @@ Sets a new [NavigationMode](../interfaces/thatopen_components.NavigationMode.md)
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/index.ts:90](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L90)
+[packages/core/src/core/OrthoPerspectiveCamera/index.ts:92](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L92)
 
 ___
 
@@ -348,7 +348,7 @@ Allows or prevents all user input.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/index.ts:142](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L142)
+[packages/core/src/core/OrthoPerspectiveCamera/index.ts:144](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/index.ts#L144)
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:105](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L105)
+[packages/core/src/core/Worlds/src/simple-camera.ts:104](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L104)
 
 ___
 
@@ -395,4 +395,4 @@ Components.renderer.
 
 #### Defined in
 
-[packages/core/src/core/Worlds/src/simple-camera.ts:117](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Worlds/src/simple-camera.ts#L117)
+[packages/core/src/core/Worlds/src/simple-camera.ts:116](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Worlds/src/simple-camera.ts#L116)

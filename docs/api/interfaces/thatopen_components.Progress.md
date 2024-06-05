@@ -19,7 +19,7 @@ The amount of things that have been done already.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:81](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L81)
+[packages/core/src/core/Types/src/interfaces.ts:81](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L81)
 
 ___
 
@@ -31,4 +31,4 @@ The total amount of things to be done by the process.
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:84](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L84)
+[packages/core/src/core/Types/src/interfaces.ts:84](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L84)

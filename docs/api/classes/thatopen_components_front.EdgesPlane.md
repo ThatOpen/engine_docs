@@ -27,4 +27,4 @@ To disable this behaviour set this to 0.
 
 #### Defined in
 
-[packages/front/src/core/EdgesClipper/src/edges-plane.ts:16](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/core/EdgesClipper/src/edges-plane.ts#L16)
+[packages/front/src/core/EdgesClipper/src/edges-plane.ts:16](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/core/EdgesClipper/src/edges-plane.ts#L16)

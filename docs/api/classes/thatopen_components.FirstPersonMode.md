@@ -28,7 +28,7 @@ simulating FPS video games.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts:12](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts#L12)
+[packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts:12](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts#L12)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts:15](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts#L15)
+[packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts:15](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts#L15)
 
 ## Methods
 
@@ -70,4 +70,4 @@ ___
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts:20](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts#L20)
+[packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts:20](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/first-person-mode.ts#L20)

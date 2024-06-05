@@ -26,7 +26,7 @@ Whether this navigation mode is active or not.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:30](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L30)
+[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:30](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L30)
 
 ___
 
@@ -38,7 +38,7 @@ The unique ID of this navigation mode.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L17)
+[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L17)
 
 ___
 
@@ -67,4 +67,4 @@ must be disabled.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L27)
+[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L27)

@@ -28,4 +28,4 @@ currently visible or not in the
 
 #### Defined in
 
-[packages/core/src/core/Types/src/interfaces.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/interfaces.ts#L34)
+[packages/core/src/core/Types/src/interfaces.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/interfaces.ts#L34)

@@ -50,7 +50,7 @@ document.body.appendChild(section);
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Section.ts:145](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Section.ts#L145)
+[packages/core/src/components/Panel/src/Section.ts:145](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Section.ts#L145)
 
 ___
 
@@ -82,7 +82,7 @@ document.body.appendChild(section);
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Section.ts:132](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Section.ts#L132)
+[packages/core/src/components/Panel/src/Section.ts:132](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Section.ts#L132)
 
 ___
 
@@ -114,7 +114,7 @@ document.body.appendChild(section);
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Section.ts:93](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Section.ts#L93)
+[packages/core/src/components/Panel/src/Section.ts:93](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Section.ts#L93)
 
 ___
 
@@ -150,7 +150,7 @@ HasName.label
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Section.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Section.ts#L106)
+[packages/core/src/components/Panel/src/Section.ts:106](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Section.ts#L106)
 
 ___
 
@@ -186,7 +186,7 @@ HasName.name
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Section.ts:119](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Section.ts#L119)
+[packages/core/src/components/Panel/src/Section.ts:119](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Section.ts#L119)
 
 ## Accessors
 
@@ -219,7 +219,7 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Section.ts:157](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Section.ts#L157)
+[packages/core/src/components/Panel/src/Section.ts:157](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Section.ts#L157)
 
 • `set` **value**(`data`): `void`
 
@@ -260,4 +260,4 @@ HasValue.value
 
 #### Defined in
 
-[packages/core/src/components/Panel/src/Section.ts:171](https://github.com/ThatOpen/engine_ui-components//blob/1c232b0/packages/core/src/components/Panel/src/Section.ts#L171)
+[packages/core/src/components/Panel/src/Section.ts:171](https://github.com/ThatOpen/engine_ui-components//blob/13aa680/packages/core/src/components/Panel/src/Section.ts#L171)

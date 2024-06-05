@@ -30,7 +30,7 @@ A tool to safely remove meshes and geometries from memory to
 
 #### Defined in
 
-[packages/core/src/core/Disposer/index.ts:13](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Disposer/index.ts#L13)
+[packages/core/src/core/Disposer/index.ts:13](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Disposer/index.ts#L13)
 
 ## Methods
 
@@ -56,7 +56,7 @@ remove them from the mesh before disposing it.
 
 #### Defined in
 
-[packages/core/src/core/Disposer/index.ts:42](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Disposer/index.ts#L42)
+[packages/core/src/core/Disposer/index.ts:42](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Disposer/index.ts#L42)
 
 ___
 
@@ -78,7 +78,7 @@ Disposes a geometry from memory.
 
 #### Defined in
 
-[packages/core/src/core/Disposer/index.ts:63](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Disposer/index.ts#L63)
+[packages/core/src/core/Disposer/index.ts:63](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Disposer/index.ts#L63)
 
 ___
 
@@ -96,7 +96,7 @@ the list of UUIDs of deleted components.
 
 #### Defined in
 
-[packages/core/src/core/Disposer/index.ts:26](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Disposer/index.ts#L26)
+[packages/core/src/core/Disposer/index.ts:26](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Disposer/index.ts#L26)
 
 ___
 
@@ -116,7 +116,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -136,7 +136,7 @@ this is Disposable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -156,7 +156,7 @@ this is Hideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -176,7 +176,7 @@ this is Resizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -196,4 +196,4 @@ this is Updateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)

@@ -34,7 +34,7 @@ Object that can efficiently load binary files that contain
 
 #### Defined in
 
-[packages/core/src/fragments/FragmentsManager/index.ts:31](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/FragmentsManager/index.ts#L31)
+[packages/core/src/fragments/FragmentsManager/index.ts:31](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/FragmentsManager/index.ts#L31)
 
 ___
 
@@ -46,7 +46,7 @@ All the created [fragments](https://github.com/ThatOpen/engine_fragment).
 
 #### Defined in
 
-[packages/core/src/fragments/FragmentsManager/index.ts:26](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/FragmentsManager/index.ts#L26)
+[packages/core/src/fragments/FragmentsManager/index.ts:26](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/FragmentsManager/index.ts#L26)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[packages/core/src/fragments/FragmentsManager/index.ts:16](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/FragmentsManager/index.ts#L16)
+[packages/core/src/fragments/FragmentsManager/index.ts:16](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/FragmentsManager/index.ts#L16)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-[packages/core/src/fragments/FragmentsManager/index.ts:38](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/FragmentsManager/index.ts#L38)
+[packages/core/src/fragments/FragmentsManager/index.ts:38](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/FragmentsManager/index.ts#L38)
 
 ## Methods
 
@@ -98,7 +98,7 @@ The list of meshes of the created fragments.
 
 #### Defined in
 
-[packages/core/src/fragments/FragmentsManager/index.ts:52](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/FragmentsManager/index.ts#L52)
+[packages/core/src/fragments/FragmentsManager/index.ts:52](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/FragmentsManager/index.ts#L52)
 
 ___
 
@@ -122,7 +122,7 @@ the exported data as binary buffer.
 
 #### Defined in
 
-[packages/core/src/fragments/FragmentsManager/index.ts:129](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/FragmentsManager/index.ts#L129)
+[packages/core/src/fragments/FragmentsManager/index.ts:132](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/FragmentsManager/index.ts#L132)
 
 ___
 
@@ -142,7 +142,7 @@ this is Configurable<any\>
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L39)
+[packages/core/src/core/Types/src/base.ts:39](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L39)
 
 ___
 
@@ -162,7 +162,7 @@ this is Disposable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L17)
+[packages/core/src/core/Types/src/base.ts:17](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L17)
 
 ___
 
@@ -182,7 +182,7 @@ this is Hideable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L34)
+[packages/core/src/core/Types/src/base.ts:34](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L34)
 
 ___
 
@@ -202,7 +202,7 @@ this is Resizeable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L22)
+[packages/core/src/core/Types/src/base.ts:22](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L22)
 
 ___
 
@@ -222,7 +222,7 @@ this is Updateable
 
 #### Defined in
 
-[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/Types/src/base.ts#L27)
+[packages/core/src/core/Types/src/base.ts:27](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/Types/src/base.ts#L27)
 
 ___
 
@@ -237,7 +237,7 @@ Loads a binar file that contain fragment geometry.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Uint8Array` | The binary data to load. |
-| `config?` | `Partial`<{ `coordinate`: `boolean` ; `properties`: `IfcProperties` ; `relationsMap`: `RelationsMap`  }\> | Optional configuration for loading. |
+| `config?` | `Partial`<{ `coordinate`: `boolean` ; `name`: `string` ; `properties`: `IfcProperties` ; `relationsMap`: `RelationsMap`  }\> | Optional configuration for loading. |
 
 #### Returns
 
@@ -247,4 +247,4 @@ The loaded FragmentsGroup.
 
 #### Defined in
 
-[packages/core/src/fragments/FragmentsManager/index.ts:89](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/fragments/FragmentsManager/index.ts#L89)
+[packages/core/src/fragments/FragmentsManager/index.ts:89](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/fragments/FragmentsManager/index.ts#L89)

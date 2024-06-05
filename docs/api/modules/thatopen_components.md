@@ -58,7 +58,7 @@ The projection system of the camera.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:4](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L4)
+[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:4](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L4)
 
 ___
 
@@ -70,4 +70,4 @@ The extensible list of supported navigation modes.
 
 #### Defined in
 
-[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:9](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L9)
+[packages/core/src/core/OrthoPerspectiveCamera/src/types.ts:9](https://github.com/ThatOpen/engine_components/blob/630a314/packages/core/src/core/OrthoPerspectiveCamera/src/types.ts#L9)

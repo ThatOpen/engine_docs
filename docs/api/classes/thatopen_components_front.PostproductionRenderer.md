@@ -29,7 +29,7 @@ Helper object to handle the postproduction effects applied.
 
 #### Defined in
 
-[packages/front/src/core/PostproductionRenderer/index.ts:13](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/core/PostproductionRenderer/index.ts#L13)
+[packages/front/src/core/PostproductionRenderer/index.ts:13](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/core/PostproductionRenderer/index.ts#L13)
 
 ## Methods
 
@@ -49,4 +49,4 @@ RendererWith2D.dispose
 
 #### Defined in
 
-[packages/front/src/core/PostproductionRenderer/index.ts:67](https://github.com/ThatOpen/engine_components/blob/7affdb6/packages/front/src/core/PostproductionRenderer/index.ts#L67)
+[packages/front/src/core/PostproductionRenderer/index.ts:67](https://github.com/ThatOpen/engine_components/blob/630a314/packages/front/src/core/PostproductionRenderer/index.ts#L67)
