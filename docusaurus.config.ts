@@ -36,10 +36,6 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false,
         theme: {
@@ -51,16 +47,32 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/logo.svg',
     navbar: {
-      title: 'My Site',
+      title: '',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'That Open Logo',
+        src: 'img/logo-purple.svg',
+        srcDark: 'img/logo-green.svg',
       },
       items: [
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://thatopen.com/',
+          label: 'page',
+          position: 'right',
+        },
+        {
+          href: 'https://people.thatopen.com/',
+          label: 'community',
+          position: 'right',
+        },
+        {
+          href: 'https://www.npmjs.com/org/thatopen',
+          label: 'npm',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/ThatOpen/',
           label: 'GitHub',
           position: 'right',
         },
@@ -68,44 +80,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} That Open Company. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
