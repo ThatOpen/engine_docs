@@ -6,11 +6,11 @@
 | :------ | :------ |
 | [Alignment](classes/Alignment.md) | Represents an alignment in a civil engineering project. An alignment consists of vertical, horizontal, and absolute civil curves. |
 | [CivilCurve](classes/CivilCurve.md) | Represents an alignment curve of a civil engineering model. |
-| [CurveMesh](classes/CurveMesh.md) | Represents an alignment 3D curve mesh with additional civil engineering properties. Extends THREE.LineSegments to provide geometry and material for the curve. |
-| [Fragment](classes/Fragment.md) | Class representing a fragment of a 3D model. Fragments are just a simple wrapper around THREE.InstancedMesh. Each fragment can contain Items (identified by ItemID) which are mapped to one or many instances inside this THREE.InstancedMesh.  Fragments also implement features like instance buffer resizing and hiding out of the box. |
+| [CurveMesh](classes/CurveMesh.md) | Represents an alignment 3D curve mesh with additional civil engineering properties. Extends THREE.LineSegments to provide geometry and material for the curve. |
+| [Fragment](classes/Fragment.md) | Class representing a fragment of a 3D model. Fragments are just a simple wrapper around THREE.InstancedMesh. Each fragment can contain Items (identified by ItemID) which are mapped to one or many instances inside this THREE.InstancedMesh. Fragments also implement features like instance buffer resizing and hiding out of the box. |
 | [FragmentMesh](classes/FragmentMesh.md) | A class representing a THREE.InstancedMesh with additional properties for fragment data. |
-| [FragmentsGroup](classes/FragmentsGroup.md) | A class representing a group of 3D fragments. This class extends THREE.Group and adds additional properties and methods for managing and interacting with the fragments it contains. |
-| [Serializer](classes/Serializer.md) | Serializer class for handling the serialization and deserialization of 3D model data. It uses the [flatbuffers library](https://flatbuffers.dev/) for efficient data serialization and deserialization. |
+| [FragmentsGroup](classes/FragmentsGroup.md) | A class representing a group of 3D fragments. This class extends THREE.Group and adds additional properties and methods for managing and interacting with the fragments it contains. |
+| [Serializer](classes/Serializer.md) | Serializer class for handling the serialization and deserialization of 3D model data. It uses the [flatbuffers library](https://flatbuffers.dev/) for efficient data serialization and deserialization. |
 | [StreamSerializer](classes/StreamSerializer.md) | A class for serializing and deserializing geometry data in a streamed format. |
 
 ## Interfaces

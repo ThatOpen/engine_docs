@@ -1,7 +1,6 @@
 # CurveMesh\<TGeometry, TMaterial\>
 
-Represents an alignment 3D curve mesh with additional civil engineering properties.
-Extends THREE.LineSegments to provide geometry and material for the curve.
+Represents an alignment 3D curve mesh with additional civil engineering properties. Extends THREE.LineSegments to provide geometry and material for the curve.
 
 ## Extends
 

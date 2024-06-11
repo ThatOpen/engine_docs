@@ -1,7 +1,6 @@
 # Serializer
 
-Serializer class for handling the serialization and deserialization of 3D model data.
-It uses the [flatbuffers library](https://flatbuffers.dev/) for efficient data serialization and deserialization.
+Serializer class for handling the serialization and deserialization of 3D model data. It uses the [flatbuffers library](https://flatbuffers.dev/) for efficient data serialization and deserialization.
 
 ## Methods
 

@@ -1,7 +1,6 @@
 # FragmentsGroup
 
-A class representing a group of 3D fragments.
-This class extends THREE.Group and adds additional properties and methods for managing and interacting with the fragments it contains.
+A class representing a group of 3D fragments. This class extends THREE.Group and adds additional properties and methods for managing and interacting with the fragments it contains.
 
 ## Extends
 

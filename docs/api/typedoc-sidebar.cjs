@@ -3,6 +3,325 @@
 const typedocSidebar = { items: [
   {
     "type": "category",
+    "label": "@thatopen/components",
+    "items": [
+      {
+        "type": "category",
+        "label": "Classes",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/AsyncEvent",
+            "label": "AsyncEvent"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Base",
+            "label": "Base"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/BaseCamera",
+            "label": "BaseCamera"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/BaseRenderer",
+            "label": "BaseRenderer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/BaseScene",
+            "label": "BaseScene"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/BaseWorldItem",
+            "label": "BaseWorldItem"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/BoundingBoxer",
+            "label": "BoundingBoxer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Clipper",
+            "label": "Clipper"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Component",
+            "label": "Component"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Components",
+            "label": "Components"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/CullerRenderer",
+            "label": "CullerRenderer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Cullers",
+            "label": "Cullers"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Disposer",
+            "label": "Disposer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Event",
+            "label": "Event"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/FirstPersonMode",
+            "label": "FirstPersonMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/FragmentsManager",
+            "label": "FragmentsManager"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Grids",
+            "label": "Grids"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcJsonExporter",
+            "label": "IfcJsonExporter"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcRelationsIndexer",
+            "label": "IfcRelationsIndexer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcStreamingSettings",
+            "label": "IfcStreamingSettings"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/MeshCullerRenderer",
+            "label": "MeshCullerRenderer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/MiniMaps",
+            "label": "MiniMaps"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/OrbitMode",
+            "label": "OrbitMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/OrthoPerspectiveCamera",
+            "label": "OrthoPerspectiveCamera"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/PlanMode",
+            "label": "PlanMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/ProjectionManager",
+            "label": "ProjectionManager"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/PropertiesStreamingSettings",
+            "label": "PropertiesStreamingSettings"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Raycasters",
+            "label": "Raycasters"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/SimpleCamera",
+            "label": "SimpleCamera"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/SimplePlane",
+            "label": "SimplePlane"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/SimpleRenderer",
+            "label": "SimpleRenderer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/SimpleScene",
+            "label": "SimpleScene"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/SimpleWorld",
+            "label": "SimpleWorld"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/Worlds",
+            "label": "Worlds"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Interfaces",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/CameraControllable",
+            "label": "CameraControllable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Configurable",
+            "label": "Configurable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Createable",
+            "label": "Createable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/CullerRendererSettings",
+            "label": "CullerRendererSettings"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Disposable",
+            "label": "Disposable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Hideable",
+            "label": "Hideable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/NavigationMode",
+            "label": "NavigationMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Progress",
+            "label": "Progress"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Resizeable",
+            "label": "Resizeable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/SimpleSceneConfig",
+            "label": "SimpleSceneConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Updateable",
+            "label": "Updateable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/World",
+            "label": "World"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Type Aliases",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/CameraProjection",
+            "label": "CameraProjection"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/NavModeID",
+            "label": "NavModeID"
+          }
+        ]
+      }
+    ],
+    "link": {
+      "type": "doc",
+      "id": "api/@thatopen/components/index"
+    }
+  },
+  {
+    "type": "category",
+    "label": "@thatopen/components-front",
+    "items": [
+      {
+        "type": "category",
+        "label": "Classes",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/ClipEdges",
+            "label": "ClipEdges"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/EdgesPlane",
+            "label": "EdgesPlane"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/LengthMeasurement",
+            "label": "LengthMeasurement"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/Marker",
+            "label": "Marker"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/Plans",
+            "label": "Plans"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/PostproductionRenderer",
+            "label": "PostproductionRenderer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/RendererWith2D",
+            "label": "RendererWith2D"
+          }
+        ]
+      }
+    ],
+    "link": {
+      "type": "doc",
+      "id": "api/@thatopen/components-front/index"
+    }
+  },
+  {
+    "type": "category",
     "label": "@thatopen/fragments",
     "items": [
       {
