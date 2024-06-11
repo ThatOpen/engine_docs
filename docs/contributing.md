@@ -62,7 +62,7 @@ Once you have asked, and got a positive answer from one of the maintainers, **yo
 
 2. **Create a branch** to work on that specific issue, and [link that branch to the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue).
 
-3. **Work on your fork** of the repository locally. Please follow the [basic clean rules](clean-components-guide.md)!
+3. **Work on your fork** of the repository locally. Please follow the [basic clean rules](./components/clean-components-guide.md)!
 
 4. **Create a pull request**. The name should follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) convention. If you are not sure, check out the title past pull requests!
 

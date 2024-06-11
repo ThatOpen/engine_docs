@@ -1,0 +1,5 @@
+# QueryOperators
+
+> **QueryOperators**: `"&"` \| "\|"
+
+Heloooooooooo

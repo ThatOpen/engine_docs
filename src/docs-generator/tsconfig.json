@@ -67,13 +67,6 @@
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   },
-  "typedocOptions": {
-    "entryPoints": [ "../../temp/*" ],
-    "name": "Open BIM Docs",
-    "entryPointStrategy": "packages",
-    "out": "./docs",
-    "readme": "../../README.md"
-  },
   "references": [
     { "path": "../../temp/engine_components" },
     { "path": "../../temp/engine_fragment" },

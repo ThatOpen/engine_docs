@@ -9,6 +9,8 @@ if (fs.existsSync(tutorialsPath)) {
 
 fs.mkdirSync(tutorialsPath)
 
+fs.writeFileSync(`${tutorialsPath}/_category_.yml`, "label: \"👩🏻‍🏫 Tutorials\"\n");
+
 const repos = [
   {
     name: "engine_components",

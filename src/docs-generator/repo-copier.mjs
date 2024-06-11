@@ -39,7 +39,7 @@ if (process.argv.includes(localMode)) {
     console.info(`Copying directories from "${sourcePath}"...`);
 
     const ignoredFiles = /^(vite\.config\.ts|example\.ts)$/;
-    const ignoredPaths = /^(\.\.\\.+?packages.+?dist)$/;
+    const ignoredPaths = /^(\.\.\\.+?packages.+?dist|.*\\node_modules)$/;
 
     for(const {name} of repositories) {
         const source = sourcePath + name;
