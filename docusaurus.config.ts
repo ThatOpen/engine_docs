@@ -3,20 +3,20 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'That Open docs',
+  tagline: 'Let\'s make the AECOM industry great again.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.thatopen.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'That Open Company', // Usually your GitHub org/user name.
+  projectName: 'That Open Engine', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,6 +28,28 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  // staticDirectories: ["static"],
+  plugins: [
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        tsconfig: "./src/docs-generator/tsconfig.json",
+        entryPoints: "./temp/*",
+        entryPointStrategy: "packages",
+        plugin: ["./typedoc-plugin.mjs"],
+        readme: "none",
+        indexFormat: "table",
+        disableSources: true,
+        sidebar: { pretty: true },
+        textContentMappings: {
+          "title.indexPage": "📋 API",
+          "title.memberPage": "{name}",
+        },
+        parametersFormat: "table",
+        enumMembersFormat: "table",
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -58,17 +80,17 @@ const config: Config = {
       items: [
         {
           href: 'https://thatopen.com/',
-          label: 'project',
+          label: 'Project',
           position: 'right',
         },
         {
           href: 'https://people.thatopen.com/',
-          label: 'community',
+          label: 'Community',
           position: 'right',
         },
         {
           href: 'https://www.npmjs.com/org/thatopen',
-          label: 'npm',
+          label: 'NPM',
           position: 'right',
         },
         {

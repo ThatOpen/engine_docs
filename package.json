@@ -2,6 +2,9 @@
   "name": "engine_docs",
   "version": "0.0.0",
   "packageManager": "yarn@4.1.0",
+  "workspaces": [
+    "temp/*"
+  ],
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -28,6 +31,9 @@
     "@docusaurus/module-type-aliases": "3.4.0",
     "@docusaurus/tsconfig": "3.4.0",
     "@docusaurus/types": "3.4.0",
+    "docusaurus-plugin-typedoc": "^1.0.0",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-markdown": "^4.0.0",
     "typescript": "~5.2.2"
   },
   "browserslist": {

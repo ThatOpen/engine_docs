@@ -30,6 +30,7 @@
   --ifm-color-primary-lighter: #bcf124;
   --ifm-color-primary-lightest: #bcf124;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docsearch-hit-active-color: black !important;
 }
 
 iframe {
