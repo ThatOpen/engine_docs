@@ -1,0 +1,79 @@
+:::info Source
+Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_ui-components/blob/main/packages/obc/src/components/tables/ClassificationsTree/example.ts).
+:::
+
+## Displaying elements grouping 📦
+---
+One of the greatest things we can make using BIM models is to group elements based on their properties. This has many use cases! Like grouping elements to check their collisions 💥, grouping elements based on their construction activities 🔨, or grouping fininshed elements during the construction phase ✅. 
+Other than grouping the elements, the next most important thing is to show them to your user in an easy way... well, here is where it comes the `ClassificationsTree` functional component!
+### Creating the classifications tree
+First things first, let's create an instance of the functional component, like this:
+
+```js
+const [classificationsTree, updateClassificationsTree] =
+  CUI.tables.classificationTree({
+    components,
+    classifications: {},
+  });
+```
+Now that we have the classifications tree created, let's tell the `FragmentsManager` that each time a model is loaded it needs to classify the model based on some conditions, but more importantly is that right after those classifications are made it needs to update the classifications tree!
+
+```js
+const classifier = components.get(OBC.Classifier);
+
+fragmentsManager.onFragmentsLoaded.add(async (model) => {
+  // This creates a classification system named "entities"
+  classifier.byEntity(model);
+
+  // This creates a classification system named "predefinedTypes"
+  await classifier.byPredefinedType(model);
+
+  const classifications = {
+    Entities: ["entities"],
+    "Predefined Types": ["predefinedTypes"],
+  };
+
+  updateClassificationsTree({ classifications });
+});
+```
+The `classifications` value is just an object where they keys are the names in the tree, and the values are the orders in which you want to group the elements. So, for example, "Entities" groups the elements based on their entities and then based on their predefined types. Needless to say, the classifications need to be computed before they can be used on the tree. You can check the system names from `classifier.list`.
+Great! As we already told the UI when it needs to update, let's add the classifications tree to the HTML page. For it, let's create simple BIM panel component where we include the tree and also a pre-made IFC load button 👇
+
+```js
+const panel = BUI.Component.create(() => {
+  const [loadIfcBtn] = CUI.buttons.loadIfc({ components });
+
+  return BUI.html`
+   <bim-panel label="Classifications Tree">
+    <bim-panel-section label="Importing">
+      ${loadIfcBtn}
+    </bim-panel-section>
+    <bim-panel-section label="Classifications">
+      ${classificationsTree}
+    </bim-panel-section>
+   </bim-panel> 
+  `;
+});
+```
+Finally, let's append the BIM Panel to the page to see the classifications tree working 😉
+
+```js
+const app = document.createElement("bim-grid");
+app.layouts = {
+  main: {
+    template: `
+      "panel viewport"
+      / 23rem 1fr
+    `,
+    elements: { panel, viewport },
+  },
+};
+
+app.layout = "main";
+document.body.append(app);
+```
+Congratulations! You've now a ready to go user interface that let's you show your model classifications. 🥳
+
+
+
+<iframe src="https://thatopen.github.io/engine_ui-components/examples/ClassificationsTree"></iframe>
