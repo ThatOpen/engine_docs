@@ -58,7 +58,7 @@ const config: Config = {
       items: [
         {
           href: 'https://thatopen.com/',
-          label: 'page',
+          label: 'project',
           position: 'right',
         },
         {
@@ -79,7 +79,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       copyright: `Copyright © ${new Date().getFullYear()} That Open Company. Built with Docusaurus.`,
     },
     prism: {
