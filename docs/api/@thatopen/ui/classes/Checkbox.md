@@ -1,6 +1,10 @@
 # Checkbox
 
-Heloooooooooo
+A custom checkbox web component for BIM applications. HTML tag: bim-checkbox
+
+## Fires
+
+change - Fired when the checkbox changes.
 
 ## Extends
 
@@ -139,6 +143,18 @@ const checkbox = document.createElement('bim-checkbox');
 checkbox.name = 'agreement';
 document.body.appendChild(checkbox);
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

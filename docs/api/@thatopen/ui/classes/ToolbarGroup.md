@@ -1,6 +1,6 @@
 # ToolbarGroup
 
-Heloooooooooo
+A custom toolbar group web component for BIM applications. HTML tag: bim-toolbar-group
 
 ## Extends
 
@@ -19,6 +19,18 @@ The number of rows to display in the toolbar group.
 ```ts
 2
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

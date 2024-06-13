@@ -1,6 +1,6 @@
 # Option
 
-Heloooooooooo
+A custom option web component for BIM applications. HTML tag: bim-option
 
 ## Extends
 
@@ -197,6 +197,18 @@ const option = document.createElement('bim-option');
 option.vertical = true;
 document.body.appendChild(option);
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

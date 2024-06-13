@@ -1,6 +1,10 @@
 # Button
 
-Heloooooooooo
+A custom button web component for BIM applications. HTML tag: bim-button
+
+## Fires
+
+click - Fired when the button is clicked.
 
 ## Extends
 
@@ -263,3 +267,15 @@ const button = document.createElement('bim-button');
          button.label = 'Click me';
          button.vertical = true;
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`

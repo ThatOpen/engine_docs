@@ -1,6 +1,10 @@
 # ColorInput
 
-Heloooooooooo
+A custom color input web component for BIM applications. HTML tag: bim-color-input
+
+## Fires
+
+input - Fired when the color input changes.
 
 ## Extends
 
@@ -168,6 +172,18 @@ false
 const colorInput = document.createElement('bim-color-input');
 colorInput.vertical = true;
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

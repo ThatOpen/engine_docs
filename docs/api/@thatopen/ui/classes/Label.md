@@ -1,6 +1,6 @@
 # Label
 
-Heloooooooooo
+A custom label web component for BIM applications. HTML tag: bim-label
 
 ## Extends
 
@@ -142,3 +142,15 @@ const labelComponent = document.createElement('bim-label');
 labelComponent.vertical = true;
 document.body.appendChild(labelComponent);
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`

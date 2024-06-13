@@ -1,6 +1,6 @@
 # Dropdown
 
-Heloooooooooo
+A custom dropdown web component for BIM applications.
 
 ## Extends
 
@@ -169,6 +169,18 @@ const dropdown = document.createElement('bim-dropdown');
 dropdown.vertical = true;
 ```
 
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`[]
+
+CSS styles for the component.
+
+#### Overrides
+
+`Component.styles`
+
 ## Accessors
 
 ### value
@@ -242,7 +254,7 @@ Creates a new UI component instance based on the provided template and initial s
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `template` | `StatefullComponent`\<`S`\> | The stateful component template function. |
+| `template` | [`StatefullComponent`](../type-aliases/StatefullComponent.md)\<`S`\> | The stateful component template function. |
 | `state` | `S` | The initial state of the component. |
 
 ##### Returns
@@ -271,7 +283,7 @@ Creates a new UI component instance based on the provided template and initial s
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `template` | `StatelessComponent` | The stateless component template function. |
+| `template` | [`StatelessComponent`](../type-aliases/StatelessComponent.md) | The stateless component template function. |
 
 ##### Returns
 

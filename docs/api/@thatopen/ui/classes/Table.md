@@ -1,6 +1,6 @@
 # Table
 
-Heloooooooooo
+A custom table web component for BIM applications. HTML tag: bim-table
 
 ## Extends
 
@@ -10,7 +10,7 @@ Heloooooooooo
 
 ### dataTransform
 
-> **dataTransform**: `TableDataTransform` = `{}`
+> **dataTransform**: [`TableDataTransform`](../interfaces/TableDataTransform.md) = `{}`
 
 A property representing the rules for transforming table data.
 The keys of the object are the column names, and the values are functions that define the transformation logic.
@@ -61,7 +61,7 @@ This function is used to determine whether a given row of data should be include
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `queryString` | `string` | The search string used to filter the data. |
-| `data` | `TableGroupData` | The data row to be filtered. |
+| `data` | [`TableGroupData`](../interfaces/TableGroupData.md) | The data row to be filtered. |
 
 #### Returns
 
@@ -136,6 +136,18 @@ false
 ```typescript
 table.preserveStructureOnFilter = true;
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`[]
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 
@@ -212,7 +224,7 @@ table.data = data;
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `value` | `TableGroupData`[] | An array of `TableGroupData` objects representing the table data. |
+| `value` | [`TableGroupData`](../interfaces/TableGroupData.md)[] | An array of `TableGroupData` objects representing the table data. |
 
 ***
 
@@ -268,7 +280,7 @@ A string containing the TSV representation of the table data.
 
 ### value
 
-> `get` **value**(): `TableGroupData`[]
+> `get` **value**(): [`TableGroupData`](../interfaces/TableGroupData.md)[]
 
 Getter for the `value` property.
 Returns the filtered data if a search string is provided, otherwise returns the original data.
@@ -282,7 +294,7 @@ console.log(tableValue); // Output: The filtered or original data.
 
 #### Returns
 
-`TableGroupData`[]
+[`TableGroupData`](../interfaces/TableGroupData.md)[]
 
 ## Methods
 

@@ -786,11 +786,6 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/ui/classes/ContextMenu",
-            "label": "ContextMenu"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/ui/classes/Dropdown",
             "label": "Dropdown"
           },
@@ -813,6 +808,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/classes/Label",
             "label": "Label"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/classes/Manager",
+            "label": "Manager"
           },
           {
             "type": "doc",
@@ -887,6 +887,11 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/CellCreatedEventDetail",
+            "label": "CellCreatedEventDetail"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/interfaces/ColumnData",
             "label": "ColumnData"
           },
@@ -907,8 +912,48 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/Layouts",
+            "label": "Layouts"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/ManagerConfig",
+            "label": "ManagerConfig"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/interfaces/QueryGroup",
             "label": "QueryGroup"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/RowCreatedEventDetail",
+            "label": "RowCreatedEventDetail"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/TableDataTransform",
+            "label": "TableDataTransform"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/TableGroupData",
+            "label": "TableGroupData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/TableGroupTemplate",
+            "label": "TableGroupTemplate"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/TableRowData",
+            "label": "TableRowData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/TableRowTemplate",
+            "label": "TableRowTemplate"
           }
         ]
       },
@@ -935,6 +980,16 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/QueryOperators",
             "label": "QueryOperators"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/StatefullComponent",
+            "label": "StatefullComponent"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/StatelessComponent",
+            "label": "StatelessComponent"
           }
         ]
       }

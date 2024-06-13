@@ -1,6 +1,6 @@
 # Toolbar
 
-Heloooooooooo
+A custom toolbar web component for BIM applications. HTML tag: bim-toolbar
 
 ## Extends
 
@@ -21,6 +21,18 @@ When `labelsHidden` is `false`, labels in the toolbar sections will be visible.
 ```ts
 false
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

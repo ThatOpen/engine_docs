@@ -2,4 +2,4 @@
 
 > **QueryCondition**: `"="` \| `">"` \| `">="` \| `"<"` \| `"<="` \| `"?"` \| `"/"` \| `"#"`
 
-Heloooooooooo
+Represents a condition used in query building.

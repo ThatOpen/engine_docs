@@ -1,6 +1,6 @@
 # Selector
 
-Heloooooooooo
+A custom selector web component for BIM applications. HTML tag: bim-selector
 
 ## Extends
 
@@ -10,6 +10,18 @@ Heloooooooooo
 
 - [`HasValue`](../interfaces/HasValue.md)
 - [`HasName`](../interfaces/HasName.md)
+
+## Properties
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

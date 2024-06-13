@@ -1,6 +1,6 @@
 # Tabs
 
-Heloooooooooo
+A custom tabs web component for BIM applications. HTML tag: bim-tabs
 
 ## Extends
 
@@ -33,6 +33,18 @@ Indicates whether the tab switchers are hidden or not.
 ```ts
 false
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`[]
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

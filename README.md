@@ -26,7 +26,6 @@ If you have any questions, you can also ask around in our [community](https://pe
 
 Requirements
 - `yarn@4`
-- [`gh` - github cli](https://github.com/cli/cli#installation) (make sure you've logged in with `gh auth login` once)
 
 Install all dependencies
 
@@ -45,5 +44,5 @@ yarn start
 This script clones both `components` and `fragments` repos into a `temp/` folder and generates the api docs.
 
 ```bash
-yarn build:remote
+yarn build:local
 ```

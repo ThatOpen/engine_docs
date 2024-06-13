@@ -1,6 +1,6 @@
 # Component
 
-Heloooooooooo
+A base class for UI components that utilizes the LitElement library. Provides functionality for rendering stateless and stateful components, as well as lazy loading of elements using Intersection Observer.
 
 ## Extends
 
@@ -31,7 +31,7 @@ Creates a new UI component instance based on the provided template and initial s
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `template` | `StatefullComponent`\<`S`\> | The stateful component template function. |
+| `template` | [`StatefullComponent`](../type-aliases/StatefullComponent.md)\<`S`\> | The stateful component template function. |
 | `state` | `S` | The initial state of the component. |
 
 ##### Returns
@@ -56,7 +56,7 @@ Creates a new UI component instance based on the provided template and initial s
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `template` | `StatelessComponent` | The stateless component template function. |
+| `template` | [`StatelessComponent`](../type-aliases/StatelessComponent.md) | The stateless component template function. |
 
 ##### Returns
 

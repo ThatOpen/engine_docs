@@ -1,6 +1,6 @@
 # TextInput
 
-Heloooooooooo
+A custom text input web component for BIM applications. HTML tag: bim-text-input
 
 ## Extends
 
@@ -146,6 +146,18 @@ false
 ```ts
 <bim-text-input vertical></bim-text-input>
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

@@ -1,6 +1,6 @@
 # NumberInput
 
-Heloooooooooo
+A custom number input web component for BIM applications. HTML tag: bim-number-input
 
 ## Extends
 
@@ -327,6 +327,18 @@ const numberInput = document.createElement('bim-number-input');
 numberInput.vertical = true;
 document.body.appendChild(numberInput);
 ```
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

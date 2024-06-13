@@ -1,6 +1,6 @@
 # Grid
 
-Heloooooooooo
+A custom grid web component for BIM applications. HTML tag: bim-grid
 
 ## Extends
 
@@ -62,9 +62,21 @@ document.body.appendChild(grid);
 
 ### layouts
 
-> **layouts**: `Layouts` = `{}`
+> **layouts**: [`Layouts`](../interfaces/Layouts.md) = `{}`
 
 Represents a collection of predefined grid layouts for the Grid component.
 Each layout is defined by a unique name, a grid template string, and a map of area names to HTMLElement instances.
 The grid template string defines the structure of the grid, and the area names correspond to the grid-area property of the HTMLElement instances.
 The HTMLElement instances are used to populate the grid with content.
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`

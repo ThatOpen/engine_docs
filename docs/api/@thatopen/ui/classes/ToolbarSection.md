@@ -1,6 +1,6 @@
 # ToolbarSection
 
-Heloooooooooo
+A custom toolbar section web component for BIM applications. HTML tag: bim-toolbar-section
 
 ## Extends
 
@@ -9,6 +9,18 @@ Heloooooooooo
 ## Implements
 
 - [`HasName`](../interfaces/HasName.md)
+
+## Properties
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

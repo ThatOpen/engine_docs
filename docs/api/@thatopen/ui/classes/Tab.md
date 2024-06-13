@@ -1,6 +1,6 @@
 # Tab
 
-Heloooooooooo
+A custom tab web component for BIM applications. HTML tag: bim-tab
 
 ## Extends
 
@@ -29,6 +29,18 @@ The label of the tab. This property is optional and can be used to display a cus
 > **name**: `string`
 
 The name of the tab. If not provided, a default name will be assigned based on its position in the parent element.
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

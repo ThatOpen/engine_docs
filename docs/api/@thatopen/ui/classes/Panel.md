@@ -1,6 +1,6 @@
 # Panel
 
-Heloooooooooo
+A custom panel web component for BIM applications. HTML tag: bim-panel
 
 ## Extends
 
@@ -106,6 +106,18 @@ document.body.appendChild(panel);
 #### Implementation of
 
 `HasName.name`
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`[]
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

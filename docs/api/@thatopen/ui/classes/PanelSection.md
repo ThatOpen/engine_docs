@@ -1,6 +1,6 @@
 # PanelSection
 
-Heloooooooooo
+A custom panel section web component for BIM applications. HTML tag: bim-panel-section
 
 ## Extends
 
@@ -148,6 +148,18 @@ document.body.appendChild(section);
 #### Implementation of
 
 `HasName.name`
+
+***
+
+### styles
+
+> `static` **styles**: `CSSResult`[]
+
+CSS styles for the component.
+
+#### Overrides
+
+`LitElement.styles`
 
 ## Accessors
 

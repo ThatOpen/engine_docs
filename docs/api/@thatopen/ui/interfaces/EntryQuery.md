@@ -1,3 +1,3 @@
 # EntryQuery
 
-Heloooooooooo
+Represents a single query condition.
