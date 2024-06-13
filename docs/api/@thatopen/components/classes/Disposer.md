@@ -1,6 +1,6 @@
 # Disposer
 
-A tool to safely remove meshes and geometries from memory to [prevent memory leaks](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects).
+A tool to safely remove meshes, geometries, materials and other items from memory to [prevent memory leaks](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects).
 
 ## Extends
 

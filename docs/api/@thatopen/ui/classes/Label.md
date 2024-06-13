@@ -25,7 +25,7 @@ undefined
 #### Examples
 
 ```ts
-<bim-label icon="example-icon"></bim-label>
+<bim-label icon="solar:settings-bold">My Label</bim-label>
 ```
 
 ```ts
@@ -53,7 +53,7 @@ false
 #### Examples
 
 ```ts
-<bim-label icon-hidden></bim-label>
+<bim-label icon-hidden>My Label</bim-label>
 ```
 
 ```ts
@@ -80,39 +80,12 @@ undefined
 #### Examples
 
 ```ts
-<bim-label img="path/to/image.png"></bim-label>
+<bim-label img="path/to/image.png">My Label</bim-label>
 ```
 
 ```ts
 const labelComponent = document.createElement('bim-label');
 labelComponent.img = 'path/to/image.png';
-document.body.appendChild(labelComponent);
-```
-
-***
-
-### label?
-
-> `optional` **label**: `string`
-
-Represents the text label of the component. This is the primary content displayed by the component.
-When the `label` property changes, the displayed text updates to reflect the new value. If the label is hidden (controlled by `labelHidden`), changing this property will not affect the visibility of the label.
-
-#### Default
-
-```ts
-undefined
-```
-
-#### Examples
-
-```ts
-<bim-label label="Example Label"></bim-label>
-```
-
-```ts
-const labelComponent = document.createElement('bim-label');
-labelComponent.label = 'Example Label';
 document.body.appendChild(labelComponent);
 ```
 
@@ -134,7 +107,7 @@ false
 #### Examples
 
 ```ts
-<bim-label label-hidden></bim-label>
+<bim-label label-hidden>My Label</bim-label>
 ```
 
 ```ts
@@ -161,7 +134,7 @@ false
 #### Examples
 
 ```ts
-<bim-label vertical></bim-label>
+<bim-label vertical icon="solar:settings-bold">My Label</bim-label>
 ```
 
 ```ts

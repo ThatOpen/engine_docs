@@ -1,6 +1,6 @@
 # Components
 
-The entry point of the Components library. It can create and access all the components of the library globally, update all the updatable components automatically and dispose all the components, preventing memory leaks.
+The entry point of the Components library. It can create, delete and access all the components of the library globally, update all the updatable components automatically and dispose all the components, preventing memory leaks.
 
 ## Implements
 
@@ -40,7 +40,7 @@ The keys are UUIDs and the values are instances of the components.
 
 ### release
 
-> `static` `readonly` **release**: `"2.0.8"` = `"2.0.8"`
+> `static` `readonly` **release**: `"2.0.12"` = `"2.0.12"`
 
 The version of the @thatopen/components library.
 

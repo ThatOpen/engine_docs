@@ -1,6 +1,6 @@
 # SimplePlane
 
-Each of the planes created by the clipper.
+Each of the clipping planes created by the clipper.
 
 ## Implements
 

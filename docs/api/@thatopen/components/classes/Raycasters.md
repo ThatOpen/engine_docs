@@ -1,6 +1,6 @@
 # Raycasters
 
-A component that manages raycasters for different worlds. It uses a Map to store raycasters for each world, and automatically disposes them when the world is disposed.
+A component that manages a raycaster for each world and automatically disposes it when its corresponding world is disposed. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Raycasters). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Raycasters).
 
 ## Extends
 
@@ -26,7 +26,7 @@ A component that manages raycasters for different worlds. It uses a Map to store
 
 ### list
 
-> **list**: `Map`\<`string`, `SimpleRaycaster`\>
+> **list**: `Map`\<`string`, [`SimpleRaycaster`](SimpleRaycaster.md)\>
 
 A Map that stores raycasters for each world.
 The key is the world's UUID, and the value is the corresponding SimpleRaycaster instance.
@@ -91,7 +91,7 @@ If a SimpleRaycaster instance exists for the given world, it will be disposed an
 
 ### get()
 
-> **get**(`world`): `SimpleRaycaster`
+> **get**(`world`): [`SimpleRaycaster`](SimpleRaycaster.md)
 
 Retrieves a SimpleRaycaster instance for the given world.
 If a SimpleRaycaster instance already exists for the world, it will be returned.
@@ -105,7 +105,7 @@ Otherwise, a new SimpleRaycaster instance will be created and added to the list.
 
 #### Returns
 
-`SimpleRaycaster`
+[`SimpleRaycaster`](SimpleRaycaster.md)
 
 The SimpleRaycaster instance for the given world.
 

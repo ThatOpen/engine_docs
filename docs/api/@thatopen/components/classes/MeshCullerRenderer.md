@@ -1,6 +1,6 @@
 # MeshCullerRenderer
 
-A renderer to determine a mesh visibility on screen.
+A renderer to hide/show meshes depending on their visibility from the user's point of view.
 
 ## Extends
 

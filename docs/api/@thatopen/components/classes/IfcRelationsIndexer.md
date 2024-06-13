@@ -1,6 +1,6 @@
 # IfcRelationsIndexer
 
-Indexer for IFC entities, facilitating the indexing and retrieval of IFC entity relationships. It is designed to process models properties by indexing their IFC entities' relations based on predefined inverse attributes, and provides methods to query these relations.
+Indexer component for IFC entities, facilitating the indexing and retrieval of IFC entity relationships. It is designed to process models properties by indexing their IFC entities' relations based on predefined inverse attributes, and provides methods to query these relations. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcRelationsIndexer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcRelationsIndexer).
 
 ## Extends
 
@@ -12,6 +12,18 @@ Indexer for IFC entities, facilitating the indexing and retrieval of IFC entity 
 
 ## Properties
 
+### enabled
+
+> **enabled**: `boolean` = `true`
+
+[Component.enabled](Component.md#enabled)
+
+#### Overrides
+
+[`Component`](Component.md) . [`enabled`](Component.md#enabled)
+
+***
+
 ### onDisposed
 
 > `readonly` **onDisposed**: [`Event`](Event.md)\<`string`\>
@@ -21,6 +33,25 @@ Indexer for IFC entities, facilitating the indexing and retrieval of IFC entity 
 #### Implementation of
 
 [`Disposable`](../interfaces/Disposable.md) . [`onDisposed`](../interfaces/Disposable.md#ondisposed)
+
+***
+
+### onRelationsIndexed
+
+> `readonly` **onRelationsIndexed**: [`Event`](Event.md)\<`object`\>
+
+Event triggered when relations for a model have been indexed.
+This event provides the model's UUID and the relations map generated for that model.
+
+#### Type declaration
+
+##### modelID
+
+> **modelID**: `string`
+
+##### relationsMap
+
+> **relationsMap**: `RelationsMap`
 
 ***
 
@@ -35,15 +66,22 @@ representing a specific relation type, and the value is an array of expressIDs o
 that are related through that relation type. This structure allows for efficient querying
 of entity relationships within a model.
 
+***
+
+### uuid
+
+> `static` `readonly` **uuid**: `"23a889ab-83b3-44a4-8bee-ead83438370b"`
+
+A unique identifier for the component.
+This UUID is used to register the component within the Components system.
+
 ## Methods
 
 ### dispose()
 
 > **dispose**(): `void`
 
-Disposes the component, cleaning up resources and detaching event listeners.
-This ensures that the component is properly cleaned up and does not leave behind any
-references that could prevent garbage collection.
+[Disposable.dispose](../interfaces/Disposable.md#dispose)
 
 #### Returns
 

@@ -114,7 +114,9 @@ Keep in mind that the browser can't access the file of your computer directly, s
 
 ```js
 async function loadIfc() {
-  const file = await fetch("https://thatopen.github.io/engine_components/resources/small.ifc");
+  const file = await fetch(
+    "https://thatopen.github.io/engine_components/resources/small.ifc",
+  );
   const data = await file.arrayBuffer();
   const buffer = new Uint8Array(data);
   const model = await fragmentIfcLoader.load(buffer);

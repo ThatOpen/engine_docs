@@ -66,7 +66,9 @@ This is not compulsory, as the data will come from an .ifc file, not from fragme
 
 ```js
 const fragments = new OBC.FragmentsManager(components);
-const fragFile = await fetch("https://thatopen.github.io/engine_components/resources/small.frag");
+const fragFile = await fetch(
+  "https://thatopen.github.io/engine_components/resources/small.frag",
+);
 const fragData = await fragFile.arrayBuffer();
 const fragBuffer = new Uint8Array(fragData);
 const model = fragments.load(fragBuffer);
@@ -187,7 +189,9 @@ Great! Now that we have everything setup, is time to finally convert the IFC fil
 
 ```js
 async function processFile() {
-  const fetchedIfc = await fetch("https://thatopen.github.io/engine_components/resources/small.ifc");
+  const fetchedIfc = await fetch(
+    "https://thatopen.github.io/engine_components/resources/small.ifc",
+  );
   const ifcBuffer = await fetchedIfc.arrayBuffer();
   // We will need this information later to also convert the properties
   const ifcArrayBuffer = new Uint8Array(ifcBuffer);

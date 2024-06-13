@@ -1,6 +1,6 @@
 # Grids
 
-A component that manages and provides access to multiple grid instances. Each grid is associated with a unique world.
+A component that manages grid instances. Each grid is associated with a unique world. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Grids). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Grids).
 
 ## Extends
 
@@ -14,7 +14,7 @@ A component that manages and provides access to multiple grid instances. Each gr
 
 ### config
 
-> **config**: `Required`\<`GridConfig`\>
+> **config**: `Required` \<[`GridConfig`](../interfaces/GridConfig.md)\>
 
 The default configuration for grid creation.
 
@@ -34,7 +34,7 @@ The default configuration for grid creation.
 
 ### list
 
-> **list**: `Map`\<`string`, `SimpleGrid`\>
+> **list**: `Map`\<`string`, [`SimpleGrid`](SimpleGrid.md)\>
 
 A map of world UUIDs to their corresponding grid instances.
 
@@ -63,7 +63,7 @@ This UUID is used to register the component within the Components system.
 
 ### create()
 
-> **create**(`world`): `SimpleGrid`
+> **create**(`world`): [`SimpleGrid`](SimpleGrid.md)
 
 Creates a new grid for the given world.
 Throws an error if a grid already exists for the world.
@@ -76,7 +76,7 @@ Throws an error if a grid already exists for the world.
 
 #### Returns
 
-`SimpleGrid`
+[`SimpleGrid`](SimpleGrid.md)
 
 The newly created grid.
 

@@ -1,6 +1,6 @@
 # `abstract` BaseCamera
 
-Abstract class representing a camera in the 3D world. All cameras should use this class as a base.
+Abstract class representing a camera in a 3D world. All cameras should use this class as a base.
 
 ## Extends
 

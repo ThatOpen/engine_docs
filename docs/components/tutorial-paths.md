@@ -33,7 +33,7 @@ Basics are great, but that's not enough to **build professional 3D apps**. Let's
 
 - 📙 [Cast shadows](../Tutorials/Components/Front/ShadowDropper.mdx)
 
-- 📙 [Create clipping edges](../Tutorials/Components/Front/EdgesClipper.mdx)
+- 📙 [Create clipping edges](../Tutorials/Components/Front/ClipEdges.mdx)
 
 - 📙 [Measure distances](../Tutorials/Components/Front/LengthMeasurement.mdx)
 

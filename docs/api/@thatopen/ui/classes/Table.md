@@ -8,11 +8,11 @@ Heloooooooooo
 
 ## Properties
 
-### definition
+### dataTransform
 
-> **definition**: `TableDefinition` = `{}`
+> **dataTransform**: `TableDataTransform` = `{}`
 
-A property representing the definition for transforming table data.
+A property representing the rules for transforming table data.
 The keys of the object are the column names, and the values are functions that define the transformation logic.
 
 #### Default Value
@@ -60,7 +60,7 @@ This function is used to determine whether a given row of data should be include
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `queryString` | `string` | The search string or query used to filter the data. |
+| `queryString` | `string` | The search string used to filter the data. |
 | `data` | `TableGroupData` | The data row to be filtered. |
 
 #### Returns
@@ -239,9 +239,9 @@ table.queryString = "column1="Jhon Doe" & column2=20";
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `_value` | `null` \| `string` | The search string or `null` to clear the search. |
+| Parameter | Type |
+| :------ | :------ |
+| `_value` | `null` \| `string` |
 
 ***
 

@@ -3526,21 +3526,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@thatopen/components-front@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@thatopen/components-front@npm:2.0.2"
+"@thatopen/components-front@npm:~2.0.0":
+  version: 2.0.9
+  resolution: "@thatopen/components-front@npm:2.0.9"
   dependencies:
-    "@thatopen/components": "npm:2.0.1"
+    "@thatopen/components": "npm:~2.0.0"
     camera-controls: "npm:2.7.3"
     dexie: "npm:^4.0.4"
     earcut: "npm:^2.2.4"
     n8ao: "npm:1.5.1"
     postprocessing: "npm:6.34.2"
   peerDependencies:
-    "@thatopen/fragments": 2.0.0
+    "@thatopen/fragments": ~2.0.0
     three: ^0.160.1
     web-ifc: 0.0.53
-  checksum: 10c0/37141269b5f7dfb394d832ecdd9c990e9b0e03c4e2c5960398a2bbdbef2588d46827a95cd4d60ddb67b562bcf05888d451b9132a8e37d7ec392ffff5420a8808
+  checksum: 10c0/d23a92d0ccbf5b3ec0e9a7c30733556a0539cc0fa3fd1f221ae4330e35646b93c0a1b4dd8e542094c9b71ff0b6c20e033fc30b9811173ebf85db2c82b5a93e5f
   languageName: node
   linkType: hard
 
@@ -3548,7 +3548,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@thatopen/components-front@workspace:temp/engine_components/packages/front"
   dependencies:
-    "@thatopen/components": "npm:~2.0.0"
+    "@thatopen/components": "npm:2.0.11"
     "@thatopen/fragments": "npm:~2.0.0"
     "@thatopen/ui": "npm:~2.0.0"
     "@thatopen/ui-obc": "npm:~2.0.0"
@@ -3568,17 +3568,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@thatopen/components@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@thatopen/components@npm:2.0.1"
+"@thatopen/components@npm:2.0.11":
+  version: 2.0.11
+  resolution: "@thatopen/components@npm:2.0.11"
   dependencies:
     camera-controls: "npm:2.7.3"
     three-mesh-bvh: "npm:0.7.0"
   peerDependencies:
-    "@thatopen/fragments": 2.0.0
+    "@thatopen/fragments": ~2.0.0
     three: ^0.160.1
     web-ifc: 0.0.53
-  checksum: 10c0/48b864111c3a4e61e3ad7df991b01c5ebb39cb299f81e920c79a70d521d0a7d64df6e9eb9f69bc8df3963de38a2526f6ae8ab64cc032ebd5b5900750b059ecaf
+  checksum: 10c0/bd5320c31c5a54e1794d92d2dc416d660779a8c7231f67f4ab4e42f257b22712e8647d0d3eb57234158084200828e9e0a80bc707bf49cba5d1c36e3ac7ab8dc1
   languageName: node
   linkType: hard
 
@@ -3614,18 +3614,6 @@ __metadata:
     web-ifc: 0.0.53
   languageName: unknown
   linkType: soft
-
-"@thatopen/fragments@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@thatopen/fragments@npm:2.0.0"
-  dependencies:
-    flatbuffers: "npm:23.3.3"
-    three-mesh-bvh: "npm:0.7.0"
-  peerDependencies:
-    three: ^0.160.1
-  checksum: 10c0/4e4f3967117f32d24d409ea677e186b44dc96a8f3b436d7c76e75ad064fd56e09be0ca609f9fb8781572b10783da6e98b25e8011b9683346cda77ff9ea875a17
-  languageName: node
-  linkType: hard
 
 "@thatopen/fragments@npm:~2.0.0":
   version: 2.0.4
@@ -3688,32 +3676,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@thatopen/ui-obc@workspace:temp/engine_ui-components/packages/obc"
   dependencies:
-    "@thatopen/components": "npm:2.0.1"
-    "@thatopen/components-front": "npm:2.0.2"
-    "@thatopen/fragments": "npm:2.0.0"
-    "@thatopen/ui": "npm:2.0.0"
+    "@thatopen/components": "npm:~2.0.0"
+    "@thatopen/components-front": "npm:~2.0.0"
+    "@thatopen/fragments": "npm:~2.0.0"
+    "@thatopen/ui": "npm:~2.0.0"
     "@types/three": "npm:0.160.0"
     lit: "npm:3.1.2"
     three: "npm:0.160.1"
     web-ifc: "npm:0.0.53"
   peerDependencies:
-    "@thatopen/components": 2.0.1
-    "@thatopen/components-front": 2.0.2
+    "@thatopen/components": ~2.0.0
+    "@thatopen/components-front": ~2.0.0
     three: 0.160.1
     web-ifc: 0.0.53
   languageName: unknown
   linkType: soft
-
-"@thatopen/ui@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@thatopen/ui@npm:2.0.0"
-  dependencies:
-    "@floating-ui/dom": "npm:1.6.3"
-    iconify-icon: "npm:2.0.0"
-    lit: "npm:3.1.2"
-  checksum: 10c0/95095ae27e7b99a56e8ea26c4708e763f8622c58e108b70b1ea12eaf71411d6cab1c9c93919855a75225b2b40b135ba08ae8da460fac34e4cffbf24f6b323ca9
-  languageName: node
-  linkType: hard
 
 "@thatopen/ui@npm:~2.0.0":
   version: 2.0.8

@@ -16,9 +16,17 @@ Components are the building blocks of this library. Components are singleton ele
 - [`Cullers`](Cullers.md)
 - [`MiniMaps`](MiniMaps.md)
 - [`BoundingBoxer`](BoundingBoxer.md)
+- [`Classifier`](Classifier.md)
+- [`Exploder`](Exploder.md)
+- [`Hider`](Hider.md)
+- [`IfcLoader`](IfcLoader.md)
 - [`FragmentsManager`](FragmentsManager.md)
+- [`IfcGeometryTiler`](IfcGeometryTiler.md)
+- [`IfcPropertiesTiler`](IfcPropertiesTiler.md)
 - [`IfcJsonExporter`](IfcJsonExporter.md)
 - [`IfcRelationsIndexer`](IfcRelationsIndexer.md)
+- [`IfcPropertiesManager`](IfcPropertiesManager.md)
+- [`MeasurementUtils`](MeasurementUtils.md)
 
 ## Properties
 

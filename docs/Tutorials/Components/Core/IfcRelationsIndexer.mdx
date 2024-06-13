@@ -63,7 +63,9 @@ If you are not familiar with IFC loading, check out the IFC Loader tutorial firs
 ```js
 const ifcLoader = components.get(OBC.IfcLoader);
 await ifcLoader.setup();
-const file = await fetch("https://thatopen.github.io/engine_components/resources/small.ifc");
+const file = await fetch(
+  "https://thatopen.github.io/engine_components/resources/small.ifc",
+);
 const buffer = await file.arrayBuffer();
 const typedArray = new Uint8Array(buffer);
 const model = await ifcLoader.load(typedArray);
@@ -137,7 +139,9 @@ What do we gain with having a pre-processed relations index if we can't use it a
 ```js
 // Lets first delete the existing model relations
 delete indexer.relationMaps[model.uuid];
-const relationsIndexFile = await fetch("https://thatopen.github.io/engine_components/resources/small-relations.json");
+const relationsIndexFile = await fetch(
+  "https://thatopen.github.io/engine_components/resources/small-relations.json",
+);
 const relationsIndex = indexer.getRelationsMapFromJSON(
   await relationsIndexFile.text(),
 );

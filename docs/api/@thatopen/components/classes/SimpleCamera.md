@@ -1,6 +1,6 @@
 # SimpleCamera
 
-A basic camera that uses [yomotsu's cameracontrols](https://github.com/yomotsu/camera-controls) to easily control the camera in 2D and 3D. Check out it's API to find out what features it offers.
+A basic camera that uses [yomotsu's cameracontrols](https://github.com/yomotsu/camera-controls) to control the camera in 2D and 3D. Check out it's API to find out what features it offers.
 
 ## Extends
 

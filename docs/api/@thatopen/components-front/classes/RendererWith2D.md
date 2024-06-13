@@ -9,3 +9,11 @@ A basic renderer capable of rendering 3D and 2D objects ([Objec3Ds](https://thre
 ## Extended by
 
 - [`PostproductionRenderer`](PostproductionRenderer.md)
+
+## Properties
+
+### three2D
+
+> **three2D**: `CSS2DRenderer`
+
+This renderer is used to render 2D objects (CSS2DObjects) in a 3D scene.

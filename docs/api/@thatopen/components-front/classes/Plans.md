@@ -1,6 +1,6 @@
 # Plans
 
-Helper to control the camera and easily define and navigate 2D floor plans.
+Component to easily define and navigate 2D floor plans. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Plans). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Plans).
 
 ## Extends
 
@@ -14,7 +14,7 @@ Helper to control the camera and easily define and navigate 2D floor plans.
 
 ### currentPlan
 
-> **currentPlan**: `null` \| `PlanView` = `null`
+> **currentPlan**: `null` \| [`PlanView`](../interfaces/PlanView.md) = `null`
 
 The floorplan that is currently selected.
 
@@ -36,15 +36,77 @@ The offset from the clipping planes to their respective floor plan elevation.
 
 ***
 
+### enabled
+
+> **enabled**: `boolean` = `false`
+
+OBC.Component.enabled
+
+#### Overrides
+
+`OBC.Component.enabled`
+
+***
+
+### list
+
+> **list**: [`PlanView`](../interfaces/PlanView.md)[] = `[]`
+
+A list of all the floor plans created.
+Each floor plan is represented by a [PlanView](../interfaces/PlanView.md) object.
+
+***
+
 ### onDisposed
 
 > `readonly` **onDisposed**: `Event`\<`unknown`\>
 
-Disposable.onDisposed
+OBC.Disposable.onDisposed
 
 #### Implementation of
 
 `OBC.Disposable.onDisposed`
+
+***
+
+### onExited
+
+> `readonly` **onExited**: `Event`\<`unknown`\>
+
+Event triggered when the user exits the floor plan view.
+
+***
+
+### onNavigated
+
+> `readonly` **onNavigated**: `Event`\<`object`\>
+
+Event triggered when the user navigates to a different floor plan.
+The event provides the id of the floor plan the user navigated to.
+
+#### Type declaration
+
+##### id
+
+> **id**: `string`
+
+***
+
+### world?
+
+> `optional` **world**: `World`
+
+A reference to the world in which the floor plans are displayed.
+This is used to access the camera and other relevant components.
+
+***
+
+### uuid
+
+> `static` `readonly` **uuid**: `"a80874aa-1c93-43a4-80f2-df346da086b1"`
+
+A unique identifier for the component.
+This UUID is used to register the component within the Components system.
 
 ## Methods
 
@@ -52,17 +114,25 @@ Disposable.onDisposed
 
 > **create**(`config`): `void`
 
-Creates a new floor plan in the navigator.
+Creates a new floor plan based on the provided configuration.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `config` | `PlanView` | Necessary data to initialize the floor plan. |
+| `config` | [`PlanView`](../interfaces/PlanView.md) | The configuration object for the new floor plan. |
 
 #### Returns
 
 `void`
+
+#### Throws
+
+Will throw an error if the world is not set before creating the clipping planes.
+
+#### Throws
+
+Will throw a warning if a floor plan with the same id already exists.
 
 ***
 
@@ -70,7 +140,7 @@ Creates a new floor plan in the navigator.
 
 > **dispose**(): `void`
 
-Disposable.dispose
+OBC.Disposable.dispose
 
 #### Returns
 
@@ -86,13 +156,13 @@ Disposable.dispose
 
 > **exitPlanView**(`animate`): `Promise`\<`void`\>
 
-Deactivate navigator and go back to the previous view.
+Exits the floor plan view and returns to the 3D view.
 
 #### Parameters
 
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `animate` | `boolean` | `false` | Whether to animate the camera transition. |
+| `animate` | `boolean` | `false` | Whether to animate the camera movement. Default is false. |
 
 #### Returns
 
@@ -100,18 +170,40 @@ Deactivate navigator and go back to the previous view.
 
 ***
 
+### generate()
+
+> **generate**(`model`): `Promise`\<`void`\>
+
+Generates floor plans from the provided IFC model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `FragmentsGroup` | The IFC model from which to generate floor plans. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Throws
+
+Will throw an error if the model does not have properties or if floor plans are not found.
+
+***
+
 ### goTo()
 
 > **goTo**(`id`, `animate`): `Promise`\<`void`\>
 
-Make the navigator go to the specified floor plan.
+Navigates to the floor plan with the specified id.
 
 #### Parameters
 
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `id` | `string` | `undefined` | Floor plan to go to. |
-| `animate` | `boolean` | `false` | Whether to animate the camera transition. |
+| `id` | `string` | `undefined` | The id of the floor plan to navigate to. |
+| `animate` | `boolean` | `false` | Whether to animate the camera movement. Default is false. |
 
 #### Returns
 

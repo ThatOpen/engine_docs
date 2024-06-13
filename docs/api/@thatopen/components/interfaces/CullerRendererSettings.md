@@ -1,6 +1,6 @@
 # CullerRendererSettings
 
-Interface for settings to configure the CullerRenderer.
+Settings to configure the CullerRenderer.
 
 ## Properties
 

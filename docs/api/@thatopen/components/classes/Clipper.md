@@ -1,6 +1,6 @@
 # Clipper
 
-A lightweight component to easily create and handle [clipping planes](https://threejs.org/docs/#api/en/materials/Material.clippingPlanes).
+A lightweight component to easily create, delete and handle [clipping planes](https://threejs.org/docs/#api/en/materials/Material.clippingPlanes). 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Clipper). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Clipper).
 
 ## Param
 

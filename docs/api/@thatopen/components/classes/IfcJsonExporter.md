@@ -1,6 +1,6 @@
 # IfcJsonExporter
 
-Object to export all the properties from an IFC to a JS object.
+Component to export all the properties from an IFC to a JS object. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcJsonExporter). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcJsonExporter).
 
 ## Extends
 
@@ -18,6 +18,15 @@ Object to export all the properties from an IFC to a JS object.
 
 [`Component`](Component.md) . [`enabled`](Component.md#enabled)
 
+***
+
+### uuid
+
+> `static` `readonly` **uuid**: `"b32c4332-cd67-436e-ba7f-196646c7a635"`
+
+A unique identifier for the component.
+This UUID is used to register the component within the Components system.
+
 ## Methods
 
 ### export()
@@ -30,7 +39,7 @@ Exports all the properties of an IFC into an array of JS objects.
 
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `webIfc` | `IfcAPI` | `undefined` | The instance of [web-ifc][https://github.com/ThatOpen/engine_web-ifc](https://github.com/ThatOpen/engine_web-ifc) to use. |
+| `webIfc` | `IfcAPI` | `undefined` | The instance of [web-ifc](https://github.com/ThatOpen/engine_web-ifc) to use. |
 | `modelID` | `number` | `undefined` | ID of the IFC model whose properties to extract. |
 | `indirect` | `boolean` | `false` | whether to get the indirect relationships as well. |
 | `recursiveSpatial` | `boolean` | `true` | whether to get the properties of spatial items recursively to make the location data available (e.g. absolute position of building). |

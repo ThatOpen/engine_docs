@@ -1,6 +1,6 @@
 # Worlds
 
-A class representing a collection of worlds within a game engine. It manages the creation, deletion, and update of worlds.
+A class representing a collection of worlds within a game engine. It manages the creation, deletion, and update of worlds. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Worlds). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Worlds).
 
 ## Extends
 

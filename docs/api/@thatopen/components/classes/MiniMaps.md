@@ -1,6 +1,6 @@
 # MiniMaps
 
-A component that manages multiple MiniMap instances, each associated with a unique world ID.
+A component that manages multiple [MiniMap](MiniMap.md) instances, each associated with a unique world ID. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/MiniMap). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/MiniMaps).
 
 ## Extends
 
@@ -27,9 +27,9 @@ A component that manages multiple MiniMap instances, each associated with a uniq
 
 ### list
 
-> **list**: `Map`\<`string`, `MiniMap`\>
+> **list**: `Map`\<`string`, [`MiniMap`](MiniMap.md)\>
 
-A collection of MiniMap instances, each associated with a unique world ID.
+A collection of [MiniMap](MiniMap.md) instances, each associated with a unique world ID.
 
 ***
 
@@ -80,26 +80,26 @@ This UUID is used to register the component within the Components system.
 
 ### create()
 
-> **create**(`world`): `MiniMap`
+> **create**(`world`): [`MiniMap`](MiniMap.md)
 
-Creates a new MiniMap instance associated with the given world.
-If a MiniMap instance already exists for the given world, an error will be thrown.
+Creates a new [MiniMap](MiniMap.md) instance associated with the given world.
+If a [MiniMap](MiniMap.md) instance already exists for the given world, an error will be thrown.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `world` | [`World`](../interfaces/World.md) | The [World](../interfaces/World.md) for which to create a MiniMap instance. |
+| `world` | [`World`](../interfaces/World.md) | The [World](../interfaces/World.md) for which to create a [MiniMap](MiniMap.md) instance. |
 
 #### Returns
 
-`MiniMap`
+[`MiniMap`](MiniMap.md)
 
-The newly created MiniMap instance.
+The newly created [MiniMap](MiniMap.md) instance.
 
 #### Throws
 
-Will throw an error if a MiniMap instance already exists for the given world.
+Will throw an error if a [MiniMap](MiniMap.md) instance already exists for the given world.
 
 ***
 
@@ -107,14 +107,14 @@ Will throw an error if a MiniMap instance already exists for the given world.
 
 > **delete**(`id`): `void`
 
-Deletes a MiniMap instance associated with the given world ID.
-If a MiniMap instance does not exist for the given ID, nothing happens.
+Deletes a [MiniMap](MiniMap.md) instance associated with the given world ID.
+If a [MiniMap](MiniMap.md) instance does not exist for the given ID, nothing happens.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `id` | `string` | The unique identifier of the world for which to delete the MiniMap instance. |
+| `id` | `string` | The unique identifier of the world for which to delete the [MiniMap](MiniMap.md) instance. |
 
 #### Returns
 

@@ -1,6 +1,6 @@
 # Cullers
 
-A component that manages and provides culling functionality for meshes in a 3D scene.
+A component that provides culling functionality for meshes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Cullers). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Cullers).
 
 ## Extends
 
