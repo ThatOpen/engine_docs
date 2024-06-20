@@ -50,6 +50,7 @@
 | [SimpleRenderer](classes/SimpleRenderer.md) | A basic renderer capable of rendering [Objec3Ds](https://threejs.org/docs/#api/en/core/Object3D). |
 | [SimpleScene](classes/SimpleScene.md) | A basic 3D [scene](https://threejs.org/docs/#api/en/scenes/Scene) to add objects hierarchically, and easily dispose them when you are finished with it. |
 | [SimpleWorld](classes/SimpleWorld.md) | A class representing a simple world in a 3D environment. It extends the Base class and implements the World interface. |
+| [VertexPicker](classes/VertexPicker.md) | A class that provides functionality for picking vertices in a 3D scene. |
 | [Worlds](classes/Worlds.md) | A class representing a collection of worlds within a game engine. It manages the creation, deletion, and update of worlds. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Worlds). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Worlds). |
 
 ## Interfaces
@@ -74,6 +75,7 @@
 | [StreamedAsset](interfaces/StreamedAsset.md) | A streamed asset, which consists of multiple geometries. Each geometry in the asset is identified by a unique number (geometryID), and contains information about its transformation and color. |
 | [StreamedGeometries](interfaces/StreamedGeometries.md) | A dictionary of geometries streamed from a server. Each geometry is identified by a unique number (id), and contains information about its bounding box, whether it has holes, and an optional file path for the geometry data. |
 | [Updateable](interfaces/Updateable.md) | Whether this component should be updated each frame. |
+| [VertexPickerConfig](interfaces/VertexPickerConfig.md) | Configuration interface for the VertexPicker component. |
 | [World](interfaces/World.md) | Represents a 3D world with meshes, scene, camera, renderer, and other properties. |
 
 ## Type Aliases

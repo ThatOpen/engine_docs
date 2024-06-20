@@ -27,6 +27,7 @@ Components are the building blocks of this library. Components are singleton ele
 - [`IfcRelationsIndexer`](IfcRelationsIndexer.md)
 - [`IfcPropertiesManager`](IfcPropertiesManager.md)
 - [`MeasurementUtils`](MeasurementUtils.md)
+- [`VertexPicker`](VertexPicker.md)
 
 ## Properties
 

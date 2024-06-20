@@ -241,6 +241,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/VertexPicker",
+            "label": "VertexPicker"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/Worlds",
             "label": "Worlds"
           }
@@ -339,6 +344,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/Updateable",
             "label": "Updateable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/VertexPickerConfig",
+            "label": "VertexPickerConfig"
           },
           {
             "type": "doc",
@@ -482,6 +492,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/FaceMeasurement",
             "label": "FaceMeasurement"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/GraphicVertexPicker",
+            "label": "GraphicVertexPicker"
           },
           {
             "type": "doc",
