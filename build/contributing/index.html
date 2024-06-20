@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">🤝 Get involved | That Open docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.thatopen.com/img/logo.svg"><meta data-rh="true" name="twitter:image" content="https://docs.thatopen.com/img/logo.svg"><meta data-rh="true" property="og:url" content="https://docs.thatopen.com/contributing"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="🤝 Get involved | That Open docs"><meta data-rh="true" name="description" content="Want to help us make this project even more amazing? Great! Contributing is easy, and on this page you&#x27;ll find a quick guide on how to do it. 👇🏻"><meta data-rh="true" property="og:description" content="Want to help us make this project even more amazing? Great! Contributing is easy, and on this page you&#x27;ll find a quick guide on how to do it. 👇🏻"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.thatopen.com/contributing"><link data-rh="true" rel="alternate" href="https://docs.thatopen.com/contributing" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.thatopen.com/contributing" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://Z3IS6MTI1S-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="That Open docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.7ab9d56a.css">
-<script src="/assets/js/runtime~main.1afd1bdb.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.217ef981.js" defer="defer"></script>
 <script src="/assets/js/main.0470130d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -43,13 +43,32 @@
 <p>Once you have asked, and got a positive answer from one of the maintainers, <strong>you can start coding</strong>! To add / edit code of the library, you will need to:</p>
 <ol>
 <li>
+<p>Install yarn using <code>npm i -g yarn</code>.</p>
+</li>
+<li>
 <p><strong>Create a fork</strong> of the repository.</p>
+</li>
+<li>
+<p>Clone your fork to your local machine.</p>
 </li>
 <li>
 <p><strong>Create a branch</strong> to work on that specific issue, and <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue" target="_blank" rel="noopener noreferrer">link that branch to the issue</a>.</p>
 </li>
 <li>
+<p>Use the command <code>yarn install</code> to install all the dependencies of that library.</p>
+</li>
+<li>
+<p>Use the command <code>yarn dev</code> to run a local server where you can see the changes you make in the corresponding <code>example.ts</code> files. To see the changes, you have 2 options:</p>
+<ol>
+<li>Run <code>yarn build</code> in the corresponding package.</li>
+<li>To see the changes in real time, you can substitute the <code>import</code> statement path of the library by <code>../..</code>. For instance, in an <code>example.ts</code> in the <code>@thatopen/components</code> package, you can substitute the line <code>import * as OBC from @thatopen/components</code> by <code>import * as OBC from ../..</code>, and you&#x27;ll see the changes you make to the code without needing to rebuild. Don&#x27;t forget to change this statement back when you are done!</li>
+</ol>
+</li>
+<li>
 <p><strong>Work on your fork</strong> of the repository locally. Please follow the <a href="/components/clean-components-guide">basic clean rules</a>!</p>
+</li>
+<li>
+<p>After making all your commits with the changes, run <code>yarn build-libraries</code> to check that you haven&#x27;t created any errors in the examples.</p>
 </li>
 <li>
 <p><strong>Create a pull request</strong>. The name should follow the <a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener noreferrer">conventional commits</a> convention. If you are not sure, check out the title past pull requests!</p>

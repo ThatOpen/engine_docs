@@ -58,13 +58,25 @@ You can ask by **opening a feature issue** in any of our repositories or **addin
 
 Once you have asked, and got a positive answer from one of the maintainers, **you can start coding**! To add / edit code of the library, you will need to:
 
-1. **Create a fork** of the repository.
+1. Install yarn using `npm i -g yarn`.
 
-2. **Create a branch** to work on that specific issue, and [link that branch to the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue).
+2. **Create a fork** of the repository.
 
-3. **Work on your fork** of the repository locally. Please follow the [basic clean rules](./components/clean-components-guide.md)!
+3. Clone your fork to your local machine.
 
-4. **Create a pull request**. The name should follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) convention. If you are not sure, check out the title past pull requests!
+4. **Create a branch** to work on that specific issue, and [link that branch to the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-a-branch-for-an-issue).
+
+5. Use the command `yarn install` to install all the dependencies of that library.
+
+6. Use the command `yarn dev` to run a local server where you can see the changes you make in the corresponding `example.ts` files. To see the changes, you have 2 options: 
+   1. Run `yarn build` in the corresponding package. 
+   2. To see the changes in real time, you can substitute the `import` statement path of the library by `../..`. For instance, in an `example.ts` in the `@thatopen/components` package, you can substitute the line `import * as OBC from @thatopen/components` by `import * as OBC from ../..`, and you'll see the changes you make to the code without needing to rebuild. Don't forget to change this statement back when you are done!
+
+7. **Work on your fork** of the repository locally. Please follow the [basic clean rules](./components/clean-components-guide.md)!
+
+8. After making all your commits with the changes, run `yarn build-libraries` to check that you haven't created any errors in the examples.
+
+9. **Create a pull request**. The name should follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) convention. If you are not sure, check out the title past pull requests!
 
 Then, someone from our team will reviewed it and, if everything is ok, merge it. That's it! Easy, right? 😋 We'll help you get started and give you anything you needs, so don't hesitate to reach out!
 
