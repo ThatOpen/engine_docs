@@ -258,6 +258,37 @@ A map where the keys are fragment IDs and the values are sets of express IDs.
 
 ***
 
+### getItemVertices()
+
+> **getItemVertices**(`itemID`): `Vector3`[]
+
+Method to retrieve the vertices of a specific item within the fragments.
+This method finds the fragments that contain the specified item,
+then retrieves the vertices of those fragments.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `itemID` | `number` | The ID of the item for which to retrieve vertices. Usually, an IFC expressID. |
+
+#### Returns
+
+`Vector3`[]
+
+An array of THREE.Vector3 objects representing the vertices of the specified item.
+
+#### Example
+
+```typescript
+const itemVertices = fragmentsGroup.getItemVertices(12345);
+for (const vertex of itemVertices) {
+  console.log(`Vertex: ${vertex.x}, ${vertex.y}, ${vertex.z}`);
+}
+```
+
+***
+
 ### getLocalProperties()
 
 > **getLocalProperties**(): `undefined` \| [`IfcProperties`](../interfaces/IfcProperties.md)

@@ -77,6 +77,18 @@ const properties = await fetch(
 );
 model.setLocalProperties(await properties.json());
 ```
+### 🤝 Setting up the relations
+---
+We will need to set up the IFC relations in order to use the exploder effectively. You can check the relations indexer tutorial for more details about this!
+
+```js
+const indexer = components.get(OBC.IfcRelationsIndexer);
+const relationsFile = await fetch(
+  "https://thatopen.github.io/engine_components/resources/small-relations.json",
+);
+const relations = indexer.getRelationsMapFromJSON(await relationsFile.text());
+indexer.setRelationMap(model, relations);
+```
 ### 🤯 Boom!
 ---
 Exploding BIM models is very simple with components. The Exploder component does all the heavy lifting for us! We can get it using the get method of the components instance we are using in this app.
@@ -91,7 +103,7 @@ If you are not familiar with the classifier, check out its specific tutorial!
 
 ```js
 const classifier = components.get(OBC.Classifier);
-classifier.byIfcRel(model, WEBIFC.IFCRELCONTAINEDINSPATIALSTRUCTURE, "storeys");
+await classifier.bySpatialStructure(model);
 ```
 ### ⏱️ Measuring the performance (optional)
 ---

@@ -26,7 +26,7 @@ The Exploder component is responsible for managing the explosion of 3D model fra
 
 ### groupName
 
-> **groupName**: `string` = `"storeys"`
+> **groupName**: `string` = `"spatialStructures"`
 
 The group name used for the explosion animation.
 This property specifies the group of fragments that will be affected by the explosion.

@@ -94,6 +94,21 @@ A map of item IDs to sets of instance IDs.
 
 The mesh associated with this fragment.
 
+## Accessors
+
+### uniqueVertices
+
+> `get` **uniqueVertices**(): `Vector3`[]
+
+A getter property that returns the unique vertices of the fragment's geometry.
+The unique vertices are determined by comparing the vertex positions.
+
+#### Returns
+
+`Vector3`[]
+
+An array of unique vertices.
+
 ## Methods
 
 ### add()

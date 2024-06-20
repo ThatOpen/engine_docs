@@ -6,7 +6,7 @@ title: Components
   |
   <a href="https://docs.thatopen.com/intro">documentation</a>
   |
-  <a href="https://thatopen.github.io/engine_componentspackages/core/src/fragments/IfcLoader/example.html">demo</a>
+  <a href="https://thatopen.github.io/engine_components/examples/IfcLoader/index.html">demo</a>
   |
   <a href="https://people.thatopen.com/">community</a>
   |
@@ -19,7 +19,6 @@ title: Components
 
 [![NPM Package][npm]][npm-url]
 [![NPM Package][npm-downloads]][npm-url]
-[![Tests](https://github.com/ThatOpen/engine_components/actions/workflows/tests.yml/badge.svg)](https://github.com/ThatOpen/engine_components/actions/workflows/tests.yml)
 
 This library is a collection of BIM tools based on [Three.js](https://github.com/mrdoob/three.js/) and other libraries. It includes pre-made features to easily build browser-based 3D BIM applications, such as postproduction, dimensions, floorplan navigation, DXF export and much more. 
 

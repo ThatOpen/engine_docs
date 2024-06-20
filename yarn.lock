@@ -3548,7 +3548,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@thatopen/components-front@workspace:temp/engine_components/packages/front"
   dependencies:
-    "@thatopen/components": "npm:2.0.11"
+    "@thatopen/components": "npm:~2.0.0"
     "@thatopen/fragments": "npm:~2.0.0"
     "@thatopen/ui": "npm:~2.0.0"
     "@thatopen/ui-obc": "npm:~2.0.0"
@@ -3567,20 +3567,6 @@ __metadata:
     web-ifc: 0.0.53
   languageName: unknown
   linkType: soft
-
-"@thatopen/components@npm:2.0.11":
-  version: 2.0.11
-  resolution: "@thatopen/components@npm:2.0.11"
-  dependencies:
-    camera-controls: "npm:2.7.3"
-    three-mesh-bvh: "npm:0.7.0"
-  peerDependencies:
-    "@thatopen/fragments": ~2.0.0
-    three: ^0.160.1
-    web-ifc: 0.0.53
-  checksum: 10c0/bd5320c31c5a54e1794d92d2dc416d660779a8c7231f67f4ab4e42f257b22712e8647d0d3eb57234158084200828e9e0a80bc707bf49cba5d1c36e3ac7ab8dc1
-  languageName: node
-  linkType: hard
 
 "@thatopen/components@npm:~2.0.0":
   version: 2.0.9
