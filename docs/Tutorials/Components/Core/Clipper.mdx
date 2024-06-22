@@ -89,7 +89,11 @@ clipper.enabled = true;
 Now, we want a way to create a clipping plane on demand. You can do it with a `Single Click` or `Double Click` of a mouse. For this tutorial, we will use `Double Click`. This will cast a ray from the mouse position to the scene and check if the ray intersects with any of the 3D objects. If it does, it will create a new clipping plane in the point of intersection.
 
 ```js
-container.ondblclick = () => clipper.create(world);
+container.ondblclick = () => {
+  if (clipper.enabled) {
+    clipper.create(world);
+  }
+};
 ```
 :::info Raycaster under the hood 🎩
 We use the Raycaster to determine if the intersection has occurred. The clipper places a plane after detecting the face on which the mouse was clicked. 😎
@@ -101,7 +105,9 @@ Now that we know how to make multiple clipping planes, we must also know how to 
 ```js
 window.onkeydown = (event) => {
   if (event.code === "Delete" || event.code === "Backspace") {
-    clipper.delete(world);
+    if (clipper.enabled) {
+      clipper.delete(world);
+    }
   }
 };
 ```

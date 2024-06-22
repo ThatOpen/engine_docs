@@ -141,7 +141,11 @@ edges.styles.create(
 Now we need a method for creating clipping planes. For this tutorial, we will use **Double Click**, to create a Clipper that will generate a plane on the 3D object's face.
 
 ```js
-container.ondblclick = () => clipper.create(world);
+container.ondblclick = () => {
+  if (clipper.enabled) {
+    clipper.create(world);
+  }
+};
 ```
 ### 🧹 Deleting the Clipping Planes
 ---
@@ -150,7 +154,9 @@ Now that we know how to make multiple clippers, we must also know how to delete 
 ```js
 window.onkeydown = (event) => {
   if (event.code === "Delete" || event.code === "Backspace") {
-    clipper.delete(world);
+    if (clipper.enabled) {
+      clipper.delete(world);
+    }
   }
 };
 ```
