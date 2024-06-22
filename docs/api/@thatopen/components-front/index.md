@@ -57,4 +57,5 @@
 | :------ | :------ |
 | [CivilMarkerType](type-aliases/CivilMarkerType.md) | Represents the type of markers used in the CivilMarkerType class. |
 | [Edges](type-aliases/Edges.md) | Type definition for the Edges object. The Edges object is a dictionary where the keys are strings and the values are of type [Edge](interfaces/Edge.md). It is used to store and manage multiple [Edge](interfaces/Edge.md) instances, each identified by a unique name. |
+| [IndexFragmentMap](type-aliases/IndexFragmentMap.md) | A map used to map the triangles of the clipping fill with the original fragment item. It's used to be able to trace to which elements a specific triangle of the clipping fill's face belongs (e.g. for highlighting an item when selecting one of its clipping fills). |
 | [LineStyles](type-aliases/LineStyles.md) | A type representing a dictionary of [ClipStyle](interfaces/ClipStyle.md) objects, where the keys are the names of the styles. |

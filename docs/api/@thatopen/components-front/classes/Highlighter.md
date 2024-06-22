@@ -277,7 +277,7 @@ Will throw an error if the fragment does not belong to a FragmentsGroup.
 
 ### highlightByID()
 
-> **highlightByID**(`name`, `fragmentIdMap`, `removePrevious`, `zoomToSelection`, `exclude`): `Promise`\<`void`\>
+> **highlightByID**(`name`, `fragmentIdMap`, `removePrevious`, `zoomToSelection`, `exclude`, `fillMesh`): `Promise`\<`void`\>
 
 Highlights a fragment based on a given fragment ID map.
 
@@ -290,6 +290,7 @@ Highlights a fragment based on a given fragment ID map.
 | `removePrevious` | `boolean` | `true` | Whether to remove previous highlights. |
 | `zoomToSelection` | `boolean` | `undefined` | Whether to zoom to the highlighted selection. |
 | `exclude` | `FragmentIdMap` | `{}` | Fragments to exclude from the highlight. |
+| `fillMesh` | `undefined` \| `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> | `undefined` | The fill mesh to also highlight, if any. |
 
 #### Returns
 

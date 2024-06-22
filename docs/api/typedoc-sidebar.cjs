@@ -652,6 +652,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/type-aliases/IndexFragmentMap",
+            "label": "IndexFragmentMap"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/type-aliases/LineStyles",
             "label": "LineStyles"
           }

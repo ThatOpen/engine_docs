@@ -4,6 +4,14 @@ Class for managing and rendering the fills of a clipping plane.
 
 ## Properties
 
+### components
+
+> **components**: `Components`
+
+The components instance associated with the clipping fills.
+
+***
+
 ### mesh
 
 > **mesh**: `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>
@@ -81,7 +89,7 @@ This method should be called when the clipping fills are no longer needed to fre
 
 ### update()
 
-> **update**(`trianglesIndices`): `void`
+> **update**(`trianglesIndices`, `indexFragMap`): `void`
 
 Updates the clipping fills mesh with new indices.
 
@@ -90,6 +98,7 @@ Updates the clipping fills mesh with new indices.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `trianglesIndices` | `number`[] | An array of indices representing triangles in the geometry. |
+| `indexFragMap` | [`IndexFragmentMap`](../type-aliases/IndexFragmentMap.md) | A map that allows to trace back the original fragment and id from each triangle of the fill mesh. |
 
 #### Returns
 

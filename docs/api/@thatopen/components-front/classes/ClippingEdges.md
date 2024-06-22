@@ -78,6 +78,20 @@ Reference to the world.
 
 ## Accessors
 
+### fillMeshes
+
+> `get` **fillMeshes**(): `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
+
+Getter that returns an array of THREE.Mesh instances representing the fills of the edges.
+
+#### Returns
+
+`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
+
+An array of THREE.Mesh instances representing the fills of the edges.
+
+***
+
 ### visible
 
 > `get` **visible**(): `boolean`
