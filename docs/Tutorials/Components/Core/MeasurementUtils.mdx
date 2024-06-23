@@ -101,7 +101,7 @@ And now we are going to add an event to the current renderer. The idea is quite 
 ```js
 if (world.renderer) {
   const canvas = world.renderer.three.domElement;
-  canvas.addEventListener("mousemove", () => {
+  canvas.addEventListener("pointermove", () => {
     const result = caster.castRay([model]);
 
     if (!result) return;
