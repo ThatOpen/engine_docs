@@ -495,6 +495,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/classes/GeometryCullerRenderer",
+            "label": "GeometryCullerRenderer"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/classes/GraphicVertexPicker",
             "label": "GraphicVertexPicker"
           },
@@ -552,6 +557,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/SimpleDimensionLine",
             "label": "SimpleDimensionLine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/StreamFileDatabase",
+            "label": "StreamFileDatabase"
           },
           {
             "type": "doc",
@@ -633,6 +643,21 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/interfaces/Shadows",
             "label": "Shadows"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/StreamLoaderSettings",
+            "label": "StreamLoaderSettings"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/StreamPropertiesSettings",
+            "label": "StreamPropertiesSettings"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/StreamedInstance",
+            "label": "StreamedInstance"
           }
         ]
       },
@@ -659,6 +684,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/type-aliases/LineStyles",
             "label": "LineStyles"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/type-aliases/StreamedInstances",
+            "label": "StreamedInstances"
           }
         ]
       }

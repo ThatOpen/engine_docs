@@ -18,6 +18,7 @@
 | [EdgesPlane](classes/EdgesPlane.md) | A more advanced version of Clipper planes that also includes edges and fills. |
 | [EdgesStyles](classes/EdgesStyles.md) | A class representing styles for clipping edges in a 3D scene. |
 | [FaceMeasurement](classes/FaceMeasurement.md) | This component allows users to measure geometry faces in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/FaceMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/FaceMeasurement). |
+| [GeometryCullerRenderer](classes/GeometryCullerRenderer.md) | A renderer to determine a geometry visibility on screen |
 | [GraphicVertexPicker](classes/GraphicVertexPicker.md) | A class that extends OBC.VertexPicker to provide a graphical marker for picking vertices in a 3D scene. |
 | [Highlighter](classes/Highlighter.md) | This component allows highlighting and selecting fragments in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Highlighter). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Highlighter). |
 | [IfcStreamer](classes/IfcStreamer.md) | The IfcStreamer component is responsible for managing and streaming tiled IFC data. It provides methods for loading, removing, and managing IFC models, as well as handling visibility and caching. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/IfcStreamer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/IfcStreamer). |
@@ -30,6 +31,7 @@
 | [RendererWith2D](classes/RendererWith2D.md) | A basic renderer capable of rendering 3D and 2D objects ([Objec3Ds](https://threejs.org/docs/#api/en/core/Object3D) and [CSS2DObjects](https://threejs.org/docs/#examples/en/renderers/CSS2DRenderer) respectively). |
 | [ShadowDropper](classes/ShadowDropper.md) | This component drops shadows on meshes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/ShadowDropper). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/ShadowDropper). |
 | [SimpleDimensionLine](classes/SimpleDimensionLine.md) | A class representing a simple dimension line in a 3D space. |
+| [StreamFileDatabase](classes/StreamFileDatabase.md) | A class representing a database for storing streamed files. It extends Dexie, a minimalistic wrapper for IndexedDB. |
 | [VolumeMeasurement](classes/VolumeMeasurement.md) | This component allows users to measure geometry volumes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/VolumeMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/VolumeMeasurement). |
 
 ## Interfaces
@@ -50,6 +52,9 @@
 | [SerializedAreaMeasure](interfaces/SerializedAreaMeasure.md) | Represents a serialized version of an AreaSelection, used for saving and loading measurements. |
 | [Shadow](interfaces/Shadow.md) | Represents a shadow object used in the application. |
 | [Shadows](interfaces/Shadows.md) | Represents a collection of shadows, where each shadow is identified by a unique ID. The keys of the object are the IDs, and the values are the corresponding [Shadow](interfaces/Shadow.md) objects. |
+| [StreamLoaderSettings](interfaces/StreamLoaderSettings.md) | Settings for the stream loader. |
+| [StreamPropertiesSettings](interfaces/StreamPropertiesSettings.md) | Settings for the stream properties. |
+| [StreamedInstance](interfaces/StreamedInstance.md) | Represents an instance of a streamed object. |
 
 ## Type Aliases
 
@@ -59,3 +64,4 @@
 | [Edges](type-aliases/Edges.md) | Type definition for the Edges object. The Edges object is a dictionary where the keys are strings and the values are of type [Edge](interfaces/Edge.md). It is used to store and manage multiple [Edge](interfaces/Edge.md) instances, each identified by a unique name. |
 | [IndexFragmentMap](type-aliases/IndexFragmentMap.md) | A map used to map the triangles of the clipping fill with the original fragment item. It's used to be able to trace to which elements a specific triangle of the clipping fill's face belongs (e.g. for highlighting an item when selecting one of its clipping fills). |
 | [LineStyles](type-aliases/LineStyles.md) | A type representing a dictionary of [ClipStyle](interfaces/ClipStyle.md) objects, where the keys are the names of the styles. |
+| [StreamedInstances](type-aliases/StreamedInstances.md) | A map of streamed instances, grouped by their unique identifier. |

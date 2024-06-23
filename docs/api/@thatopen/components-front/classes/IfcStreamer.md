@@ -99,14 +99,14 @@ This UUID is used to register the component within the Components system.
 
 ### culler
 
-> `get` **culler**(): `GeometryCullerRenderer`
+> `get` **culler**(): [`GeometryCullerRenderer`](GeometryCullerRenderer.md)
 
 The culler used for managing and rendering the fragments.
 It is automatically created when the world is set.
 
 #### Returns
 
-`GeometryCullerRenderer`
+[`GeometryCullerRenderer`](GeometryCullerRenderer.md)
 
 ***
 
@@ -198,9 +198,9 @@ Loads a new fragment group into the scene using streaming.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `settings` | `StreamLoaderSettings` | The settings for the new fragment group. |
+| `settings` | [`StreamLoaderSettings`](../interfaces/StreamLoaderSettings.md) | The settings for the new fragment group. |
 | `coordinate` | `boolean` | Whether to federate this model with the rest. |
-| `properties`? | `StreamPropertiesSettings` | Optional properties for the new fragment group. |
+| `properties`? | [`StreamPropertiesSettings`](../interfaces/StreamPropertiesSettings.md) | Optional properties for the new fragment group. |
 
 #### Returns
 
