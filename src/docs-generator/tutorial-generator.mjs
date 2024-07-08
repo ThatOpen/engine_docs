@@ -50,15 +50,14 @@ for (const repo of repos) {
     const isMonorepo = splittedRoute[0] === "packages"
     let tutorial = getTutorial(example)
     if (!tutorial) continue
-    tutorial = `:::info Source
+    const tutorialName = splittedRoute[splittedRoute.length - 2]
+    tutorial = `<iframe src="https://thatopen.github.io/${name}/examples/${tutorialName}"></iframe>\n
+:::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/${name}/blob/${branch}/${exampleRoute}).
 :::
 
 ${tutorial}
 `
-    const tutorialName = splittedRoute[splittedRoute.length - 2]
-    const demo = `\n\n<iframe src="https://thatopen.github.io/${name}/examples/${tutorialName}"></iframe>`
-    tutorial += demo
     if (isMonorepo) {
       let repoAlias
       const repoName = splittedRoute[1]
