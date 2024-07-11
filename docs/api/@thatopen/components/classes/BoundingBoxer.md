@@ -66,6 +66,43 @@ boundingBoxer.add(fragmentsGroup);
 
 ***
 
+### addFragmentIdMap()
+
+> **addFragmentIdMap**(`fragmentIdMap`): `void`
+
+Uses a FragmentIdMap to add its meshes to the bb calculation.
+
+This method iterates through the provided `fragmentIdMap`, retrieves the corresponding fragment from the `FragmentsManager`,
+and then calls the `addMesh` method for each fragment's mesh, passing the expression IDs as the second parameter.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `fragmentIdMap` | `FragmentIdMap` | A mapping of fragment IDs to their corresponding expression IDs. |
+
+#### Returns
+
+`void`
+
+#### Remarks
+
+This method is used to add a mapping of fragment IDs to their corresponding expression IDs.
+It ensures that the bounding box calculations are accurate and up-to-date by updating the internal minimum and maximum vectors.
+
+#### Example
+
+```typescript
+const boundingBoxer = components.get(BoundingBoxer);
+const fragmentIdMap: FRAGS.FragmentIdMap = {
+  '5991fa75-2eef-4825-90b3-85177f51a9c9': [123, 245, 389],
+  '3469077e-39bf-4fc9-b3e6-4a1d78ad52b0': [454, 587, 612],
+};
+boundingBoxer.addFragmentIdMap(fragmentIdMap);
+```
+
+***
+
 ### addMesh()
 
 > **addMesh**(`mesh`, `itemIDs`?): `void`

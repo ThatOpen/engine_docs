@@ -36,6 +36,14 @@ A reference to the Components instance associated with this VertexPicker.
 
 ***
 
+### onEnabled
+
+> `readonly` **onEnabled**: [`Event`](Event.md)\<`boolean`\>
+
+An event that is triggered when the picker is enabled or disabled
+
+***
+
 ### onVertexFound
 
 > `readonly` **onVertexFound**: [`Event`](Event.md)\<`Vector3`\>

@@ -1,3 +1,5 @@
+<iframe src="https://thatopen.github.io/engine_components/examples/Hider"></iframe>
+
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/Hider/example.ts).
 :::
@@ -170,8 +172,14 @@ for (const name in spatialStructures) {
     return BUI.html`
       <bim-checkbox checked label="${name}"
         @change="${({ target }: { target: BUI.Checkbox }) => {
-          const found = classifier.find({ spatialStructures: [name] });
-          hider.set(target.value, found);
+          const found = classifier.list.spatialStructures[name];
+          if (found && found.id !== null) {
+            for (const [_id, model] of fragments.groups) {
+              const foundIDs = indexer.getElementsChildren(model, found.id);
+              const fragMap = model.getFragmentMap(foundIDs);
+              hider.set(target.value, fragMap);
+            }
+          }
         }}">
       </bim-checkbox>
     `;
@@ -216,6 +224,3 @@ document.body.append(button);
 ---
 That's it! You have created an app with an UI that allows the user to control the visibility of items in a BIM model by floor and by category. Well done!
 
-
-
-<iframe src="https://thatopen.github.io/engine_components/examples/Hider"></iframe>

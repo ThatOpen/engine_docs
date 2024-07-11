@@ -60,7 +60,7 @@
 | [AttributeListener](interfaces/AttributeListener.md) | Interface representing a map of attribute listeners. The keys are model UUIDs, and the values are objects with express IDs as keys, and objects with attribute names as keys, and Event objects as values. |
 | [CameraControllable](interfaces/CameraControllable.md) | Whether a camera uses the Camera Controls library. |
 | [ChangeMap](interfaces/ChangeMap.md) | Interface representing a map of changed entities in a model. The keys are model UUIDs, and the values are sets of express IDs of changed entities. |
-| [Classification](interfaces/Classification.md) | Interface representing a classification system. The classification is organized by system and class name, and each class contains a map of fragment IDs to their respective express IDs. |
+| [Classification](interfaces/Classification.md) | Interface representing a classification system. The classification is organized by system and class name, and each class contains a map of fragment IDs with extra information. |
 | [Configurable](interfaces/Configurable.md) | Whether this component supports to be configured. |
 | [Createable](interfaces/Createable.md) | Whether this component supports create and destroy operations. This generally applies for components that work with instances, such as clipping planes or dimensions. |
 | [CullerRendererSettings](interfaces/CullerRendererSettings.md) | Settings to configure the CullerRenderer. |

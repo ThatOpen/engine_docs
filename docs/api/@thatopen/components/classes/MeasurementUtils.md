@@ -95,6 +95,64 @@ Will throw an error if the geometry is not indexed.
 
 ***
 
+### getVolumeFromFragments()
+
+> **getVolumeFromFragments**(`frags`): `number`
+
+Calculates the volume of a set of fragments.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `frags` | `FragmentIdMap` | A map of fragment IDs to their corresponding item IDs. |
+
+#### Returns
+
+`number`
+
+The total volume of the fragments and the bounding sphere.
+
+#### Remarks
+
+This method creates a set of instanced meshes from the given fragments and item IDs.
+It then calculates the volume of each mesh and returns the total volume and its bounding sphere.
+
+#### Throws
+
+Will throw an error if the geometry of the meshes is not indexed.
+
+#### Throws
+
+Will throw an error if the fragment manager is not available.
+
+***
+
+### getVolumeFromMeshes()
+
+> **getVolumeFromMeshes**(`meshes`): `number`
+
+Calculates the total volume of a set of meshes.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `meshes` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] \| `InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | An array of meshes or instanced meshes to calculate the volume from. |
+
+#### Returns
+
+`number`
+
+The total volume of the meshes and the bounding sphere.
+
+#### Remarks
+
+This method calculates the volume of each mesh in the provided array and returns the total volume
+and its bounding sphere.
+
+***
+
 ### isConfigurable()
 
 > **isConfigurable**(): `this is Configurable<any>`

@@ -1,3 +1,5 @@
+<iframe src="https://thatopen.github.io/engine_components/examples/IfcLoader"></iframe>
+
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/IfcLoader/example.ts).
 :::
@@ -83,9 +85,9 @@ await fragmentIfcLoader.setup();
 // If you want to the path to unpkg manually, then you can skip the line
 // above and set them manually as below:
 // fragmentIfcLoader.settings.wasm = {
-//     path: "https://unpkg.com/web-ifc@0.0.53/",
-//     absolute: true
-// }
+//   path: "https://unpkg.com/web-ifc@0.0.55/",
+//   absolute: true,
+// };
 ```
 Awesome! Optionally, we can exclude categories that we don't want to convert to fragments like very easily:
 
@@ -247,6 +249,3 @@ document.body.append(button);
 ---
 That's it! You have created an app that can load IFC files, convert them to 3D fragments and navigate them in 3D. Fantastic job! For bigger IFC files, instead of reading them directly every time, you can store the fragments and properties and load them instead of the original IFC. For even bigger files, you can use streaming, which we also cover in other tutorials!
 
-
-
-<iframe src="https://thatopen.github.io/engine_components/examples/IfcLoader"></iframe>

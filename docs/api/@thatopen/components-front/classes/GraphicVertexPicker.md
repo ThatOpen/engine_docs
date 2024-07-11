@@ -30,6 +30,10 @@ OBC.Disposable.onDisposed
 
 `OBC.Disposable.onDisposed`
 
+#### Overrides
+
+`OBC.VertexPicker.onDisposed`
+
 ## Methods
 
 ### dispose()

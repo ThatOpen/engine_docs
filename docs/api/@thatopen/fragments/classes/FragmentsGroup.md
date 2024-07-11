@@ -81,6 +81,14 @@ An object with two Map properties, 'opaque' and 'transparent', representing the 
 
 ***
 
+### globalToExpressIDs
+
+> **globalToExpressIDs**: `Map`\<`string`, `number`\>
+
+A Map object where the keys are global IDs and the values are expressIDs.
+
+***
+
 ### ifcMetadata
 
 > **ifcMetadata**: [`IfcMetadata`](../interfaces/IfcMetadata.md)

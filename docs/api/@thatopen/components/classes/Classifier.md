@@ -171,7 +171,7 @@ Will throw an error if the fragment ID is not found.
 
 ### bySpatialStructure()
 
-> **bySpatialStructure**(`model`): `Promise`\<`void`\>
+> **bySpatialStructure**(`model`, `config`): `Promise`\<`void`\>
 
 Classifies fragments based on their spatial structure in the IFC model.
 
@@ -180,6 +180,8 @@ Classifies fragments based on their spatial structure in the IFC model.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The FragmentsGroup containing the fragments to be classified. |
+| `config` | `object` | The configuration for the classifier. It includes "useProperties" (if false, the classification will use the expressIDs instead of the names) |
+| `config.useProperties` | `boolean` | - |
 
 #### Returns
 

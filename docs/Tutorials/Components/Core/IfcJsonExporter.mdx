@@ -1,3 +1,5 @@
+<iframe src="https://thatopen.github.io/engine_components/examples/IfcJsonExporter"></iframe>
+
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/ifc/IfcJsonExporter/example.ts).
 :::
@@ -81,7 +83,7 @@ To convert IFC to JSON we need 2 things: `web-ifc` an the JSON exporter. The for
 const exporter = components.get(OBC.IfcJsonExporter);
 
 const webIfc = new WEBIFC.IfcAPI();
-webIfc.SetWasmPath("https://unpkg.com/web-ifc@0.0.53/", true);
+webIfc.SetWasmPath("https://unpkg.com/web-ifc@0.0.55/", true);
 await webIfc.Init();
 ```
 ### ↘️ Loading the IFC data
@@ -170,6 +172,3 @@ document.body.append(button);
 ---
 That's it! You have created an app that can load IFC files and convert them to JSON! Now you can easily extract data from IFC files and move them around in your systems, regardless of the technology that you use in your stack. For bigger IFC files, exporting all the properties to a single JSON might not be feasible. In those cases, check out the properties tiler tutorial!
 
-
-
-<iframe src="https://thatopen.github.io/engine_components/examples/IfcJsonExporter"></iframe>

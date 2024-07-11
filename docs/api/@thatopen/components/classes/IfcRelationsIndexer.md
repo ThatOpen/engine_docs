@@ -93,6 +93,28 @@ This UUID is used to register the component within the Components system.
 
 ***
 
+### getElementsChildren()
+
+> **getElementsChildren**(`model`, `id`, `found`): `Set`\<`number`\>
+
+Gets the children of the given element recursively. E.g. in a model with project - site - building - storeys - rooms, passing a storey will include all its children and the children of the rooms contained in it.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `FragmentsGroup` | The BIM model whose children to get. |
+| `id` | `number` | The expressID of the item whose children to get. |
+| `found` | `Set`\<`number`\> | An optional parameter that includes a set of expressIDs where the found element IDs will be added. |
+
+#### Returns
+
+`Set`\<`number`\>
+
+A `Set` with the expressIDs of the found items.
+
+***
+
 ### getEntityRelations()
 
 > **getEntityRelations**(`model`, `expressID`, `relationName`): `null` \| `number`[]

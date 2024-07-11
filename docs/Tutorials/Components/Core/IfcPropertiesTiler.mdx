@@ -1,3 +1,5 @@
+<iframe src="https://thatopen.github.io/engine_components/examples/IfcPropertiesTiler"></iframe>
+
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/IfcPropertiesTiler/example.ts).
 :::
@@ -108,7 +110,7 @@ Now we will get the property streamer component from the library and initialize 
 const propsStreamer = components.get(OBC.IfcPropertiesTiler);
 
 propsStreamer.settings.wasm = {
-  path: "https://unpkg.com/web-ifc@0.0.53/",
+  path: "https://unpkg.com/web-ifc@0.0.55/",
   absolute: true,
 };
 ```
@@ -267,6 +269,3 @@ document.body.append(button);
 ---
 That's it! You have created an app that can generate the property BIM tiles for an IFC and download them to your computer. Now you have the power to process big IFC files! To consume these tiles, check out the IFC streamer tutorial.
 
-
-
-<iframe src="https://thatopen.github.io/engine_components/examples/IfcPropertiesTiler"></iframe>

@@ -1,3 +1,5 @@
+<iframe src="https://thatopen.github.io/engine_components/examples/IfcStreamer"></iframe>
+
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/fragments/IfcStreamer/example.ts).
 :::
@@ -60,6 +62,7 @@ Now we are ready to start streaming a BIM model. We have already a bunch of tile
 ```js
 const loader = components.get(OBCF.IfcStreamer);
 loader.world = world;
+loader.dbCleaner.enabled = true;
 ```
 Now, we need to set the base URL where the streamer needs to look for the tiles. In our case, we'll use the tiles we have prepared in our repository, but this should also work with your own backend.
 
@@ -124,7 +127,7 @@ You can also customize the loader through the `culler` property:
 ```js
 loader.culler.threshold = 10;
 loader.culler.maxHiddenTime = 1000;
-loader.culler.maxLostTime = 40000;
+loader.culler.maxLostTime = 3000;
 ```
 ### ⏱️ Measuring the performance (optional)
 ---
@@ -143,6 +146,3 @@ world.renderer.onAfterUpdate.add(() => stats.end());
 ---
 This is it! Now you should be able to stream your own IFC models and open them anywhere, no matter how big they are! 💪 We will keep improving and making this API more powerful to handle any model on any device smoothly.
 
-
-
-<iframe src="https://thatopen.github.io/engine_components/examples/IfcStreamer"></iframe>
