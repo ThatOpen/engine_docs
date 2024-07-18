@@ -105,7 +105,9 @@ If you are not familiar with the classifier, check out its specific tutorial!
 
 ```js
 const classifier = components.get(OBC.Classifier);
-await classifier.bySpatialStructure(model);
+await classifier.bySpatialStructure(model, {
+  isolate: new Set([WEBIFC.IFCBUILDINGSTOREY]),
+});
 ```
 ### ⏱️ Measuring the performance (optional)
 ---

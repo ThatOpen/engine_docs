@@ -69,6 +69,14 @@ The THREE.js Plane object representing the clipping plane.
 
 ***
 
+### type
+
+> **type**: `string` = `"default"`
+
+A custom string to identify what this plane is used for.
+
+***
+
 ### world
 
 > **world**: [`World`](../interfaces/World.md)

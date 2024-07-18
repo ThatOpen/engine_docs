@@ -92,6 +92,14 @@ The event provides the id of the floor plan the user navigated to.
 
 ***
 
+### planeType
+
+> `readonly` **planeType**: `"floorplan"` = `"floorplan"`
+
+The plane type for the clipping planes created by this component.
+
+***
+
 ### world?
 
 > `optional` **world**: `World`

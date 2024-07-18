@@ -104,6 +104,30 @@ An array of THREE.Mesh objects representing the fragments.
 
 ## Methods
 
+### applyBaseCoordinateSystem()
+
+> **applyBaseCoordinateSystem**(`object`, `originalCoordinateSystem`): `void`
+
+Applies the base coordinate system to the provided object.
+
+This function takes an object and its original coordinate system as input.
+It then inverts the original coordinate system and applies the base coordinate system
+to the object. This ensures that the object's position, rotation, and scale are
+transformed to match the base coordinate system (which is taken from the first model loaded).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `object` | `Object3D`\<`Object3DEventMap`\> \| `Vector3` | The object to which the base coordinate system will be applied. This should be an instance of THREE.Object3D. |
+| `originalCoordinateSystem` | `Matrix4` | The original coordinate system of the object. This should be a THREE.Matrix4 representing the object's transformation matrix. |
+
+#### Returns
+
+`void`
+
+***
+
 ### coordinate()
 
 > **coordinate**(`models`): `void`
@@ -117,7 +141,7 @@ All other models are then transformed to match the base model's coordinate syste
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `models` | `FragmentsGroup`[] | The models to apply coordinate transformation to. If not provided, all groups are used. |
+| `models` | `FragmentsGroup`[] | The models to apply coordinate transformation to. If not provided, all models are used. |
 
 #### Returns
 

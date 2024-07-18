@@ -180,8 +180,9 @@ Classifies fragments based on their spatial structure in the IFC model.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The FragmentsGroup containing the fragments to be classified. |
-| `config` | `object` | The configuration for the classifier. It includes "useProperties" (if false, the classification will use the expressIDs instead of the names) |
-| `config.useProperties` | `boolean` | - |
+| `config` | `object` | <p>The configuration for the classifier. It includes "useProperties", which is true by default</p><p>(if false, the classification will use the expressIDs instead of the names), and "isolate", which will make</p><p> the classifier just pick the WEBIFC categories provided.</p> |
+| `config.isolate`? | `Set`\<`number`\> | - |
+| `config.useProperties`? | `boolean` | - |
 
 #### Returns
 

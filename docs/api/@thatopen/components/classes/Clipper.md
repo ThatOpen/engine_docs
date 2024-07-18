@@ -250,7 +250,7 @@ The size of the geometric representation of the clippings planes.
 
 ### create()
 
-> **create**(`world`): `void`
+> **create**(`world`): `null` \| [`SimplePlane`](SimplePlane.md)
 
 [Createable.create](../interfaces/Createable.md#create)
 
@@ -262,7 +262,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Returns
 
-`void`
+`null` \| [`SimplePlane`](SimplePlane.md)
 
 #### Implementation of
 
@@ -316,9 +316,15 @@ without the need of the mouse.
 
 ### deleteAll()
 
-> **deleteAll**(): `void`
+> **deleteAll**(`types`?): `void`
 
 Deletes all the existing clipping planes.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `types`? | `Set`\<`string`\> | the types of planes to be deleted. If not provided, all planes will be deleted. |
 
 #### Returns
 

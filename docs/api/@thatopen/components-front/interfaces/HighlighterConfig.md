@@ -20,11 +20,27 @@ Color used for hover.
 
 ***
 
+### hoverEnabled
+
+> **hoverEnabled**: `boolean`
+
+Toggles the hover functionality.
+
+***
+
 ### hoverName
 
 > **hoverName**: `string`
 
 Name of the hover event.
+
+***
+
+### selectEnabled
+
+> **selectEnabled**: `boolean`
+
+Toggles the select functionality.
 
 ***
 

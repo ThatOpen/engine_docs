@@ -363,10 +363,6 @@ Resets the color of items in the fragment to their original colors.
 
 `void`
 
-#### Throws
-
-Will throw an error if the fragment doesn't have color per instance or if the item IDs are not found in the fragment.
-
 #### Example
 
 ```typescript
@@ -393,10 +389,6 @@ Sets the color of items in the fragment.
 #### Returns
 
 `void`
-
-#### Throws
-
-Will throw an error if the fragment doesn't have color per instance or if the item IDs are not found in the fragment.
 
 #### Example
 
@@ -427,10 +419,6 @@ Sets the visibility of items in the fragment.
 #### Remarks
 
 This method updates the visibility of items in the fragment based on the provided visibility flag.
-
-#### Throws
-
-Will throw an error if the instances are not found or if the item IDs are not found in the fragment.
 
 #### Example
 

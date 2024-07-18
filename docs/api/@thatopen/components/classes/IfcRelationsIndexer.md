@@ -77,6 +77,31 @@ This UUID is used to register the component within the Components system.
 
 ## Methods
 
+### addEntityRelations()
+
+> **addEntityRelations**(`model`, `expressID`, `relationName`, ...`relIDs`): `void`
+
+Adds relations between an entity and other entities in a BIM model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `FragmentsGroup` | The BIM model to which the relations will be added. |
+| `expressID` | `number` | The expressID of the entity within the model. |
+| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` | The IFC schema inverse attribute of the relation to add (e.g., "IsDefinedBy", "ContainsElements"). |
+| ...`relIDs` | `number`[] | The expressIDs of the related entities within the model. |
+
+#### Returns
+
+`void`
+
+#### Throws
+
+An error if the relation name is not a valid relation name.
+
+***
+
 ### dispose()
 
 > **dispose**(): `void`
@@ -93,9 +118,9 @@ This UUID is used to register the component within the Components system.
 
 ***
 
-### getElementsChildren()
+### getEntityChildren()
 
-> **getElementsChildren**(`model`, `id`, `found`): `Set`\<`number`\>
+> **getEntityChildren**(`model`, `expressID`, `found`): `Set`\<`number`\>
 
 Gets the children of the given element recursively. E.g. in a model with project - site - building - storeys - rooms, passing a storey will include all its children and the children of the rooms contained in it.
 
@@ -104,7 +129,7 @@ Gets the children of the given element recursively. E.g. in a model with project
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The BIM model whose children to get. |
-| `id` | `number` | The expressID of the item whose children to get. |
+| `expressID` | `number` | The expressID of the item whose children to get. |
 | `found` | `Set`\<`number`\> | An optional parameter that includes a set of expressIDs where the found element IDs will be added. |
 
 #### Returns

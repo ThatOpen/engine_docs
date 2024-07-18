@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">Clipper | That Open docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.thatopen.com/img/logo.svg"><meta data-rh="true" name="twitter:image" content="https://docs.thatopen.com/img/logo.svg"><meta data-rh="true" property="og:url" content="https://docs.thatopen.com/api/@thatopen/components/classes/Clipper"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Clipper | That Open docs"><meta data-rh="true" name="description" content="A lightweight component to easily create, delete and handle clipping planes. 📕 Tutorial. 📘 API."><meta data-rh="true" property="og:description" content="A lightweight component to easily create, delete and handle clipping planes. 📕 Tutorial. 📘 API."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.thatopen.com/api/@thatopen/components/classes/Clipper"><link data-rh="true" rel="alternate" href="https://docs.thatopen.com/api/@thatopen/components/classes/Clipper" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.thatopen.com/api/@thatopen/components/classes/Clipper" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://Z3IS6MTI1S-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="That Open docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.7ab9d56a.css">
-<script src="/assets/js/runtime~main.f3ed4616.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5a6a28d5.js" defer="defer"></script>
 <script src="/assets/js/main.7c4b5f55.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -183,13 +183,13 @@ This UUID is used to register the component within the Components system.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="methods">Methods<a class="hash-link" aria-label="Direct link to Methods" title="Direct link to Methods" href="/api/@thatopen/components/classes/Clipper#methods">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="create">create()<a class="hash-link" aria-label="Direct link to create()" title="Direct link to create()" href="/api/@thatopen/components/classes/Clipper#create">​</a></h3>
 <blockquote>
-<p><strong>create</strong>(<code>world</code>): <code>void</code></p>
+<p><strong>create</strong>(<code>world</code>): <code>null</code> | <a href="/api/@thatopen/components/classes/SimplePlane"><code>SimplePlane</code></a></p>
 </blockquote>
 <p><a href="/api/@thatopen/components/interfaces/Createable#create">Createable.create</a></p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="parameters-5">Parameters<a class="hash-link" aria-label="Direct link to Parameters" title="Direct link to Parameters" href="/api/@thatopen/components/classes/Clipper#parameters-5">​</a></h4>
 <table><thead><tr><th style="text-align:left">Parameter</th><th style="text-align:left">Type</th></tr></thead><tbody><tr><td style="text-align:left"><code>world</code></td><td style="text-align:left"><a href="/api/@thatopen/components/interfaces/World"><code>World</code></a></td></tr></tbody></table>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="returns-5">Returns<a class="hash-link" aria-label="Direct link to Returns" title="Direct link to Returns" href="/api/@thatopen/components/classes/Clipper#returns-5">​</a></h4>
-<p><code>void</code></p>
+<p><code>null</code> | <a href="/api/@thatopen/components/classes/SimplePlane"><code>SimplePlane</code></a></p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-of-1">Implementation of<a class="hash-link" aria-label="Direct link to Implementation of" title="Direct link to Implementation of" href="/api/@thatopen/components/classes/Clipper#implementation-of-1">​</a></h4>
 <p><a href="/api/@thatopen/components/interfaces/Createable"><code>Createable</code></a> . <a href="/api/@thatopen/components/interfaces/Createable#create"><code>create</code></a></p>
 <hr>
@@ -218,9 +218,11 @@ without the need of the mouse.</p>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="deleteall">deleteAll()<a class="hash-link" aria-label="Direct link to deleteAll()" title="Direct link to deleteAll()" href="/api/@thatopen/components/classes/Clipper#deleteall">​</a></h3>
 <blockquote>
-<p><strong>deleteAll</strong>(): <code>void</code></p>
+<p><strong>deleteAll</strong>(<code>types</code>?): <code>void</code></p>
 </blockquote>
 <p>Deletes all the existing clipping planes.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="parameters-8">Parameters<a class="hash-link" aria-label="Direct link to Parameters" title="Direct link to Parameters" href="/api/@thatopen/components/classes/Clipper#parameters-8">​</a></h4>
+<table><thead><tr><th style="text-align:left">Parameter</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>types</code>?</td><td style="text-align:left"><code>Set</code>&lt;<code>string</code>&gt;</td><td style="text-align:left">the types of planes to be deleted. If not provided, all planes will be deleted.</td></tr></tbody></table>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="returns-8">Returns<a class="hash-link" aria-label="Direct link to Returns" title="Direct link to Returns" href="/api/@thatopen/components/classes/Clipper#returns-8">​</a></h4>
 <p><code>void</code></p>
 <hr>
@@ -231,7 +233,7 @@ without the need of the mouse.</p>
 <p><a href="/api/@thatopen/components/interfaces/Disposable#dispose">Disposable.dispose</a></p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="returns-9">Returns<a class="hash-link" aria-label="Direct link to Returns" title="Direct link to Returns" href="/api/@thatopen/components/classes/Clipper#returns-9">​</a></h4>
 <p><code>void</code></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-of-3">Implementation of<a class="hash-link" aria-label="Direct link to Implementation of" title="Direct link to Implementation of" href="/api/@thatopen/components/classes/Clipper#implementation-of-3">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-of-3">Implementation of<a class="hash-link" aria-label="Direct link to Implementation of" title="Direct link to Implementation of" href="/api/@thatopen/components/classes/Clipper#implementation-of-3"> ​</a></h4>
 <p><a href="/api/@thatopen/components/interfaces/Disposable"><code>Disposable</code></a> . <a href="/api/@thatopen/components/interfaces/Disposable#dispose"><code>dispose</code></a></p>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="isconfigurable">isConfigurable()<a class="hash-link" aria-label="Direct link to isConfigurable()" title="Direct link to isConfigurable()" href="/api/@thatopen/components/classes/Clipper#isconfigurable">​</a></h3>
