@@ -19,6 +19,7 @@ In this tutorial, we will import:
 ```js
 import Stats from "stats.js";
 import * as BUI from "@thatopen/ui";
+import * as WEBIFC from "web-ifc";
 import * as OBC from "@thatopen/components";
 ```
 ### 🌎 Setting up a simple scene
@@ -99,7 +100,9 @@ Next, we will classify data by category and by level using the `Classifier`. Thi
 ```js
 const classifier = components.get(OBC.Classifier);
 classifier.byEntity(model);
-await classifier.bySpatialStructure(model);
+await classifier.bySpatialStructure(model, {
+  isolate: new Set([WEBIFC.IFCBUILDINGSTOREY]),
+});
 ```
 ### ⏱️ Measuring the performance (optional)
 ---
