@@ -26,18 +26,18 @@ Component to load, delete and manage [fragments](https://github.com/ThatOpen/eng
 
 ### groups
 
-> `readonly` **groups**: `Map`\<`string`, `FragmentsGroup`\>
+> `readonly` **groups**: [`DataMap`](DataMap.md)\<`string`, `FragmentsGroup`\>
 
-Map containing all loaded fragment groups.
+DataMap containing all loaded fragment groups.
 The key is the group's unique identifier, and the value is the group itself.
 
 ***
 
 ### list
 
-> `readonly` **list**: `Map`\<`string`, `Fragment`\>
+> `readonly` **list**: [`DataMap`](DataMap.md)\<`string`, `Fragment`\>
 
-Map containing all loaded fragments.
+DataMap containing all loaded fragments.
 The key is the fragment's unique identifier, and the value is the fragment itself.
 
 ***
@@ -106,7 +106,7 @@ An array of THREE.Mesh objects representing the fragments.
 
 ### applyBaseCoordinateSystem()
 
-> **applyBaseCoordinateSystem**(`object`, `originalCoordinateSystem`): `void`
+> **applyBaseCoordinateSystem**(`object`, `originalCoordinateSystem`?): `void`
 
 Applies the base coordinate system to the provided object.
 
@@ -120,11 +120,30 @@ transformed to match the base coordinate system (which is taken from the first m
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `object` | `Object3D`\<`Object3DEventMap`\> \| `Vector3` | The object to which the base coordinate system will be applied. This should be an instance of THREE.Object3D. |
-| `originalCoordinateSystem` | `Matrix4` | The original coordinate system of the object. This should be a THREE.Matrix4 representing the object's transformation matrix. |
+| `originalCoordinateSystem`? | `Matrix4` | The original coordinate system of the object. This should be a THREE.Matrix4 representing the object's transformation matrix. |
 
 #### Returns
 
 `void`
+
+***
+
+### clone()
+
+> **clone**(`model`, `items`?): `FragmentsGroup`
+
+Creates a copy of the whole model or a part of it.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `FragmentsGroup` | The model to clone. |
+| `items`? | `FragmentIdMap` | Optional - The part of the model to be cloned. If not given, the whole group is cloned. |
+
+#### Returns
+
+`FragmentsGroup`
 
 ***
 
@@ -222,6 +241,26 @@ Gets a map of model IDs to sets of express IDs for the given fragment ID map.
 `object`
 
 A map of model IDs to sets of express IDs.
+
+***
+
+### guidToFragmentIdMap()
+
+> **guidToFragmentIdMap**(`guids`): `FragmentIdMap`
+
+Converts a collection of IFC GUIDs to a fragmentIdMap.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `guids` | `Iterable`\<`string`\> | An iterable collection of global IDs to be converted to a fragment ID map. |
+
+#### Returns
+
+`FragmentIdMap`
+
+A fragment ID map, where the keys are fragment IDs and the values are the corresponding express IDs.
 
 ***
 

@@ -56,6 +56,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/Comment",
+            "label": "Comment"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/Component",
             "label": "Component"
           },
@@ -73,6 +78,16 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/classes/Cullers",
             "label": "Cullers"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DataMap",
+            "label": "DataMap"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DataSet",
+            "label": "DataSet"
           },
           {
             "type": "doc",
@@ -206,6 +221,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/ShadowedScene",
+            "label": "ShadowedScene"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/SimpleCamera",
             "label": "SimpleCamera"
           },
@@ -259,6 +279,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/AttributeListener",
             "label": "AttributeListener"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/BCFTopicsConfig",
+            "label": "BCFTopicsConfig"
           },
           {
             "type": "doc",
@@ -324,6 +349,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/Resizeable",
             "label": "Resizeable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ShadowedSceneConfig",
+            "label": "ShadowedSceneConfig"
           },
           {
             "type": "doc",
@@ -530,6 +560,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/classes/Outliner",
+            "label": "Outliner"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/classes/Plans",
             "label": "Plans"
           },
@@ -547,6 +582,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/RendererWith2D",
             "label": "RendererWith2D"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/Sections",
+            "label": "Sections"
           },
           {
             "type": "doc",
@@ -628,6 +668,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/interfaces/PostproductionSettings",
             "label": "PostproductionSettings"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/Section",
+            "label": "Section"
           },
           {
             "type": "doc",
@@ -979,6 +1024,16 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/interfaces/RowCreatedEventDetail",
             "label": "RowCreatedEventDetail"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/RowDeselectedEventDetail",
+            "label": "RowDeselectedEventDetail"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/RowSelectedEventDetail",
+            "label": "RowSelectedEventDetail"
           },
           {
             "type": "doc",

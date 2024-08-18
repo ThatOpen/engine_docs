@@ -13,6 +13,14 @@ This component allows highlighting and selecting fragments in a 3D scene. 📕 [
 
 ## Properties
 
+### autoToggle
+
+> **autoToggle**: `Set`\<`string`\>
+
+Styles with auto toggle will be unselected when selected twice.
+
+***
+
 ### backupColor
 
 > **backupColor**: `null` \| `Color` = `null`
@@ -118,6 +126,18 @@ Event triggered when the Highlighter is setup.
 #### Implementation of
 
 `OBC.Configurable.onSetup`
+
+***
+
+### selectable
+
+> **selectable**: `object` = `{}`
+
+If defined, only the specified elements will be selected by the specified style.
+
+#### Index signature
+
+ \[`name`: `string`\]: `FragmentIdMap`
 
 ***
 
@@ -277,7 +297,7 @@ Will throw an error if the fragment does not belong to a FragmentsGroup.
 
 ### highlightByID()
 
-> **highlightByID**(`name`, `fragmentIdMap`, `removePrevious`, `zoomToSelection`, `exclude`, `fillMesh`): `Promise`\<`void`\>
+> **highlightByID**(`name`, `fragmentIdMap`, `removePrevious`, `zoomToSelection`, `exclude`, `fillMesh`, `isPicking`): `Promise`\<`void`\>
 
 Highlights a fragment based on a given fragment ID map.
 
@@ -291,6 +311,7 @@ Highlights a fragment based on a given fragment ID map.
 | `zoomToSelection` | `boolean` | `undefined` | Whether to zoom to the highlighted selection. |
 | `exclude` | `FragmentIdMap` | `{}` | Fragments to exclude from the highlight. |
 | `fillMesh` | `undefined` \| `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> | `undefined` | The fill mesh to also highlight, if any. |
+| `isPicking` | `boolean` | `false` | Whether this function is called when picking with the mouse. |
 
 #### Returns
 
@@ -355,3 +376,21 @@ Will throw an error if the item ID is not found.
 #### Throws
 
 Will throw an error if the fragment does not belong to a FragmentsGroup.
+
+***
+
+### updateFragments()
+
+> **updateFragments**(`fragments`): `void`
+
+Applies all the existing styles to the given fragments. Useful when combining the highlighter with streaming.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `fragments` | `Iterable`\<`Fragment`\> | The list of fragment to update. |
+
+#### Returns
+
+`void`

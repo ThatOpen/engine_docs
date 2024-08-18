@@ -279,3 +279,19 @@ CSS styles for the component.
 #### Overrides
 
 `LitElement.styles`
+
+## Accessors
+
+### loading
+
+> `set` **loading**(`value`): `void`
+
+Attribute to set the loading state of the button.
+When the loading state is set to true, the button is disabled and the icon is changed to a loading spinner.
+When the loading state is set to false, the button is reverted to its previous state.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `boolean` |

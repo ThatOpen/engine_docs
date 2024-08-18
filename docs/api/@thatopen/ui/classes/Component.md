@@ -16,7 +16,7 @@ A base class for UI components that utilizes the LitElement library. Provides fu
 
 #### create(template, state)
 
-> `static` **create**\<`T`, `S`\>(`template`, `state`): [`T`, `UpdateFunction`\<`S`\>]
+> `static` **create**\<`T`, `S`\>(`template`, `state`): [`T`, `UpdateFunction`\<`S`\>, () => `S`]
 
 Creates a new UI component instance based on the provided template and initial state.
 
@@ -36,7 +36,7 @@ Creates a new UI component instance based on the provided template and initial s
 
 ##### Returns
 
-[`T`, `UpdateFunction`\<`S`\>]
+[`T`, `UpdateFunction`\<`S`\>, () => `S`]
 
 An array containing the created UI component element and a function to update its state.
 

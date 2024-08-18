@@ -13,6 +13,46 @@ A custom panel web component for BIM applications. HTML tag: bim-panel
 
 ## Properties
 
+### headerHidden
+
+> **headerHidden**: `boolean` = `false`
+
+Represents a boolean property that controls the visibility of the panel's header.
+When `true`, the header (containing the label and icon) is hidden.
+When `false`, the header is visible.
+
+#### Default
+
+```ts
+false
+```
+
+#### Attribute
+
+header-hidden - The attribute that reflects the `headerHidden` property to the HTML element.
+
+#### Reflect
+
+true - Indicates that the property should be reflected to the HTML attribute.
+
+#### Example
+
+```ts
+// Setting the `headerHidden` property to `true`
+panel.headerHidden = true;
+
+// Setting the `header-hidden` attribute to `true`
+panel.setAttribute('header-hidden', 'true');
+
+// Getting the `headerHidden` property value
+console.log(panel.headerHidden); // Output: true
+
+// Getting the `header-hidden` attribute value
+console.log(panel.getAttribute('header-hidden')); // Output: 'true'
+```
+
+***
+
 ### icon?
 
 > `optional` **icon**: `string`
@@ -106,6 +146,30 @@ document.body.appendChild(panel);
 #### Implementation of
 
 `HasName.name`
+
+***
+
+### valueTransform
+
+> **valueTransform**: `Record`\<`string`, (`value`) => `any`\> = `{}`
+
+A record that maps element names or labels to transformation functions.
+This record is used to transform the values from elements before they are returned as part of the `value` property.
+
+#### Example
+
+```ts
+// Example usage of ValueTransform
+const valueTransform = {
+  date: (value: string) => new Date(value), // Transform date value from string to Date object
+};
+
+const panel = document.getElementById('your-bim-panel'); // should have some inputs inside
+panel.valueTransform = valueTransform;
+
+// Now, when accessing the `value` property of the panel, the values of the specified elements will be transformed accordingly
+console.log(panel.value); // Output: { date: Date object }
+```
 
 ***
 

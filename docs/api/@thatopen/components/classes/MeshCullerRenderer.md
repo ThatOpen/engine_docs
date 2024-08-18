@@ -209,6 +209,24 @@ When the mesh is removed, it will be hidden from the scene and its color-coded m
 
 ***
 
+### updateInstanced()
+
+> **updateInstanced**(`meshes`): `void`
+
+Updates the given instanced meshes inside the culler. You should use this if you change the count property, e.g. when changing the visibility of fragments.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `meshes` | `Iterable`\<`InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>\> | The meshes to update. |
+
+#### Returns
+
+`void`
+
+***
+
 ### updateVisibility()
 
 > **updateVisibility**(`force`?): `Promise`\<`void`\>

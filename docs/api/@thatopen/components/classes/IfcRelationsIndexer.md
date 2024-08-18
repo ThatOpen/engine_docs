@@ -89,7 +89,7 @@ Adds relations between an entity and other entities in a BIM model.
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The BIM model to which the relations will be added. |
 | `expressID` | `number` | The expressID of the entity within the model. |
-| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` | The IFC schema inverse attribute of the relation to add (e.g., "IsDefinedBy", "ContainsElements"). |
+| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` | The IFC schema inverse attribute of the relation to add (e.g., "IsDefinedBy", "ContainsElements"). |
 | ...`relIDs` | `number`[] | The expressIDs of the related entities within the model. |
 
 #### Returns
@@ -115,6 +115,32 @@ An error if the relation name is not a valid relation name.
 #### Implementation of
 
 [`Disposable`](../interfaces/Disposable.md) . [`dispose`](../interfaces/Disposable.md#dispose)
+
+***
+
+### getEntitiesWithRelation()
+
+> **getEntitiesWithRelation**(`model`, `inv`, `expressID`): `Set`\<`number`\>
+
+Retrieves the entities within a given model that have a specific relation with a given entity.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `FragmentsGroup` | The BIM model to search for related entities. |
+| `inv` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
+| `expressID` | `number` | The expressID of the entity within the model. |
+
+#### Returns
+
+`Set`\<`number`\>
+
+A `Set` with the expressIDs of the entities that have the specified relation with the given entity.
+
+#### Throws
+
+An error if the model relations are not indexed or if the inverse attribute name is invalid.
 
 ***
 
@@ -154,7 +180,7 @@ returning the IDs of related entities if a match is found.
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The `FragmentsGroup` model containing the entity. |
 | `expressID` | `number` | The unique identifier of the entity within the model. |
-| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
+| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
 
 #### Returns
 

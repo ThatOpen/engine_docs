@@ -6,11 +6,27 @@ A basic 3D [scene](https://threejs.org/docs/#api/en/scenes/Scene) to add objects
 
 - [`BaseScene`](BaseScene.md)
 
+## Extended by
+
+- [`ShadowedScene`](ShadowedScene.md)
+
 ## Implements
 
 - [`Configurable`](../interfaces/Configurable.md)\<`object`\>
 
 ## Properties
+
+### ambientLights
+
+> **ambientLights**: `Map`\<`string`, `AmbientLight`\>
+
+The set of ambient lights managed by this scene component.
+
+#### Inherited from
+
+[`BaseScene`](BaseScene.md) . [`ambientLights`](BaseScene.md#ambientlights)
+
+***
 
 ### config
 
@@ -34,6 +50,18 @@ The current world this item is associated with. It can be null if no world is cu
 #### Inherited from
 
 [`BaseScene`](BaseScene.md) . [`currentWorld`](BaseScene.md#currentworld)
+
+***
+
+### directionalLights
+
+> **directionalLights**: `Map`\<`string`, `DirectionalLight`\>
+
+The set of directional lights managed by this scene component.
+
+#### Inherited from
+
+[`BaseScene`](BaseScene.md) . [`directionalLights`](BaseScene.md#directionallights)
 
 ***
 

@@ -210,7 +210,7 @@ The newly loaded fragment group.
 
 ***
 
-### remove()
+### ~~remove()~~
 
 > **remove**(`modelID`): `void`
 
@@ -225,6 +225,30 @@ Removes a fragment group from the scene.
 #### Returns
 
 `void`
+
+#### Deprecated
+
+use OBC.FragmentsManager.disposeGroup instead.
+
+***
+
+### setStatic()
+
+> **setStatic**(`ids`, `active`, `culled`?): `Promise`\<`void`\>
+
+Sets or unsets the specified fragments as static. Static fragments are streamed once and then kept in memory.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `ids` | `Iterable`\<`string`\> | The list of fragment IDs to make static. |
+| `active` | `boolean` | Whether these items should be static or not. |
+| `culled`? | `boolean` | Whether these items should be culled or not. If undefined: active=true will set items as culled, while active=false will remove items from both the culled and unculled list. |
+
+#### Returns
+
+`Promise`\<`void`\>
 
 ***
 

@@ -231,6 +231,30 @@ Will throw an error if no relation is found between the Pset and the model.
 
 ***
 
+### getEntityRef()
+
+> **getEntityRef**(`model`, `type`): `Promise`\<`null` \| `Handle`\<`unknown`\>[]\>
+
+Retrieves all the entities of a specific type from the model and returns their express IDs wrapped in Handles.
+This is used to make references of an entity inside another entity attributes.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `FragmentsGroup` | The FragmentsGroup model from which to retrieve the entities. |
+| `type` | `number` | The type of the entities to retrieve. This should be the express ID of the IFC type. |
+
+#### Returns
+
+`Promise`\<`null` \| `Handle`\<`unknown`\>[]\>
+
+A promise that resolves with an array of Handles, each containing the express ID of an entity of the specified type.
+
+null if the model doesn't have any entity of that type
+
+***
+
 ### isConfigurable()
 
 > **isConfigurable**(): `this is Configurable<any>`
@@ -569,7 +593,7 @@ Will throw an error if the attribute has a badly defined handle.
 
 > **setData**(`model`, ...`dataToSave`): `Promise`\<`void`\>
 
-Method to set properties data in the model.
+Method to add or update entity attributes in the model.
 
 #### Parameters
 

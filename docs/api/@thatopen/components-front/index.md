@@ -25,10 +25,12 @@
 | [LengthMeasurement](classes/LengthMeasurement.md) | A basic dimension tool to measure distances between 2 points in 3D and display a 3D symbol displaying the numeric value. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/LengthMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/LengthMeasurement). |
 | [Mark](classes/Mark.md) | Represents a marker in the 3D world. |
 | [Marker](classes/Marker.md) | Component for Managing Markers along with creating different types of markers. Every marker is a Simple2DMarker. For every marker that needs to be added, you can use the Manager to add the marker and change its look and feel. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Marker). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Marker). |
+| [Outliner](classes/Outliner.md) | This component allows adding a colored outline with thickness to fragments in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Highlighter). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Outliner). |
 | [Plans](classes/Plans.md) | Component to easily define and navigate 2D floor plans. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Plans). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Plans). |
 | [Postproduction](classes/Postproduction.md) | Class representing a post-processing effect manager for a 3D scene. It uses the EffectComposer from three.js to apply various post-processing effects. Thanks to [this](https://discourse.threejs.org/t/how-to-render-full-outlines-as-a-post-process-tutorial/22674). |
 | [PostproductionRenderer](classes/PostproductionRenderer.md) | A class that extends RendererWith2D and adds post-processing capabilities. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/PostproductionRenderer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/PostproductionRenderer). |
 | [RendererWith2D](classes/RendererWith2D.md) | A basic renderer capable of rendering 3D and 2D objects ([Objec3Ds](https://threejs.org/docs/#api/en/core/Object3D) and [CSS2DObjects](https://threejs.org/docs/#examples/en/renderers/CSS2DRenderer) respectively). |
+| [Sections](classes/Sections.md) | A component to create and manage arbitrary sections for BIM models. |
 | [ShadowDropper](classes/ShadowDropper.md) | This component drops shadows on meshes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/ShadowDropper). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/ShadowDropper). |
 | [SimpleDimensionLine](classes/SimpleDimensionLine.md) | A class representing a simple dimension line in a 3D space. |
 | [StreamFileDatabase](classes/StreamFileDatabase.md) | A class representing a database for storing streamed files. It extends Dexie, a minimalistic wrapper for IndexedDB. |
@@ -47,8 +49,9 @@
 | [HighlighterConfig](interfaces/HighlighterConfig.md) | Interface defining the configuration options for the Highlighter class. |
 | [IGroupedMarkers](interfaces/IGroupedMarkers.md) | Interface representing a group of markers. |
 | [IMarker](interfaces/IMarker.md) | Interface representing a marker object. |
-| [PlanView](interfaces/PlanView.md) | Necessary data to create a new floor plan in the navigator. |
+| [PlanView](interfaces/PlanView.md) | The data that describes a plan view. |
 | [PostproductionSettings](interfaces/PostproductionSettings.md) | Interface defining the settings for the post-processing effects. |
+| [Section](interfaces/Section.md) | The data that describes a section view. |
 | [SerializedAreaMeasure](interfaces/SerializedAreaMeasure.md) | Represents a serialized version of an AreaSelection, used for saving and loading measurements. |
 | [Shadow](interfaces/Shadow.md) | Represents a shadow object used in the application. |
 | [Shadows](interfaces/Shadows.md) | Represents a collection of shadows, where each shadow is identified by a unique ID. The keys of the object are the IDs, and the values are the corresponding [Shadow](interfaces/Shadow.md) objects. |

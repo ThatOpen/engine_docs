@@ -58,6 +58,14 @@ Whether to extract the IFC properties into a JSON.
 
 ***
 
+### includedCategories
+
+> **includedCategories**: `Set`\<`number`\>
+
+Exclusive list of categories that will be converted to fragments. If this contains any category, any other categories will be ignored.
+
+***
+
 ### optionalCategories
 
 > **optionalCategories**: `number`[]

@@ -41,6 +41,8 @@
 | [ManagerConfig](interfaces/ManagerConfig.md) | Configuration interface for the Manager class. Defines the properties and their types that can be configured for the Manager. |
 | [QueryGroup](interfaces/QueryGroup.md) | Represents a group of queries with an operator. |
 | [RowCreatedEventDetail](interfaces/RowCreatedEventDetail.md) | Represents the detail of a row created event. |
+| [RowDeselectedEventDetail](interfaces/RowDeselectedEventDetail.md) | Represents the detail of a row deselected event. |
+| [RowSelectedEventDetail](interfaces/RowSelectedEventDetail.md) | Represents the detail of a row selected event. |
 | [TableDataTransform](interfaces/TableDataTransform.md) | Represents a transformation function for table data. |
 | [TableGroupData](interfaces/TableGroupData.md) | Represents a group of table rows with optional children. |
 | [TableGroupTemplate](interfaces/TableGroupTemplate.md) | Represents a template for rendering a group of table rows in a table. |

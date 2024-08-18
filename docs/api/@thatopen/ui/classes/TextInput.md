@@ -151,7 +151,7 @@ false
 
 ### styles
 
-> `static` **styles**: `CSSResult`
+> `static` **styles**: `CSSResult`[]
 
 CSS styles for the component.
 

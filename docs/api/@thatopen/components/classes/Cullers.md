@@ -197,3 +197,21 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 #### Inherited from
 
 [`Component`](Component.md) . [`isUpdateable`](Component.md#isupdateable)
+
+***
+
+### updateInstanced()
+
+> **updateInstanced**(`meshes`): `void`
+
+Updates the given instanced meshes inside the all the cullers. You should use this if you change the count property, e.g. when changing the visibility of fragments.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `meshes` | `Iterable`\<`InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>\> | The meshes to update. |
+
+#### Returns
+
+`void`

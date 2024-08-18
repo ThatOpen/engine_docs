@@ -117,6 +117,18 @@ table.indentationInText = true;
 
 ***
 
+### loadFunction()?
+
+> `optional` **loadFunction**: () => `Promise` \<[`TableGroupData`](../interfaces/TableGroupData.md)[]\>
+
+The function to be executed when loading async data using Table.loadData
+
+#### Returns
+
+`Promise` \<[`TableGroupData`](../interfaces/TableGroupData.md)[]\>
+
+***
+
 ### preserveStructureOnFilter
 
 > **preserveStructureOnFilter**: `boolean` = `false`
@@ -322,3 +334,32 @@ The `downloadData` method is used to download the table data in different format
 ```typescript
 table.downloadData("MyTableData", "tsv");
 ```
+
+***
+
+### loadData()
+
+> **loadData**(`force`): `Promise`\<`boolean`\>
+
+Asynchronously loads data into the table based on Table.loadFunction.
+If the data is already available, just set it in Table.data.
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `force` | `boolean` | `false` | A boolean indicating whether to force loading even if the table already has data. |
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+- A promise that resolves to a boolean indicating whether the data loading was successful.
+If the promise resolves to `true`, the data loading was successful.
+If the promise resolves to `false`, the data loading was not successful.
+
+#### Remarks
+
+- If the table already has data and `force` is `false`, the function resolves to `false` without making any changes.
+If the table already has data and `force` is `true`, the existing data is discarded before loading the new data.
+If an error occurs during data loading, the function sets the `errorLoadingMessage` property with the error message and resolves to `false`.

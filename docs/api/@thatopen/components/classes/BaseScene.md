@@ -16,6 +16,14 @@ Abstract class representing a base scene in the application. All scenes should u
 
 ## Properties
 
+### ambientLights
+
+> **ambientLights**: `Map`\<`string`, `AmbientLight`\>
+
+The set of ambient lights managed by this scene component.
+
+***
+
 ### currentWorld
 
 > **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
@@ -25,6 +33,14 @@ The current world this item is associated with. It can be null if no world is cu
 #### Inherited from
 
 [`BaseWorldItem`](BaseWorldItem.md) . [`currentWorld`](BaseWorldItem.md#currentworld)
+
+***
+
+### directionalLights
+
+> **directionalLights**: `Map`\<`string`, `DirectionalLight`\>
+
+The set of directional lights managed by this scene component.
 
 ***
 

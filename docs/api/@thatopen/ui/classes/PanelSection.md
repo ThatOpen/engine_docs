@@ -151,6 +151,30 @@ document.body.appendChild(section);
 
 ***
 
+### valueTransform
+
+> **valueTransform**: `Record`\<`string`, (`value`) => `any`\> = `{}`
+
+A record that maps element names or labels to transformation functions.
+This record is used to transform the values from elements before they are returned as part of the `value` property.
+
+#### Example
+
+```ts
+// Example usage of ValueTransform
+const valueTransform = {
+  date: (value: string) => new Date(value), // Transform date value from string to Date object
+};
+
+const panelSection = document.getElementById('your-bim-panel-section'); // should have some inputs inside
+panelSection.valueTransform = valueTransform;
+
+// Now, when accessing the `value` property of the panelSection, the values of the specified elements will be transformed accordingly
+console.log(panelSection.value); // Output: { date: Date object }
+```
+
+***
+
 ### styles
 
 > `static` **styles**: `CSSResult`[]

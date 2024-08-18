@@ -3548,8 +3548,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@thatopen/components-front@workspace:temp/engine_components/packages/front"
   dependencies:
-    "@thatopen/components": "npm:~2.1.0"
-    "@thatopen/fragments": "npm:~2.1.0"
+    "@thatopen/components": "npm:~2.2.0"
+    "@thatopen/fragments": "npm:~2.2.0"
     "@thatopen/ui": "npm:~2.1.0"
     "@thatopen/ui-obc": "npm:~2.1.0"
     "@types/earcut": "npm:^2.1.4"
@@ -3560,11 +3560,11 @@ __metadata:
     n8ao: "npm:1.5.1"
     postprocessing: "npm:6.34.2"
     three: "npm:^0.160.1"
-    web-ifc: "npm:0.0.56"
+    web-ifc: "npm:0.0.57"
   peerDependencies:
-    "@thatopen/fragments": ~2.1.0
+    "@thatopen/fragments": ~2.2.0
     three: ^0.160.1
-    web-ifc: 0.0.56
+    web-ifc: 0.0.57
   languageName: unknown
   linkType: soft
 
@@ -3582,22 +3582,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@thatopen/components@npm:~2.2.0":
+  version: 2.2.0
+  resolution: "@thatopen/components@npm:2.2.0"
+  dependencies:
+    camera-controls: "npm:2.7.3"
+    fast-xml-parser: "npm:4.4.1"
+    jszip: "npm:3.10.1"
+    three-mesh-bvh: "npm:0.7.0"
+  peerDependencies:
+    "@thatopen/fragments": ~2.2.0
+    three: ^0.160.1
+    web-ifc: 0.0.57
+  checksum: 10c0/a9fce14178dd5e7932307970e7fc9321c61a5a923442cdde5755fee73974440ea961f0daaf71cb931c0c61b40aa66438bacf3fd3d81a43a8c7289dde21cf63bc
+  languageName: node
+  linkType: hard
+
 "@thatopen/components@workspace:temp/engine_components/packages/core":
   version: 0.0.0-use.local
   resolution: "@thatopen/components@workspace:temp/engine_components/packages/core"
   dependencies:
-    "@thatopen/fragments": "npm:~2.1.0"
+    "@thatopen/fragments": "npm:~2.2.0"
     "@thatopen/ui": "npm:~2.1.0"
     "@types/three": "npm:0.160.0"
     camera-controls: "npm:2.7.3"
+    fast-xml-parser: "npm:4.4.1"
+    jszip: "npm:3.10.1"
     stats.js: "npm:^0.17.0"
     three: "npm:^0.160.1"
     three-mesh-bvh: "npm:0.7.0"
-    web-ifc: "npm:0.0.56"
+    web-ifc: "npm:0.0.57"
   peerDependencies:
-    "@thatopen/fragments": ~2.1.0
+    "@thatopen/fragments": ~2.2.0
     three: ^0.160.1
-    web-ifc: 0.0.56
+    web-ifc: 0.0.57
   languageName: unknown
   linkType: soft
 
@@ -3610,6 +3628,18 @@ __metadata:
   peerDependencies:
     three: ^0.160.1
   checksum: 10c0/6f330e1e6869037f47d06e103d67b6d4f3ca17ec76472595d44c59d62d958591b2542691d424995248230551c0ae0a3fee1a2558724714a793e4636c32d0e123
+  languageName: node
+  linkType: hard
+
+"@thatopen/fragments@npm:~2.2.0":
+  version: 2.2.0
+  resolution: "@thatopen/fragments@npm:2.2.0"
+  dependencies:
+    flatbuffers: "npm:23.3.3"
+    three-mesh-bvh: "npm:0.7.0"
+  peerDependencies:
+    three: ^0.160.1
+  checksum: 10c0/0158c0a8b4cde0ab6d2639c6cc5c3b926ec9d29cf67a2e877f38d60043d3552eeedbee3dac53c3a1c51cdc5dffe1f0fd5b69b2e26f065600d80962ee2ad9a14e
   languageName: node
   linkType: hard
 
@@ -3669,12 +3699,12 @@ __metadata:
     "@types/three": "npm:0.160.0"
     lit: "npm:3.1.2"
     three: "npm:0.160.1"
-    web-ifc: "npm:0.0.55"
+    web-ifc: "npm:0.0.57"
   peerDependencies:
     "@thatopen/components": ~2.1.0
     "@thatopen/components-front": ~2.1.0
     three: 0.160.1
-    web-ifc: 0.0.55
+    web-ifc: 0.0.57
   languageName: unknown
   linkType: soft
 
@@ -4084,6 +4114,15 @@ __metadata:
   version: 17.0.45
   resolution: "@types/node@npm:17.0.45"
   checksum: 10c0/0db377133d709b33a47892581a21a41cd7958f22723a3cc6c71d55ac018121382de42fbfc7970d5ae3e7819dbe5f40e1c6a5174aedf7e7964e9cb8fa72b580b0
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:latest":
+  version: 22.4.0
+  resolution: "@types/node@npm:22.4.0"
+  dependencies:
+    undici-types: "npm:~6.19.2"
+  checksum: 10c0/84cd094b19a27e0db425f1d02614e4f7ac59b5eb3b21e288c8f8d4d0a4c9ad370107bc1a649d4c2b4e810cd133feea26e0bbf7e7c617f93e9e139d6d2568cf50
   languageName: node
   linkType: hard
 
@@ -7036,6 +7075,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "engine_components-aed1e6@workspace:temp/engine_components"
   dependencies:
+    "@types/node": "npm:latest"
     "@typescript-eslint/eslint-plugin": "npm:7.2.0"
     "@typescript-eslint/parser": "npm:7.2.0"
     eslint: "npm:8.57.0"
@@ -7929,6 +7969,17 @@ __metadata:
   dependencies:
     punycode: "npm:^1.3.2"
   checksum: 10c0/d85c5c409cf0215417380f98a2d29c23a95004d93ff0d8bdf1af5f1a9d1fc608ac89ac6ffe863783d2c73efb3850dd35390feb1de3296f49877bfee0392eb5d3
+  languageName: node
+  linkType: hard
+
+"fast-xml-parser@npm:4.4.1":
+  version: 4.4.1
+  resolution: "fast-xml-parser@npm:4.4.1"
+  dependencies:
+    strnum: "npm:^1.0.5"
+  bin:
+    fxparser: src/cli/cli.js
+  checksum: 10c0/7f334841fe41bfb0bf5d920904ccad09cefc4b5e61eaf4c225bf1e1bb69ee77ef2147d8942f783ee8249e154d1ca8a858e10bda78a5d78b8bed3f48dcee9bf33
   languageName: node
   linkType: hard
 
@@ -9173,6 +9224,13 @@ __metadata:
   bin:
     image-size: bin/image-size.js
   checksum: 10c0/2660470096d12be82195f7e80fe03274689fbd14184afb78eaf66ade7cd06352518325814f88af4bde4b26647889fe49e573129f6e7ba8f5ff5b85cc7f559000
+  languageName: node
+  linkType: hard
+
+"immediate@npm:~3.0.5":
+  version: 3.0.6
+  resolution: "immediate@npm:3.0.6"
+  checksum: 10c0/f8ba7ede69bee9260241ad078d2d535848745ff5f6995c7c7cb41cfdc9ccc213f66e10fa5afb881f90298b24a3f7344b637b592beb4f54e582770cdce3f1f039
   languageName: node
   linkType: hard
 
@@ -10597,6 +10655,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jszip@npm:3.10.1":
+  version: 3.10.1
+  resolution: "jszip@npm:3.10.1"
+  dependencies:
+    lie: "npm:~3.3.0"
+    pako: "npm:~1.0.2"
+    readable-stream: "npm:~2.3.6"
+    setimmediate: "npm:^1.0.5"
+  checksum: 10c0/58e01ec9c4960383fb8b38dd5f67b83ccc1ec215bf74c8a5b32f42b6e5fb79fada5176842a11409c4051b5b94275044851814a31076bf49e1be218d3ef57c863
+  languageName: node
+  linkType: hard
+
 "keyv@npm:^4.5.3":
   version: 4.5.4
   resolution: "keyv@npm:4.5.4"
@@ -10660,6 +10730,15 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:~0.4.0"
   checksum: 10c0/effb03cad7c89dfa5bd4f6989364bfc79994c2042ec5966cb9b95990e2edee5cd8969ddf42616a0373ac49fac1403437deaf6e9050fbbaa3546093a59b9ac94e
+  languageName: node
+  linkType: hard
+
+"lie@npm:~3.3.0":
+  version: 3.3.0
+  resolution: "lie@npm:3.3.0"
+  dependencies:
+    immediate: "npm:~3.0.5"
+  checksum: 10c0/56dd113091978f82f9dc5081769c6f3b947852ecf9feccaf83e14a123bc630c2301439ce6182521e5fbafbde88e88ac38314327a4e0493a1bea7e0699a7af808
   languageName: node
   linkType: hard
 
@@ -12462,6 +12541,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pako@npm:~1.0.2":
+  version: 1.0.11
+  resolution: "pako@npm:1.0.11"
+  checksum: 10c0/86dd99d8b34c3930345b8bbeb5e1cd8a05f608eeb40967b293f72fe469d0e9c88b783a8777e4cc7dc7c91ce54c5e93d88ff4b4f060e6ff18408fd21030d9ffbe
+  languageName: node
+  linkType: hard
+
 "param-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "param-case@npm:3.0.4"
@@ -13651,7 +13737,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^2.0.1":
+"readable-stream@npm:^2.0.1, readable-stream@npm:~2.3.6":
   version: 2.3.8
   resolution: "readable-stream@npm:2.3.8"
   dependencies:
@@ -14452,6 +14538,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"setimmediate@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "setimmediate@npm:1.0.5"
+  checksum: 10c0/5bae81bfdbfbd0ce992893286d49c9693c82b1bcc00dcaaf3a09c8f428fdeacf4190c013598b81875dfac2b08a572422db7df779a99332d0fce186d15a3e4d49
+  languageName: node
+  linkType: hard
+
 "setprototypeof@npm:1.1.0":
   version: 1.1.0
   resolution: "setprototypeof@npm:1.1.0"
@@ -14968,6 +15061,13 @@ __metadata:
   version: 2.0.1
   resolution: "strip-json-comments@npm:2.0.1"
   checksum: 10c0/b509231cbdee45064ff4f9fd73609e2bcc4e84a4d508e9dd0f31f70356473fde18abfb5838c17d56fb236f5a06b102ef115438de0600b749e818a35fbbc48c43
+  languageName: node
+  linkType: hard
+
+"strnum@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "strnum@npm:1.0.5"
+  checksum: 10c0/64fb8cc2effbd585a6821faa73ad97d4b553c8927e49086a162ffd2cc818787643390b89d567460a8e74300148d11ac052e21c921ef2049f2987f4b1b89a7ff1
   languageName: node
   linkType: hard
 
@@ -15612,6 +15712,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~6.19.2":
+  version: 6.19.6
+  resolution: "undici-types@npm:6.19.6"
+  checksum: 10c0/9b2264c5700e7169c6c62c643aac56cd8984c5fd7e18ed31ff11780260e137f6340dee8317a2e6e0ae3c49f5e5ef6fa577ea07193cbaa535265cba76a267cae9
+  languageName: node
+  linkType: hard
+
 "unicode-canonical-property-names-ecmascript@npm:^2.0.0":
   version: 2.0.0
   resolution: "unicode-canonical-property-names-ecmascript@npm:2.0.0"
@@ -16111,17 +16218,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-ifc@npm:0.0.55":
-  version: 0.0.55
-  resolution: "web-ifc@npm:0.0.55"
-  checksum: 10c0/4c8bfc645a1ec0327772257452efa9e0dcb6b449882b857040072c574c4620c6123a2cf7b66b9a5010f4cdc739ea8c7f2ec6ab2f7bd531dda564be506a8be5e6
-  languageName: node
-  linkType: hard
-
-"web-ifc@npm:0.0.56":
-  version: 0.0.56
-  resolution: "web-ifc@npm:0.0.56"
-  checksum: 10c0/3f51b2daf0bf0efdd71a9580ee08233f5849ce8b34eabb550587ea4a5a76aaf46456f0389a7704d3acebb8a409f48ee58482630178a21de2d2df60cb2ef318f2
+"web-ifc@npm:0.0.57":
+  version: 0.0.57
+  resolution: "web-ifc@npm:0.0.57"
+  checksum: 10c0/270b0c9bf545d26ebbc2bb7bcd84f2effe5cfc574559ba00d3f79c467f9e94ceedda7c88dde7caec532ca5189637dfb67e2e4672d0ea1fd6a92c7958385855fa
   languageName: node
   linkType: hard
 

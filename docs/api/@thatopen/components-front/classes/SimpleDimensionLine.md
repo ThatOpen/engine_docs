@@ -36,6 +36,14 @@ The world in which the dimension line exists.
 
 ***
 
+### rounding
+
+> `static` **rounding**: `number` = `2`
+
+The number of decimals to show in the label.
+
+***
+
 ### scale
 
 > `static` **scale**: `number` = `1`

@@ -20,22 +20,6 @@ The floorplan that is currently selected.
 
 ***
 
-### defaultCameraOffset
-
-> **defaultCameraOffset**: `number` = `30`
-
-The offset of the 2D camera to the floor plan elevation.
-
-***
-
-### defaultSectionOffset
-
-> **defaultSectionOffset**: `number` = `1.5`
-
-The offset from the clipping planes to their respective floor plan elevation.
-
-***
-
 ### enabled
 
 > **enabled**: `boolean` = `false`
@@ -54,6 +38,14 @@ OBC.Component.enabled
 
 A list of all the floor plans created.
 Each floor plan is represented by a [PlanView](../interfaces/PlanView.md) object.
+
+***
+
+### offset
+
+> **offset**: `number` = `1.5`
+
+The offset from the clipping planes to their respective floor plan elevation.
 
 ***
 
@@ -100,21 +92,58 @@ The plane type for the clipping planes created by this component.
 
 ***
 
-### world?
-
-> `optional` **world**: `World`
-
-A reference to the world in which the floor plans are displayed.
-This is used to access the camera and other relevant components.
-
-***
-
 ### uuid
 
 > `static` `readonly` **uuid**: `"a80874aa-1c93-43a4-80f2-df346da086b1"`
 
 A unique identifier for the component.
 This UUID is used to register the component within the Components system.
+
+## Accessors
+
+### defaultCameraOffset
+
+> `get` **defaultCameraOffset**(): `number`
+
+The offset of the 2D camera to the floor plan elevation.
+
+> `set` **defaultCameraOffset**(`value`): `void`
+
+The offset of the 2D camera to the floor plan elevation.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`number`
+
+***
+
+### world
+
+> `get` **world**(): `undefined` \| `World`
+
+A reference to the world in which the floor plans are displayed.
+This is used to access the camera and other relevant components.
+
+> `set` **world**(`world`): `void`
+
+A reference to the world in which the floor plans are displayed.
+This is used to access the camera and other relevant components.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `world` | `undefined` \| `World` |
+
+#### Returns
+
+`undefined` \| `World`
 
 ## Methods
 
@@ -128,19 +157,16 @@ Creates a new floor plan based on the provided configuration.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `config` | [`PlanView`](../interfaces/PlanView.md) | The configuration object for the new floor plan. |
+| `config` | `object` | The configuration object for the new floor plan. |
+| `config.id` | `string` | - |
+| `config.name`? | `string` | - |
+| `config.normal` | `Vector3` | - |
+| `config.point` | `Vector3` | - |
+| `config.type`? | `string` | - |
 
 #### Returns
 
 `void`
-
-#### Throws
-
-Will throw an error if the world is not set before creating the clipping planes.
-
-#### Throws
-
-Will throw a warning if a floor plan with the same id already exists.
 
 ***
 

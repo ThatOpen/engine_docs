@@ -40,7 +40,7 @@ The keys are UUIDs and the values are instances of the components.
 
 ### release
 
-> `static` `readonly` **release**: `"2.1.11"` = `"2.1.11"`
+> `static` `readonly` **release**: `"2.2.0-alpha.0"` = `"2.2.0-alpha.0"`
 
 The version of the @thatopen/components library.
 

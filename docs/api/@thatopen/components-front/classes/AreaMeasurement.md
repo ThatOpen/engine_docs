@@ -10,6 +10,7 @@ This component allows users to measure areas in a 3D scene. 📕 [Tutorial](http
 
 - `Createable`
 - `Disposable`
+- `Hideable`
 
 ## Properties
 
@@ -60,6 +61,28 @@ OBC.Component.enabled
 > `set` **enabled**(`value`): `void`
 
 OBC.Component.enabled
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `boolean` |
+
+#### Returns
+
+`boolean`
+
+***
+
+### visible
+
+> `get` **visible**(): `boolean`
+
+OBC.Hideable.visible
+
+> `set` **visible**(`value`): `void`
+
+OBC.Hideable.visible
 
 #### Parameters
 

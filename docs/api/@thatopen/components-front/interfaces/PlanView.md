@@ -1,14 +1,50 @@
 # PlanView
 
-Necessary data to create a new floor plan in the navigator.
+The data that describes a plan view.
+
+## Extends
+
+- [`Section`](Section.md)
 
 ## Properties
+
+### cached
+
+> **cached**: `object`
+
+The cached camera data of the view when the user exited it.
+
+#### position
+
+> **position**: `Vector3`
+
+#### size
+
+> **size**: `number`
+
+#### target
+
+> **target**: `Vector3`
+
+#### zoom
+
+> **zoom**: `number`
+
+#### Inherited from
+
+[`Section`](Section.md) . [`cached`](Section.md#cached)
+
+***
 
 ### id
 
 > **id**: `string`
 
-The unique identifier for this floor plan (e.g. "0w984V0GL6yR4z75YWgVfX").
+The unique identifier for this Section plan (e.g. "0w984V0GL6yR4z75YWgVfX").
+
+#### Inherited from
+
+[`Section`](Section.md) . [`id`](Section.md#id)
 
 ***
 
@@ -18,42 +54,38 @@ The unique identifier for this floor plan (e.g. "0w984V0GL6yR4z75YWgVfX").
 
 The human-readable name of this floor plan (e.g. "First floor").
 
-***
+#### Inherited from
 
-### normal
-
-> **normal**: `Vector3`
-
-The rotation of the clipping plane
+[`Section`](Section.md) . [`name`](Section.md#name)
 
 ***
 
-### offset?
+### offset
 
-> `optional` **offset**: `number`
+> **offset**: `number`
+
+The offset of the camera to the clipping plane.
+
+#### Inherited from
+
+[`Section`](Section.md) . [`offset`](Section.md#offset)
+
+***
+
+### planOffset
+
+> **planOffset**: `number`
 
 The offset of the clipping plane to the plan height.
 
 ***
 
-### ortho
+### plane
 
-> **ortho**: `boolean`
-
-Whether the camera of the navigator should be orthogonal
-
-***
-
-### plane?
-
-> `optional` **plane**: [`EdgesPlane`](../classes/EdgesPlane.md)
+> **plane**: [`EdgesPlane`](../classes/EdgesPlane.md)
 
 The clipping plane object that cuts the model.
 
-***
+#### Inherited from
 
-### point
-
-> **point**: `Vector3`
-
-The position of the clipping plane
+[`Section`](Section.md) . [`plane`](Section.md#plane)

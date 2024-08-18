@@ -97,6 +97,14 @@ An object representing metadata about the IFC model defined by the IFC schema.
 
 ***
 
+### isStreamed
+
+> **isStreamed**: `boolean` = `false`
+
+Whether this fragments group is being streamed or not.
+
+***
+
 ### items
 
 > **items**: [`Fragment`](Fragment.md)[] = `[]`
@@ -149,6 +157,24 @@ A getter that checks if this group has properties, either locally defined or str
 `boolean`
 
 ## Methods
+
+### cloneGroup()
+
+> **cloneGroup**(`items`?): [`FragmentsGroup`](FragmentsGroup.md)
+
+Creates a copy of the whole group or a part of it. Each fragment clone shares the geometry of with its respective original fragment, but has its own InstancedMesh data, so it also needs to be disposed.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `items`? | [`FragmentIdMap`](../interfaces/FragmentIdMap.md) | Optional - The part of the group to be cloned. If not given, the whole group is cloned. |
+
+#### Returns
+
+[`FragmentsGroup`](FragmentsGroup.md)
+
+***
 
 ### dispose()
 

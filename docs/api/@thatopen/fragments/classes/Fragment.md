@@ -181,6 +181,24 @@ fragment.clear();
 
 ***
 
+### clone()
+
+> **clone**(`itemIDs`): [`Fragment`](Fragment.md)
+
+Creates a copy of the whole fragment or a part of it. It shares the geometry with the original fragment, but has its own InstancedMesh data, so it also needs to be disposed.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `itemIDs` | `Iterable`\<`number`\> | An iterable of item IDs to be included in the clone. |
+
+#### Returns
+
+[`Fragment`](Fragment.md)
+
+***
+
 ### dispose()
 
 > **dispose**(`disposeResources`): `void`
