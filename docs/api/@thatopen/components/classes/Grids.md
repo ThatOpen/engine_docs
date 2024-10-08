@@ -12,14 +12,6 @@ A component that manages grid instances. Each grid is associated with a unique w
 
 ## Properties
 
-### config
-
-> **config**: `Required` \<[`GridConfig`](../interfaces/GridConfig.md)\>
-
-The default configuration for grid creation.
-
-***
-
 ### enabled
 
 > **enabled**: `boolean` = `true`
@@ -128,13 +120,13 @@ If the world is disposed before calling this method, the grid will be automatica
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

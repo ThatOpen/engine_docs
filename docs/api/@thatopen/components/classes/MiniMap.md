@@ -7,6 +7,7 @@ A class representing a 2D minimap of a 3D world.
 - [`Resizeable`](../interfaces/Resizeable.md)
 - [`Updateable`](../interfaces/Updateable.md)
 - [`Disposable`](../interfaces/Disposable.md)
+- [`Configurable`](../interfaces/Configurable.md)\<`MiniMapConfigManager`, [`MiniMapConfig`](../interfaces/MiniMapConfig.md)\>
 
 ## Properties
 
@@ -16,6 +17,18 @@ A class representing a 2D minimap of a 3D world.
 
 The background color of the minimap.
 It is used to set the background color of the minimap's renderer.
+
+***
+
+### config
+
+> **config**: `MiniMapConfigManager`
+
+[Configurable.config](../interfaces/Configurable.md#config)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`config`](../interfaces/Configurable.md#config)
 
 ***
 
@@ -35,6 +48,18 @@ If disabled, the minimap will not update or render.
 The front offset of the minimap.
 It determines how much the minimap's view is offset from the camera's view.
 By pushing the map to the front, what the user sees on screen corresponds with what they see on the map
+
+***
+
+### isSetup
+
+> **isSetup**: `boolean` = `false`
+
+[Configurable.isSetup](../interfaces/Configurable.md#issetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`isSetup`](../interfaces/Configurable.md#issetup)
 
 ***
 
@@ -83,6 +108,18 @@ By pushing the map to the front, what the user sees on screen corresponds with w
 #### Implementation of
 
 [`Resizeable`](../interfaces/Resizeable.md) . [`onResize`](../interfaces/Resizeable.md#onresize)
+
+***
+
+### onSetup
+
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
+
+[Configurable.onSetup](../interfaces/Configurable.md#onsetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`onSetup`](../interfaces/Configurable.md#onsetup)
 
 ***
 
@@ -226,6 +263,28 @@ Returns the camera used by the MiniMap
 #### Implementation of
 
 [`Resizeable`](../interfaces/Resizeable.md) . [`resize`](../interfaces/Resizeable.md#resize)
+
+***
+
+### setup()
+
+> **setup**(`config`?): `void`
+
+[Configurable.setup](../interfaces/Configurable.md#setup)
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `config`? | `Partial` \<[`MiniMapConfig`](../interfaces/MiniMapConfig.md)\> |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`setup`](../interfaces/Configurable.md#setup)
 
 ***
 

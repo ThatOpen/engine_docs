@@ -16,6 +16,7 @@ E.g. [SimplePlane](SimplePlane.md).
 - [`Createable`](../interfaces/Createable.md)
 - [`Disposable`](../interfaces/Disposable.md)
 - [`Hideable`](../interfaces/Hideable.md)
+- [`Configurable`](../interfaces/Configurable.md)\<`ClipperConfigManager`, `ClipperConfig`\>
 
 ## Properties
 
@@ -35,6 +36,30 @@ Default is [SimplePlane](SimplePlane.md).
 #### Returns
 
 [`SimplePlane`](SimplePlane.md)
+
+***
+
+### config
+
+> **config**: `ClipperConfigManager`
+
+[Configurable.config](../interfaces/Configurable.md#config)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`config`](../interfaces/Configurable.md#config)
+
+***
+
+### isSetup
+
+> **isSetup**: `boolean` = `false`
+
+[Configurable.isSetup](../interfaces/Configurable.md#issetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`isSetup`](../interfaces/Configurable.md#issetup)
 
 ***
 
@@ -127,6 +152,18 @@ Event that fires when the user starts dragging a clipping plane.
 #### Implementation of
 
 [`Disposable`](../interfaces/Disposable.md) . [`onDisposed`](../interfaces/Disposable.md#ondisposed)
+
+***
+
+### onSetup
+
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
+
+[Configurable.onSetup](../interfaces/Configurable.md#onsetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`onSetup`](../interfaces/Configurable.md#onsetup)
 
 ***
 
@@ -350,13 +387,13 @@ Deletes all the existing clipping planes.
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 
@@ -425,3 +462,25 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 #### Inherited from
 
 [`Component`](Component.md) . [`isUpdateable`](Component.md#isupdateable)
+
+***
+
+### setup()
+
+> **setup**(`config`?): `void`
+
+[Configurable.setup](../interfaces/Configurable.md#setup)
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `config`? | `Partial`\<`ClipperConfig`\> |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`setup`](../interfaces/Configurable.md#setup)

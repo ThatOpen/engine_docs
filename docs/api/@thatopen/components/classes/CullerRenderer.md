@@ -6,7 +6,27 @@ A base renderer to determine visibility on screen.
 
 - [`MeshCullerRenderer`](MeshCullerRenderer.md)
 
+## Implements
+
+- [`Configurable`](../interfaces/Configurable.md)\<`CullerRendererConfigManager`, `CullerRendererConfig`\>
+
 ## Properties
+
+### buffer
+
+> **buffer**: `Uint8Array`
+
+The buffer when the result of the visibility check is stored.
+
+***
+
+### bufferSize
+
+> **bufferSize**: `number` = `1`
+
+The size of the buffer where the result of the visibility check is stored.
+
+***
 
 ### components
 
@@ -16,11 +36,35 @@ The components instance to which this renderer belongs.
 
 ***
 
+### config
+
+> **config**: `CullerRendererConfigManager`
+
+[Configurable.config](../interfaces/Configurable.md#config)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`config`](../interfaces/Configurable.md#config)
+
+***
+
 ### enabled
 
 > **enabled**: `boolean` = `true`
 
 Whether this renderer is active or not. If not, it won't render anything.
+
+***
+
+### isSetup
+
+> **isSetup**: `boolean` = `false`
+
+[Configurable.isSetup](../interfaces/Configurable.md#issetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`isSetup`](../interfaces/Configurable.md#issetup)
 
 ***
 
@@ -41,6 +85,18 @@ You can bind this to the camera movement, to a certain interval, etc.
 
 ***
 
+### onSetup
+
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
+
+[Configurable.onSetup](../interfaces/Configurable.md#onsetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`onSetup`](../interfaces/Configurable.md#onsetup)
+
+***
+
 ### onViewUpdated
 
 > `readonly` **onViewUpdated**: [`Event`](Event.md)\<`any`\> \| [`AsyncEvent`](AsyncEvent.md)\<`any`\>
@@ -51,12 +107,19 @@ just before but not anymore.
 
 ***
 
-### renderDebugFrame
+### preventUpdate
 
-> **renderDebugFrame**: `boolean` = `false`
+> **preventUpdate**: `boolean` = `false`
 
-Render the internal scene used to determine the object visibility. Used
-for debugging purposes.
+Flag to indicate if the renderer shouldn't update the visibility.
+
+***
+
+### renderTarget
+
+> **renderTarget**: `WebGLRenderTarget`\<`Texture`\>
+
+The render target used to render the visibility scene.
 
 ***
 

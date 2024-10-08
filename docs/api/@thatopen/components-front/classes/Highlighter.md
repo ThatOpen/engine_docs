@@ -9,7 +9,6 @@ This component allows highlighting and selecting fragments in a 3D scene. 📕 [
 ## Implements
 
 - `Disposable`
-- `Configurable` \<[`HighlighterConfig`](../interfaces/HighlighterConfig.md)\>
 
 ## Properties
 
@@ -43,10 +42,6 @@ Stores the colors used for highlighting selections.
 
 Stores the configuration options for the Highlighter.
 
-#### Implementation of
-
-`OBC.Configurable.config`
-
 ***
 
 ### enabled
@@ -74,10 +69,6 @@ Stores the events triggered by the Highlighter.
 > **isSetup**: `boolean` = `false`
 
 Indicates whether the Highlighter is setup.
-
-#### Implementation of
-
-`OBC.Configurable.isSetup`
 
 ***
 
@@ -122,10 +113,6 @@ OBC.Disposable.onDisposed
 > `readonly` **onSetup**: `Event` \<[`Highlighter`](Highlighter.md)\>
 
 Event triggered when the Highlighter is setup.
-
-#### Implementation of
-
-`OBC.Configurable.onSetup`
 
 ***
 
@@ -352,10 +339,6 @@ Sets up the Highlighter with the provided configuration.
 #### Returns
 
 `void`
-
-#### Implementation of
-
-`OBC.Configurable.setup`
 
 #### Throws
 

@@ -33,7 +33,6 @@
 | [Sections](classes/Sections.md) | A component to create and manage arbitrary sections for BIM models. |
 | [ShadowDropper](classes/ShadowDropper.md) | This component drops shadows on meshes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/ShadowDropper). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/ShadowDropper). |
 | [SimpleDimensionLine](classes/SimpleDimensionLine.md) | A class representing a simple dimension line in a 3D space. |
-| [StreamFileDatabase](classes/StreamFileDatabase.md) | A class representing a database for storing streamed files. It extends Dexie, a minimalistic wrapper for IndexedDB. |
 | [VolumeMeasurement](classes/VolumeMeasurement.md) | This component allows users to measure geometry volumes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/VolumeMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/VolumeMeasurement). |
 
 ## Interfaces

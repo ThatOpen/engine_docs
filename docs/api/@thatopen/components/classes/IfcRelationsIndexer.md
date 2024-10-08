@@ -36,6 +36,42 @@ Indexer component for IFC entities, facilitating the indexing and retrieval of I
 
 ***
 
+### onEntitiesRelated
+
+> `readonly` **onEntitiesRelated**: [`Event`](Event.md)\<`object`\>
+
+An event that is triggered when entities are related in a BIM model.
+The event provides information about the type of relation, the inverse attribute,
+the IDs of the entities related, and the IDs of the entities that are being related.
+
+#### Type declaration
+
+##### invAttribute
+
+> **invAttribute**: `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` \| `"DocumentRefForObjects"`
+
+The inverse attribute of the relation.
+
+##### relType
+
+> **relType**: `160246688` \| `279856033` \| `307848117` \| `781010003` \| `919958153` \| `982818633` \| `1204542856` \| `1307041759` \| `2495723537` \| `2565941209` \| `2655215786` \| `2857406711` \| `3242617779` \| `3268803585` \| `4186316022`
+
+The type of the IFC relation.
+
+##### relatedIDs
+
+> **relatedIDs**: `number`[]
+
+The IDs of the entities that are being related.
+
+##### relatingIDs
+
+> **relatingIDs**: `number`[]
+
+The IDs of the entities that are relating.
+
+***
+
 ### onRelationsIndexed
 
 > `readonly` **onRelationsIndexed**: [`Event`](Event.md)\<`object`\>
@@ -77,7 +113,7 @@ This UUID is used to register the component within the Components system.
 
 ## Methods
 
-### addEntityRelations()
+### ~~addEntityRelations()~~
 
 > **addEntityRelations**(`model`, `expressID`, `relationName`, ...`relIDs`): `void`
 
@@ -89,16 +125,39 @@ Adds relations between an entity and other entities in a BIM model.
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The BIM model to which the relations will be added. |
 | `expressID` | `number` | The expressID of the entity within the model. |
-| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` | The IFC schema inverse attribute of the relation to add (e.g., "IsDefinedBy", "ContainsElements"). |
+| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` \| `"DocumentRefForObjects"` | The IFC schema inverse attribute of the relation to add (e.g., "IsDefinedBy", "ContainsElements"). |
 | ...`relIDs` | `number`[] | The expressIDs of the related entities within the model. |
 
 #### Returns
 
 `void`
 
+#### Deprecated
+
+Use addEntitiesRelation instead. This will be removed in future versions.
+
 #### Throws
 
 An error if the relation name is not a valid relation name.
+
+***
+
+### applyRelationChanges()
+
+> **applyRelationChanges**(): `Promise`\<`void`\>
+
+Converts the relations made into actual IFC data.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+A promise that resolves when all the relation changes have been applied.
+
+#### Remarks
+
+This function iterates through the changes made to the relations and applies them to the corresponding BIM model.
+It only make sense to use if the relations need to be write in the IFC file.
 
 ***
 
@@ -122,14 +181,14 @@ An error if the relation name is not a valid relation name.
 
 > **getEntitiesWithRelation**(`model`, `inv`, `expressID`): `Set`\<`number`\>
 
-Retrieves the entities within a given model that have a specific relation with a given entity.
+Retrieves the entities within a model that have a specific relation with a given entity.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The BIM model to search for related entities. |
-| `inv` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
+| `inv` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` \| `"DocumentRefForObjects"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
 | `expressID` | `number` | The expressID of the entity within the model. |
 
 #### Returns
@@ -178,9 +237,9 @@ returning the IDs of related entities if a match is found.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `model` | `FragmentsGroup` | The `FragmentsGroup` model containing the entity. |
+| `model` | `string` \| `FragmentsGroup` | The `FragmentsGroup` model containing the entity, or its UUID. |
 | `expressID` | `number` | The unique identifier of the entity within the model. |
-| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
+| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` \| `"DocumentRefForObjects"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
 
 #### Returns
 
@@ -219,13 +278,13 @@ is an array of express IDs (as numbers) of entities related through that relatio
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

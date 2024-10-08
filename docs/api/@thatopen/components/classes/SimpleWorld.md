@@ -101,9 +101,9 @@ An optional name for the world.
 
 ### uuid
 
-> **uuid**: `string`
+> `readonly` **uuid**: `string`
 
-A unique identifier for the world.
+A unique identifier for the world. Is not meant to be changed at any moment.
 
 #### Implementation of
 
@@ -211,13 +211,13 @@ The current scene.
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

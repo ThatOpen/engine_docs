@@ -1,6 +1,6 @@
 # SimpleSceneConfig
 
-Configuration interface for the [SimpleScene](../classes/SimpleScene.md). Defines properties for directional and ambient lights.
+Configuration interface for the [SimpleScene](../classes/SimpleScene.md).
 
 ## Extended by
 

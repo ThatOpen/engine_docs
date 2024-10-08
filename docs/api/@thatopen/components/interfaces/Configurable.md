@@ -1,4 +1,4 @@
-# Configurable\<T\>
+# Configurable\<T, U\>
 
 Whether this component supports to be configured.
 
@@ -6,7 +6,8 @@ Whether this component supports to be configured.
 
 | Type parameter |
 | :------ |
-| `T` *extends* `Record`\<`string`, `any`\> |
+| `T` |
+| `U` |
 
 ## Properties
 
@@ -14,8 +15,7 @@ Whether this component supports to be configured.
 
 > **config**: `Required`\<`T`\>
 
-Object holding the tool configuration. Is not meant to be edited directly, if you need
-to make changes to this object, use [()](Configurable.md#setup) just after the tool is instantiated.
+Object holding the tool configuration. You can edit this directly to change the object.
 
 ***
 
@@ -39,13 +39,13 @@ Fired after successfully calling [()](Configurable.md#setup)
 
 > **setup**: (`config`?) => `void` \| `Promise`\<`void`\>
 
-Use the provided configuration to setup the tool.
+Use the provided configuration to set up the tool.
 
 #### Parameters
 
 | Parameter | Type |
 | :------ | :------ |
-| `config`? | `Partial`\<`T`\> |
+| `config`? | `Partial`\<`U`\> |
 
 #### Returns
 

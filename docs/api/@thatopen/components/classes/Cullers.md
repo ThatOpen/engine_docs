@@ -65,7 +65,7 @@ This UUID is used to register the component within the Components system.
 
 ### create()
 
-> **create**(`world`, `config`?): [`MeshCullerRenderer`](MeshCullerRenderer.md)
+> **create**(`world`): [`MeshCullerRenderer`](MeshCullerRenderer.md)
 
 Creates a new MeshCullerRenderer for the given world.
 If a MeshCullerRenderer already exists for the world, it will return the existing one.
@@ -75,7 +75,6 @@ If a MeshCullerRenderer already exists for the world, it will return the existin
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `world` | [`World`](../interfaces/World.md) | The world for which to create the MeshCullerRenderer. |
-| `config`? | `Partial` \<[`CullerRendererSettings`](../interfaces/CullerRendererSettings.md)\> | Optional configuration settings for the MeshCullerRenderer. |
 
 #### Returns
 
@@ -122,13 +121,13 @@ If a MeshCullerRenderer exists for the given world, it will be disposed and remo
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

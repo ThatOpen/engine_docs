@@ -12,6 +12,30 @@ A renderer to hide/show meshes depending on their visibility from the user's poi
 
 ## Properties
 
+### buffer
+
+> **buffer**: `Uint8Array`
+
+The buffer when the result of the visibility check is stored.
+
+#### Inherited from
+
+[`CullerRenderer`](CullerRenderer.md) . [`buffer`](CullerRenderer.md#buffer)
+
+***
+
+### bufferSize
+
+> **bufferSize**: `number` = `1`
+
+The size of the buffer where the result of the visibility check is stored.
+
+#### Inherited from
+
+[`CullerRenderer`](CullerRenderer.md) . [`bufferSize`](CullerRenderer.md#buffersize)
+
+***
+
 ### colorMeshes
 
 > **colorMeshes**: `Map`\<`string`, `InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>\>
@@ -33,6 +57,18 @@ The components instance to which this renderer belongs.
 
 ***
 
+### config
+
+> **config**: `CullerRendererConfigManager`
+
+[Configurable.config](../interfaces/Configurable.md#config)
+
+#### Inherited from
+
+[`CullerRenderer`](CullerRenderer.md) . [`config`](CullerRenderer.md#config)
+
+***
+
 ### enabled
 
 > **enabled**: `boolean` = `true`
@@ -45,12 +81,15 @@ Whether this renderer is active or not. If not, it won't render anything.
 
 ***
 
-### isProcessing
+### isSetup
 
-> **isProcessing**: `boolean` = `false`
+> **isSetup**: `boolean` = `false`
 
-Flag to indicate if the renderer is currently processing.
-Used to prevent concurrent processing.
+[Configurable.isSetup](../interfaces/Configurable.md#issetup)
+
+#### Inherited from
+
+[`CullerRenderer`](CullerRenderer.md) . [`isSetup`](CullerRenderer.md#issetup)
 
 ***
 
@@ -83,6 +122,18 @@ You can bind this to the camera movement, to a certain interval, etc.
 
 ***
 
+### onSetup
+
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
+
+[Configurable.onSetup](../interfaces/Configurable.md#onsetup)
+
+#### Inherited from
+
+[`CullerRenderer`](CullerRenderer.md) . [`onSetup`](CullerRenderer.md#onsetup)
+
+***
+
 ### onViewUpdated
 
 > `readonly` **onViewUpdated**: [`Event`](Event.md)\<`object`\>
@@ -106,16 +157,27 @@ Contains two sets: seen and unseen.
 
 ***
 
-### renderDebugFrame
+### preventUpdate
 
-> **renderDebugFrame**: `boolean` = `false`
+> **preventUpdate**: `boolean` = `false`
 
-Render the internal scene used to determine the object visibility. Used
-for debugging purposes.
+Flag to indicate if the renderer shouldn't update the visibility.
 
 #### Inherited from
 
-[`CullerRenderer`](CullerRenderer.md) . [`renderDebugFrame`](CullerRenderer.md#renderdebugframe)
+[`CullerRenderer`](CullerRenderer.md) . [`preventUpdate`](CullerRenderer.md#preventupdate)
+
+***
+
+### renderTarget
+
+> **renderTarget**: `WebGLRenderTarget`\<`Texture`\>
+
+The render target used to render the visibility scene.
+
+#### Inherited from
+
+[`CullerRenderer`](CullerRenderer.md) . [`renderTarget`](CullerRenderer.md#rendertarget)
 
 ***
 
@@ -131,15 +193,6 @@ The THREE.js renderer used to make the visibility test.
 
 ***
 
-### threshold
-
-> **threshold**: `number` = `100`
-
-Pixels in screen a geometry must occupy to be considered "seen".
-Default value is 100.
-
-***
-
 ### world
 
 > `readonly` **world**: [`World`](../interfaces/World.md)
@@ -149,6 +202,32 @@ The world instance to which this renderer belongs.
 #### Inherited from
 
 [`CullerRenderer`](CullerRenderer.md) . [`world`](CullerRenderer.md#world)
+
+## Accessors
+
+### threshold
+
+> `get` **threshold**(): `number`
+
+#### Deprecated
+
+use config.threshold instead.
+
+> `set` **threshold**(`value`): `void`
+
+#### Deprecated
+
+use config.threshold instead.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`number`
 
 ## Methods
 

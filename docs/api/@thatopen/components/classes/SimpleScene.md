@@ -12,7 +12,7 @@ A basic 3D [scene](https://threejs.org/docs/#api/en/scenes/Scene) to add objects
 
 ## Implements
 
-- [`Configurable`](../interfaces/Configurable.md)\<`object`\>
+- [`Configurable`](../interfaces/Configurable.md)\<`SimpleSceneConfigManager`, [`SimpleSceneConfig`](../interfaces/SimpleSceneConfig.md)\>
 
 ## Properties
 
@@ -30,10 +30,9 @@ The set of ambient lights managed by this scene component.
 
 ### config
 
-> **config**: `Required` \<[`SimpleSceneConfig`](../interfaces/SimpleSceneConfig.md)\>
+> **config**: `SimpleSceneConfigManager`
 
-Configuration interface for the [SimpleScene](SimpleScene.md).
-Defines properties for directional and ambient lights.
+[Configurable.config](../interfaces/Configurable.md#config)
 
 #### Implementation of
 
@@ -91,7 +90,7 @@ The set of directional lights managed by this scene component.
 
 ### onSetup
 
-> `readonly` **onSetup**: [`Event`](Event.md) \<[`SimpleScene`](SimpleScene.md)\>
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
 
 [Configurable.onSetup](../interfaces/Configurable.md#onsetup)
 
@@ -137,31 +136,15 @@ It is used to define the 3D space containing objects, lights, and cameras.
 
 ## Methods
 
-### dispose()
-
-> **dispose**(): `void`
-
-[Disposable.dispose](../interfaces/Disposable.md#dispose)
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-[`BaseScene`](BaseScene.md) . [`dispose`](BaseScene.md#dispose)
-
-***
-
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

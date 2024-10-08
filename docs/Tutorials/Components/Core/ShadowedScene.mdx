@@ -47,11 +47,6 @@ const grid = grids.create(world);
 
 world.camera.controls.setLookAt(1, 2, -2, -2, 0, -5);
 ```
-We'll make the background of the scene transparent so that it looks good in our docs page, but you don't have to do that in your app!
-
-```js
-world.scene.three.background = null;
-```
 ### 🏠 Loading a model
 ---
 Now that we have a scene, let's load a model. We will use the Fragment Manager for it. 
@@ -130,6 +125,11 @@ await world.scene.updateShadows();
 world.camera.controls.addEventListener("update", async () => {
   await world.scene.updateShadows();
 });
+```
+We'll make the background of the scene transparent so that it looks good in our docs page, but you don't have to do that in your app!
+
+```js
+world.scene.three.background = null;
 ```
 ### ⏱️ Measuring the performance (optional)
 ---

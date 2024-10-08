@@ -130,11 +130,15 @@ An object containing settings for streaming data, including base URL, base file 
 
 #### baseFileName
 
-> **baseFileName**: `string` = `""`
+> **baseFileName**: `string`
 
-#### baseUrl
+#### ~~baseUrl?~~
 
-> **baseUrl**: `string` = `""`
+> `optional` **baseUrl**: `string`
+
+##### Deprecated
+
+use FragmentsGroup.baseUrl instead
 
 #### ids
 
@@ -143,6 +147,30 @@ An object containing settings for streaming data, including base URL, base file 
 #### types
 
 > **types**: `Map`\<`number`, `number`[]\>
+
+***
+
+### propertiesDB
+
+> `static` **propertiesDB**: `null` \| `StreamerFileDb` = `null`
+
+The object in charge of caching property files locally to save requests over the network.
+
+***
+
+### url
+
+> `static` **url**: `string` = `""`
+
+Default URL for requesting property tiles. Feel free to change this, or override the FragmentsGroup.fetch method for more granular control.
+
+***
+
+### useCache
+
+> `static` **useCache**: `boolean` = `true`
+
+Whether to use local cache when streaming properties.
 
 ## Accessors
 
@@ -426,3 +454,21 @@ const properties: IfcProperties = {
 
 fragmentsGroup.setProperties(12345, properties[12345]);
 ```
+
+***
+
+### setPropertiesDB()
+
+> `static` **setPropertiesDB**(`enabled`): `void`
+
+Enables or disables the local property caching system.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `enabled` | `boolean` | Whether to enable or disable it. |
+
+#### Returns
+
+`void`

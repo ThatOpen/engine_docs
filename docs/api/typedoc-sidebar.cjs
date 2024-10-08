@@ -16,6 +16,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/BCFTopics",
+            "label": "BCFTopics"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/Base",
             "label": "Base"
           },
@@ -68,6 +73,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/classes/Components",
             "label": "Components"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/ConfigManager",
+            "label": "ConfigManager"
           },
           {
             "type": "doc",
@@ -126,6 +136,31 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/IDSSpecification",
+            "label": "IDSSpecification"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IDSSpecifications",
+            "label": "IDSSpecifications"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcBasicQuery",
+            "label": "IfcBasicQuery"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcFinder",
+            "label": "IfcFinder"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcFinderQuery",
+            "label": "IfcFinderQuery"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/IfcFragmentSettings",
             "label": "IfcFragmentSettings"
           },
@@ -153,6 +188,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/classes/IfcPropertiesTiler",
             "label": "IfcPropertiesTiler"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcPropertyQuery",
+            "label": "IfcPropertyQuery"
           },
           {
             "type": "doc",
@@ -266,6 +306,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/Viewpoint",
+            "label": "Viewpoint"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/Worlds",
             "label": "Worlds"
           }
@@ -284,6 +329,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/BCFTopicsConfig",
             "label": "BCFTopicsConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/BCFViewpoint",
+            "label": "BCFViewpoint"
           },
           {
             "type": "doc",
@@ -312,18 +362,8 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/interfaces/CullerRendererSettings",
-            "label": "CullerRendererSettings"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components/interfaces/Disposable",
             "label": "Disposable"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/interfaces/GridConfig",
-            "label": "GridConfig"
           },
           {
             "type": "doc",
@@ -332,8 +372,33 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/interfaces/IDSCheckResult",
+            "label": "IDSCheckResult"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/IfcCategoryRule",
+            "label": "IfcCategoryRule"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/IfcOperatorRule",
+            "label": "IfcOperatorRule"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/IfcPropertyRule",
+            "label": "IfcPropertyRule"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/interfaces/MeasureEdge",
             "label": "MeasureEdge"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/MiniMapConfig",
+            "label": "MiniMapConfig"
           },
           {
             "type": "doc",
@@ -354,6 +419,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/ShadowedSceneConfig",
             "label": "ShadowedSceneConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/SimpleGridConfig",
+            "label": "SimpleGridConfig"
           },
           {
             "type": "doc",
@@ -403,6 +473,21 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/IfcFinderRule",
+            "label": "IfcFinderRule"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/IfcRelations",
+            "label": "IfcRelations"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/InverseAttributes",
+            "label": "InverseAttributes"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/type-aliases/NavModeID",
             "label": "NavModeID"
           },
@@ -410,6 +495,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/type-aliases/NumericPropTypes",
             "label": "NumericPropTypes"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/SerializedQuery",
+            "label": "SerializedQuery"
           },
           {
             "type": "doc",
@@ -597,11 +687,6 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/SimpleDimensionLine",
             "label": "SimpleDimensionLine"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/StreamFileDatabase",
-            "label": "StreamFileDatabase"
           },
           {
             "type": "doc",
@@ -1121,6 +1206,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui-obc/classes/ViewCube",
             "label": "ViewCube"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui-obc/classes/World",
+            "label": "World"
           },
           {
             "type": "doc",

@@ -181,6 +181,28 @@ This UUID is used to register the component within the Components system.
 
 ## Methods
 
+### ~~addElementToPset()~~
+
+> **addElementToPset**(`model`, `psetID`, ...`expressIDs`): `void`
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `model` | `FragmentsGroup` |
+| `psetID` | `number` |
+| ...`expressIDs` | `number`[] |
+
+#### Returns
+
+`void`
+
+#### Deprecated
+
+Use indexer.addEntitiesRelation instead. This will be removed in future releases.
+
+***
+
 ### addPropToPset()
 
 > **addPropToPset**(`model`, `psetID`, ...`propID`): `Promise`\<`void`\>
@@ -212,6 +234,33 @@ Will throw an error if the Pset to be added to is not of type `IFCPROPERTYSET`.
 #### Throws
 
 Will throw an error if no relation is found between the Pset and the model.
+
+***
+
+### createIfcRel()
+
+> **createIfcRel**(`model`, `type`, `relatingID`, `relatedIDs`): `Promise`\<`any`\>
+
+Creates a new instance of a relationship between entities in the IFC model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `FragmentsGroup` | The FragmentsGroup model in which to create the relationship. |
+| `type` | `160246688` \| `279856033` \| `307848117` \| `781010003` \| `919958153` \| `982818633` \| `1204542856` \| `1307041759` \| `2495723537` \| `2565941209` \| `2655215786` \| `2857406711` \| `3242617779` \| `3268803585` \| `4186316022` | The type of the relationship to create. |
+| `relatingID` | `number` | The express ID of the entity that is related to the other entities. |
+| `relatedIDs` | `number`[] | The express IDs of the entities that are related to the relating entity. |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+A promise that resolves with the newly created relationship.
+
+#### Throws
+
+Will throw an error if the relationship type is unsupported.
 
 ***
 
@@ -257,13 +306,13 @@ null if the model doesn't have any entity of that type
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

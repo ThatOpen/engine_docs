@@ -89,6 +89,14 @@ Exclusive list of categories that will be converted to fragments. If this contai
 
 ***
 
+### maxTriangles
+
+> **maxTriangles**: `null` \| `number` = `null`
+
+Maximum amount of triangles per fragment. Useful for controlling the maximum size of fragment files.
+
+***
+
 ### minAssetsSize
 
 > **minAssetsSize**: `number` = `1000`

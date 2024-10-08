@@ -9,6 +9,7 @@ A scene that supports efficient cast shadows. 📕 [Tutorial](https://docs.thato
 ## Implements
 
 - [`Disposable`](../interfaces/Disposable.md)
+- [`Configurable`](../interfaces/Configurable.md)\<`SimpleSceneConfigManager`, [`ShadowedSceneConfig`](../interfaces/ShadowedSceneConfig.md)\>
 
 ## Properties
 
@@ -34,12 +35,15 @@ Whether the bias property should be set automatically depending on the shadow di
 
 ### config
 
-> **config**: `Required` \<[`ShadowedSceneConfig`](../interfaces/ShadowedSceneConfig.md)\>
+> **config**: `SimpleSceneConfigManager`
 
-Configuration interface for the [ShadowedScene](ShadowedScene.md).
-Defines properties for directional and ambient lights, as well as shadows.
+[Configurable.config](../interfaces/Configurable.md#config)
 
-#### Overrides
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`config`](../interfaces/Configurable.md#config)
+
+#### Inherited from
 
 [`SimpleScene`](SimpleScene.md) . [`config`](SimpleScene.md#config)
 
@@ -75,6 +79,10 @@ The set of directional lights managed by this scene component.
 
 [Configurable.isSetup](../interfaces/Configurable.md#issetup)
 
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`isSetup`](../interfaces/Configurable.md#issetup)
+
 #### Inherited from
 
 [`SimpleScene`](SimpleScene.md) . [`isSetup`](SimpleScene.md#issetup)
@@ -99,9 +107,13 @@ The set of directional lights managed by this scene component.
 
 ### onSetup
 
-> `readonly` **onSetup**: [`Event`](Event.md) \<[`SimpleScene`](SimpleScene.md)\>
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
 
 [Configurable.onSetup](../interfaces/Configurable.md#onsetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`onSetup`](../interfaces/Configurable.md#onsetup)
 
 #### Inherited from
 
@@ -217,19 +229,19 @@ Setter to control whether the shadows are enabled or not in this scene instance.
 
 #### Overrides
 
-[`SimpleScene`](SimpleScene.md) . [`dispose`](SimpleScene.md#dispose)
+`SimpleScene.dispose`
 
 ***
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 
@@ -316,6 +328,10 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 #### Returns
 
 `void`
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`setup`](../interfaces/Configurable.md#setup)
 
 #### Overrides
 

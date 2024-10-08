@@ -5,6 +5,7 @@
 | Class | Description |
 | :------ | :------ |
 | [AsyncEvent](classes/AsyncEvent.md) | Simple event handler by [Jason Kleban](https://gist.github.com/JasonKleban/50cee44960c225ac1993c922563aa540). Keep in mind that if you want to remove it later, you might want to declare the callback as an object. If you want to maintain the reference to `this`, you will need to declare the callback as an arrow function. |
+| [BCFTopics](classes/BCFTopics.md) | BCFTopics manages Building Collaboration Format (BCF) data the engine. It provides functionality for importing, exporting, and manipulating BCF data. |
 | [Base](classes/Base.md) | Base class of the library. Useful for finding out the interfaces something implements. |
 | [BaseCamera](classes/BaseCamera.md) | Abstract class representing a camera in a 3D world. All cameras should use this class as a base. |
 | [BaseRenderer](classes/BaseRenderer.md) | Abstract class representing a renderer for a 3D world. All renderers should use this class as a base. |
@@ -16,6 +17,7 @@
 | [Comment](classes/Comment.md) | Represents a comment in a BCF Topic. |
 | [Component](classes/Component.md) | Components are the building blocks of this library. Components are singleton elements that contain specific functionality. For instance, the Clipper Component can create, delete and handle 3D clipping planes. Components must be unique (they can't be instanced more than once per Components instance), and have a static UUID that identifies them uniquely. The can be accessed globally using the [Components](classes/Components.md) instance. |
 | [Components](classes/Components.md) | The entry point of the Components library. It can create, delete and access all the components of the library globally, update all the updatable components automatically and dispose all the components, preventing memory leaks. |
+| [ConfigManager](classes/ConfigManager.md) | A tool to manage all the configuration from the app centrally. |
 | [CullerRenderer](classes/CullerRenderer.md) | A base renderer to determine visibility on screen. |
 | [Cullers](classes/Cullers.md) | A component that provides culling functionality for meshes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Cullers). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Cullers). |
 | [DataMap](classes/DataMap.md) | A class that extends the built-in Map class and provides additional events for item set, update, delete, and clear operations. |
@@ -27,12 +29,18 @@
 | [FragmentsManager](classes/FragmentsManager.md) | Component to load, delete and manage [fragments](https://github.com/ThatOpen/engine_fragment) efficiently. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/FragmentsManager). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/FragmentsManager). |
 | [Grids](classes/Grids.md) | A component that manages grid instances. Each grid is associated with a unique world. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Grids). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Grids). |
 | [Hider](classes/Hider.md) | A component that hides or isolates fragments within a 3D scene. It extends the base Component class and provides methods to control fragment visibility and isolation. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Hider). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Hider). |
+| [IDSSpecification](classes/IDSSpecification.md) | Represents a single specification from the Information Delivery Specification (IDS) standard. |
+| [IDSSpecifications](classes/IDSSpecifications.md) | Component that manages Information Delivery Specification (IDS) data. It provides functionality for importing, exporting, and manipulating IDS data. |
+| [IfcBasicQuery](classes/IfcBasicQuery.md) | A query that checks the direct attributes of IFC items. |
+| [IfcFinder](classes/IfcFinder.md) | Component to make text queries in the IFC. |
+| [IfcFinderQuery](classes/IfcFinderQuery.md) | The base class for all queries used by the [IfcFinder](classes/IfcFinder.md). |
 | [IfcFragmentSettings](classes/IfcFragmentSettings.md) | Configuration of the IFC-fragment conversion. |
 | [IfcGeometryTiler](classes/IfcGeometryTiler.md) | A component that handles the tiling of IFC geometries for efficient streaming. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcGeometryTiler). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcGeometryTiler). |
 | [IfcJsonExporter](classes/IfcJsonExporter.md) | Component to export all the properties from an IFC to a JS object. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcJsonExporter). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcJsonExporter). |
 | [IfcLoader](classes/IfcLoader.md) | The IfcLoader component is responsible for loading and processing IFC files. It utilizes the Web-IFC library to handle the IFC data and the Three.js library for 3D rendering. The class provides methods for setting up, loading, and cleaning up IFC files. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcLoader). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcLoader). |
 | [IfcPropertiesManager](classes/IfcPropertiesManager.md) | Component to manage and edit properties and Psets in IFC files. |
 | [IfcPropertiesTiler](classes/IfcPropertiesTiler.md) | A component that converts the properties of an IFC file to tiles. It uses the Web-IFC library to read and process the IFC data. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcPropertiesTiler). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcPropertiesTiler). |
+| [IfcPropertyQuery](classes/IfcPropertyQuery.md) | A query that checks the properties in the property sets assigned to IFC items. |
 | [IfcRelationsIndexer](classes/IfcRelationsIndexer.md) | Indexer component for IFC entities, facilitating the indexing and retrieval of IFC entity relationships. It is designed to process models properties by indexing their IFC entities' relations based on predefined inverse attributes, and provides methods to query these relations. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcRelationsIndexer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcRelationsIndexer). |
 | [IfcStreamingSettings](classes/IfcStreamingSettings.md) | Settings for streaming IFC geometry and assets. Extends [IfcFragmentSettings](classes/IfcFragmentSettings.md) to inherit common settings. |
 | [MeasurementUtils](classes/MeasurementUtils.md) | Utility component for performing measurements on 3D meshes by providing methods for measuring distances between edges and faces. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/MeasurementUtils). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/MeasurementUtils). |
@@ -55,6 +63,7 @@
 | [SimpleScene](classes/SimpleScene.md) | A basic 3D [scene](https://threejs.org/docs/#api/en/scenes/Scene) to add objects hierarchically, and easily dispose them when you are finished with it. |
 | [SimpleWorld](classes/SimpleWorld.md) | A class representing a simple world in a 3D environment. It extends the Base class and implements the World interface. |
 | [VertexPicker](classes/VertexPicker.md) | A class that provides functionality for picking vertices in a 3D scene. |
+| [Viewpoint](classes/Viewpoint.md) | Represents a BCF compliant viewpoint from BuildingSMART.  The Viewpoint class provides methods for managing and interacting with viewpoints. It includes functionality for setting viewpoint properties, updating the camera, applying color to components, and serializing the viewpoint for export. |
 | [Worlds](classes/Worlds.md) | A class representing a collection of worlds within a game engine. It manages the creation, deletion, and update of worlds. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Worlds). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Worlds). |
 
 ## Interfaces
@@ -63,21 +72,26 @@
 | :------ | :------ |
 | [AttributeListener](interfaces/AttributeListener.md) | Interface representing a map of attribute listeners. The keys are model UUIDs, and the values are objects with express IDs as keys, and objects with attribute names as keys, and Event objects as values. |
 | [BCFTopicsConfig](interfaces/BCFTopicsConfig.md) | Configuration settings for managing BCF topics. This interface defines the properties and their meanings used to control the behavior of exporting and importing BCF topics. |
+| [BCFViewpoint](interfaces/BCFViewpoint.md) | Represents a viewpoint in a BCF file. |
 | [CameraControllable](interfaces/CameraControllable.md) | Whether a camera uses the Camera Controls library. |
 | [ChangeMap](interfaces/ChangeMap.md) | Interface representing a map of changed entities in a model. The keys are model UUIDs, and the values are sets of express IDs of changed entities. |
 | [Classification](interfaces/Classification.md) | Interface representing a classification system. The classification is organized by system and class name, and each class contains a map of fragment IDs with extra information. |
 | [Configurable](interfaces/Configurable.md) | Whether this component supports to be configured. |
 | [Createable](interfaces/Createable.md) | Whether this component supports create and destroy operations. This generally applies for components that work with instances, such as clipping planes or dimensions. |
-| [CullerRendererSettings](interfaces/CullerRendererSettings.md) | Settings to configure the CullerRenderer. |
 | [Disposable](interfaces/Disposable.md) | Whether this component has to be manually destroyed once you are done with it to prevent [memory leaks](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects). This also ensures that the DOM events created by that component will be cleaned up. |
-| [GridConfig](interfaces/GridConfig.md) | Configuration interface for the [SimpleGrid](classes/SimpleGrid.md) class. |
 | [Hideable](interfaces/Hideable.md) | Whether the geometric representation of this component can be hidden or shown in the [Three.js scene](https://threejs.org/docs/#api/en/scenes/Scene). |
+| [IDSCheckResult](interfaces/IDSCheckResult.md) | Represents the result of a check performed by an IDSFacet test. |
+| [IfcCategoryRule](interfaces/IfcCategoryRule.md) | A rule for the [IfcFinder](classes/IfcFinder.md) to search items based on their category. |
+| [IfcOperatorRule](interfaces/IfcOperatorRule.md) | A rule for the [IfcFinder](classes/IfcFinder.md) to search items based on the value of a numeric property defined in their property sets. |
+| [IfcPropertyRule](interfaces/IfcPropertyRule.md) | A rule for the [IfcFinder](classes/IfcFinder.md) to search items based on the properties defined in their property sets. |
 | [MeasureEdge](interfaces/MeasureEdge.md) | Represents an edge measurement result. |
+| [MiniMapConfig](interfaces/MiniMapConfig.md) | Configuration interface for the [MiniMap](classes/MiniMap.md). |
 | [NavigationMode](interfaces/NavigationMode.md) | An object that determines the behavior of the camera controls and the user input (e.g. 2D floor plan mode, first person mode, etc). |
 | [Progress](interfaces/Progress.md) | Basic type to describe the progress of any kind of process. |
 | [Resizeable](interfaces/Resizeable.md) | Whether this component can be resized. The meaning of this can vary depending on the component: resizing a [Renderer](https://threejs.org/docs/#api/en/renderers/WebGLRenderer) component could mean changing its resolution, whereas resizing a [Mesh](https://threejs.org/docs/#api/en/objects/Mesh) would change its scale. |
 | [ShadowedSceneConfig](interfaces/ShadowedSceneConfig.md) | Configuration interface for the [ShadowedScene](classes/ShadowedScene.md). Defines properties for directional and ambient lights, as well as shadows. |
-| [SimpleSceneConfig](interfaces/SimpleSceneConfig.md) | Configuration interface for the [SimpleScene](classes/SimpleScene.md). Defines properties for directional and ambient lights. |
+| [SimpleGridConfig](interfaces/SimpleGridConfig.md) | Configuration interface for the [SimpleGrid](classes/SimpleGrid.md). |
+| [SimpleSceneConfig](interfaces/SimpleSceneConfig.md) | Configuration interface for the [SimpleScene](classes/SimpleScene.md). |
 | [StreamedAsset](interfaces/StreamedAsset.md) | A streamed asset, which consists of multiple geometries. Each geometry in the asset is identified by a unique number (geometryID), and contains information about its transformation and color. |
 | [StreamedGeometries](interfaces/StreamedGeometries.md) | A dictionary of geometries streamed from a server. Each geometry is identified by a unique number (id), and contains information about its bounding box, whether it has holes, and an optional file path for the geometry data. |
 | [Updateable](interfaces/Updateable.md) | Whether this component should be updated each frame. |
@@ -90,8 +104,12 @@
 | :------ | :------ |
 | [BooleanPropTypes](type-aliases/BooleanPropTypes.md) | Types for boolean properties in IFC schema. |
 | [CameraProjection](type-aliases/CameraProjection.md) | The projection system of the camera. |
+| [IfcFinderRule](type-aliases/IfcFinderRule.md) | The type of rules that can be used in the queries of the [IfcFinder](classes/IfcFinder.md). |
+| [IfcRelations](type-aliases/IfcRelations.md) | Type alias for an array of IfcRelation types from WebIfc. |
+| [InverseAttributes](type-aliases/InverseAttributes.md) | Type alias for an array of inverse attribute names. |
 | [NavModeID](type-aliases/NavModeID.md) | The extensible list of supported navigation modes. |
 | [NumericPropTypes](type-aliases/NumericPropTypes.md) | Types for numeric properties in IFC schema. |
+| [SerializedQuery](type-aliases/SerializedQuery.md) | The data type used when the queries of the [IfcFinder](classes/IfcFinder.md) export or import query data to persist it. |
 | [StringPropTypes](type-aliases/StringPropTypes.md) | Types for string properties in IFC schema. |
 
 ## Variables

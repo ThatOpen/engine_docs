@@ -15,6 +15,7 @@ Components are the building blocks of this library. Components are singleton ele
 - [`Clipper`](Clipper.md)
 - [`Cullers`](Cullers.md)
 - [`MiniMaps`](MiniMaps.md)
+- [`ConfigManager`](ConfigManager.md)
 - [`BoundingBoxer`](BoundingBoxer.md)
 - [`Classifier`](Classifier.md)
 - [`Exploder`](Exploder.md)
@@ -26,8 +27,11 @@ Components are the building blocks of this library. Components are singleton ele
 - [`IfcJsonExporter`](IfcJsonExporter.md)
 - [`IfcRelationsIndexer`](IfcRelationsIndexer.md)
 - [`IfcPropertiesManager`](IfcPropertiesManager.md)
+- [`IfcFinder`](IfcFinder.md)
 - [`MeasurementUtils`](MeasurementUtils.md)
 - [`VertexPicker`](VertexPicker.md)
+- [`BCFTopics`](BCFTopics.md)
+- [`IDSSpecifications`](IDSSpecifications.md)
 
 ## Properties
 
@@ -44,13 +48,13 @@ will not be updated automatically each frame.
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

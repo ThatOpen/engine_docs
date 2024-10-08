@@ -38,9 +38,34 @@ The keys are UUIDs and the values are instances of the components.
 
 ***
 
+### onInit
+
+> `readonly` **onInit**: [`Event`](Event.md)\<`undefined`\>
+
+Event that triggers the Components instance is initialized.
+
+#### Remarks
+
+This event is triggered once when the [Components.init](Components.md#init) method has been called and finish processing.
+This is useful to set configuration placeholders that need to be executed when the components instance is initialized.
+For example, enabling and configuring custom effects in a post-production renderer.
+
+#### Example
+
+```typescript
+const components = new Components();
+components.onInit.add(() => {
+  // Enable custom effects in the post-production renderer
+  // or any other operation dependant on the component initialization
+});
+components.init();
+```
+
+***
+
 ### release
 
-> `static` `readonly` **release**: `"2.2.0-alpha.0"` = `"2.2.0-alpha.0"`
+> `static` `readonly` **release**: `"2.3.0"` = `"2.3.0"`
 
 The version of the @thatopen/components library.
 

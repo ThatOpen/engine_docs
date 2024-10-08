@@ -120,13 +120,13 @@ ifcLoader.cleanUp();
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 
@@ -200,7 +200,7 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### load()
 
-> **load**(`data`, `coordinate`): `Promise`\<`FragmentsGroup`\>
+> **load**(`data`, `coordinate`, `name`): `Promise`\<`FragmentsGroup`\>
 
 Loads an IFC file and processes it for 3D visualization.
 
@@ -210,6 +210,7 @@ Loads an IFC file and processes it for 3D visualization.
 | :------ | :------ | :------ | :------ |
 | `data` | `Uint8Array` | `undefined` | The Uint8Array containing the IFC file data. |
 | `coordinate` | `boolean` | `true` | Optional boolean indicating whether to coordinate the loaded IFC data. Default is true. |
+| `name` | `string` | `""` | - |
 
 #### Returns
 

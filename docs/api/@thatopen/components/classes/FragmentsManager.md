@@ -224,6 +224,26 @@ the exported data as binary buffer.
 
 ***
 
+### fragmentIdMapToGuids()
+
+> **fragmentIdMapToGuids**(`fragmentIdMap`): `string`[]
+
+Converts a fragment ID map to a collection of IFC GUIDs.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `fragmentIdMap` | `FragmentIdMap` | A fragment ID map to be converted to a collection of IFC GUIDs. |
+
+#### Returns
+
+`string`[]
+
+An array of IFC GUIDs.
+
+***
+
 ### getModelIdMap()
 
 > **getModelIdMap**(`fragmentIdMap`): `object`
@@ -266,13 +286,13 @@ A fragment ID map, where the keys are fragment IDs and the values are the corres
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

@@ -12,6 +12,14 @@ The IfcStreamer component is responsible for managing and streaming tiled IFC da
 
 ## Properties
 
+### cancel
+
+> **cancel**: `boolean` = `false`
+
+Flag to cancel the files that are being currently loaded.
+
+***
+
 ### enabled
 
 > **enabled**: `boolean` = `true`
@@ -21,6 +29,14 @@ OBC.Component.enabled
 #### Overrides
 
 `OBC.Component.enabled`
+
+***
+
+### fileDB
+
+> **fileDB**: `StreamerFileDb`
+
+Cache system that uses the File System API.
 
 ***
 
@@ -80,6 +96,15 @@ Importer of binary IFC data previously converted to fragment tiles.
 
 ***
 
+### url
+
+> **url**: `string` = `""`
+
+The URL of the data source for the streaming service.
+It should be set before using the streaming service. Alternatively, you can use a custom fetch function.
+
+***
+
 ### useCache
 
 > **useCache**: `boolean` = `true`
@@ -107,30 +132,6 @@ It is automatically created when the world is set.
 #### Returns
 
 [`GeometryCullerRenderer`](GeometryCullerRenderer.md)
-
-***
-
-### url
-
-> `get` **url**(): `string`
-
-The URL of the data source for the streaming service.
-It must be set before using the streaming service.
-If not set, an error will be thrown when trying to access the URL.
-
-> `set` **url**(`value`): `void`
-
-Sets the URL of the data source for the streaming service.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `string` | The new URL to be set. |
-
-#### Returns
-
-`string`
 
 ***
 
@@ -185,6 +186,24 @@ OBC.Disposable.dispose
 #### Implementation of
 
 `OBC.Disposable.dispose`
+
+***
+
+### fetch()
+
+> **fetch**(`fileName`): `Promise`\<`Response` \| `File`\>
+
+Function used to retrieve tiles. Can be overriden to work with specific backends.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `fileName` | `string` |
+
+#### Returns
+
+`Promise`\<`Response` \| `File`\>
 
 ***
 

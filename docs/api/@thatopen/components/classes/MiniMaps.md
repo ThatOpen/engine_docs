@@ -69,6 +69,14 @@ A collection of [MiniMap](MiniMap.md) instances, each associated with a unique w
 
 ***
 
+### onSetup
+
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
+
+[Configurable.onSetup](../interfaces/Configurable.md#onsetup)
+
+***
+
 ### uuid
 
 > `static` `readonly` **uuid**: `"39ad6aad-84c8-4adf-a1e0-7f25313a9e7f"`
@@ -140,13 +148,13 @@ If a [MiniMap](MiniMap.md) instance does not exist for the given ID, nothing hap
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 

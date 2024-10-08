@@ -6,6 +6,7 @@ An infinite grid. Created by [fyrestar](https://github.com/Fyrestar/THREE.Infini
 
 - [`Hideable`](../interfaces/Hideable.md)
 - [`Disposable`](../interfaces/Disposable.md)
+- [`Configurable`](../interfaces/Configurable.md)\<`SimpleGridConfigManager`, [`SimpleGridConfig`](../interfaces/SimpleGridConfig.md)\>
 
 ## Properties
 
@@ -14,6 +15,30 @@ An infinite grid. Created by [fyrestar](https://github.com/Fyrestar/THREE.Infini
 > **components**: [`Components`](Components.md)
 
 The components instance to which this grid belongs.
+
+***
+
+### config
+
+> **config**: `SimpleGridConfigManager`
+
+[Configurable.config](../interfaces/Configurable.md#config)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`config`](../interfaces/Configurable.md#config)
+
+***
+
+### isSetup
+
+> **isSetup**: `boolean` = `false`
+
+[Configurable.isSetup](../interfaces/Configurable.md#issetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`isSetup`](../interfaces/Configurable.md#issetup)
 
 ***
 
@@ -26,6 +51,18 @@ The components instance to which this grid belongs.
 #### Implementation of
 
 [`Disposable`](../interfaces/Disposable.md) . [`onDisposed`](../interfaces/Disposable.md#ondisposed)
+
+***
+
+### onSetup
+
+> `readonly` **onSetup**: [`Event`](Event.md)\<`unknown`\>
+
+[Configurable.onSetup](../interfaces/Configurable.md#onsetup)
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`onSetup`](../interfaces/Configurable.md#onsetup)
 
 ***
 
@@ -116,3 +153,25 @@ The material of the grid.
 #### Implementation of
 
 [`Disposable`](../interfaces/Disposable.md) . [`dispose`](../interfaces/Disposable.md#dispose)
+
+***
+
+### setup()
+
+> **setup**(`config`?): `void`
+
+[Configurable.setup](../interfaces/Configurable.md#setup)
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `config`? | `Partial` \<[`SimpleGridConfig`](../interfaces/SimpleGridConfig.md)\> |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[`Configurable`](../interfaces/Configurable.md) . [`setup`](../interfaces/Configurable.md#setup)

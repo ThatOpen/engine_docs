@@ -27,7 +27,7 @@ A class representing a collection of worlds within a game engine. It manages the
 
 ### list
 
-> **list**: `Map`\<`string`, [`World`](../interfaces/World.md)\>
+> **list**: [`DataMap`](DataMap.md)\<`string`, [`World`](../interfaces/World.md)\>
 
 A collection of worlds managed by this component.
 The key is the unique identifier (UUID) of the world, and the value is the World instance.
@@ -67,24 +67,6 @@ The key is the unique identifier (UUID) of the world, and the value is the World
 #### Implementation of
 
 [`Disposable`](../interfaces/Disposable.md) . [`onDisposed`](../interfaces/Disposable.md#ondisposed)
-
-***
-
-### onWorldCreated
-
-> `readonly` **onWorldCreated**: [`Event`](Event.md) \<[`World`](../interfaces/World.md)\>
-
-An event that is triggered when a new world is created.
-The event passes the newly created world as a parameter.
-
-***
-
-### onWorldDeleted
-
-> `readonly` **onWorldDeleted**: [`Event`](Event.md)\<`string`\>
-
-An event that is triggered when a world is deleted.
-The event passes the UUID of the deleted world as a parameter.
 
 ***
 
@@ -163,13 +145,13 @@ and triggers the onDisposed event.
 
 ### isConfigurable()
 
-> **isConfigurable**(): `this is Configurable<any>`
+> **isConfigurable**(): `this is Configurable<any, any>`
 
 Whether is component is [Configurable](../interfaces/Configurable.md).
 
 #### Returns
 
-`this is Configurable<any>`
+`this is Configurable<any, any>`
 
 #### Inherited from
 
