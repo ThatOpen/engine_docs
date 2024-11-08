@@ -65,7 +65,7 @@ components.init();
 
 ### release
 
-> `static` `readonly` **release**: `"2.3.0"` = `"2.3.0"`
+> `static` `readonly` **release**: `"2.3.16"` = `"2.3.16"`
 
 The version of the @thatopen/components library.
 

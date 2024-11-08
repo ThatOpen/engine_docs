@@ -26,7 +26,7 @@ A component that handles the tiling of IFC geometries for efficient streaming. ð
 
 ### onAssetStreamed
 
-> `readonly` **onAssetStreamed**: [`Event`](Event.md) \<[`StreamedAsset`](../interfaces/StreamedAsset.md)[]\>
+> `readonly` **onAssetStreamed**: [`AsyncEvent`](AsyncEvent.md) \<[`StreamedAsset`](../interfaces/StreamedAsset.md)[]\>
 
 Event triggered when assets are streamed.
 Contains the streamed assets.
@@ -47,7 +47,7 @@ Contains the streamed assets.
 
 ### onGeometryStreamed
 
-> `readonly` **onGeometryStreamed**: [`Event`](Event.md)\<`object`\>
+> `readonly` **onGeometryStreamed**: [`AsyncEvent`](AsyncEvent.md)\<`object`\>
 
 Event triggered when geometry is streamed.
 Contains the streamed geometry data and its buffer.
@@ -66,7 +66,7 @@ Contains the streamed geometry data and its buffer.
 
 ### onIfcLoaded
 
-> `readonly` **onIfcLoaded**: [`Event`](Event.md)\<`Uint8Array`\>
+> `readonly` **onIfcLoaded**: [`AsyncEvent`](AsyncEvent.md)\<`Uint8Array`\>
 
 Event triggered when the IFC file is loaded.
 Contains the loaded IFC file data.
@@ -75,7 +75,7 @@ Contains the loaded IFC file data.
 
 ### onProgress
 
-> `readonly` **onProgress**: [`Event`](Event.md)\<`number`\>
+> `readonly` **onProgress**: [`AsyncEvent`](AsyncEvent.md)\<`number`\>
 
 Event triggered to indicate the progress of the streaming process.
 Contains the progress percentage.

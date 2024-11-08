@@ -1,4 +1,4 @@
-<iframe src="https://thatopen.github.io/engine_components/examples/Classifier"></iframe>
+<div style={{position: "relative"}}><iframe src="https://thatopen.github.io/engine_components/examples/Classifier"></iframe><button class="full-screen-btn" onClick={() => window.open("https://thatopen.github.io/engine_components/examples/Classifier")} >Go Full Screen</button></div>
 
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/fragments/Classifier/example.ts).
@@ -73,6 +73,11 @@ const data = await file.arrayBuffer();
 const buffer = new Uint8Array(data);
 const model = fragments.load(buffer);
 world.scene.three.add(model);
+
+const properties = await fetch(
+  "https://thatopen.github.io/engine_components/resources/small.json",
+);
+model.setLocalProperties(await properties.json());
 ```
 ### 🗃️ Classifiying the BIM model
 ---

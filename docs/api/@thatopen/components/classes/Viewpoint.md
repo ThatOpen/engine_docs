@@ -30,7 +30,7 @@ The Direction vector points in the invisible direction meaning the half-space th
 
 ### componentColors
 
-> `readonly` **componentColors**: [`DataMap`](DataMap.md)\<`string`, `string`[]\>
+> `readonly` **componentColors**: [`DataMap`](DataMap.md)\<`Color`, `string`[]\>
 
 A map of colors and components GUIDs that should be colorized when displaying a viewpoint.
 For this to work, call viewpoint.colorize()
@@ -257,9 +257,9 @@ Adds components to the viewpoint based on the provided fragment ID map.
 
 ***
 
-### colorize()
+### applyColors()
 
-> **colorize**(): `void`
+> **applyColors**(): `void`
 
 Applies color to the components in the viewpoint based on their GUIDs.
 
@@ -311,8 +311,6 @@ An error if the world's camera does not have camera controls.
 > **resetColors**(): `void`
 
 Resets the colors of all components in the viewpoint to their original color.
-This method iterates through the `componentColors` map, retrieves the fragment IDs
-corresponding to each color, and then uses the `Classifier` to reset the color of those fragments.
 
 #### Returns
 

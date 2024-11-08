@@ -23,18 +23,6 @@ Default value is true.
 
 ***
 
-### coordinate
-
-> **coordinate**: `boolean` = `true`
-
-Whether to use the coordination data coming from the IFC files.
-
-#### Inherited from
-
-[`IfcFragmentSettings`](IfcFragmentSettings.md) . [`coordinate`](IfcFragmentSettings.md#coordinate)
-
-***
-
 ### customLocateFileHandler
 
 > **customLocateFileHandler**: `null` \| `LocateFileHandlerFn` = `null`

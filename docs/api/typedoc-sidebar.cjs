@@ -367,6 +367,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/interfaces/EntitiesRelatedEvent",
+            "label": "EntitiesRelatedEvent"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/interfaces/Hideable",
             "label": "Hideable"
           },
@@ -1180,6 +1185,17 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/StatelessComponent",
             "label": "StatelessComponent"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Functions",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/getElementValue",
+            "label": "getElementValue"
           }
         ]
       }

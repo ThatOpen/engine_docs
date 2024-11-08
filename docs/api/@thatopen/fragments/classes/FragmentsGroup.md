@@ -81,27 +81,11 @@ An object with two Map properties, 'opaque' and 'transparent', representing the 
 
 ***
 
-### globalToExpressIDs
-
-> **globalToExpressIDs**: `Map`\<`string`, `number`\>
-
-A Map object where the keys are global IDs and the values are expressIDs.
-
-***
-
 ### ifcMetadata
 
 > **ifcMetadata**: [`IfcMetadata`](../interfaces/IfcMetadata.md)
 
 An object representing metadata about the IFC model defined by the IFC schema.
-
-***
-
-### isStreamed
-
-> **isStreamed**: `boolean` = `false`
-
-Whether this fragments group is being streamed or not.
 
 ***
 
@@ -130,15 +114,11 @@ An object containing settings for streaming data, including base URL, base file 
 
 #### baseFileName
 
-> **baseFileName**: `string`
+> **baseFileName**: `string` = `""`
 
-#### ~~baseUrl?~~
+#### baseUrl
 
-> `optional` **baseUrl**: `string`
-
-##### Deprecated
-
-use FragmentsGroup.baseUrl instead
+> **baseUrl**: `string` = `""`
 
 #### ids
 
@@ -147,30 +127,6 @@ use FragmentsGroup.baseUrl instead
 #### types
 
 > **types**: `Map`\<`number`, `number`[]\>
-
-***
-
-### propertiesDB
-
-> `static` **propertiesDB**: `null` \| `StreamerFileDb` = `null`
-
-The object in charge of caching property files locally to save requests over the network.
-
-***
-
-### url
-
-> `static` **url**: `string` = `""`
-
-Default URL for requesting property tiles. Feel free to change this, or override the FragmentsGroup.fetch method for more granular control.
-
-***
-
-### useCache
-
-> `static` **useCache**: `boolean` = `true`
-
-Whether to use local cache when streaming properties.
 
 ## Accessors
 
@@ -185,24 +141,6 @@ A getter that checks if this group has properties, either locally defined or str
 `boolean`
 
 ## Methods
-
-### cloneGroup()
-
-> **cloneGroup**(`items`?): [`FragmentsGroup`](FragmentsGroup.md)
-
-Creates a copy of the whole group or a part of it. Each fragment clone shares the geometry of with its respective original fragment, but has its own InstancedMesh data, so it also needs to be disposed.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `items`? | [`FragmentIdMap`](../interfaces/FragmentIdMap.md) | Optional - The part of the group to be cloned. If not given, the whole group is cloned. |
-
-#### Returns
-
-[`FragmentsGroup`](FragmentsGroup.md)
-
-***
 
 ### dispose()
 
@@ -454,21 +392,3 @@ const properties: IfcProperties = {
 
 fragmentsGroup.setProperties(12345, properties[12345]);
 ```
-
-***
-
-### setPropertiesDB()
-
-> `static` **setPropertiesDB**(`enabled`): `void`
-
-Enables or disables the local property caching system.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `enabled` | `boolean` | Whether to enable or disable it. |
-
-#### Returns
-
-`void`

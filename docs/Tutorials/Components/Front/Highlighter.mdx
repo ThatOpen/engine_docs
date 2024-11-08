@@ -1,4 +1,4 @@
-<iframe src="https://thatopen.github.io/engine_components/examples/Highlighter"></iframe>
+<div style={{position: "relative"}}><iframe src="https://thatopen.github.io/engine_components/examples/Highlighter"></iframe><button class="full-screen-btn" onClick={() => window.open("https://thatopen.github.io/engine_components/examples/Highlighter")} >Go Full Screen</button></div>
 
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/fragments/Highlighter/example.ts).
@@ -126,6 +126,12 @@ stats.dom.style.left = "0px";
 stats.dom.style.zIndex = "unset";
 world.renderer.onBeforeUpdate.add(() => stats.begin());
 world.renderer.onAfterUpdate.add(() => stats.end());
+
+window.addEventListener("keydown", (e) => {
+  if(e.code === "KeyP") {
+    components.dispose();
+  }
+})
 ```
 ### 🎉 Wrap up
 ---

@@ -72,6 +72,14 @@ Indicates whether the Highlighter is setup.
 
 ***
 
+### mouseMoveThreshold
+
+> **mouseMoveThreshold**: `number` = `5`
+
+Threshhold on how much the mouse have to move until its considered movement
+
+***
+
 ### multiple
 
 > **multiple**: `"none"` \| `"ctrlKey"` \| `"shiftKey"` = `"ctrlKey"`

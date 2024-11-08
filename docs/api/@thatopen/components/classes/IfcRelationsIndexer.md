@@ -38,37 +38,11 @@ Indexer component for IFC entities, facilitating the indexing and retrieval of I
 
 ### onEntitiesRelated
 
-> `readonly` **onEntitiesRelated**: [`Event`](Event.md)\<`object`\>
+> `readonly` **onEntitiesRelated**: [`Event`](Event.md) \<[`EntitiesRelatedEvent`](../interfaces/EntitiesRelatedEvent.md)\>
 
 An event that is triggered when entities are related in a BIM model.
 The event provides information about the type of relation, the inverse attribute,
 the IDs of the entities related, and the IDs of the entities that are being related.
-
-#### Type declaration
-
-##### invAttribute
-
-> **invAttribute**: `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` \| `"DocumentRefForObjects"`
-
-The inverse attribute of the relation.
-
-##### relType
-
-> **relType**: `160246688` \| `279856033` \| `307848117` \| `781010003` \| `919958153` \| `982818633` \| `1204542856` \| `1307041759` \| `2495723537` \| `2565941209` \| `2655215786` \| `2857406711` \| `3242617779` \| `3268803585` \| `4186316022`
-
-The type of the IFC relation.
-
-##### relatedIDs
-
-> **relatedIDs**: `number`[]
-
-The IDs of the entities that are being related.
-
-##### relatingIDs
-
-> **relatingIDs**: `number`[]
-
-The IDs of the entities that are relating.
 
 ***
 
@@ -157,7 +131,7 @@ A promise that resolves when all the relation changes have been applied.
 #### Remarks
 
 This function iterates through the changes made to the relations and applies them to the corresponding BIM model.
-It only make sense to use if the relations need to be write in the IFC file.
+It only make sense to use it if the relations need to be write in the IFC file.
 
 ***
 
@@ -227,7 +201,7 @@ A `Set` with the expressIDs of the found items.
 
 ### getEntityRelations()
 
-> **getEntityRelations**(`model`, `expressID`, `relationName`): `null` \| `number`[]
+> **getEntityRelations**(`model`, `expressID`, `attribute`): `number`[]
 
 Retrieves the relations of a specific entity within a model based on the given relation name.
 This method searches the indexed relation maps for the specified model and entity,
@@ -237,16 +211,15 @@ returning the IDs of related entities if a match is found.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `model` | `string` \| `FragmentsGroup` | The `FragmentsGroup` model containing the entity, or its UUID. |
+| `model` | `string` \| `RelationsMap` \| `FragmentsGroup` | The `FragmentsGroup` model containing the entity, or its UUID. |
 | `expressID` | `number` | The unique identifier of the entity within the model. |
-| `relationName` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` \| `"DocumentRefForObjects"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
+| `attribute` | `"IsDecomposedBy"` \| `"Decomposes"` \| `"AssociatedTo"` \| `"HasAssociations"` \| `"ClassificationForObjects"` \| `"IsGroupedBy"` \| `"HasAssignments"` \| `"IsDefinedBy"` \| `"DefinesOcurrence"` \| `"IsTypedBy"` \| `"Types"` \| `"Defines"` \| `"ContainedInStructure"` \| `"ContainsElements"` \| `"HasControlElements"` \| `"AssignedToFlowElement"` \| `"ConnectedTo"` \| `"ConnectedFrom"` \| `"ReferencedBy"` \| `"Declares"` \| `"HasContext"` \| `"Controls"` \| `"IsNestedBy"` \| `"Nests"` \| `"DocumentRefForObjects"` | The IFC schema inverse attribute of the relation to search for (e.g., "IsDefinedBy", "ContainsElements"). |
 
 #### Returns
 
-`null` \| `number`[]
+`number`[]
 
-An array of express IDs representing the related entities, or `null` if no relations are found
-or the specified relation name is not indexed.
+An array of express IDs representing the related entities. If the array is empty, no relations were found.
 
 ***
 
@@ -358,7 +331,7 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### process()
 
-> **process**(`model`): `Promise`\<`RelationsMap`\>
+> **process**(`model`, `config`?): `Promise`\<`RelationsMap`\>
 
 Processes a given model to index its IFC entities relations based on predefined inverse attributes.
 This method iterates through each specified inverse attribute, retrieves the corresponding relations,
@@ -375,6 +348,7 @@ of entities that are related through that attribute.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `model` | `FragmentsGroup` | The `FragmentsGroup` model to be processed. It must have properties loaded. |
+| `config`? | `Partial`\<`RelationsProcessingConfig`\> | - |
 
 #### Returns
 

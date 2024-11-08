@@ -79,6 +79,7 @@
 | [Configurable](interfaces/Configurable.md) | Whether this component supports to be configured. |
 | [Createable](interfaces/Createable.md) | Whether this component supports create and destroy operations. This generally applies for components that work with instances, such as clipping planes or dimensions. |
 | [Disposable](interfaces/Disposable.md) | Whether this component has to be manually destroyed once you are done with it to prevent [memory leaks](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects). This also ensures that the DOM events created by that component will be cleaned up. |
+| [EntitiesRelatedEvent](interfaces/EntitiesRelatedEvent.md) | Interface definition of an Entities Related Event from the IfcRelationsIndexer. This event gets triggered when two or more entities has been related with each other. |
 | [Hideable](interfaces/Hideable.md) | Whether the geometric representation of this component can be hidden or shown in the [Three.js scene](https://threejs.org/docs/#api/en/scenes/Scene). |
 | [IDSCheckResult](interfaces/IDSCheckResult.md) | Represents the result of a check performed by an IDSFacet test. |
 | [IfcCategoryRule](interfaces/IfcCategoryRule.md) | A rule for the [IfcFinder](classes/IfcFinder.md) to search items based on their category. |

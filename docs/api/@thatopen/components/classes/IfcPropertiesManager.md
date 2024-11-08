@@ -408,10 +408,6 @@ A promise that resolves with an object containing the newly created Pset and its
 
 > **pset**: `IfcPropertySet` \| `IfcPropertySet` \| `IfcPropertySet`
 
-##### rel
-
-> **rel**: `IfcRelDefinesByProperties` \| `IfcRelDefinesByProperties` \| `IfcRelDefinesByProperties`
-
 #### Throws
 
 Will throw an error if the IFC schema is not found in the model.

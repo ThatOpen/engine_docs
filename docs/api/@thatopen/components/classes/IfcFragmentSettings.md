@@ -20,14 +20,6 @@ Default value is true.
 
 ***
 
-### coordinate
-
-> **coordinate**: `boolean` = `true`
-
-Whether to use the coordination data coming from the IFC files.
-
-***
-
 ### customLocateFileHandler
 
 > **customLocateFileHandler**: `null` \| `LocateFileHandlerFn` = `null`

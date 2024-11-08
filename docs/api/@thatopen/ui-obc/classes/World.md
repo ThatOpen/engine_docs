@@ -1,6 +1,10 @@
 # World
 
-A world for BIM Apps. HTML tag: bim-viewer
+A world for BIM Apps.
+
+## Element
+
+bim-world
 
 ## Extends
 

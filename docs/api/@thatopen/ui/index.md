@@ -59,3 +59,9 @@
 | [QueryOperators](type-aliases/QueryOperators.md) | Represents an operator used in query building. |
 | [StatefullComponent](type-aliases/StatefullComponent.md) | Represents a function that returns a TemplateResult for a stateful component. |
 | [StatelessComponent](type-aliases/StatelessComponent.md) | Represents a function that returns a TemplateResult for a stateless component. |
+
+## Functions
+
+| Function | Description |
+| :------ | :------ |
+| [getElementValue](functions/getElementValue.md) | Extracts and returns the value of an HTML element's attributes. |

@@ -11,7 +11,7 @@ It provides functionality for importing, exporting, and manipulating IDS data.
 
 ### create()
 
-> **create**(`name`, `ifcVersion`): [`IDSSpecification`](IDSSpecification.md)
+> **create**(`name`, `ifcVersion`, `identifier`?): [`IDSSpecification`](IDSSpecification.md)
 
 Creates a new IDSSpecification instance and adds it to the list.
 
@@ -21,6 +21,7 @@ Creates a new IDSSpecification instance and adds it to the list.
 | :------ | :------ | :------ |
 | `name` | `string` | The name of the IDSSpecification. |
 | `ifcVersion` | `IfcVersion`[] | An array of IfcVersion values that the specification supports. |
+| `identifier`? | `string` | - |
 
 #### Returns
 

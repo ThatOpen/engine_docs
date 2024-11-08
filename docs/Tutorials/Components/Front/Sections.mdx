@@ -1,4 +1,4 @@
-<iframe src="https://thatopen.github.io/engine_components/examples/Sections"></iframe>
+<div style={{position: "relative"}}><iframe src="https://thatopen.github.io/engine_components/examples/Sections"></iframe><button class="full-screen-btn" onClick={() => window.open("https://thatopen.github.io/engine_components/examples/Sections")} >Go Full Screen</button></div>
 
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/engine_components/blob/main/packages/front/src/fragments/Sections/example.ts).
@@ -55,8 +55,8 @@ world.camera.controls.setLookAt(12, 6, 8, 0, 0, -10);
 world.scene.setup();
 
 const grids = components.get(OBC.Grids);
-grids.config.color.setHex(0x666666);
 const grid = grids.create(world);
+grid.config.color.setHex(0x666666);
 grid.three.position.y -= 1;
 world.renderer.postproduction.customEffects.excludedMeshes.push(grid.three);
 ```

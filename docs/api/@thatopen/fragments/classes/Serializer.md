@@ -2,43 +2,25 @@
 
 Serializer class for handling the serialization and deserialization of 3D model data. It uses the [flatbuffers library](https://flatbuffers.dev/) for efficient data serialization and deserialization.
 
-## Implements
-
-- `FragmentParser`
-
-## Properties
-
-### version
-
-> **version**: `number` \| `"auto"`
-
-FragmentParser.version
-
-#### Implementation of
-
-`FragmentParser.version`
-
 ## Methods
 
 ### export()
 
 > **export**(`group`): `Uint8Array`
 
-FragmentParser.export
+Exports the FragmentsGroup to a flatbuffer binary file.
 
 #### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `group` | [`FragmentsGroup`](FragmentsGroup.md) |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `group` | [`FragmentsGroup`](FragmentsGroup.md) | The FragmentsGroup to be exported. |
 
 #### Returns
 
 `Uint8Array`
 
-#### Implementation of
-
-`FragmentParser.export`
+The flatbuffer binary file as a Uint8Array.
 
 ***
 
@@ -46,18 +28,16 @@ FragmentParser.export
 
 > **import**(`bytes`): [`FragmentsGroup`](FragmentsGroup.md)
 
-FragmentParser.import
+Constructs a FragmentsGroup object from the given flatbuffers data.
 
 #### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `bytes` | `Uint8Array` |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `bytes` | `Uint8Array` | The flatbuffers data as Uint8Array. |
 
 #### Returns
 
 [`FragmentsGroup`](FragmentsGroup.md)
 
-#### Implementation of
-
-`FragmentParser.import`
+A FragmentsGroup object constructed from the flatbuffers data.
