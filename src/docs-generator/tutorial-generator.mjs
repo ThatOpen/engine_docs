@@ -28,6 +28,9 @@ const repos = [
     packagesAlias: {
       core: "Core",
       obc: "OBC",
+    },
+    tutorialsAlias: {
+      "TopicsList": "TopicsUI",
     }
   }
 ]
@@ -50,14 +53,18 @@ for (const repo of repos) {
     const isMonorepo = splittedRoute[0] === "packages"
     let tutorial = getTutorial(example)
     if (!tutorial) continue
-    const tutorialName = splittedRoute[splittedRoute.length - 2]
-    tutorial = `<iframe src="https://thatopen.github.io/${name}/examples/${tutorialName}"></iframe>\n
+    const exampleParent = getTutorialParent(exampleRoute)
+    const exampleName = splittedRoute[splittedRoute.length - 2]
+    const exampleSrc = `https://thatopen.github.io/${name}/examples/${exampleParent ? `${exampleParent}/${exampleName}` : exampleName}`
+    tutorial = `<div style={{position: "relative"}}><iframe src="${exampleSrc}"></iframe><button class="full-screen-btn" onClick={() => window.open("${exampleSrc}")} >Go Full Screen</button></div>\n
 :::info Source
 Copying and pasting? We've got you covered! You can find the full source code of this tutorial [here](https://github.com/ThatOpen/${name}/blob/${branch}/${exampleRoute}).
 :::
 
 ${tutorial}
 `
+    const groups = groupTutorials(repoExamples)
+    const tutorialName = repo.tutorialsAlias?.[exampleName] ?? exampleName
     if (isMonorepo) {
       let repoAlias
       const repoName = splittedRoute[1]
@@ -66,9 +73,21 @@ ${tutorial}
       } else {
         repoAlias = repoName
       }
+
       const repoTutorialsPath = path.join("docs", "Tutorials", label, repoAlias)
       if (!fs.existsSync(repoTutorialsPath)) fs.mkdirSync(repoTutorialsPath)
-      fs.writeFileSync(path.join("docs", "Tutorials", label, repoAlias, tutorialName + ".mdx"), tutorial)
+
+      const isParent = Object.keys(groups).includes(exampleName)
+      if (isParent || exampleParent) {
+        const dirPath = path.join(repoTutorialsPath, isParent ? tutorialName : exampleParent)
+        if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath)
+        const tutorialPath = path.join(dirPath, tutorialName + ".mdx")
+        fs.writeFileSync(tutorialPath, tutorial)
+      } else {
+        const tutorialPath = path.join(repoTutorialsPath, tutorialName + ".mdx")
+        fs.writeFileSync(tutorialPath, tutorial)
+      }
+
     } else {
       fs.writeFileSync(path.join("docs", "Tutorials", label, tutorialName + ".mdx"), tutorial)
     }
@@ -125,4 +144,25 @@ function getTutorial(ts) {
   }
 
   return tutorial;
+}
+
+function groupTutorials(paths) {
+  const groups = {}
+  for (const path of paths) {
+    const splittedRoute = path.split("examples")
+    if (splittedRoute.length !== 2) continue
+    const parent = getTutorialParent(path)
+    if (!groups[parent]) groups[parent] = []
+    const name = splittedRoute[1].split("/")[1]
+    groups[parent].push(name)
+  }
+  return groups
+}
+
+function getTutorialParent(path) {
+  const splittedRoute = path.split("examples")
+  if (splittedRoute.length !== 2) return null
+  const initialRouteSplit = splittedRoute[0].split("/")
+  const parent = initialRouteSplit[initialRouteSplit.length - 2]
+  return parent
 }
