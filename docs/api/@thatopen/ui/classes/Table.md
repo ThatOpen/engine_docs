@@ -1,4 +1,4 @@
-# Table
+# Table\<T\>
 
 A custom table web component for BIM applications. HTML tag: bim-table
 
@@ -6,11 +6,17 @@ A custom table web component for BIM applications. HTML tag: bim-table
 
 - `LitElement`
 
+## Type parameters
+
+| Type parameter | Value |
+| :------ | :------ |
+| `T` *extends* [`TableRowData`](../type-aliases/TableRowData.md) | [`TableRowData`](../type-aliases/TableRowData.md) |
+
 ## Properties
 
 ### dataTransform
 
-> **dataTransform**: [`TableDataTransform`](../interfaces/TableDataTransform.md) = `{}`
+> **dataTransform**: [`TableDataTransform`](../type-aliases/TableDataTransform.md)\<`T`\> = `{}`
 
 A property representing the rules for transforming table data.
 The keys of the object are the column names, and the values are functions that define the transformation logic.
@@ -61,7 +67,7 @@ This function is used to determine whether a given row of data should be include
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `queryString` | `string` | The search string used to filter the data. |
-| `data` | [`TableGroupData`](../interfaces/TableGroupData.md) | The data row to be filtered. |
+| `data` | [`TableGroupData`](../interfaces/TableGroupData.md)\<`T`\> | The data row to be filtered. |
 
 #### Returns
 
@@ -117,15 +123,11 @@ table.indentationInText = true;
 
 ***
 
-### loadFunction()?
+### loadFunction?
 
-> `optional` **loadFunction**: () => `Promise` \<[`TableGroupData`](../interfaces/TableGroupData.md)[]\>
+> `optional` **loadFunction**: `TableLoadFunction`\<`T`\>
 
 The function to be executed when loading async data using Table.loadData
-
-#### Returns
-
-`Promise` \<[`TableGroupData`](../interfaces/TableGroupData.md)[]\>
 
 ***
 
@@ -188,7 +190,7 @@ table.columns = columns;
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `value` | (`string` \| [`ColumnData`](../interfaces/ColumnData.md))[] | An array of strings or objects of type `ColumnData`. |
+| `value` | ([`ColumnData`](../interfaces/ColumnData.md)\<`T`\> \| keyof `T`)[] | An array of strings or objects of type `ColumnData`. |
 
 ***
 
@@ -236,7 +238,7 @@ table.data = data;
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `value` | [`TableGroupData`](../interfaces/TableGroupData.md)[] | An array of `TableGroupData` objects representing the table data. |
+| `value` | [`TableGroupData`](../interfaces/TableGroupData.md)\<`T`\>[] | An array of `TableGroupData` objects representing the table data. |
 
 ***
 
@@ -292,7 +294,7 @@ A string containing the TSV representation of the table data.
 
 ### value
 
-> `get` **value**(): [`TableGroupData`](../interfaces/TableGroupData.md)[]
+> `get` **value**(): [`TableGroupData`](../interfaces/TableGroupData.md)\<`T`\>[]
 
 Getter for the `value` property.
 Returns the filtered data if a search string is provided, otherwise returns the original data.
@@ -306,7 +308,7 @@ console.log(tableValue); // Output: The filtered or original data.
 
 #### Returns
 
-[`TableGroupData`](../interfaces/TableGroupData.md)[]
+[`TableGroupData`](../interfaces/TableGroupData.md)\<`T`\>[]
 
 ## Methods
 

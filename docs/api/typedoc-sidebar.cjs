@@ -1127,11 +1127,6 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/ui/interfaces/TableDataTransform",
-            "label": "TableDataTransform"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/ui/interfaces/TableGroupData",
             "label": "TableGroupData"
           },
@@ -1139,16 +1134,6 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/interfaces/TableGroupTemplate",
             "label": "TableGroupTemplate"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/ui/interfaces/TableRowData",
-            "label": "TableRowData"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/ui/interfaces/TableRowTemplate",
-            "label": "TableRowTemplate"
           }
         ]
       },
@@ -1185,6 +1170,21 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/StatelessComponent",
             "label": "StatelessComponent"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/TableDataTransform",
+            "label": "TableDataTransform"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/TableRowData",
+            "label": "TableRowData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/TableRowTemplate",
+            "label": "TableRowTemplate"
           }
         ]
       },

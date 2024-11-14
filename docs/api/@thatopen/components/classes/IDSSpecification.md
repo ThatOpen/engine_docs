@@ -7,6 +7,10 @@ Represents a single specification from the Information Delivery Specification (I
 This class provides methods for testing a model against the specification,
 as well as serializing the specification into XML format.
 
+## Implements
+
+- `IDSSpecificationData`
+
 ## Methods
 
 ### serialize()

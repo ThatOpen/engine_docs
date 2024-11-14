@@ -43,11 +43,8 @@
 | [RowCreatedEventDetail](interfaces/RowCreatedEventDetail.md) | Represents the detail of a row created event. |
 | [RowDeselectedEventDetail](interfaces/RowDeselectedEventDetail.md) | Represents the detail of a row deselected event. |
 | [RowSelectedEventDetail](interfaces/RowSelectedEventDetail.md) | Represents the detail of a row selected event. |
-| [TableDataTransform](interfaces/TableDataTransform.md) | Represents a transformation function for table data. |
 | [TableGroupData](interfaces/TableGroupData.md) | Represents a group of table rows with optional children. |
 | [TableGroupTemplate](interfaces/TableGroupTemplate.md) | Represents a template for rendering a group of table rows in a table. |
-| [TableRowData](interfaces/TableRowData.md) | Represents a row of data for a table. |
-| [TableRowTemplate](interfaces/TableRowTemplate.md) | Represents a template for rendering a row of data in a table. |
 
 ## Type Aliases
 
@@ -59,6 +56,9 @@
 | [QueryOperators](type-aliases/QueryOperators.md) | Represents an operator used in query building. |
 | [StatefullComponent](type-aliases/StatefullComponent.md) | Represents a function that returns a TemplateResult for a stateful component. |
 | [StatelessComponent](type-aliases/StatelessComponent.md) | Represents a function that returns a TemplateResult for a stateless component. |
+| [TableDataTransform](type-aliases/TableDataTransform.md) | Represents a transformation function for table data. |
+| [TableRowData](type-aliases/TableRowData.md) | Represents a row of data for a table. |
+| [TableRowTemplate](type-aliases/TableRowTemplate.md) | Represents a template for rendering a row of data in a table. |
 
 ## Functions
 

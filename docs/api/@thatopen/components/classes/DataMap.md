@@ -165,7 +165,9 @@ Clears the map and resets the events.
 
 > **set**(`key`, `value`): [`DataMap`](DataMap.md)\<`K`, `V`\>
 
-Sets the value for the specified key in the map and triggers the appropriate event (onItemSet or onItemUpdated).
+Sets the value for the specified key in the map.
+If the item is new, then onItemSet is triggered.
+If the item is already in the map, then onItemUpdated is triggered.
 
 #### Parameters
 
