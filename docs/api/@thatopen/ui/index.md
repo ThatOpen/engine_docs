@@ -9,7 +9,7 @@
 | [ColorInput](classes/ColorInput.md) | A custom color input web component for BIM applications. HTML tag: bim-color-input |
 | [Component](classes/Component.md) | A base class for UI components that utilizes the LitElement library. Provides functionality for rendering stateless and stateful components, as well as lazy loading of elements using Intersection Observer. |
 | [Dropdown](classes/Dropdown.md) | A custom dropdown web component for BIM applications. |
-| [Grid](classes/Grid.md) | A custom grid web component for BIM applications. HTML tag: bim-grid |
+| [Grid](classes/Grid.md) | A custom grid component for web applications. |
 | [Icon](classes/Icon.md) | A custom icon web component for BIM applications. HTML tag: bim-icon |
 | [Input](classes/Input.md) | A custom input web component for BIM applications. HTML tag: bim-input |
 | [Label](classes/Label.md) | A custom label web component for BIM applications. HTML tag: bim-label |
@@ -37,7 +37,6 @@
 | [EntryQuery](interfaces/EntryQuery.md) | Represents a single query condition. |
 | [HasName](interfaces/HasName.md) | Represents an object that has a name and an optional label. |
 | [HasValue](interfaces/HasValue.md) | Represents an object that has a value and an event for value changes. |
-| [Layouts](interfaces/Layouts.md) | Represents a collection of predefined grid layouts for the Grid component. Each layout is defined by a unique name, a grid template string, and a map of area names to HTMLElement instances. The grid template string defines the structure of the grid, and the area names correspond to the grid-area property of the HTMLElement instances. The HTMLElement instances are used to populate the grid with content. |
 | [ManagerConfig](interfaces/ManagerConfig.md) | Configuration interface for the Manager class. Defines the properties and their types that can be configured for the Manager. |
 | [QueryGroup](interfaces/QueryGroup.md) | Represents a group of queries with an operator. |
 | [RowCreatedEventDetail](interfaces/RowCreatedEventDetail.md) | Represents the detail of a row created event. |
@@ -51,6 +50,7 @@
 | Type alias | Description |
 | :------ | :------ |
 | [ConditionFunctions](type-aliases/ConditionFunctions.md) | Represents a map of condition functions, where the key is a QueryCondition and the value is a function that evaluates the condition. |
+| [GridLayoutsDefinition](type-aliases/GridLayoutsDefinition.md) | Represents a collection of predefined grid layouts for the Grid component. Each layout is defined by a unique name, a grid template string, and a map of area names to HTMLElement instances. The grid template string defines the structure of the grid, and the area names correspond to the grid-area property of the HTMLElement instances. The HTMLElement instances are used to populate the grid with content. |
 | [Query](type-aliases/Query.md) | Represents a query, which can be a single query or a group of queries. |
 | [QueryCondition](type-aliases/QueryCondition.md) | Represents a condition used in query building. |
 | [QueryOperators](type-aliases/QueryOperators.md) | Represents an operator used in query building. |

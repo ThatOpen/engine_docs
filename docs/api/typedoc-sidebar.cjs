@@ -171,6 +171,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/IfcIsolator",
+            "label": "IfcIsolator"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/IfcJsonExporter",
             "label": "IfcJsonExporter"
           },
@@ -1097,11 +1102,6 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/ui/interfaces/Layouts",
-            "label": "Layouts"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/ui/interfaces/ManagerConfig",
             "label": "ManagerConfig"
           },
@@ -1145,6 +1145,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/ConditionFunctions",
             "label": "ConditionFunctions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/GridLayoutsDefinition",
+            "label": "GridLayoutsDefinition"
           },
           {
             "type": "doc",

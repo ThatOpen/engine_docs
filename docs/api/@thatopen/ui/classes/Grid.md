@@ -1,10 +1,20 @@
-# Grid
+# Grid\<T\>
 
-A custom grid web component for BIM applications. HTML tag: bim-grid
+A custom grid component for web applications.
+
+## Element
+
+bim-grid
 
 ## Extends
 
 - `LitElement`
+
+## Type parameters
+
+| Type parameter | Value |
+| :------ | :------ |
+| `T` *extends* `GridLayoutComponents` | `object` |
 
 ## Properties
 
@@ -60,17 +70,6 @@ document.body.appendChild(grid);
 
 ***
 
-### layouts
-
-> **layouts**: [`Layouts`](../interfaces/Layouts.md) = `{}`
-
-Represents a collection of predefined grid layouts for the Grid component.
-Each layout is defined by a unique name, a grid template string, and a map of area names to HTMLElement instances.
-The grid template string defines the structure of the grid, and the area names correspond to the grid-area property of the HTMLElement instances.
-The HTMLElement instances are used to populate the grid with content.
-
-***
-
 ### styles
 
 > `static` **styles**: `CSSResult`
@@ -80,3 +79,25 @@ CSS styles for the component.
 #### Overrides
 
 `LitElement.styles`
+
+## Accessors
+
+### layouts
+
+> `set` **layouts**(`value`): `void`
+
+Represents a collection of predefined grid layouts for the Grid component.
+Each layout is defined by a unique name, a grid template string, and a map of area names to HTMLElement instances or
+Statefull/Stateless component definitions.
+The grid template string defines the structure of the grid, and the area names correspond to the grid-area property of the HTMLElement instances.
+The HTMLElement instances are used to populate the grid with content.
+
+#### Remarks
+
+Once defined, the layout is meant to be immutable.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | [`GridLayoutsDefinition`](../type-aliases/GridLayoutsDefinition.md)\<`T`\> |

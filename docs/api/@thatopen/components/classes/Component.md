@@ -25,6 +25,7 @@ Components are the building blocks of this library. Components are singleton ele
 - [`IfcGeometryTiler`](IfcGeometryTiler.md)
 - [`IfcPropertiesTiler`](IfcPropertiesTiler.md)
 - [`IfcJsonExporter`](IfcJsonExporter.md)
+- [`IfcIsolator`](IfcIsolator.md)
 - [`IfcRelationsIndexer`](IfcRelationsIndexer.md)
 - [`IfcPropertiesManager`](IfcPropertiesManager.md)
 - [`IfcFinder`](IfcFinder.md)

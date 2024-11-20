@@ -279,7 +279,7 @@ The color is provided as a hexadecimal string, prefixed with a '#'.
 
 ### go()
 
-> **go**(`transition`): `Promise`\<`void`\>
+> **go**(`world`?, `transition`?): `Promise`\<`void`\>
 
 Sets the viewpoint of the camera in the world.
 
@@ -287,7 +287,8 @@ Sets the viewpoint of the camera in the world.
 
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `transition` | `boolean` | `true` | <p>Indicates whether the camera movement should have a transition effect.</p><p>                     Default value is `true`.</p> |
+| `world`? | [`World`](../interfaces/World.md) | `undefined` | - |
+| `transition`? | `boolean` | `true` | <p>Indicates whether the camera movement should have a transition effect.</p><p>                     Default value is `true`.</p> |
 
 #### Returns
 
@@ -373,9 +374,15 @@ The guid will be ommited as it shouldn't change after it has been initially set.
 
 ### updateCamera()
 
-> **updateCamera**(): `void`
+> **updateCamera**(`world`?): `void`
 
 Updates the camera settings of the viewpoint based on the current world's camera and renderer.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `world`? | [`World`](../interfaces/World.md) |
 
 #### Returns
 
