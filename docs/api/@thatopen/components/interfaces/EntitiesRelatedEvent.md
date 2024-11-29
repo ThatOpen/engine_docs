@@ -1,7 +1,6 @@
 # EntitiesRelatedEvent
 
-Interface definition of an Entities Related Event from the IfcRelationsIndexer.
-This event gets triggered when two or more entities has been related with each other.
+Interface definition of an Entities Related Event from the IfcRelationsIndexer. This event gets triggered when two or more entities has been related with each other.
 
 ## Properties
 

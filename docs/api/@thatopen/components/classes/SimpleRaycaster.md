@@ -64,7 +64,7 @@ This is used to access the camera and meshes.
 
 ### castRay()
 
-> **castRay**(`items`): `null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
+> **castRay**(`items`, `position`): `null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
 
 Throws a ray from the camera to the mouse or touch event point and returns
 the first item found. This also takes into account the clipping planes
@@ -75,6 +75,7 @@ used by the renderer.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `items` | `Object3D`\<`Object3DEventMap`\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in Components.meshes. |
+| `position` | `Vector2` | the screen position to use for raycasting. If not provided, the last pointer (mouse/touch) position will be used. |
 
 #### Returns
 

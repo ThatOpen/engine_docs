@@ -191,7 +191,7 @@ OBC.Disposable.dispose
 
 ### fetch()
 
-> **fetch**(`fileName`): `Promise`\<`Response` \| `File`\>
+> **fetch**(`fileName`): `Promise`\<`File` \| `Response`\>
 
 Function used to retrieve tiles. Can be overriden to work with specific backends.
 
@@ -203,7 +203,25 @@ Function used to retrieve tiles. Can be overriden to work with specific backends
 
 #### Returns
 
-`Promise`\<`Response` \| `File`\>
+`Promise`\<`File` \| `Response`\>
+
+***
+
+### getBoundingBoxes()
+
+> **getBoundingBoxes**(`items`): `FragmentsGroup`
+
+Gets a FragmentsGroup with the OBB of the specified items. Keep in mind that you will need to dispose this group yourself using the dispose(false) method (geometry is shared with bounding boxes used for visibility check).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `items` | `FragmentIdMap` | The items whose bounding boxes to get. |
+
+#### Returns
+
+`FragmentsGroup`
 
 ***
 
@@ -273,7 +291,7 @@ Sets or unsets the specified fragments as static. Static fragments are streamed 
 
 ### setVisibility()
 
-> **setVisibility**(`visible`, `filter`): `void`
+> **setVisibility**(`visible`, `filter`?): `void`
 
 Sets the visibility of items in fragments based on the provided filter.
 
@@ -282,7 +300,7 @@ Sets the visibility of items in fragments based on the provided filter.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `visible` | `boolean` | The visibility state to set. |
-| `filter` | `FragmentIdMap` | <p>A map of fragment IDs to arrays of item IDs.</p><p>                 Only items with IDs present in the arrays will be visible.</p> |
+| `filter`? | `FragmentIdMap` | <p>A map of fragment IDs to arrays of item IDs.</p><p>                 Only items with IDs present in the arrays will be visible.</p><p>                 If not provided, it will take all loaded models as filter.</p> |
 
 #### Returns
 

@@ -218,6 +218,19 @@ Will throw an error if the fragment ID is not found or if the model relations do
 
 ***
 
+### export()
+
+> **export**(): `ExportedClassification`
+
+Exports the computed classification to persists them and import them back
+later for faster loading.
+
+#### Returns
+
+`ExportedClassification`
+
+***
+
 ### find()
 
 > **find**(`filter`?): `FragmentIdMap`
@@ -241,6 +254,24 @@ where the express IDs are filtered based on the provided filter criteria.
 #### Throws
 
 Will throw an error if the fragments map is malformed.
+
+***
+
+### import()
+
+> **import**(`data`): `void`
+
+Imports a classification previously exported with .export().
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `ExportedClassification` | the serialized classification to import. |
+
+#### Returns
+
+`void`
 
 ***
 

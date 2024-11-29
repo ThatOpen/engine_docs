@@ -1,7 +1,6 @@
 # IDSSpecifications
 
-Component that manages Information Delivery Specification (IDS) data.
-It provides functionality for importing, exporting, and manipulating IDS data.
+Component that manages Information Delivery Specification (IDS) data. It provides functionality for importing, exporting, and manipulating IDS data.
 
 ## Extends
 

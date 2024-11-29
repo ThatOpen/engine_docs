@@ -5,7 +5,7 @@
 | Class | Description |
 | :------ | :------ |
 | [AsyncEvent](classes/AsyncEvent.md) | Simple event handler by [Jason Kleban](https://gist.github.com/JasonKleban/50cee44960c225ac1993c922563aa540). Keep in mind that if you want to remove it later, you might want to declare the callback as an object. If you want to maintain the reference to `this`, you will need to declare the callback as an arrow function. |
-| [BCFTopics](classes/BCFTopics.md) | BCFTopics manages Building Collaboration Format (BCF) data the engine. It provides functionality for importing, exporting, and manipulating BCF data. |
+| [BCFTopics](classes/BCFTopics.md) | BCFTopics manages Building Collaboration Format (BCF) data the engine. It provides functionality for importing, exporting, and manipulating BCF data. |
 | [Base](classes/Base.md) | Base class of the library. Useful for finding out the interfaces something implements. |
 | [BaseCamera](classes/BaseCamera.md) | Abstract class representing a camera in a 3D world. All cameras should use this class as a base. |
 | [BaseRenderer](classes/BaseRenderer.md) | Abstract class representing a renderer for a 3D world. All renderers should use this class as a base. |
@@ -21,16 +21,17 @@
 | [CullerRenderer](classes/CullerRenderer.md) | A base renderer to determine visibility on screen. |
 | [Cullers](classes/Cullers.md) | A component that provides culling functionality for meshes in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Cullers). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Cullers). |
 | [DataMap](classes/DataMap.md) | A class that extends the built-in Map class and provides additional events for item set, update, delete, and clear operations. |
-| [DataSet](classes/DataSet.md) | A class that extends the built-in Set class and provides additional functionality. It triggers events when items are added, deleted, or the set is cleared. |
+| [DataSet](classes/DataSet.md) | A class that extends the built-in Set class and provides additional functionality. It triggers events when items are added, deleted, or the set is cleared. |
 | [Disposer](classes/Disposer.md) | A tool to safely remove meshes, geometries, materials and other items from memory to [prevent memory leaks](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects). |
 | [Event](classes/Event.md) | Simple event handler by [Jason Kleban](https://gist.github.com/JasonKleban/50cee44960c225ac1993c922563aa540). Keep in mind that if you want to remove it later, you might want to declare the callback as an object. If you want to maintain the reference to `this`, you will need to declare the callback as an arrow function. |
+| [EventManager](classes/EventManager.md) | Simple class to easily toggle and reset event lists. |
 | [Exploder](classes/Exploder.md) | The Exploder component is responsible for managing the explosion of 3D model fragments (generally by floor). 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Exploder). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Exploder). |
 | [FirstPersonMode](classes/FirstPersonMode.md) | A [NavigationMode](interfaces/NavigationMode.md) that allows first person navigation, simulating FPS video games. |
 | [FragmentsManager](classes/FragmentsManager.md) | Component to load, delete and manage [fragments](https://github.com/ThatOpen/engine_fragment) efficiently. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/FragmentsManager). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/FragmentsManager). |
 | [Grids](classes/Grids.md) | A component that manages grid instances. Each grid is associated with a unique world. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Grids). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Grids). |
 | [Hider](classes/Hider.md) | A component that hides or isolates fragments within a 3D scene. It extends the base Component class and provides methods to control fragment visibility and isolation. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Hider). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Hider). |
 | [IDSSpecification](classes/IDSSpecification.md) | Represents a single specification from the Information Delivery Specification (IDS) standard. |
-| [IDSSpecifications](classes/IDSSpecifications.md) | Component that manages Information Delivery Specification (IDS) data. It provides functionality for importing, exporting, and manipulating IDS data. |
+| [IDSSpecifications](classes/IDSSpecifications.md) | Component that manages Information Delivery Specification (IDS) data. It provides functionality for importing, exporting, and manipulating IDS data. |
 | [IfcBasicQuery](classes/IfcBasicQuery.md) | A query that checks the direct attributes of IFC items. |
 | [IfcFinder](classes/IfcFinder.md) | Component to make text queries in the IFC. |
 | [IfcFinderQuery](classes/IfcFinderQuery.md) | The base class for all queries used by the [IfcFinder](classes/IfcFinder.md). |
@@ -72,7 +73,7 @@
 | Interface | Description |
 | :------ | :------ |
 | [AttributeListener](interfaces/AttributeListener.md) | Interface representing a map of attribute listeners. The keys are model UUIDs, and the values are objects with express IDs as keys, and objects with attribute names as keys, and Event objects as values. |
-| [BCFTopicsConfig](interfaces/BCFTopicsConfig.md) | Configuration settings for managing BCF topics. This interface defines the properties and their meanings used to control the behavior of exporting and importing BCF topics. |
+| [BCFTopicsConfig](interfaces/BCFTopicsConfig.md) | Configuration settings for managing BCF topics. This interface defines the properties and their meanings used to control the behavior of exporting and importing BCF topics. |
 | [BCFViewpoint](interfaces/BCFViewpoint.md) | Represents a viewpoint in a BCF file. |
 | [CameraControllable](interfaces/CameraControllable.md) | Whether a camera uses the Camera Controls library. |
 | [ChangeMap](interfaces/ChangeMap.md) | Interface representing a map of changed entities in a model. The keys are model UUIDs, and the values are sets of express IDs of changed entities. |
@@ -80,7 +81,8 @@
 | [Configurable](interfaces/Configurable.md) | Whether this component supports to be configured. |
 | [Createable](interfaces/Createable.md) | Whether this component supports create and destroy operations. This generally applies for components that work with instances, such as clipping planes or dimensions. |
 | [Disposable](interfaces/Disposable.md) | Whether this component has to be manually destroyed once you are done with it to prevent [memory leaks](https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects). This also ensures that the DOM events created by that component will be cleaned up. |
-| [EntitiesRelatedEvent](interfaces/EntitiesRelatedEvent.md) | Interface definition of an Entities Related Event from the IfcRelationsIndexer. This event gets triggered when two or more entities has been related with each other. |
+| [EntitiesRelatedEvent](interfaces/EntitiesRelatedEvent.md) | Interface definition of an Entities Related Event from the IfcRelationsIndexer. This event gets triggered when two or more entities has been related with each other. |
+| [Eventable](interfaces/Eventable.md) | Whether it has events or not. |
 | [Hideable](interfaces/Hideable.md) | Whether the geometric representation of this component can be hidden or shown in the [Three.js scene](https://threejs.org/docs/#api/en/scenes/Scene). |
 | [IDSCheckResult](interfaces/IDSCheckResult.md) | Represents the result of a check performed by an IDSFacet test. |
 | [IfcCategoryRule](interfaces/IfcCategoryRule.md) | A rule for the [IfcFinder](classes/IfcFinder.md) to search items based on their category. |
@@ -91,7 +93,7 @@
 | [NavigationMode](interfaces/NavigationMode.md) | An object that determines the behavior of the camera controls and the user input (e.g. 2D floor plan mode, first person mode, etc). |
 | [Progress](interfaces/Progress.md) | Basic type to describe the progress of any kind of process. |
 | [Resizeable](interfaces/Resizeable.md) | Whether this component can be resized. The meaning of this can vary depending on the component: resizing a [Renderer](https://threejs.org/docs/#api/en/renderers/WebGLRenderer) component could mean changing its resolution, whereas resizing a [Mesh](https://threejs.org/docs/#api/en/objects/Mesh) would change its scale. |
-| [ShadowedSceneConfig](interfaces/ShadowedSceneConfig.md) | Configuration interface for the [ShadowedScene](classes/ShadowedScene.md). Defines properties for directional and ambient lights, as well as shadows. |
+| [ShadowedSceneConfig](interfaces/ShadowedSceneConfig.md) | Configuration interface for the [ShadowedScene](classes/ShadowedScene.md). Defines properties for directional and ambient lights, as well as shadows. |
 | [SimpleGridConfig](interfaces/SimpleGridConfig.md) | Configuration interface for the [SimpleGrid](classes/SimpleGrid.md). |
 | [SimpleSceneConfig](interfaces/SimpleSceneConfig.md) | Configuration interface for the [SimpleScene](classes/SimpleScene.md). |
 | [StreamedAsset](interfaces/StreamedAsset.md) | A streamed asset, which consists of multiple geometries. Each geometry in the asset is identified by a unique number (geometryID), and contains information about its transformation and color. |

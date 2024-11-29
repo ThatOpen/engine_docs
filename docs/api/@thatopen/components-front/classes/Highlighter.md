@@ -9,6 +9,7 @@ This component allows highlighting and selecting fragments in a 3D scene. 📕 [
 ## Implements
 
 - `Disposable`
+- `Eventable`
 
 ## Properties
 
@@ -30,9 +31,9 @@ Stores the backup color before selection.
 
 ### colors
 
-> **colors**: `Map`\<`string`, `Color`\>
+> **colors**: `Map`\<`string`, `null` \| `Color`\>
 
-Stores the colors used for highlighting selections.
+Stores the colors used for highlighting selections. If null, the highlighter won't color geometries (useful for selection without coloring).
 
 ***
 
@@ -53,6 +54,18 @@ OBC.Component.enabled
 #### Overrides
 
 `OBC.Component.enabled`
+
+***
+
+### eventManager
+
+> **eventManager**: `EventManager`
+
+Manager to easily toggle and reset all events.
+
+#### Implementation of
+
+`OBC.Eventable.eventManager`
 
 ***
 
@@ -185,7 +198,7 @@ Throws an error if a selection with the same name already exists.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `name` | `string` | The name of the new selection. |
-| `color` | `Color` | The color to be used for highlighting the selection. |
+| `color` | `null` \| `Color` | The color to be used for highlighting the selection. |
 
 #### Returns
 
@@ -199,7 +212,7 @@ Will throw an error if a selection with the same name already exists.
 
 ### clear()
 
-> **clear**(`name`?): `void`
+> **clear**(`name`?, `filter`?): `void`
 
 Clears the selection for the given name or all selections if no name is provided.
 
@@ -208,26 +221,11 @@ Clears the selection for the given name or all selections if no name is provided
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `name`? | `string` | The name of the selection to clear. If not provided, clears all selections. |
+| `filter`? | `FragmentIdMap` | The only items to unselect. If not provided, all items will be unselected. |
 
 #### Returns
 
 `void`
-
-#### Throws
-
-Will throw an error if the FragmentsManager is not found.
-
-#### Throws
-
-Will throw an error if the fragment or its geometry is not found.
-
-#### Throws
-
-Will throw an error if the item ID is not found.
-
-#### Throws
-
-Will throw an error if the fragment does not belong to a FragmentsGroup.
 
 ***
 
@@ -329,6 +327,24 @@ Will throw an error if the item ID is not found.
 #### Throws
 
 Will throw an error if the fragment does not belong to a FragmentsGroup.
+
+***
+
+### remove()
+
+> **remove**(`name`): `void`
+
+Removes the specified selection.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | The name of the new selection. |
+
+#### Returns
+
+`void`
 
 ***
 

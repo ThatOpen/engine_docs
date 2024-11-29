@@ -8,6 +8,14 @@ Simple event handler by [Jason Kleban](https://gist.github.com/JasonKleban/50cee
 | :------ |
 | `T` |
 
+## Properties
+
+### enabled
+
+> **enabled**: `boolean` = `true`
+
+Whether this event is active or not. If not, it won't trigger.
+
 ## Methods
 
 ### add()

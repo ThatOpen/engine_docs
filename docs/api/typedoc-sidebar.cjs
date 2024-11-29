@@ -111,6 +111,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/EventManager",
+            "label": "EventManager"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/Exploder",
             "label": "Exploder"
           },
@@ -374,6 +379,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/EntitiesRelatedEvent",
             "label": "EntitiesRelatedEvent"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Eventable",
+            "label": "Eventable"
           },
           {
             "type": "doc",

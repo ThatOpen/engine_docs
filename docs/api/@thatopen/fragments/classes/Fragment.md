@@ -181,6 +181,24 @@ fragment.clear();
 
 ***
 
+### clone()
+
+> **clone**(`itemIDs`): [`Fragment`](Fragment.md)
+
+Creates a copy of the whole fragment or a part of it. It shares the geometry with the original fragment, but has its own InstancedMesh data, so it also needs to be disposed.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `itemIDs` | `Iterable`\<`number`\> | An iterable of item IDs to be included in the clone. |
+
+#### Returns
+
+[`Fragment`](Fragment.md)
+
+***
+
 ### dispose()
 
 > **dispose**(`disposeResources`): `void`
@@ -363,10 +381,6 @@ Resets the color of items in the fragment to their original colors.
 
 `void`
 
-#### Throws
-
-Will throw an error if the fragment doesn't have color per instance or if the item IDs are not found in the fragment.
-
 #### Example
 
 ```typescript
@@ -393,10 +407,6 @@ Sets the color of items in the fragment.
 #### Returns
 
 `void`
-
-#### Throws
-
-Will throw an error if the fragment doesn't have color per instance or if the item IDs are not found in the fragment.
 
 #### Example
 
@@ -427,10 +437,6 @@ Sets the visibility of items in the fragment.
 #### Remarks
 
 This method updates the visibility of items in the fragment based on the provided visibility flag.
-
-#### Throws
-
-Will throw an error if the instances are not found or if the item IDs are not found in the fragment.
 
 #### Example
 

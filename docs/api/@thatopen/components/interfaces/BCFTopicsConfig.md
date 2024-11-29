@@ -1,7 +1,6 @@
 # BCFTopicsConfig
 
-Configuration settings for managing BCF topics.
-This interface defines the properties and their meanings used to control the behavior of exporting and importing BCF topics.
+Configuration settings for managing BCF topics. This interface defines the properties and their meanings used to control the behavior of exporting and importing BCF topics.
 
 ## Properties
 

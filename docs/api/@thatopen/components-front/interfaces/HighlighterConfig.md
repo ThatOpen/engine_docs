@@ -14,7 +14,7 @@ Whether to automatically highlight fragments on click.
 
 ### hoverColor
 
-> **hoverColor**: `Color`
+> **hoverColor**: `null` \| `Color`
 
 Color used for hover.
 
@@ -54,7 +54,7 @@ Name of the selection event.
 
 ### selectionColor
 
-> **selectionColor**: `Color`
+> **selectionColor**: `null` \| `Color`
 
 Color used for selection.
 
