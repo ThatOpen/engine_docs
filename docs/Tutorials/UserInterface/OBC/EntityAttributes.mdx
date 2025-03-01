@@ -7,18 +7,33 @@ Copying and pasting? We've got you covered! You can find the full source code of
 ## Displaying data the advanced way 🔥🔥
 ---
 What is a good BIM app if you don't give users a nice way to visualize its model properties, right? Well, hold tight as here you will learn all you need to know in order to use the power of UI Components to accomplish that!
-### Loading a model and computing it's relations
-First things first... let's load a model 👇
+### 🖖 Importing our Libraries
+In this tutorial, we will import:
+- web-ifc to get some IFC items.
+- @thatopen/ui to add some simple and cool UI menus.
+- @thatopen/components to set up the barebone of our app.
+- @thatopen/components-front to use some frontend-oriented components.
+- @thatopen/ui-obc to add some cool pre-made UI menus for components.
 
 ```js
-import * as WEBIFC from "web-ifc";
+/* eslint-disable no-alert import * as WEBIFC from "web-ifc";
 import * as BUI from "@thatopen/ui";
 import * as OBC from "@thatopen/components";
-import * as OBF from "@thatopen/components-front";
-import * as CUI from "../..";
+import * as OBCF from "@thatopen/components-front";
+// You have to import from "@thatopen/ui-obc"
+import * as BUIC from "../..";
+```
+### 📋 Initializing the UI
+As always, let's first initialize the UI library. Remember you only have to do it once in your entire app.
 
+```js
 BUI.Manager.init();
+```
+### 🌎 Setting up a simple scene
+---
+We will start by creating a simple scene with a camera and a renderer. If you don't know how to set up a scene, you can check the Worlds tutorial.
 
+```js
 const components = new OBC.Components();
 
 const worlds = components.get(OBC.Worlds);
@@ -46,10 +61,8 @@ components.init();
 const grids = components.get(OBC.Grids);
 grids.create(world);
 ```
-:::tip
-You don't need to add the model into the scene to display its properties. However, as we are going to display the attributes for each selected element, then having the model into the scene is obvious, right?
-:::
-Now, in order to get the most out of the entities table, you need to calculate the relations index of your model. To do it, you will need to use the [IfcRelationsIndexer](/Tutorials/Components/Core/IfcRelationsIndexer) component from `@thatopen/components` to speed up the process.
+### Loading a model and computing it's relations
+First things first... let's load a model 👇
 
 ```js
 const ifcLoader = components.get(OBC.IfcLoader);
@@ -62,17 +75,17 @@ const typedArray = new Uint8Array(buffer);
 const model = await ifcLoader.load(typedArray);
 world.scene.three.add(model);
 ```
-### Preconfiguring the table
-The attributes table has some optional configurations. One of them is the ability to modify the styles of the cell value based on the attribute value (e.g., colorizing entities with a specific string in its name, or numeric values based on a codition ). For it, let's first create a simple base style that all our cell overwrites will share:
+:::tip
+You don't need to add the model into the scene to display its properties. However, as we are going to display the attributes for each selected element, then having the model into the scene is obvious, right?
+:::
+Now, in order to get the most out of the entities table, you need to calculate the relations index of your model. To do it, you will need to use the [IfcRelationsIndexer](/Tutorials/Components/Core/IfcRelationsIndexer) component from `@thatopen/components` to speed up the process.
 
 ```js
 const indexer = components.get(OBC.IfcRelationsIndexer);
 await indexer.process(model);
 ```
-Then, let's create an object where the keys are the attribute values you want to overwrite its styles, and the values are functions that returns an `html` template result.
-:::tip
-If you want to learn more about the `html` template tag and how to use it, just take a look at the tutorial on how to make a custom component.
-:::
+### Preconfiguring the table
+The attributes table has some optional configurations. One of them is the ability to modify the styles of the cell value based on the attribute value (e.g., colorizing entities with a specific string in its name, or numeric values based on a codition ). For it, let's first create a simple base style that all our cell overwrites will share:
 
 ```js
 const baseStyle: Record<string, string> = {
@@ -80,7 +93,10 @@ const baseStyle: Record<string, string> = {
   borderRadius: "0.25rem",
 };
 ```
-Keep in mind the step above is optional! Not needed for the table to work. Now its time to create the table using the predefine functional component that ships with the library 🙂
+Then, let's create an object where the keys are the attribute values you want to overwrite its styles, and the values are functions that returns an `html` template result.
+:::tip
+If you want to learn more about the `html` template tag and how to use it, just take a look at the tutorial on how to make a custom component.
+:::
 
 ```js
 const tableDefinition: BUI.TableDataTransform = {
@@ -121,10 +137,10 @@ const tableDefinition: BUI.TableDataTransform = {
   },
 };
 ```
-Cool! attributes table created. Then after, let's tell the attributes table to update each time the user makes a selection over the model. For it, we will use the [Highlighter](/Tutorials/Components/Front/Highlighter):
+Keep in mind the step above is optional! Not needed for the table to work. Now its time to create the table using the predefine functional component that ships with the library 🙂
 
 ```js
-const [attributesTable, updateAttributesTable] = CUI.tables.entityAttributes({
+const [attributesTable, updateAttributesTable] = BUIC.tables.entityAttributes({
   components,
   fragmentIdMap: {},
   tableDefinition,
@@ -150,11 +166,10 @@ attributesTable.expanded = true;
 attributesTable.indentationInText = true;
 attributesTable.preserveStructureOnFilter = true;
 ```
-### Creating a panel to append the table
-Allright! Let's now create a BIM Panel to control some aspects of the attributes table and to trigger some functionalities like copying the values to TSV or exporing the data to JSON 😉
+Cool! attributes table created. Then after, let's tell the attributes table to update each time the user makes a selection over the model. For it, we will use the [Highlighter](/Tutorials/Components/Front/Highlighter):
 
 ```js
-const highlighter = components.get(OBF.Highlighter);
+const highlighter = components.get(OBCF.Highlighter);
 highlighter.setup({ world });
 
 highlighter.events.select.onHighlight.add((fragmentIdMap) => {
@@ -165,7 +180,8 @@ highlighter.events.select.onClear.add(() =>
   updateAttributesTable({ fragmentIdMap: {} }),
 );
 ```
-Finally, let's create a BIM Grid element and provide both the panel and the viewport to display everything.
+### Creating a panel to append the table
+Allright! Let's now create a BIM Panel to control some aspects of the attributes table and to trigger some functionalities like copying the values to TSV or exporing the data to JSON 😉
 
 ```js
 const entityAttributesPanel = BUI.Component.create(() => {
@@ -244,7 +260,7 @@ const entityAttributesPanel = BUI.Component.create(() => {
   `;
 });
 ```
-Congratulations! You have now created a fully working advanced attributes table for your app in less than 10 minutes of work. Keep going with more tutorials! 💪
+Finally, let's create a BIM Grid element and provide both the panel and the viewport to display everything.
 
 ```js
 const app = document.createElement("bim-grid");
@@ -261,4 +277,5 @@ app.layouts = {
 app.layout = "main";
 document.body.append(app);
 ```
+Congratulations! You have now created a fully working advanced attributes table for your app in less than 10 minutes of work. Keep going with more tutorials! 💪
 
