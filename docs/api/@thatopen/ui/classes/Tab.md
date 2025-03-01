@@ -16,14 +16,6 @@ The icon of the tab. This property is optional and can be used to display an ico
 
 ***
 
-### label?
-
-> `optional` **label**: `string`
-
-The label of the tab. This property is optional and can be used to display a custom label instead of the tab's name.
-
-***
-
 ### name
 
 > **name**: `string`
@@ -66,3 +58,17 @@ tab.hidden = true; // hides the tab
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `value` | `boolean` | The new hidden state. If `true`, the tab will be hidden. If `false`, the tab will be visible. |
+
+***
+
+### label
+
+> `set` **label**(`value`): `void`
+
+The label of the tab. This property is optional and can be used to display a custom label instead of the tab's name.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `undefined` \| `string` |
