@@ -854,47 +854,43 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "category",
+        "label": "Enumerations",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/enumerations/CurrentLod",
+            "label": "CurrentLod"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/enumerations/ItemConfigClass",
+            "label": "ItemConfigClass"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/enumerations/SnappingClass",
+            "label": "SnappingClass"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "Classes",
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/classes/Alignment",
-            "label": "Alignment"
+            "id": "api/@thatopen/fragments/classes/FragmentsModel",
+            "label": "FragmentsModel"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/classes/CivilCurve",
-            "label": "CivilCurve"
+            "id": "api/@thatopen/fragments/classes/FragmentsModels",
+            "label": "FragmentsModels"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/classes/CurveMesh",
-            "label": "CurveMesh"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/fragments/classes/Fragment",
-            "label": "Fragment"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/fragments/classes/FragmentMesh",
-            "label": "FragmentMesh"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/fragments/classes/FragmentsGroup",
-            "label": "FragmentsGroup"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/fragments/classes/Serializer",
-            "label": "Serializer"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/fragments/classes/StreamSerializer",
-            "label": "StreamSerializer"
+            "id": "api/@thatopen/fragments/classes/IfcImporter",
+            "label": "IfcImporter"
           }
         ]
       },
@@ -904,28 +900,83 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/FragmentIdMap",
-            "label": "FragmentIdMap"
+            "id": "api/@thatopen/fragments/interfaces/Attributes",
+            "label": "Attributes"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/IfcMetadata",
-            "label": "IfcMetadata"
+            "id": "api/@thatopen/fragments/interfaces/ItemAttribute",
+            "label": "ItemAttribute"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/IfcProperties",
-            "label": "IfcProperties"
+            "id": "api/@thatopen/fragments/interfaces/ItemData",
+            "label": "ItemData"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/IndexedGeometry",
-            "label": "IndexedGeometry"
+            "id": "api/@thatopen/fragments/interfaces/ItemsDataConfig",
+            "label": "ItemsDataConfig"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/Item",
-            "label": "Item"
+            "id": "api/@thatopen/fragments/interfaces/MappedInformationResult",
+            "label": "MappedInformationResult"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/MappedResultInput",
+            "label": "MappedResultInput"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/MappedSelectionInput",
+            "label": "MappedSelectionInput"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/ModelIdMap",
+            "label": "ModelIdMap"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/RaycastData",
+            "label": "RaycastData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/RaycastResult",
+            "label": "RaycastResult"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/RectangleRaycastData",
+            "label": "RectangleRaycastData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/RectangleRaycastResult",
+            "label": "RectangleRaycastResult"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/RelsModifyChange",
+            "label": "RelsModifyChange"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/SpatialTreeItem",
+            "label": "SpatialTreeItem"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/VirtualModelConfig",
+            "label": "VirtualModelConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/VirtualPropertiesConfig",
+            "label": "VirtualPropertiesConfig"
           }
         ]
       },
@@ -935,18 +986,100 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/type-aliases/AlignmentType",
-            "label": "AlignmentType"
+            "id": "api/@thatopen/fragments/type-aliases/AttributeData",
+            "label": "AttributeData"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/type-aliases/IfcSchema",
-            "label": "IfcSchema"
+            "id": "api/@thatopen/fragments/type-aliases/AttrsChange",
+            "label": "AttrsChange"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/type-aliases/StreamedGeometries",
-            "label": "StreamedGeometries"
+            "id": "api/@thatopen/fragments/type-aliases/BIMMaterial",
+            "label": "BIMMaterial"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/BIMMesh",
+            "label": "BIMMesh"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/DataBuffer",
+            "label": "DataBuffer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/Identifier",
+            "label": "Identifier"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/InformationResultType",
+            "label": "InformationResultType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/ItemInformationType",
+            "label": "ItemInformationType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/ItemSelectionType",
+            "label": "ItemSelectionType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/MaterialDefinition",
+            "label": "MaterialDefinition"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/MeshData",
+            "label": "MeshData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RelsChange",
+            "label": "RelsChange"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/ResultInputType",
+            "label": "ResultInputType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/SelectionInputType",
+            "label": "SelectionInputType"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Variables",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/variables/ifcCategoryMap",
+            "label": "ifcCategoryMap"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/variables/limitOf2Bytes",
+            "label": "limitOf2Bytes"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Functions",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/getObject",
+            "label": "getObject"
           }
         ]
       }

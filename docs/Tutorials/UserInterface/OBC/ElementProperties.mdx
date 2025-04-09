@@ -7,6 +7,59 @@ Copying and pasting? We've got you covered! You can find the full source code of
 ## Displaying data the simplest way 🔥🔥
 ---
 What is a good BIM app if you don't give users a nice way to visualize its model properties, right? Well, hold tight as here you will learn all you need to know in order to use the power of UI Components to accomplish that!
+### 🖖 Importing our Libraries
+In this tutorial, we will import:
+- @thatopen/ui to add some simple and cool UI menus.
+- @thatopen/components to set up the barebone of our app.
+- @thatopen/components-front to use some frontend-oriented components.
+- @thatopen/ui-obc to add some cool pre-made UI menus for components.
+
+```js
+import * as BUI from "@thatopen/ui";
+import * as OBC from "@thatopen/components";
+import * as OBCF from "@thatopen/components-front";
+// You have to import from "@thatopen/ui-obc"
+import * as BUIC from "../..";
+```
+### 📋 Initializing the UI
+As always, let's first initialize the UI library. Remember you only have to do it once in your entire app.
+
+```js
+BUI.Manager.init();
+```
+### 🌎 Setting up a simple scene
+---
+We will start by creating a simple scene with a camera and a renderer. If you don't know how to set up a scene, you can check the Worlds tutorial.
+
+```js
+const viewport = document.createElement("bim-viewport");
+
+const components = new OBC.Components();
+
+const worlds = components.get(OBC.Worlds);
+
+const world = worlds.create();
+const sceneComponent = new OBC.SimpleScene(components);
+sceneComponent.setup();
+world.scene = sceneComponent;
+
+const rendererComponent = new OBC.SimpleRenderer(components, viewport);
+world.renderer = rendererComponent;
+
+const cameraComponent = new OBC.SimpleCamera(components);
+world.camera = cameraComponent;
+cameraComponent.controls.setLookAt(10, 5.5, 5, -4, -1, -6.5);
+
+viewport.addEventListener("resize", () => {
+  rendererComponent.resize();
+  cameraComponent.updateAspect();
+});
+
+components.init();
+
+const grids = components.get(OBC.Grids);
+grids.create(world);
+```
 ### Loading a model and computing it's relations
 First things first... let's load a model 👇
 
@@ -35,7 +88,7 @@ Once the relations are processed, the `Element Properties` component has everyth
 Let's create an instance of the functional component, like this:
 
 ```js
-const [propertiesTable, updatePropertiesTable] = CUI.tables.elementProperties({
+const [propertiesTable, updatePropertiesTable] = BUIC.tables.elementProperties({
   components,
   fragmentIdMap: {},
 });
@@ -49,7 +102,7 @@ The `elementProperties` functional component is a simplified version that shows 
 Cool! properties table created. Then after, let's tell the properties table to update each time the user makes a selection over the model. For it, we will use the highlighter from `@thatopen/components-front`:
 
 ```js
-const highlighter = components.get(OBF.Highlighter);
+const highlighter = components.get(OBCF.Highlighter);
 highlighter.setup({ world });
 
 highlighter.events.select.onHighlight.add((fragmentIdMap) => {

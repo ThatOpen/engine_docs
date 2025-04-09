@@ -193,7 +193,7 @@ Starts or finishes drawing a new dimension line.
 
 ### createOnPoints()
 
-> **createOnPoints**(`p1`, `p2`): `void`
+> **createOnPoints**(`p1`, `p2`): [`SimpleDimensionLine`](SimpleDimensionLine.md)
 
 Creates a new dimension line between two given points.
 
@@ -206,7 +206,7 @@ Creates a new dimension line between two given points.
 
 #### Returns
 
-`void`
+[`SimpleDimensionLine`](SimpleDimensionLine.md)
 
 ***
 

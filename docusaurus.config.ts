@@ -82,6 +82,11 @@ const config: Config = {
       },
       items: [
         {
+          href: 'https://thatopen.com/accelerator',
+          label: '🤝 Want our help?',
+          position: 'right',
+        },
+        {
           href: 'https://thatopen.com/',
           label: 'Project',
           position: 'right',

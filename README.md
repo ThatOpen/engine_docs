@@ -22,6 +22,12 @@ If you see anything outdated in the [docs page](https://docs.thatopen.com/intro)
 
 If you have any questions, you can also ask around in our [community](https://people.thatopen.com/).
 
+
+## 🤝 Want our help?
+Are you developing a project with our technology and would like our help?
+Apply now to join [That Open Accelerator Program](https://thatopen.com/accelerator)!
+
+
 ## Local development
 
 ### BEFORE YOU START

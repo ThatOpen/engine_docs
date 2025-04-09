@@ -7,6 +7,55 @@ Copying and pasting? We've got you covered! You can find the full source code of
 ## Managing your loaded models 🏢
 ---
 What else can we say? The task is really simple: we need to see a list of the loaded models in the app. Let's get into it!
+### 🖖 Importing our Libraries
+In this tutorial, we will import:
+- @thatopen/components to set up the barebone of our app.
+- @thatopen/ui to add some simple and cool UI menus.
+- @thatopen/ui-obc to add some cool pre-made UI menus for components.
+
+```js
+import * as OBC from "@thatopen/components";
+import * as BUI from "@thatopen/ui";
+// You have to import from "@thatopen/ui-obc"
+import * as BUIC from "../..";
+```
+### 📋 Initializing the UI
+As always, let's first initialize the UI library. Remember you only have to do it once in your entire app.
+
+```js
+BUI.Manager.init();
+```
+### 🌎 Setting up a simple scene
+---
+We will start by creating a simple scene with a camera and a renderer. If you don't know how to set up a scene, you can check the Worlds tutorial.
+
+```js
+const components = new OBC.Components();
+
+const worlds = components.get(OBC.Worlds);
+const world = worlds.create();
+
+const sceneComponent = new OBC.SimpleScene(components);
+sceneComponent.setup();
+world.scene = sceneComponent;
+
+const viewport = document.createElement("bim-viewport");
+const rendererComponent = new OBC.SimpleRenderer(components, viewport);
+world.renderer = rendererComponent;
+
+const cameraComponent = new OBC.SimpleCamera(components);
+world.camera = cameraComponent;
+
+viewport.addEventListener("resize", () => {
+  rendererComponent.resize();
+  cameraComponent.updateAspect();
+});
+
+const viewerGrids = components.get(OBC.Grids);
+viewerGrids.create(world);
+
+components.init();
+```
 ### Setting up the components
 First of all, we're going to get the `FragmentIfcLoader` from an existing components instance:
 
@@ -26,7 +75,7 @@ fragmentsManager.onFragmentsLoaded.add((model) => {
 Allright! Now that some basic events are setup, it's time to create a new fresh models list component:
 
 ```js
-const [modelsList] = CUI.tables.modelsList({
+const [modelsList] = BUIC.tables.modelsList({
   components,
   tags: { schema: true, viewDefinition: false },
   actions: { download: false },
@@ -36,7 +85,7 @@ Now that we have a brand new models list created, we need to add it to the HTML 
 
 ```js
 const panel = BUI.Component.create(() => {
-  const [loadIfcBtn] = CUI.buttons.loadIfc({ components });
+  const [loadIfcBtn] = BUIC.buttons.loadIfc({ components });
 
   return BUI.html`
    <bim-panel label="IFC Models">

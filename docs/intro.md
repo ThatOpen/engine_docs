@@ -112,3 +112,9 @@ ___
 
 **Step by step tutorials** covering how to use different components, including a live application where you can see it in action. This is the best way to get your feet wet with the libraries. Check out the recommended [tutorial paths](components/tutorial-paths.md)!
 
+
+## 🤝 Want our help?
+
+But first of all, we want you to know that if you are developing a project with our technology and you would like to have our help, you can apply to be part of That Open Accelerator Program.
+
+Sounds good? [Check it out here!](https://thatopen.com/accelerator) 🚀🚀🚀

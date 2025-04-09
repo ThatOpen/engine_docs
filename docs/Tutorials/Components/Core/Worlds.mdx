@@ -20,7 +20,7 @@ In this tutorial, we will import:
 import * as THREE from "three";
 import * as BUI from "@thatopen/ui";
 import Stats from "stats.js";
-import * as OBC from "@thatopen/components";
+import * as OBC from "../..";
 ```
 ### 🖼️ Getting the container
 ---
@@ -79,10 +79,19 @@ world.scene.three.background = null;
 Now we are ready to start adding some 3D entities to our scene. We will add a simple cube:
 
 ```js
-const material = new THREE.MeshLambertMaterial({ color: "#6528D7" });
+const material = new THREE.MeshLambertMaterial({
+  color: "#6528D7",
+  transparent: true,
+  opacity: 0.2,
+});
 const geometry = new THREE.BoxGeometry();
 const cube = new THREE.Mesh(geometry, material);
 world.scene.three.add(cube);
+
+cube.rotation.x += Math.PI / 4.2;
+cube.rotation.y += Math.PI / 4.2;
+cube.rotation.z += Math.PI / 4.2;
+cube.updateMatrixWorld();
 ```
 Finally, we will make the camera look at the cube:
 
