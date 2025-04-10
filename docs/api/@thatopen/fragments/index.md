@@ -12,8 +12,8 @@
 
 | Class | Description |
 | :------ | :------ |
-| [FragmentsModel](classes/FragmentsModel.md) | The main class for managing a 3D model loaded from a fragments file. Handles geometry, materials, visibility, highlighting, sections, and more.  This class orchestrates multiple specialized managers to handle different aspects of the model like mesh management, item data, raycasting, etc. It maintains the overall state and provides the main interface for interacting with the model.  The model data is loaded and processed asynchronously across multiple threads. |
-| [FragmentsModels](classes/FragmentsModels.md) | The main class for managing multiple 3D models loaded from fragments files. Handles loading, disposing, updating, raycasting, highlighting and coordinating multiple FragmentsModel instances.  This class acts as the main entry point for working with fragments models. It: - Manages loading and disposing of models - Coordinates updates across all loaded models - Handles raycasting and hit testing - Manages highlighting across models - Handles base coordinate systems |
+| [FragmentsModel](classes/FragmentsModel.md) | The main class for managing a 3D model loaded from a fragments file. Handles geometry, materials, visibility, highlighting, sections, and more. This class orchestrates multiple specialized managers to handle different aspects of the model like mesh management, item data, raycasting, etc. It maintains the overall state and provides the main interface for interacting with the model. The model data is loaded and processed asynchronously across multiple threads. |
+| [FragmentsModels](classes/FragmentsModels.md) | The main class for managing multiple 3D models loaded from fragments files. Handles loading, disposing, updating, raycasting, highlighting and coordinating multiple FragmentsModel instances. This class acts as the main entry point for working with fragments models. |
 | [IfcImporter](classes/IfcImporter.md) | An objet to convert IFC files into fragments. |
 
 ## Interfaces
@@ -46,7 +46,7 @@
 | [BIMMaterial](type-aliases/BIMMaterial.md) | Union type representing all possible material types. |
 | [BIMMesh](type-aliases/BIMMesh.md) | Union type representing all possible mesh types. |
 | [DataBuffer](type-aliases/DataBuffer.md) | Union type representing all possible data buffer types. |
-| [Identifier](type-aliases/Identifier.md) | Type representing a unique identifier for a model item. This can be either a string or a number. |
+| [Identifier](type-aliases/Identifier.md) | Type representing a unique identifier for a model item. This can be either a string or a number. |
 | [InformationResultType](type-aliases/InformationResultType.md) | Type representing the result of an information query for a specific item type. |
 | [ItemInformationType](type-aliases/ItemInformationType.md) | Union type representing all possible item information types. |
 | [ItemSelectionType](type-aliases/ItemSelectionType.md) | Union type representing all possible item selection types. |
@@ -67,4 +67,4 @@
 
 | Function | Description |
 | :------ | :------ |
-| [getObject](functions/getObject.md) | Recursively converts a Flatbuffers object into a plain JavaScript object. This function traverses the prototype chain of the Flatbuffers object and extracts all properties and their values, handling both primitive values and nested objects/arrays. |
+| [getObject](functions/getObject.md) | Recursively converts a Flatbuffers object into a plain JavaScript object. This function traverses the prototype chain of the Flatbuffers object and extracts all properties and their values, handling both primitive values and nested objects/arrays. |

@@ -22,6 +22,14 @@ const repos = [
     }
   },
   {
+    name: "engine_fragment",
+    label: "Fragments",
+    branch: "main",
+    packagesAlias: {
+      fragments: "Fragments",
+    }
+  },
+  {
     name: "engine_ui-components",
     label: "UserInterface",
     branch: "main",
@@ -39,7 +47,10 @@ for (const repo of repos) {
   const { name, branch, label } = repo
   const baseURL = `https://raw.githubusercontent.com/ThatOpen/${name}/${branch}`
   const response = await fetch(`${baseURL}/examples/paths.json`)
-  if (!response.ok) continue;
+  if (!response.ok) {
+    console.log(`${name} not found`)
+    continue;
+  }
   const repoExamples = await response.json()
   const libTutorialsPath = path.join("docs", "Tutorials", label)
   if (!fs.existsSync(libTutorialsPath)) fs.mkdirSync(libTutorialsPath)
