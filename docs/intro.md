@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: -4
 ---
 
 # 👨🏻‍💻 Introduction
@@ -23,7 +23,7 @@ In terms of features, these libraries offer you a wide set of handy tools to cre
 
 - 🏢 **IFC** import, display, navigate, edit and export.
 - 🌳 Import, display and navigate **other 3D formats**.
-- 🚀 3D+2D **modelling and editing** ([work in progress!](https://github.com/ThatOpen/engine_clay)).
+- 🚀 3D+2D **modelling and editing** (work in progress!).
 - 📦 **Store**, **process** and **distribute** BIM models and files.
 - 🔎 3D+2D **navigation** tools
 - ✍ 3D+2D **annotations**.
