@@ -1,14 +1,10 @@
 # GraphicVertexPicker
 
-A class that extends OBC.VertexPicker to provide a graphical marker for picking vertices in a 3D scene.
-
-## Extends
-
-- `VertexPicker`
+A class to provide a graphical marker for picking vertices in a 3D scene.
 
 ## Implements
 
-- `Disposable`
+- `Disposable_2`
 
 ## Properties
 
@@ -22,17 +18,13 @@ The marker used to indicate the picked vertex.
 
 ### onDisposed
 
-> `readonly` **onDisposed**: `Event`\<`unknown`\>
+> `readonly` **onDisposed**: `Event_2`\<`unknown`\>
 
 OBC.Disposable.onDisposed
 
 #### Implementation of
 
 `OBC.Disposable.onDisposed`
-
-#### Overrides
-
-`OBC.VertexPicker.onDisposed`
 
 ## Methods
 
@@ -50,31 +42,25 @@ OBC.Disposable.onDisposed
 
 `OBC.Disposable.dispose`
 
-#### Overrides
-
-`OBC.VertexPicker.dispose`
-
 ***
 
 ### get()
 
-> **get**(`world`): `null` \| `Vector3`
+> **get**(`config`?): `Promise`\<`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>\>
 
 Retrieves the picked vertex from the world and updates the marker's position.
 If no vertex is picked, the marker is hidden.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `world` | `World` | The world in which to pick the vertex. |
+| Parameter | Type |
+| :------ | :------ |
+| `config`? | `object` |
+| `config.snappingClasses`? | `SnappingClass`[] |
+| `config.world`? | `World` |
 
 #### Returns
 
-`null` \| `Vector3`
+`Promise`\<`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>\>
 
 The picked vertex, or null if no vertex was picked.
-
-#### Overrides
-
-`OBC.VertexPicker.get`

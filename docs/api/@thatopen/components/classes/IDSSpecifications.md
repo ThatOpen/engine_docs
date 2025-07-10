@@ -1,6 +1,6 @@
 # IDSSpecifications
 
-Component that manages Information Delivery Specification (IDS) data. It provides functionality for importing, exporting, and manipulating IDS data.
+Component that manages Information Delivery Specification (IDS) data. It provides functionality for importing, exporting, and manipulating IDS data. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IDSSpecifications). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IDSSpecifications).
 
 ## Extends
 
@@ -51,35 +51,33 @@ A string containing the exported IDSSpecifications data in XML format.
 
 ***
 
-### getFragmentIdMap()
+### getModelIdMap()
 
-> **getFragmentIdMap**(`model`, `result`): `object`
+> **getModelIdMap**(`result`): `object`
 
-Retrieves a FragmentIdMap based on the given IDSCheckResult array.
-The map separates the IDs into two categories: pass and fail.
+Processes the results of an IDS check and categorizes the items into passing and failing.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `model` | `FragmentsGroup` | The FragmentsGroup model from which to retrieve the fragment map. |
-| `result` | [`IDSCheckResult`](../interfaces/IDSCheckResult.md)[] | An array of IDSCheckResult objects, each representing a check result. |
+| `result` | [`IDSCheckResult`](../type-aliases/IDSCheckResult.md) | An `IDSCheckResult` object containing the check results for various model IDs. |
 
 #### Returns
 
 `object`
 
-An object containing two properties:
-- `pass`: A FragmentIdMap that passed the checks.
-- `fail`: A FragmentIdMap that failed the checks.
+An object containing two `ModelIdMap` objects:
+         - `pass`: A ModelIdMap representing items that passed the check.
+         - `fail`: A ModelIdMap representing items that failed the check.
 
 ##### fail
 
-> **fail**: `FragmentIdMap`
+> **fail**: [`ModelIdMap`](../type-aliases/ModelIdMap.md)
 
 ##### pass
 
-> **pass**: `FragmentIdMap`
+> **pass**: [`ModelIdMap`](../type-aliases/ModelIdMap.md)
 
 ***
 

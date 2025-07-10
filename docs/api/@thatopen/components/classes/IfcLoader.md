@@ -1,6 +1,6 @@
 # IfcLoader
 
-The IfcLoader component is responsible for loading and processing IFC files. It utilizes the Web-IFC library to handle the IFC data and the Three.js library for 3D rendering. The class provides methods for setting up, loading, and cleaning up IFC files. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcLoader). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcLoader).
+The IfcLoader component is responsible of converting IFC files into Fragments. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/IfcLoader). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/IfcLoader).
 
 ## Extends
 
@@ -200,29 +200,33 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### load()
 
-> **load**(`data`, `coordinate`, `name`): `Promise`\<`FragmentsGroup`\>
+> **load**(`data`, `coordinate`, `name`, `config`?): `Promise`\<`FragmentsModel`\>
 
 Loads an IFC file and processes it for 3D visualization.
 
 #### Parameters
 
-| Parameter | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `data` | `Uint8Array` | `undefined` | The Uint8Array containing the IFC file data. |
-| `coordinate` | `boolean` | `true` | Optional boolean indicating whether to coordinate the loaded IFC data. Default is true. |
-| `name` | `string` | `""` | - |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Uint8Array` | The Uint8Array containing the IFC file data. |
+| `coordinate` | `boolean` | Optional boolean indicating whether to coordinate the loaded IFC data. Default is true. |
+| `name` | `string` | Optional name for the fragments model. |
+| `config`? | `object` | Optional extra data for loading the IFC. |
+| `config.instanceCallback`? | (`importer`) => `void` | - |
+| `config.processData`? | `Omit`\<`ProcessData`, `"bytes"`\> | - |
+| `config.userData`? | `Record`\<`string`, `any`\> | - |
 
 #### Returns
 
-`Promise`\<`FragmentsGroup`\>
+`Promise`\<`FragmentsModel`\>
 
-A Promise that resolves to the FragmentsGroup containing the loaded and processed IFC data.
+A Promise that resolves to the FragmentsModel containing the loaded and processed IFC data.
 
 #### Example
 
 ```typescript
 const ifcLoader = components.get(IfcLoader);
-const group = await ifcLoader.load(ifcData);
+const model = await ifcLoader.load(ifcData);
 ```
 
 ***

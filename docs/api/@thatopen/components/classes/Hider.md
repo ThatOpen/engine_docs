@@ -1,6 +1,6 @@
 # Hider
 
-A component that hides or isolates fragments within a 3D scene. It extends the base Component class and provides methods to control fragment visibility and isolation. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Hider). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Hider).
+A component that manages visibility of fragments within a 3D scene. It extends the base Component class and provides methods to control fragment visibility and isolation. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Hider). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Hider).
 
 ## Extends
 
@@ -28,6 +28,27 @@ A unique identifier for the component.
 This UUID is used to register the component within the Components system.
 
 ## Methods
+
+### getVisibilityMap()
+
+> **getVisibilityMap**(`state`, `modelIds`?): `Promise`\<`Record`\<`string`, `number`[]\>\>
+
+Asynchronously retrieves a map of model IDs to their corresponding item IDs based on visibility state.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `state` | `boolean` | The visibility state to filter items by. |
+| `modelIds`? | `string`[] | Optional array of model IDs to filter the items. If not provided, all models will be considered. |
+
+#### Returns
+
+`Promise`\<`Record`\<`string`, `number`[]\>\>
+
+A promise that resolves to a ModelIdMap record where the keys are model IDs and the values are arrays of item IDs that match the visibility state.
+
+***
 
 ### isConfigurable()
 
@@ -111,7 +132,7 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### isolate()
 
-> **isolate**(`items`): `void`
+> **isolate**(`modelIdMap`): `Promise`\<`void`\>
 
 Isolates fragments within the 3D scene by hiding all other fragments and showing only the specified ones.
 It calls the `set` method twice: first to hide all fragments, and then to show only the specified ones.
@@ -120,29 +141,49 @@ It calls the `set` method twice: first to hide all fragments, and then to show o
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `items` | `FragmentIdMap` | A map of fragment IDs and their corresponding sub-fragment IDs to be isolated. If not provided, all fragments will be isolated. |
+| `modelIdMap` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | A map of model IDs and their corresponding itemIds to be isolated. |
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
 
 ***
 
 ### set()
 
-> **set**(`visible`, `items`?): `void`
+> **set**(`visible`, `modelIdMap`?): `Promise`\<`void`\>
 
-Sets the visibility of fragments within the 3D scene.
-If no `items` parameter is provided, all fragments will be set to the specified visibility.
-If `items` is provided, only the specified fragments will be affected.
+Sets the visibility of fragment items within the 3D scene.
+If no `modelIdMap` parameter is provided, all fragments will be set to the specified visibility.
+If it is provided, only the specified fragment items will be affected.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `visible` | `boolean` | The visibility state to set for the fragments. |
-| `items`? | `FragmentIdMap` | An optional map of fragment IDs and their corresponding sub-fragment IDs to be affected. If not provided, all fragments will be affected. |
+| `visible` | `boolean` | The visibility state to set for the items. |
+| `modelIdMap`? | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | An optional map of modelIds and their corresponding itemIds to be affected. If not provided, all fragment items will be affected. |
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
+
+***
+
+### toggle()
+
+> **toggle**(`modelIdMap`): `Promise`\<`void`\>
+
+Toggles the visibility of specified items in the fragments.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `modelIdMap` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | An object where the keys are model IDs and the values are arrays of local IDs representing the fragments to be toggled. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+A promise that resolves when all visibility toggles and the core update are complete.

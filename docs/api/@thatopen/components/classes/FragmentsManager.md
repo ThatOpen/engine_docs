@@ -24,24 +24,6 @@ Component to load, delete and manage [fragments](https://github.com/ThatOpen/eng
 
 ***
 
-### groups
-
-> `readonly` **groups**: [`DataMap`](DataMap.md)\<`string`, `FragmentsGroup`\>
-
-DataMap containing all loaded fragment groups.
-The key is the group's unique identifier, and the value is the group itself.
-
-***
-
-### list
-
-> `readonly` **list**: [`DataMap`](DataMap.md)\<`string`, `Fragment`\>
-
-DataMap containing all loaded fragments.
-The key is the fragment's unique identifier, and the value is the fragment itself.
-
-***
-
 ### onDisposed
 
 > `readonly` **onDisposed**: [`Event`](Event.md)\<`unknown`\>
@@ -54,27 +36,9 @@ The key is the fragment's unique identifier, and the value is the fragment itsel
 
 ***
 
-### onFragmentsDisposed
-
-> `readonly` **onFragmentsDisposed**: [`Event`](Event.md)\<`object`\>
-
-Event triggered when fragments are disposed.
-
-#### Type declaration
-
-##### fragmentIDs
-
-> **fragmentIDs**: `string`[]
-
-##### groupID
-
-> **groupID**: `string`
-
-***
-
 ### onFragmentsLoaded
 
-> `readonly` **onFragmentsLoaded**: [`Event`](Event.md)\<`FragmentsGroup`\>
+> `readonly` **onFragmentsLoaded**: [`Event`](Event.md)\<`any`\>
 
 Event triggered when fragments are loaded.
 
@@ -89,24 +53,22 @@ This UUID is used to register the component within the Components system.
 
 ## Accessors
 
-### meshes
+### list
 
-> `get` **meshes**(): `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
+> `get` **list**(): `DataMap`\<`string`, `FragmentsModel`\>
 
-Getter for the meshes of all fragments in the FragmentsManager.
-It iterates over the fragments in the list and pushes their meshes into an array.
+Map containing all loaded fragment models.
+The key is the group's unique identifier, and the value is the model itself.
 
 #### Returns
 
-`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
-
-An array of THREE.Mesh objects representing the fragments.
+`DataMap`\<`string`, `FragmentsModel`\>
 
 ## Methods
 
 ### applyBaseCoordinateSystem()
 
-> **applyBaseCoordinateSystem**(`object`, `originalCoordinateSystem`?): `void`
+> **applyBaseCoordinateSystem**(`object`, `originalCoordinateSystem`?): `Matrix4`
 
 Applies the base coordinate system to the provided object.
 
@@ -119,52 +81,12 @@ transformed to match the base coordinate system (which is taken from the first m
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `object` | `Object3D`\<`Object3DEventMap`\> \| `Vector3` | The object to which the base coordinate system will be applied. This should be an instance of THREE.Object3D. |
+| `object` | `Vector3` \| `Object3D`\<`Object3DEventMap`\> | The object to which the base coordinate system will be applied. This should be an instance of THREE.Object3D. |
 | `originalCoordinateSystem`? | `Matrix4` | The original coordinate system of the object. This should be a THREE.Matrix4 representing the object's transformation matrix. |
 
 #### Returns
 
-`void`
-
-***
-
-### clone()
-
-> **clone**(`model`, `items`?): `FragmentsGroup`
-
-Creates a copy of the whole model or a part of it.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `model` | `FragmentsGroup` | The model to clone. |
-| `items`? | `FragmentIdMap` | Optional - The part of the model to be cloned. If not given, the whole group is cloned. |
-
-#### Returns
-
-`FragmentsGroup`
-
-***
-
-### coordinate()
-
-> **coordinate**(`models`): `void`
-
-Applies coordinate transformation to the provided models.
-If no models are provided, all groups are used.
-The first model in the list becomes the base model for coordinate transformation.
-All other models are then transformed to match the base model's coordinate system.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `models` | `FragmentsGroup`[] | The models to apply coordinate transformation to. If not provided, all models are used. |
-
-#### Returns
-
-`void`
+`Matrix4`
 
 ***
 
@@ -184,89 +106,30 @@ All other models are then transformed to match the base model's coordinate syste
 
 ***
 
-### disposeGroup()
+### getData()
 
-> **disposeGroup**(`group`): `void`
+> **getData**(`items`, `config`?): `Promise`\<`Record`\<`string`, `ItemData`[]\>\>
 
-Dispose of a specific fragment group.
-This method removes the group from the groups map, deletes all fragments within the group from the list,
-disposes of the group, and triggers the onFragmentsDisposed event.
+Retrieves data for specified items from multiple models.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `group` | `FragmentsGroup` | The fragment group to be disposed. |
+| `items` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | A map of model IDs to an array of local IDs, specifying which items to retrieve data for. |
+| `config`? | `Partial`\<`ItemsDataConfig`\> | Optional configuration for data retrieval. |
 
 #### Returns
 
-`void`
+`Promise`\<`Record`\<`string`, `ItemData`[]\>\>
+
+A record mapping model IDs to an array of item data.
 
 ***
 
-### export()
+### guidsToModelIdMap()
 
-> **export**(`group`): `Uint8Array`
-
-Export the specified fragmentsgroup to binary data.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `group` | `FragmentsGroup` | the fragments group to be exported. |
-
-#### Returns
-
-`Uint8Array`
-
-the exported data as binary buffer.
-
-***
-
-### fragmentIdMapToGuids()
-
-> **fragmentIdMapToGuids**(`fragmentIdMap`): `string`[]
-
-Converts a fragment ID map to a collection of IFC GUIDs.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `fragmentIdMap` | `FragmentIdMap` | A fragment ID map to be converted to a collection of IFC GUIDs. |
-
-#### Returns
-
-`string`[]
-
-An array of IFC GUIDs.
-
-***
-
-### getModelIdMap()
-
-> **getModelIdMap**(`fragmentIdMap`): `object`
-
-Gets a map of model IDs to sets of express IDs for the given fragment ID map.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `fragmentIdMap` | `FragmentIdMap` | A map of fragment IDs to their corresponding express IDs. |
-
-#### Returns
-
-`object`
-
-A map of model IDs to sets of express IDs.
-
-***
-
-### guidToFragmentIdMap()
-
-> **guidToFragmentIdMap**(`guids`): `FragmentIdMap`
+> **guidsToModelIdMap**(`guids`): `Promise` \<[`ModelIdMap`](../type-aliases/ModelIdMap.md)\>
 
 Converts a collection of IFC GUIDs to a fragmentIdMap.
 
@@ -278,7 +141,7 @@ Converts a collection of IFC GUIDs to a fragmentIdMap.
 
 #### Returns
 
-`FragmentIdMap`
+`Promise` \<[`ModelIdMap`](../type-aliases/ModelIdMap.md)\>
 
 A fragment ID map, where the keys are fragment IDs and the values are the corresponding express IDs.
 
@@ -364,48 +227,20 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ***
 
-### load()
+### modelIdMapToGuids()
 
-> **load**(`data`, `config`?): `FragmentsGroup`
+> **modelIdMapToGuids**(`modelIdMap`): `Promise`\<`string`[]\>
 
-Loads a binary file that contain fragment geometry.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `data` | `Uint8Array` | The binary data to load. |
-| `config`? | `Partial`\<`object`\> | Optional configuration for loading. |
-
-#### Returns
-
-`FragmentsGroup`
-
-The loaded FragmentsGroup.
-
-***
-
-### modelIdToFragmentIdMap()
-
-> **modelIdToFragmentIdMap**(`modelIdMap`): `FragmentIdMap`
-
-Converts a map of model IDs to sets of express IDs to a fragment ID map.
+Converts a fragment ID map to a collection of GUIDs.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `modelIdMap` | `object` | A map of model IDs to their corresponding express IDs. |
+| `modelIdMap` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | A ModelIdMap to be converted to a collection of GUIDs. |
 
 #### Returns
 
-`FragmentIdMap`
+`Promise`\<`string`[]\>
 
-A fragment ID map.
-
-#### Remarks
-
-This method iterates through the provided model ID map, retrieves the corresponding model from the `groups` map,
-and then calls the `getFragmentMap` method of the model to obtain a fragment ID map for the given express IDs.
-The fragment ID maps are then merged into a single map and returned.
-If a model with a given ID is not found in the `groups` map, the method skips that model and continues with the next one.
+An array of GUIDs.

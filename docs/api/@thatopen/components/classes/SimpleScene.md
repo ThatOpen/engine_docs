@@ -40,18 +40,6 @@ The set of ambient lights managed by this scene component.
 
 ***
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-#### Inherited from
-
-[`BaseScene`](BaseScene.md) . [`currentWorld`](BaseScene.md#currentworld)
-
-***
-
 ### directionalLights
 
 > **directionalLights**: `Map`\<`string`, `DirectionalLight`\>
@@ -133,6 +121,20 @@ It is used to define the 3D space containing objects, lights, and cameras.
 #### Overrides
 
 [`BaseScene`](BaseScene.md) . [`three`](BaseScene.md#three)
+
+## Accessors
+
+### currentWorld
+
+> `set` **currentWorld**(`value`): `void`
+
+The current world this item is associated with. It can be null if no world is currently active.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `null` \| [`World`](../interfaces/World.md) |
 
 ## Methods
 

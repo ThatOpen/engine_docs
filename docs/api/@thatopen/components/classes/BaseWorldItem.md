@@ -14,14 +14,6 @@ One of the elements that make a world. It can be either a scene, a camera or a r
 
 ## Properties
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-***
-
 ### onWorldChanged
 
 > `readonly` **onWorldChanged**: [`Event`](Event.md)\<`object`\>
@@ -38,6 +30,20 @@ The event payload contains the world instance and the action ("added" or "remove
 ##### world
 
 > **world**: [`World`](../interfaces/World.md)
+
+## Accessors
+
+### currentWorld
+
+> `set` **currentWorld**(`value`): `void`
+
+The current world this item is associated with. It can be null if no world is currently active.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `null` \| [`World`](../interfaces/World.md) |
 
 ## Methods
 

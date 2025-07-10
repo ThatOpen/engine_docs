@@ -64,7 +64,7 @@ Once you convert your files to fragments, they will **load very, very fast**. [H
 <iframe src="https://thatopen.github.io/engine_fragment/examples/FragmentsModels/index.html"></iframe>
 
 
-Cool, right? Now you can convert your bloated BIM data to fragments to **load them in seconds in your app**. If you need some guidance in your journey to discover all the components that we offer, check out the [tutorial paths](tutorial-paths.md). If you want to know more about components, keep reading! 👇🏻
+Cool, right? Now you can convert your bloated BIM data to fragments to **load them in seconds in your app**. If you need some guidance in your journey to discover all the components that we offer, check out the [tutorial paths](../components/tutorial-paths.md). If you want to know more about components, keep reading! 👇🏻
 
 
 ## 🔌 Compatibility

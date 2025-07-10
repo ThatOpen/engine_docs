@@ -12,6 +12,22 @@ The distance of the raycast
 
 ***
 
+### faceIndices?
+
+> `optional` **faceIndices**: `Uint16Array`
+
+The indices of the raycasted face
+
+***
+
+### facePoints?
+
+> `optional` **facePoints**: `Float32Array`
+
+The points of the raycasted face
+
+***
+
 ### fragments
 
 > **fragments**: [`FragmentsModel`](../classes/FragmentsModel.md)

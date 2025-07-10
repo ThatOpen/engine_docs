@@ -6,7 +6,7 @@ title: Fragments
   |
   <a href="https://docs.thatopen.com/intro">documentation</a>
   |
-  <a href="https://thatopen.github.io/engine_components/src/fragments/FragmentIfcLoader/index.html">demo</a>
+  <a href="https://thatopen.github.io/engine_fragment/examples/FragmentsModels/">demo</a>
   |
   <a href="https://people.thatopen.com/">community</a>
   |

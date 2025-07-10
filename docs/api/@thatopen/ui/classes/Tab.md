@@ -8,14 +8,6 @@ A custom tab web component for BIM applications. HTML tag: bim-tab
 
 ## Properties
 
-### icon?
-
-> `optional` **icon**: `string`
-
-The icon of the tab. This property is optional and can be used to display an icon next to the tab's label or name.
-
-***
-
 ### name
 
 > **name**: `string`
@@ -58,6 +50,20 @@ tab.hidden = true; // hides the tab
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `value` | `boolean` | The new hidden state. If `true`, the tab will be hidden. If `false`, the tab will be visible. |
+
+***
+
+### icon
+
+> `set` **icon**(`value`): `void`
+
+The icon of the tab. This property is optional and can be used to display an icon next to the tab's label or name.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `undefined` \| `string` |
 
 ***
 

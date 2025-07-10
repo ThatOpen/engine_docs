@@ -1,10 +1,14 @@
 # CivilCrossSectionNavigator
 
-This component is used to navigate and visualize cross sections of a 3D model. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/CivilCrossSectionNavigator). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/CivilCrossSectionNavigator).
+This component is used to navigate and visualize cross sections of a 3D model. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/CivilNavigators). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/CivilCrossSectionNavigator).
 
 ## Extends
 
 - `Component`
+
+## Implements
+
+- `Disposable_2`
 
 ## Properties
 
@@ -20,19 +24,15 @@ OBC.Component.enabled
 
 ***
 
-### plane?
+### onDisposed
 
-> `optional` **plane**: [`EdgesPlane`](EdgesPlane.md)
+> `readonly` **onDisposed**: `Event_2`\<`unknown`\>
 
-A property representing the plane used for cross section visualization.
+OBC.Disposable.onDisposed
 
-***
+#### Implementation of
 
-### world
-
-> **world**: `null` \| `World` = `null`
-
-A property representing the world in which the component operates.
+`OBC.Disposable.onDisposed`
 
 ***
 
@@ -44,13 +44,35 @@ A unique identifier for the component. This UUID is used to register the compone
 
 ## Accessors
 
-### world3D
+### plane
 
-> `get` **world3D**(): `null` \| `World`
+> `get` **plane**(): `SimplePlane`
+
+A property representing the plane used for cross section visualization.
+
+> `set` **plane**(`plane`): `void`
+
+A property representing the plane used for cross section visualization.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `plane` | `SimplePlane` |
+
+#### Returns
+
+`SimplePlane`
+
+***
+
+### world
+
+> `get` **world**(): `null` \| `World`
 
 A getter for the 3D world.
 
-> `set` **world3D**(`world`): `void`
+> `set` **world**(`world`): `void`
 
 A setter for the 3D world.
 
@@ -70,7 +92,7 @@ The 3D world.
 
 ### set()
 
-> **set**(`curveMesh`, `point`): `Promise`\<`void`\>
+> **set**(`point`, `normal`): `Promise`\<`void`\>
 
 Sets the cross section plane based on the given curve mesh and point.
 
@@ -78,8 +100,8 @@ Sets the cross section plane based on the given curve mesh and point.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `curveMesh` | `CurveMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> | The curve mesh to create the cross section from. |
 | `point` | `Vector3` | The point on the curve mesh where the cross section should be created. |
+| `normal` | `Vector3` | The normal of the plane. |
 
 #### Returns
 

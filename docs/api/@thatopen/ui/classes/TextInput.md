@@ -35,6 +35,28 @@ undefined
 
 ***
 
+### disabled
+
+> **disabled**: `boolean` = `false`
+
+Represents the disabled property of the TextInput component.
+This property is used to disable the input field.
+When set to `true`, the input field will be disabled and the user will not be able to interact with it.
+
+#### Default
+
+```ts
+false
+```
+
+#### Example
+
+```ts
+<bim-text-input disabled></bim-text-input>
+```
+
+***
+
 ### icon?
 
 > `optional` **icon**: `string`
@@ -100,6 +122,28 @@ The placeholder text is displayed when the input field is empty and loses focus.
 
 ```ts
 <bim-text-input placeholder="Enter your name.."></bim-text-input>
+```
+
+***
+
+### resize
+
+> **resize**: `"inline"` \| `"none"` \| `"vertical"` \| `"both"` \| `"horizontal"` \| `"block"` = `"vertical"`
+
+Represents the resize property of the TextInput component.
+This property controls how the textarea can be resized.
+Possible values: "none", "both", "horizontal", "vertical", "block", "inline"
+
+#### Default
+
+```ts
+"vertical"
+```
+
+#### Example
+
+```ts
+<bim-text-input resize="both"></bim-text-input>
 ```
 
 ***

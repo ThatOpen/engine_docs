@@ -65,15 +65,13 @@ components.init();
 
 ### release
 
-> `static` `readonly` **release**: `"2.4.5"` = `"2.4.5"`
+> `static` `readonly` **release**: `"2.4.3"` = `"2.4.3"`
 
 The version of the @thatopen/components library.
 
 ## Methods
 
 ### add()
-
-`Internal`
 
 > **add**(`uuid`, `instance`): `void`
 
@@ -125,8 +123,6 @@ You can learn more about how Three.js handles memory leaks
 ***
 
 ### get()
-
-`Internal`
 
 > **get**\<`U`\>(`Component`): `U`
 

@@ -22,14 +22,14 @@ This renderer is used to render 2D objects (CSS2DObjects) in a 3D scene.
 
 ### postproduction
 
-> `get` **postproduction**(): [`Postproduction`](Postproduction.md)
+> `get` **postproduction**(): `Postproduction`
 
 Getter for the postproduction instance.
 Throws an error if the postproduction instance is not yet initialized.
 
 #### Returns
 
-[`Postproduction`](Postproduction.md)
+`Postproduction`
 
 The initialized Postproduction instance.
 

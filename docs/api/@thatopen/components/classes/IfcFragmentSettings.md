@@ -2,11 +2,6 @@
 
 Configuration of the IFC-fragment conversion.
 
-## Extended by
-
-- [`IfcStreamingSettings`](IfcStreamingSettings.md)
-- [`PropertiesStreamingSettings`](PropertiesStreamingSettings.md)
-
 ## Properties
 
 ### autoSetWasm
@@ -31,47 +26,6 @@ If set to null, the default file location handler will be used.
 #### Param
 
 The URL of the file to locate.
-
-***
-
-### excludedCategories
-
-> **excludedCategories**: `Set`\<`number`\>
-
-List of categories that won't be converted to fragments.
-
-***
-
-### includeProperties
-
-> **includeProperties**: `boolean` = `true`
-
-Whether to extract the IFC properties into a JSON.
-
-***
-
-### includedCategories
-
-> **includedCategories**: `Set`\<`number`\>
-
-Exclusive list of categories that will be converted to fragments. If this contains any category, any other categories will be ignored.
-
-***
-
-### optionalCategories
-
-> **optionalCategories**: `number`[]
-
-Generate the geometry for categories that are not included by default,
-like IFCSPACE.
-
-***
-
-### saveLocations
-
-> **saveLocations**: `boolean` = `false`
-
-Whether to save the absolute location of all IFC items.
 
 ***
 

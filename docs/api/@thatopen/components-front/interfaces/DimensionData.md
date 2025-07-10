@@ -4,14 +4,6 @@ Interface representing the data required to create a dimension line.
 
 ## Properties
 
-### end
-
-> **end**: `Vector3`
-
-The ending point of the dimension line in 3D space.
-
-***
-
 ### endpointElement
 
 > **endpointElement**: `HTMLElement`
@@ -20,16 +12,16 @@ The HTML element to be used as the endpoint marker for the dimension line.
 
 ***
 
-### lineMaterial
+### line
 
-> **lineMaterial**: `Material`
+> **line**: `Line`
 
-The material to be used for the line of the dimension.
+The 3D line representing the dimension.
 
 ***
 
-### start
+### lineMaterial
 
-> **start**: `Vector3`
+> **lineMaterial**: `LineBasicMaterial`
 
-The starting point of the dimension line in 3D space.
+The material to be used for the line of the dimension.

@@ -18,6 +18,19 @@ The color of the material
 
 An optional custom ID for the material
 
+### depthTest?
+
+> `optional` **depthTest**: `boolean`
+
+Whether to have depth test enabled when rendering this material. When the depth test is disabled, the depth write
+will also be implicitly disabled.
+
+#### Default
+
+```ts
+true
+```
+
 ### opacity
 
 > **opacity**: `number`

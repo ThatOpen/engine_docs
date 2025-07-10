@@ -1,6 +1,6 @@
 # BoundingBoxer
 
-A simple implementation of bounding box that works for fragments. The resulting bbox is not 100% precise, but it's fast, and should suffice for general use cases such as camera zooming or general boundary determination. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/BoundingBoxer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/BoundingBoxer).
+An implementation of bounding box utilities that works for fragments. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/BoundingBoxer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/BoundingBoxer).
 
 ## Extends
 
@@ -24,6 +24,14 @@ A simple implementation of bounding box that works for fragments. The resulting 
 
 ***
 
+### list
+
+> `readonly` **list**: `DataSet`\<`Box3`\>
+
+A readonly dataset containing instances of THREE.Box3.
+
+***
+
 ### onDisposed
 
 > `readonly` **onDisposed**: [`Event`](Event.md)\<`unknown`\>
@@ -36,110 +44,54 @@ A simple implementation of bounding box that works for fragments. The resulting 
 
 ## Methods
 
-### add()
+### addFromModelIdMap()
 
-> **add**(`group`): `void`
+> **addFromModelIdMap**(`items`): `Promise`\<`void`\>
 
-Adds a FragmentsGroup to the BoundingBoxer.
+Asynchronously adds bounding boxes to the list by merging boxes from models
+specified in the provided `ModelIdMap`.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `group` | `FragmentsGroup` | The FragmentsGroup to add. |
+| `items` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | <p>A map where keys are model IDs and values are arrays of local IDs</p><p>               representing specific parts of the models to include in the bounding box.</p> |
 
 #### Returns
 
-`void`
-
-#### Remarks
-
-This method iterates through each fragment in the provided FragmentsGroup,
-and calls the `addMesh` method for each fragment's mesh.
-
-#### Example
-
-```typescript
-const boundingBoxer = components.get(BoundingBoxer);
-boundingBoxer.add(fragmentsGroup);
-```
+`Promise`\<`void`\>
 
 ***
 
-### addFragmentIdMap()
+### addFromModels()
 
-> **addFragmentIdMap**(`fragmentIdMap`): `void`
+> **addFromModels**(`modelIds`?): `void`
 
-Uses a FragmentIdMap to add its meshes to the bb calculation.
-
-This method iterates through the provided `fragmentIdMap`, retrieves the corresponding fragment from the `FragmentsManager`,
-and then calls the `addMesh` method for each fragment's mesh, passing the expression IDs as the second parameter.
+Adds bounding boxes from models to the current list based on optional filtering criteria.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `fragmentIdMap` | `FragmentIdMap` | A mapping of fragment IDs to their corresponding expression IDs. |
+| `modelIds`? | `RegExp`[] | <p>An optional array of regular expressions used to filter models by their IDs.</p><p>                  If provided, only models whose IDs match at least one of the regular expressions</p><p>                  will have their bounding boxes added to the list. If not, all models will be used.</p> |
 
 #### Returns
 
 `void`
-
-#### Remarks
-
-This method is used to add a mapping of fragment IDs to their corresponding expression IDs.
-It ensures that the bounding box calculations are accurate and up-to-date by updating the internal minimum and maximum vectors.
-
-#### Example
-
-```typescript
-const boundingBoxer = components.get(BoundingBoxer);
-const fragmentIdMap: FRAGS.FragmentIdMap = {
-  '5991fa75-2eef-4825-90b3-85177f51a9c9': [123, 245, 389],
-  '3469077e-39bf-4fc9-b3e6-4a1d78ad52b0': [454, 587, 612],
-};
-boundingBoxer.addFragmentIdMap(fragmentIdMap);
-```
-
-***
-
-### addMesh()
-
-> **addMesh**(`mesh`, `itemIDs`?): `void`
-
-Adds a mesh to the BoundingBoxer and calculates the bounding box.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `mesh` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> \| `InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> \| `CurveMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> | The mesh to add. It can be an instance of THREE.InstancedMesh, THREE.Mesh, or FRAGS.CurveMesh. |
-| `itemIDs`? | `Iterable`\<`number`\> | An optional iterable of numbers representing the item IDs. |
-
-#### Returns
-
-`void`
-
-#### Remarks
-
-This method calculates the bounding box of the provided mesh and updates the internal minimum and maximum vectors.
-If the mesh is an instance of THREE.InstancedMesh, it calculates the bounding box for each instance.
-If the mesh is an instance of FRAGS.FragmentMesh and itemIDs are provided, it calculates the bounding box for the specified item IDs.
-
-#### Example
-
-```typescript
-const boundingBoxer = components.get(BoundingBoxer);
-boundingBoxer.addMesh(mesh);
-```
 
 ***
 
 ### dispose()
 
-> **dispose**(): `void`
+> **dispose**(`full`): `void`
 
 [Disposable.dispose](../interfaces/Disposable.md#dispose)
+
+#### Parameters
+
+| Parameter | Type | Default value |
+| :------ | :------ | :------ |
+| `full` | `boolean` | `true` |
 
 #### Returns
 
@@ -155,84 +107,65 @@ boundingBoxer.addMesh(mesh);
 
 > **get**(): `Box3`
 
-Returns the bounding box of the calculated fragments.
+Combines all bounding boxes in the `list` property into a single bounding box.
 
 #### Returns
 
 `Box3`
 
-A new THREE.Box3 instance representing the bounding box.
-
-#### Remarks
-
-This method clones the internal minimum and maximum vectors and returns a new THREE.Box3 instance.
-The returned box represents the bounding box of the calculated fragments.
-
-#### Example
-
-```typescript
-const boundingBox = boundingBoxer.get();
-console.log(boundingBox); // Output: Box3 { min: Vector3 { x: -10, y: -10, z: -10 }, max: Vector3 { x: 10, y: 10, z: 10 } }
-```
+A `THREE.Box3` instance representing the union of all bounding boxes in the `list`.
 
 ***
 
-### getMesh()
+### getCameraOrientation()
 
-> **getMesh**(): `Mesh`\<`BoxGeometry`, `Material` \| `Material`[], `Object3DEventMap`\>
+> **getCameraOrientation**(`orientation`, `offsetFactor`): `Promise`\<`object`\>
 
-Returns a THREE.Mesh instance representing the bounding box.
+Calculates the camera orientation and position based on the specified orientation
+and an optional offset factor.
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `orientation` | `"front"` \| `"back"` \| `"left"` \| `"right"` \| `"top"` \| `"bottom"` | `undefined` | Specifies the direction of the camera relative to the bounding box. |
+| `offsetFactor` | `number` | `1` | <p>A multiplier applied to the distance between the camera and the bounding box.</p><p>                      Defaults to `1`.</p> |
 
 #### Returns
 
-`Mesh`\<`BoxGeometry`, `Material` \| `Material`[], `Object3DEventMap`\>
+`Promise`\<`object`\>
 
-A new THREE.Mesh instance representing the bounding box.
+An object containing:
+         - `position`: A `THREE.Vector3` representing the calculated camera position.
+         - `target`: A `THREE.Vector3` representing the center of the bounding box, which the camera should target.
 
-#### Remarks
+##### position
 
-This method calculates the dimensions of the bounding box using the `getDimensions` method.
-It then creates a new THREE.BoxGeometry with the calculated dimensions.
-A new THREE.Mesh is created using the box geometry, and it is added to the `_meshes` array.
-The position of the mesh is set to the center of the bounding box.
+> **position**: `Vector3`
 
-#### Example
+##### target
 
-```typescript
-const boundingBoxer = components.get(BoundingBoxer);
-boundingBoxer.add(fragmentsGroup);
-const boundingBoxMesh = boundingBoxer.getMesh();
-scene.add(boundingBoxMesh);
-```
+> **target**: `Vector3` = `center`
 
 ***
 
-### getSphere()
+### getCenter()
 
-> **getSphere**(): `Sphere`
+> **getCenter**(`modelIdMap`): `Promise`\<`Vector3`\>
 
-Calculates and returns a sphere that encompasses the entire bounding box.
+Calculates and returns the center point of the bounding box derived from the provided model ID map.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `modelIdMap` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | A mapping of model IDs and localIds used to generate the bounding box. |
 
 #### Returns
 
-`Sphere`
+`Promise`\<`Vector3`\>
 
-A new THREE.Sphere instance representing the calculated sphere.
-
-#### Remarks
-
-This method calculates the center and radius of a sphere that encompasses the entire bounding box.
-The center is calculated as the midpoint between the minimum and maximum bounds of the bounding box.
-The radius is calculated as the distance from the center to the minimum bound.
-
-#### Example
-
-```typescript
-const boundingBoxer = components.get(BoundingBoxer);
-boundingBoxer.add(fragmentsGroup);
-const boundingSphere = boundingBoxer.getSphere();
-console.log(boundingSphere); // Output: Sphere { center: Vector3 { x: 0, y: 0, z: 0 }, radius: 10 }
-```
+A `THREE.Vector3` object representing the center point of the bounding box.
 
 ***
 
@@ -313,142 +246,3 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 #### Inherited from
 
 [`Component`](Component.md) . [`isUpdateable`](Component.md#isupdateable)
-
-***
-
-### reset()
-
-> **reset**(): `void`
-
-Resets the internal minimum and maximum vectors to positive and negative infinity, respectively.
-This method is used to prepare the BoundingBoxer for a new set of fragments.
-
-#### Returns
-
-`void`
-
-#### Remarks
-
-This method is called when a new set of fragments is added to the BoundingBoxer.
-It ensures that the bounding box calculations are accurate and up-to-date.
-
-#### Example
-
-```typescript
-const boundingBoxer = components.get(BoundingBoxer);
-boundingBoxer.add(fragmentsGroup);
-// ...
-boundingBoxer.reset();
-```
-
-***
-
-### getBounds()
-
-> `static` **getBounds**(`points`, `min`?, `max`?): `Box3`
-
-A static method to calculate the bounding box of a set of points.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `points` | `Vector3`[] | An array of THREE.Vector3 representing the points. |
-| `min`? | `Vector3` | An optional THREE.Vector3 representing the minimum bounds. If not provided, it will be calculated. |
-| `max`? | `Vector3` | An optional THREE.Vector3 representing the maximum bounds. If not provided, it will be calculated. |
-
-#### Returns
-
-`Box3`
-
-A THREE.Box3 representing the bounding box of the given points.
-
-#### Remarks
-
-This method calculates the bounding box of a set of points by iterating through each point and updating the minimum and maximum bounds accordingly.
-If the `min` or `max` parameters are provided, they will be used as the initial bounds. Otherwise, the initial bounds will be set to positive and negative infinity.
-
-#### Example
-
-```typescript
-const points = [
-  new THREE.Vector3(1, 2, 3),
-  new THREE.Vector3(4, 5, 6),
-  new THREE.Vector3(7, 8, 9),
-];
-
-const bbox = BoundingBoxer.getBounds(points);
-console.log(bbox); // Output: Box3 { min: Vector3 { x: 1, y: 2, z: 3 }, max: Vector3 { x: 7, y: 8, z: 9 } }
-```
-
-***
-
-### getDimensions()
-
-> `static` **getDimensions**(`bbox`): `object`
-
-A static method to calculate the dimensions of a given bounding box.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `bbox` | `Box3` | The bounding box to calculate the dimensions for. |
-
-#### Returns
-
-`object`
-
-An object containing the width, height, depth, and center of the bounding box.
-
-##### center
-
-> **center**: `Vector3`
-
-##### depth
-
-> **depth**: `number`
-
-##### height
-
-> **height**: `number`
-
-##### width
-
-> **width**: `number`
-
-***
-
-### newBound()
-
-> `static` **newBound**(`positive`): `Vector3`
-
-A static method to create a new bounding box boundary.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `positive` | `boolean` | A boolean indicating whether to create a boundary for positive or negative values. |
-
-#### Returns
-
-`Vector3`
-
-A new THREE.Vector3 representing the boundary.
-
-#### Remarks
-
-This method is used to create a new boundary for calculating bounding boxes.
-It sets the x, y, and z components of the returned vector to positive or negative infinity,
-depending on the value of the `positive` parameter.
-
-#### Example
-
-```typescript
-const positiveBound = BoundingBoxer.newBound(true);
-console.log(positiveBound); // Output: Vector3 { x: Infinity, y: Infinity, z: Infinity }
-
-const negativeBound = BoundingBoxer.newBound(false);
-console.log(negativeBound); // Output: Vector3 { x: -Infinity, y: -Infinity, z: -Infinity }
-```

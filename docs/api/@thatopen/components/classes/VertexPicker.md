@@ -156,7 +156,7 @@ The current enabled state.
 
 ### get()
 
-> **get**(`world`): `null` \| `Vector3`
+> **get**(`world`): `Promise`\<`null` \| `Vector3`\>
 
 Performs the vertex picking operation based on the current state of the VertexPicker.
 
@@ -168,7 +168,7 @@ Performs the vertex picking operation based on the current state of the VertexPi
 
 #### Returns
 
-`null` \| `Vector3`
+`Promise`\<`null` \| `Vector3`\>
 
 The current picked point, or null if no point is picked.
 

@@ -64,7 +64,7 @@ This is used to access the camera and meshes.
 
 ### castRay()
 
-> **castRay**(`items`, `position`): `null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
+> **castRay**(`data`?): `Promise`\<`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>\>
 
 Throws a ray from the camera to the mouse or touch event point and returns
 the first item found. This also takes into account the clipping planes
@@ -72,37 +72,16 @@ used by the renderer.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `items` | `Object3D`\<`Object3DEventMap`\>[] | the [meshes](https://threejs.org/docs/#api/en/objects/Mesh) to query. If not provided, it will query all the meshes stored in Components.meshes. |
-| `position` | `Vector2` | the screen position to use for raycasting. If not provided, the last pointer (mouse/touch) position will be used. |
+| Parameter | Type |
+| :------ | :------ |
+| `data`? | `object` |
+| `data.items`? | `Object3D`\<`Object3DEventMap`\>[] |
+| `data.position`? | `Vector2` |
+| `data.snappingClasses`? | `SnappingClass`[] |
 
 #### Returns
 
-`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
-
-***
-
-### castRayFromVector()
-
-> **castRayFromVector**(`origin`, `direction`, `items`): `null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
-
-Casts a ray from a given origin in a given direction and returns the first item found.
-This method also takes into account the clipping planes used by the renderer.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `origin` | `Vector3` | The origin of the ray. |
-| `direction` | `Vector3` | The direction of the ray. |
-| `items` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | The meshes to query. If not provided, it will query all the meshes stored in [World.meshes](../interfaces/World.md#meshes). |
-
-#### Returns
-
-`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
-
-The first intersection found or `null` if no intersection was found.
+`Promise`\<`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>\>
 
 ***
 

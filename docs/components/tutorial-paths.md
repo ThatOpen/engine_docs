@@ -25,15 +25,11 @@ Basics are great, but that's not enough to **build professional 3D apps**. Let's
 
 - 📙 [Use a fancy camera](../Tutorials/Components/Core/OrthoPerspectiveCamera.mdx) 
 
-- 📙 [Build scalable 3D scenes](../Tutorials/Components/Core/Cullers.mdx)
-
 - 📙 [Set up beatiful graphics](../Tutorials/Components/Front/PostproductionRenderer.mdx)
 
-- 📙 [Create a minimap](../Tutorials/Components/Core/MiniMap.mdx)
+- 📙 [Cast shadows](../Tutorials/Components/Core/ShadowedScene.mdx)
 
-- 📙 [Cast shadows](../Tutorials/Components/Front/ShadowDropper.mdx)
-
-- 📙 [Create clipping edges](../Tutorials/Components/Front/ClipEdges.mdx)
+- 📙 [Create clipping edges](../Tutorials/Components/Front/ClipStyler.mdx)
 
 - 📙 [Measure distances](../Tutorials/Components/Front/LengthMeasurement.mdx)
 
@@ -51,13 +47,11 @@ We are here to make BIM apps, and the library has **tons of components** to make
 
 - 📕 [See your loaded models](../Tutorials/UserInterface/OBC/ModelsList.mdx)
 
-- 📕 [Meet your model properties](../Tutorials/UserInterface/OBC/ElementProperties.mdx)
+- 📕 [Meet your model properties](../Tutorials/UserInterface/OBC/ItemsData.mdx)
 
 <!-- - 📕 [Touching BIM models](../Tutorials/FragmentHighlighter.mdx) -->
 
 <!-- - 📕 [Navigating floorplans](../Tutorials/FragmentPlans.mdx) -->
-
-- 📕 [Know your model relations](../Tutorials/Components/Core/IfcRelationsIndexer.mdx)
 
 <!-- - 📕 [Building trees](../Tutorials/UserInterface/OBC/RelationsTree.mdx) -->
 

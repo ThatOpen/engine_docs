@@ -6,10 +6,10 @@ Recursively converts a Flatbuffers object into a plain JavaScript object. This f
 
 ## Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `obj` | `any` | The Flatbuffers object to convert |
-| `result` | `any` | The target plain JavaScript object where the converted properties will be stored |
+| Parameter | Type |
+| :------ | :------ |
+| `obj` | `any` |
+| `result` | `any` |
 
 ## Returns
 

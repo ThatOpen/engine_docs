@@ -1,6 +1,6 @@
 # MeasurementUtils
 
-Utility component for performing measurements on 3D meshes by providing methods for measuring distances between edges and faces. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/MeasurementUtils). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/MeasurementUtils).
+Utility component for performing measurements on 3D meshes by providing methods for measuring distances between edges and faces. 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/MeasurementUtils).
 
 ## Extends
 
@@ -29,127 +29,45 @@ This UUID is used to register the component within the Components system.
 
 ## Methods
 
-### getFace()
+### getItemsVolume()
 
-> **getFace**(`mesh`, `triangleIndex`, `instance`?): `null` \| `object`
+> **getItemsVolume**(`modelIdMap`): `Promise`\<`number`\>
 
-Method to get the face of a mesh that contains a given triangle index.
-It also returns the edges of the found face and their indices.
+Calculates the total volume of items for a given map of model IDs to local IDs.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `mesh` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> \| `InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> | The mesh to get the face from. It must be indexed. |
-| `triangleIndex` | `number` | The index of the triangle within the mesh. |
-| `instance`? | `number` | The instance of the mesh (optional). |
+| `modelIdMap` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | A map where the key is the model ID and the value is an array of local IDs. |
 
 #### Returns
 
-`null` \| `object`
+`Promise`\<`number`\>
 
-An object containing the edges of the found face and their indices, or null if no face was found.
+A promise that resolves to the total volume of the specified items.
 
 ***
 
-### getVerticesAndNormal()
+### ~~getVolumeFromFragments()~~
 
-> **getVerticesAndNormal**(`mesh`, `faceIndex`, `instance`): `object`
-
-Method to get the vertices and normal of a mesh face at a given index.
-It also applies instance transformation if provided.
+> **getVolumeFromFragments**(`modelIdMap`): `Promise`\<`number`\>
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `mesh` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> \| `InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\> | The mesh to get the face from. It must be indexed. |
-| `faceIndex` | `number` | The index of the face within the mesh. |
-| `instance` | `undefined` \| `number` | The instance of the mesh (optional). |
+| Parameter | Type |
+| :------ | :------ |
+| `modelIdMap` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) |
 
 #### Returns
 
-`object`
+`Promise`\<`number`\>
 
-An object containing the vertices and normal of the face.
+#### Deprecated
 
-##### faceNormal
+Use [getItemsVolume](MeasurementUtils.md#getitemsvolume) instead.
 
-> **faceNormal**: `Vector3`
-
-##### p1
-
-> **p1**: `Vector3`
-
-##### p2
-
-> **p2**: `Vector3`
-
-##### p3
-
-> **p3**: `Vector3`
-
-#### Throws
-
-Will throw an error if the geometry is not indexed.
-
-***
-
-### getVolumeFromFragments()
-
-> **getVolumeFromFragments**(`frags`): `number`
-
-Calculates the volume of a set of fragments.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `frags` | `FragmentIdMap` | A map of fragment IDs to their corresponding item IDs. |
-
-#### Returns
-
-`number`
-
-The total volume of the fragments and the bounding sphere.
-
-#### Remarks
-
-This method creates a set of instanced meshes from the given fragments and item IDs.
-It then calculates the volume of each mesh and returns the total volume and its bounding sphere.
-
-#### Throws
-
-Will throw an error if the geometry of the meshes is not indexed.
-
-#### Throws
-
-Will throw an error if the fragment manager is not available.
-
-***
-
-### getVolumeFromMeshes()
-
-> **getVolumeFromMeshes**(`meshes`): `number`
-
-Calculates the total volume of a set of meshes.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `meshes` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] \| `InstancedMesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[]\>[] | An array of meshes or instanced meshes to calculate the volume from. |
-
-#### Returns
-
-`number`
-
-The total volume of the meshes and the bounding sphere.
-
-#### Remarks
-
-This method calculates the volume of each mesh in the provided array and returns the total volume
-and its bounding sphere.
+Calculates the volume of a set of items.
 
 ***
 
@@ -251,6 +169,33 @@ This is used to ensure numerical precision in edge detection.
 `void`
 
 The vector with rounded components.
+
+***
+
+### convertUnits()
+
+> `static` **convertUnits**(`value`, `fromUnit`, `toUnit`, `precision`): `number`
+
+Converts a value from one unit to another for length, area, or volume without using external libraries.
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `value` | `number` | `undefined` | The value to convert. |
+| `fromUnit` | `string` | `undefined` | The unit of the input value (e.g., "m", "cm", "mm" for lengths; "m2", "cm2" for areas; "m3", "cm3" for volumes). |
+| `toUnit` | `string` | `undefined` | The unit to convert to (e.g., "cm", "mm", "m" for lengths; "cm2", "m2" for areas; "cm3", "m3" for volumes). |
+| `precision` | `number` | `2` | The number of decimal places to round the result to, as number between 0 and 5. (default is 2). |
+
+#### Returns
+
+`number`
+
+The converted value rounded to the specified precision.
+
+#### Throws
+
+If the rounding value is not a valid integer or is out of range (0-5).
 
 ***
 

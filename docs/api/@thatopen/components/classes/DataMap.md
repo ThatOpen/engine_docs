@@ -109,6 +109,27 @@ An event triggered when an existing item in the map is updated.
 
 ## Methods
 
+### add()
+
+> **add**(`value`): `K`
+
+Sets the value in the map with a randomly generated uuidv4 key.
+Only use this if your keys are strings
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `V` | The value of the item to set. |
+
+#### Returns
+
+`K`
+
+The key used.
+
+***
+
 ### clear()
 
 > **clear**(): `void`

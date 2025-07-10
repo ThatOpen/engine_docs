@@ -49,18 +49,6 @@ Whether the bias property should be set automatically depending on the shadow di
 
 ***
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-#### Inherited from
-
-[`SimpleScene`](SimpleScene.md) . [`currentWorld`](SimpleScene.md#currentworld)
-
-***
-
 ### directionalLights
 
 > **directionalLights**: `Map`\<`string`, `DirectionalLight`\>
@@ -176,6 +164,20 @@ The setter for the bias to prevent artifacts (stripes). It usually ranges betwee
 #### Returns
 
 `number`
+
+***
+
+### currentWorld
+
+> `set` **currentWorld**(`value`): `void`
+
+The current world this item is associated with. It can be null if no world is currently active.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `null` \| [`World`](../interfaces/World.md) |
 
 ***
 

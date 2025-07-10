@@ -8,7 +8,7 @@ This component allows highlighting and selecting fragments in a 3D scene. 📕 [
 
 ## Implements
 
-- `Disposable`
+- `Disposable_2`
 - `Eventable`
 
 ## Properties
@@ -26,14 +26,6 @@ Styles with auto toggle will be unselected when selected twice.
 > **backupColor**: `null` \| `Color` = `null`
 
 Stores the backup color before selection.
-
-***
-
-### colors
-
-> **colors**: `Map`\<`string`, `null` \| `Color`\>
-
-Stores the colors used for highlighting selections. If null, the highlighter won't color geometries (useful for selection without coloring).
 
 ***
 
@@ -95,7 +87,7 @@ Threshhold on how much the mouse have to move until its considered movement
 
 ### multiple
 
-> **multiple**: `"none"` \| `"ctrlKey"` \| `"shiftKey"` = `"ctrlKey"`
+> **multiple**: `"none"` \| `"shiftKey"` \| `"ctrlKey"` = `"ctrlKey"`
 
 Determines the multiple selection behavior.
 
@@ -103,7 +95,7 @@ Determines the multiple selection behavior.
 
 ### onAfterUpdate
 
-> `readonly` **onAfterUpdate**: `Event` \<[`Highlighter`](Highlighter.md)\>
+> `readonly` **onAfterUpdate**: `Event_2` \<[`Highlighter`](Highlighter.md)\>
 
 OBC.Updateable.onAfterUpdate
 
@@ -111,7 +103,7 @@ OBC.Updateable.onAfterUpdate
 
 ### onBeforeUpdate
 
-> `readonly` **onBeforeUpdate**: `Event` \<[`Highlighter`](Highlighter.md)\>
+> `readonly` **onBeforeUpdate**: `Event_2` \<[`Highlighter`](Highlighter.md)\>
 
 OBC.Updateable.onBeforeUpdate
 
@@ -119,7 +111,7 @@ OBC.Updateable.onBeforeUpdate
 
 ### onDisposed
 
-> `readonly` **onDisposed**: `Event`\<`unknown`\>
+> `readonly` **onDisposed**: `Event_2`\<`unknown`\>
 
 OBC.Disposable.onDisposed
 
@@ -131,7 +123,7 @@ OBC.Disposable.onDisposed
 
 ### onSetup
 
-> `readonly` **onSetup**: `Event` \<[`Highlighter`](Highlighter.md)\>
+> `readonly` **onSetup**: `Event_2` \<[`Highlighter`](Highlighter.md)\>
 
 Event triggered when the Highlighter is setup.
 
@@ -145,7 +137,7 @@ If defined, only the specified elements will be selected by the specified style.
 
 #### Index signature
 
- \[`name`: `string`\]: `FragmentIdMap`
+ \[`name`: `string`\]: `OBC.ModelIdMap`
 
 ***
 
@@ -157,7 +149,15 @@ Stores the current selection.
 
 #### Index signature
 
- \[`selectionID`: `string`\]: `FRAGS.FragmentIdMap`
+ \[`selectionID`: `string`\]: `OBC.ModelIdMap`
+
+***
+
+### styles
+
+> `readonly` **styles**: `DataMap`\<`string`, `null` \| `Omit`\<`MaterialDefinition`, `"customId"`\>\>
+
+Stores the styles used for highlighting selections. If null, the highlighter won't color geometries (useful for selection without coloring).
 
 ***
 
@@ -186,19 +186,18 @@ This UUID is used to register the component within the Components system.
 
 ## Methods
 
-### add()
+### ~~add()~~
 
-> **add**(`name`, `color`): `void`
+> **add**(`style`): `void`
 
 Adds a new selection with the given name and color.
 Throws an error if a selection with the same name already exists.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the new selection. |
-| `color` | `null` \| `Color` | The color to be used for highlighting the selection. |
+| Parameter | Type |
+| :------ | :------ |
+| `style` | `MaterialDefinition` & `object` |
 
 #### Returns
 
@@ -208,11 +207,15 @@ Throws an error if a selection with the same name already exists.
 
 Will throw an error if a selection with the same name already exists.
 
+#### Deprecated
+
+Use highlighter.styles.set() instead
+
 ***
 
 ### clear()
 
-> **clear**(`name`?, `filter`?): `void`
+> **clear**(`name`?, `_filter`?): `Promise`\<`void`\>
 
 Clears the selection for the given name or all selections if no name is provided.
 
@@ -221,11 +224,11 @@ Clears the selection for the given name or all selections if no name is provided
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `name`? | `string` | The name of the selection to clear. If not provided, clears all selections. |
-| `filter`? | `FragmentIdMap` | The only items to unselect. If not provided, all items will be unselected. |
+| `_filter`? | `ModelIdMap` | - |
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
 
 ***
 
@@ -247,7 +250,7 @@ Disposable.dispose
 
 ### highlight()
 
-> **highlight**(`name`, `removePrevious`, `zoomToSelection`, `exclude`): `Promise`\<`null` \| `object`\>
+> **highlight**(`name`, `removePrevious`, `zoomToSelection`, `exclude`): `Promise`\<`void`\>
 
 Highlights a fragment based on a raycast from the mouse position.
 
@@ -258,11 +261,11 @@ Highlights a fragment based on a raycast from the mouse position.
 | `name` | `string` | `undefined` | The name of the selection. |
 | `removePrevious` | `boolean` | `true` | Whether to remove previous highlights. |
 | `zoomToSelection` | `boolean` | `undefined` | Whether to zoom to the highlighted selection. |
-| `exclude` | `FragmentIdMap` | `{}` | Fragments to exclude from the highlight. |
+| `exclude` | `null` \| `ModelIdMap` | `null` | Fragments to exclude from the highlight. |
 
 #### Returns
 
-`Promise`\<`null` \| `object`\>
+`Promise`\<`void`\>
 
 The highlighted fragment and its ID, or null if no fragment was highlighted.
 
@@ -290,7 +293,7 @@ Will throw an error if the fragment does not belong to a FragmentsGroup.
 
 ### highlightByID()
 
-> **highlightByID**(`name`, `fragmentIdMap`, `removePrevious`, `zoomToSelection`, `exclude`, `fillMesh`, `isPicking`): `Promise`\<`void`\>
+> **highlightByID**(`name`, `modelIdMap`, `removePrevious`, `zoomToSelection`, `exclude`, `isPicking`): `Promise`\<`void`\>
 
 Highlights a fragment based on a given fragment ID map.
 
@@ -299,11 +302,10 @@ Highlights a fragment based on a given fragment ID map.
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `name` | `string` | `undefined` | The name of the selection. |
-| `fragmentIdMap` | `FragmentIdMap` | `undefined` | The fragment ID map to highlight. |
+| `modelIdMap` | `ModelIdMap` | `undefined` | The fragment ID map to highlight. |
 | `removePrevious` | `boolean` | `true` | Whether to remove previous highlights. |
 | `zoomToSelection` | `boolean` | `undefined` | Whether to zoom to the highlighted selection. |
-| `exclude` | `FragmentIdMap` | `{}` | Fragments to exclude from the highlight. |
-| `fillMesh` | `undefined` \| `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\> | `undefined` | The fill mesh to also highlight, if any. |
+| `exclude` | `null` \| `ModelIdMap` | `null` | Fragments to exclude from the highlight. |
 | `isPicking` | `boolean` | `false` | Whether this function is called when picking with the mouse. |
 
 #### Returns
@@ -330,9 +332,9 @@ Will throw an error if the fragment does not belong to a FragmentsGroup.
 
 ***
 
-### remove()
+### ~~remove()~~
 
-> **remove**(`name`): `void`
+> **remove**(`name`): `Promise`\<`void`\>
 
 Removes the specified selection.
 
@@ -344,7 +346,11 @@ Removes the specified selection.
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
+
+#### Deprecated
+
+use highlighter.styles.delete
 
 ***
 
@@ -386,18 +392,14 @@ Will throw an error if the fragment does not belong to a FragmentsGroup.
 
 ***
 
-### updateFragments()
+### updateColors()
 
-> **updateFragments**(`fragments`): `void`
+> **updateColors**(): `Promise`\<`void`\>
 
-Applies all the existing styles to the given fragments. Useful when combining the highlighter with streaming.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `fragments` | `Iterable`\<`Fragment`\> | The list of fragment to update. |
+Updates the colors of highlighted fragments based on the current selection and styles.
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
+
+Resolves when all highlight updates and core state updates are completed.

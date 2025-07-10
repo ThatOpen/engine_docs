@@ -1,6 +1,6 @@
 # Classifier
 
-The Classifier component is responsible for classifying and categorizing fragments based on various criteria. It provides methods to add, remove, find, and filter fragments based on their classification. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Classifier). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Classifier).
+The Classifier component is responsible for grouping items from different models based on criteria. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Classifier). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Classifier).
 
 ## Extends
 
@@ -26,10 +26,10 @@ The Classifier component is responsible for classifying and categorizing fragmen
 
 ### list
 
-> **list**: [`Classification`](../interfaces/Classification.md) = `{}`
+> `readonly` **list**: `DataMap`\<`string`, `DataMap`\<`string`, [`ClassificationGroupData`](../interfaces/ClassificationGroupData.md)\>\>
 
-A map representing the classification systems.
-The key is the system name, and the value is an object representing the classes within the system.
+A nested data map that organizes classification groups.
+The outer map uses strings as keys, and the inner map contains ClassificationGroupData, also keyed by strings.
 
 ***
 
@@ -54,48 +54,73 @@ This UUID is used to register the component within the Components system.
 
 ## Methods
 
-### byEntity()
+### addGroupItems()
 
-> **byEntity**(`group`): `void`
+> **addGroupItems**(`classification`, `group`, `items`): `void`
 
-Classifies fragments based on their entity type.
+Adds items to a specific group within a classification.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `group` | `FragmentsGroup` | The FragmentsGroup containing the fragments to be classified. |
+| `classification` | `string` | The classification to which the group belongs. |
+| `group` | `string` | The group to which the items will be added. |
+| `items` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | A map of model IDs to add to the group. |
 
 #### Returns
 
 `void`
 
-#### Remarks
-
-This method iterates through the relations of the fragments in the provided group,
-and classifies them based on their entity type.
-The classification is stored in the `list.entities` property,
-with the entity type as the key and a map of fragment IDs to their respective express IDs as the value.
-
-#### Throws
-
-Will throw an error if the fragment ID is not found.
-
 ***
 
-### byIfcRel()
+### aggregateItemRelations()
 
-> **byIfcRel**(`group`, `ifcRel`, `systemName`): `Promise`\<`void`\>
+> **aggregateItemRelations**(`classification`, `query`, `relation`, `config`?): `Promise`\<`void`\>
 
-Classifies fragments based on a specific IFC relationship.
+From the items passing the query, use the specified relation to create groupings
+This method retrieves and processes related items, applying a custom aggregation callback to register
+relations between items based on their attributes and local IDs.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `group` | `FragmentsGroup` | The FragmentsGroup containing the fragments to be classified. |
-| `ifcRel` | `number` | The IFC relationship number to classify fragments by. |
-| `systemName` | `string` | The name of the classification system to store the classification. |
+| `classification` | `string` | The classification type used to filter items. |
+| `query` | `ItemsQueryParams` | Query parameters for filtering items, defined by `FRAGS.ItemsQueryParams`. |
+| `relation` | `string` | The type of relation to aggregate (e.g., "ContainedInStructure", "HasAssociations"). |
+| `config`? | [`ClassifyItemRelationsConfig`](../interfaces/ClassifyItemRelationsConfig.md) | Optional configuration for the aggregation process. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+A promise that resolves when the aggregation process is complete.
+
+#### Remarks
+
+- The `aggregationCallback` function processes each item and registers relations based on the item's
+  attribute value and the local ID of its relations.
+- Items without the specified attribute or relations are ignored during aggregation.
+
+***
+
+### aggregateItems()
+
+> **aggregateItems**(`classification`, `query`, `config`?): `Promise`\<`void`\>
+
+Aggregates items based on a classification and query, applying a provided function to each item.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `classification` | `string` | The classification string used to categorize the items. |
+| `query` | `ItemsQueryParams` | The query parameters used to find items. |
+| `config`? | `object` | Optional configuration for data and item processing. |
+| `config.aggregationCallback`? | (`item`, `register`) => `void` | <p>Optional function to apply to each item; defaults to `this.defaultSaveFunction` if not provided.</p><p>                      This function receives the item data and a register function to associate item local IDs with names.</p><p>                      If no function is provided, the default save function is used.</p> |
+| `config.data`? | `Partial`\<`ItemsDataConfig`\> | Optional data configuration to pass to the item retrieval. |
+| `config.modelIds`? | `RegExp`[] | - |
 
 #### Returns
 
@@ -103,102 +128,90 @@ Classifies fragments based on a specific IFC relationship.
 
 #### Remarks
 
-This method iterates through the relations of the fragments in the provided group,
-and classifies them based on the specified IFC relationship.
-The classification is stored in the `list` property under the specified system name,
-with the relationship name as the class name and a map of fragment IDs to their respective express IDs as the value.
+The `register` function within the `config.func` allows associating item local IDs with a given name under the specified classification.
+It is used to keep track of which items belong to which classification.
 
-#### Throws
+***
 
-Will throw an error if the fragment ID is not found or if the IFC relationship is not valid.
+### byCategory()
+
+> **byCategory**(`config`?): `Promise`\<`void`\>
+
+Asynchronously processes and adds classifications by category.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `config`? | [`AddClassificationConfig`](../interfaces/AddClassificationConfig.md) | Optional configuration for adding classifications. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+A promise that resolves once the categories have been processed and added.
+
+***
+
+### byIfcBuildingStorey()
+
+> **byIfcBuildingStorey**(`config`?): `Promise`\<`void`\>
+
+Asynchronously processes and adds classifications by IfcBuildingStorey.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `config`? | [`AddClassificationConfig`](../interfaces/AddClassificationConfig.md) | Optional configuration for adding classifications. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+A promise that resolves once the storeys have been processed and added.
 
 ***
 
 ### byModel()
 
-> **byModel**(`modelID`, `group`): `void`
+> **byModel**(`config`?): `Promise`\<`void`\>
 
-Classifies fragments based on their modelID.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `modelID` | `string` | The unique identifier of the model to classify fragments by. |
-| `group` | `FragmentsGroup` | The FragmentsGroup containing the fragments to be classified. |
-
-#### Returns
-
-`void`
-
-#### Remarks
-
-This method iterates through the fragments in the provided group,
-and classifies them based on their modelID.
-The classification is stored in the `list.models` property,
-with the modelID as the key and a map of fragment IDs to their respective express IDs as the value.
-
-***
-
-### byPredefinedType()
-
-> **byPredefinedType**(`group`): `Promise`\<`void`\>
-
-Classifies fragments based on their PredefinedType property.
+Asynchronously processes models based on the provided configuration and updates classification groups.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `group` | `FragmentsGroup` | The FragmentsGroup containing the fragments to be classified. |
+| `config`? | [`AddClassificationConfig`](../interfaces/AddClassificationConfig.md) | Optional configuration for adding classifications. Contains the following properties. |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-#### Remarks
-
-This method iterates through the properties of the fragments in the provided group,
-and classifies them based on their PredefinedType property.
-The classification is stored in the `list.predefinedTypes` property,
-with the PredefinedType as the key and a map of fragment IDs to their respective express IDs as the value.
-
-#### Throws
-
-Will throw an error if the fragment ID is not found.
+A promise that resolves when the processing is complete.
 
 ***
 
-### bySpatialStructure()
+### defaultSaveFunction()
 
-> **bySpatialStructure**(`model`, `config`): `Promise`\<`void`\>
+> **defaultSaveFunction**(`item`): `null` \| `string`
 
-Classifies fragments based on their spatial structure in the IFC model.
+The default save function used by the classifier.
+It extracts the 'value' property from the item's Name and returns it as a string.
+If the 'value' property does not exist, it returns null.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `model` | `FragmentsGroup` | The FragmentsGroup containing the fragments to be classified. |
-| `config` | `object` | <p>The configuration for the classifier. It includes "useProperties", which is true by default</p><p>(if false, the classification will use the expressIDs instead of the names), and "isolate", which will make</p><p> the classifier just pick the WEBIFC categories provided.</p> |
-| `config.isolate`? | `Set`\<`number`\> | - |
-| `config.systemName`? | `string` | - |
-| `config.useProperties`? | `boolean` | - |
+| `item` | `ItemData` | The item data to extract the value from. |
 
 #### Returns
 
-`Promise`\<`void`\>
+`null` \| `string`
 
-#### Remarks
-
-This method iterates through the relations of the fragments in the provided group,
-and classifies them based on their spatial structure in the IFC model.
-The classification is stored in the `list` property under the system name "spatialStructures",
-with the relationship name as the class name and a map of fragment IDs to their respective express IDs as the value.
-
-#### Throws
-
-Will throw an error if the fragment ID is not found or if the model relations do not exist.
+The extracted value as a string, or null if the value does not exist.
 
 ***
 
@@ -218,60 +231,45 @@ Will throw an error if the fragment ID is not found or if the model relations do
 
 ***
 
-### export()
-
-> **export**(): `ExportedClassification`
-
-Exports the computed classification to persists them and import them back
-later for faster loading.
-
-#### Returns
-
-`ExportedClassification`
-
-***
-
 ### find()
 
-> **find**(`filter`?): `FragmentIdMap`
+> **find**(`data`): `Promise` \<[`ModelIdMap`](../type-aliases/ModelIdMap.md)\>
 
-Finds and returns fragments based on the provided filter criteria.
-If no filter is provided, it returns all fragments.
+Asynchronously finds a set of ModelIdMaps based on the provided classification data.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `filter`? | `object` | An optional object containing filter criteria. The keys of the object represent the classification system names, and the values are arrays of class names to match. |
+| `data` | [`ClassifierIntersectionInput`](../type-aliases/ClassifierIntersectionInput.md) | An object with classifications as keys and an array of groups as values. |
 
 #### Returns
 
-`FragmentIdMap`
+`Promise` \<[`ModelIdMap`](../type-aliases/ModelIdMap.md)\>
 
-A map of fragment GUIDs to their respective express IDs,
-where the express IDs are filtered based on the provided filter criteria.
-
-#### Throws
-
-Will throw an error if the fragments map is malformed.
+A promise that resolves to a ModelIdMap representing the intersection of all ModelIdMaps found.
 
 ***
 
-### import()
+### getGroupData()
 
-> **import**(`data`): `void`
+> **getGroupData**(`classification`, `group`): [`ClassificationGroupData`](../interfaces/ClassificationGroupData.md)
 
-Imports a classification previously exported with .export().
+Retrieves data associated with a specific group within a classification.
+If the group data does not exist, it creates a new entry.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `ExportedClassification` | the serialized classification to import. |
+| `classification` | `string` | The classification string. |
+| `group` | `string` | The group string within the classification. |
 
 #### Returns
 
-`void`
+[`ClassificationGroupData`](../interfaces/ClassificationGroupData.md)
+
+The data object associated with the group, containing a map and a `get` method.
 
 ***
 
@@ -355,36 +353,18 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ***
 
-### remove()
+### removeItems()
 
-> **remove**(`guid`): `void`
+> **removeItems**(`modelIdMap`, `config`?): `void`
 
-Removes a fragment from the classification based on its unique identifier (guid).
-This method iterates through all classification systems and classes, and deletes the fragment with the specified guid from the respective group.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `guid` | `string` | The unique identifier of the fragment to be removed. |
-
-#### Returns
-
-`void`
-
-***
-
-### resetColor()
-
-> **resetColor**(`items`): `void`
-
-Resets the color of the specified fragments to their original color.
+Removes items from the classifier based on the provided model ID map and configuration.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `items` | `FragmentIdMap` | A map of fragment IDs to their respective express IDs. |
+| `modelIdMap` | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | A map containing model IDs to be removed. |
+| `config`? | [`RemoveClassifierItemsConfig`](../interfaces/RemoveClassifierItemsConfig.md) | Optional configuration for removing items.s. |
 
 #### Returns
 
@@ -392,38 +372,24 @@ Resets the color of the specified fragments to their original color.
 
 #### Remarks
 
-This method iterates through the provided fragment IDs, retrieves the corresponding fragments,
-and resets their color using the `resetColor` method of the FragmentsGroup class.
-
-#### Throws
-
-Will throw an error if the fragment with the specified ID is not found.
+If no configuration is provided, items will be removed from all classifications
 
 ***
 
-### setColor()
+### setGroupQuery()
 
-> **setColor**(`items`, `color`, `override`): `void`
+> **setGroupQuery**(`classification`, `group`, `query`): `void`
 
-Sets the color of the specified fragments.
+Sets the query for a specific group within a classification.
 
 #### Parameters
 
-| Parameter | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `items` | `FragmentIdMap` | `undefined` | A map of fragment IDs to their respective express IDs. |
-| `color` | `Color` | `undefined` | The color to set for the fragments. |
-| `override` | `boolean` | `false` | A boolean indicating whether to override the existing color of the fragments. |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `classification` | `string` | The classification to target. |
+| `group` | `string` | The group within the classification to target. |
+| `query` | [`ClassificationGroupQuery`](../interfaces/ClassificationGroupQuery.md) | The query to set for the group. |
 
 #### Returns
 
 `void`
-
-#### Remarks
-
-This method iterates through the provided fragment IDs, retrieves the corresponding fragments,
-and sets their color using the `setColor` method of the FragmentsGroup class.
-
-#### Throws
-
-Will throw an error if the fragment with the specified ID is not found.

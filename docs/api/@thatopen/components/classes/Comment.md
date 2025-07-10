@@ -45,17 +45,3 @@ The author will be the one defined in BCFTopics.config.author
 `string`
 
 The comment text.
-
-## Methods
-
-### serialize()
-
-> **serialize**(): `string`
-
-Serializes the Comment instance into a BCF compliant XML string.
-
-#### Returns
-
-`string`
-
-A string representing the Comment in BCFv2 XML format.

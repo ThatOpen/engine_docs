@@ -1,6 +1,6 @@
 # ConfigManager
 
-A tool to manage all the configuration from the app centrally.
+A tool to manage all the configuration from the app centrally. 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/ConfigManager).
 
 ## Extends
 

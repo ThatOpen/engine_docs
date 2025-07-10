@@ -121,6 +121,22 @@ dropdown.name = 'exampleName';
 
 ***
 
+### placeholder?
+
+> `optional` **placeholder**: `string`
+
+Represents the placeholder property of the component.
+This property is used to display a hint or a placeholder text inside the input field.
+The placeholder text is displayed when the input field is empty and loses focus.
+
+#### Example
+
+```ts
+<bim-dropdown placeholder="Select something.."></bim-dropdown>
+```
+
+***
+
 ### required
 
 > **required**: `boolean` = `false`

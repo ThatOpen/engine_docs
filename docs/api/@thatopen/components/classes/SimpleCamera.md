@@ -17,18 +17,6 @@ A basic camera that uses [yomotsu's cameracontrols](https://github.com/yomotsu/c
 
 ## Properties
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-#### Inherited from
-
-[`BaseCamera`](BaseCamera.md) . [`currentWorld`](BaseCamera.md#currentworld)
-
-***
-
 ### onAfterUpdate
 
 > `readonly` **onAfterUpdate**: [`Event`](Event.md) \<[`SimpleCamera`](SimpleCamera.md)\>

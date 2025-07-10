@@ -16,6 +16,14 @@ The base camera of the world.
 
 ***
 
+### defaultCamera
+
+> **defaultCamera**: [`BaseCamera`](../classes/BaseCamera.md)
+
+The default camera of the world.
+
+***
+
 ### dispose()
 
 > **dispose**: () => `void` \| `Promise`\<`void`\>

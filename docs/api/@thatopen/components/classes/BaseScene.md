@@ -24,18 +24,6 @@ The set of ambient lights managed by this scene component.
 
 ***
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-#### Inherited from
-
-[`BaseWorldItem`](BaseWorldItem.md) . [`currentWorld`](BaseWorldItem.md#currentworld)
-
-***
-
 ### directionalLights
 
 > **directionalLights**: `Map`\<`string`, `DirectionalLight`\>
@@ -85,6 +73,20 @@ The event payload contains the world instance and the action ("added" or "remove
 
 Abstract property representing the three.js object associated with this scene.
 It should be implemented by subclasses.
+
+## Accessors
+
+### currentWorld
+
+> `set` **currentWorld**(`value`): `void`
+
+The current world this item is associated with. It can be null if no world is currently active.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `null` \| [`World`](../interfaces/World.md) |
 
 ## Methods
 

@@ -1,88 +1,50 @@
 # ClipEdges
 
-A component that can add fills and outlines to the Clipper. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/ClipEdges). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/ClipEdges).
-
-## Extends
-
-- `Component`
+The `ClipEdges` class is responsible for managing and rendering clipped edges and fills in a ThreeJS scene based on specified styles and models. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/ClipStyler). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/ClipEdges).
 
 ## Implements
 
-- `Disposable`
+- `Disposable_2`
 
 ## Properties
 
-### enabled
+### plane
 
-> **enabled**: `boolean` = `true`
+> `readonly` **plane**: `Plane`
 
-OBC.Component.enabled
-
-#### Overrides
-
-`OBC.Component.enabled`
+A readonly property representing the ThreeJS plane used to created the edges and fills.
 
 ***
 
-### fillsNeedUpdate
+### three
 
-> **fillsNeedUpdate**: `boolean` = `false`
+> `readonly` **three**: `Group`\<`Object3DEventMap`\>
 
-A flag indicating whether the fills need to be updated.
-
-***
-
-### onDisposed
-
-> `readonly` **onDisposed**: `Event`\<`unknown`\>
-
-OBC.Disposable.onDisposed
-
-#### Implementation of
-
-`OBC.Disposable.onDisposed`
+The ThreeJS group that holds all the edges and fills together
 
 ***
 
-### styles
+### world
 
-> **styles**: [`EdgesStyles`](EdgesStyles.md)
+> **world**: `null` \| `World` = `null`
 
-The styling properties for the edges.
-
-***
-
-### uuid
-
-> `static` `readonly` **uuid**: `"24dfc306-a3c4-410f-8071-babc4afa5e4d"`
-
-A unique identifier for the component.
-This UUID is used to register the component within the Components system.
+The world in which the edges and fills will be placed.
 
 ## Accessors
 
 ### visible
 
-> `get` **visible**(): `boolean`
+> `set` **visible**(`value`): `void`
 
-Gets the visibility state of the edges.
-
-> `set` **visible**(`active`): `void`
-
-Sets the visibility state of the edges.
-Updates the visibility of the associated [EdgesPlane](EdgesPlane.md) instances.
+Sets the visibility of the object in the scene.
+When set to `true`, the object is added to the scene if the `world` property is defined.
+When set to `false`, the object is removed from its parent.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `active` | `boolean` | The new visibility state. |
-
-#### Returns
-
-`boolean`
-
-The current visibility state.
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `boolean` |
 
 ## Methods
 
@@ -104,22 +66,19 @@ OBC.Disposable.dispose
 
 ### update()
 
-> **update**(`updateFills`?): `Promise`\<`void`\>
+> **update**(`groups`?): `Promise`\<`void`\>
 
-Updates all the lines of the component.
+Updates the clip edges based on the provided groups and their associated styles and data.
+If no groups are specified, all items will be updated.
 
 #### Parameters
 
-| Parameter | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `updateFills`? | `boolean` | `false` | If true, the fills will be updated regardless of the `fillsNeedUpdate` flag. |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `groups`? | `string`[] | An optional array of group names to filter which items should be updated. |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-- A promise that resolves when the update is complete.
-
-#### Remarks
-
-This method iterates through all the [EdgesPlane](EdgesPlane.md) instances associated with the Clipper component.
+A promise that resolves when the update process is complete.

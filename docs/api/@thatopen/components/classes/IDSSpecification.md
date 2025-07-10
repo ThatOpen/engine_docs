@@ -33,19 +33,19 @@ This method is not meant to be used directly. It is used by the IDSSpecification
 
 ### test()
 
-> **test**(`model`): `Promise` \<[`IDSCheckResult`](../interfaces/IDSCheckResult.md)[]\>
+> **test**(`modelIds`): `Promise` \<[`IDSCheckResult`](../type-aliases/IDSCheckResult.md)\>
 
 Tests the model to test against the specification's requirements.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `model` | `FragmentsGroup` | The model to be tested. |
+| Parameter | Type |
+| :------ | :------ |
+| `modelIds` | `RegExp`[] |
 
 #### Returns
 
-`Promise` \<[`IDSCheckResult`](../interfaces/IDSCheckResult.md)[]\>
+`Promise` \<[`IDSCheckResult`](../type-aliases/IDSCheckResult.md)\>
 
 An array representing the test results.
 If no requirements are defined for the specification, an empty array is returned.

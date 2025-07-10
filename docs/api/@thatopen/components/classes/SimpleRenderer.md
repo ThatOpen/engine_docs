@@ -52,18 +52,6 @@ The HTML container of the THREE.js canvas where the scene is rendered.
 
 ***
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-#### Inherited from
-
-[`BaseRenderer`](BaseRenderer.md) . [`currentWorld`](BaseRenderer.md#currentworld)
-
-***
-
 ### enabled
 
 > **enabled**: `boolean` = `true`
@@ -166,6 +154,20 @@ The THREE.js WebGLRenderer instance.
 #### Overrides
 
 [`BaseRenderer`](BaseRenderer.md) . [`three`](BaseRenderer.md#three)
+
+## Accessors
+
+### currentWorld
+
+> `set` **currentWorld**(`value`): `void`
+
+The current world this item is associated with. It can be null if no world is currently active.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `null` \| [`World`](../interfaces/World.md) |
 
 ## Methods
 

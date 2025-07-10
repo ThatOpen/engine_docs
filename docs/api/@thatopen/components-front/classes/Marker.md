@@ -8,7 +8,7 @@ Component for Managing Markers along with creating different types of markers. E
 
 ## Implements
 
-- `Disposable`
+- `Disposable_2`
 
 ## Properties
 
@@ -45,7 +45,7 @@ Each world can have its own set of markers.
 
 ### onDisposed
 
-> `readonly` **onDisposed**: `Event`\<`unknown`\>
+> `readonly` **onDisposed**: `Event_2`\<`unknown`\>
 
 OBC.Disposable.onDisposed
 
@@ -120,7 +120,7 @@ Performs clustering of markers in the given world.
 
 ### create()
 
-> **create**(`world`, `text`, `point`, `isStatic`): `undefined` \| `string`
+> **create**(`world`, `element`, `point`, `isStatic`): `null` \| `string`
 
 Creates a new marker at the specified point in the world.
 
@@ -129,13 +129,13 @@ Creates a new marker at the specified point in the world.
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `world` | `World` | `undefined` | The world where the marker will be created. |
-| `text` | `string` | `undefined` | The text content of the marker. |
+| `element` | `HTMLElement` | `undefined` | - |
 | `point` | `Vector3` | `undefined` | The 3D position where the marker will be placed. |
 | `isStatic` | `boolean` | `false` | Indicates whether the marker should be static and not clustered. |
 
 #### Returns
 
-`undefined` \| `string`
+`null` \| `string`
 
 The unique key of the created marker.
 

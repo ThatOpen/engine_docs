@@ -42,6 +42,14 @@ colorInput.color = '#ff0000';
 
 ***
 
+### disabled
+
+> **disabled**: `boolean` = `false`
+
+Disables the input, preventing user interaction.
+
+***
+
 ### icon?
 
 > `optional` **icon**: `string`

@@ -1,6 +1,6 @@
 # BCFTopics
 
-BCFTopics manages Building Collaboration Format (BCF) data the engine. It provides functionality for importing, exporting, and manipulating BCF data.
+BCFTopics manages Building Collaboration Format (BCF) data the engine. It provides functionality for importing, exporting, and manipulating BCF data. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/BCFTopics). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/BCFTopics).
 
 ## Extends
 
@@ -243,7 +243,7 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### load()
 
-> **load**(`data`, `world`): `Promise`\<`object`\>
+> **load**(`data`): `Promise`\<`object`\>
 
 Loads BCF (Building Collaboration Format) data into the engine.
 
@@ -252,7 +252,6 @@ Loads BCF (Building Collaboration Format) data into the engine.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Uint8Array` | The BCF data to load. |
-| `world` | [`World`](../interfaces/World.md) | The default world where the viewpoints are going to be created. |
 
 #### Returns
 

@@ -5,13 +5,13 @@ Represents a marker in the 3D world.
 ## Implements
 
 - `Hideable`
-- `Disposable`
+- `Disposable_2`
 
 ## Properties
 
 ### onDisposed
 
-> `readonly` **onDisposed**: `Event`\<`unknown`\>
+> `readonly` **onDisposed**: `Event_2`\<`unknown`\>
 
 OBC.Disposable.onDisposed
 
@@ -72,6 +72,21 @@ OBC.Disposable.dispose
 #### Implementation of
 
 `OBC.Disposable.dispose`
+
+***
+
+### notDisplay()
+
+> **notDisplay**(): `void`
+
+Never Display marker.
+
+This method changes the `visible` property of the marker to its false value.
+Marker will never displayed.
+
+#### Returns
+
+`void`
 
 ***
 

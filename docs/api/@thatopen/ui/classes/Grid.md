@@ -1,4 +1,4 @@
-# Grid\<T\>
+# Grid\<L, E\>
 
 A custom grid component for web applications.
 
@@ -14,7 +14,8 @@ bim-grid
 
 | Type parameter | Value |
 | :------ | :------ |
-| `T` *extends* `GridLayoutComponents` | `object` |
+| `L` *extends* `string`[] | [] |
+| `E` *extends* `GridComponentDefinition` | [] |
 
 ## Properties
 
@@ -46,7 +47,7 @@ document.body.appendChild(grid);
 
 ### layout?
 
-> `optional` **layout**: `string`
+> `optional` **layout**: `L`\[`number`\]
 
 Represents the layout configuration of the grid. The layout is defined by a string identifier which corresponds to a predefined grid template in the `layouts` object of the Grid component. Setting this property updates the grid's template and triggers a reconfiguration of the grid's containers based on the new layout. If the specified layout is not defined, a warning is logged, and the layout remains unchanged. This property is reflected to an attribute, allowing it to be set directly in HTML. Changing the layout will dispatch a "layoutchange" event, which can be used to react to layout changes.
 
@@ -100,4 +101,4 @@ Once defined, the layout is meant to be immutable.
 
 | Parameter | Type |
 | :------ | :------ |
-| `value` | [`GridLayoutsDefinition`](../type-aliases/GridLayoutsDefinition.md)\<`T`\> |
+| `value` | [`GridLayoutsDefinition`](../type-aliases/GridLayoutsDefinition.md)\<`L`, `E`\> |

@@ -81,16 +81,6 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/classes/CullerRenderer",
-            "label": "CullerRenderer"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/Cullers",
-            "label": "Cullers"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components/classes/DataMap",
             "label": "DataMap"
           },
@@ -116,8 +106,8 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/classes/Exploder",
-            "label": "Exploder"
+            "id": "api/@thatopen/components/classes/FinderQuery",
+            "label": "FinderQuery"
           },
           {
             "type": "doc",
@@ -151,38 +141,8 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcBasicQuery",
-            "label": "IfcBasicQuery"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcFinder",
-            "label": "IfcFinder"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcFinderQuery",
-            "label": "IfcFinderQuery"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components/classes/IfcFragmentSettings",
             "label": "IfcFragmentSettings"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcGeometryTiler",
-            "label": "IfcGeometryTiler"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcIsolator",
-            "label": "IfcIsolator"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcJsonExporter",
-            "label": "IfcJsonExporter"
           },
           {
             "type": "doc",
@@ -191,28 +151,8 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcPropertiesManager",
-            "label": "IfcPropertiesManager"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcPropertiesTiler",
-            "label": "IfcPropertiesTiler"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcPropertyQuery",
-            "label": "IfcPropertyQuery"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcRelationsIndexer",
-            "label": "IfcRelationsIndexer"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/IfcStreamingSettings",
-            "label": "IfcStreamingSettings"
+            "id": "api/@thatopen/components/classes/ItemsFinder",
+            "label": "ItemsFinder"
           },
           {
             "type": "doc",
@@ -221,18 +161,8 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/classes/MeshCullerRenderer",
-            "label": "MeshCullerRenderer"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/MiniMap",
-            "label": "MiniMap"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/MiniMaps",
-            "label": "MiniMaps"
+            "id": "api/@thatopen/components/classes/ModelIdMapUtils",
+            "label": "ModelIdMapUtils"
           },
           {
             "type": "doc",
@@ -258,11 +188,6 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/classes/ProjectionManager",
             "label": "ProjectionManager"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/classes/PropertiesStreamingSettings",
-            "label": "PropertiesStreamingSettings"
           },
           {
             "type": "doc",
@@ -321,6 +246,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/Views",
+            "label": "Views"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/Worlds",
             "label": "Worlds"
           }
@@ -332,8 +262,8 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/components/interfaces/AttributeListener",
-            "label": "AttributeListener"
+            "id": "api/@thatopen/components/interfaces/AddClassificationConfig",
+            "label": "AddClassificationConfig"
           },
           {
             "type": "doc",
@@ -352,18 +282,38 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/interfaces/ChangeMap",
-            "label": "ChangeMap"
+            "id": "api/@thatopen/components/interfaces/ClassificationGroupData",
+            "label": "ClassificationGroupData"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/interfaces/Classification",
-            "label": "Classification"
+            "id": "api/@thatopen/components/interfaces/ClassificationGroupQuery",
+            "label": "ClassificationGroupQuery"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ClassifyItemRelationsConfig",
+            "label": "ClassifyItemRelationsConfig"
           },
           {
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/Configurable",
             "label": "Configurable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/CreateElevationViewsConfig",
+            "label": "CreateElevationViewsConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/CreateViewConfig",
+            "label": "CreateViewConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/CreateViewFromIfcStoreysConfig",
+            "label": "CreateViewFromIfcStoreysConfig"
           },
           {
             "type": "doc",
@@ -377,11 +327,6 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/interfaces/EntitiesRelatedEvent",
-            "label": "EntitiesRelatedEvent"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components/interfaces/Eventable",
             "label": "Eventable"
           },
@@ -392,33 +337,8 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/interfaces/IDSCheckResult",
-            "label": "IDSCheckResult"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/interfaces/IfcCategoryRule",
-            "label": "IfcCategoryRule"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/interfaces/IfcOperatorRule",
-            "label": "IfcOperatorRule"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/interfaces/IfcPropertyRule",
-            "label": "IfcPropertyRule"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components/interfaces/MeasureEdge",
             "label": "MeasureEdge"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/interfaces/MiniMapConfig",
-            "label": "MiniMapConfig"
           },
           {
             "type": "doc",
@@ -432,8 +352,28 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/interfaces/QueryTestConfig",
+            "label": "QueryTestConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/RemoveClassifierItemsConfig",
+            "label": "RemoveClassifierItemsConfig"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/interfaces/Resizeable",
             "label": "Resizeable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/SerializedFinderQuery",
+            "label": "SerializedFinderQuery"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/SerializedQueryParameters",
+            "label": "SerializedQueryParameters"
           },
           {
             "type": "doc",
@@ -452,16 +392,6 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/interfaces/StreamedAsset",
-            "label": "StreamedAsset"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/interfaces/StreamedGeometries",
-            "label": "StreamedGeometries"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components/interfaces/Updateable",
             "label": "Updateable"
           },
@@ -469,6 +399,61 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/VertexPickerConfig",
             "label": "VertexPickerConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointBitmap",
+            "label": "ViewpointBitmap"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointCamera",
+            "label": "ViewpointCamera"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointClippingPlane",
+            "label": "ViewpointClippingPlane"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointColoring",
+            "label": "ViewpointColoring"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointComponent",
+            "label": "ViewpointComponent"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointComponents",
+            "label": "ViewpointComponents"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointLine",
+            "label": "ViewpointLine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointSnapshot",
+            "label": "ViewpointSnapshot"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointVector",
+            "label": "ViewpointVector"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/ViewpointVisibility",
+            "label": "ViewpointVisibility"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/WithUi",
+            "label": "WithUi"
           },
           {
             "type": "doc",
@@ -483,28 +468,23 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/components/type-aliases/BooleanPropTypes",
-            "label": "BooleanPropTypes"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components/type-aliases/CameraProjection",
             "label": "CameraProjection"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/type-aliases/IfcFinderRule",
-            "label": "IfcFinderRule"
+            "id": "api/@thatopen/components/type-aliases/ClassifierIntersectionInput",
+            "label": "ClassifierIntersectionInput"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/type-aliases/IfcRelations",
-            "label": "IfcRelations"
+            "id": "api/@thatopen/components/type-aliases/IDSCheckResult",
+            "label": "IDSCheckResult"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/type-aliases/InverseAttributes",
-            "label": "InverseAttributes"
+            "id": "api/@thatopen/components/type-aliases/ModelIdMap",
+            "label": "ModelIdMap"
           },
           {
             "type": "doc",
@@ -513,39 +493,18 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/type-aliases/NumericPropTypes",
-            "label": "NumericPropTypes"
+            "id": "api/@thatopen/components/type-aliases/QueryResultAggregation",
+            "label": "QueryResultAggregation"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/type-aliases/SerializedQuery",
-            "label": "SerializedQuery"
+            "id": "api/@thatopen/components/type-aliases/ViewpointOrthogonalCamera",
+            "label": "ViewpointOrthogonalCamera"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components/type-aliases/StringPropTypes",
-            "label": "StringPropTypes"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "Variables",
-        "items": [
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/variables/GeometryTypes",
-            "label": "GeometryTypes"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/variables/IfcCategoryMap",
-            "label": "IfcCategoryMap"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components/variables/IfcElements",
-            "label": "IfcElements"
+            "id": "api/@thatopen/components/type-aliases/ViewpointPerspectiveCamera",
+            "label": "ViewpointPerspectiveCamera"
           }
         ]
       }
@@ -565,18 +524,8 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/classes/AngleMeasurement",
-            "label": "AngleMeasurement"
-          },
-          {
-            "type": "doc",
             "id": "api/@thatopen/components-front/classes/AreaMeasurement",
             "label": "AreaMeasurement"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/Civil3DNavigator",
-            "label": "Civil3DNavigator"
           },
           {
             "type": "doc",
@@ -585,18 +534,13 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/classes/CivilElevationNavigator",
-            "label": "CivilElevationNavigator"
+            "id": "api/@thatopen/components-front/classes/CivilNavigators",
+            "label": "CivilNavigators"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/classes/CivilNavigator",
-            "label": "CivilNavigator"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/CivilPlanNavigator",
-            "label": "CivilPlanNavigator"
+            "id": "api/@thatopen/components-front/classes/CivilRaycaster",
+            "label": "CivilRaycaster"
           },
           {
             "type": "doc",
@@ -605,38 +549,13 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/classes/ClippingEdges",
-            "label": "ClippingEdges"
+            "id": "api/@thatopen/components-front/classes/ClipStyler",
+            "label": "ClipStyler"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/classes/ClippingFills",
-            "label": "ClippingFills"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/EdgeMeasurement",
-            "label": "EdgeMeasurement"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/EdgesPlane",
-            "label": "EdgesPlane"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/EdgesStyles",
-            "label": "EdgesStyles"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/FaceMeasurement",
-            "label": "FaceMeasurement"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/GeometryCullerRenderer",
-            "label": "GeometryCullerRenderer"
+            "id": "api/@thatopen/components-front/classes/DimensionLine",
+            "label": "DimensionLine"
           },
           {
             "type": "doc",
@@ -650,8 +569,8 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/classes/IfcStreamer",
-            "label": "IfcStreamer"
+            "id": "api/@thatopen/components-front/classes/Hoverer",
+            "label": "Hoverer"
           },
           {
             "type": "doc",
@@ -670,18 +589,18 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/classes/Measurement",
+            "label": "Measurement"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/Mesher",
+            "label": "Mesher"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/classes/Outliner",
             "label": "Outliner"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/Plans",
-            "label": "Plans"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/Postproduction",
-            "label": "Postproduction"
           },
           {
             "type": "doc",
@@ -692,26 +611,6 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/RendererWith2D",
             "label": "RendererWith2D"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/Sections",
-            "label": "Sections"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/ShadowDropper",
-            "label": "ShadowDropper"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/SimpleDimensionLine",
-            "label": "SimpleDimensionLine"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/classes/VolumeMeasurement",
-            "label": "VolumeMeasurement"
           }
         ]
       },
@@ -721,13 +620,13 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/AreaSelection",
-            "label": "AreaSelection"
+            "id": "api/@thatopen/components-front/interfaces/ClipEdgesCreationConfig",
+            "label": "ClipEdgesCreationConfig"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/BvhLineSegmentsGeometry",
-            "label": "BvhLineSegmentsGeometry"
+            "id": "api/@thatopen/components-front/interfaces/ClipEdgesItemStyle",
+            "label": "ClipEdgesItemStyle"
           },
           {
             "type": "doc",
@@ -738,11 +637,6 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/interfaces/DimensionData",
             "label": "DimensionData"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/Edge",
-            "label": "Edge"
           },
           {
             "type": "doc",
@@ -763,82 +657,6 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/interfaces/IMarker",
             "label": "IMarker"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/PlanView",
-            "label": "PlanView"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/PostproductionSettings",
-            "label": "PostproductionSettings"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/Section",
-            "label": "Section"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/SerializedAreaMeasure",
-            "label": "SerializedAreaMeasure"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/Shadow",
-            "label": "Shadow"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/Shadows",
-            "label": "Shadows"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/StreamLoaderSettings",
-            "label": "StreamLoaderSettings"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/StreamPropertiesSettings",
-            "label": "StreamPropertiesSettings"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/interfaces/StreamedInstance",
-            "label": "StreamedInstance"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "Type Aliases",
-        "items": [
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/type-aliases/CivilMarkerType",
-            "label": "CivilMarkerType"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/type-aliases/Edges",
-            "label": "Edges"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/type-aliases/IndexFragmentMap",
-            "label": "IndexFragmentMap"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/type-aliases/LineStyles",
-            "label": "LineStyles"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/components-front/type-aliases/StreamedInstances",
-            "label": "StreamedInstances"
           }
         ]
       }
@@ -891,6 +709,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/classes/IfcImporter",
             "label": "IfcImporter"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/classes/SingleThreadedFragmentsModel",
+            "label": "SingleThreadedFragmentsModel"
           }
         ]
       },

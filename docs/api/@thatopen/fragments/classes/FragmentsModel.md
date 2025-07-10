@@ -228,26 +228,6 @@ Get the civil alignment styles of the model (if any).
 
 `Promise`\<`object`\>
 
-##### 0
-
-> **0**: `LineMaterial`
-
-##### 1
-
-> **1**: `LineMaterial`
-
-##### 2
-
-> **2**: `LineMaterial`
-
-##### 3
-
-> **3**: `LineMaterial`
-
-##### 4
-
-> **4**: `LineMaterial`
-
 ##### exterior
 
 > **exterior**: `PointsMaterial`
@@ -262,11 +242,53 @@ Get the civil alignment styles of the model (if any).
 
 > **getAlignments**(): `Promise`\<`Group`\<`Object3DEventMap`\>\>
 
-Get the civil alignments of the model (if any).
+Get the absolute alignments of the model (if any).
 
 #### Returns
 
 `Promise`\<`Group`\<`Object3DEventMap`\>\>
+
+***
+
+### getAttributeNames()
+
+> **getAttributeNames**(): `Promise`\<`string`[]\>
+
+Retrieves the names of all attributes associated with the model.
+
+#### Returns
+
+`Promise`\<`string`[]\>
+
+A promise that resolves to an array of strings, where each string is the name of an attribute.
+
+***
+
+### getAttributeTypes()
+
+> **getAttributeTypes**(): `Promise`\<`string`[]\>
+
+Retrieves the attribute types associated with the model.
+
+#### Returns
+
+`Promise`\<`string`[]\>
+
+A promise that resolves to an array of attribute types.
+
+***
+
+### getAttributeValues()
+
+> **getAttributeValues**(): `Promise`\<`any`[]\>
+
+Retrieves the attribute values associated with the model.
+
+#### Returns
+
+`Promise`\<`any`[]\>
+
+A promise that resolves to an array of attribute values.
 
 ***
 
@@ -330,6 +352,21 @@ Gets coordinates of the model.
 
 ***
 
+### getCoordinationMatrix()
+
+> **getCoordinationMatrix**(): `Promise`\<`Matrix4`\>
+
+Retrieves the coordination matrix for the current model.
+
+This method utilizes the `_coordinatesManager` to compute and return a
+`THREE.Matrix4` object based on the original model coordinates.
+
+#### Returns
+
+`Promise`\<`Matrix4`\>
+
+***
+
 ### getGuidsByLocalIds()
 
 > **getGuidsByLocalIds**(`localIds`): `Promise`\<(`null` \| `string`)[]\>
@@ -378,6 +415,18 @@ Gets the item IDs of the items that are highlighted.
 
 ***
 
+### getHorizontalAlignments()
+
+> **getHorizontalAlignments**(): `Promise`\<`Group`\<`Object3DEventMap`\>\>
+
+Get the horizontal alignments of the model (if any).
+
+#### Returns
+
+`Promise`\<`Group`\<`Object3DEventMap`\>\>
+
+***
+
 ### getItem()
 
 > **getItem**(`id`): `Item`
@@ -393,6 +442,26 @@ Get an item by its ID.
 #### Returns
 
 `Item`
+
+***
+
+### getItemsByQuery()
+
+> **getItemsByQuery**(`params`): `Promise`\<`number`[]\>
+
+Retrieves items based on the specified query parameters.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `params` | `ItemsQueryParams` | The query parameters used to filter and retrieve items. |
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+A promise that resolves to the items matching the query.
 
 ***
 
@@ -451,21 +520,74 @@ Get all the data of the specified items.
 
 ***
 
-### getItemsOfCategory()
+### getItemsGeometry()
 
-> **getItemsOfCategory**(`category`): `Promise`\<`Item`[]\>
+> **getItemsGeometry**(`localIds`): `Promise` \<[`MeshData`](../type-aliases/MeshData.md)[][]\>
 
-Get all the items of the model that belong to the specified category.
+Retrieves the geometry data for the specified local IDs.
+
+The returned data is structured as an array of arrays of `MeshData`,
+which contains the necessary information to reconstruct a `THREE.BufferGeometry`.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `category` | `string` | The category to look up. |
+| `localIds` | `number`[] | An array of local IDs for which the geometry data is requested. |
 
 #### Returns
 
-`Promise`\<`Item`[]\>
+`Promise` \<[`MeshData`](../type-aliases/MeshData.md)[][]\>
+
+***
+
+### getItemsIdsWithGeometry()
+
+> **getItemsIdsWithGeometry**(): `Promise`\<`number`[]\>
+
+Get all the items ids of the model that have geometry.
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
+### getItemsOfCategories()
+
+> **getItemsOfCategories**(`categories`): `Promise`\<`object`\>
+
+Get all the items of the model that belong to the specified category.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `categories` | `RegExp`[] |
+
+#### Returns
+
+`Promise`\<`object`\>
+
+***
+
+### getItemsVolume()
+
+> **getItemsVolume**(`localIds`): `Promise`\<`number`\>
+
+Retrieves the total volume of items based on their local IDs.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds` | `number`[] | An array of local IDs representing the items. |
+
+#### Returns
+
+`Promise`\<`number`\>
+
+A promise that resolves to the total volume of the specified items.
 
 ***
 
@@ -565,9 +687,23 @@ Get the absolute positions of the specified items.
 
 ***
 
+### getRelationNames()
+
+> **getRelationNames**(): `Promise`\<`string`[]\>
+
+Retrieves the names of all relations associated with this model.
+
+#### Returns
+
+`Promise`\<`string`[]\>
+
+A promise that resolves to an array of strings, where each string is the name of a relation.
+
+***
+
 ### getSection()
 
-> **getSection**(`plane`): `Promise`\<`any`\>
+> **getSection**(`plane`, `localIds`?): `Promise`\<`ModelSection`\>
 
 Gets the section (edges and fills) between the model and a given clipping plane.
 
@@ -576,10 +712,11 @@ Gets the section (edges and fills) between the model and a given clipping plane.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `plane` | `Plane` | The plane to get the section of. |
+| `localIds`? | `number`[] | - |
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise`\<`ModelSection`\>
 
 ***
 
@@ -625,6 +762,18 @@ Get the spatial structure of the model.
 #### Returns
 
 `Promise` \<[`SpatialTreeItem`](../interfaces/SpatialTreeItem.md)\>
+
+***
+
+### getVerticalAlignments()
+
+> **getVerticalAlignments**(): `Promise`\<`Group`\<`Object3DEventMap`\>\>
+
+Get the vertical alignments of the model (if any).
+
+#### Returns
+
+`Promise`\<`Group`\<`Object3DEventMap`\>\>
 
 ***
 

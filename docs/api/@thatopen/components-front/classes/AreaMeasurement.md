@@ -1,212 +1,65 @@
 # AreaMeasurement
 
-This component allows users to measure areas in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/AreaMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/AreaMeasurement).
+AreaMeasurement allows users to measure and interact with areas in a 3D environment. This class provides functionality for creating, updating, and deleting area measurements, as well as managing their visual representation. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/AreaMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/AreaMeasurement).
 
 ## Extends
 
-- `Component`
-
-## Implements
-
-- `Createable`
-- `Disposable`
-- `Hideable`
+- [`Measurement`](Measurement.md)\<`Area`, `"area"`\>
 
 ## Properties
 
-### list
+### modes
 
-> **list**: `AreaMeasureElement`[] = `[]`
+> **modes**: (`"free"` \| `"square"`)[]
 
-A list of all the area measurement elements created by this component.
+The possible modes in which a measurement of this type may be created.
 
-***
+#### Overrides
 
-### onDisposed
-
-> `readonly` **onDisposed**: `Event`\<`unknown`\>
-
-OBC.Disposable.onDisposed
-
-#### Implementation of
-
-`OBC.Disposable.onDisposed`
+`Measurement.modes`
 
 ***
 
-### world?
+### pickTolerance
 
-> `optional` **world**: `World`
+> **pickTolerance**: `number` = `1e-1`
 
-The world in which the area measurements are performed.
-This property is optional and can be set to null if no world is available.
+The tolerance value used for picking operations in area measurement.
+This value determines the precision or sensitivity when selecting or interacting
+with measurement areas. A smaller value increases precision, while a larger value
+allows for more leniency in selection.
+
+#### Default
+
+```ts
+0.1
+```
 
 ***
 
-### uuid
+### tolerance
 
-> `static` `readonly` **uuid**: `"c453a99e-f054-4781-9060-33df617db4a5"`
+> **tolerance**: `number` = `5e-3`
 
-A unique identifier for the component.
-This UUID is used to register the component within the Components system.
+Represents the tolerance value used for area measurement calculations.
+This value defines the acceptable margin of error for a point in the shape to be added to the area element.
+
+#### Default
+
+```ts
+0.005
+```
 
 ## Accessors
 
-### enabled
+### mode
 
-> `get` **enabled**(): `boolean`
+> `set` **mode**(`value`): `void`
 
-OBC.Component.enabled
-
-> `set` **enabled**(`value`): `void`
-
-OBC.Component.enabled
+Represents the current measurement mode being used.
 
 #### Parameters
 
 | Parameter | Type |
 | :------ | :------ |
-| `value` | `boolean` |
-
-#### Returns
-
-`boolean`
-
-***
-
-### visible
-
-> `get` **visible**(): `boolean`
-
-OBC.Hideable.visible
-
-> `set` **visible**(`value`): `void`
-
-OBC.Hideable.visible
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `value` | `boolean` |
-
-#### Returns
-
-`boolean`
-
-***
-
-### workingPlane
-
-> `get` **workingPlane**(): `null` \| `Plane`
-
-Getter for the working plane for the area measurement.
-
-> `set` **workingPlane**(`plane`): `void`
-
-Setter for the working plane for the area measurement.
-Sets the working plane for the vertex picker.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `plane` | `null` \| `Plane` | The new working plane or null if no plane is to be used. |
-
-#### Returns
-
-`null` \| `Plane`
-
-The current working plane or null if no plane is being used.
-
-## Methods
-
-### cancelCreation()
-
-> **cancelCreation**(): `void`
-
-OBC.Createable.cancelCreation
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-`OBC.Createable.cancelCreation`
-
-***
-
-### create()
-
-> **create**(): `void`
-
-OBC.Createable.create
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-`OBC.Createable.create`
-
-***
-
-### delete()
-
-> **delete**(): `void`
-
-OBC.Createable.delete
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-`OBC.Createable.delete`
-
-***
-
-### deleteAll()
-
-> **deleteAll**(): `void`
-
-Deletes all the dimensions that have been previously created.
-
-#### Returns
-
-`void`
-
-***
-
-### dispose()
-
-> **dispose**(): `void`
-
-OBC.Disposable.dispose
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-`OBC.Disposable.dispose`
-
-***
-
-### endCreation()
-
-> **endCreation**(): `void`
-
-OBC.Createable.endCreation
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-`OBC.Createable.endCreation`
+| `value` | `"free"` \| `"square"` |

@@ -6,10 +6,17 @@ Manager class is responsible for initializing the BIM UI library, defining custo
 
 ### init()
 
-> `static` **init**(): `void`
+> `static` **init**(`querySelectorElements`, `animateOnLoad`): `void`
 
 Initializes the BIM UI library by defining custom elements.
 It ensures that all necessary styles and custom elements are registered for use in BIM UI components.
+
+#### Parameters
+
+| Parameter | Type | Default value |
+| :------ | :------ | :------ |
+| `querySelectorElements` | `string` | `""` |
+| `animateOnLoad` | `boolean` | `true` |
 
 #### Returns
 

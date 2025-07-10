@@ -24,7 +24,19 @@ A helper to easily get the real position of the mouse in the Three.js canvas to 
 
 > `get` **position**(): `Vector2`
 
-The real position of the mouse of the Three.js canvas.
+The real position of the mouse or touch of the Three.js canvas.
+
+#### Returns
+
+`Vector2`
+
+***
+
+### rawPosition
+
+> `get` **rawPosition**(): `Vector2`
+
+The raw position of the mouse or touch of the Three.js canvas.
 
 #### Returns
 

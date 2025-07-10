@@ -2,11 +2,6 @@
 
 A lightweight component to easily create, delete and handle [clipping planes](https://threejs.org/docs/#api/en/materials/Material.clippingPlanes). 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/Clipper). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/Clipper).
 
-## Param
-
-the instance of [Components](Components.md) used.
-E.g. [SimplePlane](SimplePlane.md).
-
 ## Extends
 
 - [`Component`](Component.md)
@@ -65,7 +60,7 @@ Default is [SimplePlane](SimplePlane.md).
 
 ### list
 
-> **list**: [`SimplePlane`](SimplePlane.md)[] = `[]`
+> `readonly` **list**: `DataMap`\<`string`, [`SimplePlane`](SimplePlane.md)\>
 
 A list of all the clipping planes created by this component.
 
@@ -287,7 +282,7 @@ The size of the geometric representation of the clippings planes.
 
 ### create()
 
-> **create**(`world`): `null` \| [`SimplePlane`](SimplePlane.md)
+> **create**(`world`): `Promise`\<`null` \| [`SimplePlane`](SimplePlane.md)\>
 
 [Createable.create](../interfaces/Createable.md#create)
 
@@ -299,7 +294,7 @@ The size of the geometric representation of the clippings planes.
 
 #### Returns
 
-`null` \| [`SimplePlane`](SimplePlane.md)
+`Promise`\<`null` \| [`SimplePlane`](SimplePlane.md)\>
 
 #### Implementation of
 
@@ -309,7 +304,7 @@ The size of the geometric representation of the clippings planes.
 
 ### createFromNormalAndCoplanarPoint()
 
-> **createFromNormalAndCoplanarPoint**(`world`, `normal`, `point`): [`SimplePlane`](SimplePlane.md)
+> **createFromNormalAndCoplanarPoint**(`world`, `normal`, `point`): `string`
 
 Creates a plane in a certain place and with a certain orientation,
 without the need of the mouse.
@@ -324,13 +319,13 @@ without the need of the mouse.
 
 #### Returns
 
-[`SimplePlane`](SimplePlane.md)
+`string`
 
 ***
 
 ### delete()
 
-> **delete**(`world`, `plane`?): `void`
+> **delete**(`world`, `planeId`?): `Promise`\<`void`\>
 
 [Createable.delete](../interfaces/Createable.md#delete)
 
@@ -339,11 +334,11 @@ without the need of the mouse.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `world` | [`World`](../interfaces/World.md) | the world where the plane to delete is. |
-| `plane`? | [`SimplePlane`](SimplePlane.md) | the plane to delete. If undefined, the first plane found under the cursor will be deleted. |
+| `planeId`? | `string` | the plane to delete. If undefined, the first plane found under the cursor will be deleted. |
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
 
 #### Implementation of
 

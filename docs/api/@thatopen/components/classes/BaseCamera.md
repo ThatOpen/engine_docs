@@ -21,18 +21,6 @@ This property is only available if the camera is controllable.
 
 ***
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-#### Inherited from
-
-[`BaseWorldItem`](BaseWorldItem.md) . [`currentWorld`](BaseWorldItem.md#currentworld)
-
-***
-
 ### enabled
 
 > `abstract` **enabled**: `boolean`
@@ -69,6 +57,20 @@ The event payload contains the world instance and the action ("added" or "remove
 > `abstract` **three**: `Camera`
 
 The Three.js camera instance.
+
+## Accessors
+
+### currentWorld
+
+> `set` **currentWorld**(`value`): `void`
+
+The current world this item is associated with. It can be null if no world is currently active.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `null` \| [`World`](../interfaces/World.md) |
 
 ## Methods
 

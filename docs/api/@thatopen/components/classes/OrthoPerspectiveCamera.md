@@ -8,18 +8,6 @@ A flexible camera that uses [yomotsu's cameracontrols](https://github.com/yomots
 
 ## Properties
 
-### currentWorld
-
-> **currentWorld**: `null` \| [`World`](../interfaces/World.md) = `null`
-
-The current world this item is associated with. It can be null if no world is currently active.
-
-#### Inherited from
-
-[`SimpleCamera`](SimpleCamera.md) . [`currentWorld`](SimpleCamera.md#currentworld)
-
-***
-
 ### onAfterUpdate
 
 > `readonly` **onAfterUpdate**: [`Event`](Event.md) \<[`SimpleCamera`](SimpleCamera.md)\>
