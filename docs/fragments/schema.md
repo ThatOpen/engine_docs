@@ -46,9 +46,9 @@ Keep in this example we are **serializing ALL the data of the file to a JSON** j
 You might want to **revisit this example as a reference** when trying to generate your own fragment files from IFC STEP or other data sources to have a reference of how it should look like: 👇🏻
 
 <div style={{position: "relative"}}>
-<iframe src="http://localhost:5173/packages/fragments/src/Importers/IfcImporter/examples/HelloWorldSchema/example.html"></iframe>
+<iframe src="https://thatopen.github.io/engine_fragment/examples/HelloWorldSchema/"></iframe>
 
-<button class="full-screen-btn" onClick={() => window.open("http://localhost:5173/packages/fragments/src/Importers/IfcImporter/examples/HelloWorldSchema/example.html")}> Go Full Screen</button>
+<button class="full-screen-btn" onClick={() => window.open("https://thatopen.github.io/engine_fragment/examples/HelloWorldSchema/")}> Go Full Screen</button>
 </div>
 
 ## ✍🏻 General notes
