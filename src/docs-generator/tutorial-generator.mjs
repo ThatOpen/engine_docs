@@ -66,6 +66,7 @@ for (const repo of repos) {
     if (!tutorial) continue
     const exampleParent = getTutorialParent(exampleRoute)
     const exampleName = splittedRoute[splittedRoute.length - 2]
+    console.log(exampleParent)
     const exampleSrc = `https://thatopen.github.io/${name}/examples/${exampleParent ? `${exampleParent}/${exampleName}` : exampleName}`
     tutorial = `<div style={{position: "relative"}}><iframe src="${exampleSrc}"></iframe><button class="full-screen-btn" onClick={() => window.open("${exampleSrc}")} >Go Full Screen</button></div>\n
 :::info Source
