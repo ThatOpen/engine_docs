@@ -42,7 +42,7 @@ world.renderer = rendererComponent;
 
 const cameraComponent = new OBC.SimpleCamera(components);
 world.camera = cameraComponent;
-cameraComponent.controls.setLookAt(10, 5.5, 5, -4, -1, -6.5);
+await world.camera.controls.setLookAt(68, 23, -8.5, 21.5, -5.5, 23);
 
 viewport.addEventListener("resize", () => {
   rendererComponent.resize();
@@ -79,23 +79,20 @@ fragments.list.onItemSet.add(async ({ value: model }) => {
   await fragments.core.update(true);
 });
 
-const ifcLoader = components.get(OBC.IfcLoader);
-await ifcLoader.setup({
-  autoSetWasm: false,
-  wasm: {
-    path: "https://unpkg.com/web-ifc@0.0.69/",
-    absolute: true,
-  },
-});
+const fragPaths = [
+  "https://thatopen.github.io/engine_components/resources/frags/school_arq.frag",
+  "https://thatopen.github.io/engine_components/resources/frags/school_str.frag",
+];
 
-const file = await fetch(
-  "https://thatopen.github.io/engine_ui-components/resources/small.ifc",
+await Promise.all(
+  fragPaths.map(async (path) => {
+    const modelId = path.split("/").pop()?.split(".").shift();
+    if (!modelId) return null;
+    const file = await fetch(path);
+    const buffer = await file.arrayBuffer();
+    return fragments.core.load(buffer, { modelId });
+  }),
 );
-
-const buffer = await file.arrayBuffer();
-const typedArray = new Uint8Array(buffer);
-await ifcLoader.load(typedArray, true, "small");
-// world.scene.three.add(model.object);
 ```
 :::tip
 You don't need to add the model into the scene to create topics! We just add it for demostration purposes.

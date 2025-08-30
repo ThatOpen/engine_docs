@@ -611,6 +611,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/RendererWith2D",
             "label": "RendererWith2D"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/VolumeMeasurement",
+            "label": "VolumeMeasurement"
           }
         ]
       },
