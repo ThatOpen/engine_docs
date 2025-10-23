@@ -33,7 +33,7 @@ This method is not meant to be used directly. It is used by the IDSSpecification
 
 ### test()
 
-> **test**(`modelIds`): `Promise` \<[`IDSCheckResult`](../type-aliases/IDSCheckResult.md)\>
+> **test**(`modelIds`, `config`): `Promise` \<[`IDSCheckResult`](../type-aliases/IDSCheckResult.md)\>
 
 Tests the model to test against the specification's requirements.
 
@@ -42,6 +42,8 @@ Tests the model to test against the specification's requirements.
 | Parameter | Type |
 | :------ | :------ |
 | `modelIds` | `RegExp`[] |
+| `config` | `object` |
+| `config.skipIfFails` | `boolean` |
 
 #### Returns
 

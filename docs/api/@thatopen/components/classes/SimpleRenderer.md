@@ -267,6 +267,22 @@ Whether is component is [Resizeable](../interfaces/Resizeable.md).
 
 ***
 
+### isSerializable()
+
+> **isSerializable**(): `this is Serializable<any, Record<string, any>>`
+
+Whether is component is Serializable.
+
+#### Returns
+
+`this is Serializable<any, Record<string, any>>`
+
+#### Inherited from
+
+[`BaseRenderer`](BaseRenderer.md) . [`isSerializable`](BaseRenderer.md#isserializable)
+
+***
+
 ### isUpdateable()
 
 > **isUpdateable**(): `this is Updateable`

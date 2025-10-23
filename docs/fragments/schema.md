@@ -95,9 +95,6 @@ table Model {
 
     spatial_structure: SpatialStructure; // A tree representing the spatial relation between elements.
 
-    alignments: [Alignment]; // A set of civil alignments for this model
-
-    geometries: Geometries; // The object containing all implicit geometries of the model.
 }
 ```
 
@@ -786,51 +783,5 @@ For instance, a typical spatial tree can look like this:
 - This model has **3 items**.
 - Their categories are **IFCPROJECT**, **IFCSITE** and **IFCBUILDINGSTOREY** respectively.
 - They form a **spatial tree** where `36` is a child of `35`, which is a child of `34`.
-
-
-### 🛣️ Alignments
-
-A set of **civil alignments** for this model. Each alignment has the following structure: 🗼
-
-```c
-table Alignment {
-    absolute: [uint]; // Geometry representation ids for the absolute respresentation of this alignment
-    horizontal: [uint]; // Geometry representation ids for the horizontal respresentation of this alignment
-    vertical: [uint]; // Geometry representation ids for the vertical respresentation of this alignment
-}
-```
-
-:::tip Just ids?
-
-Alignments don't use `meshes` (explicit), but `geometries` (implicit) to save space and get an exact definition.
-
-:::
-
-
-
-
-### 🧊 Geometries
-
-The object containing **all implicit geometries** of the model. Used for **modelling**, as well as certain entities that have an implicit representation, like **alignments** or **grids**. It has the following structure: 🗼
-
-```c
-table Geometries {
-    samples: [GeometrySample] (required); // An array of implicit geometry samples
-    sample_ids: [uint]; // An array of ids for the implicit geometry samples
-    representations: [GeometryRepresentation] (required); // An array of implicit geometry representations
-    representation_ids: [uint]; // An array of ids for the implicit geometry representations
-    transforms: [Transform] (required); // An array of implicit geometry transforms
-    transform_ids: [uint]; // An array of ids for the implicit geometry transforms
-    representations_samples: [uint]; // An array of id pairs that work as an indexation matching mesh representations ids with implicit samples ids
-    lines: [GeometryLines] (required); // An array of implicit geometry lines
-    walls: [GeometryWall]; // An array of implicit geometry walls
-}
-```
-
-The `samples` and `representations` work similarly to the ones in `Meshes`. 
-
-:::danger What about other geometries?
-
-This is still a work in progress, **so more entities might appear** here as the Fragments Schema evolves and we develop a modelling API. 🫡
 
 :::

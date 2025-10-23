@@ -53,7 +53,7 @@ The IfcImporter is your gateway to converting IFC files into Fragments, enabling
 
 ```js
 const serializer = new FRAGS.IfcImporter();
-serializer.wasm = { absolute: true, path: "https://unpkg.com/web-ifc@0.0.69/" };
+serializer.wasm = { absolute: true, path: "https://unpkg.com/web-ifc@0.0.72/" };
 // A convenient variable to hold the ArrayBuffer data loaded into memory
 let fragmentBytes: ArrayBuffer | null = null;
 let onConversionFinish = () => {};
@@ -78,14 +78,8 @@ Now, let's configure the Fragments library core. This will allow us to load the 
 // You have to copy `/node_modules/@thatopen/fragments/dist/Worker/worker.mjs` to your project directory
 // and provide the relative path in `workerUrl`
 // We use here the internal route of the worker in the library for simplicity purposes
-const githubUrl =
+const workerUrl =
   "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
 const fragments = new FRAGS.FragmentsModels(workerUrl);
 world.camera.controls.addEventListener("rest", () => fragments.update(true));
 ```

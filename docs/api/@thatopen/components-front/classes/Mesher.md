@@ -34,7 +34,7 @@ Retrieves meshes for specified model items, optionally applying a material and c
 | `modelIdMap` | `ModelIdMap` | A map of model IDs to an array of local IDs, specifying which items to retrieve meshes for. |
 | `_config`? | `object` | Optional configuration object. |
 | `_config.applyTransformation`? | `boolean` | Whether to bring the mesh to its original position or leave it at 0,0,0. Defaults to `true`. |
-| `_config.coordinate`? | `boolean` | Whether to apply coordinate system transformation. Defaults to `true`. |
+| `_config.coordinate`? | `boolean` | - |
 | `_config.material`? | `Material` | Optional material to apply to the meshes. If not provided, the default material is used. |
 
 #### Returns

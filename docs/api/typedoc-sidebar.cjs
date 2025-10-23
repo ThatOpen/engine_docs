@@ -611,6 +611,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/RendererWith2D",
             "label": "RendererWith2D"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/VolumeMeasurement",
+            "label": "VolumeMeasurement"
           }
         ]
       },
@@ -681,6 +686,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/enumerations/EditRequestType",
+            "label": "EditRequestType"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/enumerations/ItemConfigClass",
             "label": "ItemConfigClass"
           },
@@ -697,6 +707,11 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/classes/Editor",
+            "label": "Editor"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/classes/FragmentsModel",
             "label": "FragmentsModel"
           },
@@ -704,6 +719,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/classes/FragmentsModels",
             "label": "FragmentsModels"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/classes/GeometryEngine",
+            "label": "GeometryEngine"
           },
           {
             "type": "doc",
@@ -725,6 +745,91 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/Attributes",
             "label": "Attributes"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/BaseCreateRequest",
+            "label": "BaseCreateRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/BaseEditRequest",
+            "label": "BaseEditRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/BaseUpdateRequest",
+            "label": "BaseUpdateRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateGlobalTransformRequest",
+            "label": "CreateGlobalTransformRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateItemRequest",
+            "label": "CreateItemRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateLocalTransformRequest",
+            "label": "CreateLocalTransformRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateMaterialRequest",
+            "label": "CreateMaterialRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateRelationRequest",
+            "label": "CreateRelationRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateRepresentationRequest",
+            "label": "CreateRepresentationRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateSampleRequest",
+            "label": "CreateSampleRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteGlobalTransformRequest",
+            "label": "DeleteGlobalTransformRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteItemRequest",
+            "label": "DeleteItemRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteLocalTransformRequest",
+            "label": "DeleteLocalTransformRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteMaterialRequest",
+            "label": "DeleteMaterialRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteRelationRequest",
+            "label": "DeleteRelationRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteRepresentationRequest",
+            "label": "DeleteRepresentationRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteSampleRequest",
+            "label": "DeleteSampleRequest"
           },
           {
             "type": "doc",
@@ -793,6 +898,56 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateGlobalTransformRequest",
+            "label": "UpdateGlobalTransformRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateItemRequest",
+            "label": "UpdateItemRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateLocalTransformRequest",
+            "label": "UpdateLocalTransformRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateMaterialRequest",
+            "label": "UpdateMaterialRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateMaxLocalIdRequest",
+            "label": "UpdateMaxLocalIdRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateMetadataRequest",
+            "label": "UpdateMetadataRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateRelationRequest",
+            "label": "UpdateRelationRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateRepresentationRequest",
+            "label": "UpdateRepresentationRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateSampleRequest",
+            "label": "UpdateSampleRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateSpatialStructureRequest",
+            "label": "UpdateSpatialStructureRequest"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/VirtualModelConfig",
             "label": "VirtualModelConfig"
           },
@@ -829,8 +984,28 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/CreateRequest",
+            "label": "CreateRequest"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/type-aliases/DataBuffer",
             "label": "DataBuffer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/DeleteRequest",
+            "label": "DeleteRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/EditRequest",
+            "label": "EditRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/ElementData",
+            "label": "ElementData"
           },
           {
             "type": "doc",
@@ -864,6 +1039,61 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/NewElementData",
+            "label": "NewElementData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawCircleExtrusion",
+            "label": "RawCircleExtrusion"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawGlobalTransformData",
+            "label": "RawGlobalTransformData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawItemData",
+            "label": "RawItemData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawMaterial",
+            "label": "RawMaterial"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawMetadataData",
+            "label": "RawMetadataData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawRelationData",
+            "label": "RawRelationData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawRepresentation",
+            "label": "RawRepresentation"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawSample",
+            "label": "RawSample"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawShell",
+            "label": "RawShell"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/RawTransformData",
+            "label": "RawTransformData"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/type-aliases/RelsChange",
             "label": "RelsChange"
           },
@@ -876,6 +1106,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/type-aliases/SelectionInputType",
             "label": "SelectionInputType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/UpdateRequest",
+            "label": "UpdateRequest"
           }
         ]
       },
@@ -883,6 +1118,11 @@ const typedocSidebar = { items: [
         "type": "category",
         "label": "Variables",
         "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/variables/EditRequestTypeNames",
+            "label": "EditRequestTypeNames"
+          },
           {
             "type": "doc",
             "id": "api/@thatopen/fragments/variables/ifcCategoryMap",
@@ -1203,6 +1443,32 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui-obc/classes/World2D",
             "label": "World2D"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Interfaces",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui-obc/interfaces/ItemsDataState",
+            "label": "ItemsDataState"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui-obc/interfaces/LoadFragState",
+            "label": "LoadFragState"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui-obc/interfaces/LoadIfcState",
+            "label": "LoadIfcState"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui-obc/interfaces/TopicFormUI",
+            "label": "TopicFormUI"
           }
         ]
       }

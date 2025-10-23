@@ -45,14 +45,8 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
+const workerUrl =
   "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 
@@ -80,7 +74,9 @@ You can use the sample Fragment files available in our repository for testing. I
 :::
 
 ```js
-const fragPaths = ["https://thatopen.github.io/engine_components/resources/frags/school_arq.frag"];
+const fragPaths = [
+  "https://thatopen.github.io/engine_components/resources/frags/school_arq.frag",
+];
 await Promise.all(
   fragPaths.map(async (path) => {
     const modelId = path.split("/").pop()?.split(".").shift();

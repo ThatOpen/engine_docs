@@ -10,7 +10,6 @@ const orgName = "ThatOpen";
 
 // List of repositories to include in the docs
 let repositories = [
-    // { name: "clay", release: "" },
     {name: "engine_components", release: ""},
     {name: "engine_fragment", release: ""},
     {name: "engine_ui-components", release: ""},

@@ -26,7 +26,7 @@ Component to load, delete and manage [fragments](https://github.com/ThatOpen/eng
 
 ### onDisposed
 
-> `readonly` **onDisposed**: [`Event`](Event.md)\<`unknown`\>
+> `readonly` **onDisposed**: [`Event`](Event.md)\<`undefined`\>
 
 [Disposable.onDisposed](../interfaces/Disposable.md#ondisposed)
 
@@ -208,6 +208,22 @@ Whether is component is [Resizeable](../interfaces/Resizeable.md).
 #### Inherited from
 
 [`Component`](Component.md) . [`isResizeable`](Component.md#isresizeable)
+
+***
+
+### isSerializable()
+
+> **isSerializable**(): `this is Serializable<any, Record<string, any>>`
+
+Whether is component is Serializable.
+
+#### Returns
+
+`this is Serializable<any, Record<string, any>>`
+
+#### Inherited from
+
+[`Component`](Component.md) . [`isSerializable`](Component.md#isserializable)
 
 ***
 

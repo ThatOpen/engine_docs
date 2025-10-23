@@ -20,11 +20,11 @@ Indicates whether the query results should be cached.
 
 ***
 
-### description?
+### customData
 
-> `optional` **description**: `string`
+> **customData**: `Record`\<`string`, `any`\>
 
-An optional description of the query.
+An object to define custom data.
 
 ***
 

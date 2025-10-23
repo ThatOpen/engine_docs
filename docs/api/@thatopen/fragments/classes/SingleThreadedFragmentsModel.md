@@ -244,10 +244,10 @@ Get the absolute positions of the specified items.
 
 ### getSpatialStructure()
 
-> **getSpatialStructure**(): [`SpatialTreeItem`](../interfaces/SpatialTreeItem.md)
+> **getSpatialStructure**(): `any`
 
 Get the spatial structure of the model.
 
 #### Returns
 
-[`SpatialTreeItem`](../interfaces/SpatialTreeItem.md)
+`any`

@@ -16,6 +16,7 @@ In this tutorial, we will import:
 - `@thatopen/ui` to add some simple and cool UI menus.
 - `@thatopen/components-front` to use some frontend-oriented components.
 - `Stats.js` (optional) to measure the performance of our app.
+- `GTAOPass` (optional) to control the ambient occlusion parameters.
 
 ```js
 import * as THREE from "three";
@@ -66,14 +67,8 @@ world.scene.three.background = null;
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+const workerUrl =
+  "/node_modules/@thatopen/fragments/dist/Worker/worker.mjs";
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 
@@ -92,6 +87,15 @@ fragments.list.onItemSet.add(({ value: model }) => {
   model.useCamera(world.camera.three);
   world.scene.three.add(model.object);
   fragments.core.update(true);
+});
+
+// Remove z fighting
+fragments.core.models.materials.list.onItemSet.add(({ value: material }) => {
+  if (!("isLodMaterial" in material && material.isLodMaterial)) {
+    material.polygonOffset = true;
+    material.polygonOffsetUnits = 1;
+    material.polygonOffsetFactor = Math.random();
+  }
 });
 ```
 ### 📂 Loading Fragments Models
@@ -139,6 +143,19 @@ const wallsIds = walls.IFCWALL;
 const [wall1, wall2] = wallsIds;
 outliner.addItems({ [model.modelId]: new Set([wall1, wall2]) });
 ```
+### 📹 Switching the camera
+---
+If you are using an orthoperspective camera, you need to update the postproduction renderer camera:
+
+```js
+// To update the camera
+
+// window.addEventListener("dblclick", () => {
+//   world.camera.projection.toggle();
+//   model.useCamera(world.camera.three);
+//   world.renderer.postproduction.updateCamera();
+// });
+```
 ### ⏱️ Measuring the performance (optional)
 ---
 We'll use the [Stats.js](https://github.com/mrdoob/stats.js) to measure the performance of our app. We will add it to the top left corner of the viewport. This way, we'll make sure that the memory consumption and the FPS of our app are under control.
@@ -151,14 +168,6 @@ stats.dom.style.left = "0px";
 stats.dom.style.zIndex = "unset";
 world.renderer.onBeforeUpdate.add(() => stats.begin());
 world.renderer.onAfterUpdate.add(() => stats.end());
-
-// To update the camera
-
-// window.addEventListener("dblclick", () => {
-//   world.camera.projection.toggle();
-//   model.useCamera(world.camera.three);
-//   world.renderer.postproduction.updateCamera();
-// });
 ```
 ### 🧩 Adding some UI
 ---
@@ -461,8 +470,10 @@ const button = BUI.Component.create<BUI.PanelSection>(() => {
 });
 
 document.body.append(button);
-```
-### 🎉 Wrap up
----
-That's it! You have created an app that looks great thanks to postproduction and exposes a menu to allow the user control it in real time.
 
+//
+```
+//   ### 🎉 Wrap up
+//   ---
+//   That's it! You have created an app that looks great thanks to postproduction and exposes a menu to allow the user control it in real time.
+// 

@@ -31,6 +31,12 @@ will also be implicitly disabled.
 true
 ```
 
+### localId?
+
+> `optional` **localId**: `number`
+
+The local ID of the material
+
 ### opacity
 
 > **opacity**: `number`

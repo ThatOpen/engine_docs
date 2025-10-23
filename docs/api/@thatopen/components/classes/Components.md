@@ -19,7 +19,7 @@ Default value is false.
 
 ### list
 
-> `readonly` **list**: `Map`\<`string`, [`Component`](Component.md)\>
+> `readonly` **list**: `DataMap`\<`string`, [`Component`](Component.md)\>
 
 The list of components created in this app.
 The keys are UUIDs and the values are instances of the components.

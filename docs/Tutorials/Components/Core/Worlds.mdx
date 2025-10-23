@@ -80,14 +80,8 @@ world.scene.three.background = null;
 Now we are ready to start adding some 3D entities to our scene. We will load a Fragments model:
 
 ```js
-const githubUrl =
+const workerUrl =
   "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

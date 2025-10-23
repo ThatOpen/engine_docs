@@ -10,6 +10,7 @@ Abstract class that gives the core elements to create any measurement component.
 
 - [`AreaMeasurement`](AreaMeasurement.md)
 - [`LengthMeasurement`](LengthMeasurement.md)
+- [`VolumeMeasurement`](VolumeMeasurement.md)
 
 ## Type parameters
 

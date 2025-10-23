@@ -30,6 +30,14 @@ Coordinates of the first loaded model, used for coordinate system alignment
 
 ***
 
+### editor
+
+> **editor**: [`Editor`](Editor.md)
+
+The editor instance for managing model edits and changes
+
+***
+
 ### models
 
 > **models**: `MeshManager`
@@ -110,7 +118,7 @@ Loads a fragments model from an ArrayBuffer.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `buffer` | `ArrayBuffer` | The ArrayBuffer containing the fragments data to load. |
+| `buffer` | `Uint8Array` \| `ArrayBuffer` | The ArrayBuffer containing the fragments data to load. |
 | `options` | `object` | Configuration options for loading the model. |
 | `options.camera`? | `PerspectiveCamera` \| `OrthographicCamera` | Optional camera to use for model culling and LOD. |
 | `options.modelId` | `string` | Unique identifier for the model. |

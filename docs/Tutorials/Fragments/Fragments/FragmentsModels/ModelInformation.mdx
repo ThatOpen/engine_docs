@@ -56,14 +56,7 @@ Now, let's configure the Fragments library core. This will allow us to load mode
 // You have to copy `/node_modules/@thatopen/fragments/dist/Worker/worker.mjs` to your project directory
 // and provide the relative path in `workerUrl`
 // We use here the internal route of the worker in the library for simplicity purposes
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+const workerUrl = "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
 const fragments = new FRAGS.FragmentsModels(workerUrl);
 world.camera.controls.addEventListener("rest", () => fragments.update(true));
 
@@ -85,9 +78,7 @@ You can use the sample Fragment files available in our repository for testing. I
 :::
 
 ```js
-const file = await fetch(
-  "https://thatopen.github.io/engine_fragment/resources/frags/school_arq.frag",
-);
+const file = await fetch("https://thatopen.github.io/engine_fragment/resources/frags/school_arq.frag");
 const buffer = await file.arrayBuffer();
 const model = await fragments.load(buffer, { modelId: "example" });
 ```

@@ -6,7 +6,7 @@ The main class for managing a 3D model loaded from a fragments file. Handles geo
 
 ### new FragmentsModel()
 
-> **new FragmentsModel**(`modelId`, `meshManager`, `threads`): [`FragmentsModel`](FragmentsModel.md)
+> **new FragmentsModel**(`modelId`, `meshManager`, `threads`, `editor`): [`FragmentsModel`](FragmentsModel.md)
 
 The constructor of the fragments model. Don't use this directly. Use the [FragmentsModels.load](FragmentsModels.md#load) instead.
 
@@ -17,6 +17,7 @@ The constructor of the fragments model. Don't use this directly. Use the [Fragme
 | `modelId` | `string` |
 | `meshManager` | `MeshManager` |
 | `threads` | `FragmentsConnection` |
+| `editor` | [`Editor`](Editor.md) |
 
 #### Returns
 
@@ -161,6 +162,32 @@ The ID of the model.
 
 ## Methods
 
+### \_edit()
+
+> **\_edit**(`requests`): `Promise`\<`object`\>
+
+Internal method to edit the model. Don't use this directly.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `requests` | [`EditRequest`](../type-aliases/EditRequest.md)[] | The requests to edit the model. |
+
+#### Returns
+
+`Promise`\<`object`\>
+
+##### deltaModelBuffer
+
+> **deltaModelBuffer**: `Uint8Array`
+
+##### ids
+
+> **ids**: `number`[]
+
+***
+
 ### \_finishProcessing()
 
 > **\_finishProcessing**(): `void`
@@ -173,11 +200,93 @@ Internal method to finish processing. Don't use this directly.
 
 ***
 
+### \_getRequests()
+
+> **\_getRequests**(): `Promise`\<`object`\>
+
+Internal method to get the requests of the model. Don't use this directly.
+
+#### Returns
+
+`Promise`\<`object`\>
+
+##### requests
+
+> **requests**: [`EditRequest`](../type-aliases/EditRequest.md)[]
+
+##### undoneRequests
+
+> **undoneRequests**: [`EditRequest`](../type-aliases/EditRequest.md)[]
+
+***
+
 ### \_refreshView()
 
 > **\_refreshView**(): `Promise`\<`void`\>
 
 Internal method to refresh the view of the model. You shouldn't call this directly. Instead, use [FragmentsModels.update](FragmentsModels.md#update).
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### \_reset()
+
+> **\_reset**(): `Promise`\<`void`\>
+
+Internal method to reset the model. Don't use this directly.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### \_save()
+
+> **\_save**(): `Promise`\<`Uint8Array`\>
+
+Internal method to save the model. Don't use this directly.
+
+#### Returns
+
+`Promise`\<`Uint8Array`\>
+
+***
+
+### \_selectRequest()
+
+> **\_selectRequest**(`index`): `Promise`\<`void`\>
+
+Internal method to select a request of the model. Don't use this directly.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `index` | `number` | The index of the request to select. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### \_setRequests()
+
+> **\_setRequests**(`data`): `Promise`\<`void`\>
+
+Internal method to set the requests of the model. Don't use this directly.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `object` | The data to set the requests of the model. |
+| `data.requests`? | [`EditRequest`](../type-aliases/EditRequest.md)[] | - |
+| `data.undoneRequests`? | [`EditRequest`](../type-aliases/EditRequest.md)[] | - |
 
 #### Returns
 
@@ -195,7 +304,7 @@ Internal method to set up the model. Don't use this directly.
 
 | Parameter | Type |
 | :------ | :------ |
-| `data` | `ArrayBuffer` |
+| `data` | `Uint8Array` \| `ArrayBuffer` |
 | `raw`? | `boolean` |
 | `config`? | [`VirtualModelConfig`](../interfaces/VirtualModelConfig.md) |
 
@@ -367,6 +476,66 @@ This method utilizes the `_coordinatesManager` to compute and return a
 
 ***
 
+### getEditedElements()
+
+> **getEditedElements**(): `Promise`\<`number`[]\>
+
+Gets the edited elements of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
+### getGlobalTranformsIdsOfItems()
+
+> **getGlobalTranformsIdsOfItems**(`ids`): `Promise`\<`number`[]\>
+
+Gets the global transforms IDs of the items of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `ids` | `number`[] | The local IDs of the items to get the global transforms IDs of. |
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
+### getGlobalTransforms()
+
+> **getGlobalTransforms**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>\>
+
+Gets the global transforms of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the global transforms to get. If undefined, it will return all global transforms. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>\>
+
+***
+
+### getGlobalTransformsIds()
+
+> **getGlobalTransformsIds**(): `Promise`\<`number`[]\>
+
+Gets all the global transforms IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
 ### getGuidsByLocalIds()
 
 > **getGuidsByLocalIds**(`localIds`): `Promise`\<(`null` \| `string`)[]\>
@@ -445,9 +614,27 @@ Get an item by its ID.
 
 ***
 
+### getItems()
+
+> **getItems**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
+
+Gets the items of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the items to get. If undefined, it will return all items. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
+
+***
+
 ### getItemsByQuery()
 
-> **getItemsByQuery**(`params`): `Promise`\<`number`[]\>
+> **getItemsByQuery**(`params`, `config`?): `Promise`\<`number`[]\>
 
 Retrieves items based on the specified query parameters.
 
@@ -456,6 +643,7 @@ Retrieves items based on the specified query parameters.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `ItemsQueryParams` | The query parameters used to filter and retrieve items. |
+| `config`? | `ItemsQueryConfig` | - |
 
 #### Returns
 
@@ -522,7 +710,7 @@ Get all the data of the specified items.
 
 ### getItemsGeometry()
 
-> **getItemsGeometry**(`localIds`): `Promise` \<[`MeshData`](../type-aliases/MeshData.md)[][]\>
+> **getItemsGeometry**(`localIds`, `lod`): `Promise` \<[`MeshData`](../type-aliases/MeshData.md)[][]\>
 
 Retrieves the geometry data for the specified local IDs.
 
@@ -531,13 +719,26 @@ which contains the necessary information to reconstruct a `THREE.BufferGeometry`
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `localIds` | `number`[] | An array of local IDs for which the geometry data is requested. |
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `localIds` | `number`[] | `undefined` | An array of local IDs for which the geometry data is requested. |
+| `lod` | [`CurrentLod`](../enumerations/CurrentLod.md) | `CurrentLod.GEOMETRY` | - |
 
 #### Returns
 
 `Promise` \<[`MeshData`](../type-aliases/MeshData.md)[][]\>
+
+***
+
+### getItemsIds()
+
+> **getItemsIds**(): `Promise`\<`number`[]\>
+
+Gets all the items IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
 
 ***
 
@@ -621,6 +822,66 @@ Get the local IDs corresponding to the specified GUIDs.
 
 ***
 
+### getLocalTransforms()
+
+> **getLocalTransforms**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>\>
+
+Gets the local transforms of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the local transforms to get. If undefined, it will return all local transforms. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>\>
+
+***
+
+### getLocalTransformsIds()
+
+> **getLocalTransformsIds**(): `Promise`\<`number`[]\>
+
+Gets all the local transforms IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
+### getMaterials()
+
+> **getMaterials**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>\>
+
+Gets the materials of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the materials to get. If undefined, it will return all materials. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>\>
+
+***
+
+### getMaterialsIds()
+
+> **getMaterialsIds**(): `Promise`\<`number`[]\>
+
+Gets all the materials IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
 ### getMaxLocalId()
 
 > **getMaxLocalId**(): `Promise`\<`number`\>
@@ -698,6 +959,84 @@ Retrieves the names of all relations associated with this model.
 `Promise`\<`string`[]\>
 
 A promise that resolves to an array of strings, where each string is the name of a relation.
+
+***
+
+### getRelations()
+
+> **getRelations**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>\>
+
+Gets the relations of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `number`[] | The local IDs of the relations to get. If undefined, it will return all relations. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>\>
+
+***
+
+### getRepresentations()
+
+> **getRepresentations**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>\>
+
+Gets the representations of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the representations to get. If undefined, it will return all representations. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>\>
+
+***
+
+### getRepresentationsIds()
+
+> **getRepresentationsIds**(): `Promise`\<`number`[]\>
+
+Gets all the representations IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
+### getSamples()
+
+> **getSamples**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
+
+Gets the samples of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the samples to get. If undefined, it will return all samples. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
+
+***
+
+### getSamplesIds()
+
+> **getSamplesIds**(): `Promise`\<`number`[]\>
+
+Gets all the samples IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
 
 ***
 
