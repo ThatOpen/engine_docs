@@ -72,6 +72,11 @@ The API hasn't changed for any of the Fragments existing features, so all existi
 That said, if you want to use the newest features, like Fragments Edit API, you will need to regenerate your .frag models.
 
 
+### 🟰 Alignments
+
+The API hasn't changed at all, but the internal structure of Fragments has changed a bit to support parametric geometry / modelling. You just need to regenerate your .frag files (e.g. using the IfcImporter) and everything should be working without touching anything else. If you have any issues, let us know! 👍🏻
+
+
 ## 📙 components
 
 ### 🟰 All existing features
