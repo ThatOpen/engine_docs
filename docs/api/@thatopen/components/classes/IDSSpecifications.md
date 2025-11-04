@@ -179,7 +179,7 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### load()
 
-> **load**(`data`): [`IDSSpecification`](IDSSpecification.md)[]
+> **load**(`data`, `config`): [`IDSSpecification`](IDSSpecification.md)[]
 
 Parses and processes an XML string containing Information Delivery Specification (IDS) data.
 It creates IDSSpecification instances based on the parsed data and returns them in an array.
@@ -190,6 +190,8 @@ Also, the instances are added to the list array.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `string` | The XML string to parse. |
+| `config` | `object` | - |
+| `config.parseNumericString` | `boolean` | - |
 
 #### Returns
 
