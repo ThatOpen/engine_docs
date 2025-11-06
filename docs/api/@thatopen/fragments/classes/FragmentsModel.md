@@ -1171,6 +1171,24 @@ Performs a raycast on the model.
 
 ***
 
+### raycastAll()
+
+> **raycastAll**(`data`): `Promise`\<`null` \| [`RaycastResult`](../interfaces/RaycastResult.md)[]\>
+
+Performs a raycast on the model and returns all the results.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `data` | [`RaycastData`](../interfaces/RaycastData.md) | The data of the raycast. |
+
+#### Returns
+
+`Promise`\<`null` \| [`RaycastResult`](../interfaces/RaycastResult.md)[]\>
+
+***
+
 ### raycastWithSnapping()
 
 > **raycastWithSnapping**(`data`): `Promise`\<`null` \| [`RaycastResult`](../interfaces/RaycastResult.md)[]\>

@@ -47,6 +47,30 @@ objects that are very, very far away (very unlikely).
 
 ***
 
+### geometryProcessSettings
+
+> **geometryProcessSettings**: `object`
+
+Settings for the processing of geometry.
+
+#### normalPrecision
+
+> **normalPrecision**: `number` = `10000000`
+
+#### planePrecision
+
+> **planePrecision**: `number` = `1000`
+
+#### precision
+
+> **precision**: `number` = `1000000`
+
+#### threshold
+
+> **threshold**: `number` = `3000`
+
+***
+
 ### includeRelationNames
 
 > **includeRelationNames**: `boolean` = `false`

@@ -36,6 +36,14 @@ The IfcLoader component is responsible of converting IFC files into Fragments. ð
 
 ***
 
+### onIfcImporterInitialized
+
+> `readonly` **onIfcImporterInitialized**: [`Event`](Event.md)\<`IfcImporter`\>
+
+An event triggered when the IFC importer is initialized.
+
+***
+
 ### onIfcStartedLoading
 
 > `readonly` **onIfcStartedLoading**: [`Event`](Event.md)\<`void`\>
