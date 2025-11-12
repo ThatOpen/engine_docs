@@ -38,6 +38,12 @@ The main reason is because flatbuffers are **very strict** when reading and crea
 
 The very first thing you should to to familiarize yourself with Fragments and flatbuffers is **reading an existing fragments file**. You can find some in our repositories, but our recommendation is that you **download the simple wall** from the [schema example](./schema#-check-it-out) (just press the wall button and then the download button). You can also load your own IFC file there to get its fragment file and download it. 🏃🏻‍♂️
 
+:::tip Beware of the compression!
+
+Keep in mind that some of the .frag files we have in our repositories are compressed. If you have troubles reading them, you can try unzipping them first. If you still have issues, don't hesitate to ask us in the community.
+
+:::
+
 Now you can follow the [flatbuffers reading tutorial](https://flatbuffers.dev/tutorial/#deserialization) (in your programming language) to **read the file and traverse all the information inside it**. If you do it well, you should be able to see the same things that you see in the schema live example. 🚀
 
 ### ↗️ Exporting Fragments

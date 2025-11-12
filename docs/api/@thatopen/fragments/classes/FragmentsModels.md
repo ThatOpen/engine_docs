@@ -63,6 +63,18 @@ Settings that control the behavior of the FragmentsModels system
 
 Whether to automatically coordinate model positions relative to the first loaded model
 
+#### forceUpdateBuffer
+
+> **forceUpdateBuffer**: `number` = `200`
+
+Force update buffer time in milliseconds
+
+#### forceUpdateRate
+
+> **forceUpdateRate**: `number` = `200`
+
+Force update rate in milliseconds
+
 #### graphicsQuality
 
 > **graphicsQuality**: `number` = `0`
