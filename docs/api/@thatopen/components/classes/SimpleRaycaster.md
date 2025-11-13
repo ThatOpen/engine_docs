@@ -85,6 +85,29 @@ used by the renderer.
 
 ***
 
+### castRayFromVector()
+
+> **castRayFromVector**(`origin`, `direction`, `items`): `null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
+
+Casts a ray from a given origin in a given direction and returns the first item found.
+This method also takes into account the clipping planes used by the renderer.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `origin` | `Vector3` | The origin of the ray. |
+| `direction` | `Vector3` | The direction of the ray. |
+| `items` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | The meshes to query. If not provided, it will query all the meshes stored in [World.meshes](../interfaces/World.md#meshes). |
+
+#### Returns
+
+`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>
+
+The first intersection found or `null` if no intersection was found.
+
+***
+
 ### dispose()
 
 > **dispose**(): `void`

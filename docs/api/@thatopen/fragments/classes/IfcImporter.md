@@ -53,6 +53,10 @@ objects that are very, very far away (very unlikely).
 
 Settings for the processing of geometry.
 
+#### forceTransparentSpaces
+
+> **forceTransparentSpaces**: `boolean` = `true`
+
 #### normalPrecision
 
 > **normalPrecision**: `number` = `10000000`

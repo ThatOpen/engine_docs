@@ -1,5 +1,11 @@
 # @thatopen/components
 
+## Enumerations
+
+| Enumeration | Description |
+| :------ | :------ |
+| [RendererMode](enumerations/RendererMode.md) | The mode of the renderer. If MANUAL, the renderer will be updated on command. If AUTO, the renderer will render on every update tick. |
+
 ## Classes
 
 | Class | Description |

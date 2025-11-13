@@ -7,6 +7,17 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "category",
+        "label": "Enumerations",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/enumerations/RendererMode",
+            "label": "RendererMode"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "Classes",
         "items": [
           {
@@ -556,6 +567,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/DimensionLine",
             "label": "DimensionLine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/GlossPass",
+            "label": "GlossPass"
           },
           {
             "type": "doc",

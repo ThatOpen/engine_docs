@@ -4042,7 +4042,7 @@ __metadata:
     ts-node: "npm:^10.0.0"
     tsx: "npm:^4.19.2"
     typescript: "npm:5.4.2"
-    web-ifc: "npm:0.0.72"
+    web-ifc: "npm:0.0.73"
   peerDependencies:
     three: ">=0.175"
     web-ifc: ">=0.0.72"
@@ -17016,6 +17016,13 @@ __metadata:
   version: 0.0.72
   resolution: "web-ifc@npm:0.0.72"
   checksum: 10c0/df5ec8286b41ce2412322375c9357f103106348c49bd11d7330bba9893ae8fbce1b499955d8c5dfae793be95b4f6ee2ffc57915977a50eb05ce7630b3eb350a7
+  languageName: node
+  linkType: hard
+
+"web-ifc@npm:0.0.73":
+  version: 0.0.73
+  resolution: "web-ifc@npm:0.0.73"
+  checksum: 10c0/1c794f0b34cd0e3c3e962f9822b451af088d4bf06b01ad1a3c852d0cc804c678c464a8d1bcf2c99ee4da22c1e96891ab1b77b9ded66bac48aea38b6bff50e36d
   languageName: node
   linkType: hard
 

@@ -61,6 +61,22 @@ Default is `true`.
 
 ***
 
+### mode
+
+> **mode**: [`RendererMode`](../enumerations/RendererMode.md) = `RendererMode.AUTO`
+
+The mode of the renderer. If MANUAL, the renderer will be updated manually. If AUTO, the renderer will render on every update tick.
+
+***
+
+### needsUpdate
+
+> **needsUpdate**: `boolean` = `false`
+
+Whether the renderer needs to be updated. If true, the renderer will be updated on the next frame.
+
+***
+
 ### onAfterUpdate
 
 > **onAfterUpdate**: [`Event`](Event.md)\<`unknown`\>
