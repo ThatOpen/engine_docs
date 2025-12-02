@@ -29,6 +29,14 @@ The CSS object representing the marker.
 
 ***
 
+### wasVisible
+
+> **wasVisible**: `boolean` = `true`
+
+The visibility state of the marker, used for culling (e.g. clipping planes).
+
+***
+
 ### world
 
 > **world**: `World`

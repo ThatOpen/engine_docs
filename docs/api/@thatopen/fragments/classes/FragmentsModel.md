@@ -536,6 +536,18 @@ Gets all the global transforms IDs of the model.
 
 ***
 
+### getGrids()
+
+> **getGrids**(): `Promise`\<`Group`\<`Object3DEventMap`\>\>
+
+Get the grids of the model (if any).
+
+#### Returns
+
+`Promise`\<`Group`\<`Object3DEventMap`\>\>
+
+***
+
 ### getGuidsByLocalIds()
 
 > **getGuidsByLocalIds**(`localIds`): `Promise`\<(`null` \| `string`)[]\>
@@ -1248,6 +1260,24 @@ Resets the highlight of the specified items.
 > **resetVisible**(): `Promise`\<`void`\>
 
 Resets the visibility of all items.
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### setLodMode()
+
+> **setLodMode**(`lodMode`): `Promise`\<`void`\>
+
+Sets the LOD / culling mode of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `lodMode` | [`LodMode`](../enumerations/LodMode.md) | The LOD / culling mode to set. |
 
 #### Returns
 

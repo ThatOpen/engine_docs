@@ -12,6 +12,14 @@ Whether to automatically highlight fragments on click.
 
 ***
 
+### autoUpdateFragments
+
+> **autoUpdateFragments**: `boolean`
+
+Whether to automatically update fragments when highlighting.
+
+***
+
 ### selectEnabled
 
 > **selectEnabled**: `boolean`

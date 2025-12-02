@@ -7,6 +7,7 @@
 | [CurrentLod](enumerations/CurrentLod.md) | Enum representing the current level of detail (LOD) for a mesh. |
 | [EditRequestType](enumerations/EditRequestType.md) | Types of edit requests. |
 | [ItemConfigClass](enumerations/ItemConfigClass.md) | Enum representing the configuration class for an item in a Fragments model. |
+| [LodMode](enumerations/LodMode.md) | Enum representing the mode of the LOD / culling system. |
 | [SnappingClass](enumerations/SnappingClass.md) | Enum representing the snapping class for a raycast operation. |
 
 ## Classes

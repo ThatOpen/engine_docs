@@ -1,5 +1,11 @@
 # @thatopen/components-front
 
+## Enumerations
+
+| Enumeration | Description |
+| :------ | :------ |
+| [EdgeDetectionPassMode](enumerations/EdgeDetectionPassMode.md) | The mode of the edge detection pass. |
+
 ## Classes
 
 | Class | Description |

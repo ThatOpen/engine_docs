@@ -252,6 +252,14 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
         }}">
       </bim-checkbox>
 
+      <bim-checkbox checked label="SMAA enabled"
+        ?checked=${world.renderer!.postproduction.smaaEnabled}
+        @change="${({ target }: { target: BUI.Checkbox }) => {
+          world.renderer!.postproduction.smaaEnabled = target.value;
+          updateIfManualMode();
+        }}">
+      </bim-checkbox>
+
       <bim-dropdown required label="Postproduction style"
         @change="${({ target }: { target: BUI.Dropdown }) => {
           const result = target.value[0] as OBF.PostproductionAspect;
@@ -287,6 +295,15 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
           updateIfManualMode();
         }}">
       </bim-color-input>
+
+      <bim-dropdown label="Edges Mode"
+        @change="${({ target }: { target: BUI.Dropdown }) => {
+          edgesPass.mode = target.value[0] as OBF.EdgeDetectionPassMode;
+          updateIfManualMode();
+        }}">
+        <bim-option checked label="Default" value="${OBF.EdgeDetectionPassMode.DEFAULT}"></bim-option>
+        <bim-option label="Global" value="${OBF.EdgeDetectionPassMode.GLOBAL}"></bim-option>
+      </bim-dropdown>
 
     </bim-panel-section>
 

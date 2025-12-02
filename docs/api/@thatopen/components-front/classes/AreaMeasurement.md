@@ -10,7 +10,7 @@ AreaMeasurement allows users to measure and interact with areas in a 3D environm
 
 ### modes
 
-> **modes**: (`"free"` \| `"square"`)[]
+> **modes**: (`"free"` \| `"square"` \| `"face"`)[]
 
 The possible modes in which a measurement of this type may be created.
 
@@ -62,4 +62,4 @@ Represents the current measurement mode being used.
 
 | Parameter | Type |
 | :------ | :------ |
-| `value` | `"free"` \| `"square"` |
+| `value` | `"free"` \| `"square"` \| `"face"` |

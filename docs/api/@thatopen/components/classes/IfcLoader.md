@@ -233,8 +233,8 @@ Loads an IFC file and processes it for 3D visualization.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `data` | `Uint8Array` | The Uint8Array containing the IFC file data. |
-| `coordinate` | `boolean` | Optional boolean indicating whether to coordinate the loaded IFC data. Default is true. |
-| `name` | `string` | Optional name for the fragments model. |
+| `coordinate` | `boolean` | Boolean indicating whether to coordinate the loaded IFC data. Default is true. |
+| `name` | `string` | Name for the fragments model. |
 | `config`? | `object` | Optional extra data for loading the IFC. |
 | `config.instanceCallback`? | (`importer`) => `void` | - |
 | `config.processData`? | `Omit`\<`ProcessData`, `"bytes"`\> | - |

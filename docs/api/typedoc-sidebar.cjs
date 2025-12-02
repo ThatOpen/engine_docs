@@ -531,6 +531,17 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "category",
+        "label": "Enumerations",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/EdgeDetectionPassMode",
+            "label": "EdgeDetectionPassMode"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "Classes",
         "items": [
           {
@@ -709,6 +720,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/enumerations/ItemConfigClass",
             "label": "ItemConfigClass"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/enumerations/LodMode",
+            "label": "LodMode"
           },
           {
             "type": "doc",
