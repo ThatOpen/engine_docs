@@ -22,8 +22,20 @@ An optional custom ID for the material
 
 > `optional` **depthTest**: `boolean`
 
-Whether to have depth test enabled when rendering this material. When the depth test is disabled, the depth write
-will also be implicitly disabled.
+Whether to have depth test enabled when rendering this material.
+
+#### Default
+
+```ts
+true
+```
+
+### depthWrite?
+
+> `optional` **depthWrite**: `boolean`
+
+Whether to write to the depth buffer. Set to false for transparent objects
+that shouldn't occlude other geometry
 
 #### Default
 
@@ -42,6 +54,13 @@ The local ID of the material
 > **opacity**: `number`
 
 The opacity of the material
+
+### preserveOriginalMaterial?
+
+> `optional` **preserveOriginalMaterial**: `boolean`
+
+Internal flag to preserve base material properties when applying highlights.
+When true, only explicitly set properties (like color or opacity) are applied.
 
 ### renderedFaces
 

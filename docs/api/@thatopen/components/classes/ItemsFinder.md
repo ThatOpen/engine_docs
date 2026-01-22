@@ -117,6 +117,7 @@ Retrieves items from specified models based on a query.
 | `queries` | `ItemsQueryParams`[] | The query parameters to filter items. |
 | `config`? | `object` | - |
 | `config.aggregation`? | [`QueryResultAggregation`](../type-aliases/QueryResultAggregation.md) | - |
+| `config.items`? | [`ModelIdMap`](../type-aliases/ModelIdMap.md) | - |
 | `config.modelIds`? | `RegExp`[] | - |
 
 #### Returns

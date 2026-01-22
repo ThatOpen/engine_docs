@@ -71,7 +71,7 @@ Deserializes a JSON object into a `FinderQuery` instance.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `data` | `Omit` \<[`SerializedFinderQuery`](../interfaces/SerializedFinderQuery.md), `"name"`\> | A `SerializedFinderQuery` object representing the serialized query. |
+| `data` | [`SerializedFinderQuery`](../interfaces/SerializedFinderQuery.md) | A `SerializedFinderQuery` object representing the serialized query. |
 
 #### Returns
 

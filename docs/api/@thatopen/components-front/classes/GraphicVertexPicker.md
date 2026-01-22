@@ -46,7 +46,7 @@ OBC.Disposable.onDisposed
 
 ### get()
 
-> **get**(`config`?): `Promise`\<`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>\>
+> **get**(`config`?): `Promise`\<`any`\>
 
 Retrieves the picked vertex from the world and updates the marker's position.
 If no vertex is picked, the marker is hidden.
@@ -61,6 +61,6 @@ If no vertex is picked, the marker is hidden.
 
 #### Returns
 
-`Promise`\<`null` \| `Intersection`\<`Object3D`\<`Object3DEventMap`\>\>\>
+`Promise`\<`any`\>
 
 The picked vertex, or null if no vertex was picked.

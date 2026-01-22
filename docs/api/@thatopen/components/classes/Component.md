@@ -15,6 +15,7 @@ Components are the building blocks of this library. Components are singleton ele
 - [`Raycasters`](Raycasters.md)
 - [`Clipper`](Clipper.md)
 - [`Views`](Views.md)
+- [`FastModelPickers`](FastModelPickers.md)
 - [`VertexPicker`](VertexPicker.md)
 - [`FragmentsManager`](FragmentsManager.md)
 - [`IfcLoader`](IfcLoader.md)

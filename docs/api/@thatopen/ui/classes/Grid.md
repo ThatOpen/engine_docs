@@ -71,6 +71,33 @@ document.body.appendChild(grid);
 
 ***
 
+### resizeableAreas
+
+> **resizeableAreas**: `boolean` = `false`
+
+Enables resize functionality for grid areas.
+When true, dividers will appear between areas allowing manual resizing.
+Areas can be excluded from resizing using nonResizeableAreas.
+
+#### Default Value
+
+```ts
+false
+```
+
+#### Examples
+
+```html
+<bim-grid resizeable-areas></bim-grid>
+```
+
+```typescript
+grid.resizeableAreas = true;
+grid.nonResizeableAreas = ['ribbon', 'statusBar']; // Lock specific areas
+```
+
+***
+
 ### styles
 
 > `static` **styles**: `CSSResult`

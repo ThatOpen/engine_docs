@@ -85,6 +85,21 @@ The world instance to which this plane belongs.
 
 ## Accessors
 
+### controls
+
+> `get` **controls**(): `TransformControls`
+
+Getter for the transform controls of the clipping plane.
+The controls allow interactive manipulation (translation, rotation, etc.) of the clipping plane.
+
+#### Returns
+
+`TransformControls`
+
+The transform controls of the clipping plane.
+
+***
+
 ### enabled
 
 > `get` **enabled**(): `boolean`

@@ -75,6 +75,22 @@ This function is used to determine whether a given row of data should be include
 
 ***
 
+### groupingTransform
+
+> **groupingTransform**: [`TableGroupingTransform`](../type-aliases/TableGroupingTransform.md)\<`T`\> = `{}`
+
+An object of functions used to transform data values before they are used for grouping logic.
+Each function is keyed by the column name and will be used to transform the value before grouping.
+This allows creating custom grouping categories (e.g., grouping S1,S2,S3,S4 all under "S").
+
+#### Default Value
+
+```ts
+An empty object.
+```
+
+***
+
 ### headersHidden
 
 > **headersHidden**: `boolean` = `false`
@@ -190,7 +206,7 @@ table.columns = columns;
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `value` | ([`ColumnData`](../interfaces/ColumnData.md)\<`T`\> \| keyof `T`)[] | An array of strings or objects of type `ColumnData`. |
+| `value` | (keyof `T` \| [`ColumnData`](../interfaces/ColumnData.md)\<`T`\>)[] | An array of strings or objects of type `ColumnData`. |
 
 ***
 
@@ -239,6 +255,99 @@ table.data = data;
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `value` | [`TableGroupData`](../interfaces/TableGroupData.md)\<`T`\>[] | An array of `TableGroupData` objects representing the table data. |
+
+***
+
+### dataKeys
+
+> `get` **dataKeys**(): keyof `T`[]
+
+Returns all unique keys found in the table data and its children.
+This method traverses through all data rows including nested children
+to collect all possible column keys.
+
+#### Example
+
+```typescript
+const allKeys = table.getAllKeys();
+console.log(allKeys); // ['Column1', 'Column2', 'NestedColumn', ...]
+```
+
+#### Returns
+
+keyof `T`[]
+
+An array of all unique keys found in the data
+
+***
+
+### defaultVisibility
+
+> `set` **defaultVisibility**(`value`): `void`
+
+Determines the default visibility state for all columns.
+When true, all columns are visible by default (except those in visibilityExceptions).
+When false, all columns are hidden by default (except those in visibilityExceptions).
+
+#### Default Value
+
+```ts
+true
+```
+
+#### Example
+
+```typescript
+// Hide all columns by default, show only exceptions
+table.defaultVisibility = false;
+table.visibilityExceptions = ['name', 'id'];
+```
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `boolean` |
+
+***
+
+### groupedBy
+
+> `set` **groupedBy**(`value`): `void`
+
+Defines the columns to group by. Can be set as a comma-separated string attribute
+or as an array of column names programmatically.
+When the data changes, the grouping will be automatically reapplied.
+
+#### Examples
+
+```html
+<bim-table grouped-by="Company,Job"></bim-table>
+```
+
+```typescript
+table.groupedBy = ['Company', 'Job'];
+```
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | keyof `T`[] |
+
+***
+
+### hiddenColumns
+
+> `set` **hiddenColumns**(`value`): `void`
+
+Sets the columns to be hidden from the table display.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `value` | keyof `T`[] | Array of column keys to hide |
 
 ***
 
@@ -296,19 +405,32 @@ A string containing the TSV representation of the table data.
 
 > `get` **value**(): [`TableGroupData`](../interfaces/TableGroupData.md)\<`T`\>[]
 
-Getter for the `value` property.
-Returns the filtered data if a search string is provided, otherwise returns the original data.
+Returns the computed data including filters and groupings.
 
 #### Example
 
 ```typescript
 const tableValue = table.value;
-console.log(tableValue); // Output: The filtered or original data.
+console.log(tableValue);
 ```
 
 #### Returns
 
 [`TableGroupData`](../interfaces/TableGroupData.md)\<`T`\>[]
+
+***
+
+### visibleColumns
+
+> `set` **visibleColumns**(`value`): `void`
+
+Sets the columns to be visible from the table display.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `value` | keyof `T`[] | Array of column keys to show |
 
 ## Methods
 

@@ -27,7 +27,7 @@ A class representing a collection of worlds within a game engine. It manages the
 
 ### list
 
-> **list**: [`DataMap`](DataMap.md)\<`string`, [`World`](../interfaces/World.md)\>
+> **list**: `DataMap`\<`string`, [`World`](../interfaces/World.md)\>
 
 A collection of worlds managed by this component.
 The key is the unique identifier (UUID) of the world, and the value is the World instance.

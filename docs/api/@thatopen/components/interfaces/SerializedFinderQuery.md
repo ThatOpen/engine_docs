@@ -28,6 +28,14 @@ An object to define custom data.
 
 ***
 
+### guid
+
+> **guid**: `string`
+
+The ID of the query.
+
+***
+
 ### name
 
 > **name**: `string`

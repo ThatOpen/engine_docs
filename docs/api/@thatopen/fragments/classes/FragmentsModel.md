@@ -655,7 +655,7 @@ Retrieves items based on the specified query parameters.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `ItemsQueryParams` | The query parameters used to filter and retrieve items. |
-| `config`? | `ItemsQueryConfig` | - |
+| `config`? | `ItemsQueryConfig` | Optional query configuration. |
 
 #### Returns
 
@@ -734,7 +734,7 @@ which contains the necessary information to reconstruct a `THREE.BufferGeometry`
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `localIds` | `number`[] | `undefined` | An array of local IDs for which the geometry data is requested. |
-| `lod` | [`CurrentLod`](../enumerations/CurrentLod.md) | `CurrentLod.GEOMETRY` | - |
+| `lod` | [`CurrentLod`](../enumerations/CurrentLod.md) | `CurrentLod.GEOMETRY` | The level of detail for the geometry (optional). |
 
 #### Returns
 
@@ -813,6 +813,18 @@ Get all the items of the model that have geometry.
 #### Returns
 
 `Promise`\<`Item`[]\>
+
+***
+
+### getLocalIds()
+
+> **getLocalIds**(): `Promise`\<`number`[]\>
+
+Get all the local IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
 
 ***
 
@@ -1063,7 +1075,7 @@ Gets the section (edges and fills) between the model and a given clipping plane.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `plane` | `Plane` | The plane to get the section of. |
-| `localIds`? | `number`[] | - |
+| `localIds`? | `number`[] | The local IDs of the items to get the section of. If undefined, it will return the section of all items. |
 
 #### Returns
 
@@ -1237,6 +1249,24 @@ Performs a rectangle raycast on the model.
 
 ***
 
+### resetColor()
+
+> **resetColor**(`localIds`): `Promise`\<`void`\>
+
+Resets the color of the specified items to their original color while preserving other highlight properties (like opacity).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds` | `undefined` \| `number`[] | The local IDs of the items to reset color for. If undefined, all items will be affected. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
 ### resetHighlight()
 
 > **resetHighlight**(`localIds`?): `Promise`\<`void`\>
@@ -1248,6 +1278,24 @@ Resets the highlight of the specified items.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `localIds`? | `number`[] | The local IDs of the items to reset the highlight of. If undefined, it will reset the highlight of all items. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### resetOpacity()
+
+> **resetOpacity**(`localIds`): `Promise`\<`void`\>
+
+Resets the opacity of the specified items to their original opacity while preserving other highlight properties (like color).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds` | `undefined` \| `number`[] | The local IDs of the items to reset opacity for. If undefined, all items will be affected. |
 
 #### Returns
 
@@ -1267,6 +1315,25 @@ Resets the visibility of all items.
 
 ***
 
+### setColor()
+
+> **setColor**(`localIds`, `color`): `Promise`\<`void`\>
+
+Applies a color to the specified items while preserving original material properties.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds` | `undefined` \| `number`[] | The local IDs of the items to color. If undefined, all items will be colored. |
+| `color` | `Color` | The color to apply. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
 ### setLodMode()
 
 > **setLodMode**(`lodMode`): `Promise`\<`void`\>
@@ -1278,6 +1345,25 @@ Sets the LOD / culling mode of the model.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `lodMode` | [`LodMode`](../enumerations/LodMode.md) | The LOD / culling mode to set. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### setOpacity()
+
+> **setOpacity**(`localIds`, `opacity`): `Promise`\<`void`\>
+
+Applies an opacity to the specified items while preserving original material properties (like color).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds` | `undefined` \| `number`[] | The local IDs of the items to change opacity for. If undefined, all items will be affected. |
+| `opacity` | `number` | The opacity to apply (0 to 1). |
 
 #### Returns
 

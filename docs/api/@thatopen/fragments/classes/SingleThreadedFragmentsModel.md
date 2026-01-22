@@ -91,6 +91,54 @@ Gets coordinates of the model.
 
 ***
 
+### getGlobalTranformsIdsOfItems()
+
+> **getGlobalTranformsIdsOfItems**(`ids`): `Promise`\<`number`[]\>
+
+Gets the global transforms IDs of the items of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `ids` | `number`[] | The local IDs of the items to get the global transforms IDs of. |
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
+### getGlobalTransforms()
+
+> **getGlobalTransforms**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>\>
+
+Gets the global transforms of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the global transforms to get. If undefined, it will return all global transforms. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>\>
+
+***
+
+### getGlobalTransformsIds()
+
+> **getGlobalTransformsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+Gets all the global transforms IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+***
+
 ### getGuidsByLocalIds()
 
 > **getGuidsByLocalIds**(`localIds`): (`null` \| `string`)[]
@@ -106,6 +154,43 @@ Get the GUIDs corresponding to the specified local IDs.
 #### Returns
 
 (`null` \| `string`)[]
+
+***
+
+### getItems()
+
+> **getItems**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
+
+Gets the items of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the items to get. If undefined, it will return all items. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
+
+***
+
+### getItemsByQuery()
+
+> **getItemsByQuery**(`params`, `config`?): `number`[]
+
+Query items based on specified parameters.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `params` | `ItemsQueryParams` | The query parameters. |
+| `config`? | `ItemsQueryConfig` | Optional query configuration. |
+
+#### Returns
+
+`number`[]
 
 ***
 
@@ -146,6 +231,37 @@ Get all the data of the specified items.
 
 ***
 
+### getItemsGeometry()
+
+> **getItemsGeometry**(`localIds`, `lod`?): [`MeshData`](../type-aliases/MeshData.md)[][]
+
+Get geometry data for the specified items.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds` | `number`[] | The local IDs of the items to get geometry for. |
+| `lod`? | [`CurrentLod`](../enumerations/CurrentLod.md) | The level of detail for the geometry (optional). |
+
+#### Returns
+
+[`MeshData`](../type-aliases/MeshData.md)[][]
+
+***
+
+### getItemsIds()
+
+> **getItemsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+Gets all the items IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+***
+
 ### getItemsOfCategories()
 
 > **getItemsOfCategories**(`categories`): `object`
@@ -176,6 +292,18 @@ Get all the items of the model that have geometry.
 
 ***
 
+### getLocalIds()
+
+> **getLocalIds**(): `Promise`\<`number`[]\>
+
+Get all the local IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+***
+
 ### getLocalIdsByGuids()
 
 > **getLocalIdsByGuids**(`guids`): (`null` \| `number`)[]
@@ -191,6 +319,66 @@ Get the local IDs corresponding to the specified GUIDs.
 #### Returns
 
 (`null` \| `number`)[]
+
+***
+
+### getLocalTransforms()
+
+> **getLocalTransforms**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>\>
+
+Gets the local transforms of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the local transforms to get. If undefined, it will return all local transforms. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>\>
+
+***
+
+### getLocalTransformsIds()
+
+> **getLocalTransformsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+Gets all the local transforms IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+***
+
+### getMaterials()
+
+> **getMaterials**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>\>
+
+Gets the materials of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the materials to get. If undefined, it will return all materials. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>\>
+
+***
+
+### getMaterialsIds()
+
+> **getMaterialsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+Gets all the materials IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
 
 ***
 
@@ -239,6 +427,103 @@ Get the absolute positions of the specified items.
 #### Returns
 
 `object`[]
+
+***
+
+### getRelations()
+
+> **getRelations**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>\>
+
+Gets the relations of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `number`[] | The local IDs of the relations to get. If undefined, it will return all relations. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>\>
+
+***
+
+### getRepresentations()
+
+> **getRepresentations**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>\>
+
+Gets the representations of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the representations to get. If undefined, it will return all representations. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>\>
+
+***
+
+### getRepresentationsIds()
+
+> **getRepresentationsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+Gets all the representations IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+***
+
+### getSamples()
+
+> **getSamples**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
+
+Gets the samples of the model.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `localIds`? | `Iterable`\<`number`\> | The local IDs of the samples to get. If undefined, it will return all samples. |
+
+#### Returns
+
+`Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
+
+***
+
+### getSamplesIds()
+
+> **getSamplesIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+Gets all the samples IDs of the model.
+
+#### Returns
+
+`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+
+***
+
+### getSection()
+
+> **getSection**(`plane`, `localIds`?): `Promise`\<`ModelSection`\>
+
+Gets the section (edges and fills) between the model and a given clipping plane.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `plane` | `Plane` | The plane to get the section of. |
+| `localIds`? | `number`[] | The local IDs of the items to get the section of. If undefined, it will return the section of all items. |
+
+#### Returns
+
+`Promise`\<`ModelSection`\>
 
 ***
 

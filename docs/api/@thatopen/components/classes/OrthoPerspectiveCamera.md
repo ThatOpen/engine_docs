@@ -180,6 +180,24 @@ The current navigation mode.
 
 ## Methods
 
+### addCustomNavigationMode()
+
+> **addCustomNavigationMode**(`mode`): `void`
+
+Adds a custom [NavigationMode](../interfaces/NavigationMode.md) to the camera that can be used using the [OrthoPerspectiveCamera.set](OrthoPerspectiveCamera.md#set) method.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `mode` | [`NavigationMode`](../interfaces/NavigationMode.md) | The custom [NavigationMode](../interfaces/NavigationMode.md) to add. |
+
+#### Returns
+
+`void`
+
+***
+
 ### dispose()
 
 > **dispose**(): `void`
@@ -339,7 +357,7 @@ Sets a new [NavigationMode](../interfaces/NavigationMode.md) and disables the pr
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `mode` | [`NavModeID`](../type-aliases/NavModeID.md) | The [NavigationMode](../interfaces/NavigationMode.md) to set. |
+| `mode` | `string` | The [NavigationMode](../interfaces/NavigationMode.md) to set. |
 
 #### Returns
 

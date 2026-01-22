@@ -53,6 +53,17 @@ This is used for raycasting operations.
 
 ***
 
+### useFastModelPicking
+
+> **useFastModelPicking**: `boolean` = `false`
+
+Whether to use fast model picking to optimize raycasting.
+When enabled, the raycaster will first use FastModelPicker to identify
+which model is under the mouse, then only raycast that specific model.
+This can significantly improve performance when there are many models.
+
+***
+
 ### world
 
 > **world**: [`World`](../interfaces/World.md)

@@ -117,6 +117,16 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/FastModelPicker",
+            "label": "FastModelPicker"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/FastModelPickers",
+            "label": "FastModelPickers"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/FinderQuery",
             "label": "FinderQuery"
           },
@@ -1157,6 +1167,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/variables/geometryTypes",
+            "label": "geometryTypes"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/variables/ifcCategoryMap",
             "label": "ifcCategoryMap"
           },
@@ -1196,6 +1211,16 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/classes/Button",
             "label": "Button"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/classes/Chart",
+            "label": "Chart"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/classes/ChartLegend",
+            "label": "ChartLegend"
           },
           {
             "type": "doc",
@@ -1304,6 +1329,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/classes/Tooltip",
+            "label": "Tooltip"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/classes/Viewport",
             "label": "Viewport"
           }
@@ -1322,6 +1352,16 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/interfaces/ColumnData",
             "label": "ColumnData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/ComponentUtils",
+            "label": "ComponentUtils"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/DataClickDetail",
+            "label": "DataClickDetail"
           },
           {
             "type": "doc",
@@ -1381,13 +1421,58 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/ChartDataSet",
+            "label": "ChartDataSet"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/ChartInputData",
+            "label": "ChartInputData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/ChartInputValues",
+            "label": "ChartInputValues"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/ChartLoadFunction",
+            "label": "ChartLoadFunction"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/ConditionFunctions",
             "label": "ConditionFunctions"
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/GeneralInputData",
+            "label": "GeneralInputData"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/GridLayoutsDefinition",
             "label": "GridLayoutsDefinition"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/LabelData",
+            "label": "LabelData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/LabelEventData",
+            "label": "LabelEventData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/LineFillType",
+            "label": "LineFillType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/LinePointStyleType",
+            "label": "LinePointStyleType"
           },
           {
             "type": "doc",
@@ -1406,6 +1491,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/ScatterInputData",
+            "label": "ScatterInputData"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/StatefullComponent",
             "label": "StatefullComponent"
           },
@@ -1421,6 +1511,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/TableGroupingTransform",
+            "label": "TableGroupingTransform"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/TableRowData",
             "label": "TableRowData"
           },
@@ -1428,6 +1523,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/TableRowTemplate",
             "label": "TableRowTemplate"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/Types",
+            "label": "Types"
           }
         ]
       },
@@ -1437,8 +1537,53 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/functions/calculateDividerStyles",
+            "label": "calculateDividerStyles"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/calculateHorizontalResize",
+            "label": "calculateHorizontalResize"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/calculateVerticalResize",
+            "label": "calculateVerticalResize"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/deduplicateDividerAreas",
+            "label": "deduplicateDividerAreas"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/detectDividers",
+            "label": "detectDividers"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/extractUniqueAreas",
+            "label": "extractUniqueAreas"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/functions/getElementValue",
             "label": "getElementValue"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/parseGridTemplate",
+            "label": "parseGridTemplate"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/validateHorizontalResize",
+            "label": "validateHorizontalResize"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/functions/validateVerticalResize",
+            "label": "validateVerticalResize"
           }
         ]
       }

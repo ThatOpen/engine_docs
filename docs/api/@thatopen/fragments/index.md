@@ -109,6 +109,7 @@
 | Variable | Description |
 | :------ | :------ |
 | [EditRequestTypeNames](variables/EditRequestTypeNames.md) | Names of the edit request types (e.g. to display in a history UI). |
+| [geometryTypes](variables/geometryTypes.md) | A Set of unique numbers representing different types of IFC geometries. |
 | [ifcCategoryMap](variables/ifcCategoryMap.md) | A map that associates each unique integer identifier (IFC Entity ID) with its corresponding category name. This map is used to map IFC entities to their respective categories for easier identification and processing. |
 | [limitOf2Bytes](variables/limitOf2Bytes.md) | The maximum value for a 2-byte unsigned integer. |
 

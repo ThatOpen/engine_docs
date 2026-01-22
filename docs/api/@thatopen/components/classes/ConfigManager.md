@@ -22,7 +22,7 @@ A tool to manage all the configuration from the app centrally. 📘 [API](https:
 
 ### list
 
-> **list**: [`DataMap`](DataMap.md)\<`string`, `Configurator`\<`any`, `any`\>\>
+> **list**: `DataMap`\<`string`, `Configurator`\<`any`, `any`\>\>
 
 The list of all configurations of this app.
 

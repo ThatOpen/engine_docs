@@ -47,34 +47,6 @@ objects that are very, very far away (very unlikely).
 
 ***
 
-### geometryProcessSettings
-
-> **geometryProcessSettings**: `object`
-
-Settings for the processing of geometry.
-
-#### forceTransparentSpaces
-
-> **forceTransparentSpaces**: `boolean` = `true`
-
-#### normalPrecision
-
-> **normalPrecision**: `number` = `10000000`
-
-#### planePrecision
-
-> **planePrecision**: `number` = `1000`
-
-#### precision
-
-> **precision**: `number` = `1000000`
-
-#### threshold
-
-> **threshold**: `number` = `3000`
-
-***
-
 ### includeRelationNames
 
 > **includeRelationNames**: `boolean` = `false`
@@ -112,6 +84,19 @@ The values are objects that define the properties for relating and related entit
 
 ***
 
+### replaceSiteElevation
+
+> **replaceSiteElevation**: `boolean` = `true`
+
+Whether to replace the IfcSite.RefElevation with the absolute site elevation.
+
+#### Remarks
+
+The value is calculated taking into consideration the relative positions between entities
+and it is always given in meters.
+
+***
+
 ### replaceStoreyElevation
 
 > **replaceStoreyElevation**: `boolean` = `true`
@@ -140,6 +125,30 @@ Configuration for the web-ifc WASM module
 > **path**: `string` = `"/node_modules/web-ifc/"`
 
 ## Methods
+
+### addAllAttributes()
+
+> **addAllAttributes**(): `void`
+
+Adds all attributes to the classes. Use this with precaution because it can increase the size of the output fragments.
+
+#### Returns
+
+`void`
+
+***
+
+### addAllRelations()
+
+> **addAllRelations**(): `void`
+
+Adds all relations to the relations map. Use this with precaution because it can increase the size of the output fragments.
+
+#### Returns
+
+`void`
+
+***
 
 ### process()
 
