@@ -15,11 +15,11 @@ Here you'll learn how to migrate to version 3.2.x from version 3.1.x.
 
 This means migrating from:
 
-- [@thatopen/fragments@3.1.7](https://www.npmjs.com/package/@thatopen/fragments/v/3.1.7) ➡️ [@thatopen/fragments@3.2.0](https://www.npmjs.com/package/@thatopen/fragments/v/3.2.0)
-- [@thatopen/components@3.1.6](https://www.npmjs.com/package/@thatopen/components/v/3.1.6) ➡️ [@thatopen/components@3.2.0](https://www.npmjs.com/package/@thatopen/components/v/3.2.0)
-- [@thatopen/components-front@3.1.7](https://www.npmjs.com/package/@thatopen/components-front/v/3.1.7) ➡️ [@thatopen/components-front@3.2.0](https://www.npmjs.com/package/@thatopen/components-front/v/3.2.0)
-- [@thatopen/ui@3.1.4](https://www.npmjs.com/package/@thatopen/ui/v/3.1.4) ➡️ [@thatopen/ui@3.2.0](https://www.npmjs.com/package/@thatopen/ui/v/3.2.0)
-- [@thatopen/ui-obc@3.1.6](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.1.6) ➡️ [@thatopen/ui-obc@3.2.1](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.2.1)
+- [@thatopen/fragments@3.2.13](https://www.npmjs.com/package/@thatopen/fragments/v/3.2.13) ➡️ [@thatopen/fragments@3.3.0](https://www.npmjs.com/package/@thatopen/fragments/v/3.3.0)
+- [@thatopen/components@3.2.7](https://www.npmjs.com/package/@thatopen/components/v/3.2.7) ➡️ [@thatopen/components@3.3.0](https://www.npmjs.com/package/@thatopen/components/v/3.3.0)
+- [@thatopen/components-front@3.2.17](https://www.npmjs.com/package/@thatopen/components-front/v/3.2.17) ➡️ [@thatopen/components-front@3.3.0](https://www.npmjs.com/package/@thatopen/components-front/v/3.3.0)
+- [@thatopen/ui@3.2.4](https://www.npmjs.com/package/@thatopen/ui/v/3.2.4) ➡️ [@thatopen/ui@3.3.0](https://www.npmjs.com/package/@thatopen/ui/v/3.3.0)
+- [@thatopen/ui-obc@3.2.3](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.2.3) ➡️ [@thatopen/ui-obc@3.3.0](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.3.0)
 :::
 
 ## ☝🏻 Before you start
@@ -65,16 +65,9 @@ The first thing you will need to do is update [web-ifc](https://www.npmjs.com/we
 
 ## 📘 fragments
 
-### 🟰 All existing features (except Alignments, see below)
+### 🟰 All existing features
 
 The API hasn't changed for any of the Fragments existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
-
-That said, if you want to use the newest features, like Fragments Edit API, you will need to regenerate your .frag models.
-
-
-### 🟰 Alignments
-
-The API hasn't changed at all, but the internal structure of Fragments has changed a bit to support parametric geometry / modelling. You just need to regenerate your .frag files (e.g. using the IfcImporter) and everything should be working without touching anything else. If you have any issues, let us know! 👍🏻
 
 
 ## 📙 components
@@ -83,32 +76,22 @@ The API hasn't changed at all, but the internal structure of Fragments has chang
 
 The API hasn't changed for any of the components existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
 
-
 ## 📕 components-front
 
 ### 🟰 All existing features
 
-The API hasn't changed for any of the Fragments existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
-
-
-### 🟰 CivilNavigators
-
-The API hasn't changed at all, but the internal structure of Fragments has changed a bit to support parametric geometry / modelling. You just need to regenerate your .frag files (e.g. using the IfcImporter) and everything should be working without touching anything else. If you have any issues, let us know! 👍🏻
-
-### 🟰 PostproductionRenderer
-
-The API hasn't changed at all, but if you want to use the latest outline style (Revit Shader), you need to regenerate your .frag files (e.g. using the IfcImporter). Everything else should be working as before. If you have any issues, let us know! 👍🏻
+The API hasn't changed for any of the components front existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
 
 ## 📔 ui
 
 ### 🟰 All existing features
 
-The API hasn't changed for any of the Fragments existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
+The API hasn't changed for any of the ui existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
 
 ## 📓 ui-obc
 
 ### 🟰 All existing features
 
-The API hasn't changed for any of the Fragments existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
+The API hasn't changed for any of the ui obc existing features, so all existing apps should be working with the newest version of the library. If you have any issues, let us know! 👍🏻
 
 

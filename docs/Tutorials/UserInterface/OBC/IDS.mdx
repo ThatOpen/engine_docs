@@ -80,18 +80,27 @@ await ifcLoader.setup({
   wasm: { absolute: false, path: "https://unpkg.com/web-ifc@0.0.74/" },
 });
 
+const githubUrl =
+  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
+const fetchedUrl = await fetch(githubUrl);
+const workerBlob = await fetchedUrl.blob();
+const workerFile = new File([workerBlob], "worker.mjs", {
+  type: "text/javascript",
+});
+const workerUrl = URL.createObjectURL(workerFile);
 const fragments = components.get(OBC.FragmentsManager);
-fragments.init(
-  "/node_modules/@thatopen/fragments/dist/Worker/worker.mjs",
-);
+fragments.init(workerUrl);
 
-world.camera.controls.addEventListener("rest", () =>
-  fragments.core.update(true),
-);
+world.camera.controls.addEventListener("update", () => fragments.core.update());
 
-world.camera.controls.addEventListener("update", () =>
-  fragments.core.update(true),
-);
+// Remove z fighting
+fragments.core.models.materials.list.onItemSet.add(({ value: material }) => {
+  if (!("isLodMaterial" in material && material.isLodMaterial)) {
+    material.polygonOffset = true;
+    material.polygonOffsetUnits = 1;
+    material.polygonOffsetFactor = Math.random();
+  }
+});
 ```
 ### 📜 Defining the IDS Specification
 ---
@@ -137,7 +146,9 @@ fragments.list.onItemSet.add(({ value: model }) => {
   fragments.core.update(true);
 });
 
-const fragPaths = ["/resources/frags/school_arq.frag"];
+const fragPaths = [
+  "https://thatopen.github.io/engine_components/resources/frags/school_arq.frag",
+];
 await Promise.all(
   fragPaths.map(async (path) => {
     const modelId = path.split("/").pop()?.split(".").shift();
@@ -213,7 +224,7 @@ const [barChart] = BUIC.charts.idsChart({
 To complement our charts, we'll add a `<bim-chart-legend>` component. This will act as a legend, showing the different result types (Pass, Fail, Unchecked). In a more advanced implementation, you could connect this to the `Highlighter` to allow users to toggle the visibility of element groups by clicking the labels.
 
 ```js
-const labels = BUI.Component.create<BUI.ChartLabel>(() => {
+const labels = BUI.Component.create<BUI.ChartLegend>(() => {
   return BUI.html`
     <bim-chart-legend>
       <bim-label slot="missing-data">No data to display</bim-label>
@@ -238,8 +249,9 @@ Our charts also support further client-side interaction. To demonstrate, we'll c
 const onHighlight = ({ target }: { target: BUI.Button }) => {
   target.loading = true;
 
-  pieChart.highlight(({value}) => {
-    return value > 100;
+  pieChart.highlight((entry) => {
+    if (!("value" in entry)) return false;
+    return entry.value > 100;
   });
 
   target.loading = false;
@@ -254,8 +266,9 @@ const highlightButton = BUI.Component.create(() => {
 const onFilter = ({ target }: { target: BUI.Button }) => {
   target.loading = true;
 
-  pieChart.filterByValue(({value}) => {
-    return value > 100;
+  pieChart.filterByValue((entry) => {
+    if (!("value" in entry)) return false;
+    return entry.value > 100;
   });
 
   target.loading = false;

@@ -74,14 +74,27 @@ await ifcLoader.setup({
   wasm: { absolute: true, path: "https://unpkg.com/web-ifc@0.0.74/" },
 });
 
+const githubUrl =
+  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
+const fetchedUrl = await fetch(githubUrl);
+const workerBlob = await fetchedUrl.blob();
+const workerFile = new File([workerBlob], "worker.mjs", {
+  type: "text/javascript",
+});
+const workerUrl = URL.createObjectURL(workerFile);
 const fragments = components.get(OBC.FragmentsManager);
-fragments.init(
-  "/node_modules/@thatopen/fragments/dist/Worker/worker.mjs",
-);
+fragments.init(workerUrl);
 
-world.camera.controls.addEventListener("rest", () =>
-  fragments.core.update(true),
-);
+world.camera.controls.addEventListener("update", () => fragments.core.update());
+
+// Remove z fighting
+fragments.core.models.materials.list.onItemSet.add(({ value: material }) => {
+  if (!("isLodMaterial" in material && material.isLodMaterial)) {
+    material.polygonOffset = true;
+    material.polygonOffsetUnits = 1;
+    material.polygonOffsetFactor = Math.random();
+  }
+});
 ```
 ### 📊 Creating the Attribute Charts
 ---
@@ -118,7 +131,7 @@ const labels = BUI.Component.create(() => {
       <bim-label slot="no-chart" icon="ph:warning-fill" style="--bim-icon--c: gold;">No charts Attached</bim-label>
       <bim-label slot="missing-data" icon="ph:warning-fill" style="--bim-icon--c: gold;">No data to display</bim-label>
     </bim-chart-legend>`;
-}) as BUI.ChartLabel;
+}) as BUI.ChartLegend;
 
 const hider = components.get(OBC.Hider);
 
@@ -154,8 +167,16 @@ fragments.list.onItemSet.add(async ({ value: model }) => {
   world.scene.three.add(model.object);
   await fragments.core.update(true);
 
-  updatePie({ attribute: /^Name$/, category: /DOOR/, modelId: model.modelId });
-  updateBar({ attribute: /^Name$/, category: /DOOR/, modelId: model.modelId });
+  updatePie({
+    attribute: /^Name$/,
+    category: /COLUMN/,
+    modelId: model.modelId,
+  });
+  updateBar({
+    attribute: /^Name$/,
+    category: /COLUMN/,
+    modelId: model.modelId,
+  });
 
   pieChart.label = "Pie Chart Data";
   barChart.label = "Bar Chart Data";
@@ -163,7 +184,9 @@ fragments.list.onItemSet.add(async ({ value: model }) => {
 
 const name = "sample";
 
-const fragPaths = ["/resources/frags/school_arq.frag"];
+const fragPaths = [
+  "https://thatopen.github.io/engine_components/resources/frags/school_str.frag",
+];
 await Promise.all(
   fragPaths.map(async (path) => {
     const modelId = path.split("/").pop()?.split(".").shift();
@@ -185,8 +208,9 @@ Our charts come with built-in methods for easy data manipulation. To demonstrate
 const onHighlight = ({ target }: { target: BUI.Button }) => {
   target.loading = true;
 
-  pieChart.highlight(({value}) => {
-    return value > 100;
+  pieChart.highlight((entry) => {
+    if (!("value" in entry)) return false;
+    return entry.value > 100;
   });
 
   target.loading = false;
@@ -201,8 +225,9 @@ const highlightButton = BUI.Component.create(() => {
 const onFilter = ({ target }: { target: BUI.Button }) => {
   target.loading = true;
 
-  pieChart.filterByValue(({value}) => {
-    return value > 100;
+  pieChart.filterByValue((entry) => {
+    if (!("value" in entry)) return false;
+    return entry.value > 100;
   });
 
   target.loading = false;
