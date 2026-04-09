@@ -55,7 +55,8 @@ for (const repo of repos) {
   const libTutorialsPath = path.join("docs", "Tutorials", label)
   if (!fs.existsSync(libTutorialsPath)) fs.mkdirSync(libTutorialsPath)
   setReadmeAsIndex(name, baseURL)
-  for (const exampleRoute of repoExamples) {
+  const examplePaths = repoExamples.map(e => e.path)
+  for (const exampleRoute of examplePaths) {
     const examplePath = `${baseURL}/${exampleRoute}`
     const exampleResponse = await fetch(examplePath)
     if (!exampleResponse.ok) continue
@@ -75,7 +76,7 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ${tutorial}
 `
-    const groups = groupTutorials(repoExamples)
+    const groups = groupTutorials(examplePaths)
     const tutorialName = repo.tutorialsAlias?.[exampleName] ?? exampleName
     if (isMonorepo) {
       let repoAlias
