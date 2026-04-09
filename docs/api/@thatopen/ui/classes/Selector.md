@@ -13,6 +13,17 @@ A custom selector web component for BIM applications. HTML tag: bim-selector
 
 ## Properties
 
+### variant?
+
+> `optional` **variant**: `"underline"`
+
+Sets the visual variant of the selector.
+- `undefined` (default): Filled animated background behind the active option.
+- `"underline"`: No background; the active option gets an accent-colored
+  bottom border and text, while inactive options are muted.
+
+***
+
 ### styles
 
 > `static` **styles**: `CSSResult`

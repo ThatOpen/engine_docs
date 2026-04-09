@@ -141,7 +141,7 @@ fragments.core.models.list.onItemSet.add(({ value: model }) => {
 });
 
 world.renderer.postproduction.enabled = true;
-world.renderer.postproduction.style = OBF.PostproductionAspect.COLOR;
+world.renderer.postproduction.style = OBF.PostproductionAspect.COLOR_PEN;
 ```
 ### 📐 Setting Up a global clipping plane
 Now, let's set up a global clipping plane. We'll use it to clip the building and see inside the floors.
@@ -235,7 +235,7 @@ The Geometry Engine is a library that allows us to easily generate geometry para
 
 ```js
 const api = new WEBIFC.IfcAPI();
-api.SetWasmPath("https://unpkg.com/web-ifc@0.0.75/", true);
+api.SetWasmPath("https://unpkg.com/web-ifc@0.0.77/", true);
 await api.Init();
 const geometryEngine = new FRAGS.GeometryEngine(api);
 ```

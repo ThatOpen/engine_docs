@@ -51,7 +51,7 @@ Indicates whether the world is currently disposing. This is useful for cancellin
 
 ### meshes
 
-> **meshes**: `Set`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>
+> **meshes**: `Set`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>
 
 A set of meshes present in the world. This is taken into account for operations like raycasting.
 

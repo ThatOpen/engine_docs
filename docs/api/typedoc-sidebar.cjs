@@ -22,6 +22,16 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/AngleAnnotations",
+            "label": "AngleAnnotations"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/AnnotationSystem",
+            "label": "AnnotationSystem"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/AsyncEvent",
             "label": "AsyncEvent"
           },
@@ -57,8 +67,18 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/BlockAnnotations",
+            "label": "BlockAnnotations"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/BoundingBoxer",
             "label": "BoundingBoxer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/CalloutAnnotations",
+            "label": "CalloutAnnotations"
           },
           {
             "type": "doc",
@@ -104,6 +124,46 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/classes/Disposer",
             "label": "Disposer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DrawingAnnotations",
+            "label": "DrawingAnnotations"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DrawingLayers",
+            "label": "DrawingLayers"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DrawingViewport",
+            "label": "DrawingViewport"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DrawingViewportHelper",
+            "label": "DrawingViewportHelper"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DrawingViewports",
+            "label": "DrawingViewports"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DxfExporter",
+            "label": "DxfExporter"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/DxfManager",
+            "label": "DxfManager"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/EdgeProjector",
+            "label": "EdgeProjector"
           },
           {
             "type": "doc",
@@ -174,6 +234,16 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/classes/ItemsFinder",
             "label": "ItemsFinder"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/LeaderAnnotations",
+            "label": "LeaderAnnotations"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/LinearAnnotations",
+            "label": "LinearAnnotations"
           },
           {
             "type": "doc",
@@ -257,6 +327,26 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/SlopeAnnotations",
+            "label": "SlopeAnnotations"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/TechnicalDrawing",
+            "label": "TechnicalDrawing"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/TechnicalDrawingHelper",
+            "label": "TechnicalDrawingHelper"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/TechnicalDrawings",
+            "label": "TechnicalDrawings"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/VertexPicker",
             "label": "VertexPicker"
           },
@@ -288,6 +378,16 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/interfaces/AnnotationEntry",
+            "label": "AnnotationEntry"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/AxisGizmoLike",
+            "label": "AxisGizmoLike"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/interfaces/BCFTopicsConfig",
             "label": "BCFTopicsConfig"
           },
@@ -295,6 +395,36 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/BCFViewpoint",
             "label": "BCFViewpoint"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/BaseAnnotationStyle",
+            "label": "BaseAnnotationStyle"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/BlockDefinition",
+            "label": "BlockDefinition"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/BlockInsertion",
+            "label": "BlockInsertion"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/BlockStyle",
+            "label": "BlockStyle"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/CalloutAnnotation",
+            "label": "CalloutAnnotation"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/CalloutAnnotationStyle",
+            "label": "CalloutAnnotationStyle"
           },
           {
             "type": "doc",
@@ -343,8 +473,63 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DimensionUnit",
+            "label": "DimensionUnit"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/interfaces/Disposable",
             "label": "Disposable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DrawingIntersection",
+            "label": "DrawingIntersection"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DrawingLayer",
+            "label": "DrawingLayer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DrawingSystemDescriptor",
+            "label": "DrawingSystemDescriptor"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DrawingViewportConfig",
+            "label": "DrawingViewportConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DxfDrawingEntry",
+            "label": "DxfDrawingEntry"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DxfPaperOptions",
+            "label": "DxfPaperOptions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DxfTextOptions",
+            "label": "DxfTextOptions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DxfViewportEntry",
+            "label": "DxfViewportEntry"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/DxfWriteContext",
+            "label": "DxfWriteContext"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/EdgeProjectionResult",
+            "label": "EdgeProjectionResult"
           },
           {
             "type": "doc",
@@ -355,6 +540,26 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/Hideable",
             "label": "Hideable"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/LeaderAnnotation",
+            "label": "LeaderAnnotation"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/LeaderAnnotationStyle",
+            "label": "LeaderAnnotationStyle"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/LinearAnnotation",
+            "label": "LinearAnnotation"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/LinearAnnotationStyle",
+            "label": "LinearAnnotationStyle"
           },
           {
             "type": "doc",
@@ -410,6 +615,21 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/interfaces/SimpleSceneConfig",
             "label": "SimpleSceneConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/SlopeAnnotation",
+            "label": "SlopeAnnotation"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/SlopeAnnotationStyle",
+            "label": "SlopeAnnotationStyle"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/Transitionable",
+            "label": "Transitionable"
           },
           {
             "type": "doc",
@@ -489,6 +709,21 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/AngleAnnotationData",
+            "label": "AngleAnnotationData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/BlockInsertionData",
+            "label": "BlockInsertionData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/CalloutAnnotationData",
+            "label": "CalloutAnnotationData"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/type-aliases/CameraProjection",
             "label": "CameraProjection"
           },
@@ -499,8 +734,33 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/EnclosureBuilder",
+            "label": "EnclosureBuilder"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/type-aliases/IDSCheckResult",
             "label": "IDSCheckResult"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/LeaderAnnotationData",
+            "label": "LeaderAnnotationData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/LineTickBuilder",
+            "label": "LineTickBuilder"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/LinearAnnotationData",
+            "label": "LinearAnnotationData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/MeshTickBuilder",
+            "label": "MeshTickBuilder"
           },
           {
             "type": "doc",
@@ -519,6 +779,16 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/SlopeAnnotationData",
+            "label": "SlopeAnnotationData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/SlopeFormat",
+            "label": "SlopeFormat"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/type-aliases/ViewpointOrthogonalCamera",
             "label": "ViewpointOrthogonalCamera"
           },
@@ -526,6 +796,188 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/type-aliases/ViewpointPerspectiveCamera",
             "label": "ViewpointPerspectiveCamera"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Variables",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/variables/CircleEnclosure",
+            "label": "CircleEnclosure"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/variables/CloudEnclosure",
+            "label": "CloudEnclosure"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/variables/RectEnclosure",
+            "label": "RectEnclosure"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/variables/Units",
+            "label": "Units"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Functions",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/ArrowTick",
+            "label": "ArrowTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/DiagonalTick",
+            "label": "DiagonalTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/DotTick",
+            "label": "DotTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/FilledArrowTick",
+            "label": "FilledArrowTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/FilledCircleTick",
+            "label": "FilledCircleTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/FilledSquareTick",
+            "label": "FilledSquareTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/NoTick",
+            "label": "NoTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/OpenArrowTick",
+            "label": "OpenArrowTick"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/angleDimensionMachine",
+            "label": "angleDimensionMachine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildAnglePositions",
+            "label": "buildAnglePositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildAnglePreviewPositions",
+            "label": "buildAnglePreviewPositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildCalloutPositions",
+            "label": "buildCalloutPositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildCalloutPreviewPositions",
+            "label": "buildCalloutPreviewPositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildDimensionPositions",
+            "label": "buildDimensionPositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildDimensions",
+            "label": "buildDimensions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildLeaderPositions",
+            "label": "buildLeaderPositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildLeaderPreviewPositions",
+            "label": "buildLeaderPreviewPositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildPreviewPositions",
+            "label": "buildPreviewPositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/buildSlopePositions",
+            "label": "buildSlopePositions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/calloutAnnotationMachine",
+            "label": "calloutAnnotationMachine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/computeAlignmentMatrix",
+            "label": "computeAlignmentMatrix"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/computeAngle",
+            "label": "computeAngle"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/computeBisectorAngle",
+            "label": "computeBisectorAngle"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/computeOffset",
+            "label": "computeOffset"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/formatSlope",
+            "label": "formatSlope"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/getAngleTickEndpoints",
+            "label": "getAngleTickEndpoints"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/getDimensionTickEndpoints",
+            "label": "getDimensionTickEndpoints"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/getSlopeTip",
+            "label": "getSlopeTip"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/leaderAnnotationMachine",
+            "label": "leaderAnnotationMachine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/linearDimensionMachine",
+            "label": "linearDimensionMachine"
           }
         ]
       }
@@ -554,6 +1006,16 @@ const typedocSidebar = { items: [
         "type": "category",
         "label": "Classes",
         "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/Angle",
+            "label": "Angle"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/AngleMeasurement",
+            "label": "AngleMeasurement"
+          },
           {
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/AreaMeasurement",
@@ -588,6 +1050,21 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/DimensionLine",
             "label": "DimensionLine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/DrawingEditor",
+            "label": "DrawingEditor"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/DrawingTool",
+            "label": "DrawingTool"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/FontManager",
+            "label": "FontManager"
           },
           {
             "type": "doc",
@@ -682,6 +1159,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/DrawingPointerEvent",
+            "label": "DrawingPointerEvent"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/interfaces/HighlightEvents",
             "label": "HighlightEvents"
           },
@@ -699,6 +1181,59 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/interfaces/IMarker",
             "label": "IMarker"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/LinearPlacementContext",
+            "label": "LinearPlacementContext"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/PlacementMode",
+            "label": "PlacementMode"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Type Aliases",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/type-aliases/DrawingCursor",
+            "label": "DrawingCursor"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Variables",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/variables/IndividualMode",
+            "label": "IndividualMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/variables/LineMode",
+            "label": "LineMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/variables/SequentialMode",
+            "label": "SequentialMode"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Functions",
+        "items": [
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/functions/dist2D",
+            "label": "dist2D"
           }
         ]
       }
@@ -785,6 +1320,11 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/AggregateMap",
+            "label": "AggregateMap"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/Attributes",
             "label": "Attributes"
           },
@@ -802,6 +1342,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/BaseUpdateRequest",
             "label": "BaseUpdateRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CRSData",
+            "label": "CRSData"
           },
           {
             "type": "doc",
@@ -875,6 +1420,26 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/GroupData",
+            "label": "GroupData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterDeps",
+            "label": "IfcSplitterDeps"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterFs",
+            "label": "IfcSplitterFs"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterPath",
+            "label": "IfcSplitterPath"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/ItemAttribute",
             "label": "ItemAttribute"
           },
@@ -940,6 +1505,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/StyleMaps",
+            "label": "StyleMaps"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/UpdateGlobalTransformRequest",
             "label": "UpdateGlobalTransformRequest"
           },
@@ -997,6 +1567,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/VirtualPropertiesConfig",
             "label": "VirtualPropertiesConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/VoidFillMap",
+            "label": "VoidFillMap"
           }
         ]
       },
@@ -1188,8 +1763,23 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/functions/extract",
+            "label": "extract"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/functions/getObject",
             "label": "getObject"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/split",
+            "label": "split"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/toClassicWorker",
+            "label": "toClassicWorker"
           }
         ]
       }
@@ -1291,6 +1881,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/classes/Selector",
             "label": "Selector"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/classes/Slider",
+            "label": "Slider"
           },
           {
             "type": "doc",
@@ -1605,6 +2200,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui-obc/classes/Manager",
             "label": "Manager"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui-obc/classes/SheetBoard",
+            "label": "SheetBoard"
           },
           {
             "type": "doc",

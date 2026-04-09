@@ -6,7 +6,7 @@ A class representing a simple dimension line in a 3D space.
 
 ### boundingBox
 
-> **boundingBox**: `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>
+> **boundingBox**: `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>
 
 The bounding box for the dimension line.
 

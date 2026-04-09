@@ -224,7 +224,7 @@ Make the camera view fit all the specified meshes.
 
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `meshes` | `Iterable`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> | `undefined` | the meshes to fit. If it is not defined, it will evaluate Components.meshes. |
+| `meshes` | `Iterable`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> | `undefined` | the meshes to fit. If it is not defined, it will evaluate Components.meshes. |
 | `offset` | `number` | `1.5` | the distance to the fit object |
 
 #### Returns

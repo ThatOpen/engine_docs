@@ -61,7 +61,7 @@ Disposes a geometry from memory.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | <p>the</p><p>[geometry](https://threejs.org/docs/#api/en/core/BufferGeometry)</p><p> to remove.</p> |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | <p>the</p><p>[geometry](https://threejs.org/docs/#api/en/core/BufferGeometry)</p><p> to remove.</p> |
 
 #### Returns
 

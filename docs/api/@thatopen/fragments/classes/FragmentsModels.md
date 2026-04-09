@@ -6,7 +6,7 @@ The main class for managing multiple 3D models loaded from fragments files. Hand
 
 ### new FragmentsModels()
 
-> **new FragmentsModels**(`workerURL`): [`FragmentsModels`](FragmentsModels.md)
+> **new FragmentsModels**(`workerURL`?, `options`?): [`FragmentsModels`](FragmentsModels.md)
 
 Creates a new FragmentsModels instance.
 
@@ -14,7 +14,9 @@ Creates a new FragmentsModels instance.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `workerURL` | `string` | The URL of the worker script that will handle the fragments processing. This should point to a copy of the fragments worker file from @thatopen/fragments. |
+| `workerURL`? | `string` | The URL of the worker script that will handle the fragments processing. This should point to a copy of the fragments worker file from @thatopen/fragments. If omitted, it defaults to the worker bundled with the package. |
+| `options`? | `object` | Optional configuration. |
+| `options.classicWorker`? | `boolean` | If true, creates classic (non-module) workers. Use together with `toClassicWorker()`. |
 
 #### Returns
 

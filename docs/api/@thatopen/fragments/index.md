@@ -25,10 +25,12 @@
 
 | Interface | Description |
 | :------ | :------ |
+| [AggregateMap](interfaces/AggregateMap.md) | Parent-child aggregation relationships between building elements (e.g. roof to slabs). |
 | [Attributes](interfaces/Attributes.md) | Interface representing the attributes of a model item. |
 | [BaseCreateRequest](interfaces/BaseCreateRequest.md) | Base interface for all create edit requests. |
 | [BaseEditRequest](interfaces/BaseEditRequest.md) | Base interface for all edit requests. |
 | [BaseUpdateRequest](interfaces/BaseUpdateRequest.md) | Base interface for all update edit requests. |
+| [CRSData](interfaces/CRSData.md) | Interface representing the Coordinate Reference System (CRS) data extracted from an IFC model's IFCPROJECTEDCRS and IFCMAPCONVERSION entities. |
 | [CreateGlobalTransformRequest](interfaces/CreateGlobalTransformRequest.md) | Interface for create global transform edit requests. |
 | [CreateItemRequest](interfaces/CreateItemRequest.md) | Interface for create item edit requests. |
 | [CreateLocalTransformRequest](interfaces/CreateLocalTransformRequest.md) | Interface for create local transform edit requests. |
@@ -43,6 +45,10 @@
 | [DeleteRelationRequest](interfaces/DeleteRelationRequest.md) | Interface for delete relation edit requests. |
 | [DeleteRepresentationRequest](interfaces/DeleteRepresentationRequest.md) | Interface for delete representation edit requests. |
 | [DeleteSampleRequest](interfaces/DeleteSampleRequest.md) | Interface for delete sample edit requests. |
+| [GroupData](interfaces/GroupData.md) | Per-group output data: the set of IFC entity IDs to include and any rewritten relationship lines. |
+| [IfcSplitterDeps](interfaces/IfcSplitterDeps.md) | Dependencies that must be provided by the caller (Node.js modules). |
+| [IfcSplitterFs](interfaces/IfcSplitterFs.md) | Subset of Node.js `fs` used by the splitter. |
+| [IfcSplitterPath](interfaces/IfcSplitterPath.md) | Subset of Node.js `path` used by the splitter. |
 | [ItemAttribute](interfaces/ItemAttribute.md) | Interface representing the attributes of an item in a Fragments model. |
 | [ItemData](interfaces/ItemData.md) | Interface representing the data of an item in a Fragments model. |
 | [ItemsDataConfig](interfaces/ItemsDataConfig.md) | Interface representing the configuration for item data in a Fragments model. |
@@ -56,6 +62,7 @@
 | [RectangleRaycastResult](interfaces/RectangleRaycastResult.md) | Interface representing the result of a rectangle raycast operation. |
 | [RelsModifyChange](interfaces/RelsModifyChange.md) | Interface representing a change event when relations are modified in a model item. |
 | [SpatialTreeItem](interfaces/SpatialTreeItem.md) | Interface representing an item in a spatial tree. |
+| [StyleMaps](interfaces/StyleMaps.md) | Reverse indices for IFCSTYLEDITEM and IFCMATERIALDEFINITIONREPRESENTATION backward pointers. |
 | [UpdateGlobalTransformRequest](interfaces/UpdateGlobalTransformRequest.md) | Interface for update global transform edit requests. |
 | [UpdateItemRequest](interfaces/UpdateItemRequest.md) | Interface for update item edit requests. |
 | [UpdateLocalTransformRequest](interfaces/UpdateLocalTransformRequest.md) | Interface for update local transform edit requests. |
@@ -68,6 +75,7 @@
 | [UpdateSpatialStructureRequest](interfaces/UpdateSpatialStructureRequest.md) | Interface for update spatial structure edit requests. |
 | [VirtualModelConfig](interfaces/VirtualModelConfig.md) | Interface representing the configuration for a virtual model. |
 | [VirtualPropertiesConfig](interfaces/VirtualPropertiesConfig.md) | Interface representing the configuration for virtual properties in a Fragments model. |
+| [VoidFillMap](interfaces/VoidFillMap.md) | Mapping of void/fill relationships between walls, openings, and fillers (doors/windows). |
 
 ## Type Aliases
 
@@ -117,4 +125,7 @@
 
 | Function | Description |
 | :------ | :------ |
+| [extract](functions/extract.md) | Extract specific building elements from an IFC file into a new IFC file. |
 | [getObject](functions/getObject.md) | Recursively converts a Flatbuffers object into a plain JavaScript object. This function traverses the prototype chain of the Flatbuffers object and extracts all properties and their values, handling both primitive values and nested objects/arrays. |
+| [split](functions/split.md) | Split an IFC file into N roughly equal groups of building elements. |
+| [toClassicWorker](functions/toClassicWorker.md) | Fetches a worker script and returns a blob URL with the ES module `export` stripped, so it can be used as a classic (non-module) worker. |

@@ -50,6 +50,16 @@ The object that represents the model in the Three.js scene.
 
 ***
 
+### onViewUpdated
+
+> `readonly` **onViewUpdated**: `Event` \<[`FragmentsModel`](FragmentsModel.md)\>
+
+Event triggered after a view update cycle finishes processing.
+Listeners receive this FragmentsModel instance, allowing queries
+like [getItemsByVisibility](FragmentsModel.md#getitemsbyvisibility) to retrieve seen/unseen elements.
+
+***
+
 ### relsChanges
 
 > `readonly` **relsChanges**: `Map`\<`number`, [`RelsModifyChange`](../interfaces/RelsModifyChange.md)\>
@@ -73,6 +83,16 @@ The connection to the threads that handle the model data.
 
 A map of tiles that have been loaded for the model.
 The key is the tile ID, and the value is the tile.
+
+***
+
+### visibleItems
+
+> `readonly` **visibleItems**: `Set`\<`number`\>
+
+A set of item IDs that are currently visible (i.e. have at least
+one tile rendered on screen). Updated automatically as tiles are
+created and deleted by the mesh manager.
 
 ## Accessors
 
@@ -437,6 +457,20 @@ Get the buffer of the model.
 
 ***
 
+### getCRS()
+
+> **getCRS**(): `Promise`\<`null` \| [`CRSData`](../interfaces/CRSData.md)\>
+
+Get the Coordinate Reference System (CRS) data of the model, if available.
+Returns null if the source IFC file did not contain IFCPROJECTEDCRS
+or IFCCOORDINATEREFERENCESYSTEM entities.
+
+#### Returns
+
+`Promise`\<`null` \| [`CRSData`](../interfaces/CRSData.md)\>
+
+***
+
 ### getCategories()
 
 > **getCategories**(): `Promise`\<`string`[]\>
@@ -707,16 +741,41 @@ Get the spatial structure children of the specified items.
 
 Get all the data of the specified items.
 
+By default, the API returns the item’s built-in attributes only.
+Relations are not traversed unless explicitly enabled via the `config`
+parameter.
+
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `ids` | [`Identifier`](../type-aliases/Identifier.md)[] | The IDs of the items to look up. |
-| `config`? | `Partial` \<[`ItemsDataConfig`](../interfaces/ItemsDataConfig.md)\> | The configuration of the items data. |
+| `config`? | `Partial` \<[`ItemsDataConfig`](../interfaces/ItemsDataConfig.md)\> | The configuration of the items data. By default, all built-in attributes are returned and no relations are loaded. |
 
 #### Returns
 
 `Promise` \<[`ItemData`](../interfaces/ItemData.md)[]\>
+
+#### Examples
+
+```ts
+// Retrieve all built-in attributes and all related entities (full graph)
+await getItemsData(ids, {
+  attributesDefault: true,
+  relationsDefault: { attributes: true, relations: true },
+});
+```
+
+```ts
+// Retrieve built-in attributes and Property Sets only (via IsDefinedBy)
+await getItemsData(ids, {
+  attributesDefault: true,
+  relations: {
+    IsDefinedBy: { attributes: true, relations: true },
+    DefinesOccurrence: { attributes: false, relations: false },
+  },
+});
+```
 
 ***
 
@@ -1125,6 +1184,25 @@ Get the spatial structure of the model.
 #### Returns
 
 `Promise` \<[`SpatialTreeItem`](../interfaces/SpatialTreeItem.md)\>
+
+***
+
+### getSubsetBuffer()
+
+> **getSubsetBuffer**(`localIds`, `raw`): `Promise`\<`any`\>
+
+Get a buffer containing only the specified items and their associated geometry.
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `localIds` | `number`[] | `undefined` | The local IDs of the items to include. |
+| `raw` | `boolean` | `false` | Whether to get the raw buffer. If false, it will be compressed. |
+
+#### Returns
+
+`Promise`\<`any`\>
 
 ***
 

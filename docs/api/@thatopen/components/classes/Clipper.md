@@ -34,6 +34,16 @@ Default is [SimplePlane](SimplePlane.md).
 
 ***
 
+### autoScalePlanes
+
+> **autoScalePlanes**: `boolean` = `true`
+
+Whether clipping planes should automatically scale based on
+camera distance. When true, the plane surface stays proportional
+to the arrow gizmo as you zoom in/out. Default is true.
+
+***
+
 ### config
 
 > **config**: `ClipperConfigManager`
@@ -100,7 +110,7 @@ The deleted clipping plane.
 
 ### onAfterDrag
 
-> `readonly` **onAfterDrag**: [`Event`](Event.md)\<`void`\>
+> `readonly` **onAfterDrag**: [`Event`](Event.md) \<[`SimplePlane`](SimplePlane.md)\>
 
 Event that fires when the user stops dragging a clipping plane.
 
@@ -132,7 +142,7 @@ Event that fires when the user starts deleting a clipping plane.
 
 ### onBeforeDrag
 
-> `readonly` **onBeforeDrag**: [`Event`](Event.md)\<`void`\>
+> `readonly` **onBeforeDrag**: [`Event`](Event.md) \<[`SimplePlane`](SimplePlane.md)\>
 
 Event that fires when the user starts dragging a clipping plane.
 

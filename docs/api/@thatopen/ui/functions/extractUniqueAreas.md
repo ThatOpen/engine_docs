@@ -2,7 +2,7 @@
 
 > **extractUniqueAreas**(`template`): `string`[]
 
-Extracts unique area names from a grid template string. Filters out empty cells (dots) and returns only unique area names.
+Extracts unique area names from a grid template string.
 
 ## Parameters
 

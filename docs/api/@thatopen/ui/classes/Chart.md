@@ -190,13 +190,13 @@ CSS styles for the component.
 
 ### data
 
-> `get` **data**(): `ChartData` \<[`Types`](../type-aliases/Types.md), (`null` \| `number` \| `Point` \| [`number`, `number`] \| `BubbleDataPoint`)[], `unknown`\>
+> `get` **data**(): `ChartData` \<[`Types`](../type-aliases/Types.md), (`null` \| `number` \| [`number`, `number`] \| `Point` \| `BubbleDataPoint`)[], `unknown`\>
 
 The Chart.js data object.
 
 #### Returns
 
-`ChartData` \<[`Types`](../type-aliases/Types.md), (`null` \| `number` \| `Point` \| [`number`, `number`] \| `BubbleDataPoint`)[], `unknown`\>
+`ChartData` \<[`Types`](../type-aliases/Types.md), (`null` \| `number` \| [`number`, `number`] \| `Point` \| `BubbleDataPoint`)[], `unknown`\>
 
 ## Methods
 

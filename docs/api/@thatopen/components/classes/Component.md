@@ -17,6 +17,7 @@ Components are the building blocks of this library. Components are singleton ele
 - [`Views`](Views.md)
 - [`FastModelPickers`](FastModelPickers.md)
 - [`VertexPicker`](VertexPicker.md)
+- [`EdgeProjector`](EdgeProjector.md)
 - [`FragmentsManager`](FragmentsManager.md)
 - [`IfcLoader`](IfcLoader.md)
 - [`Hider`](Hider.md)
@@ -26,6 +27,8 @@ Components are the building blocks of this library. Components are singleton ele
 - [`BCFTopics`](BCFTopics.md)
 - [`IDSSpecifications`](IDSSpecifications.md)
 - [`MeasurementUtils`](MeasurementUtils.md)
+- [`TechnicalDrawings`](TechnicalDrawings.md)
+- [`DxfManager`](DxfManager.md)
 
 ## Properties
 

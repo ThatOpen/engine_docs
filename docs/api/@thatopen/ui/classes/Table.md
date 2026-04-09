@@ -14,6 +14,16 @@ A custom table web component for BIM applications. HTML tag: bim-table
 
 ## Properties
 
+### \_lastSelectedData
+
+`Internal`
+
+> **\_lastSelectedData**: `null` \| `Partial`\<`T`\> = `null`
+
+Tracks the last directly-selected row for Ctrl+click range selection.
+
+***
+
 ### dataTransform
 
 > **dataTransform**: [`TableDataTransform`](../type-aliases/TableDataTransform.md)\<`T`\> = `{}`
@@ -165,6 +175,20 @@ false
 
 ```typescript
 table.preserveStructureOnFilter = true;
+```
+
+***
+
+### rangeSelectKey
+
+> **rangeSelectKey**: `"ctrlKey"` \| `"shiftKey"` \| `"altKey"` \| `"metaKey"` = `"ctrlKey"`
+
+The modifier key used for range selection (click one row, hold key, click another to select all in between).
+
+#### Default Value
+
+```ts
+"ctrlKey"
 ```
 
 ***

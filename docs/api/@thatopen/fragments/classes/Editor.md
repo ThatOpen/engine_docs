@@ -238,7 +238,7 @@ Creates a shell in the specified Fragments model.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `modelId` | `string` | The ID of the model to create the shell in. |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry of the shell to create. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry of the shell to create. |
 
 #### Returns
 

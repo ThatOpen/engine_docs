@@ -11,15 +11,15 @@ We deliver new features and bugfixes with each release. While **we try to keep t
 
 :::tip What does this guide cover?
 
-Here you'll learn how to migrate to version 3.2.x from version 3.1.x.
+Here you'll learn how to migrate to version 3.4.x from version 3.3.x.
 
 This means migrating from:
 
-- [@thatopen/fragments@3.2.13](https://www.npmjs.com/package/@thatopen/fragments/v/3.2.13) ➡️ [@thatopen/fragments@3.3.0](https://www.npmjs.com/package/@thatopen/fragments/v/3.3.0)
-- [@thatopen/components@3.2.7](https://www.npmjs.com/package/@thatopen/components/v/3.2.7) ➡️ [@thatopen/components@3.3.0](https://www.npmjs.com/package/@thatopen/components/v/3.3.0)
-- [@thatopen/components-front@3.2.17](https://www.npmjs.com/package/@thatopen/components-front/v/3.2.17) ➡️ [@thatopen/components-front@3.3.0](https://www.npmjs.com/package/@thatopen/components-front/v/3.3.0)
-- [@thatopen/ui@3.2.4](https://www.npmjs.com/package/@thatopen/ui/v/3.2.4) ➡️ [@thatopen/ui@3.3.0](https://www.npmjs.com/package/@thatopen/ui/v/3.3.0)
-- [@thatopen/ui-obc@3.2.3](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.2.3) ➡️ [@thatopen/ui-obc@3.3.0](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.3.0)
+- [@thatopen/fragments@3.3.7](https://www.npmjs.com/package/@thatopen/fragments/v/3.3.7) ➡️ [@thatopen/fragments@3.4.0](https://www.npmjs.com/package/@thatopen/fragments/v/3.4.0)
+- [@thatopen/components@3.3.3](https://www.npmjs.com/package/@thatopen/components/v/3.3.3) ➡️ [@thatopen/components@3.4.0](https://www.npmjs.com/package/@thatopen/components/v/3.4.0)
+- [@thatopen/components-front@3.3.3](https://www.npmjs.com/package/@thatopen/components-front/v/3.3.3) ➡️ [@thatopen/components-front@3.4.0](https://www.npmjs.com/package/@thatopen/components-front/v/3.4.0)
+- [@thatopen/ui@3.3.7](https://www.npmjs.com/package/@thatopen/ui/v/3.3.7) ➡️ [@thatopen/ui@3.4.0](https://www.npmjs.com/package/@thatopen/ui/v/3.4.0)
+- [@thatopen/ui-obc@3.3.3](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.3.3) ➡️ [@thatopen/ui-obc@3.4.0](https://www.npmjs.com/package/@thatopen/ui-obc/v/3.4.0)
 :::
 
 ## ☝🏻 Before you start

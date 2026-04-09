@@ -45,7 +45,7 @@ Indicates whether the world is currently being disposed. This is useful to preve
 
 ### meshes
 
-> `readonly` **meshes**: `Set`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>
+> `readonly` **meshes**: `Set`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>\>
 
 All the loaded [meshes](https://threejs.org/docs/#api/en/objects/Mesh). These meshes will be taken into account in operations like raycasting.
 

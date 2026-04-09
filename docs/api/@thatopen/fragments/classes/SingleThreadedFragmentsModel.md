@@ -67,6 +67,18 @@ Get the buffer of the model.
 
 ***
 
+### getCRS()
+
+> **getCRS**(): `any`
+
+Get the Coordinate Reference System (CRS) data of the model, if available.
+
+#### Returns
+
+`any`
+
+***
+
 ### getCategories()
 
 > **getCategories**(): `string`[]
@@ -536,3 +548,22 @@ Get the spatial structure of the model.
 #### Returns
 
 `any`
+
+***
+
+### getSubsetBuffer()
+
+> **getSubsetBuffer**(`localIds`, `raw`): `Uint8Array`
+
+Get a buffer containing only the specified items and their associated geometry.
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `localIds` | `number`[] | `undefined` | The local IDs of the items to include. |
+| `raw` | `boolean` | `false` | Whether to get the raw buffer. If false, it will be compressed. |
+
+#### Returns
+
+`Uint8Array`

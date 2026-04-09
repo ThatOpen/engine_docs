@@ -40,7 +40,7 @@ Generates an arc geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `ArcData` | The data to generate the arc. |
 
 #### Returns
@@ -59,7 +59,7 @@ Generates a bounding box geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `BboxData` | The data to generate the bounding box. |
 
 #### Returns
@@ -78,7 +78,7 @@ Generates a boolean operation geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `BooleanOperationData` | The data to generate the boolean operation. |
 
 #### Returns
@@ -97,7 +97,7 @@ Generates a circular sweep geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `CircularSweepData` | The data to generate the circular sweep. |
 
 #### Returns
@@ -116,7 +116,7 @@ Generates a clothoid geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `ClothoidData` | The data to generate the clothoid. |
 
 #### Returns
@@ -135,7 +135,7 @@ Generates a cylindrical revolve geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `CylindricalRevolveData` | The data to generate the cylindrical revolve. |
 
 #### Returns
@@ -154,7 +154,7 @@ Generates an extrusion geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `ExtrusionData` | The data to generate the extrusion. |
 
 #### Returns
@@ -173,7 +173,7 @@ Generates a parabola geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `ParabolaData` | The data to generate the parabola. |
 
 #### Returns
@@ -192,7 +192,7 @@ Generates a profile geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `ProfileData` | The data to generate the profile. |
 
 #### Returns
@@ -231,7 +231,7 @@ Generates a revolve geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `RevolveData` | The data to generate the revolve. |
 
 #### Returns
@@ -250,7 +250,7 @@ Generates a sweep geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `SweepData` | The data to generate the sweep. |
 
 #### Returns
@@ -269,7 +269,7 @@ Generates a wall geometry from the given data.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`\> | The geometry to store the result. |
+| `geometry` | `BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\> | The geometry to store the result. |
 | `data` | `WallData` | The data to generate the wall. |
 
 #### Returns

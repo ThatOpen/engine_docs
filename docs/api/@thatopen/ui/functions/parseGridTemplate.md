@@ -2,7 +2,7 @@
 
 > **parseGridTemplate**(`template`): (`string` \| `null`)[][]
 
-Parses a grid template string and returns a 2D matrix representation. Handles both quoted strings and newline-delimited formats.
+Parses a grid template string and returns a 2D matrix representation.
 
 ## Parameters
 

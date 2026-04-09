@@ -109,7 +109,7 @@ This method also takes into account the clipping planes used by the renderer.
 | :------ | :------ | :------ |
 | `origin` | `Vector3` | The origin of the ray. |
 | `direction` | `Vector3` | The direction of the ray. |
-| `items` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | The meshes to query. If not provided, it will query all the meshes stored in [World.meshes](../interfaces/World.md#meshes). |
+| `items` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | The meshes to query. If not provided, it will query all the meshes stored in [World.meshes](../interfaces/World.md#meshes). |
 
 #### Returns
 

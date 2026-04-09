@@ -21,6 +21,7 @@
 | [Panel](classes/Panel.md) | A custom panel web component for BIM applications. HTML tag: bim-panel |
 | [PanelSection](classes/PanelSection.md) | A custom panel section web component for BIM applications. HTML tag: bim-panel-section |
 | [Selector](classes/Selector.md) | A custom selector web component for BIM applications. HTML tag: bim-selector |
+| [Slider](classes/Slider.md) | A custom slider web component for BIM applications. HTML tag: bim-slider |
 | [Tab](classes/Tab.md) | A custom tab web component for BIM applications. HTML tag: bim-tab |
 | [Table](classes/Table.md) | A custom table web component for BIM applications. HTML tag: bim-table |
 | [Tabs](classes/Tabs.md) | A custom tabs web component for BIM applications. HTML tag: bim-tabs |
@@ -86,8 +87,8 @@
 | [calculateVerticalResize](functions/calculateVerticalResize.md) | Calculates new sizes for a vertical resize operation. |
 | [deduplicateDividerAreas](functions/deduplicateDividerAreas.md) | Removes duplicate area names from divider area arrays. Each adjacent area should only appear once in the divider's area list. |
 | [detectDividers](functions/detectDividers.md) | Detects all dividers (vertical and horizontal) in a grid matrix. A divider exists where two adjacent areas have different names. |
-| [extractUniqueAreas](functions/extractUniqueAreas.md) | Extracts unique area names from a grid template string. Filters out empty cells (dots) and returns only unique area names. |
+| [extractUniqueAreas](functions/extractUniqueAreas.md) | Extracts unique area names from a grid template string. |
 | [getElementValue](functions/getElementValue.md) | Extracts and returns the value of an HTML element's attributes. |
-| [parseGridTemplate](functions/parseGridTemplate.md) | Parses a grid template string and returns a 2D matrix representation. Handles both quoted strings and newline-delimited formats. |
+| [parseGridTemplate](functions/parseGridTemplate.md) | Parses a grid template string and returns a 2D matrix representation. |
 | [validateHorizontalResize](functions/validateHorizontalResize.md) | Validates if a horizontal resize operation is allowed. Prevents resizing if it would make an area smaller than the minimum size. Only blocks movement in the direction that would shrink an area below the minimum. |
 | [validateVerticalResize](functions/validateVerticalResize.md) | Validates if a vertical resize operation is allowed. Prevents resizing if it would make an area smaller than the minimum size. Only blocks movement in the direction that would shrink an area below the minimum. |

@@ -6,6 +6,14 @@ Interface representing the definition of a material.
 
 ## Type declaration
 
+### \_explicitProps?
+
+> `optional` **\_explicitProps**: `string`[]
+
+Internal array tracking which properties were explicitly set by the caller.
+Used with preserveOriginalMaterial to avoid overwriting original material 
+properties with default values during serialization.
+
 ### color
 
 > **color**: `THREE.Color`
