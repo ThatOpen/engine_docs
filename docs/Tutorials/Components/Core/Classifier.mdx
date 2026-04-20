@@ -6,7 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 📄 Making Items Groupings
 ---
-Classifications are a powerful way to organize your BIM models. They allow you to group them according to different parameters. For example: getting all the walls, or all the items that belong to a specific floor or room. In this tutorial, you'll learn how to classify your BIM models by different criterias, and how to get the list of items that belong to a specific category. Let's go!
+Isolating all walls on a specific floor, highlighting every element in a room, or letting users browse the model by discipline all require grouping elements by some criteria. Without a classification system, that means writing custom queries and managing element sets manually for every feature. The `Classifier` centralizes that logic into named groups that can combine fixed element lists with live queries — and update automatically when new models load.
+This tutorial covers creating a custom classification group with static elements (specific slabs added programmatically), adding a dynamic query to that same group (first floor walls), using the built-in classifiers to group all elements by category and by building storey, and isolating any group's elements with one click from a UI panel. By the end, you'll have a flexible classification system ready to drive visibility, selection, and filtering features in any BIM application.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -44,14 +45,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

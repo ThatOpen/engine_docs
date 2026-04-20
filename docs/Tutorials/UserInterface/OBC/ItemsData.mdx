@@ -6,13 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## Displaying data the simplest way 🔥🔥
 ---
-What is a good BIM app if you don't give users a nice way to visualize its model properties, right? Well, hold tight as here you will learn all you need to know in order to use the power of UI Components to accomplish that!
-### 🖖 Importing our Libraries
-In this tutorial, we will import:
-- @thatopen/ui to add some simple and cool UI menus.
-- @thatopen/components to set up the barebone of our app.
-- @thatopen/components-front to use some frontend-oriented components.
-- @thatopen/ui-obc to add some cool pre-made UI menus for components.
+Users who click on an element in a BIM viewer expect to see its attributes and property sets immediately in a side panel — but querying the model data, formatting it into a hierarchy, and keeping the panel in sync with selection requires wiring several systems together manually.
+The items data table factory produces a pre-structured properties panel that updates automatically when fed a model ID map, displaying all attributes and relations in a searchable, expandable tree.
+This tutorial covers initializing the Fragment loader and adding loaded models to the scene; creating the properties table with an empty initial model ID map; wiring the Highlighter so the table updates on every selection change and clears on deselect; toggling row expansion; copying the current table contents as TSV to the clipboard; and filtering properties with a debounced search input.
+By the end, you'll have a properties panel that populates with the selected element's full data on every click, with expand, copy, and search controls.
 
 ```js
 import * as BUI from "@thatopen/ui";
@@ -79,14 +76,9 @@ await ifcLoader.setup();
 Just after we have setup the loader, let's then configure the `FragmentManager` so any time a model is loaded it gets added to some world scene created before: 
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

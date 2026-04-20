@@ -1,6 +1,6 @@
 # FragmentsManager
 
-Component to load, delete and manage [fragments](https://github.com/ThatOpen/engine_fragment) efficiently. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/FragmentsManager). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/FragmentsManager).
+Component to load, delete and manage [fragments](https://github.com/ThatOpen/engine_fragment) efficiently. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Core/FragmentsManager). 📘 [API](https://docs.thatopen.com/api/@thatopen/components/classes/FragmentsManager). Before calling [FragmentsManager.init](FragmentsManager.md#init), you need a URL for the fragments worker. The recommended way to get it is [FragmentsManager.getWorker](FragmentsManager.md#getworker), which fetches the version-matched worker from unpkg.
 
 ## Extends
 
@@ -147,6 +147,30 @@ A fragment ID map, where the keys are fragment IDs and the values are the corres
 
 ***
 
+### init()
+
+> **init**(`workerURL`, `options`?): `void`
+
+Initializes the fragments core with the given worker URL.
+The recommended way to obtain the URL is [FragmentsManager.getWorker](FragmentsManager.md#getworker):
+```ts
+fragments.init(await OBC.FragmentsManager.getWorker());
+```
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `workerURL` | `string` |
+| `options`? | `object` |
+| `options.classicWorker`? | `boolean` |
+
+#### Returns
+
+`void`
+
+***
+
 ### isConfigurable()
 
 > **isConfigurable**(): `this is Configurable<any, any>`
@@ -260,3 +284,24 @@ Converts a fragment ID map to a collection of GUIDs.
 `Promise`\<`string`[]\>
 
 An array of GUIDs.
+
+***
+
+### getWorker()
+
+> `static` **getWorker**(): `Promise`\<`string`\>
+
+Returns a blob URL for the fragments worker matching the installed
+`@thatopen/fragments` version. Delegates to FRAGS.FragmentsModels.getWorker.
+This is the recommended way to obtain the URL passed to [FragmentsManager.init](FragmentsManager.md#init).
+
+#### Returns
+
+`Promise`\<`string`\>
+
+#### Example
+
+```ts
+const fragments = components.get(OBC.FragmentsManager);
+fragments.init(await OBC.FragmentsManager.getWorker());
+```

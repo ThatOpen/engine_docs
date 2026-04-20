@@ -6,7 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## Getting Your Fragments Model Information 🗒️
 ---
-A BIM model is only as valuable as the information it provides. Retrieving specific data efficiently is crucial for any workflow. In this tutorial, you'll learn how to extract and utilize data from Fragments with ease!
+When reviewing a BIM model in a web viewer, clicking an element should show its name, property sets, and where it sits in the building hierarchy — but querying that information from a loaded model, navigating IFC relations, and formatting the result for display requires understanding the internal data structure.
+The Fragment model API provides a unified query interface that handles attributes, relations, categories, and spatial structure through a single, consistent set of methods.
+This tutorial covers clicking to select and highlight an element via raycasting; retrieving all attributes or a specific subset (e.g. only Name); fetching related property sets by traversing IsDefinedBy relations and formatting the result into a plain object; listing all element names in a given category; and reading the full spatial structure hierarchy of the model.
+By the end, you'll have a working element inspector that can display attributes, property sets, category queries, and spatial structure from any clicked element in a Fragment model.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -53,16 +56,9 @@ Not necessarily! While @thatopen/components simplifies the process of setting up
 Now, let's configure the Fragments library core. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-// You have to copy `/node_modules/@thatopen/fragments/dist/Worker/worker.mjs` to your project directory
-// and provide the relative path in `workerUrl`
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsModels.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `new FragmentsModels(...)` if you'd rather host the worker yourself.
+const workerUrl = await FRAGS.FragmentsModels.getWorker();
 const fragments = new FRAGS.FragmentsModels(workerUrl);
 world.camera.controls.addEventListener("update", () => fragments.update());
 
@@ -186,7 +182,7 @@ For Fragments derived from IFC files, the possible relations and their names are
 // `IsDefinedBy` is the relationship that links property sets (psets) to the element they define.
 // `DefinesOccurrence` is the relationship that links a property set to the elements that use it.
 // In this case, we don't need to know the elements that have the psets (just the psets of the selected element)
-// Then we don't want to get DefinesOcurrences items and that's by attributes and relations are set to false.
+// Then we don't want to get DefinesOccurrences items and that's by attributes and relations are set to false.
 // For more information, please refer to the IFC schema documentation
 const getItemPropertySets = async () => {
   if (!localId) return null;
@@ -195,7 +191,7 @@ const getItemPropertySets = async () => {
     attributes: ["Name", "NominalValue"],
     relations: {
       IsDefinedBy: { attributes: true, relations: true },
-      DefinesOcurrence: { attributes: false, relations: false },
+      DefinesOccurrence: { attributes: false, relations: false },
     },
   });
   return (data.IsDefinedBy as FRAGS.ItemData[]) ?? [];

@@ -1309,6 +1309,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/classes/LoadAbortedError",
+            "label": "LoadAbortedError"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/classes/SingleThreadedFragmentsModel",
             "label": "SingleThreadedFragmentsModel"
           }
@@ -1643,6 +1648,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/type-aliases/ItemSelectionType",
             "label": "ItemSelectionType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/LoadProgressEvent",
+            "label": "LoadProgressEvent"
           },
           {
             "type": "doc",

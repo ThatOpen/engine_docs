@@ -6,7 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## Steel Detailing 🔧
 ---
-In this tutorial, we'll explore how to create detailed steel structures using the Fragments API. We'll learn how to generate steel frames, base plates, connections, and other structural steel elements with proper geometric relationships and detailing. Let's dive in!
+Structural engineers exploring preliminary frame configurations — bay count, span, section sizes — need to see the full 3D result including base plates and anchor details before committing to detailed design, but every parameter change in a traditional authoring tool means rebuilding the model by hand.
+The Fragments geometry engine provides H-profile extrusion, circle-extrusion paths for anchor hooks, and flat plate primitives that compose into complete structural assemblies. Combined with the Elements API, each generated mesh becomes a named Fragment element that can be viewed, edited, and re-exported.
+This tutorial covers defining parametric settings for span, modules, column section dimensions, and base plate geometry; generating a wireframe skeleton from start-point pairs; extruding H-profiles along each member axis; creating base plates, cross stiffeners, corner plates, anchor bolts, and hooked rebar using circle-extrusion paths; registering every piece as a Fragment element via the editor API; debounced regeneration on parameter change; and a live UI panel for length and module count sliders.
+By the end, you'll have a fully parametric steel frame that rebuilds in real time as you adjust span and module count, with correct H-section profiles, base plate connection details, and anchor hooks rendered with PBR metalness and HDRI lighting.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -17,7 +20,7 @@ import * as THREE from "three";
 import * as BUI from "@thatopen/ui";
 import * as WEBIFC from "web-ifc";
 import Stats from "stats.js";
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
+import { HDRLoader } from "three/examples/jsm/loaders/HDRLoader.js";
 // You have to import * as FRAGS from "@thatopen/fragments"
 import * as FRAGS from "../../../index";
 ```
@@ -96,14 +99,9 @@ const settings = {
 Now, let's configure the Fragments library core. This will allow us to load models effortlessly and start working with steel structures:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsModels.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await FRAGS.FragmentsModels.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 
@@ -262,7 +260,7 @@ const geometryEngine = new FRAGS.GeometryEngine(api);
 Now we'll create all the basic geometries that will be used to construct our steel structure. These include HDRI environment, wireframe models, and various steel connection elements:
 
 ```js
-const hdriLoader = new RGBELoader();
+const hdriLoader = new HDRLoader();
 hdriLoader.load(
   "https://thatopen.github.io/engine_fragment/resources/textures/envmaps/san_giuseppe_bridge_2k.hdr",
   (texture) => {

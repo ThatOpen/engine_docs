@@ -6,7 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 📐 Measuring Lengths
 ---
-Accurate length measurement is a cornerstone of Building Information Modeling (BIM) applications. Whether you're designing, analyzing, or collaborating, providing users with intuitive tools to measure distances in 3D space is essential. In this tutorial, you will learn how to integrate a measuring tool in your BIM app; let's go ahead!
+Measuring distances between two points in a 3D BIM model — wall length, ceiling height, door clearance — is one of the most common user requests, but building it from scratch means wiring raycasting, label rendering, and persistent display manually.
+The length measurement tool lets users click two points in the scene and displays the distance persistently with a labeled dimension line.
+This tutorial covers configuring the tool with a color and snap mode; placing measurements with two double-clicks; auto-fitting the camera to each new measurement on creation; deleting individual measurements by hovering and pressing Delete; reading all length values from the measurements list; displaying rectangular (X/Y axis-aligned) and projection dimensions that complete the measurement triangle; inverting rectangular dimension orientation; and enabling synchronous vertex picking for faster snapping.
+By the end, you'll have a fully working length measurement tool with persistent labeled dimensions, complementary rectangular and projection components, and configurable picking performance.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -47,14 +50,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

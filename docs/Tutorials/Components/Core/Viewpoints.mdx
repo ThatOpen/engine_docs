@@ -6,11 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 📄 Storing View Information
 ---
-Most 3D applications commonly store camera positions for easy retrieval. In BIM apps, it's also useful to store selected and filtered elements. While there isn't a universal standard for this, the BCF schema (used for communication between BIM apps) includes topics and viewpoints.
-:::info
-Topics store communication details like title, type, status, assignee, and comments. Viewpoints define camera positions, targets, selected elements, and isolations.
-:::
-The Viewpoints component in That Open Engine extracts BCF viewpoints, enabling you to manage camera positions and related elements effectively. Let's explore how to use it!
+In collaborative BIM workflows, teams need to point each other to specific locations in the model — a clashing duct, a problematic wall, a structural element to review. Without a standard way to save and restore camera positions alongside element selections, that context is lost between sessions and tools. Viewpoints, part of the BCF standard, solve this by bundling camera position, selected elements, and a snapshot into a single reusable reference.
+This tutorial covers creating a viewpoint from the current camera, updating its snapshot and position, associating model elements by GUID and by category query, restoring the camera from a saved viewpoint, isolating its elements in the scene, and linking it to a BCF topic. By the end, you'll have a complete viewpoint workflow ready to integrate into any BIM coordination feature.
 
 ```js
 import * as THREE from "three";
@@ -47,14 +44,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

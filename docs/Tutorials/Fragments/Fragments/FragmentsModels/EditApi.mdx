@@ -6,7 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## Editing Fragment Models 🤏
 ---
-Viewing BIM models is cool, but sometimes we also need to edit the information of existing BIM models. In this tutorial, we'll explore how to edit BIM models using the Fragments Edit API, covering most of the edit operations.
+BIM models aren't static — materials need recoloring, element positions need adjusting, and data attributes need updating without re-exporting from the authoring tool. Without a programmatic edit API, that means round-tripping through Revit or IFC importers for every change.
+The Fragments Edit API makes model mutations possible at runtime through a declarative request system: describe what to change, submit the batch, and the model updates in the background without blocking the renderer.
+This tutorial covers editing the most-used material color; replacing all geometry representations with a custom shell; reassigning instance materials across all samples; modifying global and local transforms to reposition elements; overriding BIM attribute data on all walls; and editing model-level metadata — each as a batch of typed edit requests applied via the editor.
+By the end, you'll understand the full edit request system and how to mutate any aspect of a loaded Fragment model — geometry, appearance, position, data, and metadata — at runtime.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -90,16 +93,9 @@ Not necessarily! While @thatopen/components simplifies the process of setting up
 Now, let's configure the Fragments library core. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-// You have to copy `/node_modules/@thatopen/fragments/dist/Worker/worker.mjs` to your project directory
-// and provide the relative path in `workerUrl`
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsModels.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `new FragmentsModels(...)` if you'd rather host the worker yourself.
+const workerUrl = await FRAGS.FragmentsModels.getWorker();
 const fragments = new FRAGS.FragmentsModels(workerUrl);
 world.camera.controls.addEventListener("update", () => fragments.update());
 

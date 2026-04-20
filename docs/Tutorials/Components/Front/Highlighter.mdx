@@ -6,10 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 🔦 Highlighting Items
 ---
-In 3D apps, users get some feedback when they hover or click on an object. Generally, it changes its color or shading. In this tutorial, you'll learn how to do that with the highlighter.
-:::tip Highlighting?
-Highlighting means changing the color of one or many objects to make them stand out. This can be used for hovering, for selection, for bringing the attention of the user to certain items, etc.
-:::
+Every interactive BIM app needs hover feedback and click selection, but wiring raycasting, material overrides, multi-selection with Ctrl, and clear-on-click manually for every feature is repetitive and error-prone.
+The Highlighter manages named highlight styles — each with its own color and opacity — and handles click selection, multi-selection, and programmatic highlighting through a unified API.
+This tutorial covers configuring the built-in "select" style (color, opacity, rendered faces) with click and Ctrl+click multi-selection; listening to selection and deselection events to retrieve element attributes; creating a custom named highlight style applied programmatically to the current selection; observing style precedence (select overrides custom until deselected); and clearing a custom highlight for selected items or all items at once.
+By the end, you'll have a reusable highlight system with click selection, custom color overlays, and event hooks ready to drive any feature that needs to react to what the user points at.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -49,14 +49,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

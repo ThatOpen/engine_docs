@@ -6,6 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 🔦 Making Items Pop
 ---
+Color-changing highlights communicate selection but lose the element's original appearance. An outline effect keeps the element fully visible while adding a crisp border and fill — a convention common in game engines and CAD tools that works equally well in BIM viewers.
+The Outliner is a postproduction shader pass that draws a configurable outline and fill overlay on any set of elements passed as a ModelIdMap, without modifying their materials.
+This tutorial covers enabling postproduction and wiring the Outliner to the world; configuring outline color, fill color, fill opacity, and thickness; adding elements by query (all doors); combining the Outliner with the Highlighter so selected elements get outlined and outlines are removed on deselect; and clearing all outlines at once.
+By the end, you'll have an outline effect driven by both programmatic queries and interactive selection, with live controls for every visual parameter.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -45,14 +49,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

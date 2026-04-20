@@ -6,7 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 📄 Managing Items Visibility
 ---
-Many times, we just want to look at a specific part of a BIM model, without seeing the rest of it. BIM models are complex, and finding what we are looking for is not always easy. Luckily, the components library has tools to make it easier!
+When reviewing a BIM model, seeing everything at once makes it hard to focus — walls block structure, MEP clutters architecture, and the floor you care about is buried under every other storey. Without a visibility system, controlling what's shown means manipulating Three.js objects directly for every feature that needs it.
+This tutorial covers isolating all elements of a given category (showing only those, hiding everything else), hiding a specific category while keeping the rest visible, and resetting all elements back to fully visible in one call. By the end, you'll have a reusable visibility control that any other component — classifier, finder, selection — can drive by passing a ModelIdMap.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -44,14 +45,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

@@ -16,9 +16,10 @@
 | :------ | :------ |
 | [Editor](classes/Editor.md) | The Editor class provides functionality for editing and managing Fragments models. It handles operations like editing model elements, saving changes and managing edit history. |
 | [FragmentsModel](classes/FragmentsModel.md) | The main class for managing a 3D model loaded from a fragments file. Handles geometry, materials, visibility, highlighting, sections, and more. This class orchestrates multiple specialized managers to handle different aspects of the model like mesh management, item data, raycasting, etc. It maintains the overall state and provides the main interface for interacting with the model. The model data is loaded and processed asynchronously across multiple threads. |
-| [FragmentsModels](classes/FragmentsModels.md) | The main class for managing multiple 3D models loaded from fragments files. Handles loading, disposing, updating, raycasting, highlighting and coordinating multiple FragmentsModel instances. This class acts as the main entry point for working with fragments models. |
+| [FragmentsModels](classes/FragmentsModels.md) | The main class for managing multiple 3D models loaded from fragments files. Handles loading, disposing, updating, raycasting, highlighting and coordinating multiple FragmentsModel instances. This class acts as the main entry point for working with fragments models. A FragmentsModels instance needs a worker to process fragments off the main thread. The recommended way to obtain the worker URL is via the static FragmentsModels.getWorker method, which fetches the version-matched worker from unpkg. Check the method docs for more info. |
 | [GeometryEngine](classes/GeometryEngine.md) | The geometry engine is responsible for generating geometry using web-ifc. It provides a high-level API to generate common BIM shapes like extrusions, sweeps, walls, and profiles. |
 | [IfcImporter](classes/IfcImporter.md) | An objet to convert IFC files into fragments. |
+| [LoadAbortedError](classes/LoadAbortedError.md) | Error thrown when a model load is aborted via `FragmentsModels.abort()`. |
 | [SingleThreadedFragmentsModel](classes/SingleThreadedFragmentsModel.md) | The main class for managing a 3D model loaded from a fragments file in a single thread. It's designed for easy data querying in the backend, so all the 3D visualization logic is not present. |
 
 ## Interfaces
@@ -94,6 +95,7 @@
 | [InformationResultType](type-aliases/InformationResultType.md) | Type representing the result of an information query for a specific item type. |
 | [ItemInformationType](type-aliases/ItemInformationType.md) | Union type representing all possible item information types. |
 | [ItemSelectionType](type-aliases/ItemSelectionType.md) | Union type representing all possible item selection types. |
+| [LoadProgressEvent](type-aliases/LoadProgressEvent.md) | Progress event emitted during model loading. |
 | [MaterialDefinition](type-aliases/MaterialDefinition.md) | Interface representing the definition of a material. |
 | [MeshData](type-aliases/MeshData.md) | Interface representing the data of a mesh. |
 | [NewElementData](type-aliases/NewElementData.md) | Data defining a new element of a fragments model. |

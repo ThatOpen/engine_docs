@@ -6,11 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 📄 Hovering Items
 ---
-Hovering is a key interaction in 3D applications, offering visual feedback as users explore a scene. When hovering over an object, its appearance changes—often through color or shading—highlighting it and enhancing usability.
-In this tutorial, you'll learn how to implement hovering effectively.
-:::tip Why Hovering Matters?
-Hovering isn't just aesthetic; it communicates interactivity and focus, making your app feel dynamic and responsive.
-:::
+Without dedicated hover feedback, users can't tell what they're about to click — especially in dense BIM models where elements overlap. Wiring mousemove raycasting and animated material overlays manually is boilerplate that every app would have to repeat.
+The Hoverer tracks the cursor automatically and applies an animated color overlay to whichever element is under the pointer, with no per-frame wiring required.
+This tutorial covers enabling the Hoverer on a world, assigning a material with color, transparency, and opacity (which drives the animation peak), and changing the hover color at runtime from a UI control.
+By the end, you'll have an animated hover highlight that follows the cursor across any loaded BIM model with a single component setup.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -50,14 +49,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

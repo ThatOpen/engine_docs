@@ -1,6 +1,6 @@
 # FragmentsModels
 
-The main class for managing multiple 3D models loaded from fragments files. Handles loading, disposing, updating, raycasting, highlighting and coordinating multiple FragmentsModel instances. This class acts as the main entry point for working with fragments models.
+The main class for managing multiple 3D models loaded from fragments files. Handles loading, disposing, updating, raycasting, highlighting and coordinating multiple FragmentsModel instances. This class acts as the main entry point for working with fragments models. A FragmentsModels instance needs a worker to process fragments off the main thread. The recommended way to obtain the worker URL is via the static FragmentsModels.getWorker method, which fetches the version-matched worker from unpkg. Check the method docs for more info.
 
 ## Constructors
 
@@ -10,11 +10,14 @@ The main class for managing multiple 3D models loaded from fragments files. Hand
 
 Creates a new FragmentsModels instance.
 
+The recommended way to obtain the worker URL is via [FragmentsModels.getWorker](FragmentsModels.md#getworker),
+which fetches the version-matched worker from unpkg. See its docs for an example.
+
 #### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `workerURL`? | `string` | The URL of the worker script that will handle the fragments processing. This should point to a copy of the fragments worker file from @thatopen/fragments. If omitted, it defaults to the worker bundled with the package. |
+| `workerURL`? | `string` | The URL of the worker script that will handle the fragments processing. If omitted, it falls back to the worker bundled with the package (only works with bundlers that can resolve `new URL("./Worker/worker.mjs", import.meta.url)`). |
 | `options`? | `object` | Optional configuration. |
 | `options.classicWorker`? | `boolean` | If true, creates classic (non-module) workers. Use together with `toClassicWorker()`. |
 
@@ -91,6 +94,28 @@ Maximum rate (in milliseconds) at which visual updates are performed
 
 ## Methods
 
+### abort()
+
+> **abort**(`modelId`): `void`
+
+Aborts an in-flight `load()` for the given model ID. The pending `load()`
+promise will reject with a `LoadAbortedError` and any partial state
+(on both the main thread and the worker) is disposed.
+
+Has no effect if the model finished loading or isn't currently loading.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `modelId` | `string` | The unique identifier of the model to abort. |
+
+#### Returns
+
+`void`
+
+***
+
 ### dispose()
 
 > **dispose**(): `Promise`\<`void`\>
@@ -136,6 +161,7 @@ Loads a fragments model from an ArrayBuffer.
 | `options` | `object` | Configuration options for loading the model. |
 | `options.camera`? | `PerspectiveCamera` \| `OrthographicCamera` | Optional camera to use for model culling and LOD. |
 | `options.modelId` | `string` | Unique identifier for the model. |
+| `options.onProgress`? | (`event`) => `void` | Optional callback for receiving loading progress updates. |
 | `options.raw`? | `boolean` | If true, loads raw (uncompressed) data. Default is false. |
 | `options.userData`? | `Record`\<`string`, `any`\> | Optional custom data to attach to the model. |
 | `options.virtualModelConfig`? | [`VirtualModelConfig`](../interfaces/VirtualModelConfig.md) | Optional configuration for virtual model setup. |
@@ -163,6 +189,34 @@ Updates all models managed by this FragmentsModels instance.
 #### Returns
 
 `Promise`\<`void`\>
+
+***
+
+### getWorker()
+
+> `static` **getWorker**(): `Promise`\<`string`\>
+
+Fetches the fragments worker from unpkg for the exact version of this
+`@thatopen/fragments` package and returns a blob URL you can pass to the
+`FragmentsModels` constructor. The result is cached, so calling this
+method more than once is cheap.
+
+This is the recommended way to obtain the worker URL — it guarantees the
+worker version matches the library version and requires no copying of
+files into your project.
+
+#### Returns
+
+`Promise`\<`string`\>
+
+A blob URL pointing to the fragments worker script.
+
+#### Example
+
+```ts
+const workerURL = await FragmentsModels.getWorker();
+const fragments = new FragmentsModels(workerURL);
+```
 
 ## Events
 

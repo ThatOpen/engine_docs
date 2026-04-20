@@ -6,13 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## Showing your model tree 🌲
 ---
-Among the most common things to do with BIM models, is to show their spatial structure. This is really important, because then you can know better the model and see how elements are hierarchized between them. 🔗 Let's learn how you can use the Spatial Tree!
-### 🖖 Importing our Libraries
-In this tutorial, we will import:
-- @thatopen/components to set up the barebone of our app.
-- @thatopen/components-front to use some frontend-oriented components.
-- @thatopen/ui to add some simple and cool UI menus.
-- @thatopen/ui-obc to add some cool pre-made UI menus for components.
+Architects and BIM coordinators navigating a large model need to understand its spatial hierarchy — which elements belong to which floor, zone, or space — but the 3D viewport alone gives no structural overview, and building a tree view that stays in sync with loaded models requires significant custom logic.
+The spatial tree factory reads the IFC spatial structure from any loaded Fragment model and renders it as an interactive nested table that updates automatically when models are added or removed.
+This tutorial covers setting up the Fragment loader and Highlighter with zoom-to-selection; creating the spatial tree with an initially empty model list; enabling preserve-structure on filter so the hierarchy stays visible during search; placing the tree in a panel with a load button and a debounced search input; and wiring a grid layout alongside the viewport.
+By the end, you'll have a spatial tree panel that populates automatically for every loaded model, stays synchronized with the scene, and supports live search across the hierarchy.
 
 ```js
 import * as OBC from "@thatopen/components";
@@ -83,14 +80,9 @@ highlighter.zoomToSelection = true;
 The step above is super important as none of the existing functional components setup any tool, they just get it as they are! So, if we don't setup the `FragmentIfcLoader` then the wasm path is not going to be defined and an error will arise 🤓. Just after we have setup the loader, let's then configure the `FragmentManager` so any time a model is loaded it gets added to some world scene created before: 
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

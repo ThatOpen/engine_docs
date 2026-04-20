@@ -15,6 +15,10 @@ Despite the `Component` is a class that can be instantiated or extended, from a 
 To start learning how to create custom components, let's create a custom component that uses the panel section:
 
 ```js
+import * as BUI from "../..";
+
+BUI.Manager.init();
+
 const statelessPanelSection = BUI.Component.create<BUI.PanelSection>(() => {
   return BUI.html`
     <bim-panel-section label="Stateless Panel Section">

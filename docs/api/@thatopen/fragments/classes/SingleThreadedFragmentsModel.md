@@ -49,6 +49,37 @@ If you use the [FragmentsModels.dispose](FragmentsModels.md#dispose) method, thi
 
 ***
 
+### edit()
+
+> **edit**(`requests`): `object`
+
+Apply a batch of edit requests. Accumulates onto this model's
+pending-edit history; call [save](SingleThreadedFragmentsModel.md#save) to flatten them into a new
+committed buffer or [reset](SingleThreadedFragmentsModel.md#reset) to discard.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `requests` | [`EditRequest`](../type-aliases/EditRequest.md)[] |
+
+#### Returns
+
+`object`
+
+The delta flatbuffer bytes and the local IDs assigned to
+any newly-created items.
+
+##### deltaModelBuffer
+
+> **deltaModelBuffer**: `Uint8Array` = `model`
+
+##### ids
+
+> **ids**: `number`[]
+
+***
+
 ### getBuffer()
 
 > **getBuffer**(`raw`): `ArrayBufferLike`
@@ -490,6 +521,26 @@ Gets all the representations IDs of the model.
 
 ***
 
+### getRequests()
+
+> **getRequests**(): `object`
+
+Get the current edit history (applied requests + undone redo stack).
+
+#### Returns
+
+`object`
+
+##### requests
+
+> **requests**: [`EditRequest`](../type-aliases/EditRequest.md)[]
+
+##### undoneRequests
+
+> **undoneRequests**: [`EditRequest`](../type-aliases/EditRequest.md)[]
+
+***
+
 ### getSamples()
 
 > **getSamples**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
@@ -567,3 +618,92 @@ Get a buffer containing only the specified items and their associated geometry.
 #### Returns
 
 `Uint8Array`
+
+***
+
+### redo()
+
+> **redo**(): `void`
+
+Redo the last undone edit.
+
+#### Returns
+
+`void`
+
+***
+
+### reset()
+
+> **reset**(): `void`
+
+Discard all pending edits on this model.
+
+#### Returns
+
+`void`
+
+***
+
+### save()
+
+> **save**(): `Uint8Array`
+
+Flatten the current pending-edit history into a new committed buffer.
+
+#### Returns
+
+`Uint8Array`
+
+The raw flatbuffer bytes of the updated model.
+
+***
+
+### selectRequest()
+
+> **selectRequest**(`index`): `void`
+
+Navigate to a specific point in the edit history by index.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `index` | `number` |
+
+#### Returns
+
+`void`
+
+***
+
+### setRequests()
+
+> **setRequests**(`data`): `void`
+
+Replace the edit history with a caller-provided one. Useful for
+restoring state from disk.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `data` | `object` |
+| `data.requests`? | [`EditRequest`](../type-aliases/EditRequest.md)[] |
+| `data.undoneRequests`? | [`EditRequest`](../type-aliases/EditRequest.md)[] |
+
+#### Returns
+
+`void`
+
+***
+
+### undo()
+
+> **undo**(): `void`
+
+Undo the last edit.
+
+#### Returns
+
+`void`

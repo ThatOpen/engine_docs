@@ -6,12 +6,10 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## Managing your loaded models 🏢
 ---
-What else can we say? The task is really simple: we need to see a list of the loaded models in the app. Let's get into it!
-### 🖖 Importing our Libraries
-In this tutorial, we will import:
-- @thatopen/components to set up the barebone of our app.
-- @thatopen/ui to add some simple and cool UI menus.
-- @thatopen/ui-obc to add some cool pre-made UI menus for components.
+Developers building a multi-model BIM viewer need a panel that lists every loaded model with metadata and lets users remove them — but wiring the model list to load and dispose events, displaying schema tags, and adding a download action requires plumbing that distracts from the actual application logic.
+The models list factory produces a table that stays in sync with the Fragment manager automatically, showing each loaded model's metadata and exposing configurable per-row actions.
+This tutorial covers setting up the Fragment loader and adding models to the scene on load; creating the models list with a schema metadata tag and a download action enabled; placing the list inside a panel alongside a load button; and composing everything into a grid layout next to the viewport.
+By the end, you'll have a model management panel that lists every loaded model with its schema tag and a download button, updating automatically as models are loaded or removed.
 
 ```js
 import * as OBC from "@thatopen/components";
@@ -71,14 +69,9 @@ await ifcLoader.setup();
 The step above is super important as none of the existing functional components setup any tool, they just get it as they are! So, if we don't setup the `FragmentIfcLoader` then the wasm path is not going to be defined and an error will arise 🤓. Just after we have setup the loader, let's then configure the `FragmentManager` so any time a model is loaded it gets added to some world scene created before: 
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

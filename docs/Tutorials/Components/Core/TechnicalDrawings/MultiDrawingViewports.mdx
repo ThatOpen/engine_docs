@@ -6,15 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 🗂️ Multiple Drawing Viewports
 ---
-A technical drawing is just a group in 3D space that you can move, rotate,
-and scale freely. The interesting part is that you can define multiple *views*
-into the same drawing, each one an independent rectangle with its own scale
-and bounds.
-In this tutorial we'll create two viewports on a single drawing and render them into a
-dedicated paper-space canvas. The canvas never re-renders every frame; it only
-updates when annotation data actually changes. We'll also wire up direct
-dimensioning from the paper-space canvas itself, so you can place measurements
-without ever touching the 3D view. Let's see how it all fits together!
+A single viewport showing the full floor plan is rarely enough — construction drawings typically combine a general view with one or more detail areas at different scales on the same sheet. Setting this up manually means managing multiple cameras, canvases, and coordinate systems. The viewport system handles all of that: each viewport is an independent window into the same drawing, with its own bounds and scale, rendered together into a paper-space canvas that only updates when annotation data changes.
+This tutorial covers creating two viewports on a single drawing framing different areas of the same floor plan, rendering them into a floating paper-space canvas, making viewport boundaries resizable and movable directly in the 3D view, and placing linear dimensions from the paper-space canvas without touching the 3D viewport. By the end, you'll have a multi-viewport sheet layout with interactive bounds and direct paper-space annotation.
 ### 🖖 Importing our Libraries
 First, let's install all necessary dependencies to make this example work:
 
@@ -67,11 +60,9 @@ drawing spatial context: the projection lines we'll add later are wall outlines
 extracted directly from it.
 
 ```js
-const githubUrl = "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedWorker = await fetch(githubUrl);
-const workerBlob = await fetchedWorker.blob();
-const workerFile = new File([workerBlob], "worker.mjs", { type: "text/javascript" });
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);

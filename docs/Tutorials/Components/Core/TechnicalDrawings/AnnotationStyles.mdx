@@ -6,11 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 🎨 Annotation Styles
 ---
-Every annotation system in That Open Engine renders its geometry using a named
-style. A style is a plain object that controls colours, line sizes, text
-properties — and, most importantly, the **tick mark** at the endpoints of a
-dimension. In this tutorial we'll register styles using the built-in tick
-builders, then write a custom mesh builder and register a fully custom style.
+Dimensions that all look the same make drawings harder to read — architects, structural engineers, and MEP teams each have their own visual conventions for tick marks, colors, and units. Annotation styles let you define those conventions once by name and apply them consistently across every dimension in the drawing.
+This tutorial covers registering named styles using all built-in line and mesh tick builders, implementing a fully custom mesh tick builder from scratch, setting per-style measurement units, and switching styles live from a UI dropdown. By the end, you'll have a catalogue of dimension styles — including a custom one — ready to apply to any annotation system.
 ### 🖖 Importing our Libraries
 First, let's install all necessary dependencies to make this example work:
 
@@ -59,11 +56,9 @@ is aligned to the floor cut plane used when generating the projection lines, so 
 wall outlines land exactly where they should in the scene.
 
 ```js
-const githubUrl = "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedWorker = await fetch(githubUrl);
-const workerBlob = await fetchedWorker.blob();
-const workerFile = new File([workerBlob], "worker.mjs", { type: "text/javascript" });
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);

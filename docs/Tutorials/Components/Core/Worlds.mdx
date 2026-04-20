@@ -6,15 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ### 🌎 Creating our 3D world
 ---
-In this tutorial you'll learn how to create a simple scene using `@thatopen/components`.
-:::tip Hello world!
-A world represents a 3D environment in your application. It consists of a scene, a camera and (optionally) a renderer. You can create multiple worlds and show them in multiple viewports at the same time.
-:::
-In this tutorial, we will import:
-- `Three.js` to get some 3D entities for our app.
-- `@thatopen/components` to set up the barebone of our app.
-- `@thatopen/ui` to add some simple and cool UI menus.
-- `Stats.js` (optional) to measure the performance of our app.
+Every BIM application needs a 3D environment to display models — a scene, a camera, and a renderer wired together and running. Setting this up from scratch with raw Three.js requires boilerplate that distracts from the actual app logic. The `Worlds` component gives you that foundation in a few lines, with sensible defaults and singleton management built in.
+This tutorial covers creating a world with a scene, camera, and renderer, loading a BIM model into it, and controlling background color and light intensities through a UI panel. By the end, you'll have the minimal working scene that every other tutorial in the library builds on.
 
 ```js
 import * as THREE from "three";
@@ -75,19 +68,23 @@ We'll make the background of the scene transparent so that it looks good in our 
 ```js
 world.scene.three.background = null;
 ```
+### 🏷️ The That Open logo
+---
+Every `SimpleRenderer` draws a small **That Open Company** logo in the bottom-left corner of its container. It's on by default, and it's how people discover that the tools powering your app are built by That Open Company, the team that keeps `@thatopen/components`, `@thatopen/fragments`, and the rest of the stack free and open source.
+Every viewport that keeps the logo visible helps us reach more developers, which in turn lets us keep investing in the libraries you're using to build your app. **If the logo works for your design, we'd genuinely appreciate you leaving it on. Thank you!** 💜
+That said, we know it won't fit every product. If your app needs a clean viewport (a full-bleed print view, a white-label embed, a customer-branded surface), you can hide it per renderer via the `showLogo` property. It's live, so you can flip it at any time after the renderer is created.
+
+```js
+world.renderer.showLogo = true;
+```
 ### 💄 Adding things to our scene
 ---
 Now we are ready to start adding some 3D entities to our scene. We will load a Fragments model:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

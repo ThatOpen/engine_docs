@@ -6,14 +6,17 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## Working with Materials 🎨
 ---
-In this tutorial, we'll explore how to work with materials in Fragments models. We'll learn how to load textures, apply different material properties, and dynamically change materials on specific elements. Let's dive in!
+BIM models loaded from IFC files render with flat, uniform colors — no textures, no reflections, no material realism. For presentations, digital twins, or marketing renders, that level of fidelity isn't enough, but the Fragment format doesn't carry PBR material data out of the box.
+The Fragment material pipeline gives you hooks to intercept every material as it loads and replace or enhance it with any Three.js material — including textures, metalness, roughness, and environment maps.
+This tutorial covers loading an HDRI environment map for realistic reflections; loading color, normal, and roughness texture maps with repeat wrapping; intercepting materials on load and replacing them with PBR equivalents based on their color (steel gets metalness, everything else gets a concrete texture); generating UV coordinates via cubic projection so textures map correctly onto arbitrary BIM geometry; and identifying structural elements by attribute to apply a different material programmatically after load.
+By the end, you'll have a Fragment model rendering with physically-based materials, environment lighting, and per-element material overrides driven by BIM data.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
 ```js
 import * as OBC from "@thatopen/components";
 import * as THREE from "three";
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
+import { HDRLoader } from "three/examples/jsm/loaders/HDRLoader.js";
 import * as FRAGS from "../../../index";
 ```
 ### 🌎 Setting up a Simple Scene
@@ -71,7 +74,7 @@ world.camera.controls.addEventListener("rest", async () => {
 We'll load an HDRI environment map to provide realistic lighting and reflections for our materials. This will make the materials look more realistic and help us see the effects of different material properties:
 
 ```js
-const hdriLoader = new RGBELoader();
+const hdriLoader = new HDRLoader();
 hdriLoader.load(
   "https://thatopen.github.io/engine_fragment/resources/textures/envmaps/san_giuseppe_bridge_2k.hdr",
   (texture) => {
@@ -86,15 +89,9 @@ hdriLoader.load(
 Now, let's configure the Fragments library core. This will allow us to load models effortlessly and start working with their materials:
 
 ```js
-// prettier-ignore
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsModels.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `new FragmentsModels(...)` if you'd rather host the worker yourself.
+const workerUrl = await FRAGS.FragmentsModels.getWorker();
 const fragments = new FRAGS.FragmentsModels(workerUrl);
 world.camera.controls.addEventListener("control", () => fragments.update());
 
@@ -273,7 +270,7 @@ for (const element of elementsIds) {
     attributes: ["Name", "NominalValue"],
     relations: {
       IsDefinedBy: { attributes: true, relations: true },
-      DefinesOcurrence: { attributes: false, relations: false },
+      DefinesOccurrence: { attributes: false, relations: false },
     },
   });
   const objectType = data[0].ObjectType as FRAGS.ItemAttribute;

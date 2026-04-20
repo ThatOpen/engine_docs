@@ -6,10 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 📄 Playing with Boxes
 ---
-In this tutorial, you'll learn to easily create the bounding boxes of a Fragments Model. This can be useful for knowing the overall position and dimension of your models, which can be used, for instance, to make the camera fit a whole BIM model in the screen. Let's get started!
-:::tip Bounding boxes?
-Bounding boxes (AABB or Axis-Aligned Bounding Boxes) are the boxes aligned with the X, Y and Z axes of a 3D model that contain one or many objects. They are very common in 3D applications to make fast computations that require to know the whole dimension or position of one or many objects.
-:::
+Fitting the camera to a model, centering a view on a category of elements, or computing the overall extent of a scene all require knowing where objects are in 3D space. Doing that geometry by hand for large BIM models is impractical. The `BoundingBoxer` computes axis-aligned bounding boxes for any set of elements in one call, whether that's all loaded models or a filtered selection.
+This tutorial covers computing the merged bounding box of all loaded models, computing a bounding box for elements filtered by category, fitting the camera to either result, setting the camera to standard orientations (top, front, left, etc.), and visualizing bounding boxes with Three.js helpers. By the end, you'll have a set of spatial utilities ready to power camera fitting and element focusing in any BIM application.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -48,14 +46,9 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 

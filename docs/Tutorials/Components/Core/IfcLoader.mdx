@@ -6,10 +6,8 @@ Copying and pasting? We've got you covered! You can find the full source code of
 
 ## 📄 Loading IFC Models
 ---
-IFC is the most common format to share BIM data openly. Our libraries are able to load, navigate and even create and edit them directly. In this tutorial, you'll learn how to open an IFC model in the 3D scene.
-:::tip IFC?
-If you are not famliar with the construction industry, this might be the first time you come across this term. It stands for Industry Foundation Classes, and it's the most widespread standard for sharing BIM data freely, without depending on specific software manufacturers and their propietary formats.
-:::
+Loading IFC models at runtime is too slow for production — the engine must parse and convert it to Fragments before anything can render. The recommended workflow is to do that conversion once, save the resulting `.frag` file, and load that on every subsequent session.
+This tutorial covers configuring the IFC loader with the web-ifc WASM binary, wiring the FragmentsManager to receive the converted result, loading an IFC file with a progress callback, and downloading the generated Fragments file so it can be reused directly. By the end, you'll have a complete IFC import pipeline that produces a reusable Fragment asset.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
 
@@ -78,14 +76,9 @@ await ifcLoader.setup({
 When an IFC file is converted to Fragments, another component handles the converted file: the FragmentsManager. Therefore, it is essential to configure this component first before attempting to "load" any IFC file:
 
 ```js
-const githubUrl =
-  "https://thatopen.github.io/engine_fragment/resources/worker.mjs";
-const fetchedUrl = await fetch(githubUrl);
-const workerBlob = await fetchedUrl.blob();
-const workerFile = new File([workerBlob], "worker.mjs", {
-  type: "text/javascript",
-});
-const workerUrl = URL.createObjectURL(workerFile);
+// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
+// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
+const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 
