@@ -32,13 +32,13 @@ But first, let's get our feet wet with the basics: **start using components** in
 npm i @thatopen/components
 ```
 
-Most of our libraries are based on [Three.js](https://threejs.org/), so you'll also need to import it. Make sure it's the [same version](https://github.com/ThatOpen/engine_components/blob/main/package.json) as the one used by our libraries!
+Most of our libraries are based on [Three.js](https://threejs.org/), so you'll also need to import it. Make sure it's the [same version](https://github.com/ThatOpen/engine_components/blob/main/packages/core/package.json) as the one used by our libraries!
 
 ```bash
 npm i three
 ```
 
-Finally, you also need to **install some peer dependencies**. These are other libraries we made and didn't include as regular dependencies to enable more flexible bundling scenarios. Again, make sure it's the [same version](https://github.com/ThatOpen/engine_components/blob/main/package.json) as the one used by our libraries:
+Finally, you also need to **install some peer dependencies**. These are other libraries we made and didn't include as regular dependencies to enable more flexible bundling scenarios. Again, make sure it's the [same version](https://github.com/ThatOpen/engine_components/blob/main/packages/core/package.json) as the one used by our libraries:
 
 ```bash
 npm i @thatopen/fragments
