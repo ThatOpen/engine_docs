@@ -37,8 +37,8 @@ if (process.argv.includes(localMode)) {
     // Copy repo directories inside each repository
     console.info(`Copying directories from "${sourcePath}"...`);
 
-    const ignoredFiles = /^(vite\.config\.ts|example\.ts|vite\.config-worker\.ts|README\.md)$/;
-    const ignoredPaths = /^(\.\.\\.+?packages.+?dist|.*\\node_modules)$/;
+    const ignoredFiles = /^(vite\.config\.ts|example\.ts|vite\.config-worker\.ts|.+\.test\.ts|test\.ts|test-indexes\.ts)$/;
+    const ignoredPaths = /^(\.\.\\.+?packages.+?dist|.*\\node_modules|.*[\\/]\.git)$/;
 
     for(const {name} of repositories) {
         const source = sourcePath + name;
