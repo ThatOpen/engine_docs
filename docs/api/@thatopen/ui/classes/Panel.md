@@ -9,7 +9,6 @@ A custom panel web component for BIM applications. HTML tag: bim-panel
 ## Implements
 
 - [`HasName`](../interfaces/HasName.md)
-- [`HasValue`](../interfaces/HasValue.md)
 
 ## Properties
 
@@ -185,6 +184,20 @@ CSS styles for the component.
 
 ## Accessors
 
+### activationButton
+
+> `get` **activationButton**(): `undefined`
+
+#### Deprecated
+
+Use a `bim-button` directly: `btn.onclick = () => (panel.hidden = !panel.hidden)`.
+
+#### Returns
+
+`undefined`
+
+***
+
 ### hidden
 
 > `set` **hidden**(`value`): `void`
@@ -205,7 +218,7 @@ hiddenchange - Fired when the hidden state changes.
 
 ### value
 
-> `get` **value**(): `Record`\<`string`, `any`\>
+> `get` **value**(): `object`
 
 The `value` getter computes and returns the current state of the panel's form elements as an object. This property is dynamic and reflects the current input values within the panel. When accessed, it traverses the panel's child elements, collecting values from those that have a `name` or `label` attribute, and constructs an object where each key corresponds to the `name` or `label` of the element, and the value is the element's value. This property is particularly useful for forms or interactive panels where the user's input needs to be retrieved programmatically. The value returned is a snapshot of the panel's state at the time of access, and it does not maintain a live link to the input elements.
 
@@ -227,31 +240,9 @@ document.body.appendChild(panel);
 console.log(panel.value); // Logs the current value object of the panel
 ```
 
-> `set` **value**(`data`): `void`
-
-The `value` setter allows programmatically updating the values of the panel's form elements. When a data object is passed to this property, it attempts to match the object's keys with the `name` or `label` attributes of the panel's child elements. If a match is found, the corresponding element's value is updated to the value associated with the key in the data object. This property is useful for initializing the panel with specific data or updating its state based on external inputs. Note that this operation does not affect elements without a matching `name` or `label`, and it only updates the values of elements that are direct children of the panel.
-
-#### Examples
-
-```ts
-<bim-panel></bim-panel> <!-- Set value via JavaScript -->
-```
-
-```ts
-const panel = document.createElement('bim-panel');
-document.body.appendChild(panel);
-panel.value = { 'input-name': 'John Doe', 'checkbox-name': true };
-```
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `data` | `Record`\<`string`, `any`\> |
-
 #### Returns
 
-`Record`\<`string`, `any`\>
+`object`
 
 ## Methods
 

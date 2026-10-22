@@ -8,7 +8,7 @@ Copying and pasting? We've got you covered! You can find the full source code of
 ---
 Checking that a ramp meets accessibility requirements, verifying a roof pitch, or confirming a structural connection angle all require measuring angles between arbitrary points in a 3D model — and doing that by hand from a screenshot is inaccurate and slow.
 The angle measurement tool lets users place three points in the scene to define an angle and displays the result persistently as part of the 3D view.
-This tutorial covers configuring the tool with a color and snap mode; placing angle measurements with three double-clicks (start, vertex, end); deleting individual measurements by hovering and pressing Delete; reading all angle values from the measurements list; clearing all measurements at once; and switching between asynchronous (memory-efficient) and synchronous (faster) vertex picking modes by pre-generating mesh geometry.
+This tutorial covers configuring the tool with a color and snap mode; placing angle measurements with three double-clicks (start, vertex, end); deleting individual measurements by hovering and pressing Delete; reading all angle values from the measurements list; and clearing all measurements at once.
 By the end, you'll have a fully working angle measurement tool with persistent results, keyboard deletion, and configurable picking performance.
 ### 🖖 Importing our Libraries
 First things first, let's install all necessary dependencies to make this example work:
@@ -19,6 +19,10 @@ import Stats from "stats.js";
 import * as OBC from "@thatopen/components";
 import * as BUI from "@thatopen/ui";
 import * as FRAGS from "@thatopen/fragments";
+// Local worker bundle so the GPU picker decodes localId from tile.ids
+// correctly. Swap to `OBC.FragmentsManager.getWorker()` for the
+// unpkg-hosted bundle once published.
+import workerUrl from "@thatopen/fragments/worker?url";
 // You have to import * as OBF from "@thatopen/components-front"
 import * as OBF from "../..";
 ```
@@ -50,9 +54,8 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
-// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
-const workerUrl = await OBC.FragmentsManager.getWorker();
+// Local worker imported above. To fall back to unpkg, replace the
+// import with `const workerUrl = await OBC.FragmentsManager.getWorker();`.
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 
@@ -140,78 +143,47 @@ window.onkeydown = (event) => {
   }
 };
 ```
-### 🧹 Synchronous Picking
----
-By default, the picking is asynchronous, which means that the picking result is not available immediately. This saves some memory. However, you can enable synchronous picking by setting the `pickerMode` property to `GraphicVertexPickerMode.SYNCHRONOUS`. This will make the picking result available a lot faster. To do that, you'll need to generate the geometries of the models and add them to the world.meshes collection.
-
-```js
-const meshes: THREE.Mesh[] = [];
-
-// Add picking meshes (deduplicating geometries to save memory)
-for (const [, model] of fragments.list) {
-  const idsWithGeometry = await model.getItemsIdsWithGeometry();
-  const allMeshesData = await model.getItemsGeometry(idsWithGeometry);
-
-  const geometries = new Map<number, THREE.BufferGeometry>();
-
-  for (const itemId in allMeshesData) {
-    const meshData = allMeshesData[itemId];
-    for (const geomData of meshData) {
-      if (
-        !geomData.positions ||
-        !geomData.indices ||
-        !geomData.transform ||
-        !geomData.representationId
-      ) {
-        continue;
-      }
-
-      const representationId = geomData.representationId;
-      if (!geometries.has(representationId)) {
-        const geometry = new THREE.BufferGeometry();
-        geometry.setAttribute(
-          "position",
-          new THREE.Float32BufferAttribute(geomData.positions, 3),
-        );
-        geometry.setIndex(Array.from(geomData.indices));
-        geometries.set(representationId, geometry);
-      }
-
-      const geometry = geometries.get(representationId)!;
-
-      const mesh = new THREE.Mesh(geometry);
-      mesh.applyMatrix4(geomData.transform);
-      mesh.applyMatrix4(model.object.matrixWorld);
-      mesh.updateWorldMatrix(true, true);
-      meshes.push(mesh);
-    }
-  }
-}
-
-const pastDelay = measurer.delay;
-const makeSynchronous = async (value: boolean) => {
-  if (value) {
-    measurer.pickerMode = OBF.GraphicVertexPickerMode.SYNCHRONOUS;
-    measurer.delay = 0;
-    for (const mesh of meshes) {
-      world.meshes.add(mesh);
-    }
-    return;
-  }
-  measurer.pickerMode = OBF.GraphicVertexPickerMode.DEFAULT;
-  measurer.delay = pastDelay;
-  for (const mesh of meshes) {
-    world.meshes.delete(mesh);
-  }
-};
-
-await makeSynchronous(true);
-```
 ### 🧩 Adding some UI (optional but recommended)
 We will use the `@thatopen/ui` library to add some simple and cool UI elements to our app. First, we need to call the `init` method of the `BUI.Manager` class to initialize the library:
 
 ```js
 BUI.Manager.init();
+
+// Reusable snap-class + range controls. The measurer's `snappings`
+// array holds the snap classes the picker considers; toggling a
+// checkbox adds / removes the corresponding class. The range slider
+// drives the shared `SnapResolver.maxDistance` — distance from the
+// pick point at which a vertex / edge / face is considered a snap
+// candidate, in model units (typically meters).
+const snapResolver = components.get(OBC.SnapResolvers).get();
+const hasSnap = (cls: FRAGS.SnappingClass) =>
+  measurer.snappings?.includes(cls) ?? false;
+const toggleSnap = (cls: FRAGS.SnappingClass, on: boolean) => {
+  const current = new Set(measurer.snappings ?? []);
+  if (on) current.add(cls);
+  else current.delete(cls);
+  measurer.snappings = Array.from(current);
+};
+const snapControls = () => BUI.html`
+  <bim-checkbox label="Snap: Point" ?checked=${hasSnap(FRAGS.SnappingClass.POINT)}
+    @change="${({ target }: { target: BUI.Checkbox }) =>
+      toggleSnap(FRAGS.SnappingClass.POINT, target.value)}">
+  </bim-checkbox>
+  <bim-checkbox label="Snap: Line" ?checked=${hasSnap(FRAGS.SnappingClass.LINE)}
+    @change="${({ target }: { target: BUI.Checkbox }) =>
+      toggleSnap(FRAGS.SnappingClass.LINE, target.value)}">
+  </bim-checkbox>
+  <bim-checkbox label="Snap: Face" ?checked=${hasSnap(FRAGS.SnappingClass.FACE)}
+    @change="${({ target }: { target: BUI.Checkbox }) =>
+      toggleSnap(FRAGS.SnappingClass.FACE, target.value)}">
+  </bim-checkbox>
+  <bim-number-input slider step="0.05" label="Snap Range"
+    value="${snapResolver.maxDistance}" min="0.05" max="5"
+    @change="${({ target }: { target: BUI.NumberInput }) => {
+      snapResolver.maxDistance = target.value;
+    }}">
+  </bim-number-input>
+`;
 ```
 Now we will add some UI to play around with the actions in this tutorial. For more information about the UI library, you can check the specific documentation for it!
 
@@ -241,13 +213,7 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
           }}">
         </bim-checkbox>
 
-        <bim-checkbox checked label="Synchronous Picking"
-          @change="${({ target }: { target: BUI.Checkbox }) => {
-            makeSynchronous(target.value);
-          }}">
-        </bim-checkbox>
-
-        <bim-number-input
+<bim-number-input
           slider step="1" label="Picker Size" value="${measurer.pickerSize}" min="2" max="20"
           @change="${({ target }: { target: BUI.NumberInput }) => {
             measurer.pickerSize = target.value;
@@ -260,6 +226,8 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
             measurer.color = new THREE.Color(target.color);
           }}">
         </bim-color-input>
+
+        ${snapControls()}
 
         <bim-dropdown
           label="Units" required
@@ -286,6 +254,23 @@ const panel = BUI.Component.create<BUI.PanelSection>(() => {
           <bim-option label="4" value=4></bim-option>
           <bim-option label="5" value=5></bim-option>
         </bim-dropdown>
+
+        <bim-dropdown
+          label="Line type" required
+          @change="${({ target }: { target: BUI.Dropdown }) => {
+            measurer.lineType = target.value[0] as OBF.MeasurementLineType;
+          }}">
+          <bim-option label="Basic" value="${OBF.MeasurementLineType.Basic}" checked></bim-option>
+          <bim-option label="Fat" value="${OBF.MeasurementLineType.Fat}"></bim-option>
+        </bim-dropdown>
+
+        <bim-number-input
+          slider label="Line width" value="${measurer.lineWidth}"
+          min="1" max="10" step="0.5"
+          @change="${({ target }: { target: BUI.NumberInput }) => {
+            measurer.lineWidth = target.value;
+          }}">
+        </bim-number-input>
 
         <bim-button label="Delete all" @click=${() => deleteMeasurements()}></bim-button>
 

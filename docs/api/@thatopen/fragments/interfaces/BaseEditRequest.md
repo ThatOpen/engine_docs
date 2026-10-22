@@ -6,6 +6,9 @@ Base interface for all edit requests.
 
 - [`BaseUpdateRequest`](BaseUpdateRequest.md)
 - [`BaseCreateRequest`](BaseCreateRequest.md)
+- [`CreateIndexRequest`](CreateIndexRequest.md)
+- [`UpdateIndexRequest`](UpdateIndexRequest.md)
+- [`DeleteIndexRequest`](DeleteIndexRequest.md)
 
 ## Properties
 

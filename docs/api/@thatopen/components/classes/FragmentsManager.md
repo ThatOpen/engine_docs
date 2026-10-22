@@ -162,8 +162,7 @@ fragments.init(await OBC.FragmentsManager.getWorker());
 | Parameter | Type |
 | :------ | :------ |
 | `workerURL` | `string` |
-| `options`? | `object` |
-| `options.classicWorker`? | `boolean` |
+| `options`? | `FragmentsModelsOptions` |
 
 #### Returns
 

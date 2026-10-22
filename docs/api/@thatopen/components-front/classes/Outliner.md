@@ -1,6 +1,10 @@
 # Outliner
 
-This component allows adding a colored outline with thickness to fragments in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Outliner). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Outliner).
+This component allows adding colored outlines with thickness to fragments in
+a 3D scene. Supports multiple named outline groups so different selections
+can be outlined with different colors / thicknesses at the same time. 📕
+[Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Outliner). 📘
+[API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Outliner).
 
 ## Extends
 
@@ -16,11 +20,14 @@ This component allows adding a colored outline with thickness to fragments in a 
 
 > **styles**: `DataSet`\<`string`\>
 
-A set of Highlighter styles to be linked with the outliner.
+A set of Highlighter styles linked with the default outline group.
 
 #### Remarks
 
-Use this or addItems directly but avoid using both at the same time to prevent unwanted results
+Use this or addItems directly but avoid using both at the same
+time to prevent unwanted results. For per-group routing, wire the
+Highlighter events manually with a group name:
+`highlighter.events.select.onHighlight.add(m => outliner.addItems(m, "my-group"))`
 
 ***
 
@@ -36,15 +43,13 @@ This UUID is used to register the component within the Components system.
 
 ### color
 
-> `set` **color**(`value`): `void`
+> `get` **color**(): `Color`
 
-Sets the color for the outline.
+Outline color for the default group.
 
-#### Parameters
+#### Returns
 
-| Parameter | Type |
-| :------ | :------ |
-| `value` | `Color` |
+`Color`
 
 ***
 
@@ -72,43 +77,37 @@ OBC.Component.enabled
 
 ### fillColor
 
-> `set` **fillColor**(`value`): `void`
+> `get` **fillColor**(): `Color`
 
-Sets the fill color for the outline effect in the postproduction pipeline.
+Fill color for the default group.
 
-#### Parameters
+#### Returns
 
-| Parameter | Type |
-| :------ | :------ |
-| `value` | `Color` |
+`Color`
 
 ***
 
 ### fillOpacity
 
-> `set` **fillOpacity**(`value`): `void`
+> `get` **fillOpacity**(): `number`
 
-Sets the fill opacity for the outline pass in the postproduction renderer.
+Fill opacity for the default group.
 
-#### Parameters
+#### Returns
 
-| Parameter | Type |
-| :------ | :------ |
-| `value` | `number` |
+`number`
 
 ***
 
 ### thickness
 
-> `set` **thickness**(`value`): `void`
+> `get` **thickness**(): `number`
 
-Sets the thickness of the outline effect in the post-production renderer.
+Thickness for the default group.
 
-#### Parameters
+#### Returns
 
-| Parameter | Type |
-| :------ | :------ |
-| `value` | `number` |
+`number`
 
 ***
 
@@ -128,29 +127,95 @@ The world where the outliner operates.
 
 ### addItems()
 
-> **addItems**(`modelIdMap`): `Promise`\<`void`\>
+> **addItems**(`modelIdMap`, `group`): `Promise`\<`void`\>
 
-Adds items to be outlined.
+Adds items to be outlined in a specific group (defaults to "default").
 
 #### Parameters
 
-| Parameter | Type | Description |
+| Parameter | Type | Default value |
 | :------ | :------ | :------ |
-| `modelIdMap` | `ModelIdMap` | An object representing the model ID map to be added. |
+| `modelIdMap` | `ModelIdMap` | `undefined` |
+| `group` | `string` | `DEFAULT_GROUP` |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-A promise that resolves once the outliner has been updated with the new model ID map.
+***
+
+### bindStyle()
+
+> **bindStyle**(`style`, `group`): `boolean`
+
+Wires a Highlighter style to a specific outline group. Equivalent to
+`outliner.styles.add(style)` but routes the items to the given group
+instead of the default.
+
+#### Parameters
+
+| Parameter | Type | Default value |
+| :------ | :------ | :------ |
+| `style` | `string` | `undefined` |
+| `group` | `string` | `DEFAULT_GROUP` |
+
+#### Returns
+
+`boolean`
 
 ***
 
 ### clean()
 
-> **clean**(): `void`
+> **clean**(`group`?): `void`
 
-Cleans up the outlines.
+Cleans up outlines. Without arguments, clears every group. With a group
+name, clears that group only.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `group`? | `string` |
+
+#### Returns
+
+`void`
+
+***
+
+### configure()
+
+> **configure**(`name`, `config`): `void`
+
+Updates an existing group's visual configuration.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `config` | [`OutlineGroupConfig`](../interfaces/OutlineGroupConfig.md) |
+
+#### Returns
+
+`void`
+
+***
+
+### create()
+
+> **create**(`name`, `config`): `void`
+
+Creates (or reconfigures) a named outline group. Each group renders with
+its own outline color, fill and thickness independently of the others.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | Unique group name. "default" is reserved for the legacy singular API and cannot be removed. |
+| `config` | [`OutlineGroupConfig`](../interfaces/OutlineGroupConfig.md) | Optional visual configuration. |
 
 #### Returns
 
@@ -174,38 +239,79 @@ Disposable.dispose
 
 ***
 
-### removeItems()
+### list()
 
-> **removeItems**(`modelIdMap`): `Promise`\<`void`\>
+> **list**(): `string`[]
 
-Removes items from the current outlines.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `modelIdMap` | `ModelIdMap` | An object representing the mapping of model IDs to be removed. |
+Returns the names of all currently created groups.
 
 #### Returns
 
-`Promise`\<`void`\>
-
-A promise that resolves once the update operation is complete.
+`string`[]
 
 ***
 
-### update()
+### remove()
 
-> **update**(`modelIdMap`): `Promise`\<`void`\>
+> **remove**(`name`): `void`
 
-Updates the outline effect with the current meshes from the mesher component.
+Removes a group together with all items routed to it.
 
 #### Parameters
 
 | Parameter | Type |
 | :------ | :------ |
-| `modelIdMap` | `ModelIdMap` |
+| `name` | `string` |
+
+#### Returns
+
+`void`
+
+***
+
+### removeItems()
+
+> **removeItems**(`modelIdMap`, `group`): `Promise`\<`void`\>
+
+Removes items from a specific group (defaults to "default").
+
+#### Parameters
+
+| Parameter | Type | Default value |
+| :------ | :------ | :------ |
+| `modelIdMap` | `ModelIdMap` | `undefined` |
+| `group` | `string` | `DEFAULT_GROUP` |
 
 #### Returns
 
 `Promise`\<`void`\>
+
+***
+
+### ~~update()~~
+
+> **update**(`modelIdMap`?, `group`?): `Promise`\<`void`\>
+
+Adds `modelIdMap` to the group's selection (the default group if omitted)
+and refreshes that group's outline. Identical to [addItems](Outliner.md#additems); calling
+it with no map just refreshes the group without changing what it holds.
+
+Note this changed: `modelIdMap` used to be accepted and ignored, so the
+call was always a plain refresh and the group's selection only ever came
+from [addItems](Outliner.md#additems). It now joins the group's map, which is what the
+argument always claimed to do. Pass nothing for the old behaviour.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `modelIdMap`? | `ModelIdMap` |
+| `group`? | `string` |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Deprecated
+
+call [addItems](Outliner.md#additems) instead.

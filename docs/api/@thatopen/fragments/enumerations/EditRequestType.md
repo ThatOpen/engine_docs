@@ -7,6 +7,7 @@ Types of edit requests.
 | Enumeration Member | Value |
 | :------ | :------ |
 | `CREATE_GLOBAL_TRANSFORM` | `3` |
+| `CREATE_INDEX` | `24` |
 | `CREATE_ITEM` | `5` |
 | `CREATE_LOCAL_TRANSFORM` | `4` |
 | `CREATE_MATERIAL` | `0` |
@@ -14,6 +15,7 @@ Types of edit requests.
 | `CREATE_REPRESENTATION` | `1` |
 | `CREATE_SAMPLE` | `2` |
 | `DELETE_GLOBAL_TRANSFORM` | `20` |
+| `DELETE_INDEX` | `26` |
 | `DELETE_ITEM` | `22` |
 | `DELETE_LOCAL_TRANSFORM` | `21` |
 | `DELETE_MATERIAL` | `17` |
@@ -21,6 +23,7 @@ Types of edit requests.
 | `DELETE_REPRESENTATION` | `18` |
 | `DELETE_SAMPLE` | `19` |
 | `UPDATE_GLOBAL_TRANSFORM` | `10` |
+| `UPDATE_INDEX` | `25` |
 | `UPDATE_ITEM` | `12` |
 | `UPDATE_LOCAL_TRANSFORM` | `11` |
 | `UPDATE_MATERIAL` | `7` |

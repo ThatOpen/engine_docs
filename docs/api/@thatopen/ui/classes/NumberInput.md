@@ -8,7 +8,7 @@ A custom number input web component for BIM applications. HTML tag: bim-number-i
 
 ## Implements
 
-- [`HasValue`](../interfaces/HasValue.md)
+- [`HasValue`](../interfaces/HasValue.md)\<`number`\>
 - [`HasName`](../interfaces/HasName.md)
 
 ## Properties
@@ -161,13 +161,29 @@ document.body.appendChild(numberInput);
 
 ***
 
+### ~~onValueChange~~
+
+> `readonly` **onValueChange**: `Event`
+
+#### Deprecated
+
+Storing a reused Event instance is an anti-pattern. Listen for
+the "change" event on the element instead: `el.addEventListener("change", fn)`.
+
+#### Implementation of
+
+[`HasValue`](../interfaces/HasValue.md) . [`onValueChange`](../interfaces/HasValue.md#onvaluechange)
+
+***
+
 ### pref?
 
 > `optional` **pref**: `string`
 
-The `pref` property is used to specify a prefix for the value in the number input component.
-This could be a currency symbol, a unit, or any other kind of prefix. The prefix is displayed
-inside the input field before the value. When the property changes, the displayed prefix updates accordingly.
+Short for "prefix" — a currency symbol, unit, or other text shown inside the
+input field before the value (e.g. `pref="$"` renders "$ 42"). Named `pref`
+(not `prefix`) because `prefix` collides with the native, read-only
+`Node.prefix` (XML namespace prefix) property inherited from `HTMLElement`.
 
 #### Default
 
@@ -251,8 +267,9 @@ document.body.appendChild(numberInput);
 > `optional` **step**: `number`
 
 The `step` property determines the amount by which the value should increase or decrease
-when the user interacts with the component's stepping mechanism. It is used for incremental
-changes to the value. When the property changes, the step size for value changes is updated.
+when the user interacts with the component's stepping mechanism (dragging the slider, or
+pressing the Up/Down arrow keys while focused). It is used for incremental changes to the
+value. When the property changes, the step size for value changes is updated.
 
 #### Default
 
@@ -379,7 +396,7 @@ document.body.appendChild(numberInput);
 
 ### focus()
 
-> **focus**(): `void`
+> **focus**(`options`?): `void`
 
 Sets focus to the input element of the number input component.
 This method is useful for programmatically focusing the input element, for example,
@@ -387,6 +404,12 @@ in response to a user action or to emphasize the input in the UI.
 
 If the input element reference is not available (not yet rendered or disconnected),
 this method will do nothing.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `options`? | `FocusOptions` |
 
 #### Returns
 

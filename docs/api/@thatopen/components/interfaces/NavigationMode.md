@@ -33,7 +33,7 @@ must be disabled.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `active` | `boolean` | whether to enable or disable this mode. |
-| `options`? | `any` | any additional data required to enable or disable it. |
+| `options`? | [`NavigationModeOptions`](NavigationModeOptions.md) | any additional data required to enable or disable it. |
 
 #### Returns
 

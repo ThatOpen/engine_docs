@@ -22,7 +22,7 @@ The indices of the raycasted face
 
 ### facePoints?
 
-> `optional` **facePoints**: `Float32Array`
+> `optional` **facePoints**: `Float64Array`
 
 The points of the raycasted face
 

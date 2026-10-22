@@ -18,6 +18,9 @@ import * as THREE from "three";
 import Stats from "stats.js";
 import * as OBC from "@thatopen/components";
 import * as BUI from "@thatopen/ui";
+// Local worker bundle so changes to engine_fragment are exercised. Swap
+// to `OBC.FragmentsManager.getWorker()` for the unpkg-hosted bundle.
+import workerUrl from "@thatopen/fragments/worker?url";
 // You have to import * as OBF from "@thatopen/components-front"
 import * as OBF from "../..";
 ```
@@ -49,9 +52,6 @@ components.init();
 Now, let's configure the FragmentsManager. This will allow us to load models effortlessly and start manipulating them with ease:
 
 ```js
-// `FragmentsManager.getWorker()` fetches the matching worker for this library version from unpkg and returns a blob URL.
-// You can also pass your own URL to `fragments.init(...)` if you'd rather host the worker yourself.
-const workerUrl = await OBC.FragmentsManager.getWorker();
 const fragments = components.get(OBC.FragmentsManager);
 fragments.init(workerUrl);
 
@@ -101,6 +101,10 @@ await Promise.all(
 Next, we'll configure the highlighter component. The setup process is straightforward and can be done as follows:
 
 ```js
+// `castRay` resolves picks entirely on the GPU when no snap classes
+// are requested — one id + depth + normal render and a few bytes of
+// readback, no worker round-trip. Snap-aware calls still go through
+// the worker path. Nothing to enable; this is the default.
 components.get(OBC.Raycasters).get(world);
 
 const highlighter = components.get(OBF.Highlighter);

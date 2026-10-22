@@ -34,7 +34,7 @@ A [NavigationMode](../interfaces/NavigationMode.md) that allows first person nav
 
 ### set()
 
-> **set**(`active`): `void`
+> **set**(`active`, `options`?): `void`
 
 [NavigationMode.set](../interfaces/NavigationMode.md#set)
 
@@ -43,6 +43,7 @@ A [NavigationMode](../interfaces/NavigationMode.md) that allows first person nav
 | Parameter | Type |
 | :------ | :------ |
 | `active` | `boolean` |
+| `options`? | [`NavigationModeOptions`](../interfaces/NavigationModeOptions.md) |
 
 #### Returns
 

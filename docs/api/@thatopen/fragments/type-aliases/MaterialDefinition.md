@@ -11,7 +11,7 @@ Interface representing the definition of a material.
 > `optional` **\_explicitProps**: `string`[]
 
 Internal array tracking which properties were explicitly set by the caller.
-Used with preserveOriginalMaterial to avoid overwriting original material 
+Used with preserveOriginalMaterial to avoid overwriting original material
 properties with default values during serialization.
 
 ### color
@@ -62,6 +62,36 @@ The local ID of the material
 > **opacity**: `number`
 
 The opacity of the material
+
+### polygonOffsetFactor?
+
+> `optional` **polygonOffsetFactor**: `number`
+
+Depth-bias factor mapped to THREE's polygonOffsetFactor. When either
+this or polygonOffsetUnits is a non-zero number, polygonOffset is
+enabled on the produced material. Useful to resolve z-fighting between
+exactly coplanar faces (e.g. an element sitting exactly on the surface
+that hosts it).
+
+#### Default
+
+```ts
+0 (no depth bias)
+```
+
+### polygonOffsetUnits?
+
+> `optional` **polygonOffsetUnits**: `number`
+
+Depth-bias units mapped to THREE's polygonOffsetUnits. When either
+this or polygonOffsetFactor is a non-zero number, polygonOffset is
+enabled on the produced material.
+
+#### Default
+
+```ts
+0 (no depth bias)
+```
 
 ### preserveOriginalMaterial?
 

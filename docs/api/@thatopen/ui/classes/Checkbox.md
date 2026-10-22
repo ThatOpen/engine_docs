@@ -12,7 +12,7 @@ change - Fired when the checkbox changes.
 
 ## Implements
 
-- [`HasValue`](../interfaces/HasValue.md)
+- [`HasValue`](../interfaces/HasValue.md)\<`boolean`\>
 
 ## Properties
 
@@ -42,6 +42,26 @@ document.body.appendChild(checkbox);
 
 ***
 
+### disabled
+
+> **disabled**: `boolean` = `false`
+
+Disables the checkbox, preventing user interaction. When disabled, the checkbox is visually dimmed and ignores all pointer and keyboard events.
+
+#### Default
+
+```ts
+false
+```
+
+#### Example
+
+```ts
+<bim-checkbox disabled></bim-checkbox>
+```
+
+***
+
 ### icon?
 
 > `optional` **icon**: `string`
@@ -64,6 +84,26 @@ undefined
 const checkbox = document.createElement('bim-checkbox');
 checkbox.icon = 'check';
 document.body.appendChild(checkbox);
+```
+
+***
+
+### indeterminate
+
+> **indeterminate**: `boolean` = `false`
+
+Indicates whether the checkbox is in an indeterminate (mixed) state. Typically used when a checkbox represents a group where some but not all items are checked. Cleared automatically when the user interacts with the checkbox.
+
+#### Default
+
+```ts
+false
+```
+
+#### Example
+
+```ts
+<bim-checkbox indeterminate></bim-checkbox>
 ```
 
 ***
@@ -146,6 +186,20 @@ document.body.appendChild(checkbox);
 
 ***
 
+### ~~onValueChange~~
+
+> `readonly` **onValueChange**: `Event`
+
+#### Deprecated
+
+Use `addEventListener("change", fn)` instead.
+
+#### Implementation of
+
+[`HasValue`](../interfaces/HasValue.md) . [`onValueChange`](../interfaces/HasValue.md#onvaluechange)
+
+***
+
 ### styles
 
 > `static` **styles**: `CSSResult`
@@ -185,27 +239,3 @@ console.log(checkbox.value); // false initially
 #### Returns
 
 `boolean`
-
-## Events
-
-### onValueChange
-
-> `readonly` **onValueChange**: `Event`
-
-Event that is dispatched when the checkbox's checked state changes.
-This event can be used to listen for changes to the checkbox's value and perform
-necessary actions when the value changes.
-
- change
-
-#### Example
-
-```ts
-checkbox.addEventListener('change', (event) => {
-  console.log('Checkbox value changed:', event.target.checked);
-});
-```
-
-#### Implementation of
-
-`HasValue.onValueChange`

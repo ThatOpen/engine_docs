@@ -20,7 +20,7 @@ Constructor for the SimpleRenderer class.
 | :------ | :------ | :------ |
 | `components` | [`Components`](Components.md) | The components instance. |
 | `container` | `HTMLElement` | The HTML container where the THREE.js canvas will be rendered. |
-| `parameters`? | `Partial`\<`WebGLRendererParameters`\> | Optional parameters for the THREE.js WebGLRenderer. |
+| `parameters`? | [`SimpleRendererParameters`](../type-aliases/SimpleRendererParameters.md) | Optional parameters for the THREE.js WebGLRenderer, plus the opt-in GPU API (`mode`, see SimpleRendererParameters.mode). |
 
 #### Returns
 
@@ -31,6 +31,17 @@ Constructor for the SimpleRenderer class.
 `BaseRenderer.constructor`
 
 ## Properties
+
+### api
+
+> `readonly` **api**: [`RendererApi`](../type-aliases/RendererApi.md)
+
+The GPU API this renderer was built on: `"webgl"` unless the
+constructor was given `mode: "webgpu"` (see
+SimpleRendererParameters.mode). Under `"webgpu"`, [three](SimpleRenderer.md#three)
+is a `THREE.WebGPURenderer` typed as the WebGL one.
+
+***
 
 ### clippingPlanes
 
@@ -58,6 +69,23 @@ The HTML container of the THREE.js canvas where the scene is rendered.
 
 Indicates whether the renderer is enabled. If it's not, it won't be updated.
 Default is `true`.
+
+***
+
+### localClippingPlanes
+
+> **localClippingPlanes**: `boolean` = `false`
+
+The default `isLocal` value used by [setPlane](SimpleRenderer.md#setplane) when the caller
+doesn't pass one. When `true`, planes added without an explicit
+`isLocal` stay out of the global `three.clippingPlanes` list and are
+clipped per-material instead. The [Clipper](Clipper.md) sets this to mirror
+its own `localClippingPlanes` flag, so consumers like `Views` that add
+their own planes automatically inherit the active clipping mode.
+
+#### Inherited from
+
+[`BaseRenderer`](BaseRenderer.md) . [`localClippingPlanes`](BaseRenderer.md#localclippingplanes)
 
 ***
 
@@ -184,6 +212,35 @@ The current world this item is associated with. It can be null if no world is cu
 | Parameter | Type |
 | :------ | :------ |
 | `value` | `null` \| [`World`](../interfaces/World.md) |
+
+***
+
+### logo
+
+> `get` **logo**(): `null` \| `HTMLElement`
+
+The DOM element rendering the That Open Company wordmark, or `null`
+before the renderer is set up. Mutate its `style` to restyle or move
+the overlay without forking the source. Common adjustments:
+
+```ts
+const logo = world.renderer.logo;
+if (logo) {
+  logo.style.left = "auto";
+  logo.style.right = "0.75rem";   // move to bottom-right
+  logo.style.bottom = "auto";
+  logo.style.top = "0.75rem";     // or to the top edge
+}
+```
+
+The element also carries a `data-thatopen-logo` attribute, so app-wide
+CSS can target it (`[data-thatopen-logo] { ... }`). External rules
+need `!important` (or higher specificity) to win against the inline
+defaults.
+
+#### Returns
+
+`null` \| `HTMLElement`
 
 ***
 
@@ -365,7 +422,7 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### setPlane()
 
-> **setPlane**(`active`, `plane`, `isLocal`?): `void`
+> **setPlane**(`active`, `plane`, `isLocal`): `void`
 
 Sets or removes a clipping plane from the renderer.
 
@@ -375,7 +432,7 @@ Sets or removes a clipping plane from the renderer.
 | :------ | :------ | :------ |
 | `active` | `boolean` | A boolean indicating whether the clipping plane should be active or not. |
 | `plane` | `Plane` | The clipping plane to be added or removed. |
-| `isLocal`? | `boolean` | An optional boolean indicating whether the clipping plane is local to the object. If not provided, it defaults to `false`. |
+| `isLocal` | `boolean` | An optional boolean indicating whether the clipping plane is local to the object. If not provided, it defaults to `false`. |
 
 #### Returns
 

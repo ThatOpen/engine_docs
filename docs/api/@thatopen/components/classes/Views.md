@@ -17,6 +17,20 @@ This map is used to store and manage a collection of views.
 
 ***
 
+### restoreCameraOnClose
+
+> **restoreCameraOnClose**: `boolean` = `true`
+
+When true, opening a view snapshots the active camera's controls state
+(via `controls.toJSON()`) and closing the view restores that snapshot
+(via `controls.fromJSON(json, true)`), so exiting a view returns the
+camera to the same pose the user had before entering it. Default true.
+
+Set to `false` to keep the legacy behavior, where the default camera
+lands at whatever pose its controls drifted to during the view session.
+
+***
+
 ### world
 
 > **world**: `null` \| [`World`](../interfaces/World.md) = `null`

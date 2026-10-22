@@ -1,6 +1,15 @@
-# Input
+# ~~Input~~
 
 A custom input web component for BIM applications. HTML tag: bim-input
+
+## Deprecated
+
+`bim-input` is deprecated and will be removed in a future
+version of the library. It has already been replaced internally —
+`bim-text-input`, `bim-number-input`, `bim-selector`, and `bim-dropdown`
+no longer depend on it. Consumers using `<bim-input>` directly should
+migrate to one of those components (or build their own wrapper) before
+it's removed.
 
 ## Extends
 
@@ -13,7 +22,7 @@ A custom input web component for BIM applications. HTML tag: bim-input
 
 ## Properties
 
-### styles
+### ~~styles~~
 
 > `static` **styles**: `CSSResult`
 

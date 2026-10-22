@@ -53,17 +53,6 @@ This is used for raycasting operations.
 
 ***
 
-### useFastModelPicking
-
-> **useFastModelPicking**: `boolean` = `false`
-
-Whether to use fast model picking to optimize raycasting.
-When enabled, the raycaster will first use FastModelPicker to identify
-which model is under the mouse, then only raycast that specific model.
-This can significantly improve performance when there are many models.
-
-***
-
 ### world
 
 > **world**: [`World`](../interfaces/World.md)
@@ -109,7 +98,7 @@ This method also takes into account the clipping planes used by the renderer.
 | :------ | :------ | :------ |
 | `origin` | `Vector3` | The origin of the ray. |
 | `direction` | `Vector3` | The direction of the ray. |
-| `items` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>[] | The meshes to query. If not provided, it will query all the meshes stored in [World.meshes](../interfaces/World.md#meshes). |
+| `items` | `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>[] | The meshes to query. If not provided, it will query all the meshes stored in [World.meshes](../interfaces/World.md#meshes). |
 
 #### Returns
 

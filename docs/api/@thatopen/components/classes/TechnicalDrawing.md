@@ -201,7 +201,7 @@ await drawing.addProjectionFromItems(modelIdMap, {
 
 ### addProjectionLines()
 
-> **addProjectionLines**(`ls`, `layer`): `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>
+> **addProjectionLines**(`ls`, `layer`): `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>
 
 Adds a `THREE.LineSegments` to this drawing's container and
 automatically computes a BVH on its geometry so that [raycast](TechnicalDrawing.md#raycast) can
@@ -225,12 +225,12 @@ drawing.addProjectionLines(wallLines, "walls");
 
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `ls` | `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\> | `undefined` | The `LineSegments` to add. |
+| `ls` | `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\> | `undefined` | The `LineSegments` to add. |
 | `layer` | `string` | `"0"` | <p>Layer name to assign. Defaults to `"0"`. If the layer does not</p><p>  exist, a warning is logged and the lines fall back to `"0"`.</p> |
 
 #### Returns
 
-`LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>
+`LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>
 
 The same `LineSegments` instance, for chaining.
 
@@ -346,7 +346,7 @@ The closest intersection, or `null` if nothing was hit.
 
 ### toDrawingSpace()
 
-> `static` **toDrawingSpace**(`ls`, `drawing`): `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>
+> `static` **toDrawingSpace**(`ls`, `drawing`): `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>
 
 Projects a `THREE.LineSegments` from any world-space position onto the
 given drawing's local XZ plane (Y = 0), returning a new `THREE.LineSegments`
@@ -365,12 +365,12 @@ drawing.three.add(projected);
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `ls` | `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\> | <p>Source `LineSegments` to project. Its world matrix must be</p><p>  up-to-date (call `updateWorldMatrix(true, false)` if unsure).</p> |
+| `ls` | `LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\> | <p>Source `LineSegments` to project. Its world matrix must be</p><p>  up-to-date (call `updateWorldMatrix(true, false)` if unsure).</p> |
 | `drawing` | [`TechnicalDrawing`](TechnicalDrawing.md) | Target drawing whose local XZ plane is used as destination. |
 
 #### Returns
 
-`LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>
+`LineSegments`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>
 
 A new `LineSegments` with the projected geometry in drawing local
   space. No material is assigned — set one before rendering.

@@ -16,8 +16,15 @@ Component that generates 2D edge projections from fragment model items.
 
 > **cullerPixelsPerMeter**: `number` = `0.05`
 
-Resolution of the visibility culler in pixels per meter.
-Higher values = more accurate occlusion but slower culling.
+Size of one visibility-culling pixel, in meters (despite the name, the
+value is meters per pixel). LOWER values mean finer culling — fewer small
+meshes are discarded — at the cost of a larger render target, more tiles
+and more readback time. Higher values are coarser and faster. Default is
+0.05 (one culling pixel covers 5 cm).
+
+Note: meshes without a single visible pixel are removed from BOTH the
+visible and the hidden line sets, so this value bounds how much small
+geometry a projection loses.
 
 ***
 
@@ -64,6 +71,19 @@ Common values:
 - Left: `(-1, 0, 0)`
 - Right: `(1, 0, 0)`
 
+## Accessors
+
+### cullerMetersPerPixel
+
+> `get` **cullerMetersPerPixel**(): `number`
+
+Alias of [EdgeProjector.cullerPixelsPerMeter](EdgeProjector.md#cullerpixelspermeter) under a name that
+matches what the value actually is. Reads and writes the same setting.
+
+#### Returns
+
+`number`
+
 ## Methods
 
 ### get()
@@ -80,6 +100,7 @@ Generates 2D edge projections for the given model items.
 | `world` | [`World`](../interfaces/World.md) | The world whose renderer will be used for visibility culling. |
 | `config`? | `object` | Optional configuration. |
 | `config.onProgress`? | (`message`, `progress`?) => `void` | Optional progress callback receiving (message, progress?, collector?). |
+| `config.signal`? | `AbortSignal` | Optional AbortSignal. The generator pumps itself on requestAnimationFrame and checks it on every frame, so aborting rejects the returned promise and stops the pump instead of draining the whole task. |
 
 #### Returns
 

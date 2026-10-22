@@ -155,9 +155,17 @@ Stores the current selection.
 
 ### styles
 
-> `readonly` **styles**: `DataMap`\<`string`, `null` \| `Omit`\<`MaterialDefinition`, `"customId"`\>\>
+> `readonly` **styles**: `DataMap`\<`string`, [`HighlightStyle`](../type-aliases/HighlightStyle.md)\>
 
-Stores the styles used for highlighting selections. If null, the highlighter won't color geometries (useful for selection without coloring).
+Stores the styles used for highlighting selections. If null, the
+highlighter won't color geometries (useful for selection without coloring).
+
+`priority` decides what happens when several styles claim the same item:
+the highest one colors it, while the others keep the item in their
+selection and color it again as soon as the winner lets go of it. It
+defaults to 0, except for the select style, which defaults to the highest
+priority so a selection always shows on top. Ties are broken by
+registration order, with the most recently registered style winning.
 
 ***
 

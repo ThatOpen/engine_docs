@@ -161,6 +161,21 @@ The enabled state of the camera controls.
 
 ***
 
+### hasMode
+
+> `get` **hasMode**(): `boolean`
+
+Whether the camera has a [NavigationMode](../interfaces/NavigationMode.md) set. Navigation modes
+are created when the camera is assigned to a world, so this is `false`
+before that assignment (when [OrthoPerspectiveCamera.mode](OrthoPerspectiveCamera.md#mode) would
+throw). Useful to guard code that may run before initialization.
+
+#### Returns
+
+`boolean`
+
+***
+
 ### mode
 
 > `get` **mode**(): [`NavigationMode`](../interfaces/NavigationMode.md)
@@ -224,7 +239,7 @@ Make the camera view fit all the specified meshes.
 
 | Parameter | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `meshes` | `Iterable`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>\> | `undefined` | the meshes to fit. If it is not defined, it will evaluate Components.meshes. |
+| `meshes` | `Iterable`\<`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>\> | `undefined` | the meshes to fit. If it is not defined, it will evaluate Components.meshes. |
 | `offset` | `number` | `1.5` | the distance to the fit object |
 
 #### Returns

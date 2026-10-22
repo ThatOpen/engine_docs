@@ -22,6 +22,8 @@ The 3D line representing the dimension.
 
 ### lineMaterial
 
-> **lineMaterial**: `LineBasicMaterial`
+> **lineMaterial**: `LineMaterial` \| `LineBasicMaterial`
 
-The material to be used for the line of the dimension.
+The material to be used for the line of the dimension. A
+`THREE.LineBasicMaterial` renders a basic 1px line; a `LineMaterial`
+renders a fat line whose width honors `linewidth`.

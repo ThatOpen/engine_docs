@@ -9,7 +9,7 @@ A custom text input web component for BIM applications. HTML tag: bim-text-input
 ## Implements
 
 - [`HasName`](../interfaces/HasName.md)
-- [`HasValue`](../interfaces/HasValue.md)
+- [`HasValue`](../interfaces/HasValue.md)\<`string`\>
 
 ## Properties
 
@@ -107,6 +107,20 @@ This property is used to uniquely identify the input field within a form or grou
 #### Implementation of
 
 `HasName.name`
+
+***
+
+### ~~onValueChange~~
+
+> **onValueChange**: `Event`
+
+#### Deprecated
+
+Listen for the "input" event on the element instead.
+
+#### Implementation of
+
+[`HasValue`](../interfaces/HasValue.md) . [`onValueChange`](../interfaces/HasValue.md#onvaluechange)
 
 ***
 
@@ -209,23 +223,12 @@ CSS styles for the component.
 
 > `get` **query**(): `null` \| [`Query`](../type-aliases/Query.md)
 
-Gets the query value derived from the current input value.
-The `getQuery` function is assumed to be a utility function that takes a string as input
-and returns a processed query value based on the input.
-
-#### Example
-
-```typescript
-const textInput = new TextInput();
-textInput.value = "Key?Value";
-console.log(textInput.query);
-```
+Returns the parsed query from the current value, or `null` if the value
+cannot be parsed. Result is cached and invalidated when `value` changes.
 
 #### Returns
 
 `null` \| [`Query`](../type-aliases/Query.md)
-
-The processed query value derived from the current input value.
 
 ***
 
@@ -234,14 +237,12 @@ The processed query value derived from the current input value.
 > `set` **type**(`value`): `void`
 
 Sets the type of the input field.
-The type property determines the behavior of the input field.
-It can be any of the following: "date", "datetime-local", "email", "month", "password", "search", "tel", "text", "time", "url", "week".
-If an invalid type is provided, the type will not be changed.
+Accepted values: "date", "datetime-local", "email", "month", "password", "search", "tel", "text", "time", "url", "week", "area" (renders a textarea).
+If an invalid type is provided, the setter is ignored and a warning is logged.
 
 #### Example
 
 ```ts
-// Set the type to "email"
 textInput.type = "email";
 ```
 
@@ -249,4 +250,4 @@ textInput.type = "email";
 
 | Parameter | Type |
 | :------ | :------ |
-| `value` | `string` |
+| `value` | `TextInputType` |

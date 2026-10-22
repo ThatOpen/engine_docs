@@ -47,6 +47,39 @@ objects that are very, very far away (very unlikely).
 
 ***
 
+### doubleSidedMaterials
+
+> **doubleSidedMaterials**: `boolean` = `false`
+
+Whether the generated materials should render both faces (double-sided)
+instead of just the front face.
+
+#### Remarks
+
+Some exporters (e.g. certain Revit pipelines) produce geometry
+whose winding is not consistent, so front-face-only rendering can hide
+those faces. Enable this to render both sides. Defaults to false
+(front-face only) to match the previous behavior.
+
+***
+
+### includeMaterialProperties
+
+> **includeMaterialProperties**: `boolean` = `false`
+
+Whether to import each material's own property sets (`IfcMaterialProperties`
+in IFC4, `IfcExtendedMaterialProperties` in IFC2X3).
+
+#### Remarks
+
+Off by default to keep the output lean. These entities link to
+their material through a direct `Material` attribute rather than an
+`IfcRel*`, so when enabled the importer also synthesizes the inverse
+`HasProperties` relation on the material, making the properties reachable as
+element -> material -> material properties. See issue #249.
+
+***
+
 ### includeRelationNames
 
 > **includeRelationNames**: `boolean` = `false`
@@ -60,6 +93,23 @@ Whether to include relation names from the imported IFC data.
 > **includeUniqueAttributes**: `boolean` = `false`
 
 Whether to include unique attributes from the imported IFC data.
+
+***
+
+### parseOnce
+
+> **parseOnce**: `boolean` = `false`
+
+Whether to read geometry and properties from a single parse of the file.
+
+#### Remarks
+
+Off by default, which parses the file twice: once for geometry,
+and once more in a new web-ifc instance for properties. Enabling it keeps
+the geometry step's web-ifc instance open for the properties, which skips
+the second parse (and the second pass over `readCallback`) and avoids
+holding two parsed copies of the file in memory. The output is the same
+either way.
 
 ***
 

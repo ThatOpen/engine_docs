@@ -113,7 +113,7 @@ The event payload contains the world instance and the action ("added" or "remove
 
 ### three
 
-> **three**: `Scene`
+> **three**: `Scene`\<`Object3DEventMap`\>
 
 The underlying Three.js scene object.
 It is used to define the 3D space containing objects, lights, and cameras.

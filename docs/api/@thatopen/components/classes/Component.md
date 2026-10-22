@@ -16,6 +16,7 @@ Components are the building blocks of this library. Components are singleton ele
 - [`Clipper`](Clipper.md)
 - [`Views`](Views.md)
 - [`FastModelPickers`](FastModelPickers.md)
+- [`SnapResolvers`](SnapResolvers.md)
 - [`VertexPicker`](VertexPicker.md)
 - [`EdgeProjector`](EdgeProjector.md)
 - [`FragmentsManager`](FragmentsManager.md)

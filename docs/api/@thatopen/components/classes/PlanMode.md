@@ -34,15 +34,18 @@ A [NavigationMode](../interfaces/NavigationMode.md) that allows to navigate floo
 
 ### set()
 
-> **set**(`active`): `void`
+> **set**(`active`, `_options`?): `void`
 
-[NavigationMode.set](../interfaces/NavigationMode.md#set)
+[NavigationMode.set](../interfaces/NavigationMode.md#set). This mode never adjusts the camera target,
+so [NavigationModeOptions.preventTargetAdjustment](../interfaces/NavigationModeOptions.md#preventtargetadjustment) is trivially
+honored: there is nothing to skip.
 
 #### Parameters
 
 | Parameter | Type |
 | :------ | :------ |
 | `active` | `boolean` |
+| `_options`? | [`NavigationModeOptions`](../interfaces/NavigationModeOptions.md) |
 
 #### Returns
 

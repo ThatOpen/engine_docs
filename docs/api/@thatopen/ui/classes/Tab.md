@@ -12,19 +12,7 @@ A custom tab web component for BIM applications. HTML tag: bim-tab
 
 > **name**: `string`
 
-The name of the tab. If not provided, a default name will be assigned based on its position in the parent element.
-
-***
-
-### styles
-
-> `static` **styles**: `CSSResult`
-
-CSS styles for the component.
-
-#### Overrides
-
-`LitElement.styles`
+The name of the tab, used as its identifier.
 
 ## Accessors
 
@@ -36,20 +24,13 @@ Sets the hidden state of the tab.
 
 #### Fires
 
-hiddenchange - Dispatched when the hidden state changes.
-
-#### Example
-
-```typescript
-const tab = document.querySelector('bim-tab');
-tab.hidden = true; // hides the tab
-```
+hiddenchange
 
 #### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `boolean` | The new hidden state. If `true`, the tab will be hidden. If `false`, the tab will be visible. |
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `boolean` |
 
 ***
 
@@ -57,7 +38,7 @@ tab.hidden = true; // hides the tab
 
 > `set` **icon**(`value`): `void`
 
-The icon of the tab. This property is optional and can be used to display an icon next to the tab's label or name.
+The icon displayed in the tab switcher.
 
 #### Parameters
 
@@ -71,7 +52,7 @@ The icon of the tab. This property is optional and can be used to display an ico
 
 > `set` **label**(`value`): `void`
 
-The label of the tab. This property is optional and can be used to display a custom label instead of the tab's name.
+The label displayed in the tab switcher.
 
 #### Parameters
 

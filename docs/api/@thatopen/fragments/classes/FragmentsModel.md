@@ -2,11 +2,15 @@
 
 The main class for managing a 3D model loaded from a fragments file. Handles geometry, materials, visibility, highlighting, sections, and more. This class orchestrates multiple specialized managers to handle different aspects of the model like mesh management, item data, raycasting, etc. It maintains the overall state and provides the main interface for interacting with the model. The model data is loaded and processed asynchronously across multiple threads.
 
+## Implements
+
+- `IFragmentsModel`\<`true`\>
+
 ## Constructors
 
 ### new FragmentsModel()
 
-> **new FragmentsModel**(`modelId`, `meshManager`, `threads`, `editor`): [`FragmentsModel`](FragmentsModel.md)
+> **new FragmentsModel**(`modelId`, `meshManager`, `threads`, `editor`, `threadGroup`?): [`FragmentsModel`](FragmentsModel.md)
 
 The constructor of the fragments model. Don't use this directly. Use the [FragmentsModels.load](FragmentsModels.md#load) instead.
 
@@ -18,6 +22,7 @@ The constructor of the fragments model. Don't use this directly. Use the [Fragme
 | `meshManager` | `MeshManager` |
 | `threads` | `FragmentsConnection` |
 | `editor` | [`Editor`](Editor.md) |
+| `threadGroup`? | `string` |
 
 #### Returns
 
@@ -69,6 +74,15 @@ The key is the local ID of the item, and the value is the change.
 
 ***
 
+### threadGroup
+
+> `readonly` **threadGroup**: `undefined` \| `string`
+
+The thread group this model was loaded into, or `undefined` if it was
+loaded into the default pool. Set once at load time, never changes.
+
+***
+
 ### threads
 
 > `readonly` **threads**: `FragmentsConnection`
@@ -90,9 +104,12 @@ The key is the tile ID, and the value is the tile.
 
 > `readonly` **visibleItems**: `Set`\<`number`\>
 
-A set of item IDs that are currently visible (i.e. have at least
-one tile rendered on screen). Updated automatically as tiles are
-created and deleted by the mesh manager.
+The localIds of the items held by at least one live tile of this
+model. Updated automatically as tiles are created and deleted by
+the mesh manager; an item held by several tiles stays until the
+last of them is deleted. Tiles live while they are loaded, so this
+is not a per-frame frustum test: an item hidden with `setVisible`
+or out of view stays here until its tiles are deleted.
 
 ## Accessors
 
@@ -105,6 +122,20 @@ The bounding box of the whole model.
 #### Returns
 
 `Box3`
+
+***
+
+### clippingPlanes
+
+> `get` **clippingPlanes**(): `Plane`[]
+
+The clipping planes the model culls against, in world space. This is the
+array passed to [useClippingPlanes](FragmentsModel.md#useclippingplanes) (or the `clippingPlanes` load
+option) itself, not a copy.
+
+#### Returns
+
+`Plane`[]
 
 ***
 
@@ -137,10 +168,24 @@ Whether the model should stop updating..
 The event that is triggered when the clipping planes are needed in the thread.
 Set this method to pass your Three.js clipping planes to the model.
 
+#### Deprecated
+
+Pass the planes with the `clippingPlanes` option of
+[FragmentsModels.load](FragmentsModels.md#load), or call [useClippingPlanes](FragmentsModel.md#useclippingplanes) after
+loading. This callback keeps working; whichever of the two was set last
+is the one the model uses.
+
 > `set` **getClippingPlanesEvent**(`value`): `void`
 
 The event that is triggered when the clipping planes are needed in the thread.
 Set this method to pass your Three.js clipping planes to the model.
+
+#### Deprecated
+
+Pass the planes with the `clippingPlanes` option of
+[FragmentsModels.load](FragmentsModels.md#load), or call [useClippingPlanes](FragmentsModel.md#useclippingplanes) after
+loading. This callback keeps working; whichever of the two was set last
+is the one the model uses.
 
 #### Parameters
 
@@ -220,6 +265,39 @@ Internal method to finish processing. Don't use this directly.
 
 ***
 
+### \_getDeltaModel()
+
+> **\_getDeltaModel**(): `undefined` \| [`FragmentsModel`](FragmentsModel.md)
+
+Internal method to get the delta model holding this model's edits, if
+it is loaded. Don't use this directly.
+
+#### Returns
+
+`undefined` \| [`FragmentsModel`](FragmentsModel.md)
+
+***
+
+### \_getItemSnapData()
+
+> **\_getItemSnapData**(`itemId`): `Promise`\<`null` \| [`ElementData`](../type-aliases/ElementData.md)\>
+
+Fast snap-only fetch keyed by **itemId**. See
+`EditManager.getItemSnapData`. Internal — picker / SnapResolver
+consume this. App code should keep using `_getElements` (localId).
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `itemId` | `number` |
+
+#### Returns
+
+`Promise`\<`null` \| [`ElementData`](../type-aliases/ElementData.md)\>
+
+***
+
 ### \_getRequests()
 
 > **\_getRequests**(): `Promise`\<`object`\>
@@ -240,11 +318,56 @@ Internal method to get the requests of the model. Don't use this directly.
 
 ***
 
+### \_getRequestsSince()
+
+> **\_getRequestsSince**(`from`, `generation`): `Promise` \<[`EditRequestsSince`](../interfaces/EditRequestsSince.md)\>
+
+Internal method to get the requests added since an earlier call. Don't use this directly.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `from` | `number` | The `count` the earlier call returned. |
+| `generation` | `number` | The `generation` the earlier call returned. |
+
+#### Returns
+
+`Promise` \<[`EditRequestsSince`](../interfaces/EditRequestsSince.md)\>
+
+***
+
+### \_invoke()
+
+> **\_invoke**(`method`, `args`?): `Promise`\<`any`\>
+
+Internal method to call a method of the model on its worker. Don't use
+this directly.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `method` | `string` |
+| `args`? | `any`[] |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+***
+
 ### \_refreshView()
 
-> **\_refreshView**(): `Promise`\<`void`\>
+> **\_refreshView**(`force`): `Promise`\<`void`\>
 
 Internal method to refresh the view of the model. You shouldn't call this directly. Instead, use [FragmentsModels.update](FragmentsModels.md#update).
+
+#### Parameters
+
+| Parameter | Type | Default value |
+| :------ | :------ | :------ |
+| `force` | `boolean` | `false` |
 
 #### Returns
 
@@ -336,14 +459,45 @@ Internal method to set up the model. Don't use this directly.
 
 ### dispose()
 
-> **dispose**(): `Promise`\<`void`\>
+> **dispose**(`options`?): `Promise`\<`void`\>
 
 Dispose the model. Use this when you're done with the model.
 If you use the [FragmentsModels.dispose](FragmentsModels.md#dispose) method, this will be called automatically for all models.
 
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `options`? | `object` | - |
+| `options.keepInScene`? | `boolean` | <p>If true, frees the model's worker slot,</p><p>  registry entries and shared MaterialManager slot but leaves the THREE</p><p>  object, tiles, materials in `list`, alignments and grids in place.</p><p>  Caller must finalize the visual cleanup later via</p><p>  [finalizeDispose](FragmentsModel.md#finalizedispose). Used by `editor.save()` to swap in a freshly</p><p>  loaded model without a blank frame.</p> |
+
 #### Returns
 
 `Promise`\<`void`\>
+
+#### Implementation of
+
+`IFragmentsModel.dispose`
+
+***
+
+### finalizeDispose()
+
+> **finalizeDispose**(): `void`
+
+Finalize a deferred dispose. Removes the THREE object from its parent,
+tears down tile meshes (geometry only — materials are shared via the
+MaterialManager and may be reused by a replacement model under the
+same modelId), and disposes the model's alignments and grids.
+
+Only call this after `dispose({ keepInScene: true })`. The tile map
+is cleared with events disabled to bypass the onBeforeDelete listener
+registered in the constructor (which would otherwise dispose tile
+materials).
+
+#### Returns
+
+`void`
 
 ***
 
@@ -455,6 +609,10 @@ Get the buffer of the model.
 
 `Promise`\<`ArrayBuffer`\>
 
+#### Implementation of
+
+`IFragmentsModel.getBuffer`
+
 ***
 
 ### getCRS()
@@ -469,6 +627,10 @@ or IFCCOORDINATEREFERENCESYSTEM entities.
 
 `Promise`\<`null` \| [`CRSData`](../interfaces/CRSData.md)\>
 
+#### Implementation of
+
+`IFragmentsModel.getCRS`
+
 ***
 
 ### getCategories()
@@ -481,6 +643,10 @@ Get all the categories of the model.
 
 `Promise`\<`string`[]\>
 
+#### Implementation of
+
+`IFragmentsModel.getCategories`
+
 ***
 
 ### getCoordinates()
@@ -492,6 +658,10 @@ Gets coordinates of the model.
 #### Returns
 
 `Promise`\<`number`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getCoordinates`
 
 ***
 
@@ -538,6 +708,10 @@ Gets the global transforms IDs of the items of the model.
 
 `Promise`\<`number`[]\>
 
+#### Implementation of
+
+`IFragmentsModel.getGlobalTranformsIdsOfItems`
+
 ***
 
 ### getGlobalTransforms()
@@ -556,6 +730,10 @@ Gets the global transforms of the model.
 
 `Promise`\<`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>\>
 
+#### Implementation of
+
+`IFragmentsModel.getGlobalTransforms`
+
 ***
 
 ### getGlobalTransformsIds()
@@ -568,13 +746,67 @@ Gets all the global transforms IDs of the model.
 
 `Promise`\<`number`[]\>
 
+#### Implementation of
+
+`IFragmentsModel.getGlobalTransformsIds`
+
+***
+
+### getGridLabelMaterial()
+
+> **getGridLabelMaterial**(): `Material`
+
+The shared material used to render every grid axis label.
+Mutating its properties (color, opacity, dash sizes, etc.) updates all
+rendered grid labels immediately. Use `setGridLabelMaterial` to swap to a
+different material instance.
+
+#### Returns
+
+`Material`
+
+***
+
+### getGridMaterial()
+
+> **getGridMaterial**(): `LineBasicMaterial`
+
+The shared material used to render every grid axis line.
+Mutating its properties (color, opacity, dash sizes, etc.) updates all
+rendered grid lines immediately. Use `setGridMaterial` to swap to a
+different material instance.
+
+#### Returns
+
+`LineBasicMaterial`
+
 ***
 
 ### getGrids()
 
-> **getGrids**(): `Promise`\<`Group`\<`Object3DEventMap`\>\>
+> **getGrids**(`config`?): `Promise`\<`Group`\<`Object3DEventMap`\>\>
 
 Get the grids of the model (if any).
+
+Returns a `THREE.Group` with one child per grid (each child is a `THREE.Group`
+that carries `userData.id = localId` and `userData.kind = "grid"`).
+
+Each grid's children are `THREE.Group` instances with `userData.kind = "axis"`,
+acting as an axis container.
+A `THREE.LINE` instance with `userData.kind = "line"` is appended to it.
+
+When opting in to showing labels, two `THREE.SHAPE` instances with
+`userData.kind = "label"` and `userData.index` (the label's index, `0` or `1`)
+are appended to the axis container.
+
+All grid's descendants (`"axis"`, `"line"`, `"label"`) carry `userData.tag` (the axis label value)
+and `userData.axis` (`"uAxes"`, `"vAxes"`, or `"wAxes"`).
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `config`? | `GridsConfig` |
 
 #### Returns
 
@@ -597,6 +829,10 @@ Get the GUIDs corresponding to the specified local IDs.
 #### Returns
 
 `Promise`\<(`null` \| `string`)[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getGuidsByLocalIds`
 
 ***
 
@@ -642,6 +878,197 @@ Get the horizontal alignments of the model (if any).
 
 ***
 
+### getIndexEntry()
+
+> **getIndexEntry**\<`K`, `V`\>(`name`, `key`): `Promise`\<`null` \| `V`\>
+
+Forward lookup of a single entry in the named index. The return shape
+depends on the index mode (see [IndexEntry](../type-aliases/IndexEntry.md)).
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+| `V` *extends* [`IndexEntry`](../type-aliases/IndexEntry.md) |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `key` | `K` |
+
+#### Returns
+
+`Promise`\<`null` \| `V`\>
+
+#### Implementation of
+
+`IFragmentsModel.getIndexEntry`
+
+***
+
+### getIndexInfo()
+
+> **getIndexInfo**(`name`): `Promise`\<`null` \| [`IndexInfo`](../interfaces/IndexInfo.md)\>
+
+Describe the shape of a named index without performing any lookups.
+Returns `null` if no index with that name exists.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`Promise`\<`null` \| [`IndexInfo`](../interfaces/IndexInfo.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getIndexInfo`
+
+***
+
+### getIndexKey()
+
+> **getIndexKey**\<`K`\>(`name`, `index`): `Promise`\<`null` \| `K`\>
+
+Get key at given index.
+Useful for keys-only indexes but valid for any mode.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `index` | `number` |
+
+#### Returns
+
+`Promise`\<`null` \| `K`\>
+
+#### Implementation of
+
+`IFragmentsModel.getIndexKey`
+
+***
+
+### getIndexKeys()
+
+> **getIndexKeys**\<`K`\>(`name`): `Promise`\<`null` \| `IndexArrayType`\<`K`\>\>
+
+Get the keys of an index. Useful for keys-only indexes (membership tests,
+iteration) but valid for any mode. Number keys come back as a
+`Uint32Array`, string keys as `string[]`.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`Promise`\<`null` \| `IndexArrayType`\<`K`\>\>
+
+#### Implementation of
+
+`IFragmentsModel.getIndexKeys`
+
+***
+
+### getIndexNames()
+
+> **getIndexNames**(): `Promise`\<`string`[]\>
+
+Get the names of every user-defined index stored on this model. See the
+`ModelIndex` schema for the supported shapes.
+
+#### Returns
+
+`Promise`\<`string`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getIndexNames`
+
+***
+
+### getIndexValues()
+
+> **getIndexValues**\<`V`\>(`name`): `Promise`\<`null` \| `V`[]\>
+
+Get the values of an index. Useful for inverse lookups.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `V` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`Promise`\<`null` \| `V`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getIndexValues`
+
+***
+
+### getInverseIndexEntry()
+
+> **getInverseIndexEntry**\<`K`, `V`\>(`name`, `value`): `Promise`\<`null` \| `IndexArrayType`\<`V`\>\>
+
+Inverse lookup. For an index with forward direction `key -> value`,
+returns every key that maps to `value`. The inverse map is built lazily
+on first call and cached for the model's lifetime.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+| `V` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `value` | `K` |
+
+#### Returns
+
+`Promise`\<`null` \| `IndexArrayType`\<`V`\>\>
+
+#### Implementation of
+
+`IFragmentsModel.getInverseIndexEntry`
+
+***
+
 ### getItem()
 
 > **getItem**(`id`): `Item`
@@ -660,6 +1087,36 @@ Get an item by its ID.
 
 ***
 
+### getItemDrawChunks()
+
+> **getItemDrawChunks**(`localIds`): `Promise`\<`object`[]\>
+
+Returns per-tile index-buffer chunks for the given items. Each entry
+carries a tile id and parallel `position` / `size` Uint32Arrays giving
+the start index and index count of every contiguous run of vertices
+belonging to one of `localIds` in that tile's index buffer.
+
+Lets a renderer clone a tile mesh sharing its `geometry.attributes`
+and `index`, then call `geometry.addGroup(position[i], size[i], 0)`
+for each chunk to draw only the matching slices. No highlight
+material slot is allocated; the call is read-only.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `localIds` | `Iterable`\<`number`\> |
+
+#### Returns
+
+`Promise`\<`object`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getItemDrawChunks`
+
+***
+
 ### getItems()
 
 > **getItems**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
@@ -675,6 +1132,10 @@ Gets the items of the model.
 #### Returns
 
 `Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
+
+#### Implementation of
+
+`IFragmentsModel.getItems`
 
 ***
 
@@ -696,6 +1157,10 @@ Retrieves items based on the specified query parameters.
 `Promise`\<`number`[]\>
 
 A promise that resolves to the items matching the query.
+
+#### Implementation of
+
+`IFragmentsModel.getItemsByQuery`
 
 ***
 
@@ -733,6 +1198,10 @@ Get the spatial structure children of the specified items.
 
 `Promise`\<`number`[]\>
 
+#### Implementation of
+
+`IFragmentsModel.getItemsChildren`
+
 ***
 
 ### getItemsData()
@@ -755,6 +1224,10 @@ parameter.
 #### Returns
 
 `Promise` \<[`ItemData`](../interfaces/ItemData.md)[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getItemsData`
 
 #### Examples
 
@@ -799,6 +1272,10 @@ which contains the necessary information to reconstruct a `THREE.BufferGeometry`
 
 `Promise` \<[`MeshData`](../type-aliases/MeshData.md)[][]\>
 
+#### Implementation of
+
+`IFragmentsModel.getItemsGeometry`
+
 ***
 
 ### getItemsIds()
@@ -811,6 +1288,10 @@ Gets all the items IDs of the model.
 
 `Promise`\<`number`[]\>
 
+#### Implementation of
+
+`IFragmentsModel.getItemsIds`
+
 ***
 
 ### getItemsIdsWithGeometry()
@@ -822,6 +1303,10 @@ Get all the items ids of the model that have geometry.
 #### Returns
 
 `Promise`\<`number`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getItemsIdsWithGeometry`
 
 ***
 
@@ -840,6 +1325,10 @@ Get all the items of the model that belong to the specified category.
 #### Returns
 
 `Promise`\<`object`\>
+
+#### Implementation of
+
+`IFragmentsModel.getItemsOfCategories`
 
 ***
 
@@ -860,6 +1349,10 @@ Retrieves the total volume of items based on their local IDs.
 `Promise`\<`number`\>
 
 A promise that resolves to the total volume of the specified items.
+
+#### Implementation of
+
+`IFragmentsModel.getItemsVolume`
 
 ***
 
@@ -885,6 +1378,10 @@ Get all the local IDs of the model.
 
 `Promise`\<`number`[]\>
 
+#### Implementation of
+
+`IFragmentsModel.getLocalIds`
+
 ***
 
 ### getLocalIdsByGuids()
@@ -902,6 +1399,35 @@ Get the local IDs corresponding to the specified GUIDs.
 #### Returns
 
 `Promise`\<(`null` \| `number`)[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getLocalIdsByGuids`
+
+***
+
+### getLocalIdsFromItemIds()
+
+> **getLocalIdsFromItemIds**(`itemIds`): `Promise`\<`number`[]\>
+
+Translate internal `itemId`s into user-facing `localId`s, preserving
+order. Used by GPU-readback pickers that recover item ids from the
+per-vertex `id` attribute and need to map back to the public id
+space.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `itemIds` | `Iterable`\<`number`\> |
+
+#### Returns
+
+`Promise`\<`number`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getLocalIdsFromItemIds`
 
 ***
 
@@ -921,6 +1447,10 @@ Gets the local transforms of the model.
 
 `Promise`\<`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>\>
 
+#### Implementation of
+
+`IFragmentsModel.getLocalTransforms`
+
 ***
 
 ### getLocalTransformsIds()
@@ -932,6 +1462,10 @@ Gets all the local transforms IDs of the model.
 #### Returns
 
 `Promise`\<`number`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getLocalTransformsIds`
 
 ***
 
@@ -951,6 +1485,10 @@ Gets the materials of the model.
 
 `Promise`\<`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>\>
 
+#### Implementation of
+
+`IFragmentsModel.getMaterials`
+
 ***
 
 ### getMaterialsIds()
@@ -963,6 +1501,10 @@ Gets all the materials IDs of the model.
 
 `Promise`\<`number`[]\>
 
+#### Implementation of
+
+`IFragmentsModel.getMaterialsIds`
+
 ***
 
 ### getMaxLocalId()
@@ -974,6 +1516,10 @@ Get the maximum local ID of the model.
 #### Returns
 
 `Promise`\<`number`\>
+
+#### Implementation of
+
+`IFragmentsModel.getMaxLocalId`
 
 ***
 
@@ -1011,6 +1557,10 @@ Get the metadata of the model.
 
 `Promise`\<`T`\>
 
+#### Implementation of
+
+`IFragmentsModel.getMetadata`
+
 ***
 
 ### getPositions()
@@ -1028,6 +1578,10 @@ Get the absolute positions of the specified items.
 #### Returns
 
 `Promise`\<`Vector3`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getPositions`
 
 ***
 
@@ -1061,6 +1615,10 @@ Gets the relations of the model.
 
 `Promise`\<`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>\>
 
+#### Implementation of
+
+`IFragmentsModel.getRelations`
+
 ***
 
 ### getRepresentations()
@@ -1079,6 +1637,10 @@ Gets the representations of the model.
 
 `Promise`\<`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>\>
 
+#### Implementation of
+
+`IFragmentsModel.getRepresentations`
+
 ***
 
 ### getRepresentationsIds()
@@ -1090,6 +1652,10 @@ Gets all the representations IDs of the model.
 #### Returns
 
 `Promise`\<`number`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getRepresentationsIds`
 
 ***
 
@@ -1109,6 +1675,10 @@ Gets the samples of the model.
 
 `Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
 
+#### Implementation of
+
+`IFragmentsModel.getSamples`
+
 ***
 
 ### getSamplesIds()
@@ -1120,6 +1690,10 @@ Gets all the samples IDs of the model.
 #### Returns
 
 `Promise`\<`number`[]\>
+
+#### Implementation of
+
+`IFragmentsModel.getSamplesIds`
 
 ***
 
@@ -1139,6 +1713,10 @@ Gets the section (edges and fills) between the model and a given clipping plane.
 #### Returns
 
 `Promise`\<`ModelSection`\>
+
+#### Implementation of
+
+`IFragmentsModel.getSection`
 
 ***
 
@@ -1185,6 +1763,10 @@ Get the spatial structure of the model.
 
 `Promise` \<[`SpatialTreeItem`](../interfaces/SpatialTreeItem.md)\>
 
+#### Implementation of
+
+`IFragmentsModel.getSpatialStructure`
+
 ***
 
 ### getSubsetBuffer()
@@ -1203,6 +1785,10 @@ Get a buffer containing only the specified items and their associated geometry.
 #### Returns
 
 `Promise`\<`any`\>
+
+#### Implementation of
+
+`IFragmentsModel.getSubsetBuffer`
 
 ***
 
@@ -1233,6 +1819,35 @@ Gets the items by visibility.
 #### Returns
 
 `Promise`\<`boolean`[]\>
+
+***
+
+### hasIndexEntry()
+
+> **hasIndexEntry**\<`K`\>(`name`, `key`): `Promise`\<`boolean`\>
+
+Test whether a key exists in the named index without resolving its value.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `key` | `K` |
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Implementation of
+
+`IFragmentsModel.hasIndexEntry`
 
 ***
 
@@ -1412,6 +2027,44 @@ Applies a color to the specified items while preserving original material proper
 
 ***
 
+### setGridLabelMaterial()
+
+> **setGridLabelMaterial**(`material`): `void`
+
+Replace the shared grid label material. The previous material is disposed
+after the swap.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `material` | `Material` |
+
+#### Returns
+
+`void`
+
+***
+
+### setGridMaterial()
+
+> **setGridMaterial**(`material`): `void`
+
+Replace the shared grid material. The previous material is disposed
+after the swap.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `material` | `LineBasicMaterial` |
+
+#### Returns
+
+`void`
+
+***
+
 ### setLodMode()
 
 > **setLodMode**(`lodMode`): `Promise`\<`void`\>
@@ -1498,6 +2151,29 @@ Sets a camera for the model. The model will use it to load tiles dinamically dep
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `camera` | `PerspectiveCamera` \| `OrthographicCamera` | The camera to use. |
+
+#### Returns
+
+`void`
+
+***
+
+### useClippingPlanes()
+
+> **useClippingPlanes**(`planes`): `void`
+
+Sets the clipping planes the model culls against, in world space. Pass
+the same array your renderer clips with (e.g. `renderer.clippingPlanes`):
+the model keeps the reference and reads it on every view refresh, so
+adding, removing or moving planes in place is picked up without calling
+this again. Assigning a new array to `renderer.clippingPlanes` is not:
+call this again with the new array.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `planes` | `Plane`[] | The clipping planes to use. |
 
 #### Returns
 

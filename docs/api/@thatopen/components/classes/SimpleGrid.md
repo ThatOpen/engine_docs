@@ -68,7 +68,7 @@ The components instance to which this grid belongs.
 
 ### three
 
-> `readonly` **three**: `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>
+> `readonly` **three**: `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>
 
 The Three.js mesh that contains the infinite grid.
 

@@ -13,6 +13,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/enumerations/RendererMode",
             "label": "RendererMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/enumerations/SnapClass",
+            "label": "SnapClass"
           }
         ]
       },
@@ -332,6 +337,16 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/classes/SnapResolver",
+            "label": "SnapResolver"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/classes/SnapResolvers",
+            "label": "SnapResolvers"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/classes/TechnicalDrawing",
             "label": "TechnicalDrawing"
           },
@@ -573,6 +588,16 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/interfaces/NavigationModeOptions",
+            "label": "NavigationModeOptions"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/interfaces/PickDepthContributorContext",
+            "label": "PickDepthContributorContext"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/interfaces/Progress",
             "label": "Progress"
           },
@@ -774,8 +799,23 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/PickDepthContributor",
+            "label": "PickDepthContributor"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components/type-aliases/QueryResultAggregation",
             "label": "QueryResultAggregation"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/RendererApi",
+            "label": "RendererApi"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/SimpleRendererParameters",
+            "label": "SimpleRendererParameters"
           },
           {
             "type": "doc",
@@ -786,6 +826,21 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/type-aliases/SlopeFormat",
             "label": "SlopeFormat"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/SnapFloatArray",
+            "label": "SnapFloatArray"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/SnapPrecision",
+            "label": "SnapPrecision"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/type-aliases/SnapResult",
+            "label": "SnapResult"
           },
           {
             "type": "doc",
@@ -978,6 +1033,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components/functions/linearDimensionMachine",
             "label": "linearDimensionMachine"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components/functions/setOrbitPoint",
+            "label": "setOrbitPoint"
           }
         ]
       }
@@ -997,8 +1057,43 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/DeferredAoMode",
+            "label": "DeferredAoMode"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/enumerations/EdgeDetectionPassMode",
             "label": "EdgeDetectionPassMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/GraphicVertexPickerMode",
+            "label": "GraphicVertexPickerMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/HovererMode",
+            "label": "HovererMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/MeasurementLineType",
+            "label": "MeasurementLineType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/MeasurementPickMode",
+            "label": "MeasurementPickMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/PostproductionAspect",
+            "label": "PostproductionAspect"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/enumerations/PostproductionMode",
+            "label": "PostproductionMode"
           }
         ]
       },
@@ -1045,6 +1140,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/ClipStyler",
             "label": "ClipStyler"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/DeferredPipeline",
+            "label": "DeferredPipeline"
           },
           {
             "type": "doc",
@@ -1113,8 +1213,18 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/classes/NearPlaneLineMaterial",
+            "label": "NearPlaneLineMaterial"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/classes/Outliner",
             "label": "Outliner"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/PointCloudLoader",
+            "label": "PointCloudLoader"
           },
           {
             "type": "doc",
@@ -1125,6 +1235,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/classes/RendererWith2D",
             "label": "RendererWith2D"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/classes/SplatLoader",
+            "label": "SplatLoader"
           },
           {
             "type": "doc",
@@ -1189,8 +1304,53 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/LoadedPointCloud",
+            "label": "LoadedPointCloud"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/LoadedSplat",
+            "label": "LoadedSplat"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/OcclusionPassContext",
+            "label": "OcclusionPassContext"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/OutlineGroupConfig",
+            "label": "OutlineGroupConfig"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/components-front/interfaces/PlacementMode",
             "label": "PlacementMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/PointCloudRequestManager",
+            "label": "PointCloudRequestManager"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/PointCloudSettings",
+            "label": "PointCloudSettings"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/PointCloudSource",
+            "label": "PointCloudSource"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/SplatRequestManager",
+            "label": "SplatRequestManager"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/interfaces/SplatSource",
+            "label": "SplatSource"
           }
         ]
       },
@@ -1202,6 +1362,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/type-aliases/DrawingCursor",
             "label": "DrawingCursor"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/type-aliases/HighlightStyle",
+            "label": "HighlightStyle"
           }
         ]
       },
@@ -1223,6 +1388,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/variables/SequentialMode",
             "label": "SequentialMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/variables/defaultPointCloudSettings",
+            "label": "defaultPointCloudSettings"
           }
         ]
       },
@@ -1234,6 +1404,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/components-front/functions/dist2D",
             "label": "dist2D"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/components-front/functions/formatUnits",
+            "label": "formatUnits"
           }
         ]
       }
@@ -1304,8 +1479,18 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/classes/IfcDecoderStream",
+            "label": "IfcDecoderStream"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/classes/IfcImporter",
             "label": "IfcImporter"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/classes/IfcParserStream",
+            "label": "IfcParserStream"
           },
           {
             "type": "doc",
@@ -1360,6 +1545,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/CreateIndexRequest",
+            "label": "CreateIndexRequest"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/CreateItemRequest",
             "label": "CreateItemRequest"
           },
@@ -1395,6 +1585,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/DeleteIndexRequest",
+            "label": "DeleteIndexRequest"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/DeleteItemRequest",
             "label": "DeleteItemRequest"
           },
@@ -1425,23 +1620,18 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/EditRequestsSince",
+            "label": "EditRequestsSince"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/GroupData",
             "label": "GroupData"
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/IfcSplitterDeps",
-            "label": "IfcSplitterDeps"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/IfcSplitterFs",
-            "label": "IfcSplitterFs"
-          },
-          {
-            "type": "doc",
-            "id": "api/@thatopen/fragments/interfaces/IfcSplitterPath",
-            "label": "IfcSplitterPath"
+            "id": "api/@thatopen/fragments/interfaces/IndexInfo",
+            "label": "IndexInfo"
           },
           {
             "type": "doc",
@@ -1477,6 +1667,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/ModelIdMap",
             "label": "ModelIdMap"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/RawIndexData",
+            "label": "RawIndexData"
           },
           {
             "type": "doc",
@@ -1517,6 +1712,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/UpdateGlobalTransformRequest",
             "label": "UpdateGlobalTransformRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/UpdateIndexRequest",
+            "label": "UpdateIndexRequest"
           },
           {
             "type": "doc",
@@ -1567,6 +1767,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/VirtualModelConfig",
             "label": "VirtualModelConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/VirtualMultithreadingConfig",
+            "label": "VirtualMultithreadingConfig"
           },
           {
             "type": "doc",
@@ -1631,13 +1836,48 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/GridReadError",
+            "label": "GridReadError"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/type-aliases/Identifier",
             "label": "Identifier"
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/IndexEntry",
+            "label": "IndexEntry"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/IndexKeyType",
+            "label": "IndexKeyType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/IndexMode",
+            "label": "IndexMode"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/IndexRequest",
+            "label": "IndexRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/IndexValueType",
+            "label": "IndexValueType"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/type-aliases/InformationResultType",
             "label": "InformationResultType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/InverseIndexEntry",
+            "label": "InverseIndexEntry"
           },
           {
             "type": "doc",
@@ -1747,8 +1987,28 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/variables/ELEMENT_TYPES",
+            "label": "ELEMENT_TYPES"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/variables/EditRequestTypeNames",
             "label": "EditRequestTypeNames"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/variables/FRAGMENTS_GENERATOR",
+            "label": "FRAGMENTS_GENERATOR"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/variables/FRAGMENTS_VERSION",
+            "label": "FRAGMENTS_VERSION"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/variables/SPATIAL_TYPES",
+            "label": "SPATIAL_TYPES"
           },
           {
             "type": "doc",
@@ -1773,8 +2033,8 @@ const typedocSidebar = { items: [
         "items": [
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/functions/extract",
-            "label": "extract"
+            "id": "api/@thatopen/fragments/functions/decodeStepString",
+            "label": "decodeStepString"
           },
           {
             "type": "doc",
@@ -1783,8 +2043,33 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
-            "id": "api/@thatopen/fragments/functions/split",
-            "label": "split"
+            "id": "api/@thatopen/fragments/functions/getProvenanceMetadata",
+            "label": "getProvenanceMetadata"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/isIndexRequest",
+            "label": "isIndexRequest"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/isRawBuffer",
+            "label": "isRawBuffer"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/listIdxByType",
+            "label": "listIdxByType"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/parseStepArguments",
+            "label": "parseStepArguments"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/functions/streamAsyncIterator",
+            "label": "streamAsyncIterator"
           },
           {
             "type": "doc",
@@ -1844,6 +2129,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/classes/EmptyState",
+            "label": "EmptyState"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/classes/Grid",
             "label": "Grid"
           },
@@ -1866,6 +2156,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/classes/Manager",
             "label": "Manager"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/classes/Modal",
+            "label": "Modal"
           },
           {
             "type": "doc",
@@ -1896,6 +2191,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/classes/Slider",
             "label": "Slider"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/classes/SortableList",
+            "label": "SortableList"
           },
           {
             "type": "doc",
@@ -1995,6 +2295,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/interfaces/RefreshRowsOptions",
+            "label": "RefreshRowsOptions"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/interfaces/RowCreatedEventDetail",
             "label": "RowCreatedEventDetail"
           },
@@ -2061,6 +2366,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/HiddenChangeEvent",
+            "label": "HiddenChangeEvent"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/LabelData",
             "label": "LabelData"
           },
@@ -2118,6 +2428,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/ui/type-aliases/TableGroupingTransform",
             "label": "TableGroupingTransform"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/ui/type-aliases/TableHeadersTransform",
+            "label": "TableHeadersTransform"
           },
           {
             "type": "doc",

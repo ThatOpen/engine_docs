@@ -6,13 +6,13 @@ A custom toolbar group web component for BIM applications. HTML tag: bim-toolbar
 
 - `LitElement`
 
-## Properties
+## Accessors
 
 ### rows
 
-> **rows**: `number` = `2`
+> `set` **rows**(`value`): `void`
 
-The number of rows to display in the toolbar group.
+The number of rows in the grid layout. Clamped to a minimum of 1.
 
 #### Default Value
 
@@ -20,27 +20,19 @@ The number of rows to display in the toolbar group.
 2
 ```
 
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `number` |
+
 ***
-
-### styles
-
-> `static` **styles**: `CSSResult`
-
-CSS styles for the component.
-
-#### Overrides
-
-`LitElement.styles`
-
-## Accessors
 
 ### vertical
 
 > `set` **vertical**(`value`): `void`
 
-Sets the vertical property of the ToolbarGroup.
-When vertical is true, the toolbar group will display its children vertically.
-When vertical is false, the toolbar group will display its children horizontally.
+When `true`, the group renders its children in a vertical flow.
 
 #### Parameters
 

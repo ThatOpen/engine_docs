@@ -1,73 +1,120 @@
-# @thatopen/components-front
+<p align="center">
+  <a href="https://thatopen.com/">TOC</a>
+  |
+  <a href="https://docs.thatopen.com/intro">documentation</a>
+  |
+  <a href="https://thatopen.github.io/engine_components/examples/IfcLoader/index.html">demo</a>
+  |
+  <a href="https://people.thatopen.com/">community</a>
+  |
+  <a href="https://www.npmjs.com/org/thatopen">npm package</a>
+</p>
 
-## Enumerations
+![cover](https://thatopen.github.io/engine_components/resources/cover.png)
 
-| Enumeration | Description |
-| :------ | :------ |
-| [EdgeDetectionPassMode](enumerations/EdgeDetectionPassMode.md) | The mode of the edge detection pass. |
+<h1>Open BIM Components <img src="https://thatopen.github.io/engine_components/resources/favicon.ico" width="32"/></h1>
 
-## Classes
+[![Components NPM Package][npm]][npm-url]
+[![Components NPM Package][npm-downloads]][npm-url]
+[![Components Front NPM Package][npm-front]][npm-url-front]
+[![Components Front NPM Package][npm-downloads-front]][npm-url-front]
 
-| Class | Description |
-| :------ | :------ |
-| [Angle](classes/Angle.md) | Represents an angle defined by three points in 3D space: a start point, a vertex (center), and an end point. |
-| [AngleMeasurement](classes/AngleMeasurement.md) | A measurement tool to measure angles between 3 points in 3D and display a visual arc with the numeric angle value. |
-| [AreaMeasurement](classes/AreaMeasurement.md) | AreaMeasurement allows users to measure and interact with areas in a 3D environment. This class provides functionality for creating, updating, and deleting area measurements, as well as managing their visual representation. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/AreaMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/AreaMeasurement). |
-| [CivilCrossSectionNavigator](classes/CivilCrossSectionNavigator.md) | This component is used to navigate and visualize cross sections of a 3D model. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/CivilNavigators). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/CivilCrossSectionNavigator). |
-| [CivilNavigators](classes/CivilNavigators.md) | This component provides functionality for navigating and interacting with civil engineering data in a 3D environment. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/CivilNavigators). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/CivilNavigators). |
-| [CivilRaycaster](classes/CivilRaycaster.md) | This component provides functionality for navigating and interacting with civil engineering data in a 3D environment. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/CivilNavigators). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/CivilRaycaster). |
-| [ClipEdges](classes/ClipEdges.md) | The `ClipEdges` class is responsible for managing and rendering clipped edges and fills in a ThreeJS scene based on specified styles and models. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/ClipStyler). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/ClipEdges). |
-| [ClipStyler](classes/ClipStyler.md) | A component that can style Clipping Planes by adding edges and fills. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/ClipStyler). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/ClipStyler). |
-| [DimensionLine](classes/DimensionLine.md) | A class representing a simple dimension line in a 3D space. |
-| [DrawingEditor](classes/DrawingEditor.md) | Front component that centralises all interaction for OBC.TechnicalDrawing. |
-| [DrawingTool](classes/DrawingTool.md) | Base class for all drawing tools. |
-| [FontManager](classes/FontManager.md) | Manages font loading and creates Three.js text meshes for annotation labels. |
-| [GlossPass](classes/GlossPass.md) | A postprocessing pass that applies a gloss effect to the rendered scene. The gloss effect makes surfaces appear more reflective based on their angle relative to the camera view. |
-| [GraphicVertexPicker](classes/GraphicVertexPicker.md) | A class to provide a graphical marker for picking vertices in a 3D scene. |
-| [Highlighter](classes/Highlighter.md) | This component allows highlighting and selecting fragments in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Highlighter). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Highlighter). |
-| [Hoverer](classes/Hoverer.md) | The `Hoverer` class is responsible for managing hover effects on 3D objects within a scene. It supports animations for fading in and out hover effects and manages the lifecycle of associated 3D meshes. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Hoverer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Hoverer). |
-| [LengthMeasurement](classes/LengthMeasurement.md) | A basic dimension tool to measure distances between 2 points in 3D and display a 3D symbol displaying the numeric value. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/LengthMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/LengthMeasurement). |
-| [Mark](classes/Mark.md) | Represents a marker in the 3D world. |
-| [Marker](classes/Marker.md) | Component for Managing Markers along with creating different types of markers. Every marker is a Simple2DMarker. For every marker that needs to be added, you can use the Manager to add the marker and change its look and feel. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Marker). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Marker). |
-| [Measurement](classes/Measurement.md) | Abstract class that gives the core elements to create any measurement component. 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Measurement). |
-| [Mesher](classes/Mesher.md) | Mesher is a class that manages the creation and removal of THREE.Mesh objects from fragment data. It allows to efficiently retrieve and remove meshes for specific model items. 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Mesher). |
-| [Outliner](classes/Outliner.md) | This component allows adding a colored outline with thickness to fragments in a 3D scene. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/Outliner). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/Outliner). |
-| [PostproductionRenderer](classes/PostproductionRenderer.md) | A class that extends RendererWith2D and adds post-processing capabilities. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/PostproductionRenderer). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/PostproductionRenderer). |
-| [RendererWith2D](classes/RendererWith2D.md) | A basic renderer capable of rendering 3D and 2D objects ([Objec3Ds](https://threejs.org/docs/#api/en/core/Object3D) and [CSS2DObjects](https://threejs.org/docs/#examples/en/renderers/CSS2DRenderer) respectively). |
-| [VolumeMeasurement](classes/VolumeMeasurement.md) | A basic dimension tool to measure volumes and display a 3D symbol with the numeric value. 📕 [Tutorial](https://docs.thatopen.com/Tutorials/Components/Front/VolumeMeasurement). 📘 [API](https://docs.thatopen.com/api/@thatopen/components-front/classes/VolumeMeasurement). |
+This library is a collection of BIM tools based on [Three.js](https://github.com/mrdoob/three.js/) and other libraries. It includes pre-made features to easily build browser-based 3D BIM applications, such as postproduction, dimensions, floorplan navigation, DXF export and much more. 
 
-## Interfaces
+## 🤝 Want our help?
+Are you developing a project with our technology and would like our help?
+Apply now to join [That Open Accelerator Program](https://thatopen.com/accelerator)!
 
-| Interface | Description |
-| :------ | :------ |
-| [ClipEdgesCreationConfig](interfaces/ClipEdgesCreationConfig.md) | Configuration for creating ClipEdges. |
-| [ClipEdgesItemStyle](interfaces/ClipEdgesItemStyle.md) | Represents the style configuration for clip edges items. |
-| [ClipStyle](interfaces/ClipStyle.md) | Represents the style configuration for clipping edges, including materials for lines and fills. |
-| [DimensionData](interfaces/DimensionData.md) | Interface representing the data required to create a dimension line. |
-| [DrawingPointerEvent](interfaces/DrawingPointerEvent.md) | A processed pointer event in drawing local space. |
-| [HighlightEvents](interfaces/HighlightEvents.md) | Interface defining the events that the Highlighter class can trigger. Each highlighter has its own set of events, identified by the highlighter name. |
-| [HighlighterConfig](interfaces/HighlighterConfig.md) | Interface defining the configuration options for the Highlighter class. |
-| [IGroupedMarkers](interfaces/IGroupedMarkers.md) | Interface representing a group of markers. |
-| [IMarker](interfaces/IMarker.md) | Interface representing a marker object. |
-| [LinearPlacementContext](interfaces/LinearPlacementContext.md) | Context passed to every [PlacementMode](interfaces/PlacementMode.md) registered on LinearAnnotationsTool. |
-| [PlacementMode](interfaces/PlacementMode.md) | A single placement strategy for a [DrawingTool](classes/DrawingTool.md). |
+## Packages
 
-## Type Aliases
+This library contains 2 packages:
 
-| Type alias | Description |
-| :------ | :------ |
-| [DrawingCursor](type-aliases/DrawingCursor.md) | Alias exposed on [DrawingEditor.cursor](classes/DrawingEditor.md#cursor) — same shape as [DrawingPointerEvent](interfaces/DrawingPointerEvent.md). |
+`@thatopen/components` - The core functionality. Compatible both with browser and Node.js environments.
 
-## Variables
+`@thatopen/components-front` - Features exclusive for browser environments.
 
-| Variable | Description |
-| :------ | :------ |
-| [IndividualMode](variables/IndividualMode.md) | One click → one dimension. Auto-confirms once both endpoints are set. |
-| [LineMode](variables/LineMode.md) | Clicking a projection line locks onto both its endpoints at once, then a second click sets the offset distance. |
-| [SequentialMode](variables/SequentialMode.md) | Keeps the session open after each confirmation so points can be chained. |
+## Usage
 
-## Functions
+You need to be familiar with [Three.js API](https://github.com/mrdoob/three.js/) to be able to use this library effectively. In the following example, we will create a cube in a 3D scene that can be navigated with the mouse or touch events. You can see the full example [here](https://github.com/ThatOpen/engine_components/blob/main/packages/core/src/core/Worlds/example.ts) and the deployed app [here](https://thatopen.github.io/engine_components/examples/Worlds/index.html).
 
-| Function | Description |
-| :------ | :------ |
-| [dist2D](functions/dist2D.md) | 2-D distance between two Vector3s on the XZ plane (ignores Y). |
+```js
+/* eslint import/no-extraneous-dependencies: 0 */
+
+import * as THREE from "three";
+import * as OBC from "../..";
+
+const container = document.getElementById("container")!;
+
+const components = new OBC.Components();
+
+const worlds = components.get(OBC.Worlds);
+
+const world = worlds.create<
+  OBC.SimpleScene,
+  OBC.SimpleCamera,
+  OBC.SimpleRenderer
+>();
+
+world.scene = new OBC.SimpleScene(components);
+world.renderer = new OBC.SimpleRenderer(components, container);
+world.camera = new OBC.SimpleCamera(components);
+
+components.init();
+
+const material = new THREE.MeshLambertMaterial({ color: "#6528D7" });
+const geometry = new THREE.BoxGeometry();
+const cube = new THREE.Mesh(geometry, material);
+world.scene.three.add(cube);
+
+world.scene.setup();
+
+world.camera.controls.setLookAt(3, 3, 3, 0, 0, 0);
+```
+
+## WebGPU (opt-in)
+
+WebGL is the default and needs nothing. To run on WebGPU, pass `mode: "webgpu"` to the renderer:
+
+```js
+world.renderer = new OBF.PostproductionRenderer(components, container, { mode: "webgpu" });
+```
+
+Requirements:
+
+- `three@>=0.185`. An older three throws a clear error.
+- The application resolves `three` to `three/webgpu` (one module graph: the libraries read `WebGPURenderer` and the node materials off the same `three` they use for everything else, which is why WebGL apps load none of it).
+- The WebGL-only addons the libraries import (fat lines, the EffectComposer passes) cannot link against `three/webgpu`, so they are aliased to two modules this package ships: `webgpu/lines.mjs` (three's WebGPU fat lines under the same names) and `webgpu/webgl-addons-stub.mjs` (postprocessing classes that throw if a WebGL path is ever constructed under WebGPU).
+
+With Vite:
+
+```js
+// vite.config.js
+export default {
+  resolve: {
+    alias: [
+      { find: /^three$/, replacement: "three/webgpu" },
+      {
+        find: /^three\/(examples\/jsm|addons)\/lines\/(Line2|LineSegments2|LineMaterial|Wireframe)\.js$/,
+        replacement: "@thatopen/components-front/webgpu/lines.mjs",
+      },
+      {
+        find: /^three\/(examples\/jsm|addons)\/postprocessing\/.*$/,
+        replacement: "@thatopen/components-front/webgpu/webgl-addons-stub.mjs",
+      },
+    ],
+  },
+};
+```
+
+Under WebGPU, `renderer.postproduction` keeps its API (`enabled`, `style`, `outlinePass`, `basePass.isolatedMaterials`, occlusion passes) and is drawn by a TSL composition with the look of the WebGL deferred pipeline. Known divergences: GPU picks and outline masks do not cut by local clipping planes of their own (the scene's clipping group does the cut), and the near-plane guard of `NearPlaneLineMaterial` has no TSL port yet.
+
+## 🤝 Contributing
+
+Thinking of sending a PR? Awesome! Please read our [contributing guide](https://docs.thatopen.com/contributing) first — it covers the code conventions we follow (JSDoc, examples, resources, etc.) so your changes sail through review.
+
+[npm]: https://img.shields.io/npm/v/@thatopen/components
+[npm-url]: https://www.npmjs.com/package/@thatopen/components
+[npm-downloads]: https://img.shields.io/npm/dw/@thatopen/components
+[npm-front]: https://img.shields.io/npm/v/@thatopen/components-front
+[npm-url-front]: https://www.npmjs.com/package/@thatopen/components-front
+[npm-downloads-front]: https://img.shields.io/npm/dw/@thatopen/components-front

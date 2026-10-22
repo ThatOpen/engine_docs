@@ -143,19 +143,19 @@ The helper object of the clipping plane.
 
 ### meshes
 
-> `get` **meshes**(): `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
+> `get` **meshes**(): `Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>[]
 
 The meshes used for raycasting
 
 #### Returns
 
-`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material` \| `Material`[], `Object3DEventMap`\>[]
+`Mesh`\<`BufferGeometry`\<`NormalBufferAttributes`, `BufferGeometryEventMap`\>, `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[], `Object3DEventMap`\>[]
 
 ***
 
 ### planeMaterial
 
-> `get` **planeMaterial**(): `Material` \| `Material`[]
+> `get` **planeMaterial**(): `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[]
 
 The material of the clipping plane representation.
 
@@ -167,11 +167,11 @@ The material of the clipping plane representation.
 
 | Parameter | Type |
 | :------ | :------ |
-| `material` | `Material` \| `Material`[] |
+| `material` | `Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[] |
 
 #### Returns
 
-`Material` \| `Material`[]
+`Material`\<`MaterialEventMap`\> \| `Material`\<`MaterialEventMap`\>[]
 
 ***
 

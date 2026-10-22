@@ -10,25 +10,13 @@ A custom toolbar section web component for BIM applications. HTML tag: bim-toolb
 
 - [`HasName`](../interfaces/HasName.md)
 
-## Properties
-
-### styles
-
-> `static` **styles**: `CSSResult`
-
-CSS styles for the component.
-
-#### Overrides
-
-`LitElement.styles`
-
 ## Accessors
 
 ### labelHidden
 
 > `set` **labelHidden**(`value`): `void`
 
-Sets the value of the `labelHidden` property and updates the children accordingly.
+When `true`, the section name label is hidden.
 
 #### Examples
 

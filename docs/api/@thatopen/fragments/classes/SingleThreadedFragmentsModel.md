@@ -2,21 +2,25 @@
 
 The main class for managing a 3D model loaded from a fragments file in a single thread. It's designed for easy data querying in the backend, so all the 3D visualization logic is not present.
 
+## Implements
+
+- `IFragmentsModel`\<`false`\>
+
 ## Constructors
 
 ### new SingleThreadedFragmentsModel()
 
-> **new SingleThreadedFragmentsModel**(`modelId`, `modelData`, `raw`): [`SingleThreadedFragmentsModel`](SingleThreadedFragmentsModel.md)
+> **new SingleThreadedFragmentsModel**(`modelId`, `modelData`, `raw`?): [`SingleThreadedFragmentsModel`](SingleThreadedFragmentsModel.md)
 
 The constructor of the fragments model.
 
 #### Parameters
 
-| Parameter | Type | Default value |
+| Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `modelId` | `string` | `undefined` |
-| `modelData` | `Uint8Array` | `undefined` |
-| `raw` | `boolean` | `false` |
+| `modelId` | `string` | - |
+| `modelData` | `Uint8Array` | - |
+| `raw`? | `boolean` | Whether `modelData` is raw (uncompressed) or deflated. If omitted, it is auto-detected from the buffer (see [isRawBuffer](../functions/isRawBuffer.md)). |
 
 #### Returns
 
@@ -34,6 +38,25 @@ The ID of the model.
 
 `string`
 
+***
+
+### ready
+
+> `get` **ready**(): `Promise`\<`void`\>
+
+Resolves when the model is fully set up. The constructor starts an
+asynchronous setup that spans multiple macrotasks; await this before
+relying on the model being completely initialized.
+
+If [dispose](SingleThreadedFragmentsModel.md#dispose) is called while the setup is still running, this
+promise rejects with a [LoadAbortedError](LoadAbortedError.md). If nobody awaits it,
+the rejection is already handled internally, so it never surfaces as
+an unhandled rejection.
+
+#### Returns
+
+`Promise`\<`void`\>
+
 ## Methods
 
 ### dispose()
@@ -43,15 +66,23 @@ The ID of the model.
 Dispose the model. Use this when you're done with the model.
 If you use the [FragmentsModels.dispose](FragmentsModels.md#dispose) method, this will be called automatically for all models.
 
+If the setup started by the constructor is still running, it is aborted
+at its next yield point and [ready](SingleThreadedFragmentsModel.md#ready) rejects with a
+[LoadAbortedError](LoadAbortedError.md). Calling this more than once is a no-op.
+
 #### Returns
 
 `void`
+
+#### Implementation of
+
+`IFragmentsModel.dispose`
 
 ***
 
 ### edit()
 
-> **edit**(`requests`): `object`
+> **edit**(`requests`, `raw`?): `object`
 
 Apply a batch of edit requests. Accumulates onto this model's
 pending-edit history; call [save](SingleThreadedFragmentsModel.md#save) to flatten them into a new
@@ -59,15 +90,16 @@ committed buffer or [reset](SingleThreadedFragmentsModel.md#reset) to discard.
 
 #### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `requests` | [`EditRequest`](../type-aliases/EditRequest.md)[] |
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `requests` | [`EditRequest`](../type-aliases/EditRequest.md)[] | `undefined` | - |
+| `raw`? | `boolean` | `true` | whether to return the raw buffer or the the result of pako.deflate. Defaults to `true`. |
 
 #### Returns
 
 `object`
 
-The delta flatbuffer bytes and the local IDs assigned to
+The delta raw/deflated flatbuffer bytes and the local IDs assigned to
 any newly-created items.
 
 ##### deltaModelBuffer
@@ -96,6 +128,10 @@ Get the buffer of the model.
 
 `ArrayBufferLike`
 
+#### Implementation of
+
+`IFragmentsModel.getBuffer`
+
 ***
 
 ### getCRS()
@@ -107,6 +143,10 @@ Get the Coordinate Reference System (CRS) data of the model, if available.
 #### Returns
 
 `any`
+
+#### Implementation of
+
+`IFragmentsModel.getCRS`
 
 ***
 
@@ -120,6 +160,10 @@ Get all the categories of the model.
 
 `string`[]
 
+#### Implementation of
+
+`IFragmentsModel.getCategories`
+
 ***
 
 ### getCoordinates()
@@ -132,11 +176,15 @@ Gets coordinates of the model.
 
 `number`[]
 
+#### Implementation of
+
+`IFragmentsModel.getCoordinates`
+
 ***
 
 ### getGlobalTranformsIdsOfItems()
 
-> **getGlobalTranformsIdsOfItems**(`ids`): `Promise`\<`number`[]\>
+> **getGlobalTranformsIdsOfItems**(`ids`): `number`[]
 
 Gets the global transforms IDs of the items of the model.
 
@@ -148,13 +196,17 @@ Gets the global transforms IDs of the items of the model.
 
 #### Returns
 
-`Promise`\<`number`[]\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getGlobalTranformsIdsOfItems`
 
 ***
 
 ### getGlobalTransforms()
 
-> **getGlobalTransforms**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>\>
+> **getGlobalTransforms**(`localIds`?): `Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>
 
 Gets the global transforms of the model.
 
@@ -166,19 +218,27 @@ Gets the global transforms of the model.
 
 #### Returns
 
-`Promise`\<`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>\>
+`Map`\<`number`, [`RawGlobalTransformData`](../type-aliases/RawGlobalTransformData.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getGlobalTransforms`
 
 ***
 
 ### getGlobalTransformsIds()
 
-> **getGlobalTransformsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+> **getGlobalTransformsIds**(): `number`[]
 
 Gets all the global transforms IDs of the model.
 
 #### Returns
 
-`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getGlobalTransformsIds`
 
 ***
 
@@ -198,11 +258,228 @@ Get the GUIDs corresponding to the specified local IDs.
 
 (`null` \| `string`)[]
 
+#### Implementation of
+
+`IFragmentsModel.getGuidsByLocalIds`
+
+***
+
+### getIndexEntry()
+
+> **getIndexEntry**\<`K`, `V`\>(`name`, `key`): `null` \| `V`
+
+Forward lookup of a single entry in the named index. The return shape
+depends on the index mode.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+| `V` *extends* [`IndexEntry`](../type-aliases/IndexEntry.md) |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `key` | `K` |
+
+#### Returns
+
+`null` \| `V`
+
+#### Implementation of
+
+`IFragmentsModel.getIndexEntry`
+
+***
+
+### getIndexInfo()
+
+> **getIndexInfo**(`name`): `null` \| [`IndexInfo`](../interfaces/IndexInfo.md)
+
+Describe the shape of a named index without performing any lookups.
+Returns `null` if no index with that name exists.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`null` \| [`IndexInfo`](../interfaces/IndexInfo.md)
+
+#### Implementation of
+
+`IFragmentsModel.getIndexInfo`
+
+***
+
+### getIndexKey()
+
+> **getIndexKey**\<`K`\>(`name`, `index`): `null` \| `K`
+
+Get key at given index.
+Useful for keys-only indexes but valid for any mode.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `index` | `number` |
+
+#### Returns
+
+`null` \| `K`
+
+#### Implementation of
+
+`IFragmentsModel.getIndexKey`
+
+***
+
+### getIndexKeys()
+
+> **getIndexKeys**\<`K`\>(`name`): `null` \| `IndexArrayType`\<`K`\>
+
+Get the keys of an index. Useful for keys-only indexes (membership tests,
+iteration) but valid for any mode. Number keys come back as a
+`Uint32Array`, string keys as `string[]`.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`null` \| `IndexArrayType`\<`K`\>
+
+#### Implementation of
+
+`IFragmentsModel.getIndexKeys`
+
+***
+
+### getIndexNames()
+
+> **getIndexNames**(): `string`[]
+
+Get the names of every user-defined index stored on this model. See the
+`ModelIndex` schema for the supported shapes.
+
+#### Returns
+
+`string`[]
+
+#### Implementation of
+
+`IFragmentsModel.getIndexNames`
+
+***
+
+### getIndexValues()
+
+> **getIndexValues**\<`V`\>(`name`): `null` \| `V`[]
+
+Get the values of an index. Useful for inverse lookups.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `V` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+#### Returns
+
+`null` \| `V`[]
+
+#### Implementation of
+
+`IFragmentsModel.getIndexValues`
+
+***
+
+### getInverseIndexEntry()
+
+> **getInverseIndexEntry**\<`K`, `V`\>(`name`, `value`): `null` \| `IndexArrayType`\<`V`\>
+
+Inverse lookup. Returns every key that maps to `value`.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+| `V` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `value` | `K` |
+
+#### Returns
+
+`null` \| `IndexArrayType`\<`V`\>
+
+#### Implementation of
+
+`IFragmentsModel.getInverseIndexEntry`
+
+***
+
+### getItemDrawChunks()
+
+> **getItemDrawChunks**(`localIds`): `object`[]
+
+Returns per-tile index-buffer chunks for the given items. Used by
+outline-style passes that share tile geometry and clip drawing to
+just the outlined samples. See VirtualFragmentsModel.getItemDrawChunks.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `localIds` | `Iterable`\<`number`\> |
+
+#### Returns
+
+`object`[]
+
+#### Implementation of
+
+`IFragmentsModel.getItemDrawChunks`
+
 ***
 
 ### getItems()
 
-> **getItems**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
+> **getItems**(`localIds`?): `Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>
 
 Gets the items of the model.
 
@@ -214,7 +491,11 @@ Gets the items of the model.
 
 #### Returns
 
-`Promise`\<`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>\>
+`Map`\<`number`, [`RawItemData`](../type-aliases/RawItemData.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getItems`
 
 ***
 
@@ -235,11 +516,15 @@ Query items based on specified parameters.
 
 `number`[]
 
+#### Implementation of
+
+`IFragmentsModel.getItemsByQuery`
+
 ***
 
 ### getItemsChildren()
 
-> **getItemsChildren**(`ids`): `void`
+> **getItemsChildren**(`ids`): `number`[]
 
 Get the spatial structure children of the specified items.
 
@@ -251,7 +536,11 @@ Get the spatial structure children of the specified items.
 
 #### Returns
 
-`void`
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getItemsChildren`
 
 ***
 
@@ -272,6 +561,10 @@ Get all the data of the specified items.
 
 [`ItemData`](../interfaces/ItemData.md)[]
 
+#### Implementation of
+
+`IFragmentsModel.getItemsData`
+
 ***
 
 ### getItemsGeometry()
@@ -291,17 +584,41 @@ Get geometry data for the specified items.
 
 [`MeshData`](../type-aliases/MeshData.md)[][]
 
+#### Implementation of
+
+`IFragmentsModel.getItemsGeometry`
+
 ***
 
 ### getItemsIds()
 
-> **getItemsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+> **getItemsIds**(): `number`[]
 
 Gets all the items IDs of the model.
 
 #### Returns
 
-`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getItemsIds`
+
+***
+
+### getItemsIdsWithGeometry()
+
+> **getItemsIdsWithGeometry**(): `number`[]
+
+Get all the items of the model that have geometry.
+
+#### Returns
+
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getItemsIdsWithGeometry`
 
 ***
 
@@ -321,29 +638,39 @@ Get all the items of the model that belong to the specified category.
 
 `object`
 
+#### Implementation of
+
+`IFragmentsModel.getItemsOfCategories`
+
 ***
 
-### getItemsWithGeometry()
+### ~~getItemsWithGeometry()~~
 
 > **getItemsWithGeometry**(): `number`[]
-
-Get all the items of the model that have geometry.
 
 #### Returns
 
 `number`[]
 
+#### Deprecated
+
+use [getItemsIdsWithGeometry](SingleThreadedFragmentsModel.md#getitemsidswithgeometry)
+
 ***
 
 ### getLocalIds()
 
-> **getLocalIds**(): `Promise`\<`number`[]\>
+> **getLocalIds**(): `number`[]
 
 Get all the local IDs of the model.
 
 #### Returns
 
-`Promise`\<`number`[]\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getLocalIds`
 
 ***
 
@@ -363,11 +690,38 @@ Get the local IDs corresponding to the specified GUIDs.
 
 (`null` \| `number`)[]
 
+#### Implementation of
+
+`IFragmentsModel.getLocalIdsByGuids`
+
+***
+
+### getLocalIdsFromItemIds()
+
+> **getLocalIdsFromItemIds**(`itemIds`): `number`[]
+
+Translate internal `itemId`s into user-facing `localId`s, preserving
+order. See VirtualFragmentsModel.getLocalIdsFromItemIds.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `itemIds` | `Iterable`\<`number`\> |
+
+#### Returns
+
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getLocalIdsFromItemIds`
+
 ***
 
 ### getLocalTransforms()
 
-> **getLocalTransforms**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>\>
+> **getLocalTransforms**(`localIds`?): `Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>
 
 Gets the local transforms of the model.
 
@@ -379,25 +733,33 @@ Gets the local transforms of the model.
 
 #### Returns
 
-`Promise`\<`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>\>
+`Map`\<`number`, [`RawTransformData`](../type-aliases/RawTransformData.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getLocalTransforms`
 
 ***
 
 ### getLocalTransformsIds()
 
-> **getLocalTransformsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+> **getLocalTransformsIds**(): `number`[]
 
 Gets all the local transforms IDs of the model.
 
 #### Returns
 
-`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getLocalTransformsIds`
 
 ***
 
 ### getMaterials()
 
-> **getMaterials**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>\>
+> **getMaterials**(`localIds`?): `Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>
 
 Gets the materials of the model.
 
@@ -409,19 +771,27 @@ Gets the materials of the model.
 
 #### Returns
 
-`Promise`\<`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>\>
+`Map`\<`number`, [`RawMaterial`](../type-aliases/RawMaterial.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getMaterials`
 
 ***
 
 ### getMaterialsIds()
 
-> **getMaterialsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+> **getMaterialsIds**(): `number`[]
 
 Gets all the materials IDs of the model.
 
 #### Returns
 
-`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getMaterialsIds`
 
 ***
 
@@ -434,6 +804,10 @@ Get the maximum local ID of the model.
 #### Returns
 
 `number`
+
+#### Implementation of
+
+`IFragmentsModel.getMaxLocalId`
 
 ***
 
@@ -453,11 +827,15 @@ Get the metadata of the model.
 
 `T`
 
+#### Implementation of
+
+`IFragmentsModel.getMetadata`
+
 ***
 
 ### getPositions()
 
-> **getPositions**(`localIds`): `object`[]
+> **getPositions**(`localIds`?): `object`[]
 
 Get the absolute positions of the specified items.
 
@@ -465,17 +843,21 @@ Get the absolute positions of the specified items.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `localIds` | `number`[] | The local IDs of the items to look up. |
+| `localIds`? | `number`[] | The local IDs of the items to look up. |
 
 #### Returns
 
 `object`[]
 
+#### Implementation of
+
+`IFragmentsModel.getPositions`
+
 ***
 
 ### getRelations()
 
-> **getRelations**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>\>
+> **getRelations**(`localIds`?): `Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>
 
 Gets the relations of the model.
 
@@ -487,13 +869,17 @@ Gets the relations of the model.
 
 #### Returns
 
-`Promise`\<`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>\>
+`Map`\<`number`, [`RawRelationData`](../type-aliases/RawRelationData.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getRelations`
 
 ***
 
 ### getRepresentations()
 
-> **getRepresentations**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>\>
+> **getRepresentations**(`localIds`?): `Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>
 
 Gets the representations of the model.
 
@@ -505,19 +891,27 @@ Gets the representations of the model.
 
 #### Returns
 
-`Promise`\<`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>\>
+`Map`\<`number`, [`RawRepresentation`](../type-aliases/RawRepresentation.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getRepresentations`
 
 ***
 
 ### getRepresentationsIds()
 
-> **getRepresentationsIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+> **getRepresentationsIds**(): `number`[]
 
 Gets all the representations IDs of the model.
 
 #### Returns
 
-`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getRepresentationsIds`
 
 ***
 
@@ -541,9 +935,28 @@ Get the current edit history (applied requests + undone redo stack).
 
 ***
 
+### getRequestsSince()
+
+> **getRequestsSince**(`from`, `generation`): [`EditRequestsSince`](../interfaces/EditRequestsSince.md)
+
+Get the requests added since an earlier call (see `Editor.getModelRequestsSince`).
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `from` | `number` | `0` | The `count` the earlier call returned. |
+| `generation` | `number` | `-1` | The `generation` the earlier call returned. |
+
+#### Returns
+
+[`EditRequestsSince`](../interfaces/EditRequestsSince.md)
+
+***
+
 ### getSamples()
 
-> **getSamples**(`localIds`?): `Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
+> **getSamples**(`localIds`?): `Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>
 
 Gets the samples of the model.
 
@@ -555,25 +968,33 @@ Gets the samples of the model.
 
 #### Returns
 
-`Promise`\<`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>\>
+`Map`\<`number`, [`RawSample`](../type-aliases/RawSample.md)\>
+
+#### Implementation of
+
+`IFragmentsModel.getSamples`
 
 ***
 
 ### getSamplesIds()
 
-> **getSamplesIds**(): `Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+> **getSamplesIds**(): `number`[]
 
 Gets all the samples IDs of the model.
 
 #### Returns
 
-`Promise`\<`number`[] \| `Uint32Array` \| `Set`\<`number`\>\>
+`number`[]
+
+#### Implementation of
+
+`IFragmentsModel.getSamplesIds`
 
 ***
 
 ### getSection()
 
-> **getSection**(`plane`, `localIds`?): `Promise`\<`ModelSection`\>
+> **getSection**(`plane`, `localIds`?): `ModelSection`
 
 Gets the section (edges and fills) between the model and a given clipping plane.
 
@@ -586,7 +1007,11 @@ Gets the section (edges and fills) between the model and a given clipping plane.
 
 #### Returns
 
-`Promise`\<`ModelSection`\>
+`ModelSection`
+
+#### Implementation of
+
+`IFragmentsModel.getSection`
 
 ***
 
@@ -599,6 +1024,10 @@ Get the spatial structure of the model.
 #### Returns
 
 `any`
+
+#### Implementation of
+
+`IFragmentsModel.getSpatialStructure`
 
 ***
 
@@ -618,6 +1047,39 @@ Get a buffer containing only the specified items and their associated geometry.
 #### Returns
 
 `Uint8Array`
+
+#### Implementation of
+
+`IFragmentsModel.getSubsetBuffer`
+
+***
+
+### hasIndexEntry()
+
+> **hasIndexEntry**\<`K`\>(`name`, `key`): `boolean`
+
+Test whether a key exists in the named index without resolving its value.
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `K` *extends* `string` \| `number` |
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `key` | `K` |
+
+#### Returns
+
+`boolean`
+
+#### Implementation of
+
+`IFragmentsModel.hasIndexEntry`
 
 ***
 
@@ -647,15 +1109,21 @@ Discard all pending edits on this model.
 
 ### save()
 
-> **save**(): `Uint8Array`
+> **save**(`raw`?): `Uint8Array`
 
 Flatten the current pending-edit history into a new committed buffer.
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `raw`? | `boolean` | `true` | whether to return the raw buffer or the the result of pako.deflate. Defaults to `true`. |
 
 #### Returns
 
 `Uint8Array`
 
-The raw flatbuffer bytes of the updated model.
+The raw/deflated flatbuffer bytes of the updated model.
 
 ***
 

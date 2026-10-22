@@ -14,6 +14,18 @@ A custom table web component for BIM applications. HTML tag: bim-table
 
 ## Properties
 
+### \_expansionMemory
+
+`Internal`
+
+> **\_expansionMemory**: `Map`\<`string`, `boolean`\>
+
+Expand state the user left on rows with an `id` (id -> childrenHidden),
+so a recreated group restores it. Written by user toggles only; cleared by any
+table-wide expansion (`expanded`/`expandedLevels` change, expandAll, collapseAll).
+
+***
+
 ### \_lastSelectedData
 
 `Internal`
@@ -61,6 +73,36 @@ table.expanded = true;
 
 ```html
 <bim-table expanded></bim-table>
+```
+
+***
+
+### expandedLevels?
+
+> `optional` **expandedLevels**: `number`
+
+Limits how many tree levels initialise expanded. Groups at depth
+`< expandedLevels` start with their children visible; deeper groups
+stay collapsed (and crucially, their children don't render until
+the user opens them, which keeps large hierarchies cheap).
+
+Takes precedence over [expanded](Table.md#expanded) when set. Use `expanded` for
+an unbounded "expand everything" and `expandedLevels` to cap depth.
+
+#### Default Value
+
+```ts
+undefined
+```
+
+#### Examples
+
+```typescript
+table.expandedLevels = 3;
+```
+
+```html
+<bim-table expanded-levels="3"></bim-table>
 ```
 
 ***
@@ -458,6 +500,69 @@ Sets the columns to be visible from the table display.
 
 ## Methods
 
+### \_registerGroup()
+
+`Internal`
+
+> **\_registerGroup**(`group`, `id`?): `void`
+
+Called by a group when it connects (idempotent, safe for DOM moves).
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `group` | `TableGroup`\<`T`\> |
+| `id`? | `string` |
+
+#### Returns
+
+`void`
+
+***
+
+### \_unregisterGroup()
+
+`Internal`
+
+> **\_unregisterGroup**(`group`, `id`?): `void`
+
+Called by a group when it disconnects.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `group` | `TableGroup`\<`T`\> |
+| `id`? | `string` |
+
+#### Returns
+
+`void`
+
+***
+
+### collapseAll()
+
+> **collapseAll**(): `void`
+
+Collapses every group, regardless of the current `expanded` / `expandedLevels`
+values and of what the user toggled by hand. It sets `expanded = false` and
+clears `expandedLevels`. Note that with `preserveStructureOnFilter` an active
+query expands the table again the next time the data is filtered.
+
+#### Returns
+
+`void`
+
+#### Example
+
+```typescript
+table.collapseAll();
+```
+
+***
+
 ### downloadData()
 
 > **downloadData**(`fileName`, `format`): `void`
@@ -481,6 +586,29 @@ The `downloadData` method is used to download the table data in different format
 
 ```typescript
 table.downloadData("MyTableData", "tsv");
+```
+
+***
+
+### expandAll()
+
+> **expandAll**(): `void`
+
+Expands every group at every depth, regardless of the current `expanded` /
+`expandedLevels` values and of what the user toggled by hand. It sets
+`expanded = true` and clears `expandedLevels` (which would otherwise take
+precedence), so rows created later (e.g. after a data reload) also start expanded.
+With `preserveStructureOnFilter` and an active query, the expanded state is also
+what is restored when the query is cleared.
+
+#### Returns
+
+`void`
+
+#### Example
+
+```typescript
+table.expandAll();
 ```
 
 ***
@@ -511,3 +639,52 @@ If the promise resolves to `false`, the data loading was not successful.
 - If the table already has data and `force` is `false`, the function resolves to `false` without making any changes.
 If the table already has data and `force` is `true`, the existing data is discarded before loading the new data.
 If an error occurs during data loading, the function sets the `errorLoadingMessage` property with the error message and resolves to `false`.
+
+***
+
+### refreshRows()
+
+> **refreshRows**(`ids`, `options`?): `void`
+
+Repaints the rows with the given ids: their cells are rebuilt, re-running
+`dataTransform` against the row's current data. Use it when something that only
+affects the content of a row changed, e.g. a value mutated in place on the row's
+`data` object, or state held outside the data and read by a `dataTransform`.
+
+It is a content repaint only: it does not re-evaluate `queryString`,
+`groupedBy`, the columns or the row's `children`, and it does not change the
+expand/collapse state, the selection or the row elements. If the change affects
+filtering, grouping or the set of rows, reassign `table.data` instead (cheap for
+rows with an `id`). Ids that are not currently rendered (unknown, inside a
+collapsed parent, filtered out, or rows without `id`) are ignored silently.
+Repaints are batched with the rest of the pending updates.
+
+With an active `queryString` or `groupedBy` the table shows the same `data` objects
+of your rows, so mutate `row.data` in place (replacing `row.data` itself needs a
+`table.data` reassignment).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `ids` | `string`[] | The ids of the rows to repaint. Always an array. |
+| `options`? | [`RefreshRowsOptions`](../interfaces/RefreshRowsOptions.md) | `deep: true` also repaints every descendant row currently in the DOM. |
+
+#### Returns
+
+`void`
+
+#### Examples
+
+```typescript
+table.refreshRows(["file:123"]);
+```
+
+```typescript
+table.refreshRows(["file:123", "file:456", "folder:docs"]);
+```
+
+```typescript
+// The folder and every visible row inside it
+table.refreshRows(["folder:docs"], { deep: true });
+```

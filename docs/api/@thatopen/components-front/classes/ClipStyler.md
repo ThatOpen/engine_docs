@@ -168,3 +168,27 @@ OBC.Disposable.dispose
 #### Implementation of
 
 `OBC.Disposable.dispose`
+
+***
+
+### updateStyle()
+
+> **updateStyle**(`name`): `void`
+
+Re-applies the current properties of a style (color, opacity, line
+width) to every section currently using it. Each section renders with
+a per-instance clone of the style material (so sections can carry
+their own clipping planes and be disposed without breaking other
+sections sharing the style): after mutating a style's material (e.g.
+changing its color from a UI control), call this so the change shows
+on the rendered sections.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | The name of the style to re-apply. |
+
+#### Returns
+
+`void`

@@ -26,6 +26,19 @@ The list of [clipping planes](https://threejs.org/docs/#api/en/renderers/WebGLRe
 
 ***
 
+### localClippingPlanes
+
+> **localClippingPlanes**: `boolean` = `false`
+
+The default `isLocal` value used by [setPlane](BaseRenderer.md#setplane) when the caller
+doesn't pass one. When `true`, planes added without an explicit
+`isLocal` stay out of the global `three.clippingPlanes` list and are
+clipped per-material instead. The [Clipper](Clipper.md) sets this to mirror
+its own `localClippingPlanes` flag, so consumers like `Views` that add
+their own planes automatically inherit the active clipping mode.
+
+***
+
 ### onAfterUpdate
 
 > **onAfterUpdate**: [`Event`](Event.md)\<`unknown`\>
@@ -282,7 +295,7 @@ Whether is component is [Updateable](../interfaces/Updateable.md).
 
 ### setPlane()
 
-> **setPlane**(`active`, `plane`, `isLocal`?): `void`
+> **setPlane**(`active`, `plane`, `isLocal`): `void`
 
 Sets or removes a clipping plane from the renderer.
 
@@ -292,7 +305,7 @@ Sets or removes a clipping plane from the renderer.
 | :------ | :------ | :------ |
 | `active` | `boolean` | A boolean indicating whether the clipping plane should be active or not. |
 | `plane` | `Plane` | The clipping plane to be added or removed. |
-| `isLocal`? | `boolean` | An optional boolean indicating whether the clipping plane is local to the object. If not provided, it defaults to `false`. |
+| `isLocal` | `boolean` | An optional boolean indicating whether the clipping plane is local to the object. If not provided, it defaults to `false`. |
 
 #### Returns
 

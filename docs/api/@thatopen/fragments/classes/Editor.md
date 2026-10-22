@@ -59,7 +59,7 @@ The applied changes.
 
 ### clearElementsRequests()
 
-> **clearElementsRequests**(`modelId`): `null` \| [`EditRequest`](../type-aliases/EditRequest.md)[]
+> **clearElementsRequests**(`modelId`): `null` \| ([`UpdateMaterialRequest`](../interfaces/UpdateMaterialRequest.md) \| [`UpdateRepresentationRequest`](../interfaces/UpdateRepresentationRequest.md) \| [`UpdateSampleRequest`](../interfaces/UpdateSampleRequest.md) \| [`UpdateGlobalTransformRequest`](../interfaces/UpdateGlobalTransformRequest.md) \| [`UpdateLocalTransformRequest`](../interfaces/UpdateLocalTransformRequest.md) \| [`UpdateItemRequest`](../interfaces/UpdateItemRequest.md) \| [`UpdateMaxLocalIdRequest`](../interfaces/UpdateMaxLocalIdRequest.md) \| [`UpdateRelationRequest`](../interfaces/UpdateRelationRequest.md) \| [`UpdateMetadataRequest`](../interfaces/UpdateMetadataRequest.md) \| [`UpdateSpatialStructureRequest`](../interfaces/UpdateSpatialStructureRequest.md) \| [`CreateMaterialRequest`](../interfaces/CreateMaterialRequest.md) \| [`CreateRepresentationRequest`](../interfaces/CreateRepresentationRequest.md) \| [`CreateSampleRequest`](../interfaces/CreateSampleRequest.md) \| [`CreateGlobalTransformRequest`](../interfaces/CreateGlobalTransformRequest.md) \| [`CreateLocalTransformRequest`](../interfaces/CreateLocalTransformRequest.md) \| [`CreateItemRequest`](../interfaces/CreateItemRequest.md) \| [`CreateRelationRequest`](../interfaces/CreateRelationRequest.md) \| [`DeleteMaterialRequest`](../interfaces/DeleteMaterialRequest.md) \| [`DeleteRepresentationRequest`](../interfaces/DeleteRepresentationRequest.md) \| [`DeleteSampleRequest`](../interfaces/DeleteSampleRequest.md) \| [`DeleteGlobalTransformRequest`](../interfaces/DeleteGlobalTransformRequest.md) \| [`DeleteLocalTransformRequest`](../interfaces/DeleteLocalTransformRequest.md) \| [`DeleteItemRequest`](../interfaces/DeleteItemRequest.md) \| [`DeleteRelationRequest`](../interfaces/DeleteRelationRequest.md) \| [`CreateIndexRequest`](../interfaces/CreateIndexRequest.md) \| [`UpdateIndexRequest`](../interfaces/UpdateIndexRequest.md) \| [`DeleteIndexRequest`](../interfaces/DeleteIndexRequest.md))[]
 
 Clears all the element edit requests of the specified Fragments model.
 
@@ -71,7 +71,7 @@ Clears all the element edit requests of the specified Fragments model.
 
 #### Returns
 
-`null` \| [`EditRequest`](../type-aliases/EditRequest.md)[]
+`null` \| ([`UpdateMaterialRequest`](../interfaces/UpdateMaterialRequest.md) \| [`UpdateRepresentationRequest`](../interfaces/UpdateRepresentationRequest.md) \| [`UpdateSampleRequest`](../interfaces/UpdateSampleRequest.md) \| [`UpdateGlobalTransformRequest`](../interfaces/UpdateGlobalTransformRequest.md) \| [`UpdateLocalTransformRequest`](../interfaces/UpdateLocalTransformRequest.md) \| [`UpdateItemRequest`](../interfaces/UpdateItemRequest.md) \| [`UpdateMaxLocalIdRequest`](../interfaces/UpdateMaxLocalIdRequest.md) \| [`UpdateRelationRequest`](../interfaces/UpdateRelationRequest.md) \| [`UpdateMetadataRequest`](../interfaces/UpdateMetadataRequest.md) \| [`UpdateSpatialStructureRequest`](../interfaces/UpdateSpatialStructureRequest.md) \| [`CreateMaterialRequest`](../interfaces/CreateMaterialRequest.md) \| [`CreateRepresentationRequest`](../interfaces/CreateRepresentationRequest.md) \| [`CreateSampleRequest`](../interfaces/CreateSampleRequest.md) \| [`CreateGlobalTransformRequest`](../interfaces/CreateGlobalTransformRequest.md) \| [`CreateLocalTransformRequest`](../interfaces/CreateLocalTransformRequest.md) \| [`CreateItemRequest`](../interfaces/CreateItemRequest.md) \| [`CreateRelationRequest`](../interfaces/CreateRelationRequest.md) \| [`DeleteMaterialRequest`](../interfaces/DeleteMaterialRequest.md) \| [`DeleteRepresentationRequest`](../interfaces/DeleteRepresentationRequest.md) \| [`DeleteSampleRequest`](../interfaces/DeleteSampleRequest.md) \| [`DeleteGlobalTransformRequest`](../interfaces/DeleteGlobalTransformRequest.md) \| [`DeleteLocalTransformRequest`](../interfaces/DeleteLocalTransformRequest.md) \| [`DeleteItemRequest`](../interfaces/DeleteItemRequest.md) \| [`DeleteRelationRequest`](../interfaces/DeleteRelationRequest.md) \| [`CreateIndexRequest`](../interfaces/CreateIndexRequest.md) \| [`UpdateIndexRequest`](../interfaces/UpdateIndexRequest.md) \| [`DeleteIndexRequest`](../interfaces/DeleteIndexRequest.md))[]
 
 ***
 
@@ -136,6 +136,30 @@ Creates a global transform in the specified Fragments model.
 `string`
 
 The created global transform.
+
+***
+
+### createIndex()
+
+> **createIndex**(`modelId`, `data`): `void`
+
+Queues a CREATE_INDEX request on the specified model. The new index is
+persisted on the next `applyChanges()` call. See `RawIndexData` for the
+supported shapes (keys-only, 1:1, 1:N linear, 1:N nonlinear).
+
+Live reads via `model.getIndexEntry` see the pending index immediately;
+`applyChanges` makes it survive a save/reload cycle.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `modelId` | `string` |
+| `data` | [`RawIndexData`](../interfaces/RawIndexData.md) |
+
+#### Returns
+
+`void`
 
 ***
 
@@ -296,6 +320,26 @@ The deleted elements.
 
 ***
 
+### deleteIndex()
+
+> **deleteIndex**(`modelId`, `name`): `void`
+
+Queues a DELETE_INDEX request. No-op at flush time if the named index
+doesn't exist on the model.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `modelId` | `string` |
+| `name` | `string` |
+
+#### Returns
+
+`void`
+
+***
+
 ### edit()
 
 > **edit**(`modelId`, `actions`, `config`): `Promise`\<`number`[]\>
@@ -365,6 +409,37 @@ The requests of the model.
 ##### undoneRequests
 
 > **undoneRequests**: [`EditRequest`](../type-aliases/EditRequest.md)[]
+
+***
+
+### getModelRequestsSince()
+
+> **getModelRequestsSince**(`modelId`, `from`, `generation`): `Promise` \<[`EditRequestsSince`](../interfaces/EditRequestsSince.md)\>
+
+Gets the requests of the specified Fragments model added since an earlier call.
+
+#### Parameters
+
+| Parameter | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `modelId` | `string` | `undefined` | The ID of the model to get the requests from. |
+| `from` | `number` | `0` | The `count` of the previous result (0 the first time). |
+| `generation` | `number` | `-1` | The `generation` of the previous result (-1 the first time). |
+
+#### Returns
+
+`Promise` \<[`EditRequestsSince`](../interfaces/EditRequestsSince.md)\>
+
+The requests from `from` on, the request count and the generation of the log.
+
+#### Remarks
+
+Reading only what was added keeps a long unsaved session cheap to follow:
+every request is copied from the worker once. Pass the `count` and `generation` of the
+previous result. If requests were undone, selected, set or reset since, all of them are
+returned and `from` is 0. The same happens after `save`, or after the model is disposed
+and loaded again with the same ID: the log starts again (`save` leaves it empty) under a
+new `generation`, so check `from` before appending to what was read earlier.
 
 ***
 
@@ -492,3 +567,24 @@ Removes a relation between an item and other items in the specified Fragments mo
 `Promise`\<`void`\>
 
 The unrelated items.
+
+***
+
+### updateIndex()
+
+> **updateIndex**(`modelId`, `data`): `void`
+
+Queues an UPDATE_INDEX request. Replaces the index identified by
+`data.name` in its entirety. Use `deleteIndex` + `createIndex` if you
+want to rename.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `modelId` | `string` |
+| `data` | [`RawIndexData`](../interfaces/RawIndexData.md) |
+
+#### Returns
+
+`void`

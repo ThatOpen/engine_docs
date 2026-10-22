@@ -8,7 +8,7 @@ A custom slider web component for BIM applications. HTML tag: bim-slider
 
 ## Implements
 
-- [`HasValue`](../interfaces/HasValue.md)
+- [`HasValue`](../interfaces/HasValue.md)\<`number` \| [`number`, `number`]\>
 - [`HasName`](../interfaces/HasName.md)
 
 ## Properties
@@ -17,7 +17,9 @@ A custom slider web component for BIM applications. HTML tag: bim-slider
 
 > **disableSwap**: `boolean` = `false`
 
-When true, swapping thumbs is disabled in range mode.
+When true, swapping thumbs is disabled in range mode: dragging one thumb
+past the other no longer reorders the value tuple (the thumb stops at
+the other thumb's position instead of crossing it).
 
 #### Default
 
@@ -77,7 +79,7 @@ undefined
 
 > `optional` **label**: `string`
 
-Optional label rendered above the track via bim-input.
+Optional label rendered above the track.
 
 #### Default
 
@@ -127,6 +129,11 @@ Useful when many marks have long labels that would overlap.
 
 An array of mark objects (`{ value, label? }`) that define snap points.
 When step is null, the thumb snaps only to these marks.
+
+Property-only: with no custom `converter`, Lit's `type: Array` cannot
+parse a JSON array out of an HTML attribute string, so `marks` can only
+be set via JavaScript (`slider.marks = [...]`), not as a `marks="..."`
+HTML attribute.
 
 #### Default
 
@@ -206,23 +213,17 @@ undefined
 
 ***
 
-### onChangeCommitted
-
-> `readonly` **onChangeCommitted**: `Event`
-
-Fired once when the thumb is released (mouseup / touchend).
-
-***
-
-### onValueChange
+### ~~onValueChange~~
 
 > `readonly` **onValueChange**: `Event`
 
-Fired continuously while dragging.
+#### Deprecated
+
+Listen for the "change" event on the element instead: `el.addEventListener("change", fn)`.
 
 #### Implementation of
 
-`HasValue.onValueChange`
+[`HasValue`](../interfaces/HasValue.md) . [`onValueChange`](../interfaces/HasValue.md#onvaluechange)
 
 ***
 
@@ -261,7 +262,10 @@ slider.scale = (x) => Math.pow(2, x);
 
 > **shiftStep**: `number` = `10`
 
-The larger step size used when the user holds Shift + Arrow key.
+The larger step size used when the user holds Shift + Arrow key, and
+(independent of Shift) the amount `PageUp`/`PageDown` jump by — matching
+the native `<input type="range">` convention where page keys always use
+the larger increment regardless of modifier keys.
 
 #### Default
 
@@ -302,6 +306,9 @@ false
 > **step**: `null` \| `number` = `1`
 
 The granularity of each step. Set to null to snap only to marks.
+Reflected via a custom converter (not the default `String(null)`), so
+`step = null` round-trips through the `step="none"` attribute correctly
+instead of serializing as the literal string `"null"`.
 
 #### Default
 
@@ -340,12 +347,12 @@ Controls when the value label (tooltip) is displayed.
 
 ***
 
-### valueLabelFormat?
+### valueLabelFormat()?
 
-> `optional` **valueLabelFormat**: `string` \| (`value`) => `string`
+> `optional` **valueLabelFormat**: (`value`) => `string`
 
-A format function or fixed string to transform the displayed value in the
-value label. Receives the raw numeric value and returns a string.
+A format function to transform the displayed value in the value label.
+Receives the raw numeric value and returns a string.
 
 #### Default
 
@@ -358,6 +365,16 @@ undefined
 ```ts
 slider.valueLabelFormat = (v) => `${v}°C`;
 ```
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`string`
 
 ***
 
@@ -387,6 +404,8 @@ false
 
 The current value. Pass a tuple [number, number] to enable range mode
 (two thumbs). Changing this property updates the rendered thumb position(s).
+When `disableSwap` is set, an out-of-order tuple is kept as given instead
+of being silently sorted — consistent with how dragging behaves.
 
 #### Default
 

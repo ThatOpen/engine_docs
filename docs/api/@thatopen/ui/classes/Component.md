@@ -6,10 +6,6 @@ A base class for UI components that utilizes the LitElement library. Provides fu
 
 - `LitElement`
 
-## Extended by
-
-- [`Dropdown`](Dropdown.md)
-
 ## Methods
 
 ### create()

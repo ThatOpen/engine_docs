@@ -22,14 +22,6 @@ A readonly property representing the ThreeJS plane used to created the edges and
 
 The ThreeJS group that holds all the edges and fills together
 
-***
-
-### world
-
-> **world**: `null` \| `World` = `null`
-
-The world in which the edges and fills will be placed.
-
 ## Accessors
 
 ### visible
@@ -46,6 +38,23 @@ When set to `false`, the object is removed from its parent.
 | :------ | :------ |
 | `value` | `boolean` |
 
+***
+
+### world
+
+> `set` **world**(`value`): `void`
+
+The world in which the edges and fills will be placed. Setting it
+(re)subscribes to the renderer's `onClippingPlanesUpdated` event so
+the sections re-track the active clipping planes whenever they
+change (add / remove / enable / disable / view open-close).
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `value` | `null` \| `World` |
+
 ## Methods
 
 ### dispose()
@@ -61,6 +70,29 @@ OBC.Disposable.dispose
 #### Implementation of
 
 `OBC.Disposable.dispose`
+
+***
+
+### syncStyle()
+
+> **syncStyle**(`styleName`): `void`
+
+Copy the visual properties (color, opacity, line width) of a shared
+style onto this ClipEdges' per-instance material clones. Each section
+renders with a *clone* of the style material (so it can carry its own
+`clippingPlanes` and be disposed safely without affecting other
+sections), so mutating the shared style material alone won't update
+the rendered section. This propagates the change.
+
+#### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `styleName` | `string` |
+
+#### Returns
+
+`void`
 
 ***
 

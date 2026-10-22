@@ -9,7 +9,6 @@ A custom panel section web component for BIM applications. HTML tag: bim-panel-s
 ## Implements
 
 - [`HasName`](../interfaces/HasName.md)
-- [`HasValue`](../interfaces/HasValue.md)
 
 ## Properties
 
@@ -151,6 +150,16 @@ document.body.appendChild(section);
 
 ***
 
+### scrollable
+
+> **scrollable**: `boolean` = `false`
+
+When true, the section fills its parent height and clips its content area,
+allowing individual children with `flex: 1` to scroll independently.
+Combine with a `bim-table` or similar element that has `flex: 1` set.
+
+***
+
 ### valueTransform
 
 > **valueTransform**: `Record`\<`string`, (`value`) => `any`\> = `{}`
@@ -189,7 +198,7 @@ CSS styles for the component.
 
 ### value
 
-> `get` **value**(): `Record`\<`string`, `any`\>
+> `get` **value**(): `object`
 
 The `value` getter computes and returns the current state of the panel section's form elements as an object. This object's keys are the `name` or `label` attributes of the child elements, and the values are the corresponding values of these elements. This property is particularly useful for retrieving a consolidated view of the user's input or selections within the panel section. When the value of any child element changes, the returned object from this getter will reflect those changes, providing a dynamic snapshot of the panel section's state. Note that this property does not have a default value as it dynamically reflects the current state of the panel section's form elements.
 
@@ -204,33 +213,6 @@ const section = document.createElement('bim-panel-section');
 console.log(section.value); // Logs the current value object
 ```
 
-> `set` **value**(`data`): `void`
-
-The `value` setter allows programmatically updating the values of the panel section's child elements. It accepts an object where keys correspond to the `name` or `label` attributes of the child elements, and the values are the new values to be set for these elements. This property is useful for initializing the panel section with specific values or updating its state based on external data. When the property changes, the corresponding child elements' values are updated to reflect the new state. This does not have a default value as it is a method for updating child elements' values.
-
-#### Default
-
-```ts
-undefined
-```
-
-#### Examples
-
-```ts
-<bim-panel-section></bim-panel-section> <!-- Usage in HTML not directly applicable as this is a setter -->
-```
-
-```ts
-const section = document.createElement('bim-panel-section');
-section.value = { 'user-settings': 'John Doe' }; // Programmatically sets the value of a child element named 'user-settings'
-```
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `data` | `Record`\<`string`, `any`\> |
-
 #### Returns
 
-`Record`\<`string`, `any`\>
+`object`
