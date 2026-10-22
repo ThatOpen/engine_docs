@@ -55,5 +55,9 @@
   },
   "engines": {
     "node": ">=20.11.1"
+  },
+  "resolutions": {
+    "@thatopen/components": "3.5.0",
+    "@thatopen/fragments": "3.5.0"
   }
 }
