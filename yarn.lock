@@ -4224,8 +4224,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@thatopen/components-front@workspace:temp/engine_components/packages/front"
   dependencies:
-    "@thatopen/components": "npm:~3.4.7"
-    "@thatopen/fragments": "npm:~3.4.7"
+    "@thatopen/components": "npm:~3.5.0"
+    "@thatopen/fragments": "npm:~3.5.0"
     "@thatopen/ui": "npm:~3.4.0"
     "@thatopen/ui-obc": "npm:~3.4.0"
     "@types/convert-units": "npm:2.3.11"
@@ -4267,7 +4267,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@thatopen/components@workspace:temp/engine_components/packages/core"
   dependencies:
-    "@thatopen/fragments": "npm:~3.4.7"
+    "@thatopen/fragments": "npm:~3.5.0"
     "@thatopen/ui": "npm:~3.4.0"
     "@types/convert-units": "npm:2.3.11"
     "@types/three": "npm:0.184.0"

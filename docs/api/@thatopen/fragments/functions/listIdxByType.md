@@ -8,7 +8,7 @@ field, end up with an empty list, and skip the line entirely — dropping all
 its transitive dependencies (property sets, materials, styles, etc.) from
 the split output.
 
-The default IfcSplitterConfig.listArgIndex. Exported so an override
+The default [IfcSplitterConfig.listArgIndex](../interfaces/IfcSplitterConfig.md#listargindex). Exported so an override
 can delegate to it for the types it doesn't care about.
 
 ## Parameters

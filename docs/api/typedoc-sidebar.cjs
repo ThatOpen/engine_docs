@@ -1494,6 +1494,11 @@ const typedocSidebar = { items: [
           },
           {
             "type": "doc",
+            "id": "api/@thatopen/fragments/classes/IfcSplitter",
+            "label": "IfcSplitter"
+          },
+          {
+            "type": "doc",
             "id": "api/@thatopen/fragments/classes/LoadAbortedError",
             "label": "LoadAbortedError"
           },
@@ -1627,6 +1632,31 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/interfaces/GroupData",
             "label": "GroupData"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterConfig",
+            "label": "IfcSplitterConfig"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterGroupsEvent",
+            "label": "IfcSplitterGroupsEvent"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterIO",
+            "label": "IfcSplitterIO"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterProgressEvent",
+            "label": "IfcSplitterProgressEvent"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/interfaces/IfcSplitterWarningEvent",
+            "label": "IfcSplitterWarningEvent"
           },
           {
             "type": "doc",
@@ -1843,6 +1873,11 @@ const typedocSidebar = { items: [
             "type": "doc",
             "id": "api/@thatopen/fragments/type-aliases/Identifier",
             "label": "Identifier"
+          },
+          {
+            "type": "doc",
+            "id": "api/@thatopen/fragments/type-aliases/IfcSplitterStage",
+            "label": "IfcSplitterStage"
           },
           {
             "type": "doc",
